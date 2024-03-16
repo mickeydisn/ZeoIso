@@ -1,0 +1,291 @@
+body {
+    background-color: #ececec; 
+    color: #3c3c3b;
+    margin: 0px;
+    position: relative;
+
+}
+
+.infoModale {
+    position: absolute;
+    background-color: #ececec; 
+    border-color: #3fa2b2;
+    border-width: 2px;
+    border-style: solid;
+    line-height: 1;
+    padding: 5px;
+
+    color: #166a83;
+    vertical-align: middle;
+    text-align: left;
+    /* font-weight: 300; */
+    width: 300px;
+    min-height: 100px;
+    font-size: 12px;
+}
+
+.idate::-webkit-inner-spin-button {
+  display: none;
+}
+.idate::-webkit-clear-button {
+  display: none;
+}
+
+.idate::-webkit-calendar-picker-indicator {
+  opacity: 1
+}
+
+.idate::-webkit-calendar-picker-indicator:hover {
+  /* background: transparent; */
+  cursor: pointer;
+}
+
+button.menu_box {
+    color: #166a83;
+    background-color: hsla(0,0%,100%,0);
+    border-color: #166a83;
+    border-width: 1px;
+    line-height: 1;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 1px;
+
+    vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+button.menu_box:hover {
+    color: #FFF;
+    background-color: #166a83;
+}
+
+div.container {
+    width: 100%;
+}
+
+#header {
+    width: 100%;
+    height: 42px;
+    margin: 0;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1000;
+    
+    padding-left: 30px;
+    color: #dedede;
+    background-color: #222;
+    text-align: left;
+}
+
+#header img{
+    height: 22px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 24px;
+}
+
+#header .titel{
+    font-family: sans-serif;
+    font-weight: 600;
+    color: #fff;
+    vertical-align: top;
+    line-height: 40px;
+    font-size: 16px;
+}
+
+#header .wating{
+    color: #F00;
+}
+
+
+#nav {
+    max-height: 90%;
+    overflow: auto;
+    position: fixed;
+    z-index: 1000;
+
+    float: left;
+    width: 400px;
+    max-width: 400px;
+    height: 100%
+
+    vertical-align: top;
+    text-align: center;
+    border: none;
+    
+    margin: 0px;
+    margin-top: 42px;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 20px;
+
+    font-size: 14px;
+}
+
+
+#nav::-webkit-scrollbar {
+    width: 0.3em;
+}
+ 
+#nav::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 2px #3fa2b2;
+}
+ 
+#nav::-webkit-scrollbar-thumb {
+  background-color: #3fa2b2;
+}
+
+#article {
+    width: 69%;
+    vertical-align: top;
+    text-align: center;
+
+    border: none;
+    margin: 0px;
+    margin-top: 42px;
+    margin-left: 400px;
+
+    padding: 0px;
+    padding-left: 10px;
+    padding-top: 20px;
+    display: inline-block;
+
+}
+
+div#MenuHead {
+    vertical-align: top;
+    text-align: left;
+    border: none;
+    border-left: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+
+    font-size: 14px;
+}
+
+
+#Prism_Link_Flower circle {
+  stroke: #000;
+  stroke-opacity: .5;
+}
+
+
+path {
+  stroke: #fff;
+  fill-rule: evenodd;
+}
+
+
+
+.Box{
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;   
+    background-color: #FFFFFF; 
+    border-radius: 5px;
+    width: 100%;
+    vertical-align: top;
+}
+
+.InBox{
+    border: none;
+    margin: 0px;
+    padding: 5px;
+    display: block;
+    vertical-align: top;
+}
+.BoxTitel{
+    border: none;
+    margin: 0;
+    padding: 10px 30px;
+    background-color: #3fa2b2; 
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+}
+
+.BoxTitelIn {
+    background-color: #323232;
+    display: inline;
+    border-radius: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+
+.DivTitel{
+    background-color: #FFF; 
+    border: 1px solid #dedfdc;
+
+    margin: 0px;
+    padding: 10px;
+    text-align: left;
+
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+
+    margin-bottom: .75rem;
+}
+
+.DivTitel span{
+  font-size: 12px;
+  font-weight: 500;
+}
+
+
+div.node {
+    margin: 0px;
+    padding: 0px;
+}
+
+.node circle {
+  fill: #999;
+}
+
+.node text {
+  font: 10px sans-serif;
+}
+
+.node--internal circle {
+  fill: #555;
+}
+
+.node--internal text {
+  text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+}
+
+.link {
+  fill: none;
+  stroke: #555;
+  stroke-opacity: 0.4;
+  stroke-width: 3.5px;
+}
+
+/*---------------------- */
+
+.flower-nodes circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+[hidden] {
+  display : none !important;
+
+}
+
+/*---------------------- */
+
+

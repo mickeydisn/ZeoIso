@@ -1,0 +1,164 @@
+
+
+.ListSelectForced {
+    /* margin-bottom: 10px; */
+    color: #999999;
+  }
+  
+.ListSelectHiden {
+    /* margin-bottom: 10px; */
+    display: none;
+}
+  
+.ListSelector .titleBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px 5px;
+  }
+  
+  .ListSelector .listBoxCheck {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.5em;
+    font-size: 0.8em;
+  }
+  .ListSelector .listBoxCheck .listBoxCheck {
+    font-size: 0.9em;
+  }
+  
+  .ListSelector .listBoxCheck .row {
+    margin: 1px;
+    padding: 2px;
+  }
+  
+  .ListSelector .listBoxCheck .cell {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .ListSelector .listBoxCheck .check {
+    padding: 0px;
+    font-size: 1.4em;
+    cursor: pointer;
+  }
+  
+  .ListSelector .listBoxCheck .name {
+    padding: 0px 0px 0px 0.2em;
+  }
+  
+  .ListSelector .boxSearch {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2em;
+    margin-right: 2em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 0.8em;
+  }
+  
+  .ListSelector .listBoxUnCheck {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2em;
+    margin-right: 2em;
+    background: rgb(255, 255, 255);
+    font-size: 0.8em;
+    max-height: 30vh;
+    overflow-y: scroll;
+  }
+  
+  .ListSelector .listBoxUnCheck .row {
+    margin: 1px;
+  }
+  
+  .ListSelector .listBoxUnCheck .cell {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .ListSelector .listBoxUnCheck .check {
+    padding: 0px;
+    font-size: 1.4em;
+  }
+  
+  .ListSelector .listBoxUnCheck .name {
+    padding: 0px 0px 0px 1em;
+  }
+  
+  /* */
+  
+  .ListSelector .listBoxButton {
+    display: flex;
+    padding: 1em .6em 0 1em;
+    flex-direction: row;
+    /* background-color: var(--color-backgroud); */
+    font-size: 0.8em;
+    border-bottom: 1px solid #B8B8B8; 
+  }
+
+  
+  .ListSelector .listBoxButton .cell {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 .15em;
+    padding: .8em .8em;
+    /* box-shadow: inset -3px 0px #999; */
+    cursor: pointer;
+    min-width: 8vw;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  
+    transition: 400ms;
+    background-color: var(--color-backgroud);
+  }
+  
+  .ListSelector .listBoxButton .cell:hover {
+    background-color: #dedede;
+  }
+    
+  .ListSelector .listBoxButton .cell.check {
+    background-color: #efefef;
+    transform: scale(1.1);
+    margin: 0 .6em;
+    border-top: 1px solid #B8B8B8;
+    border-left: 1px solid #B8B8B8;
+    border-right: 1px solid #B8B8B8;
+  }
+
+  .ListSelector .listBoxButton .ItemButton {
+    font-size: 1.1em;
+  }
+  
+/* -- */
+
+  .itemBoxMenu .listBoxButton {
+    flex-direction: column;
+    padding: 1em 2em;
+    background: none;
+    border: none;
+  }
+
+
+  .itemBoxMenu .listBoxButton select{
+    font-size: 1.2em;
+    padding: .5em;
+    border: 1px solid var(--color-alk-blue-light);
+    box-shadow: 0 5px 10px #0004;
+  }
+
+  .itemBoxMenu .listBoxButton .cell {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1.4em 1em;
+    margin: .5em 0 .5em 1em;
+    cursor: pointer;
+    min-width: 8vw;
+    box-shadow: inset 3px 0px #AAA;
+    border-radius: 0px;
+  }
+    

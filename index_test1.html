@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <script type="text/javascript" src="scripts/d3.v4.js"></script>
+  </head>
+<body style="background: #222; display :flex; justify-content: center; flex-direction: row;">
+
+  <script type="text/javascript"> 
+  
+  const RADIUS = 30;
+
+
+  function Node(x, y) {
+    this.x = x;
+    this.y = y;
+    this.roads = [];
+  } 
+  Node.prototype = {  
+    /**/
+
+    getCrossZoneRoadNode() {
+
+      let roads = this.roads
+        .map(road => {
+          const node = road.getBrother(this)
+          const cosR = (node.x - this.x) / road.length;
+          const sinR = (node.y - this.y) / road.length;
+          const sort = sinR > 0 ? cosR + 1 : 2 - (cosR - 1)
+          return {sort : sort, road: road}
+        })
+        .sort((a, b) => b.sort - a.sort)
+
+      console.log(roads.map(a => a))
+
+      roads = roads.map(({road}) => road)
+      let crossNode = [];
+      
+      crossNode = roads.map((r1, i) => {
+        let r2 = i == 0 ? roads[this.roads.length - 1] : roads[i-1];
+        // res = r1.getRightBoarder(RADIUS).n1
+        res = r1.getParalle(RADIUS).intersect(r2.getParalle(-RADIUS))
+        return res
+      })
+      
+      // crossNode = crossNode.map(node => new Node(node.x, node.y))
+      /**/
+      return crossNode;
+    },
+  }
+
+  function Road(n1, n2) {
+    this.n1 = n1;
+    this.n2 = n2;
+    this.diffX = (this.n1.x - this.n2.x);
+    this.diffY = (this.n1.y - this.n2.y);
+    this.length = Math.sqrt(this.diffX * this.diffX + this.diffY * this.diffY);
+    
+    n1.roads.push(this);
+    n2.roads.push(this);
+  } 
+  Road.prototype = {  
+    /**/
+    getBrother (node) {
+        return node == this.n1 ? this.n2 : node == this.n2 ? this.n1 : null
+    },
+
+    getParalle(distance) {
+        const XSinge = this.diffX / this.length * distance;
+        const YSinge = this.diffY / this.length * distance;
+        
+        let listBlock = [];
+        return new Road(
+            new Node(
+                this.n1.x - YSinge, 
+                this.n1.y + XSinge,
+            ), 
+            new Node(
+                this.n1.x - this.diffX  - YSinge , 
+                this.n1.y - this.diffY  + XSinge ,
+                ), 
+        );
+    },
+
+    // line intercept math by Paul Bourke http://paulbourke.net/geometry/pointlineplane/
+    // Determine the intersection point of two line segments
+    // Return FALSE if the lines don't intersect
+    intersect(road) {
+      const x1 = this.n1.x; const y1 = this.n1.y;
+      const x2 = this.n2.x; const y2 = this.n2.y;
+      const x3 = road.n1.x; const y3 = road.n1.y;
+      const x4 = road.n2.x; const y4 = road.n2.y;
+      // Check if none of the lines are of length 0
+      if ((x1 === x2 && y1 === y2) || (x3 === x4 && y3 === y4)) {
+        return false
+      }
+      denominator = ((y4 - y3) * (x2 - x1) - (x4 - x3) * (y2 - y1))
+
+      // Lines are parallel
+      if (denominator === 0) {
+        return false
+      }
+      let ua = ((x4 - x3) * (y1 - y3) - (y4 - y3) * (x1 - x3)) / denominator
+      let ub = ((x2 - x1) * (y1 - y3) - (y2 - y1) * (x1 - x3)) / denominator
+
+      // is the intersection along the segments
+      /* if (ua < 0 || ua > 1 || ub < 0 || ub > 1) {
+        return false
+      } */
+      // Return a object with the x and y coordinates of the intersection
+      let x = x1 + ua * (x2 - x1)
+      let y = y1 + ua * (y2 - y1)
+      // console.log(x, y)
+      return {x: x, y: y}
+    },
+    /**/
+}
+
+  //-------------------
+  //-------------------
+
+  const node0 = new Node(200, 200);
+
+  const nodes = [
+    new Node(100, 300),
+    new Node(100, 100),
+    new Node(100, 200),
+    new Node(100, 200),
+    new Node(200, 100),
+    new Node(300, 300),
+    new Node(200, 300), // *
+  ]
+  const roads = nodes.map(node => {
+    return new Road(node0, node)
+  });
+
+  //-------------------
+  //-------------------
+
+  const width = 400;
+  const height = 400;
+
+  console.log("Hello")
+  const body = d3.select('body');
+
+  const canvas = body.append("div").append('canvas').attr('width', width).attr('height', height);
+  context = canvas.node().getContext('2d');
+
+  context.fillStyle = "#FFFFFF";
+  context.fillRect(0, 0, width, height);
+
+  //-------------------
+
+  roads.forEach(road => {
+    context.beginPath();
+      context.moveTo(road.n1.x, road.n1.y);
+      context.lineTo(road.n2.x, road.n2.y);
+      context.lineWidth = 3;
+      context.strokeStyle = "#000000";
+    context.stroke();
+  })
+
+  roads.forEach(road => {
+    const bleft = road.getParalle(RADIUS);
+    context.beginPath();
+      context.moveTo(bleft.n1.x, bleft.n1.y);
+      context.lineTo(bleft.n2.x, bleft.n2.y);
+      context.lineWidth = 1;
+      context.strokeStyle = "#666666";
+    context.stroke();
+
+    const bright = road.getParalle(-RADIUS);
+    context.beginPath();
+      context.moveTo(bright.n1.x, bright.n1.y);
+      context.lineTo(bright.n2.x, bright.n2.y);
+      context.lineWidth = 1;
+      context.strokeStyle = "#666666";
+    context.stroke();
+
+    const inter = bleft.intersect(bright);
+    context.beginPath();
+      context.arc(inter.x, inter.y, 5, 0, 2 * Math.PI);
+      context.lineWidth = 2;
+      context.strokeStyle = "#FF00FF";
+    context.stroke(); 
+
+  })
+
+  /*
+  context.beginPath();
+    context.arc(node0.x, node0.y, RADIUS, 0, 2 * Math.PI);
+    context.lineWidth = 1;
+    context.strokeStyle = "#FF0000";
+  context.stroke();
+  */
+
+  const crossNode = node0.getCrossZoneRoadNode();
+  crossNode.forEach(node => {
+    context.beginPath();
+    context.arc(node.x, node.y, 5, 0, 2 * Math.PI);
+      context.lineWidth = 2;
+      context.strokeStyle = "#0000FF";
+    context.stroke();
+  })
+</script>
+
+</body>
+</html>

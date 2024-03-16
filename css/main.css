@@ -1,0 +1,241 @@
+@import url(listSelector.css);
+@import url(isoBox.css);
+
+:root {
+
+    --color-backgroud : #3FA2B240; /* #d9ecf0; */
+
+    --color-alk-blue : #166A83;
+    --color-alk-blue-light : #3FA2B2; /* #3fa2b2 */ 
+    --color-alk-green : #48B071;
+    --color-alk-warning-1 : #C69C5D;
+    --color-alk-warning-2 : #FABF2D;
+    --color-alk-warning-3 : #EF7E1D;
+    --color-alk-red : #E64C42;
+    --color-alk-grey-1 : #222222;
+    --color-alk-grey-2 : #3C3C3B;
+    --color-alk-grey-3 : #555555;
+    --color-alk-grey-4 : #B8B8B8;
+    --color-alk-grey-5 : #ECECEC;
+    
+  }
+  
+
+@font-face {
+  font-family: Roboto;
+  src: url(Roboto-Thin.woff2) format('woff2'), /* Super Modern Browsers */
+}
+
+
+body {
+  background-color: #DEDEDE;
+  /* background-color: #222222; */
+  display: flex;
+  justify-content: center;
+  font-family: Roboto;
+  font-weight: 100;
+  /* line-height: 1.1; */
+  overflow: hidden;
+  margin: 0px;
+
+  font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+ 
+  
+#mainCenter {
+  height: 100vh;
+  width: 100vw;
+}
+
+
+#mainBoxSummary {
+  width: 100%;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  height: 100%;
+}
+
+/*----------------*/
+
+
+.boxListMenuLeft {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 100%;
+  overflow: scroll;
+}
+
+.boxListMenuLeft .boxItemMenuLeft {
+  /* border: 1px solid #F00; */
+  padding: 2px;
+  padding-bottom: 10px;
+  border-left: 5px solid #8eb36d;
+  border-right: 5px solid #8eb36d;
+  border-top: 5px solid #8eb36d;
+  border-bottom: 5px solid #8eb36d;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.boxListMenuLeft .boxItemMenuLeft#curentSelected {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boxListMenuLeft .boxItemMenuLeft#listItemHeader {
+  font-weight: 900;
+  font-family: fantasy;
+  margin-bottom: 0px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #8eb36d;;
+}
+
+.boxListMenuLeft .boxItemMenuLeft#listItem {
+  margin-top: 0px;
+  border-top: none;
+  min-height: 50vh;
+  max-height: 50vh;
+  overflow: scroll;
+  zoom: .9;
+}
+
+.boxListMenuLeft .boxItemMenuLeft#listItemHeader  #ItemListHeaderControl + .headerList {
+  position: absolute;
+  background: #FFFB;
+  width: 240px;
+  z-index: 1;
+  display: none;
+}
+.boxListMenuLeft .boxItemMenuLeft#listItemHeader  #ItemListHeaderControl:hover + .headerList {
+  display: block;
+}
+.boxListMenuLeft .boxItemMenuLeft#listItemHeader  #ItemListHeaderControl + .headerList:hover {
+  display: block;
+}
+
+.boxListMenuLeft .boxItemMenuLeft#listItemHeader  #ItemListHeaderControl + .headerList div {
+  padding-left: 2px;
+  cursor: pointer;
+}
+.boxListMenuLeft .boxItemMenuLeft#listItemHeader  #ItemListHeaderControl + .headerList div:hover {
+  border: 1px solid #000;
+}
+
+/*-------*/
+/* Header 
+/*-------*/
+.headerDiv {
+  border: 1px solid #DEDEDE;
+  width: 1400px;
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  font-weight: 900;
+  font-family: fantasy;
+}
+
+.headerSelectBox {
+  display: flex;
+  width: 64px;
+  height: 64px;
+  position: relative;
+  overflow: hidden;
+  margin: 5px;
+  border: 5px solid #DEDEDE;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.headerSelectBoxInBox {
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerCenterBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*-------*/
+/* Content Click Box 
+/*-------*/
+
+
+.tileClickBox {
+  position: relative;
+  cursor: pointer;
+  text-align: left;
+}
+
+.tileClickBox:before {
+  /* background: rgb(75, 125, 175); */
+  opacity: 0;
+  content: '';
+  height: 100%;
+  position: absolute;
+  transition: 0.3s;
+  transform: translateZ(0px);
+  width: 100%;
+  z-index: 2;
+}
+
+.tileClickBox:hover:before {
+  background: #616161;
+  transition: 0s;
+  opacity: .5;
+  /* transform: translateZ(1px); */
+}
+.tileClickBox:hover:after {
+  transition: 1s;
+  opacity: 0;
+  /* transform: scale(1) translateZ(2px); */
+}
+
+/* http://tobiasahlin.com/blog/how-to-animate-box-shadow/ /
+.tileClickBox:after {
+  box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.3);
+  content: '';
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  transition: 0.3s;
+  transform: scale(0.8) translateZ(2px);
+  width: 100%;
+  z-index: 1;
+}
+
+.tileClickBox:hover:after {
+  opacity: 1;
+  transform: scale(1) translateZ(2px);
+}
+
+.tileClickBox:active:before {
+  transform: translateZ(100px) rotateZ(45deg) rotateY(45deg) 
+}
+
+.tileClickBox:active:after {
+  opacity: 0;
+  transform: translateZ(100px) rotateZ(45deg) rotateY(45deg) 
+}
+
+*/
+
+
+
+
+
+
+
+

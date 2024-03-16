@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+            <!-- D3 with add-on  -->
+            <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+            <script src="https://d3js.org/d3-color.v1.min.js"></script>
+            <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+            <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+            <!-- Google Chart Api -->
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+            <!-- 
+                CSS define style
+                https://stream.alkemics.com/vendors/roboto-fontface/0.10.0/css/roboto/roboto-fontface.css
+                'https://fonts.googleapis.com/css?family=Roboto'
+                https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap
+            -->
+            <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap' rel='stylesheet'>
+            <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap' rel='stylesheet'>
+
+            <link type="text/css" rel="stylesheet" href="style.css"/>
+            <link type="text/css" rel="stylesheet" href="css/main.css" />
+
+            <script src="./scripts/tiledCanvas.js"></script>
+
+        </head>
+        <body>
+
+            <!-- Import main module - and start the dashboard-->
+            <script derer type="module">
+                import {Main} from './js/main.js'
+                const main = new Main()
+                main.start()
+            </script>
+
+        </body>
+</html>
