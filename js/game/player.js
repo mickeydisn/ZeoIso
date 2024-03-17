@@ -38,9 +38,8 @@ export class Player {
     setCenter(xx, yy) {
       this.x = xx; 
       this.y = yy;
-      this.tileX = xx; 
-      this.tileY = yy;
-      this.world.tilesMatrix.setCenter(this.x, this.y)
+      this.updateTilePos()
+      this.updateMapPos()
     }
 
     get tileIsoPos() {
