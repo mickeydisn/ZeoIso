@@ -105,7 +105,7 @@ export class AssetLoader {
     loadAssetTree() {
 
         // List all files on main directory 
-        const directory = "./img/asset/";
+        const directory = "img/asset/";
         const xmlHttp = new XMLHttpRequest();
         xmlHttp.open('GET', directory, false); // false for synchronous request
         xmlHttp.send(null);
@@ -116,7 +116,7 @@ export class AssetLoader {
         fileList.forEach(x => {
             const attr = x.match(/^<li><a href=".*">(.*)<\/a>$/)
             if (attr) {
-                var directory = "./img/asset/" + attr[1];
+                var directory = "img/asset/" + attr[1];
                 var xmlHttp = new XMLHttpRequest();
                 xmlHttp.open('GET', directory, false); // false for synchronous request
                 xmlHttp.send(null);
