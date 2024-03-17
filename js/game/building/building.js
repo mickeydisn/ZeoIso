@@ -11,7 +11,6 @@ import {axeNextTileOfList} from "./utils.js"
 
 import { BuildConf_Base } from "./buildConf_base.js"
 import { BuildConf_Place } from "./buildConf_place.js";
-import { BuildConf_Place2 } from "./buildConf_place2.js";
 
 // ====================================================
 // ====================================================
@@ -19,13 +18,16 @@ import { BuildConf_Place2 } from "./buildConf_place2.js";
 
 
 export class FactoryBuilding {
-    constructor(world) {
+    constructor(world, conf) {
         this.world = world;
+        this.fm = world.factoryMap;
         this.ta = world.tilesActions;
 
-        // this.conf = new BuildConf_Base()
-        // this.conf = new BuildConf_Place()
-        this.conf = new BuildConf_Place2()
+        this.conf = conf; 
+
+        this.x = 0;
+        this.y = 0;
+        this.lvl = 0;
     }
 
     //----------- 
@@ -50,10 +52,14 @@ export class FactoryBuilding {
 
     start(x, y) {
         console.log('============== Start Building ---- ')
-
-        
+        this.x = x;
+        this.y = y;
+        this.startTile = this.fm.getTile(this.x, this.y);
+        this.lvl = this.startTile.lvl;
 
         let bTile = new BuildTile(this.world, this, x, y)
+
+
         bTile.applyBuild(this.conf.BUILD_TILE_START);
         // bTile.mustBeFill = ["B2"]
 
@@ -108,6 +114,19 @@ export class FactoryBuilding {
                 bTileOpen, 
                 this.conf.BUILD_TILE_LIST_CLOSE
             )
+
+
+            if(this.conf.buildEmpty) {
+                let emptyTile = bTileOpen.filter(bTile => 
+                    Utils.intersect(this.conf.growTileTag, bTile.mustBeFill.flat()).length == 0 &&
+                    Utils.intersect(this.conf.emptyTileTag, bTile.mustBeFill.flat()).length > 0 
+                )
+                if (emptyTile.length > 0) console.log('======== Empty', emptyTile)
+                emptyTile.forEach(bTile => {
+                    bTile.filterChoiseNearTile(this.conf.BUILD_TILE_LIST_EMPTY);
+                })
+            }                
+
             return true
         }) ;    
         /*

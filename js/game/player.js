@@ -122,7 +122,7 @@ export class Player {
 
 
     keyLoopControle (keyPressed) {
-        const _translate_speed = 2;
+        const _translate_speed = .2;
     
         let move = false;
         let x = 0;

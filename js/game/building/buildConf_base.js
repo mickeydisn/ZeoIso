@@ -3,9 +3,10 @@ import { axeNextTileOfList } from "./utils.js"
 
 export class BuildConf {
     constructor() {
-        this.growLoopCount = 1;
+        this.growLoopCount = 100;
         this.endLoopMax = 0;
-        this.buildEmpty = true;
+        this.buildEmpty = false;
+
 
         this.growTileTag = ["B0", "B1", "B2", "B3"]
         this.emptyTileTag = ["E0"]
@@ -33,93 +34,179 @@ export class BuildConf_Base extends BuildConf{
     constructor() {
         super()
 
-        this.growLoopCount = 50;
-        this.endLoopMax = 100;
+        this.growLoopCount = 100;
+        this.endLoopMax = 200;
         this.buildEmpty = true;
 
 
         this.growTileTag = ['B0', "B1", "B2"]
-        this.emptyTileTag = ["E0"]
+        this.emptyTileTag = ["E0", 'E1']
     }
 
     get BUILD_TILE_START() { return { 
-        Tm: "B2",
+        color: [0, 0, 0], 
         key: "corridor_end_SE", 
-        near:[["B1"], ["E0"], ["E0"], ["E0"]],
-    }}
+        near:[
+            {is:'B0', con:['B0', null]},
+            {is:'E0', con:['E1', null]},
+            {is:'E0', con:['E1', null]},
+            {is:'E0', con:['E1', null]},
+        ]
+}}
 
-    get BUILD_TILE_LIST_EMPTY() { return [ 
-            // { Tw: 1, t: "empty", near:[0, 0, 0, 0]},
-        { Tm: "E0", Tw: 1, t: "empty", x:'0',  near:[__Bx, null, ['E1', null],  null]},
-        { Tm: "E0", Tw: 1, t: "empty", x:'1',  near:[null, __Bx, null,  ['E1', null]]},
-        { Tm: "E0", Tw: 1, t: "empty", x:'2',  near:[ ['E1', null], null, __Bx, null]},
-        { Tm: "E0", Tw: 1, t: "empty", x:'3',  near:[null,  ['E1', null], null, __Bx]},
-    ]}
+    get BUILD_TILE_LIST_EMPTY() { return axeNextTileOfList([
+        { 
+            Tw: 1, 
+            color: [0, 60, 0], 
+            t: "empty",  
+            near:[
+                {is:'E1', con:['E1', 'E0', null]},
+                {is:'E1', con:['E1', null]},
+                {is:'E1', con:['E1', null]},
+                {is:'E1', con:['E1', null]},
+            ]
+        },
+    ])}
     
     get BUILD_TILE_LIST() { return axeNextTileOfList([
         { 
-            Tm: "B0", Tw: 3,
-            key: "corridor_detailed",
+            Tw: .001, 
+            color: [0, 60, 0], 
+            t: "empty",  
             near:[
-                ["B1", null], 
-                _nEx, 
-                ["B1", null], 
-                _nEx
-            ]
-        }, { 
-            Tm: "B0", Tw: 1, 
-            key: "corridor_window",
-            near:[
-                ["B1", null], 
-                _nEx, 
-                ["B1", null], 
-                _nEx
+                {is:'E1', con:['E1', 'E0', null]},
+                {is:'E1', con:['E1', 'E0', null]},
+                {is:'E1', con:['E1', 'E0', null]},
+                {is:'E1', con:['E1', 'E0', null]},
             ]
         }, {
-            Tm: "B1", Tw: 1,
+            Tw: 2,
+            color: [0, 0, 0], 
             key: "corridor_",
             near:[
-                ["B0", "B1", "B2", null], 
-                _nEx, 
-                ["B0", "B1", "B2", null], 
-                _nEx
+                {is:'B1', con:['B0', 'B1', null]},
+                {is:'E0', con:['E1', null]},
+                {is:'B1', con:['B0', 'B1', null]},
+                {is:'E0', con:['E1', null]},
             ]
+
+        }, { 
+            Tw: 2,
+            color: [0, 0, 0], 
+            key: "corridor_detailed",
+            near:[
+                {is:'B1', con:['B0', 'B1', null]},
+                {is:'E0', con:['E1', null]},
+                {is:'B1', con:['B0', 'B1', null]},
+                {is:'E0', con:['E1', null]},
+            ]
+        }, { 
+            Tw: 1, 
+            color: [0, 0, 0], 
+            key: "corridor_window",
+            near:[
+                {is:'B1', con:['B0', 'B1', null]},
+                {is:'E0', con:['E1', null]},
+                {is:'B1', con:['B0', 'B1', null]},
+                {is:'E0', con:['E1', null]},
+            ]
+
         }, {
-            Tm: "B2", Tw: 5,
+            Tw: 5,
+            color: [0, 0, 0], 
             key: "corridor_corner",
-            near:[_nBA, _nEx, _nEx, _nBA]
+            near:[
+                {is:'B0', con:['B1', null]},
+                {is:'E0', con:['E1', null]},
+                {is:'E0', con:['E1', null]},
+                {is:'B0', con:['B1', null]},
+            ]
         }, { 
-            Tm: "B2", Tw: 1, 
+            Tw: 1, 
+            color: [0, 0, 0], 
             key: "corridor_cornerRound", 
-            near:[_nBA, _nEx, _nEx, _nBA]
+            near:[
+                {is:'B0', con:['B1', null]},
+                {is:'E0', con:['E1', null]},
+                {is:'E0', con:['E1', null]},
+                {is:'B0', con:['B1', null]},
+            ]
         }, { 
-            Tm: "B2", Tw: 10,
+            Tw: 5,
+            color: [0, 0, 0], 
             key: "corridor_cross", 
-            near:[_nBA, _nBA, _nBA, _nBA]
+            near:[
+                {is:'B0', con:['B1', null]},
+                {is:'B0', con:['B1', null]},
+                {is:'B0', con:['B1', null]},
+                {is:'B0', con:['B1', null]},
+            ]
         }, { 
-            Tm: "B2", Tw: 10, 
+            Tw: 10, 
+            color: [0, 0, 0], 
             key: "corridor_split",  
-            near:[_nBA, _nBA, _nBA, _nEx]
+            near:[
+                {is:'B0', con:['B1', null]},
+                {is:'B0', con:['B1', null]},
+                {is:'B0', con:['B1', null]},
+                {is:'E0', con:['E1', null]},
+            ]
+
         }, { 
-            Tm: ["B2", "B1"], Tw: .001, 
+            Tw: .001, 
+            color: [0, 0, 0], 
             key: "corridor_corner",
-            near:[_nBx, _nEx, _nEx, _nBx]
+            near:[
+                {is:'B0', con:['B1', null]},
+                {is:'E0', con:['E1', null]},
+                {is:'E0', con:['E1', null]},
+                {is:'B0', con:['B1', null]},
+            ]
         }, { 
-            Tm: ["B3", "B2", "B1"], Tw: .001, 
+            Tw: .001, 
+            color: [0, 0, 0], 
             key: "corridor_end",  
-            near:[_nEx, _nEx, ['B1', 'B2'], _nEx]
+            near:[
+                {is:'E0', con:['E1', null]},
+                {is:'E0', con:['E1', null]},
+                {is:'B1', con:['B0', 'B1', null]},
+                {is:'E0', con:['E1', null]},
+            ]
         },
     ])}
 
     get BUILD_TILE_LIST_CLOSE() { return axeNextTileOfList([
         { 
-            Tm: ["B2", "B1", 'B0'], Tw: 1, 
-            key: "corridor_corner", 
-            near:[['B1', 'B2', 'B0'], _nEx, _nEx, ['B1', 'B2', 'B0']]
-        }, { 
-            Tm: ["B2", "B1", 'B0'], Tw: 1, 
-            key: "corridor_end",   
-            near:[_nEx, _nEx, ['B1', 'B2', 'B0'], _nEx]
+            Tw: .001, 
+            color: [0, 60, 0], 
+            t: "empty",  
+            near:[
+                {is:'E1', con:['E1', 'E0', null]},
+                {is:'E1', con:['E1', 'E0', null]},
+                {is:'E1', con:['E1', 'E0', null]},
+                {is:'E1', con:['E1', 'E0', null]},
+            ]
+        }, {
+            Tw: .001, 
+            color: [0, 0, 0], 
+            key: "corridor_end",  
+            near:[
+                {is:'E0', con:['E1', null]},
+                {is:'E0', con:['E1', null]},
+                {is:'B0', con:['B0', 'B1', null]},
+                {is:'E0', con:['E1', null]},
+            ]
+        },
+        { 
+            Tw: .001, 
+            color: [0, 0, 0], 
+            key: "corridor_end",  
+            near:[
+                {is:'E0', con:['E1', null]},
+                {is:'E0', con:['E1', null]},
+                {is:'B1', con:['B0', 'B1', null]},
+                {is:'E0', con:['E1', null]},
+            ]
         },
     ])}
 }

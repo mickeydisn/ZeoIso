@@ -29,7 +29,7 @@ export class InterfaceMiniMap {
             .style('left', '0px')
             .style('width', this.size + "px")
             .style('height', this.size + "px")
-            .style('transform', "rotateX(55deg) rotateY(0deg) rotateZ(-135deg)")
+            .style('transform', "rotateX(57deg) rotateY(0deg) rotateZ(-133deg)")
 
         const div = this.mainDiv.append('div')
             .style('border', '2px solid')

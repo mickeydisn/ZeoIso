@@ -9,9 +9,9 @@ export class TilesAction {
 
 	init() {
 		this.index = {
-			lvl: this.addLvl.bind(this),
-			addSquareLvl: this.addSquareLvl.bind(this),
-			flateSquareLvl: this.flateSquareLvl.bind(this),
+			lvlUp: this.lvlUp.bind(this),
+			lvlUpSquare: this.lvlUpSquare.bind(this),
+			lvlFlatSquare: this.lvlFlatSquare.bind(this),
 			colorSquare: this.colorSquare.bind(this),
 		}
 	}
@@ -25,12 +25,17 @@ export class TilesAction {
 
 	// -------------------
 
-	addLvl(x, y, lvl) {
+	lvlSet(x, y, lvl) {
+		const tile = this.fm.getTile(x, y);
+		tile.lvl = lvl;
+	}
+
+	lvlUp(x, y, lvl) {
 		const tile = this.fm.getTile(x, y);
 		tile.lvl += lvl;
 	}
 
-	addSquareLvl(x, y, size, lvl) {
+	lvlUpSquare(x, y, size, lvl) {
 		const box = new TilesMatrix(this.world, size, x, y);
 		box.tiles.forEach(row => {
 			row.forEach(cellTile => {
@@ -39,7 +44,7 @@ export class TilesAction {
 		})
 	}
 
-	flateSquareLvl(x, y, size) {
+	lvlFlatSquare(x, y, size) {
 		const tile = this.fm.getTile(x, y);
 		const box = new TilesMatrix(this.world, size, x, y);
 		box.tiles.forEach(row => {
@@ -47,10 +52,36 @@ export class TilesAction {
 				cellTile.lvl = tile.lvl
 			})
 		})
-
 	}
 
+	lvlAvg(x, y, size) {
+		const tile = this.fm.getTile(x, y);
+		const box = new TilesMatrix(this.world, size, x, y);
+		let sumLvl = 0;
+		box.tiles.forEach(row => {
+			row.forEach(cellTile => {
+				sumLvl += cellTile.lvl
+			})
+		})
+		const avgLvl = sumLvl / (size * size)
+		tile.lvl = avgLvl
+	}
+
+	lvlAvgSquare(x, y, size) {
+		const tile = this.fm.getTile(x, y);
+		const box = new TilesMatrix(this.world, size, x, y);
+		box.tiles.forEach(row => {
+			row.forEach(cellTile => {
+				this.lvlAvg(cellTile.x, cellTile.y, 3)
+			})
+		})
+	}
+
+
 	colorSquare(x, y, size, c) {
+		// add alpha is not exist 
+		if (c.length == 3) c.push(255);
+
 		const color = new Uint8Array(c);
 		const box = new TilesMatrix(this.world, size, x, y);
 		box.tiles.forEach(row => {

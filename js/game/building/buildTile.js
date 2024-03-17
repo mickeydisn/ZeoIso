@@ -15,29 +15,20 @@ export class BuildTile {
         this.x = x;
         this.y = y;
 
+        
         this.conf = null;
         this.mustBeFill = [null, null, null, null];
 
         this.tile = this.fm.getTile(this.x, this.y)
+        this.ta.lvlSet(this.x, this.y, building.lvl)
+        
         this.tile.buildTile = this;
 
-        this.updateColor()
-    }
+        // this.ta.colorSquare(x, y, 1, [0, 0, 0, 255])
+        this.ta.lvlFlatSquare(this.x, this.y, 3)
+        this.ta.lvlAvgSquare(this.x, this.y, 5)
+        this.ta.lvlAvgSquare(this.x, this.y, 7)
 
-    updateColor() {
-        /*
-        const c = 
-            // this.conf == null ? [64, 64, 64, 255] : 
-            // this.conf == null ?  [32, 32, 32, 255] :
-            this.mustBeFill == null ?  [64, 64, 64, 255] :
-            this.mustBeFill[0] == 1 ?  [0, 0, 0, 255] :
-            this.mustBeFill[0] == 0 ?  [0, 64, 64, 255] :
-            this.mustBeFill[0] == -1 ?  [0, 64, 0, 255] :
-            [128, 128, 128, 255]
-
-        this.ta.colorSquare(this.x, this.y, 1, c)
-        */
-        this.ta.flateSquareLvl(this.x, this.y, 3)
     }
 
     // -----------------------
@@ -58,7 +49,6 @@ export class BuildTile {
             if (nearB.mustBeFill[axeFromTarget] == null ) {
                 nearB.mustBeFill[axeFromTarget] = this.conf.near[axe].con.filter(x => x != null)
             }
-            nearB.updateColor()
             return nearB
         })
     }
@@ -66,19 +56,24 @@ export class BuildTile {
    // -----------
 
     _applyBuildItem(conf) {
-        this.ta.colorSquare(this.x, this.y, 1, [0, 0, 0, 255])
-        this.ta.flateSquareLvl(this.x, this.y, 3)
+        const c = conf.color ? conf.color : [0, 0, 0, 255]
+        this.ta.colorSquare(this.x, this.y, 1, c)
         this.ta.itemForceKey(this.x, this.y, conf.key)
+
         this.tLinked = this.buildMarkNearTile();
         // console.log("--Build TILE=", this.x, this.y, this.conf.near, this.tLinked);
         
     }
 
     _applyEmpy(conf) {
-        this.ta.colorSquare(this.x, this.y, 1, [0, 64, 64, 255])
-        this.ta.flateSquareLvl(this.x, this.y, 3)
-        // this.ta.itemForceKey(this.x, this.y, conf.key)
+        const c = conf.color ? conf.color : [0, 0, 0, 255]
+        this.ta.colorSquare(this.x, this.y, 1, c)
         this.tLinked = this.buildMarkNearTile();
+
+        // this.ta.lvlAvgSquare(this.x, this.y, 5)
+        // this.ta.lvlAvgSquare(this.x, this.y, 7)
+
+        // this.ta.itemForceKey(this.x, this.y, conf.key)
         // console.log("--Build TILE= EMPTY ", this.x, this.y, this.conf.near, this.tLinked);
     }
 

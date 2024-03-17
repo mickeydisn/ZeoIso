@@ -145,6 +145,87 @@ Shape.extrude = function(path, height) {
 /**
  * A prism located at origin with dimensions dx, dy, dz
  */
+Shape.SurfaceSE = function(origin, dx, dy, dz) {
+  dx = (typeof dx === 'number') ? dx : 1;
+  dy = (typeof dy === 'number') ? dy : 1;
+  dz = (typeof dz === 'number') ? dz : 1;
+
+  /* The shape we will return */
+  var prism = new Shape();
+
+  
+  /* Squares parallel to the x-axis */
+  var face1 = new Path([
+    origin,
+    new Point(origin.x + dx, origin.y, origin.z),
+    new Point(origin.x + dx, origin.y, origin.z + dz),
+    new Point(origin.x, origin.y, origin.z + dz)
+  ]);
+
+  /* Push this face and its opposite */
+  prism.push(face1);
+  // prism.push(face1.reverse().translate(0, dy, 0));
+
+  return prism;
+
+};
+
+
+/**
+ * A prism located at origin with dimensions dx, dy, dz
+ */
+Shape.SurfaceSW = function(origin, dx, dy, dz) {
+  dx = (typeof dx === 'number') ? dx : 1;
+  dy = (typeof dy === 'number') ? dy : 1;
+  dz = (typeof dz === 'number') ? dz : 1;
+
+  /* The shape we will return */
+  var prism = new Shape();
+
+  /* Square parallel to the y-axis */
+  var face2 = new Path([
+    origin,
+    new Point(origin.x, origin.y, origin.z + dz),
+    new Point(origin.x, origin.y + dy, origin.z + dz),
+    new Point(origin.x, origin.y + dy, origin.z)
+  ]);
+  prism.push(face2);
+  // prism.push(face2.reverse().translate(dx, 0, 0));
+
+  return prism;
+};
+
+
+/**
+ * A prism located at origin with dimensions dx, dy, dz
+ */
+Shape.SurfaceFlat = function(origin, dx, dy, dz) {
+  dx = (typeof dx === 'number') ? dx : 1;
+  dy = (typeof dy === 'number') ? dy : 1;
+  dz = (typeof dz === 'number') ? dz : 1;
+
+  /* The shape we will return */
+  var prism = new Shape();
+
+  /* Square parallel to the xy-plane */
+  var face3 = new Path([
+    origin,
+    new Point(origin.x + dx, origin.y, origin.z),
+    new Point(origin.x + dx, origin.y + dy, origin.z),
+    new Point(origin.x, origin.y + dy, origin.z)
+  ]);
+  /* This surface is oriented backwards, so we need to reverse the points */
+  // prism.push(face3.reverse());
+  prism.push(face3.translate(0, 0, dz));
+
+  return prism;
+};
+
+
+
+/**
+ * A prism located at origin with dimensions dx, dy, dz
+ */
 Shape.Surface = function(origin, dx, dy, dz) {
   dx = (typeof dx === 'number') ? dx : 1;
   dy = (typeof dy === 'number') ? dy : 1;

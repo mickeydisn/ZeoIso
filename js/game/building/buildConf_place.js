@@ -8,153 +8,233 @@ const __Bx = ["B1", "B2", "B3", "B4"]
 
 export class BuildConf_Place {
     constructor() {
-        this.growLoopCount = 200;
-        this.endLoopMax = 1000;
+        this.growLoopCount = 100;
+        this.endLoopMax = 2000;
         this.buildEmpty = false;
 
-
-        this.growTileTag = ['B0', "B1", "B2", "B3", "B4"]
-        this.emptyTileTag = ["E0"]
+        this.growTileTag = ['B0', "BsR", "BsL", "BcL1", "BcR1", "BcL2", "BcR2", 'BfR', 'BfL']
+        this.emptyTileTag = ["E0", "E1"]
 
     }
 
     get BUILD_TILE_START() { return { 
-        Tm: "B1", 
+        color: [255, 255, 255], 
         key: "structure_diagonal_SE", 
-        near:[["B1"], ["B1"], ["B1"], ["B1"]]
+        near:[
+            {is:'B0', con:['B0', null]},
+            {is:'B0', con:['B0', null]},
+            {is:'B0', con:['B0', null]},
+            {is:'B0', con:['B0', null]},
+        ]
     } }
 
     get BUILD_TILE_LIST_EMPTY() { return axeNextTileOfList([
-        /*{ 
-            Tm: "E0", Tw: 1, 
-            t: "empty", x:'0',  
-            near:[["B2", "B3", "B4"], null, _nE1,  null]
-        },*/
+        { 
+            Tw: 1, 
+            color: [255, 255, 255], 
+            t: "empty",  
+            near:[
+                {is:'E1', con:['E1', 'E0', null]},
+                {is:'E1', con:['E1', 'E0', null]},
+                {is:'E1', con:['E1', 'E0', null]},
+                {is:'E1', con:['E1', 'E0', null]},
+            ]
+        },
     ])}
 
     get BUILD_TILE_LIST() { return axeNextTileOfList([
 
+
     { 
-        Tm: "B0", Tw: 2,
-        key: "structure_diagonal",
+        Tw: .00001, 
+        color: [255, 255, 255], 
+        t: "empty",  
         near:[
-            ["B1"], 
-            ["B1"], 
-            ["B1"], 
-            ["B1"]
-        ].map(x => [...x, null])
-    }, {
-        Tm: "B1", Tw: 8,
+            {is:'E1', con:['E0', 'E1', null]},
+            {is:'E1', con:['E0', 'E1', null]},
+            {is:'E1', con:['E0', 'E1', null]},
+            {is:'E1', con:['E0', 'E1', null]},
+        ]
+    },        
+
+    { 
+        Tw: 2,
+        color: [255, 255, 255], 
         key: "platform_center",
         near:[
-            ['B0', "B1", "B2", "B3"], 
-            ['B0', "B1", "B2", "B3"], 
-            ['B0', "B1", "B2", "B3"], 
-            ['B0', "B1", "B2", "B3"]
-        ].map(x => [...x, null])
+            {is:'B0', con:['B0', null]},
+            {is:'B0', con:['B0', null]},
+            {is:'B0', con:['B0', null]},
+            {is:'B0', con:['B0', null]},
+        ]
     }, {
-        Tm: "B2", Tw: 5,
+        Tw: 3, 
+        color: [255, 255, 255], 
         key: "platform_side",
         near:[
-            ['B1'], 
-            ['B2', 'B3', 'B4', null], 
-            ['E0', null], 
-            ['B2', 'B3', 'B4', null]
+            {is:'B0', con:['B0']},
+            {is:'BsR', con:['BsL', 'BcL1', 'BcL2', 'BfL', null]},
+            {is:'E0', con:['E1', null]},
+            {is:'BsL', con:['BsR', 'BcR1', 'BcR2', 'BfR', null]},
         ]
     }, {
-        Tm: "B3", Tw: 1,
+        Tw: 1,
+        color: [255, 255, 255], 
         key: "platform_cornerDot",
         near:[
-            ['B2', 'B4', null], 
-            ['B1', null], 
-            ['B1'], 
-            ['B2', 'B4', null]
+            {is:'BcL2', con:['BsR', 'BfR', null]},
+            {is:'B0', con:['B0', null]},
+            {is:'B0', con:['B0', null]},
+            {is:'BcR2', con:['BsL', 'BfL']},
         ]
     }, {
-        Tm: "B3", Tw: 1,
+        Tw: 1,
+        color: [255, 255, 255], 
         key: "platform_cornerDot",
         near:[
-            ['B2', 'B4', null], 
-            ['B1', null], 
-            ['B1'], 
-            ['B2', 'B4', null]
+            {is:'BcL2', con:['BsR', 'BfR']},
+            {is:'B0', con:['B0', null]},
+            {is:'B0', con:['B0', null]},
+            {is:'BcR2', con:['BsL', 'BfL', null]},
         ]
     }, {
-        Tm: "B4", Tw: 1,
+        Tw: 1,
+        color: [255, 255, 255], 
         key: "platform_cornerOpen",
         near:[
-            ['B2', 'B3'], 
-            ['E0', null], 
-            ['E0', null], 
-            ['B2', 'B3', "B4", null]
+            {is:'BcR1', con:['BsL', 'BfL']},
+            {is:'E0', con:['E1', null]},
+            {is:'E0', con:['E1', null]},
+            {is:'BcL1', con:['BsR', 'BfR', null]},
         ]        
     }, {
-        Tm: "B4", Tw: 1,
+        Tw: 1,
+        color: [255, 255, 255], 
         key: "platform_cornerOpen",
         near:[
-            ['B2', 'B3', "B4", null], 
-            ['E0', null], 
-            ['E0', null], 
-            ['B2', 'B3']
+            {is:'BcR1', con:['BsL', 'BfL', null]},
+            {is:'E0', con:['E1', null]},
+            {is:'E0', con:['E1', null]},
+            {is:'BcL1', con:['BsR', 'BfR']},
         ]        
+    }, {
+        Tw: .001,
+        color: [255, 255, 255], 
+        key: "platform_cornerOpen",
+        near:[
+            {is:'BfR', con:['BsL', 'BcL1', 'BcL2']},
+            {is:'E0', con:['E1', null]},
+            {is:'E0', con:['E1', null]},
+            {is:'BfL', con:['BsR', 'BcR1', 'BcR2']},
+        ]        
+    }, {
+        Tw: .001,
+        color: [255, 255, 255], 
+        key: "platform_cornerOpen",
+        near:[
+            {is:'BfR', con:['BsL', 'BcL1', 'BcL2']},
+            {is:'E0', con:['E1', null]},
+            {is:'E0', con:['E1', null]},
+            {is:'BfL', con:['BsR', 'BcR1', 'BcR2']},
+        ]        
+
     }
 ])}
 
     get BUILD_TILE_LIST_CLOSE() { return axeNextTileOfList([
 
+
         { 
-            Tm: "B1", Tw: .001,
+            Tw: .00001, 
+            color: [255, 255, 255], 
+            t: "empty",  
+            near:[
+                {is:'E1', con:['E0', 'E1', null]},
+                {is:'E1', con:['E0', 'E1', null]},
+                {is:'E1', con:['E0', 'E1', null]},
+                {is:'E1', con:['E0', 'E1', null]},
+            ]
+        },        
+    
+        { 
+            Tw: .0002,
+            color: [255, 255, 255], 
             key: "platform_center",
             near:[
-                ['B0', "B1", "B2", "B3"], 
-                ['B0', "B1", "B2", "B3"], 
-                ['B0', "B1", "B2", "B3"], 
-                ['B0', "B1", "B2", "B3"]
-            ].map(x => [...x, null])
+                {is:'B0', con:['B0', null]},
+                {is:'B0', con:['B0', null]},
+                {is:'B0', con:['B0', null]},
+                {is:'B0', con:['B0', null]},
+            ]
         }, {
-            Tm: "B2", Tw: 2,
+            Tw: 3, 
+            color: [255, 255, 255], 
             key: "platform_side",
             near:[
-                ['B1'], 
-                ['B2', 'B3', 'B4', null], 
-                ['E0', null], 
-                ['B2', 'B3', 'B4', null]
+                {is:'B0', con:['B0']},
+                {is:'BsR', con:['BsL', 'BcL1', 'BcL2', 'BfL', null]},
+                {is:'E0', con:['E1', null]},
+                {is:'BsL', con:['BsR', 'BcR1', 'BcR2', 'BfR', null]},
             ]
         }, {
-            Tm: "B3", Tw: .001,
+            Tw: .01,
+            color: [255, 255, 255], 
             key: "platform_cornerDot",
             near:[
-                ['B2', 'B4', null], 
-                ['B1', null], 
-                ['B1'], 
-                ['B2', 'B4', null]
+                {is:'BcL2', con:['BsR', 'BfR', null]},
+                {is:'B0', con:['B0', null]},
+                {is:'B0', con:['B0', null]},
+                {is:'BcR2', con:['BsL', 'BfL']},
             ]
         }, {
-            Tm: "B3", Tw: .001,
+            Tw: .01,
+            color: [255, 255, 255], 
             key: "platform_cornerDot",
             near:[
-                ['B2', 'B4', null], 
-                ['B1', null], 
-                ['B1'], 
-                ['B2', 'B4', null]
+                {is:'BcL2', con:['BsR', 'BfR']},
+                {is:'B0', con:['B0', null]},
+                {is:'B0', con:['B0', null]},
+                {is:'BcR2', con:['BsL', 'BfL', null]},
             ]
         }, {
-            Tm: "B4", Tw: 1,
+            Tw: 10,
+            color: [255, 255, 255], 
             key: "platform_cornerOpen",
             near:[
-                ['B2', 'B3'], 
-                ['E0', null], 
-                ['E0', null], 
-                ['B2', 'B3', "B4", null]
+                {is:'BcR1', con:['BsL', 'BfL']},
+                {is:'E0', con:['E1', null]},
+                {is:'E0', con:['E1', null]},
+                {is:'BcL1', con:['BsR', 'BfR', null]},
             ]        
         }, {
-            Tm: "B4", Tw: 1,
+            Tw: 10,
+            color: [255, 255, 255], 
             key: "platform_cornerOpen",
             near:[
-                ['B2', 'B3', "B4", null], 
-                ['E0', null], 
-                ['E0', null], 
-                ['B2', 'B3']
+                {is:'BcR1', con:['BsL', 'BfL', null]},
+                {is:'E0', con:['E1', null]},
+                {is:'E0', con:['E1', null]},
+                {is:'BcL1', con:['BsR', 'BfR']},
+            ]        
+        }, {
+            Tw: .001,
+            color: [255, 255, 255], 
+            key: "platform_cornerOpen",
+            near:[
+                {is:'BfR', con:['BsL', 'BcL1', 'BcL2']},
+                {is:'E0', con:['E1', null]},
+                {is:'E0', con:['E1', null]},
+                {is:'BfL', con:['BsR', 'BcR1', 'BcR2']},
+            ]        
+        }, {
+            Tw: .001,
+            color: [255, 255, 255], 
+            key: "platform_cornerOpen",
+            near:[
+                {is:'BfR', con:['BsL', 'BcL1', 'BcL2']},
+                {is:'E0', con:['E1', null]},
+                {is:'E0', con:['E1', null]},
+                {is:'BfL', con:['BsR', 'BcR1', 'BcR2']},
             ]        
         }
 

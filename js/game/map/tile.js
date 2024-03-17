@@ -9,23 +9,33 @@ export class Tile {
 		this.y = y;
         this.buildTile = null;
 
-		this.updateLvl();
-		this.genColor();
+		this._lvl = 0;
+		this.color = [0, 0, 0, 1]
+		this.items = []
+		this.lvlGen();
+		this.colorGen();
 		this.updateItems();
 
 	}
 
-	updateLvl() {
-		const lvl = this.fg.getRawLvl(this.x, this.y, TILE_GEN_ZOOM) * 256
-		// Ajuste Lvl to be more natural ( less liear )
-		if (lvl < 70) {
-			this.lvl =  0.005 * Math.pow(lvl-70, 3) + 70
-		} else {
-			this.lvl = 0.01 * Math.pow(lvl-70, 2) + 70
+	get lvl () { return this._lvl}
+	set lvl(lvl) {
+		if (this.buildTile == null) {
+			this._lvl = lvl
 		}
 	}
 
-	genColor() {
+	lvlGen() {
+		const rawLvl = this.fg.getRawLvl(this.x, this.y, TILE_GEN_ZOOM) * 256
+		// Ajuste Lvl to be more natural ( less liear )
+		if (rawLvl < 70) {
+			this._lvl =  0.005 * Math.pow(rawLvl - 70, 3) + 70
+		} else {
+			this._lvl = 0.01 * Math.pow(rawLvl - 70, 2) + 70
+		}
+	}
+
+	colorGen() {
 		this.color = this.fg.getLvlColor(this.x, this.y, TILE_GEN_ZOOM)
 	}
     updateColor([r, g, b, a]) {

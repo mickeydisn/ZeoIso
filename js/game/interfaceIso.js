@@ -261,8 +261,23 @@ export class InterfaceIso {
         const height = 1
         const alpha = 1
         const color = new Color(metaTile.color[0], metaTile.color[1], metaTile.color[2], alpha)
-        this.iso.add(Shape.Surface(Point(xx, yy, currentlvl - height), 1, 1, height), color);
-        
+
+        this.iso.add(Shape.SurfaceFlat(Point(xx, yy, currentlvl - height), 1, 1, height), color);
+
+        {
+            const diffLvl = (metaTile.lvl - this.tilesMatrix.tiles[xx][yy-1].lvl) * .3;
+            if (diffLvl > 0) {
+                this.iso.add(Shape.SurfaceSE(Point(xx, yy, currentlvl - diffLvl), 1, 1, diffLvl), color);
+            }
+        }
+        {
+            const diffLvl = (metaTile.lvl - this.tilesMatrix.tiles[xx-1][yy].lvl) * .3;
+            if (diffLvl > 0) {
+                this.iso.add(Shape.SurfaceSW(Point(xx, yy, currentlvl - diffLvl), 1, 1, diffLvl), color);
+            }
+        }
+
+
 
         const items = [...metaTile.items]
         // Draw Item,
@@ -290,20 +305,25 @@ export class InterfaceIso {
         this.selectedTile[x][y].style("translate", `${lpx}px ${lpx}px`)
         // console.log(metaTile , tiles.avgLvl)
         const height = 1
-        const alpha = .8
+        const alpha = 1
         const color = new Color(metaTile.color[0], metaTile.color[1], metaTile.color[2], alpha)
 
 
         const off = this.world.player.tileIsoPos.off;
 
         if (axe == 0) {
-            const xs = off.x
-
-            this.iso.add(Shape.Surface(Point(xx, yy, currentlvl - height), .5, 1, height), color);
-            
-        } else {
-            this.iso.add(Shape.Surface(Point(xx, yy, currentlvl - height), 1, 1, height), color);
-        }
+            const xs =  0.5 + off.x
+            this.iso.add(Shape.Surface(Point(xx, yy, currentlvl - height), xs, 1, height), color);
+        } else if (axe == 1) {
+            const ys =  0.5 + off.y
+            this.iso.add(Shape.Surface(Point(xx, yy, currentlvl - height), 1, ys, height), color);
+        } else if (axe == 2) {
+            const xs = 0.5 - off.x
+            this.iso.add(Shape.Surface(Point(xx + 1 - xs, yy, currentlvl - height), xs, 1, height), color);
+        } else if (axe == 3) {
+            const ys =  0.5 - off.y
+            this.iso.add(Shape.Surface(Point(xx, yy + 1 - ys, currentlvl - height), 1, ys, height), color);
+        } 
     }
 
     drawIso() {
@@ -321,6 +341,10 @@ export class InterfaceIso {
                     this.drawTileBorder(x, y, size, 0)
                 } else if (y == 0) {
                     this.drawTileBorder(x, y, size, 1)
+                } else if (x == size - 1) {
+                    this.drawTileBorder(x, y, size, 2)
+                } else if (y == size - 1) {
+                    this.drawTileBorder(x, y, size, 3)
                 } else {
                     this.drawTile(x, y, size)
 

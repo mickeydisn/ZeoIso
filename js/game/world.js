@@ -1,8 +1,10 @@
 
+import { BuildConf_Base } from './building/buildConf_base.js';
+import { BuildConf_Place } from './building/buildConf_place.js';
 import { FactoryBuilding } from './building/building.js';
-import {FactoryBiomes} from './factoryBiomes.js'
-import {FactoryGenerator} from './factoryGenerator.js'
-import {FactoryMap} from './factoryMap.js'
+import {FactoryBiomes} from './map/factoryBiomes.js'
+import {FactoryGenerator} from './map/factoryGenerator.js'
+import {FactoryMap} from './map/factoryMap.js'
 import { TilesAction } from './map/tilesAction.js';
 import { TilesMatrix } from './map/tilesMatrix.js'
 import { Player } from './player.js';
@@ -47,21 +49,38 @@ export class World {
 
 
         this.tilesActions = new TilesAction(this)
-        // this.tilesActions.index.flateSquareLvl(x, y, 3)
+        // this.tilesActions.index.lvlFlatSquare(x, y, 3)
         // this.actions.index.colorSquare(x, y, 5, [0, 0, 0, 255])
 
         this.player = new Player(this)
         this.player.setCenter(2000, 400)
 
-        this.factoryBuilding = new FactoryBuilding(this)
 
         const [x, y] = this.tilesMatrix.getPos()
 
-        this.tilesActions.index.lvl(x,y, .5)
+        this.tilesActions.lvlUpSquare(x + 25,y, 1, -6)
 
-        this.factoryBuilding.start(x, y);
+        {
+            const factoryBuilding = new FactoryBuilding(this, new BuildConf_Base())
+            factoryBuilding.start(x + 25, y);
+        }
+        {
+            const factoryBuilding = new FactoryBuilding(this, new BuildConf_Place())
+            factoryBuilding.start(x - 25, y);
+        }
 
-        this.tilesMatrix.move(0, 4)
+        this.tilesActions.lvlUpSquare(x, y, 3, 5)
+        this.tilesActions.colorSquare(x, y, 3, [0, 0, 0, 255])
+
+
+        this.tilesActions.lvlUpSquare(x,y+10, 3, 35)
+        this.tilesActions.lvlAvgSquare(x,y+10, 5)
+        this.tilesActions.lvlAvgSquare(x,y+10, 5)
+        this.tilesActions.lvlAvgSquare(x,y+10, 5)
+        this.tilesActions.colorSquare(x, y+10, 5, [0, 0, 0, 255])
+
+        // this.tilesActions.lvlUpSquare(x + 20 ,y + 5, 5, 5)
+
 
     }
 

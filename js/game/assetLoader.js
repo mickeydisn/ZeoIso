@@ -36,6 +36,20 @@ export class AssetLoader {
         return dest;
     }
 
+    colorVariation(source, colorOffset) {
+        const hue = colorOffset.hue ? colorOffset.hue : 0
+        const saturation = colorOffset.saturation ? colorOffset.saturation : 100
+        const contrast = colorOffset.contrast ? colorOffset.contrast : 100
+
+        const dest = document.createElement("canvas");
+        dest.width = 256; // image.naturalWidth;
+        dest.height = 256; // image.naturalHeight;
+        dest.ctx = dest.getContext("2d"); // attach context to the canvas for easy reference
+        dest.ctx.filter="hue-rotate("+(hue | 0)+"deg) saturate(" + saturation + "%) contrast(" + contrast + "%)";
+        dest.ctx.drawImage(source,0, 0, dest.width, dest.height);
+        return dest        
+    }
+
     loadAssetFiles() {
         this.countLoad = 0;
         
@@ -46,8 +60,11 @@ export class AssetLoader {
                 this.oneImageCallBack()
             }.bind(this)
             image.onload = function() {
-                this.assetTree[itemLabel].image = image
-                this.assetTree[itemLabel].cimage = this.imageToCanvas(image)
+                // this.assetTree[itemLabel].image = image
+                const canva = this.imageToCanvas(image)
+                // this.assetTree[itemLabel].cimage = canva
+                this.assetTree[itemLabel].cimage = this.colorVariation(canva, {hue:150})
+
                 this.oneImageCallBack()
             }.bind(this)
             image.src = item.src;
