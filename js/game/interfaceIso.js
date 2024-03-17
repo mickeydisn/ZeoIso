@@ -259,7 +259,7 @@ export class InterfaceIso {
         // console.log(metaTile , tiles.avgLvl)
 
         const height = 1
-        const alpha = 1
+        const alpha = .9
         const color = new Color(metaTile.color[0], metaTile.color[1], metaTile.color[2], alpha)
 
         this.iso.add(Shape.SurfaceFlat(Point(xx, yy, currentlvl - height), 1, 1, height), color);
@@ -305,7 +305,7 @@ export class InterfaceIso {
         this.selectedTile[x][y].style("translate", `${lpx}px ${lpx}px`)
         // console.log(metaTile , tiles.avgLvl)
         const height = 1
-        const alpha = 1
+        const alpha = .9
         const color = new Color(metaTile.color[0], metaTile.color[1], metaTile.color[2], alpha)
 
 

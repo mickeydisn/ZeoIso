@@ -5,13 +5,24 @@ export class Player {
     constructor (world) {
         this.world = world;
 
+        this.speed = .3;
+
+        // Real Position (float)
         this.x;
         this.y;
+
+        // Possition on Iso Tiles
         this.tileX;
         this.tileY;
         this.offx = 0;
         this.offy = 0;
         this.direction = 'S'
+
+        // Possition on the map 
+        this.mapX;
+        this.mapY;
+        this.keyMoveX = 0;
+        this.keyMoveY = 0;
     }
 
 
@@ -22,6 +33,14 @@ export class Player {
 
         const baseName = 'astronautA'
         return `${baseName}_${this.direction}-${s}`
+    }
+
+    setCenter(xx, yy) {
+      this.x = xx; 
+      this.y = yy;
+      this.tileX = xx; 
+      this.tileY = yy;
+      this.world.tilesMatrix.setCenter(this.x, this.y)
     }
 
     get tileIsoPos() {
@@ -40,67 +59,117 @@ export class Player {
                 y : this.offy + space,
             }
         }
-
     }
-
-
-
-    tilePos() {
+    
+    updateTilePos() {
         const space = .1
 
         const tileFloorX = Math.round(this.x - space)
         const tileFloorY = Math.round(this.y - space)
-
-        let offx = this.x - tileFloorX;
-        let offy = this.y - tileFloorY;
-
             
-        let haveChange = false;
-        if (this.tileX != tileFloorX) {
+        if (this.tileX != tileFloorX || this.tileY != tileFloorY) {
             this.tileX = tileFloorX            
-            haveChange = true;
-        }
-        if (this.tileY != tileFloorY) {
             this.tileY = tileFloorY            
-            haveChange = true;
-        }
-        if (haveChange) {
             this.world.tilesMatrix.setCenter(this.tileX, this.tileY);
         }
     }
-
-
-    setCenter(xx, yy) {
-        this.x = xx; 
-        this.y = yy;
-        this.tileX = xx; 
-        this.tileY = yy;
-        this.world.tilesMatrix.setCenter(this.x, this.y)
+    
+    updateMapPos() {
+      const mapFloorX = Math.round(this.x)
+      const mapFloorY = Math.round(this.y)
+          
+      if (this.mapX != mapFloorX || this.mapY != mapFloorY ) {
+          this.mapX = mapFloorX            
+          this.mapY = mapFloorY            
+          console.log('Change Position')
+          // this.world.tilesMatrix.setCenter(this.tileX, this.tileY);
+      }
     }
 
-    move (mx, my) {
-
-        this.direction = this._directionOfMove(mx, my);
-
-        if (mx == 0 || my == 0) {
-          this.x += mx;
-          this.y += my;
-        } else {
-          this.x += mx * .7;
-          this.y += my * .7;
-
-        }
+    updatePos() {
+      this.x = this.wantedX;
+      this.y = this.wantedY;
 
 
-        // console.log("move", mx, my, this.x, this.y)
-
-        this.tilePos()
-        // this.world.tilesMatrix.move(mx, my);
-
+      this.updateTilePos();
+      this.updateMapPos();
     }
 
+    move (keyMoveX, keyMoveY) {
 
+      if (keyMoveX == 0 ) {
+        const offx = this.x - this.mapX;
+        if (Math.abs(offx) > 0.01) {
+          // is start to move in
+          if (offx > 0 && this.keyMoveX < 0) {
+            console.log('A', offx,  this.keyMoveX )
+            this.wantedX = this.x - this.speed
+          // is start to move in
+          } else if (offx < 0 && this.keyMoveX > 0) {
+            console.log('B', offx,  this.keyMoveX )
+            this.wantedX = this.x + this.speed
+          // is finish to move in
+          } else if (Math.abs(offx) <= this.speed) {
+            console.log('C', offx,  this.keyMoveX )
+            this.wantedX = this.x - offx;
+          // is Continu to move in
+          } else {
+            console.log('D', offx,  this.keyMoveX )
+            this.wantedX = this.x - (offx > 0 ? - this.speed : + this.speed) ;
+          }
+          this.updatePos()
+      } else {
+        // this.keyMoveX = 0;
+      }    
+    } else {
+      this.keyMoveX = keyMoveX;
+    }
+    if (keyMoveY == 0 ) {
+      const offy = this.y - this.mapY;
+      if (Math.abs(offy) > 0.01) {
+          // is start to move in
+          if (offy > 0 && this.keyMoveY < 0) {
+            console.log('YA', offy,  this.keyMoveY )
+            this.wantedY = this.y - this.speed
+          // is start to move in
+          } else if (offy < 0 && this.keyMoveY > 0) {
+            console.log('YB', offy,  this.keyMoveY )
+            this.wantedY = this.y + this.speed
+          // is finish to move in
+          } else if (Math.abs(offy) <= this.speed) {
+            console.log('YC', offy,  this.keyMoveY)
+            this.wantedY = this.y - offy;
+          // is Continu to move in
+          } else {
+            console.log('YD', offy,  this.keyMoveY)
+            this.wantedY = this.y - (offy > 0 ? - this.speed : + this.speed) ;
+          }
+          this.updatePos()
+      } else {
+        // this.keyMoveY = 0;
+      }    
+    } else {
+      this.keyMoveY = keyMoveY;
+    }
 
+    if (keyMoveX == 0 && keyMoveY == 0 ) {
+      return
+    }
+    this.direction = this._directionOfMove(keyMoveX, keyMoveY);
+     
+    
+    if (keyMoveX == 0 || keyMoveY == 0) {
+      this.wantedX = this.x + this.speed * keyMoveX;
+      this.wantedY = this.y + this.speed * keyMoveY;
+    } else {
+      this.wantedX = this.x + this.speed * keyMoveX * .7;
+      this.wantedY = this.y + this.speed * keyMoveY * .7;
+    }
+
+    // console.log("move", mx, my, this.x, this.y)
+    this.updatePos()
+
+    }
 
     _directionOfMove(mx, my) {
 
@@ -122,31 +191,27 @@ export class Player {
 
 
     keyLoopControle (keyPressed) {
-        const _translate_speed = .2;
     
         let move = false;
         let x = 0;
         let y = 0;
         if (keyPressed['d']) {
           move = true;
-          x = + _translate_speed;
+          x = + 1;
         }
         if (keyPressed['q']) {
           move = true;
-          x = - _translate_speed;
+          x = - 1;
         }
         if (keyPressed['s']) {
           move = true;
-          y = - _translate_speed;
+          y = - 1;
         }
         if (keyPressed['z']) {
           move = true;
-          y = + _translate_speed;
+          y = + 1;
         }
-        if (move) {
-          //console.log('KeyMove')
-            this.move(x, y) 
-        };
+        this.move(x, y) 
       }
 
 }

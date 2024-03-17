@@ -25,8 +25,8 @@ export class InterfaceMiniMap {
             .style('display', 'flex')
             .style('flex-direction', 'column')
             .style('position', 'absolute')
-            .style('top', '-100px')
-            .style('left', '0px')
+            .style('top', '-60px')
+            .style('left', '40px')
             .style('width', this.size + "px")
             .style('height', this.size + "px")
             .style('transform', "rotateX(57deg) rotateY(0deg) rotateZ(-133deg)")
@@ -41,7 +41,7 @@ export class InterfaceMiniMap {
             .style('left', '193px')
             
         this.canvas = this.mainDiv.append('canvas')
-            .attr('id', "canvas")
+            .attr('id', "MiniMapCanvas")
             .attr('width', this.size)
             .attr('height', this.size)
             // .style('position','absolute')
@@ -55,6 +55,26 @@ export class InterfaceMiniMap {
         this.ctx.mozImageSmoothingEnabled = false;
         this.ctx.imageSmoothingEnabled = false;
 
+        document.getElementById('MiniMapCanvas').addEventListener('click', function(event) { 
+            console.log("========MiniMap Click", event)
+            this.onClick(event.offsetX, event.offsetY)
+        }.bind(this), false);
+
+    }
+
+    onClick(clickX, clickY) {
+        console.log('Click:', clickX, clickY)
+        console.log('ClickCenter:', clickX - this.size / 2, clickY - this.size / 2)
+        
+        const xx = Math.floor(( clickX - this.size / 2 ) / 5)
+        const yy = Math.floor(( clickY - this.size / 2 ) / 5)
+        console.log('XX,YY', xx, yy)
+
+        let [x, y] = this.world.tilesMatrix.getPos();
+        const CHUNK_SIZE = 20;
+        console.log(x, y, xx, yy)
+
+        this.world.player.setCenter(x + yy * CHUNK_SIZE, y + xx * CHUNK_SIZE);
     }
 
     drawUpdate() {
@@ -86,6 +106,16 @@ export class InterfaceMiniMap {
                 const c = this.fm.getTileColor(xx, yy)
                 ctx.fillStyle = `rgb(${c[0]}, ${c[1]}, ${c[2]})`;
                 ctx.fillRect(col * squareSize, row * squareSize, squareSize, squareSize);
+
+                const lvl = this.fm.getTileLvl(xx, yy)
+                const alpha = 
+                    lvl < 0 ? 0 : 
+                    lvl > 425 ? .65 : 
+                    Math.floor((lvl/425) * 20 * .6) / 20 
+
+                ctx.fillStyle = `rgba(0, 0, 0, ${alpha})`;
+                ctx.fillRect(col * squareSize, row * squareSize, squareSize, squareSize);
+
             }
         }
 

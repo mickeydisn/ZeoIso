@@ -5,7 +5,7 @@ import {World} from './game/world.js'
 // import {InterfaceMap} from './game/_interfaceMap.js'
 import { InterfaceIso } from "./game/interfaceIso.js";
 import {InterfaceMiniMap} from './game/interfaceMiniMap.js'
-import { AssetLoader } from './game/assetLoader.js';
+import { AssetLoader } from './game/asset/assetLoader.js';
 
 
 export class Main {

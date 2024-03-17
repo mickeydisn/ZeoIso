@@ -66,6 +66,14 @@ export class FactoryMap {
 		}
 		return chunk.get(modx, mody).color;	
 	}
+	getTileLvl(x, y) {
+		const [cx, cy, modx, mody] = this.chunkPoint(x, y);
+		const chunk = this.getExistingChunk(cx, cy);
+		if (chunk === null) {
+			return this.fg.getLvlGen(x, y, TILE_GEN_ZOOM)
+		}
+		return chunk.get(modx, mody).lvl;	
+	}
 
 }
 

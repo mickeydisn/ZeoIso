@@ -18,6 +18,10 @@ export class Tile {
 
 	}
 
+	get isBlock() {
+		return this.buildTile != null
+	}
+
 	get lvl () { return this._lvl}
 	set lvl(lvl) {
 		if (this.buildTile == null) {
@@ -26,13 +30,20 @@ export class Tile {
 	}
 
 	lvlGen() {
-		const rawLvl = this.fg.getRawLvl(this.x, this.y, TILE_GEN_ZOOM) * 256
-		// Ajuste Lvl to be more natural ( less liear )
-		if (rawLvl < 70) {
-			this._lvl =  0.005 * Math.pow(rawLvl - 70, 3) + 70
-		} else {
-			this._lvl = 0.01 * Math.pow(rawLvl - 70, 2) + 70
+		this._lvl = this.fg.getLvlGen(this.x, this.y, TILE_GEN_ZOOM)
+		/*
+		let rawLvl = this.fg.getRawLvl() * 256
+		// Creta a gap on the water lvl
+		if (rawLvl < this.fg.waterLvl) {
+			rawLvl -= 1
 		}
+		// Ajuste Lvl to be more natural ( less liear )
+		if (rawLvl < 80) {
+			this._lvl =  0.0008 * Math.pow(rawLvl - 80, 3) + 70 // 0.001 => Deep Sea, 0.0001 => Flat Sea
+		} else {
+			this._lvl = 0.03 * Math.pow(rawLvl - 80, 2) + 70 // 0.01 => Flat Montagne , 0.05 => Hight montagne
+		}
+		  	*/
 	}
 
 	colorGen() {

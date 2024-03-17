@@ -56,13 +56,30 @@ export class FactoryGenerator {
 
 
     lvl /= 8 + 4 + 1 + 1/4 // + 1/8
+
     return lvl;
   }
   
   getLvl(x, y, zoom=1, grain=1) {    
-    const lvl = this.getRawLvl(x, y, zoom, grain)
+    const lvl = this.getRawLvl(x, y, zoom, grain)    
     return lvl * 256 & 0xFF;
   }
+
+  getLvlGen(x, y, zoom=1, grain=1) {
+		let rawLvl = this.getRawLvl(x, y, zoom) * 256
+		// Creta a gap on the water lvl
+		if (rawLvl < this.waterLvl) {
+			rawLvl -= 1
+		}
+		// Ajuste Lvl to be more natural ( less liear )
+		if (rawLvl < 80) {
+			return  0.0008 * Math.pow(rawLvl - 80, 3) + 70 // 0.001 => Deep Sea, 0.0001 => Flat Sea
+		} else {
+			return 0.03 * Math.pow(rawLvl - 80, 2) + 70 // 0.01 => Flat Montagne , 0.05 => Hight montagne
+		}
+		  
+	}
+
 
   getTemperature(x, y, zoom=1, grain=1) {
     var f = 0.5 / 2 
