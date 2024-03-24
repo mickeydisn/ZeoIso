@@ -46,7 +46,7 @@ export const axeNextTile = (conf)  => {
     let near = conf.near;
     return ['_NW', '_NE', '_SE', '_SW'].map(axeKey => {
         const confAxe = { ...conf}
-        if (confAxe.key) confAxe.key = confAxe.key + axeKey
+        if (confAxe.key) confAxe.key = confAxe.key + axeKey + (confAxe.sufix ? confAxe.sufix : '')
 
         confAxe.near = near;
         near = shiftArrayByOne(near)

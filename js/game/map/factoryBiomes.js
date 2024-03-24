@@ -1,5 +1,5 @@
-import {GAME_BIOMES} from '../../data/biomes.js'
-import { GAME_FLORE_ITEMS } from '../../data/items.js';
+import {GAME_BIOMES} from './data/biomes.js'
+import { GAME_FLORE_ITEMS } from './data/items.js';
 
 
 export class FactoryBiomes {
@@ -26,7 +26,7 @@ export class FactoryBiomes {
 
 	addFloreCondition(floreItemsConf) {
 		const f = floreItemsConf
-		const func = `((flore * 1000 | 0) % ${f.flore.mod} == ${f.flore.eq} && flore >= ${f.flore.min} && flore < ${f.flore.max} && lvl >= ${f.l.min} && lvl < ${f.l.max}) ? '${f.key}' `
+		const func = `((flore * 1024 | 0) % ${f.flore.mod} == ${f.flore.eq} && flore >= ${f.flore.min} && flore < ${f.flore.max} && lvl >= ${f.l.min} && lvl < ${f.l.max}) ? '${f.key}' `
 
 		floreItemsConf.b.forEach(bid => {
 			this.biomes[bid].appendFloreCondition(func);			

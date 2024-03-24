@@ -8,9 +8,11 @@ const __Bx = ["B1", "B2", "B3", "B4"]
 
 export class BuildConf_Place {
     constructor() {
-        this.growLoopCount = 100;
+        this.growLoopCount = 50;
         this.endLoopMax = 2000;
         this.buildEmpty = false;
+        this.nearAdvance = false;
+
 
         this.growTileTag = ['B0', "BsR", "BsL", "BcL1", "BcR1", "BcL2", "BcR2", 'BfR', 'BfL']
         this.emptyTileTag = ["E0", "E1"]
@@ -40,7 +42,7 @@ export class BuildConf_Place {
                 {is:'E1', con:['E1', 'E0', null]},
             ]
         },
-    ])}
+    ]).map(x => {return {...x, allowMove : true}}) }
 
     get BUILD_TILE_LIST() { return axeNextTileOfList([
 
@@ -139,7 +141,7 @@ export class BuildConf_Place {
         ]        
 
     }
-])}
+]).map(x => {return {...x, allowMove : true}}) }
 
     get BUILD_TILE_LIST_CLOSE() { return axeNextTileOfList([
 
@@ -238,7 +240,7 @@ export class BuildConf_Place {
             ]        
         }
 
-    ])}
+    ]).map(x => {return {...x, allowMove : true}}) }
 
 }
 

@@ -1,6 +1,6 @@
 import {} from '../../../scripts/simplex-noise.js'
 
-import {GAME_BIOMES_MATRIS} from '../../data/biomes.js'
+import {GAME_BIOMES_MATRIS} from './data/biomes.js'
 
 
 export class FactoryGenerator {
@@ -42,7 +42,6 @@ export class FactoryGenerator {
     var fa = 1/ 20;
     var f0 = 1/ 8;
     var f1 = 2/ 3;
-    var f2 = 1.5;
     var lvl = 0;
 
     [x, y] = this._zoom_and_grain(x, y, zoom, grain);
@@ -60,25 +59,109 @@ export class FactoryGenerator {
     return lvl;
   }
   
+  getRawPeak(x, y, zoom=1, grain=1) {    
+    var f0 = 1/17;
+    var f1 = f0 * 2;
+    var f2 = f0 * 3;
+  
+    var lvl = 0;
+
+    [x, y] = this._zoom_and_grain(x, y, zoom, grain);
+
+
+    lvl += this._noise(f0 * x, f0 * y) * 1;
+    lvl += this._noise(f1 * x, f1 * y) / 2;
+    lvl += this._noise(f2 * x, f2 * y) / 4;
+    // lvl += this._noise(f3 * x, f3 * y) / 8;
+    lvl /= 1  + 1/2 + 1/4 // + 1/8
+
+    // Change Orientation
+    lvl = (lvl - .5) * 2
+    lvl = lvl > 0 ? lvl : - lvl
+    return lvl;
+  }
+  
+  getRawErosion(x, y, zoom=1, grain=1) {    
+    var f0 = 1/100;
+    var f1 = f0 * 2;
+    var f2 = f0 * 4;
+    var f3 = f0 * 8;
+    var t = 0;
+    var lvl = 0;
+
+    [x, y] = this._zoom_and_grain(x, y, zoom, grain);
+
+
+    lvl += this._noise(f0 * x + t, f0 * y + t) * 1;
+    lvl += this._noise(f1 * x + t, f1 * y + t) * 1/8;
+    lvl += this._noise(f2 * x + t, f2 * y + t) * 1/16;
+    // lvl += this._noise(f3 * x, f3 * y) / 8;
+    lvl /= 1  +  1/8 + 1/16
+
+    return lvl;
+  }
+
+
+
   getLvl(x, y, zoom=1, grain=1) {    
     const lvl = this.getRawLvl(x, y, zoom, grain)    
     return lvl * 256 & 0xFF;
   }
 
+
+  getPeak(x, y, zoom=1) {
+
+    const eroLvl = this.getRawErosion(x, y, zoom)
+    const peakLvl = this.getRawPeak(x, y, zoom)
+    let peakLocal = (1-eroLvl) * peakLvl
+   
+    // RIVER
+    if (peakLocal < .003  && eroLvl > .55) { // river
+      const factor = 1 - peakLocal * (1/.003)
+      return - ( 3 * factor + 1 )
+
+    }
+    // TALU
+    else if (peakLocal < .04  && eroLvl < .55) {      
+      let factor = 1 - peakLocal * (1/.04)
+      // sfactor = peakLocal > .01 ? factor : 1
+      return + ( 10 * factor  )
+  
+    // HILL   
+    } else if (peakLocal > .4) {
+      let factor = (peakLocal - .4) * (1/(1 - .4))
+      factor = 1 - Math.pow(1 - factor, 6)
+      return ( 40 * factor + 2 )
+    }
+    return 0
+  }
+
   getLvlGen(x, y, zoom=1, grain=1) {
-		let rawLvl = this.getRawLvl(x, y, zoom) * 256
+  	let rawLvl = this.getRawLvl(x, y, zoom) * 256
+
+    const rawLvlMod = rawLvl & 0xFF
 		// Creta a gap on the water lvl
-		if (rawLvl < this.waterLvl) {
+		if (rawLvlMod < this.waterLvl) {
 			rawLvl -= 1
 		}
-		// Ajuste Lvl to be more natural ( less liear )
-		if (rawLvl < 80) {
-			return  0.0008 * Math.pow(rawLvl - 80, 3) + 70 // 0.001 => Deep Sea, 0.0001 => Flat Sea
+
+    // Ajuste Lvl to be more natural ( less liear )
+    let lvl = 0
+		if (rawLvlMod < 80) {
+			lvl =  0.0008 * Math.pow(rawLvl - 80, 3) + 70 // 0.001 => Deep Sea, 0.0001 => Flat Sea
 		} else {
-			return 0.03 * Math.pow(rawLvl - 80, 2) + 70 // 0.01 => Flat Montagne , 0.05 => Hight montagne
+			lvl = 0.03 * Math.pow(rawLvl - 80, 2) + 70 // 0.01 => Flat Montagne , 0.05 => Hight montagne
 		}
-		  
-	}
+	
+
+    if (rawLvlMod > this.waterLvl) {
+      lvl += this.getPeak(x, y, zoom) 
+    }
+
+    return lvl
+
+  }
+
 
 
   getTemperature(x, y, zoom=1, grain=1) {
@@ -184,18 +267,32 @@ export class FactoryGenerator {
   /* ----------- */
 
   getBiome (x, y, zoom=1, grain=1) {
-    var lvl = Math.floor(this.getLvl(x , y, zoom, 1));
-    var temp = this.getTemperature(x, y, zoom, grain); 
-    var hydro = this.getHydro(x, y, zoom, grain) ; 
-    var mod = 32;
-    temp = (temp - temp % mod) / mod;
-    hydro = (hydro - hydro % mod) / mod;
+    var lvl = Math.floor(this.getLvl(x , y, zoom));
+
     if (lvl < this.waterLvl) {
       return this.biomes['ocean'];
     }
     if (lvl > this.mountLvl) {
       return this.biomes['mont1'];
     }    
+
+    if (lvl == this.waterLvl || lvl == this.waterLvl + 1) {
+      return this.biomes['beach'];
+    }
+    if (lvl == this.mountLvl) {
+      return this.biomes['mountL'];
+    }
+
+    const lvlPeak = this.getPeak(x , y, zoom)
+    if (lvlPeak < 0) {
+      return this.biomes['river'];
+    }
+
+    var temp = this.getTemperature(x, y, zoom); 
+    var hydro = this.getHydro(x, y, zoom) ; 
+    var mod = 32;
+    temp = (temp - temp % mod) / mod;
+    hydro = (hydro - hydro % mod) / mod;
     return this.biomes[this.biomeMatrix[temp * 8 + hydro]];
   }
 
@@ -228,6 +325,7 @@ export class FactoryGenerator {
 
     var c = new Uint8Array(this.getBiomeColor(x, y, lvl, zoom, 1));
     
+    /*
     if (lvl == this.waterLvl) {
      // Sand
      c.set([192, 192, 32, 255]);
@@ -236,27 +334,10 @@ export class FactoryGenerator {
      // Rock 
      c.set([64, 64, 64, 255]);
     }
+    */
 
     const hsl = this.rgbToHsl(c[0], c[1], c[2]);
     c.set(this.hslToRgb(hsl[0], hsl[1] * 0.3, hsl[2]));
-
-    /*
-    if (lvl > this.waterLvl && lvl < this.mountLvl) {
-      var dencity = this.getDensity(x, y, zoom, grain);
-    
-      if ( dencity > 192) {
-        dencity = (dencity - 192) / 64;
-        dencity = dencity * 128;
-        // c.set([dencity, dencity, dencity])
-        
-        c.set([
-          (c[0] + dencity < 255) ? c[0] + dencity : 255, 
-           c[1],
-          (c[2] + dencity < 255) ? c[2] + dencity : 255,
-        ])
-      }
-    }
-    */
 
     return c
   }

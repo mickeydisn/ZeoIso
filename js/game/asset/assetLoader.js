@@ -1,12 +1,18 @@
 import { assetConfig } from "./assetConfig.js";
+import * as AssetUtils from "../asset/assetUtils.js" 
 
 export class AssetLoader {
     constructor(callback) {
         this.callback = callback;
         console.log('== Load Asset Tree == ')
-        // this.loadAssetTree();
-        this.assetTree = assetConfig;
-        console.log(this.assetTree)
+        
+
+        this.loadAssetTree();
+        console.log(this.assetList)
+        // this.assetList = assetConfig;
+
+        this.assetTree = Object.fromEntries(this.assetList.map(assetConf => [assetConf.label, assetConf]))
+
         console.log('== Load Asset Files == ')
         this.loadAssetFiles()
     }
@@ -25,10 +31,12 @@ export class AssetLoader {
         c.height = 256; // image.naturalHeight;
         c.ctx = c.getContext("2d"); // attach context to the canvas for easy reference
         // cut the image ()
-        if (image.naturalWidth == 512) {
+        if (image.naturalWidth == 512 && image.naturalHeight == 512) {
             c.ctx.drawImage(image, 128, 128, 256, 256, 0, 0, 256, 256);
-        } else {
+        } if (image.naturalWidth == 256 && image.naturalHeight == 256) {
             c.ctx.drawImage(image, 0, 0, 256, 256);
+        } else {
+            // const [w, h] = [image.naturalWidth, image.naturalHeight]
         }
         return c;
     }
@@ -40,19 +48,6 @@ export class AssetLoader {
         return dest;
     }
 
-    colorVariation(source, colorOffset) {
-        const hue = colorOffset.hue ? colorOffset.hue : 0
-        const saturation = colorOffset.saturation ? colorOffset.saturation : 100
-        const contrast = colorOffset.contrast ? colorOffset.contrast : 100
-
-        const dest = document.createElement("canvas");
-        dest.width = 256; // image.naturalWidth;
-        dest.height = 256; // image.naturalHeight;
-        dest.ctx = dest.getContext("2d"); // attach context to the canvas for easy reference
-        dest.ctx.filter="hue-rotate("+(hue | 0)+"deg) saturate(" + saturation + "%) contrast(" + contrast + "%)";
-        dest.ctx.drawImage(source,0, 0, dest.width, dest.height);
-        return dest        
-    }
 
     loadAssetFiles() {
         this.countLoad = 0;
@@ -66,8 +61,8 @@ export class AssetLoader {
             image.onload = function() {
                 // this.assetTree[itemLabel].image = image
                 const canva = this.imageToCanvas(image)
-                // this.assetTree[itemLabel].cimage = canva
-                this.assetTree[itemLabel].cimage = this.colorVariation(canva, {hue:150})
+                this.assetTree[itemLabel].cimage = canva
+                // this.assetTree[itemLabel].cimage = AssetLoader.colorVariation(canva, {hue:150})
 
                 this.oneImageCallBack()
             }.bind(this)
@@ -82,29 +77,27 @@ export class AssetLoader {
         */
     }
 
-    old_loadAssetTree() {
-        const assetTree = {
-            tile: {src:"./img/asset/tower-defense-kit-1/tile_E.png"},
+    getAsset(key) {
+        if (this.assetTree[key]) {
+            return this.assetTree[key].cimage
+            
+        } else {
+            const [keyParent, canvasFilter] = key.split('#')
+            if (this.assetTree[keyParent]) {
+                console.log('-Create New FilterColor Asset ')
 
-            pathA1: {src:"./img/asset/kenney_natureKit_2.1/crops_dirtDoubleRow_NW.png"},
-            pathA2: {src:"./img/asset/kenney_natureKit_2.1/crops_dirtDoubleRow_SE.png"},
-            pathA3: {src:"./img/asset/kenney_natureKit_2.1/crops_dirtDoubleRow_NE.png"},
-            pathA4: {src:"./img/asset/kenney_natureKit_2.1/crops_dirtDoubleRow_SW.png"},
-            rockA1: {src:"./img/asset/kenney_natureKit_2.1/rock_largeD_SE.png"},
-            rockA2: {src:"./img/asset/kenney_natureKit_2.1/rock_tallA_SE.png"},
-            rockA3: {src:"./img/asset/kenney_natureKit_2.1/rock_smallTopB_SE.png"},
-            treeA1: {src:'./img/asset/fantasy-town-kit-1.0/tree_S.png'},
-            treeB1: {src:"./img/asset/kenney_natureKit_2.1/tree_detailed_dark_NW.png"},
-            treeB2: {src:"./img/asset/kenney_natureKit_2.1/tree_detailed_dark_SE.png"},
-            treeB3: {src:"./img/asset/kenney_natureKit_2.1/tree_detailed_dark_NE.png"},
-            treeB4: {src:"./img/asset/kenney_natureKit_2.1/tree_detailed_dark_SW.png"},
+                const parentCimage = this.assetTree[keyParent].cimage
+                const canvasFilterConf = AssetUtils.canvasFilterStrToValue(canvasFilter)
+                const newCimage = AssetUtils.colorVariation(parentCimage, canvasFilterConf)
+                this.assetTree[key] = {cimage: newCimage}
+                return this.assetTree[key].cimage
+            }
         }
-
-
-        
-        return assetTree;
     }
-
+ 
+    // ------------------------------------------------------------
+    // Asset Loader
+    // ------------------------------------------------------------
 
     loadAssetTree() {
 
@@ -143,12 +136,18 @@ export class AssetLoader {
                 const dir = splitPath[splitPath.length - 2]
                 const fileName = splitPath[splitPath.length - 1]
                 const splitName = fileName.substring(0, fileName.length - 4)// .split('_')
-                return [dir, splitName, {src:path}]
+                return {src:path, group:dir, label:splitName}
             })
 
-        this.assetTree = Object.fromEntries(this.assetList.map(([dir, label, img]) => [label, img]))
+        console.log('========= assetList ==========')
+        console.log(this.assetList)
+
+        console.log('==============================')
 
     }
 
 
 }
+
+
+

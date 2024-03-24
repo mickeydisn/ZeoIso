@@ -38,7 +38,7 @@ export class FactoryBuilding {
         if (!bTile) return bTileOpen;
 
         // Build the tile 
-        bTile.filterChoiseNearTile(tileList);
+        bTile.filterChoiseNearTile(tileList, this.conf.nearAdvance);
 
         // Add Nead teal to the openTileList 
         const bTileNext = bTile.getNearVoid()
@@ -57,13 +57,11 @@ export class FactoryBuilding {
         this.startTile = this.fm.getTile(this.x, this.y);
         this.lvl = this.startTile.lvl;
 
-        let bTile = new BuildTile(this.world, this, x, y)
-
-
-        bTile.applyBuild(this.conf.BUILD_TILE_START);
+        let startTile = new BuildTile(this.world, this, x, y)
+        startTile.applyBuild(this.conf.BUILD_TILE_START);
         // bTile.mustBeFill = ["B2"]
 
-        let bTileOpen = bTile.getNearVoid();
+        let bTileOpen = startTile.getNearVoid();
         // console.log('bTileOpen', bTileOpen.map(x => x));
 
         
@@ -72,7 +70,6 @@ export class FactoryBuilding {
             console.log('======== BuildOneTile', i)
 
             bTileOpen = bTileOpen.filter(bTile => 
-                bTile && 
                 Utils.intersect(this.conf.growTileTag, bTile.mustBeFill.flat()).length > 0 &&
                 bTile.conf == null
             )
@@ -89,7 +86,7 @@ export class FactoryBuilding {
                 )
                 if (emptyTile.length > 0) console.log('======== Empty', emptyTile)
                 emptyTile.forEach(bTile => {
-                    bTile.filterChoiseNearTile(this.conf.BUILD_TILE_LIST_EMPTY);
+                    bTile.filterChoiseNearTile(this.conf.BUILD_TILE_LIST_EMPTY, this.conf.nearAdvance);
                 })
             }                
             //console.log('bTileOpen', bTileOpen.map(x => x));

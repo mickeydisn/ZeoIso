@@ -4,8 +4,10 @@ export class Player {
 
     constructor (world) {
         this.world = world;
+        this.fm = world.factoryMap;
 
-        this.speed = .3;
+        this.speed = .2;
+        this.lvlJump = 4;
 
         // Real Position (float)
         this.x;
@@ -74,21 +76,44 @@ export class Player {
     }
     
     updateMapPos() {
-      const mapFloorX = Math.round(this.x)
-      const mapFloorY = Math.round(this.y)
-          
-      if (this.mapX != mapFloorX || this.mapY != mapFloorY ) {
-          this.mapX = mapFloorX            
-          this.mapY = mapFloorY            
-          console.log('Change Position')
+      const mapX = Math.round(this.x)
+      const mapY = Math.round(this.y)
+      if (this.mapX != mapX || this.mapY != mapY ) {
+          this.mapX = mapX            
+          this.mapY = mapY            
+          // console.log('Change Position', this.x, this.y, this.mapX, this.mapY)
           // this.world.tilesMatrix.setCenter(this.tileX, this.tileY);
       }
     }
 
     updatePos() {
+      const DX = this.wantedX - this.x;
+      const DY = this.wantedY - this.y;
+      /*
+      const XX = this.x + ( (DX > 0) ? .5 : -.5 )
+      const YY = this.y + ( (DY > 0) ? .5 : -.5 )
+      */
+      const wantX = Math.round(this.wantedX + DX)
+      const wantY = Math.round(this.wantedY + DY)
+
+      if (this.mapX != wantX || this.mapY != wantY ) {
+
+        const currentTile = this.fm.getTile(this.mapX, this.mapY)
+        const wantTile = this.fm.getTile(wantX, wantY)
+        const lvlDiff = currentTile.lvl - wantTile.lvl
+        // console.log('WantChange', [wantX, wantY], [DX, DY])
+        
+        if (wantTile.isBlock || Math.abs(lvlDiff) > this.lvlJump) {
+          this.wantedX = this.x
+          this.wantedY = this.y
+          // console.log("TileBlock")
+          return
+        }
+        
+      }
+
       this.x = this.wantedX;
       this.y = this.wantedY;
-
 
       this.updateTilePos();
       this.updateMapPos();
@@ -96,24 +121,21 @@ export class Player {
 
     move (keyMoveX, keyMoveY) {
 
+      // === Slice to Center of Tile X
       if (keyMoveX == 0 ) {
         const offx = this.x - this.mapX;
         if (Math.abs(offx) > 0.01) {
           // is start to move in
           if (offx > 0 && this.keyMoveX < 0) {
-            console.log('A', offx,  this.keyMoveX )
             this.wantedX = this.x - this.speed
           // is start to move in
           } else if (offx < 0 && this.keyMoveX > 0) {
-            console.log('B', offx,  this.keyMoveX )
             this.wantedX = this.x + this.speed
           // is finish to move in
           } else if (Math.abs(offx) <= this.speed) {
-            console.log('C', offx,  this.keyMoveX )
             this.wantedX = this.x - offx;
           // is Continu to move in
           } else {
-            console.log('D', offx,  this.keyMoveX )
             this.wantedX = this.x - (offx > 0 ? - this.speed : + this.speed) ;
           }
           this.updatePos()
@@ -123,24 +145,21 @@ export class Player {
     } else {
       this.keyMoveX = keyMoveX;
     }
+    // === Slice to Center of Tile Y
     if (keyMoveY == 0 ) {
       const offy = this.y - this.mapY;
       if (Math.abs(offy) > 0.01) {
           // is start to move in
           if (offy > 0 && this.keyMoveY < 0) {
-            console.log('YA', offy,  this.keyMoveY )
             this.wantedY = this.y - this.speed
           // is start to move in
           } else if (offy < 0 && this.keyMoveY > 0) {
-            console.log('YB', offy,  this.keyMoveY )
             this.wantedY = this.y + this.speed
           // is finish to move in
           } else if (Math.abs(offy) <= this.speed) {
-            console.log('YC', offy,  this.keyMoveY)
             this.wantedY = this.y - offy;
           // is Continu to move in
           } else {
-            console.log('YD', offy,  this.keyMoveY)
             this.wantedY = this.y - (offy > 0 ? - this.speed : + this.speed) ;
           }
           this.updatePos()
@@ -154,8 +173,10 @@ export class Player {
     if (keyMoveX == 0 && keyMoveY == 0 ) {
       return
     }
+
+    // === If Key Press
+
     this.direction = this._directionOfMove(keyMoveX, keyMoveY);
-     
     
     if (keyMoveX == 0 || keyMoveY == 0) {
       this.wantedX = this.x + this.speed * keyMoveX;
@@ -165,7 +186,7 @@ export class Player {
       this.wantedY = this.y + this.speed * keyMoveY * .7;
     }
 
-    // console.log("move", mx, my, this.x, this.y)
+    // == Update Position
     this.updatePos()
 
     }

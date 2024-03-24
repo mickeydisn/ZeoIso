@@ -38,14 +38,98 @@ body {
   overflow: hidden;
   margin: 0px;
 
-  font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 }
  
   
 #mainCenter {
+  display: inline-flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
   height: 100vh;
-  width: 100vw;
+  width: 80vw;
+  text-align: center;
 }
+
+
+#mainCenter > #mainMenuHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 2.5em;
+  width: 80vw;
+}
+
+
+#mainCenter > #mainMenuHead > div{ /* Title*/
+  display: inline-flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-shadow: rgb(153, 153, 153) 2px 2px;
+  padding: 1vw;
+}
+
+#mainCenter > #mainMapContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 80vw;
+}
+
+#mainMap {
+  display: flex;
+  flex-direction: column;
+}
+
+#mainMap > div { /* Zoom */
+  border: 1px solid rgb(222, 222, 222);
+  width: 1401px;
+  height: 700px;
+  position: relative;
+  zoom: 1.4;
+}
+
+#mainMap > div > div { /* MoveOffset */
+  width: 1400px;
+  height: 700px;
+  align-items: stretch;
+  position: relative;
+  top: 3.4px;
+  left: 0px;
+}
+
+#mainMap #canvaBox {
+  position: absolute;
+  width: 1400px;
+  height: 700px;
+}
+
+#mainMap #divBox {
+  position: absolute;
+  width: 1400px;
+  height: 700px;
+}
+
+#mainMap #divGrid {
+  width: 902px;
+  height: 902px;
+  position: absolute;
+  left: 250px;
+  top: -110px;
+  transition: all 0.3s ease 0s;
+  transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg);
+  transform-style: preserve-3d;
+  display: grid;
+  grid-template-columns: repeat(20, 5%);
+  z-index: 40;
+}
+
 
 
 #mainBoxSummary {
@@ -56,6 +140,10 @@ body {
   align-items: left;
   height: 100%;
 }
+
+
+
+
 
 /*----------------*/
 
@@ -88,13 +176,6 @@ body {
   align-items: center;
 }
 
-.boxListMenuLeft .boxItemMenuLeft#listItemHeader {
-  font-weight: 900;
-  font-family: fantasy;
-  margin-bottom: 0px;
-  padding-bottom: 3px;
-  border-bottom: 1px solid #8eb36d;;
-}
 
 .boxListMenuLeft .boxItemMenuLeft#listItem {
   margin-top: 0px;
@@ -105,25 +186,25 @@ body {
   zoom: .9;
 }
 
-.boxListMenuLeft .boxItemMenuLeft#listItemHeader  #ItemListHeaderControl + .headerList {
+ #ItemListHeaderControl + .headerList {
   position: absolute;
   background: #FFFB;
   width: 240px;
   z-index: 1;
   display: none;
 }
-.boxListMenuLeft .boxItemMenuLeft#listItemHeader  #ItemListHeaderControl:hover + .headerList {
+ #ItemListHeaderControl:hover + .headerList {
   display: block;
 }
-.boxListMenuLeft .boxItemMenuLeft#listItemHeader  #ItemListHeaderControl + .headerList:hover {
+ #ItemListHeaderControl + .headerList:hover {
   display: block;
 }
 
-.boxListMenuLeft .boxItemMenuLeft#listItemHeader  #ItemListHeaderControl + .headerList div {
+ #ItemListHeaderControl + .headerList div {
   padding-left: 2px;
   cursor: pointer;
 }
-.boxListMenuLeft .boxItemMenuLeft#listItemHeader  #ItemListHeaderControl + .headerList div:hover {
+ #ItemListHeaderControl + .headerList div:hover {
   border: 1px solid #000;
 }
 
@@ -152,20 +233,6 @@ body {
   justify-content: center;
   align-items: center;
 
-}
-
-.headerSelectBoxInBox {
-  display: flex;
-  overflow: hidden;
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
-}
-
-.headerCenterBox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /*-------*/
@@ -234,8 +301,462 @@ body {
 
 
 
+/* ----------------------------------------------- */
+/* MenuBox
+/* ----------------------------------------------- */
+
+.buttMenuBox {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: -40px;
+}
+
+.buttMenuBox > label {
+  right:-40px;
+}
+
+.buttMenuBox#miniMap > label {
+  top: calc(70px);
+}
+
+.buttMenuBox#control > label {
+  top: calc(70px + 50px);
+}
+.buttMenuBox#floorAction > label {
+  top: calc(70px + 50px + 80px);
+}
+.buttMenuBox#tileAsset > label {
+  top: calc(70px + 50px + 80px + 50px);
+}
+
+
+
+.buttMenuBox > label{
+  position: absolute;
+  top: 0px;
+  display: block;
+  z-index: 50;
+}
+
+/* ----------------------------------------------- */
+/* MenuBox MAIN 
+/* ----------------------------------------------- */
+
+
+.widjetMenuBox {
+  width: 300px;
+  position: absolute;
+  right: 0px;
+  flex-direction: column;
+  padding: 1em;
+  z-index: 200;
+  background-color: #DEDEDE;
+  font-size: 1.2rem;
+  font-stretch: condensed;
+
+  top: 8vh;
+  height: 10vh;
+}
+
+
+.widjetMenuBox#floorAction {
+  top: 55px;
+  height: 400px;
+  padding-top: 0.1rem;
+}
+.widjetMenuBox#tileAsset {
+  top: calc(50px + 105px);
+  height: 70vh;
+
+}
+
+
+/* ----------------------------------------------- */
+/* MenuBox FLORE ACTION 
+/* ----------------------------------------------- */
+
+.floorAction {
+  width: 300px;
+  text-align: center;
+  overflow: scroll;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+.floorAction > .row {
+  grid-column: 1 / 5;
+}
+
+.floorAction > .cell {
+  display: inline-block;
+  width: 64px; 
+  height: 64px;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #DEDEDE;
+  margin: 2px;
+}
+
+.floorAction > .cell >  .label {
+  position: absolute;
+  font-size: .8rem;
+  padding-left: .1rem;
+}
+
+
+.floorAction > .row > .smalGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.floorAction > .row > .smalGrid > div {
+  width: 20px; 
+  height: 20px;
+  margin: -1px;
+  background-color: #000;
+  border: 3px solid #AEAEAE;
+}
+
+
+
+.floorAction > .row.input {
+  display: grid;
+  grid-template-columns: 1.5em 2.5em 1.5em;
+}
+
+.floorAction > .row.input  .clickBox {
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #aeaeae;
+  width: 18px;
+  border-radius: 7px;
+}
+
+.floorAction > .row.input  .centerBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----------------------------------------------- */
+/* MenuBox ASSET SELECT 
+/* ----------------------------------------------- */
+
+#boxAssetSelected {
+  display: block;
+  margin-bottom: .5em;
+}
+
+
+
+#boxAssetSelected .content {
+  display: flex;
+  justify-content: space-around;
+}
+
+#boxAssetSelected .content .selector{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 0.77em;
+  
+}
+  
+#boxAssetSelected .content .selector > div {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.2em 0;
+}
+
+#boxAssetSelected .content .selector .lable{
+  width: 2rem;
+  margin-right: 1rem;
+}
+#boxAssetSelected .content .selector .input {
+  display: grid;
+  grid-template-columns: 1.5em 2.5em 1.5em;
+}
+
+
+
+#boxAssetSelected .content .selector .input  .clickBox {
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #aeaeae;
+  width: 18px;
+  border-radius: 7px;
+}
+
+#boxAssetSelected .content .selector .input  .centerBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#boxAssetSelected .content .selector .buttClear {
+  border-right: 2px solid #aeaeae;
+  border-bottom: 2px solid #aeaeae;
+  padding: 0.2rem;
+}
 
 
 
 
 
+
+/* ----------------------------------------------- */
+/* ----------------------------------------------- */
+
+
+#titleAssetHeader {
+  margin: 0.3rem 0;
+  border-bottom: 2px solid
+}
+
+#titleAssetHeader + .headerList {
+  position: absolute;
+  background-color: #DEDEDE;
+  width: 240px;
+  z-index: 1;
+  margin-top: calc(-.3rem - 2px);
+  display: none;
+  font-size: 0.8em;
+  height: 130px;
+  padding-bottom: 1rem;
+  border-left: 1px solid;
+  overflow: scroll;
+}
+#titleAssetHeader:hover + .headerList {
+  display: block;
+}
+#titleAssetHeader + .headerList:hover {
+  display: block;
+}
+
+#titleAssetHeader + .headerList div {
+  padding: 0.1rem 0 0.1rem 0.5rem;
+  cursor: pointer;
+  border: 5px solid #DEDEDE;
+  
+  padding-left: 2px;
+  cursor: pointer;
+  border: 5px solid #DEDEDE;
+}
+#titleAssetHeader + .headerList div:hover {
+  border: 5px solid #898989;
+}
+
+.listAsset {
+  width: 300px;
+  text-align: center;
+  overflow: scroll;
+}
+
+.listAsset > .cell {
+  display: inline-block;
+  width: 64px; 
+  height: 64px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgb(0, 0, 0);
+  margin: 3px;
+}
+
+.listAsset > .cell > .contentImg {
+  top: -60px;
+  left: -46px;
+  width: 64px;
+  height: 64px;
+  position: absolute;
+}
+
+/* ----------------------------------------------- */
+/* SWITCH 
+/* ----------------------------------------------- */
+
+  /*
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+*/  
+.switch > input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch > label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  background-color: #898989;
+  height: 30px;
+  width: 30px;
+  margin-top:5px;
+  margin-right:5px;
+  font-size: 1.1em;
+  transition-duration: .5s;
+}
+
+.switch > label:hover {
+  background-color: #898989;
+  margin-top:0px;
+  margin-right:0px;
+  height: 40px;
+  width: 40px;
+  font-size: 1.6em;
+  transition-duration: .5s;
+}
+
+.buttMenuBox input:checked ~ label {
+  background-color: #DEDEDE;
+  margin-top:0px;
+  margin-right:0px;
+  height: 40px;
+  width: 40px;
+  font-size: 1.6em;
+  transition-duration: .5s;
+}
+
+.buttMenuBox input:checked ~ label:hover {
+  background-color: #898989;
+  transition-duration: .5s;
+
+}
+
+
+.buttMenuBox .slider {
+  display: flex;
+}
+
+.buttMenuBox input ~ .slider {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s .5s, opacity .5s linear;
+}
+
+.buttMenuBox input:checked ~ .slider {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s , opacity .5s linear;
+  /*
+  display: flex;
+  opacity: 1;
+  */
+}
+
+/* ----------------------------------------------- */
+/* Minimap
+/* ----------------------------------------------- */
+
+
+#mainMiniMap {
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: -80px;
+  left: 40px;
+  background: none;
+  width: 400px;
+  height: 400px;
+  transform: rotateX(56deg) rotateY(0deg) rotateZ(-134deg);
+}
+
+#mainMiniMap > canvas {
+  width: 400px;
+  height: 400px;
+  box-shadow: -14px -14px 10px 7px;
+  cursor: cell;
+}
+
+
+
+/* ----------------------------------------------- */
+/* ISO DIV BOX
+/* ----------------------------------------------- */
+
+.isoDivBox {
+  border-width: 2px 1px 1px 2px;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  position: absolute;
+  min-width: 10px;
+  min-height: 10px;
+  /* cursor: pointer; */ 
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  display: flex;
+}
+
+
+.isoDivBox .content {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #DEDEDE;
+/*  width: 400px; */
+}
+
+.isoDivBox .content input{
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.isoDivBox .content #buttEditLabel {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: .7rem;
+  font-weight: bold;
+}
+
+.isoDivBox .content > textarea {
+  height: 150px;
+  font-size: .6rem;
+}
+
+.isoDivBox input ~ textarea {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s .5s, opacity .5s linear;
+  display:none
+}
+
+.isoDivBox input:checked ~ textarea {
+  display:flex;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s , opacity .5s linear;
+}
+
+.isoDivBox input ~ #Markdown {
+  display:flex;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s , opacity .5s linear;
+}
+
+.isoDivBox input:checked ~ .Markdown {
+  display:none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s .5s, opacity .5s linear;
+}

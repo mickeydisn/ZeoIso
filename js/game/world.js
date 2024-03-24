@@ -1,11 +1,12 @@
 
-import { BuildConf_Base } from './building/buildConf_base.js';
-import { BuildConf_Place } from './building/buildConf_place.js';
-import { FactoryBuilding } from './building/building.js';
+
+import { WorldCv } from './config/wordCv.js';
+import { WorldStart } from './config/wordStart.js';
 import {FactoryBiomes} from './map/factoryBiomes.js'
 import {FactoryGenerator} from './map/factoryGenerator.js'
 import {FactoryMap} from './map/factoryMap.js'
 import { TilesAction } from './map/tilesAction.js';
+import { TilesAction2 } from './map/tilesAction2.js';
 import { TilesMatrix } from './map/tilesMatrix.js'
 import { Player } from './player.js';
 
@@ -16,29 +17,11 @@ export class World {
         this.width = this.size;
         this.height = this.size;
        
-        // this.items = GAME_ITEMS;
-        // this.biomes = new BiomesFactory();
-        // this.biomes.biomes =  GAME_BIOMES
-        // this.biomeSelectMatrix = GAME_BIOMES_MATRIS;
-    
     
         this.zoom = 1;
         this.grain = 16;
-        // this.seed = "mickey";
-
-        // this.interfaceMenu = null;
-        // this.interfaceMap = null;
       
         this.factoryGenerator = null;
-        // this.factoryUser = null;
-        // this.factoryBuilding = null;
-      
-      
-        // this.simplex =null;
-        // this.waterLvl = 64;
-        // this.creatures = [];
-
-        // this.simplex = new SimplexNoise(this.seed);
 
         this.seed = "mickey";
 
@@ -49,61 +32,46 @@ export class World {
 
 
         this.tilesActions = new TilesAction(this)
-        // this.tilesActions.index.lvlFlatSquare(x, y, 3)
-        // this.actions.index.colorSquare(x, y, 5, [0, 0, 0, 255])
+        this.tilesActions2 = new TilesAction2(this)
 
         this.player = new Player(this)
+
+        // ========================
+        // ========================
+         
         this.player.setCenter(2000, 400)
+        
+        // this.player.setCenter(1500, 400)
+        // this.player.setCenter(2000, 1000)
+        // new WorldStart(this).start()
+        //new WorldCv(this).start()
+        
+        //beach hill
+        this.player.setCenter(492, -376)
+        
 
-
-        const [x, y] = this.tilesMatrix.getPos()
-
-        this.tilesActions.lvlUpSquare(x + 25,y, 1, -6)
-
-        {
-            const factoryBuilding = new FactoryBuilding(this, new BuildConf_Base())
-            factoryBuilding.start(x + 25, y);
-        }
-        {
-            const factoryBuilding = new FactoryBuilding(this, new BuildConf_Place())
-            factoryBuilding.start(x - 25, y);
-        }
-
-        this.tilesActions.lvlUpSquare(x, y, 3, 5)
-        this.tilesActions.colorSquare(x, y, 3, [0, 0, 0, 255])
-
-
-        this.tilesActions.lvlUpSquare(x,y+10, 3, 35)
-        this.tilesActions.lvlAvgSquare(x,y+10, 5)
-        this.tilesActions.lvlAvgSquare(x,y+10, 5)
-        this.tilesActions.lvlAvgSquare(x,y+10, 5)
-        this.tilesActions.colorSquare(x, y+10, 5, [0, 0, 0, 255])
-
-        // this.tilesActions.lvlUpSquare(x + 20 ,y + 5, 5, 5)
+        this.player.setCenter(1056, 147)
+        // ========================
+        // ========================
 
 
     }
 
+    clickTile(x, y) {
+        // tile.getLog()
+        const curentButt = this.globalState.get("WidjetActions.currentButt")
+        const curentSize = this.globalState.get("WidjetActions.currentSize")
+        const conf = {...curentButt.funcConf , size : curentSize}
+        console.log(curentButt.funcConf)
+        this.doAction(x, y, conf )
+        // this.GS.set('InterfaceIso.ClickTile', {x: xx - (this.size/2), y: yy - (this.size/2)})
 
-    getColor(x, y, zoom, grain) {
-        return this.factoryGenerator.getColor(x, y, zoom, grain);
     }
-    
-    getCellInfo(cx, cy) {
-        var info = this.factoryGenerator.getCellInfo(cx, cy);
 
-        var cityCenterItem = null;
-        this.factoryCity.openList.forEach(e => {
-            if (e.x == cx && e.y == cy) {
-            cityCenterItem = e
-            }
-        })
-        info['cityCenterItem'] = cityCenterItem; // ? buildingItem.getInfo() : null;
 
-        return info;
+    doAction(x, y, actionConf) {
+        this.tilesActions2.doAction(x, y, actionConf)
     }
-    
-
 
 
 }

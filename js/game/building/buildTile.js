@@ -20,9 +20,11 @@ export class BuildTile {
         this.mustBeFill = [null, null, null, null];
 
         this.tile = this.fm.getTile(this.x, this.y)
+
         this.ta.lvlSet(this.x, this.y, building.lvl)
         
         this.tile.buildTile = this;
+        // console.log(this.x , this.y, this.tile)
 
         // this.ta.colorSquare(x, y, 1, [0, 0, 0, 255])
         this.ta.lvlFlatSquare(this.x, this.y, 3)
@@ -38,16 +40,18 @@ export class BuildTile {
             const [dx, dy] = AXE_DIRECTION[axe]
             
             const tile = this.fm.getTile(this.x + dx, this.y + dy);
-            if (tile.building == null) {
+            if (tile.buildTile == null) {
                 const newBuild  = new BuildTile(this.world, this.building, this.x + dx, this.y + dy)
-                tile.building = newBuild
+                tile.buildTile = newBuild
             }
-            const nearB = tile.building
+            const nearB = tile.buildTile
             if (this.conf == null) return nearB;
             const axeFromTarget = (axe + 2) % 4
 
             if (nearB.mustBeFill[axeFromTarget] == null ) {
-                nearB.mustBeFill[axeFromTarget] = this.conf.near[axe].con.filter(x => x != null)
+                if (this.conf.near[axe].con) {
+                    nearB.mustBeFill[axeFromTarget] = this.conf.near[axe].con.filter(x => x != null)
+                }
             }
             return nearB
         })
@@ -101,7 +105,7 @@ export class BuildTile {
 
     getNearVoid() {
         return this.getNearTiles()
-            .map(t => t.building)
+            .map(t => t.buildTile)
             .filter(b =>  b != null && b.conf == null )
     }
 
@@ -115,10 +119,10 @@ export class BuildTile {
     }
     nearBuilding(dx, dy) {
         const tile = this.nearTile(dx, dy)
-        if (tile.building == null) {
-            tile.building = new BuildTile(this.world, this.building, this.x + dx, this.y + dy)
+        if (tile.buildTile == null) {
+            tile.buildTile = new BuildTile(this.world, this.building, this.x + dx, this.y + dy)
         }
-        return tile.building
+        return tile.buildTile
     }
 
     nearAxeTile(axe) {
@@ -140,13 +144,24 @@ export class BuildTile {
         })
         return tilesOptions
     }
+    filterAxeTilesOptionNull(tilesOptions, axe) {
+        tilesOptions = tilesOptions.filter(tileConf => {
+            // console.log(tileConf.key , axe, this.mustBeFill[axe], tileConf.near[axe].is)
+            // console.log(tileConf)
+            return tileConf.near[axe].con.filter(x=> x == null).length > 0
+        })
+        return tilesOptions
+    }
 
-    filterNearTilesOption(_tilesOptions) {
+
+    filterNearTilesOption(_tilesOptions, checkNull=false) {
         let tilesOptions = _tilesOptions.map(x => x);
         [0, 1, 2, 3].map(axe => {
             if (this.mustBeFill[axe] != null) {
                 tilesOptions = this.filterAxeTilesOption(tilesOptions, axe);
-            } 
+            } else if(checkNull == true){
+                // tilesOptions = this.filterAxeTilesOptionNull(tilesOptions, axe);
+            }
         })
         return tilesOptions;
     }
@@ -172,7 +187,7 @@ export class BuildTile {
                 let targetTilesOptions = listTilesOption.map(x => x);
                 targetTilesOptions = targetTagetTileBuilding.filterNearTilesOption(targetTilesOptions)
 
-                // console.log('=targetTilesOptions  ', targetTagetTileBuilding.mustBeFill, [...targetTilesOptions])
+                // console.log('= target -mustBe:', targetTagetTileBuilding.mustBeFill)
 
                 if (targetTagetTileBuilding.mustBeFill.filter(x => x != null).length > 0) {
                     // Get the target axe point to this. 
@@ -191,7 +206,11 @@ export class BuildTile {
                 }
 
             }
-            // console.log(">filterNearTiles", [...tilesOptions])
+            console.log('===== Filter Axe ', axe, this.mustBeFill[axe] != null, [...tilesOptions])
+            // console.log(">filterNearTiles", axe, this.mustBeFill[axe] != null)
+            // tilesOptions.forEach(o => {
+            //    console.log('       ', o.near.map(x => x.is))
+            // })
 
 
             
@@ -207,9 +226,11 @@ export class BuildTile {
     }
     /// ---------
 
-    filterChoiseNearTile(buildTileList) {
+    filterChoiseNearTile(buildTileList, useAdvance) {
 
-        const tilesOptions = this.filterNearTilesOptionAdvance(buildTileList)
+        const tilesOptions = useAdvance ? 
+            this.filterNearTilesOptionAdvance(buildTileList) :
+            this.filterNearTilesOption(buildTileList)
      
         const mrand = this.fg.getRandBuilding(this.x, this.y, 17, TILE_GEN_ZOOM)
         // const mrand =  Math.random()

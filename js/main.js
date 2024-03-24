@@ -3,44 +3,75 @@
 import {World} from './game/world.js'
 
 // import {InterfaceMap} from './game/_interfaceMap.js'
-import { InterfaceIso } from "./game/interfaceIso.js";
-import {InterfaceMiniMap} from './game/interfaceMiniMap.js'
+import { InterfaceIso } from "./game/mapIso/interfaceIso.js";
 import { AssetLoader } from './game/asset/assetLoader.js';
+import { WidjetAssetList } from './game/menu/widjetAssetList.js';
+import { WidjetMiniMap } from './game/menu/widjetMiniMap.js';
+import { GlabalState } from './game/globalState.js';
+import { WidjetActions } from './game/menu/widjetActions.js';
 
 
 export class Main {
     constructor() {
-
+        this.body = d3.select('body');
+        this.body.style('background-color', '#333')
     }
 
+    initMapDiv() {
+
+        var mainCenter = this.body
+            .append("div")
+                .attr('id', "mainCenter")
+                .html(`
+        <div id="mainMenuHead">
+            <div>XFLR6_LANDING</div>
+        </div>
+        <div id="mainMapContent">
+            <div id="mainMap">
+            </div>
+        </div>
+        `)
+        return mainCenter.select('#mainMap')
+    }
 
     start() {
-        this.initBody()
-
         console.log('== Init World ==');
         this.assetLoader = new AssetLoader(_ => this.start2())
-        
     }
     start2() {
+        this.globalState = new GlabalState()
+
         this.world = new World();
         this.world.assetLoader = this.assetLoader;
+        this.world.globalState = this.globalState;
 
-        this.initInterfaceIso()
+        {
+            const div = this.initMapDiv()
+            this.interfaceIso = new InterfaceIso(this.world, div);
+        }
 
-        var divMiniMap = d3.select('#mainMiniMap');
-        this.interfaceMiniMap = new InterfaceMiniMap(this.world, divMiniMap);
+        {
+            const div = this.body.append('div')
+            this.widjetActions = new WidjetActions(this.world, div)
+        }
+        {
+            const div = this.body.append('div')
+            this.widjetAssetList = new WidjetAssetList(this.world, div)
+        }
+        {
+            const div = this.body.append('div')
+            this.widjetMiniMap = new WidjetMiniMap(this.world, div);
+        }
 
-        //this.initInterfaceMap()
-
-        // this.interfaceMap.moveTo(74,-95);
 
         this.bindKeyboard();
         this.startGameLoop();
+
     }
 
     loop() {
         this.interfaceIso.drawUpdate();
-        this.interfaceMiniMap.drawUpdate();
+        this.widjetMiniMap.drawUpdate();
 
     }
 
@@ -80,17 +111,6 @@ export class Main {
 
     
 
-    initWord() {
-        // console.log(this.myGApi.biomeMatrix)
-        // this.world = new World( this.myGApi );
-    }
-    
-    initInterfaceIso() {
-        var mainDiv = d3.select('#mainMap');
-        this.interfaceIso = new InterfaceIso(this.world, mainDiv);
-
-    }
-
 
     bindKeyboard() {
 
@@ -119,90 +139,6 @@ export class Main {
 
     }
 
-
-    initInterfaceMap() {
-
-        console.log('== Init Interface ==');
-
-        var mainDiv = d3.select('#mainMap');
-        this.interfaceMap = new InterfaceMap(
-            mainDiv,
-            this.world,
-        );
-        this.interfaceMap.init();
-
-    }
-
-
-    initBody() {
-
-        var body = d3.select('body');
-
-        body
-            .style('background-color', '#DEDEDE')
-
-        var mainCenter = body.append("div")
-            .attr('id', "mainCenter")
-            .style('display', "inline-flex")
-            .style('justify-content', "start")
-            .style('flex-direction', "column")
-            .style('align-items', "center")
-            .style('height', "100vh")
-            .style('width', "80vw")
-            .style('border', "1px solid #F009")
-            .style('text-align', "center")
-
-        var centerHead = mainCenter.append('div')
-            .attr('id', "mainMenuHead")
-            .style('display', "flex")
-            .style('flex-direction', "row")
-            .style('justify-content', "space-between")
-            .style('align-items', "stretch")
-            .style('height', "2.5em")
-            .style('width', "80vw")
-            .style('border', "1px solid #F009")
-
-
-        var mainMiniMap = body.append("div")
-            .attr('id', "mainMiniMap")
-
-        var centerCadre = mainCenter.append('div')
-            .style('display', "flex")
-            .style('justify-content', "center")
-            .style('align-items', "center")
-            .style('height', "100vh")
-            .style('width', "80vw")
-            .style('overflow', "hidden")
-            .style('border', "1px solid #F009")
-
-        var mainMap = centerCadre.append("div")
-            .attr('id', "mainMap")
-
-        /*
-        var mainMenuRight = body.append("div")
-            .attr('id', "mainMenuRight")
-            .style('display', "inline-flex")
-            .style('justify-content', "start")
-            .style('flex-direction', "column")
-            .style('align-items', "stretch")
-            .style('height', "100vh")
-            .style('width', "20vw")
-            .style('overflow', "scroll")
-            .style('border', "1px solid #F009")
-        */
-
-
-        centerHead.append('div')
-            .style('display', "inline-flex")
-            .style('align-items', "center")
-            .style('color', "#FFF")
-            .style('text-align', "center")
-            .style('font-size', "1.2em")
-            .style('font-weight', "bold")
-            .style('text-shadow', "2px 2px #999")
-            .style('padding', "1vw")
-            .text('XFLR6_87SD')
-
-        }
+       
 
 }

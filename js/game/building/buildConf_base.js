@@ -7,6 +7,7 @@ export class BuildConf {
         this.endLoopMax = 0;
         this.buildEmpty = false;
 
+        this.nearAdvance = true;
 
         this.growTileTag = ["B0", "B1", "B2", "B3"]
         this.emptyTileTag = ["E0"]
@@ -22,13 +23,6 @@ export class BuildConf {
 }
 
 
-const __Ex = ["E0"]
-const __Bx = ["B1", "B2"]
-
-const _nEx = ["E0", "E1", null]
-const _nBA = ["B1", null]
-const _nBx = ["B1", "B2", null]
-
 
 export class BuildConf_Base extends BuildConf{
     constructor() {
@@ -37,9 +31,9 @@ export class BuildConf_Base extends BuildConf{
         this.growLoopCount = 100;
         this.endLoopMax = 200;
         this.buildEmpty = true;
+        this.nearAdvance = true;
 
-
-        this.growTileTag = ['B0', "B1", "B2"]
+        this.growTileTag = ["B0", "B1", "B2"]
         this.emptyTileTag = ["E0", 'E1']
     }
 
@@ -59,6 +53,7 @@ export class BuildConf_Base extends BuildConf{
             Tw: 1, 
             color: [0, 60, 0], 
             t: "empty",  
+            allowMove:true,
             near:[
                 {is:'E1', con:['E1', 'E0', null]},
                 {is:'E1', con:['E1', null]},
@@ -73,6 +68,7 @@ export class BuildConf_Base extends BuildConf{
             Tw: .001, 
             color: [0, 60, 0], 
             t: "empty",  
+            allowMove:true,
             near:[
                 {is:'E1', con:['E1', 'E0', null]},
                 {is:'E1', con:['E1', 'E0', null]},
@@ -82,7 +78,7 @@ export class BuildConf_Base extends BuildConf{
         }, {
             Tw: 2,
             color: [0, 0, 0], 
-            key: "corridor_",
+            key: "corridor_", sufix:"#H8_I1",
             near:[
                 {is:'B1', con:['B0', 'B1', null]},
                 {is:'E0', con:['E1', null]},
@@ -166,6 +162,7 @@ export class BuildConf_Base extends BuildConf{
             Tw: .001, 
             color: [0, 0, 0], 
             key: "corridor_end",  
+            allowMove:true,
             near:[
                 {is:'E0', con:['E1', null]},
                 {is:'E0', con:['E1', null]},
@@ -180,6 +177,7 @@ export class BuildConf_Base extends BuildConf{
             Tw: .001, 
             color: [0, 60, 0], 
             t: "empty",  
+            allowMove:true,
             near:[
                 {is:'E1', con:['E1', 'E0', null]},
                 {is:'E1', con:['E1', 'E0', null]},
@@ -190,6 +188,7 @@ export class BuildConf_Base extends BuildConf{
             Tw: .001, 
             color: [0, 0, 0], 
             key: "corridor_end",  
+            allowMove:true,
             near:[
                 {is:'E0', con:['E1', null]},
                 {is:'E0', con:['E1', null]},
@@ -201,6 +200,7 @@ export class BuildConf_Base extends BuildConf{
             Tw: .001, 
             color: [0, 0, 0], 
             key: "corridor_end",  
+            allowMove:true,
             near:[
                 {is:'E0', con:['E1', null]},
                 {is:'E0', con:['E1', null]},

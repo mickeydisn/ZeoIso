@@ -19,7 +19,10 @@ export class Tile {
 	}
 
 	get isBlock() {
-		return this.buildTile != null
+		return true &&
+			this.buildTile != null && 
+			this.buildTile.conf != null &&
+			!this.buildTile.conf.allowMove
 	}
 
 	get lvl () { return this._lvl}
@@ -67,14 +70,20 @@ export class Tile {
         console.log(`   ==================== `);
         console.log(`   | TILE: [${this.x} / ${this.y}]`)
         if (this.buildTile ) {
+			console.log("   |  Building Name: ", this.buildTile.conf ? this.buildTile.conf.name : 'notConf')
             console.log("   |  mustBeFill: ", JSON.stringify(this.buildTile.mustBeFill))
             console.log("   |  conf-near: ", this.buildTile.conf ? JSON.stringify(this.buildTile.conf.near) : 'null')
             
         }
+
         if (this.buildTile ) {
             console.log('   |  filterTileList: ', this.buildTile.filterNearTilesOption(this.buildTile.building.conf.BUILD_TILE_LIST))
-            
-            console.log('   |  filterTileList: ', this.buildTile.filterNearTilesOptionAdvance(this.buildTile.building.conf.BUILD_TILE_LIST))
+            const optionList = this.buildTile.filterNearTilesOptionAdvance(this.buildTile.building.conf.BUILD_TILE_LIST)
+			console.log('   |  filterTileList: ', )
+			optionList.forEach(o => {
+				console.log('   |    - ', o.near.map(x => x.is))
+			});
+
         }
         // console.log("   |  mustBeFill: ", this.buildTile.mustBeFill)
         // console.log("   |  mustBeFill: ", this.buildTile.mustBeFill)
