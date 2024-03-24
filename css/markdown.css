@@ -1,0 +1,99 @@
+
+  /* --------------- */
+
+.Markdown {
+  background-color: #DEDEDEBB;
+    width: 100%;
+    text-align: left;
+    font-size: .8em;
+    font-weight: 300;
+}
+
+.Markdown table {
+    /* border: 1px solid; */
+    width: 100%;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 5px;
+  }
+
+.Markdown tr {
+  margin: 0;
+  padding: 0;
+}
+
+.Markdown th {
+  border-right: 2px solid #FFF;
+  border-bottom: 2px solid #FFF;
+  margin: 0;
+  padding: 0;
+}
+.Markdown td {
+  border-right: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  margin: 0;
+  padding: 0;
+}
+
+.Markdown h1 {
+    padding: .3rem .1rem .2rem .5rem;
+    margin: 0;
+}
+.Markdown h2 {
+    padding: .3rem .1rem .2rem .5rem;
+    margin: 0;
+}
+.Markdown h3 {
+    padding: .2rem .1rem .1em .5rem;
+    margin: 0;
+}
+.Markdown h4 {
+  padding: .2rem .1rem .1rem .5rem;
+  margin: 0;
+}
+.Markdown h5 {
+  padding: .1rem .1rem .1rem .5rem;
+  margin: 0;
+}
+.Markdown h6 {
+  padding: .1rem .1rem .1rem .5rem;
+  margin: 0;
+}
+  
+    
+.Markdown p {
+  padding: 0.2rem 0.2rem 0.2rem .5rem;
+  margin: 0;
+}
+
+.Markdown ul {
+  padding: .2rem 0rem .2rem 2rem;
+  margin: 0;
+  list-style-type: circle;
+}
+.Markdown li {
+  padding: 0rem 0rem 0rem 0rem;
+  margin: 0;
+}
+
+.Markdown em {
+  color: #336;
+}
+
+.Markdown strong {
+  /* font-family: none;*/
+  font-weight: bold;
+}
+
+.Markdown blockquote {
+  margin: .5rem;
+  padding: .1rem;
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+  border-left-width: 5px;
+  border-image-source: linear-gradient(to right, #32778d, #32778d00);
+  font-weight: 500;
+  font-size: .8em;
+
+}

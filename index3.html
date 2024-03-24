@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+            <!-- D3 with add-on  -->
+            <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+            <script src="https://d3js.org/d3-color.v1.min.js"></script>
+            <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+            <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+            <!-- Google Chart Api -->
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+            <!-- 
+                CSS define style
+                https://stream.alkemics.com/vendors/roboto-fontface/0.10.0/css/roboto/roboto-fontface.css
+                'https://fonts.googleapis.com/css?family=Roboto'
+                https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap
+            -->
+            <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap' rel='stylesheet'>
+            <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap' rel='stylesheet'>
+
+            <link type="text/css" rel="stylesheet" href="style.css"/>
+            <link type="text/css" rel="stylesheet" href="css/main.css" />
+            <link type="text/css" rel="stylesheet" href="css/markdown.css" />
+
+            <script src="./scripts/tiledCanvas.js"></script>
+            <script src="./scripts/marked.min.js"></script>
+
+            <link rel="shortcut icon" href="">
+            <style>
+                .Menu {
+                    right: 0px;
+                    text-align: left;
+                    background-color: #FFF;
+                    width: 200px;
+                    position: absolute;
+                    z-index: 100;
+                }
+            </style>
+        </head>
+
+        <body>
+
+
+            <div class="Menu">
+                <input type="checkbox" id="Layer1"></input><label for="Layer1"> Layer1</label> </br>
+                <input type="checkbox" id="Layer2"></input><label for="Layer2"> Layer2</label> </br>
+                <input type="checkbox" id="Layer3"></input><label for="Layer3"> Layer3</label> </br>
+                <input type="checkbox" id="Layer4"></input><label for="Layer4"> Layer4</label> </br>
+
+            </div>
+
+            <script derer type="module">
+                import {FactoryBiomes} from './js/game/map/factoryBiomes.js'
+                import {FactoryGenerator} from './js/game/map/factoryGenerator.js'
+                // const main = new Main()
+                // main.start()
+
+
+                export class World {
+
+                    constructor() {
+                        this.size = Math.pow(2, 10);
+                        this.width = 2800;
+                        this.height = 1600;
+                    
+
+                        this.zoom = 1;
+                        this.grain = 16;
+                    
+
+                        this.seed = "mickey";
+
+                        this.factoryBiomes = new FactoryBiomes(this);
+                        this.fg = new FactoryGenerator(this);
+
+                        this.init()
+                    }
+
+                    init() {
+
+                        this.canvas = d3.select('body').append('canvas')
+                            .attr('id', "canvas")
+                            .attr('width', this.width)
+                            .attr('height', this.height)
+                            // .style('position','absolute')
+                            .style('width', this.width + "px")
+                            .style('height', this.height + "px")
+                        this.ctx = this.canvas.node().getContext('2d')
+                        this.ctx.webkitImageSmoothingEnabled = false;
+                        this.ctx.mozImageSmoothingEnabled = false;
+                        this.ctx.imageSmoothingEnabled = false;
+
+                        this.ctx.fillstyle = '#000'
+                        this.ctx.fillRect(0, 0, this.width, this.height)
+
+                        console.log('World')
+                        this.fillBiome()
+                    }
+
+
+                    fillBiome () {
+                        const TILE_GEN_ZOOM = 2;
+                        const CHUNK_SIZE = 4;
+                        const DEFINITION = 1;
+                        
+                        const width =  Math.floor(this.width / DEFINITION)
+                        const height = Math.floor(this.height / DEFINITION)
+
+                        const x = 2000 // Math.floor(2000 / CHUNK_SIZE)
+                        const y = 400 // Math.floor(400 / CHUNK_SIZE)
+
+                        let min = 0.5;
+                        let max = 0.5;
+
+                        // Dessiner le damier
+                        for (let row = 0; row < height; row++) {
+                            for (let col = 0; col < width; col++) {
+                                const yy = CHUNK_SIZE * (-row + Math.floor(height / 2)) + y 
+                                const xx = CHUNK_SIZE * (col - Math.floor(width / 2)) + x 
+                                
+                                let lvlCont = this.fg.getRawLvl(xx, yy, TILE_GEN_ZOOM)
+                                let lvlPeak = this.fg.getRawPeak(xx, yy, TILE_GEN_ZOOM)
+                                let lvlEro = this.fg.getRawErosion(xx, yy, TILE_GEN_ZOOM)
+
+                                {
+                                    const c = this.fg.getLvlColor(xx, yy, TILE_GEN_ZOOM)
+                                    this.ctx.fillStyle = `rgb(${c[0]}, ${c[1]}, ${c[2]})`;
+                                    this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
+                                }
+                                {
+
+
+                                    if (lvlCont < .25) {
+                                        this.ctx.fillStyle = `rgb(${255}, ${255}, ${255}, .9)`;
+                                    } else if (lvlCont > .75) {
+                                        this.ctx.fillStyle = `rgb(${0}, ${0}, ${0}, .9)`;
+
+                                    } else {
+                                        const cFunc = d3.scaleLinear([0, 1], [0, 32]);
+                                        const c = (Math.abs(cFunc(lvlCont)) * 4) % 256
+                                        this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .9)`;
+                                    }
+                                    // this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
+
+                                }
+                                {
+                                                                    
+                                    if (lvlPeak < .02) {
+                                        this.ctx.fillStyle = `rgb(${0}, ${0}, ${255}, .001)`;
+                                        // this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
+                                    } else if (lvlPeak > .4) {
+                                        const cFunc = d3.scaleLinear([0, 1], [0, 128]);
+                                        const c = (Math.abs(cFunc(lvlPeak)) * 16) % 256
+                                        this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .2)`;
+                                        // this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
+                                    } 
+                                    
+
+                                }
+
+                                {
+
+                                    const cFunc = d3.scaleLinear([0, 1], [0, 128]);
+                                    const c = (Math.abs(cFunc(lvlEro)) * 16) % 256
+                                    if (lvlEro < .3) {
+                                        this.ctx.fillStyle = `rgb(${c}, ${0}, ${0}, .2)`;
+                                    } else if (lvlEro > .7) {
+                                        this.ctx.fillStyle = `rgb(${0}, ${0}, ${c}, .2)`;
+                                    } else {
+                                        this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .01)`;
+                                    }
+                                    // this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
+                                    
+                                }
+                                {
+
+                                    
+
+                                    const lvlSum = (1 - lvlEro) * lvlPeak
+                                    const cFunc = d3.scaleLinear([0, 1], [0, 128]);
+                                    const c = (Math.abs(cFunc(lvlSum)) * 16) % 256
+                                    if (lvlSum < .002) {
+                                        this.ctx.fillStyle = `rgb(${c}, ${0}, ${0}, .9)`;
+                                    } else if (lvlSum > .3) {
+                                        this.ctx.fillStyle = `rgb(${0}, ${0}, ${c}, .5)`;
+                                    } else {
+                                        this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .01)`;
+                                    }
+                                    this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
+                                    
+                                }
+                                
+                            }
+                        }
+                        console.log(min, max)
+                    }
+
+                }
+
+
+                new World();
+                console.log('Hello' , )
+
+            </script>
+
+        </body>
+</html>
