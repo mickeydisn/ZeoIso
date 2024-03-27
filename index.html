@@ -1,259 +1,56 @@
 <!DOCTYPE html>
-<html>
-  <head>
-  	<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <script type="text/javascript" src="scripts/d3.v4.js"></script>
-    <!-- <script type="text/javascript" src="scripts/d3-scale-chromatic.v0.3.min.js"></script> -->
-      <script src="https://d3js.org/d3-color.v1.min.js"></script>
-      <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
-      <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 
-    <script type="text/javascript" src="scripts/require.js"></script>
+            <!-- D3 with add-on  -->
+            <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+            <script src="https://d3js.org/d3-color.v1.min.js"></script>
+            <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+            <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 
-    <!-- script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.js"></script -->
-    
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link type="text/css" rel="stylesheet" href="style.css"/>
-  </head>
-<body style="
-  background: #000;
-  overflow: hidden;
-  display :flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  margin: 0px;
-  padding: 0px;
- " >
+            <!-- Google Chart Api -->
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-  <!-- python -m SimpleHTTPServer -->
-  <!-- 
+            <!-- 
+                CSS define style
+                https://stream.alkemics.com/vendors/roboto-fontface/0.10.0/css/roboto/roboto-fontface.css
+                'https://fonts.googleapis.com/css?family=Roboto'
+                https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap
+            -->
+            <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap' rel='stylesheet'>
+            <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap' rel='stylesheet'>
 
-- Donc c'est partie; une vie de triomphes , de douleurs , de joies, de chagrins immenses,  
-- Je suis trop impatient 
-- Vous n'avez pas le choix; Vous êtes un artiste la vie vous a choisie 
+            <link type="text/css" rel="stylesheet" href="style.css"/>
+            <link type="text/css" rel="stylesheet" href="css/main.css" />
+            <link type="text/css" rel="stylesheet" href="css/markdown.css" />
 
-  <div 
-    id="mainMenuLeft"
-    style="
-      position: relative;
-      display :inline-flex;
-      justify-content: start;
-      flex-direction: column;
-      align-items: stretch;
-      height: 100vh;
-      width: 20vw;
-      overflow: scroll;
-      border: 1px solid #F009;
-    "
-  >
-  </div>
+            <script src="./scripts/tiledCanvas.js"></script>
+            <script src="./scripts/marked.min.js"></script>
 
+            <link rel="shortcut icon" href="">
 
-   <div 
-    style="
-      position: relative;
-      display: inline-flex;
-      height: 100vh;
-      width: 60vw;
-      text-align: left;
-    "
-  >
-     <div 
-      style="
-        position: absolute;
-        display: inline-block;
-      height: 100vh;
-      width: 60vw;
-        border: 1px solid #F009;
-      "
-    >
-      <div 
-        style="
-          position: relative;
-          display: inline-block;
-          height: 100vh;
-          width: 60vw;
-          overflow: hidden;
-        "
-      >
-          <div style="position: relative; "  id="mainMap">
-          </div>
-      </div>
-    </div>
-    
-  </div>
+        </head>
+        <body>
 
+            
+            <div style="position: absolute; bottom: 10px; left: 10px; opacity: 0.2; zoom: 1; z-index: 10000;">
+                <div style="height: 60px; width: 64px; overflow: hidden; " >
+                    <iframe 
+                        width="100%" height="200" scrolling="no" frameborder="no" allow="autoplay" 
+                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/735805398&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false&show_artwork=false"
+                    ></iframe>
+                </div>
+            </div>
+            <!-- Import main module - and start the dashboard
+            
+            &buying=false&sharing=false&download=false&show_playcount=false&start_track=false
+            -->
+            <script derer type="module">
+                import {Main} from './js/main.js'
+                const main = new Main()
+                main.start()
+            </script>
 
-  <div 
-    id="mainMenuRight"
-    style="
-      position: relative;
-      display :inline-flex;
-      justify-content: start;
-      flex-direction: column;
-      align-items: stretch;
-      height: 100vh;
-      width: 20vw;
-      overflow: scroll;
-      border: 1px solid #F009;
-    "
-  >
-
-    <div 
-      style="
-        justify-content: center;
-        flex-direction: row;
-        align-items: center;
-        display :inline-flex;
-        border-bottom: 2px solid #F009;
-        height: 5vh;
-        background-color: rgba(32, 32, 32, 100%);
-      "  
-    >
-      <div      
-            style="
-              display :inline-flex;
-              color: #FFF;
-              text-align: center;
-              font-size: 1.2em;
-              font-weight: bold;
-              text-shadow: 2px 2px #999;
-              padding-left: 1vw;
-            "  
-          >
-      XFLR6_87SD
-      </div>  
-      <div 
-        id="mainInterface"
-        style="
-          display :inline-flex;
-          text-align: center;
-          padding : 1vw;
-
-        "  
-      >
-
-       - -
-      </div>
-    </div>
-
-  </div>
- 
-
-  -->
-
-  <div
-    id="mainConnection"
-    style="
-      display :inline-flex;
-      text-align: center;
-      padding : 1vw;
-    "  
-  >
-   <!--Add buttons to initiate auth sequence and sign out-->
-      <button id="authorize_button" style="
-        display: none;
-        color: #FFF;
-        background-color: #333;
-      ">Authorize</button>
-      <button id="signout_button" style="
-        display: none;
-        color: #FFF;
-        background-color: #000;
-      ">GoOut</button>
-  </div>
-
-
-  <script type="text/javascript">
-    // Client ID and API key from the Developer Console
-    var CLIENT_ID = '710985109475-jo4q0ja8ola0k45ntv6p3tjii48i3ll6.apps.googleusercontent.com';
-    var API_KEY = 'AIzaSyCPxmLmBm5bClz6DxfyPPo8hxcpclAI-4M';
-
-    // Array of API discovery doc URLs for APIs used by the quickstart
-    var DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
-
-    // Authorization scopes required by the API; multiple scopes can be
-    // included, separated by spaces.
-    var SCOPES = "https://www.googleapis.com/auth/spreadsheets.readonly";
-
-    /**
-     *  On load, called to load the auth2 library and API client library.
-     */
-    function handleClientLoad() {
-      gapi.load('client:auth2', initClient);
-    }
-
-    /**
-     *  Initializes the API client library and sets up sign-in state
-     *  listeners.
-     */
-    function initClient() {
-      gapi.client.init({
-        apiKey: API_KEY,
-        clientId: CLIENT_ID,
-        discoveryDocs: DISCOVERY_DOCS,
-        scope: SCOPES
-      }).then(function () {
-        // Listen for sign-in state changes.
-        gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
-
-        // Handle the initial sign-in state.
-        updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-        d3.select('#authorize_button').on('click', handleAuthClick);
-        d3.select('#signout_button').on('click', handleSignoutClick);
-      }, function(error) {
-        console.log(JSON.stringify(error, null, 2))
-      });
-    }
-
-    /**
-     *  Called when the signed in status changes, to update the UI
-     *  appropriately. After a sign-in, the API is called.
-     */
-    function updateSigninStatus(isSignedIn) {
-      console.log("updateSigninStatus:", isSignedIn)
-      if (isSignedIn) {
-        d3.select('#authorize_button').style("display", 'none');
-        d3.select('#signout_button').style("display", 'inline-block');
-
-        require(['src/main.js']);
-
-      } else {
-        d3.select('#authorize_button').style("display", 'inline-block');
-        d3.select('#signout_button').style("display", 'none');
-      }
-    }
-
-    /**
-     *  Sign in the user upon button click.
-     */
-    function handleAuthClick(event) {
-      gapi.auth2.getAuthInstance().signIn();
-    }
-
-    /**
-     *  Sign out the user upon button click.
-     */
-    function handleSignoutClick(event) {
-      gapi.auth2.getAuthInstance().signOut();
-    }
-
-
-  </script>
-
-   <script src="https://apis.google.com/js/api.js"
-      onload="this.onload=function(){};console.log('onLoad')"
-      onreadystatechange="if (this.readyState === 'complete') this.onload()">
-    </script>
-
-  <script type="text/javascript">
-    console.log("ClientLoad")
-    handleClientLoad();
-  </script>
-
-
-  <script> // require(['src/main.js']);  </script>
-
-</body>
+        </body>
 </html>
