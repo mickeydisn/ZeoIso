@@ -10,6 +10,7 @@ export class Tile {
         this.buildTile = null;
 
 		this._lvl = 0;
+		this._waterLvl = 0;
 		this.color = [0, 0, 0, 1]
 		this.items = []
 		this.lvlGen();
@@ -25,15 +26,33 @@ export class Tile {
 			!this.buildTile.conf.allowMove
 	}
 
-	get lvl () { return this._lvl}
-	set lvl(lvl) {
-		if (this.buildTile == null) {
-			this._lvl = lvl
+
+	get waterLvl() {
+		if (this.isWater) {
+			return this._waterLvl
 		}
+		return this._lvl
 	}
 
+	get lvl () { 
+		return this._lvl
+	}
+
+	set lvl(lvl) {
+		if (this.buildTile != null) return ;
+		if (this.isWater && lvl > this._waterLvl) {
+			return;
+		}
+		this._lvl = lvl
+	}
+	
 	lvlGen() {
-		this._lvl = this.fg.getLvlGen(this.x, this.y, TILE_GEN_ZOOM)
+		const [lvl ,waterLvl] = this.fg.getLvlGen(this.x, this.y, TILE_GEN_ZOOM)
+		this._lvl = lvl
+		this._waterLvl = waterLvl
+		if (lvl != waterLvl) {
+			this.isWater = true;
+		}
 		/*
 		let rawLvl = this.fg.getRawLvl() * 256
 		// Creta a gap on the water lvl

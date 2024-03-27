@@ -70,7 +70,7 @@ export const canvasFilterStrToValue = (str) => {
         }
     })
 
-    console.log('canvasFilterStrToValue' , conf)
+    // console.log('canvasFilterStrToValue' , conf)
     return conf
 }
 
@@ -87,8 +87,6 @@ export const colorVariation = (source, cFilter) => {
     const brightness = cFilter.brightness ? cFilter.brightness : 100
     
 
-    console.log("----", cFilter)
-
     const dest = document.createElement("canvas");
     dest.width = 256; // image.naturalWidth;
     dest.height = 256; // image.naturalHeight;
@@ -99,19 +97,12 @@ export const colorVariation = (source, cFilter) => {
         " brightness("+ brightness+ "%)";
 
     if (cFilter.invert) {
-        console.log("---- INVERST", )
-
         filter +=" invert(1)";
     }
     if (cFilter.shadow) {
-        console.log("---- shadow", cFilter.shadow)
-
         filter +=" drop-shadow("+ cFilter.shadow + ")";
     }
-
     dest.ctx.filter = filter
-
-
     dest.ctx.drawImage(source,0, 0, dest.width, dest.height);
     return dest        
 }

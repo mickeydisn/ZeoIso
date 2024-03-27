@@ -3,12 +3,11 @@ import { axeNextTileOfList } from "./utils.js"
 
 
 
-export class BuildConf_Donjon1 extends BuildConf{
-    constructor() {
-        super()
+export class BuildConf_Donjon1 {
+    constructor(conf={}) {
+        this.growLoopCount = conf.growLoopCount ? conf.growLoopCount : 200
+        this.endLoopMax = conf.endLoopMax ? conf.endLoopMax : 0
 
-        this.growLoopCount = 200;
-        this.endLoopMax = 0;
         this.buildEmpty = false;
         this.nearAdvance = true;
 

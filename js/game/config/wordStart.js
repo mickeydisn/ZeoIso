@@ -18,11 +18,11 @@ export class WorldStart {
         this.ta.lvlUpSquare(x + 25,y, 1, -6)
 
         {
-            const factoryBuilding = new FactoryBuilding(this.world, new BuildConf_Place())
+            const factoryBuilding = new FactoryBuilding(this.world, new BuildConf_Place({growLoopCount:100}))
             factoryBuilding.start(x - 25, y);
         }
         {
-            const factoryBuilding = new FactoryBuilding(this.world, new BuildConf_Base())
+            const factoryBuilding = new FactoryBuilding(this.world, new BuildConf_Base({growLoopCount:100}))
             factoryBuilding.start(x + 25, y);
         }
 
@@ -30,9 +30,9 @@ export class WorldStart {
         this.ta.colorSquare(x, y-10, 3, [0, 0, 0, 255])
 
         this.infinitStart(x, y)
-        // this.markdown1(x, y)
-
-        // this.markdown2(x, y)
+        
+        
+        this.markdown1(x, y)
 
         this.ta.lvlUpSquare(x,y+10, 3, 35)
         this.ta.lvlAvgSquare(x,y+10, 5)
@@ -53,27 +53,39 @@ export class WorldStart {
     _MD(x, y, md) {
         this.ta.colorSquare(x, y, 1, [0, 0, 0, 255])
         this.ta.lvlUp(x, y, 3)
-        this.ta.addBoxMD(x, y, {md:md, width:'140px'})
+        this.ta.addBoxMD(x, y, {
+            md:md, 
+            width:'140px', 
+            canBeEdit:false,
+            style: `    
+                text-align: center;
+                background-color: #232393;
+                color: #FFFFFF;
+            `,
+        })
     }
 
 
     infinitStart(x, y) {
 
 
+        // this.markdown1(x-20, y-20)
+
+
         this._MD(x-10, y + 10, `## ⬆️ ➡️ ⬇️ ⬅️`)
-        this._MD(x-10, y + 12, `## ↖️ ↗️ ↘️ ↙️`)
-        this._MD(x-10, y + 14, `## ▶️ ⏹ ⏺ ⏸`)
-        this._MD(x-10, y + 16, `## 🔄 ✅ ⚠️ ⭕️`)
+        // this._MD(x-10, y + 12, `## ↖️ ↗️ ↘️ ↙️`)
+        // this._MD(x-10, y + 14, `## ▶️ ⏹ ⏺ ⏸`)
+        // this._MD(x-10, y + 16, `## 🔄 ✅ ⚠️ ⭕️`)
 
 
 
-        this._MD(x, y - 5, `### 🌎 Earth`)
+        this._MD(x, y - 5, `#### 🌎 Earth`)
         
-        this._MD(x, y + 5, `### 🌬️ Wind`)
+        this._MD(x, y + 5, `#### 🌬️ Wind`)
         
-        this._MD(x - 5, y, `### 🔥 Fire`)
+        this._MD(x - 5, y, `#### 🔥 Fire`)
         
-        this._MD(x + 5, y, `### 💧 Water`)
+        this._MD(x + 5, y, `#### 💧 Water`)
         
 
 
@@ -101,7 +113,7 @@ Comment va ?
  - _hello_
  - __hello__
                 `
-        this.ta.addBoxMD(x, y-10, {md:md, width:'100px'})
+        this.ta.addBoxMD(x, y, {md:md, width:'300px', canBeEdit:true})
     }
 
 

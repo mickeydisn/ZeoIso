@@ -4,6 +4,7 @@ export class Player {
 
     constructor (world) {
         this.world = world;
+        this.GS = this.world.globalState 
         this.fm = world.factoryMap;
 
         this.speed = .2;
@@ -25,6 +26,10 @@ export class Player {
         this.mapY;
         this.keyMoveX = 0;
         this.keyMoveY = 0;
+
+
+        this.GS.sub('KeboardType', 'Player', this.updateKeyType.bind(this))
+        this.keyboardAzert = this.GS.get('KeboardType').localeCompare("azerty") == 0
     }
 
 
@@ -209,25 +214,30 @@ export class Player {
 
 
 
+    updateKeyType(keyType) {
+      this.keyboardAzert = keyType.localeCompare("azerty") == 0 
+    }    
 
     keyLoopControle (keyPressed) {
-    
+        const kP = keyPressed
+        const aze = this.keyboardAzert
+
         let move = false;
         let x = 0;
         let y = 0;
-        if (keyPressed['d']) {
+        if (kP['ArrowRight'] || kP['d']) {
           move = true;
           x = + 1;
         }
-        if (keyPressed['q']) {
+        if (kP['ArrowLeft'] || (aze && kP['q']) || (!aze && kP['a'])) {
           move = true;
           x = - 1;
         }
-        if (keyPressed['s']) {
+        if (kP['ArrowDown'] || kP['s']) {
           move = true;
           y = - 1;
         }
-        if (keyPressed['z']) {
+        if (kP['ArrowUp'] || (aze && kP['z']) || (!aze && kP['w'])) {
           move = true;
           y = + 1;
         }
@@ -235,3 +245,6 @@ export class Player {
       }
 
 }
+
+
+

@@ -70,7 +70,8 @@ export class FactoryMap {
 		const [cx, cy, modx, mody] = this.chunkPoint(x, y);
 		const chunk = this.getExistingChunk(cx, cy);
 		if (chunk === null) {
-			return this.fg.getLvlGen(x, y, TILE_GEN_ZOOM)
+			const [lvl , _waterLvl] = this.fg.getLvlGen(x, y, TILE_GEN_ZOOM)
+			return lvl
 		}
 		return chunk.get(modx, mody).lvl;	
 	}

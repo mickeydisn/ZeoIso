@@ -118,32 +118,29 @@ export class FactoryGenerator {
     // RIVER
     if (peakLocal < .003  && eroLvl > .55) { // river
       const factor = 1 - peakLocal * (1/.003)
-      return - ( 3 * factor + 1 )
+      return [- ( 3 * factor + 1 ), 'river']
 
     }
-    // TALU
+    // TALUS
     else if (peakLocal < .04  && eroLvl < .55) {      
       let factor = 1 - peakLocal * (1/.04)
       // sfactor = peakLocal > .01 ? factor : 1
-      return + ( 10 * factor  )
+      return [( 10 * factor  ), 'talus']
   
     // HILL   
     } else if (peakLocal > .4) {
       let factor = (peakLocal - .4) * (1/(1 - .4))
       factor = 1 - Math.pow(1 - factor, 6)
-      return ( 40 * factor + 2 )
+      return [( 40 * factor + 2 ), 'hill']
     }
-    return 0
+    return [0, null]
   }
 
   getLvlGen(x, y, zoom=1, grain=1) {
   	let rawLvl = this.getRawLvl(x, y, zoom) * 256
 
     const rawLvlMod = rawLvl & 0xFF
-		// Creta a gap on the water lvl
-		if (rawLvlMod < this.waterLvl) {
-			rawLvl -= 1
-		}
+
 
     // Ajuste Lvl to be more natural ( less liear )
     let lvl = 0
@@ -153,12 +150,24 @@ export class FactoryGenerator {
 			lvl = 0.03 * Math.pow(rawLvl - 80, 2) + 70 // 0.01 => Flat Montagne , 0.05 => Hight montagne
 		}
 	
+		// Creta a gap on the water lvl
+		if (rawLvlMod < this.waterLvl) {
+			lvl -= 1/3
+      return [lvl, this.waterLvl]      
+		}
 
+    // Apply Erotion & PeakValet
     if (rawLvlMod > this.waterLvl) {
-      lvl += this.getPeak(x, y, zoom) 
+      const [lvlPeak, peakType] = this.getPeak(x, y, zoom) 
+      if (peakType == 'river') {
+        return [lvl - 1/3 + lvlPeak, lvl - 1/3]        
+      } 
+
+      lvl += lvlPeak
+      return [lvl, lvl]
     }
 
-    return lvl
+    return [lvl, lvl]
 
   }
 
@@ -283,7 +292,7 @@ export class FactoryGenerator {
       return this.biomes['mountL'];
     }
 
-    const lvlPeak = this.getPeak(x , y, zoom)
+    const [lvlPeak, peakType] = this.getPeak(x , y, zoom)
     if (lvlPeak < 0) {
       return this.biomes['river'];
     }

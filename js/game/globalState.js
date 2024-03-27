@@ -4,8 +4,10 @@ export class GlabalState {
 
     constructor(world) {
         this.world = world;
-
-        this._state = {}
+        console.log('=== GlabalState == ')
+        this._state = {
+            "KeboardType": 'azerty'
+        }
 
         this._sub = {}
     }
@@ -25,11 +27,11 @@ export class GlabalState {
     }
 
     set(stateKey, value) {
-        console.log('==GS=Set===(', stateKey)
+        console.log('==GS=Set===(', stateKey, value)
         // Call Function for eash substription 
         if (this._sub[stateKey]) {
             this._sub[stateKey].forEach(([subKey, callFunction]) => {
-                console.log('=GS=>', stateKey, '=>', subKey)
+                // console.log('=GS=>', stateKey, '=>', subKey)
                 callFunction(value)
             });
         }

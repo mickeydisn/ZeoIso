@@ -38,19 +38,16 @@ export class IsoDivBox {
             .style('position', "absolute")
             .style('width', this.conf.width ? this.conf.width : "10vw")
 
-        const MDDiv = this.content.append('div')
-            .classed('Markdown', true)
-                .html(window.marked.parse(this.conf.md))
 
-        if (this.boxConf.editable) {
-
+        if ( this.conf.canBeEdit) {
+            const idx = Math.random(100000)
             this.content.append('input')
                 .attr('type', 'checkbox')
-                .attr('id', 'buttEdit')
+                .attr('id', 'buttEdit_'+idx)
 
             this.content.append('label')
                 .attr('id', 'buttEditLabel')
-                .attr('for', 'buttEdit')
+                .attr('for', 'buttEdit_'+idx)
                 .style("border", "1px solid #000")
                     .text('Edit')
 
@@ -72,6 +69,22 @@ export class IsoDivBox {
                 console.log('blur')
             })
         }
+
+        const MDDiv = this.content.append('div')
+            .classed('Markdown', true)
+            .html(window.marked.parse(this.conf.md))
+
+        if (this.conf.style) {
+            // console.log("Style", this.conf.style, this.conf.style.replaceAll('/[\s\n]+/gi', ''))
+            const regex = /[\s\n]*/g
+            this.conf.style.replaceAll(regex, '').split(';').forEach(style => {
+                const [s, v] = style.split(":")
+                if (s && v) {
+                    MDDiv.style(s, v)
+                }
+            });
+        }
+
     }
 
 

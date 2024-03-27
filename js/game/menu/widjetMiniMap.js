@@ -7,7 +7,7 @@ export class WidjetMiniMap {
         this.fm = this.world.factoryMap;
 
         this.mainDiv = mainDiv;
-        this.size = 400;
+        this.size = 1000;
         this.init();
         this.refreshRate = 0;
     }
@@ -33,11 +33,15 @@ export class WidjetMiniMap {
         `)
         
         this.contentDiv = this.mainDiv.select('.widjetMenuBox#mainMiniMap')
+            .style('width', this.size + 'px')
+            .style('height', this.size + 'px')
 
         this.canvas = this.contentDiv.append('canvas')
             .attr('id', "MiniMapCanvas")
             .attr('width', this.size)
             .attr('height', this.size)
+            .style('width', this.size + 'px')
+            .style('height', this.size + 'px')
 
         this.ctx = this.canvas.node().getContext('2d')
         this.ctx.webkitImageSmoothingEnabled = false;

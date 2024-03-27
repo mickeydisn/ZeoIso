@@ -13,11 +13,11 @@ export class TilesAction2 {
 
 			clearItem: this.clearItem.bind(this),
 			clearItemSquare: this.clearItemSquare.bind(this),
-
 			lvlUp: this.lvlUp.bind(this),
 			lvlUpSquare: this.lvlUpSquare.bind(this),
 			lvlFlatSquare: this.lvlFlatSquare.bind(this),
 			lvlAvgSquare: this.lvlAvgSquare.bind(this),
+			lvlAvgBorder: this.lvlAvgBorder.bind(this),
 
 			colorSquare: this.colorSquare.bind(this),
 		}
@@ -102,6 +102,22 @@ export class TilesAction2 {
 				this.lvlAvg(cellTile.x, cellTile.y, {size:3})
 			})
 		})
+	}
+
+	lvlAvgBorder(x, y, conf) {
+		const fCenter = Math.floor(conf.size / 2)
+		const rangeX = Array.from({ length: conf.size }, (_, index) => index - fCenter + x );
+		const rangeY = Array.from({ length: conf.size }, (_, index) => index - fCenter + y );
+
+		rangeX.forEach(xx => {
+			this.lvlAvg(xx, y - fCenter, {size:3});
+			this.lvlAvg(xx, y + (conf.size - fCenter), {size:3});
+		})
+		rangeY.forEach(yy => {
+			this.lvlAvg(x - fCenter, yy, {size:3});
+			this.lvlAvg(x + (conf.size - fCenter), yy, {size:3});
+		})
+
 	}
 
 

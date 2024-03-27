@@ -67,7 +67,7 @@ export class FactoryBuilding {
         
         [...Array(this.conf.growLoopCount).keys()].forEach(i => {
 
-            console.log('======== BuildOneTile', i)
+            // console.log('======== BuildOneTile', i)
 
             bTileOpen = bTileOpen.filter(bTile => 
                 Utils.intersect(this.conf.growTileTag, bTile.mustBeFill.flat()).length > 0 &&
@@ -84,7 +84,7 @@ export class FactoryBuilding {
                     Utils.intersect(this.conf.growTileTag, bTile.mustBeFill.flat()).length == 0 &&
                     Utils.intersect(this.conf.emptyTileTag, bTile.mustBeFill.flat()).length > 0 
                 )
-                if (emptyTile.length > 0) console.log('======== Empty', emptyTile)
+                // if (emptyTile.length > 0) console.log('======== Empty', emptyTile)
                 emptyTile.forEach(bTile => {
                     bTile.filterChoiseNearTile(this.conf.BUILD_TILE_LIST_EMPTY, this.conf.nearAdvance);
                 })
@@ -99,7 +99,7 @@ export class FactoryBuilding {
                 return false
             }
 
-            console.log('======== EndLoo', i)
+            // console.log('======== EndLoo', i)
 
             bTileOpen = bTileOpen.filter(bTile => 
                 bTile && 
@@ -118,7 +118,7 @@ export class FactoryBuilding {
                     Utils.intersect(this.conf.growTileTag, bTile.mustBeFill.flat()).length == 0 &&
                     Utils.intersect(this.conf.emptyTileTag, bTile.mustBeFill.flat()).length > 0 
                 )
-                if (emptyTile.length > 0) console.log('======== Empty', emptyTile)
+                // if (emptyTile.length > 0) console.log('======== Empty', emptyTile)
                 emptyTile.forEach(bTile => {
                     bTile.filterChoiseNearTile(this.conf.BUILD_TILE_LIST_EMPTY);
                 })

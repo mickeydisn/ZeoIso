@@ -1,35 +1,13 @@
 import { axeNextTileOfList } from "./utils.js"
 
 
-export class BuildConf {
-    constructor() {
-        this.growLoopCount = 100;
-        this.endLoopMax = 0;
-        this.buildEmpty = false;
 
-        this.nearAdvance = true;
-
-        this.growTileTag = ["B0", "B1", "B2", "B3"]
-        this.emptyTileTag = ["E0"]
-
-    }
-
-    get BUILD_TILE_START() { return { } }
-
-    get BUILD_TILE_LIST_EMPTY() { return axeNextTileOfList([])}
-    get BUILD_TILE_LIST() { return axeNextTileOfList([])}
-    get BUILD_TILE_LIST_CLOSE() { return axeNextTileOfList([])}
-
-}
+export class BuildConf_Base {
+    constructor(conf={}) {
+        this.growLoopCount = conf.growLoopCount ? conf.growLoopCount : 100
+        this.endLoopMax = conf.endLoopMax ? conf.endLoopMax : 200
 
 
-
-export class BuildConf_Base extends BuildConf{
-    constructor() {
-        super()
-
-        this.growLoopCount = 100;
-        this.endLoopMax = 200;
         this.buildEmpty = true;
         this.nearAdvance = true;
 

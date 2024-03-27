@@ -42,7 +42,7 @@ export class TilesMatrix {
 			this.rangeY.map((y, idy) => {
 				const tile = this.fm.getTile(x, y)
 				this.tiles[idx][idy] = tile
-				this.avgLvl += tile.lvl
+				this.avgLvl += tile.waterLvl
 			})
 		})
 		this.avgLvl /= this.size * this.size

@@ -39,7 +39,7 @@ export class TilesAction {
 		const box = new TilesMatrix(this.world, size, x, y);
 		box.tiles.forEach(row => {
 			row.forEach(cellTile => {
-				cellTile.items.splice(0, tile.items.length)
+				cellTile.items.splice(0, cellTile.items.length)
 			})
 		})
 	}

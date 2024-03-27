@@ -88,7 +88,7 @@ export class WorldCv {
         [...Array((xspace + xspaceDate) * 5 / 2)].map((_, idx )=> {
             this.ta.colorSquare(x+idx*2, y, 3, [0, 0, 0, 255])
             this.ta.colorSquare(x+idx*2, y, 1, [128, 128, 0, 255])
-            this.ta.clearItemSquare(x, y+idx*2, 5)
+            this.ta.clearItemSquare(x+idx, y*2, 5)
         })
 
 

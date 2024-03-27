@@ -33,7 +33,7 @@ export class WidjetAssetList {
 
 <div class="buttMenuBox  switch" id="tileAsset">
         <input type="checkbox" id="checkbox_menuBox_tileAsset", name="MenuBox">
-        <label for="checkbox_menuBox_tileAsset">🏡</label>
+        <!-- label for="checkbox_menuBox_tileAsset">🏡</label -->
         <div class="widjetMenuBox slider" id="tileAsset" ></div>
 </div>
 
@@ -54,8 +54,16 @@ export class WidjetAssetList {
 
         this.drawUpdate();
 
+        this.GS.set('WidjetAssetList.isVisibel', false)
+        this.GS.sub('WidjetAssetList.isVisibel', 'WidjetAssetList', this.setIsVisibel.bind(this))
 
     }
+
+    setIsVisibel(isVisibel) {
+        console.log('visible', isVisibel)
+        this.mainDiv.select('#checkbox_menuBox_tileAsset').property('checked', isVisibel)
+    }
+
 
     get currentAssetCanvas() { return this._currentAssetCanvas }
     set currentAssetCanvas(canvas) {

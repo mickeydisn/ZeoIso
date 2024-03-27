@@ -1,6359 +1,16100 @@
 export const assetConfig = [
-    [
-        "MyItem",
-        "altarStone_NE",
-        {
-            "src": "./img/asset/MyItem/altarStone_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "altarStone_NW",
-        {
-            "src": "./img/asset/MyItem/altarStone_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "altarStone_SE",
-        {
-            "src": "./img/asset/MyItem/altarStone_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "altarStone_SW",
-        {
-            "src": "./img/asset/MyItem/altarStone_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "altarWood_NE",
-        {
-            "src": "./img/asset/MyItem/altarWood_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "altarWood_NW",
-        {
-            "src": "./img/asset/MyItem/altarWood_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "altarWood_SE",
-        {
-            "src": "./img/asset/MyItem/altarWood_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "altarWood_SW",
-        {
-            "src": "./img/asset/MyItem/altarWood_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "arrow_NE",
-        {
-            "src": "./img/asset/MyItem/arrow_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "arrow_NW",
-        {
-            "src": "./img/asset/MyItem/arrow_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "arrow_SE",
-        {
-            "src": "./img/asset/MyItem/arrow_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "arrow_SW",
-        {
-            "src": "./img/asset/MyItem/arrow_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "arrows_NE",
-        {
-            "src": "./img/asset/MyItem/arrows_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "arrows_NW",
-        {
-            "src": "./img/asset/MyItem/arrows_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "arrows_SE",
-        {
-            "src": "./img/asset/MyItem/arrows_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "arrows_SW",
-        {
-            "src": "./img/asset/MyItem/arrows_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "barrel_NE",
-        {
-            "src": "./img/asset/MyItem/barrel_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "barrel_NW",
-        {
-            "src": "./img/asset/MyItem/barrel_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "barrel_SE",
-        {
-            "src": "./img/asset/MyItem/barrel_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "barrel_SW",
-        {
-            "src": "./img/asset/MyItem/barrel_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "barrels_NE",
-        {
-            "src": "./img/asset/MyItem/barrels_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "barrels_NW",
-        {
-            "src": "./img/asset/MyItem/barrels_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "barrels_rail_NE",
-        {
-            "src": "./img/asset/MyItem/barrels_rail_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "barrels_rail_NW",
-        {
-            "src": "./img/asset/MyItem/barrels_rail_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "barrels_rail_SE",
-        {
-            "src": "./img/asset/MyItem/barrels_rail_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "barrels_rail_SW",
-        {
-            "src": "./img/asset/MyItem/barrels_rail_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "barrels_SE",
-        {
-            "src": "./img/asset/MyItem/barrels_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "barrels_SW",
-        {
-            "src": "./img/asset/MyItem/barrels_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bench_NE",
-        {
-            "src": "./img/asset/MyItem/bench_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bench_NW",
-        {
-            "src": "./img/asset/MyItem/bench_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bench_SE",
-        {
-            "src": "./img/asset/MyItem/bench_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bench_SW",
-        {
-            "src": "./img/asset/MyItem/bench_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "benchDamaged_NE",
-        {
-            "src": "./img/asset/MyItem/benchDamaged_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "benchDamaged_NW",
-        {
-            "src": "./img/asset/MyItem/benchDamaged_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "benchDamaged_SE",
-        {
-            "src": "./img/asset/MyItem/benchDamaged_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "benchDamaged_SW",
-        {
-            "src": "./img/asset/MyItem/benchDamaged_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bones_NE",
-        {
-            "src": "./img/asset/MyItem/bones_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bones_NW",
-        {
-            "src": "./img/asset/MyItem/bones_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bones_SE",
-        {
-            "src": "./img/asset/MyItem/bones_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bones_SW",
-        {
-            "src": "./img/asset/MyItem/bones_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "borderPillar_NE",
-        {
-            "src": "./img/asset/MyItem/borderPillar_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "borderPillar_NW",
-        {
-            "src": "./img/asset/MyItem/borderPillar_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "borderPillar_SE",
-        {
-            "src": "./img/asset/MyItem/borderPillar_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "borderPillar_SW",
-        {
-            "src": "./img/asset/MyItem/borderPillar_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bridge_center_stone_NE",
-        {
-            "src": "./img/asset/MyItem/bridge_center_stone_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bridge_center_stone_NW",
-        {
-            "src": "./img/asset/MyItem/bridge_center_stone_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bridge_center_stone_SE",
-        {
-            "src": "./img/asset/MyItem/bridge_center_stone_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bridge_center_stone_SW",
-        {
-            "src": "./img/asset/MyItem/bridge_center_stone_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bridge_center_wood_NE",
-        {
-            "src": "./img/asset/MyItem/bridge_center_wood_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bridge_center_wood_NW",
-        {
-            "src": "./img/asset/MyItem/bridge_center_wood_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bridge_center_wood_SE",
-        {
-            "src": "./img/asset/MyItem/bridge_center_wood_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bridge_center_wood_SW",
-        {
-            "src": "./img/asset/MyItem/bridge_center_wood_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bridge_side_stone_NE",
-        {
-            "src": "./img/asset/MyItem/bridge_side_stone_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bridge_side_stone_NW",
-        {
-            "src": "./img/asset/MyItem/bridge_side_stone_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bridge_side_stone_SE",
-        {
-            "src": "./img/asset/MyItem/bridge_side_stone_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bridge_side_stone_SW",
-        {
-            "src": "./img/asset/MyItem/bridge_side_stone_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bridge_side_wood_NE",
-        {
-            "src": "./img/asset/MyItem/bridge_side_wood_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bridge_side_wood_NW",
-        {
-            "src": "./img/asset/MyItem/bridge_side_wood_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bridge_side_wood_SE",
-        {
-            "src": "./img/asset/MyItem/bridge_side_wood_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "bridge_side_wood_SW",
-        {
-            "src": "./img/asset/MyItem/bridge_side_wood_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "campfire_logs_NE",
-        {
-            "src": "./img/asset/MyItem/campfire_logs_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "campfire_logs_NW",
-        {
-            "src": "./img/asset/MyItem/campfire_logs_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "campfire_logs_SE",
-        {
-            "src": "./img/asset/MyItem/campfire_logs_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "campfire_logs_SW",
-        {
-            "src": "./img/asset/MyItem/campfire_logs_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "campfire_stones_NE",
-        {
-            "src": "./img/asset/MyItem/campfire_stones_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "campfire_stones_NW",
-        {
-            "src": "./img/asset/MyItem/campfire_stones_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "campfire_stones_SE",
-        {
-            "src": "./img/asset/MyItem/campfire_stones_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "campfire_stones_SW",
-        {
-            "src": "./img/asset/MyItem/campfire_stones_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "chest_NE",
-        {
-            "src": "./img/asset/MyItem/chest_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "chest_NW",
-        {
-            "src": "./img/asset/MyItem/chest_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "chest_SE",
-        {
-            "src": "./img/asset/MyItem/chest_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "chest_SW",
-        {
-            "src": "./img/asset/MyItem/chest_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "chimney_detailed_NE",
-        {
-            "src": "./img/asset/MyItem/chimney_detailed_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "chimney_detailed_NW",
-        {
-            "src": "./img/asset/MyItem/chimney_detailed_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "chimney_detailed_SE",
-        {
-            "src": "./img/asset/MyItem/chimney_detailed_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "chimney_detailed_SW",
-        {
-            "src": "./img/asset/MyItem/chimney_detailed_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "chimney_NE",
-        {
-            "src": "./img/asset/MyItem/chimney_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "chimney_NW",
-        {
-            "src": "./img/asset/MyItem/chimney_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "chimney_SE",
-        {
-            "src": "./img/asset/MyItem/chimney_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "chimney_SW",
-        {
-            "src": "./img/asset/MyItem/chimney_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "coffin_NE",
-        {
-            "src": "./img/asset/MyItem/coffin_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "coffin_NW",
-        {
-            "src": "./img/asset/MyItem/coffin_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "coffin_SE",
-        {
-            "src": "./img/asset/MyItem/coffin_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "coffin_SW",
-        {
-            "src": "./img/asset/MyItem/coffin_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "coffinOld_NE",
-        {
-            "src": "./img/asset/MyItem/coffinOld_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "coffinOld_NW",
-        {
-            "src": "./img/asset/MyItem/coffinOld_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "coffinOld_SE",
-        {
-            "src": "./img/asset/MyItem/coffinOld_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "coffinOld_SW",
-        {
-            "src": "./img/asset/MyItem/coffinOld_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "coinBronze_NE",
-        {
-            "src": "./img/asset/MyItem/coinBronze_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "coinBronze_NW",
-        {
-            "src": "./img/asset/MyItem/coinBronze_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "coinBronze_SE",
-        {
-            "src": "./img/asset/MyItem/coinBronze_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "coinBronze_SW",
-        {
-            "src": "./img/asset/MyItem/coinBronze_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "coinGold_NE",
-        {
-            "src": "./img/asset/MyItem/coinGold_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "coinGold_NW",
-        {
-            "src": "./img/asset/MyItem/coinGold_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "coinGold_SE",
-        {
-            "src": "./img/asset/MyItem/coinGold_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "coinGold_SW",
-        {
-            "src": "./img/asset/MyItem/coinGold_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "coinSilver_NE",
-        {
-            "src": "./img/asset/MyItem/coinSilver_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "coinSilver_NW",
-        {
-            "src": "./img/asset/MyItem/coinSilver_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "coinSilver_SE",
-        {
-            "src": "./img/asset/MyItem/coinSilver_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "coinSilver_SW",
-        {
-            "src": "./img/asset/MyItem/coinSilver_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "columnLarge_NE",
-        {
-            "src": "./img/asset/MyItem/columnLarge_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "columnLarge_NW",
-        {
-            "src": "./img/asset/MyItem/columnLarge_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "columnLarge_SE",
-        {
-            "src": "./img/asset/MyItem/columnLarge_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "columnLarge_SW",
-        {
-            "src": "./img/asset/MyItem/columnLarge_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crate_NE",
-        {
-            "src": "./img/asset/MyItem/crate_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crate_NW",
-        {
-            "src": "./img/asset/MyItem/crate_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crate_SE",
-        {
-            "src": "./img/asset/MyItem/crate_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crate_SW",
-        {
-            "src": "./img/asset/MyItem/crate_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crateItem_NE",
-        {
-            "src": "./img/asset/MyItem/crateItem_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crateItem_NW",
-        {
-            "src": "./img/asset/MyItem/crateItem_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crateItem_SE",
-        {
-            "src": "./img/asset/MyItem/crateItem_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crateItem_SW",
-        {
-            "src": "./img/asset/MyItem/crateItem_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crateItemStrong_NE",
-        {
-            "src": "./img/asset/MyItem/crateItemStrong_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crateItemStrong_NW",
-        {
-            "src": "./img/asset/MyItem/crateItemStrong_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crateItemStrong_SE",
-        {
-            "src": "./img/asset/MyItem/crateItemStrong_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crateItemStrong_SW",
-        {
-            "src": "./img/asset/MyItem/crateItemStrong_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crater_NE",
-        {
-            "src": "./img/asset/MyItem/crater_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crater_NW",
-        {
-            "src": "./img/asset/MyItem/crater_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crater_SE",
-        {
-            "src": "./img/asset/MyItem/crater_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crater_SW",
-        {
-            "src": "./img/asset/MyItem/crater_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "craterLarge_NE",
-        {
-            "src": "./img/asset/MyItem/craterLarge_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "craterLarge_NW",
-        {
-            "src": "./img/asset/MyItem/craterLarge_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "craterLarge_SE",
-        {
-            "src": "./img/asset/MyItem/craterLarge_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "craterLarge_SW",
-        {
-            "src": "./img/asset/MyItem/craterLarge_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crateStrong_NE",
-        {
-            "src": "./img/asset/MyItem/crateStrong_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crateStrong_NW",
-        {
-            "src": "./img/asset/MyItem/crateStrong_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crateStrong_SE",
-        {
-            "src": "./img/asset/MyItem/crateStrong_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crateStrong_SW",
-        {
-            "src": "./img/asset/MyItem/crateStrong_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtDoubleRow_NE",
-        {
-            "src": "./img/asset/MyItem/crops_dirtDoubleRow_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtDoubleRow_NW",
-        {
-            "src": "./img/asset/MyItem/crops_dirtDoubleRow_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtDoubleRow_SE",
-        {
-            "src": "./img/asset/MyItem/crops_dirtDoubleRow_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtDoubleRow_SW",
-        {
-            "src": "./img/asset/MyItem/crops_dirtDoubleRow_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtDoubleRowCorner_NE",
-        {
-            "src": "./img/asset/MyItem/crops_dirtDoubleRowCorner_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtDoubleRowCorner_NW",
-        {
-            "src": "./img/asset/MyItem/crops_dirtDoubleRowCorner_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtDoubleRowCorner_SE",
-        {
-            "src": "./img/asset/MyItem/crops_dirtDoubleRowCorner_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtDoubleRowCorner_SW",
-        {
-            "src": "./img/asset/MyItem/crops_dirtDoubleRowCorner_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtDoubleRowEnd_NE",
-        {
-            "src": "./img/asset/MyItem/crops_dirtDoubleRowEnd_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtDoubleRowEnd_NW",
-        {
-            "src": "./img/asset/MyItem/crops_dirtDoubleRowEnd_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtDoubleRowEnd_SE",
-        {
-            "src": "./img/asset/MyItem/crops_dirtDoubleRowEnd_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtDoubleRowEnd_SW",
-        {
-            "src": "./img/asset/MyItem/crops_dirtDoubleRowEnd_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtRow_NE",
-        {
-            "src": "./img/asset/MyItem/crops_dirtRow_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtRow_NW",
-        {
-            "src": "./img/asset/MyItem/crops_dirtRow_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtRow_SE",
-        {
-            "src": "./img/asset/MyItem/crops_dirtRow_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtRow_SW",
-        {
-            "src": "./img/asset/MyItem/crops_dirtRow_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtRowCorner_NE",
-        {
-            "src": "./img/asset/MyItem/crops_dirtRowCorner_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtRowCorner_NW",
-        {
-            "src": "./img/asset/MyItem/crops_dirtRowCorner_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtRowCorner_SE",
-        {
-            "src": "./img/asset/MyItem/crops_dirtRowCorner_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtRowCorner_SW",
-        {
-            "src": "./img/asset/MyItem/crops_dirtRowCorner_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtRowEnd_NE",
-        {
-            "src": "./img/asset/MyItem/crops_dirtRowEnd_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtRowEnd_NW",
-        {
-            "src": "./img/asset/MyItem/crops_dirtRowEnd_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtRowEnd_SE",
-        {
-            "src": "./img/asset/MyItem/crops_dirtRowEnd_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtRowEnd_SW",
-        {
-            "src": "./img/asset/MyItem/crops_dirtRowEnd_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtSingle_NE",
-        {
-            "src": "./img/asset/MyItem/crops_dirtSingle_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtSingle_NW",
-        {
-            "src": "./img/asset/MyItem/crops_dirtSingle_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtSingle_SE",
-        {
-            "src": "./img/asset/MyItem/crops_dirtSingle_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crops_dirtSingle_SW",
-        {
-            "src": "./img/asset/MyItem/crops_dirtSingle_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crypt_NE",
-        {
-            "src": "./img/asset/MyItem/crypt_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crypt_NW",
-        {
-            "src": "./img/asset/MyItem/crypt_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crypt_SE",
-        {
-            "src": "./img/asset/MyItem/crypt_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "crypt_SW",
-        {
-            "src": "./img/asset/MyItem/crypt_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "debris_NE",
-        {
-            "src": "./img/asset/MyItem/debris_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "debris_NW",
-        {
-            "src": "./img/asset/MyItem/debris_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "debris_SE",
-        {
-            "src": "./img/asset/MyItem/debris_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "debris_SW",
-        {
-            "src": "./img/asset/MyItem/debris_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "debrisWood_NE",
-        {
-            "src": "./img/asset/MyItem/debrisWood_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "debrisWood_NW",
-        {
-            "src": "./img/asset/MyItem/debrisWood_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "debrisWood_SE",
-        {
-            "src": "./img/asset/MyItem/debrisWood_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "debrisWood_SW",
-        {
-            "src": "./img/asset/MyItem/debrisWood_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_chair_NE",
-        {
-            "src": "./img/asset/MyItem/desk_chair_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_chair_NW",
-        {
-            "src": "./img/asset/MyItem/desk_chair_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_chair_SE",
-        {
-            "src": "./img/asset/MyItem/desk_chair_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_chair_SW",
-        {
-            "src": "./img/asset/MyItem/desk_chair_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_chairArms_NE",
-        {
-            "src": "./img/asset/MyItem/desk_chairArms_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_chairArms_NW",
-        {
-            "src": "./img/asset/MyItem/desk_chairArms_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_chairArms_SE",
-        {
-            "src": "./img/asset/MyItem/desk_chairArms_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_chairArms_SW",
-        {
-            "src": "./img/asset/MyItem/desk_chairArms_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_chairStool_NE",
-        {
-            "src": "./img/asset/MyItem/desk_chairStool_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_chairStool_NW",
-        {
-            "src": "./img/asset/MyItem/desk_chairStool_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_chairStool_SE",
-        {
-            "src": "./img/asset/MyItem/desk_chairStool_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_chairStool_SW",
-        {
-            "src": "./img/asset/MyItem/desk_chairStool_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_computer_NE",
-        {
-            "src": "./img/asset/MyItem/desk_computer_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_computer_NW",
-        {
-            "src": "./img/asset/MyItem/desk_computer_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_computer_SE",
-        {
-            "src": "./img/asset/MyItem/desk_computer_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_computer_SW",
-        {
-            "src": "./img/asset/MyItem/desk_computer_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_computerCorner_NE",
-        {
-            "src": "./img/asset/MyItem/desk_computerCorner_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_computerCorner_NW",
-        {
-            "src": "./img/asset/MyItem/desk_computerCorner_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_computerCorner_SE",
-        {
-            "src": "./img/asset/MyItem/desk_computerCorner_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_computerCorner_SW",
-        {
-            "src": "./img/asset/MyItem/desk_computerCorner_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_computerScreen_NE",
-        {
-            "src": "./img/asset/MyItem/desk_computerScreen_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_computerScreen_NW",
-        {
-            "src": "./img/asset/MyItem/desk_computerScreen_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_computerScreen_SE",
-        {
-            "src": "./img/asset/MyItem/desk_computerScreen_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "desk_computerScreen_SW",
-        {
-            "src": "./img/asset/MyItem/desk_computerScreen_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "flag_NE",
-        {
-            "src": "./img/asset/MyItem/flag_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "flag_NW",
-        {
-            "src": "./img/asset/MyItem/flag_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "flag_SE",
-        {
-            "src": "./img/asset/MyItem/flag_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "flag_SW",
-        {
-            "src": "./img/asset/MyItem/flag_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gate_complex_NE",
-        {
-            "src": "./img/asset/MyItem/gate_complex_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gate_complex_NW",
-        {
-            "src": "./img/asset/MyItem/gate_complex_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gate_complex_SE",
-        {
-            "src": "./img/asset/MyItem/gate_complex_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gate_complex_SW",
-        {
-            "src": "./img/asset/MyItem/gate_complex_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gate_simple_NE",
-        {
-            "src": "./img/asset/MyItem/gate_simple_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gate_simple_NW",
-        {
-            "src": "./img/asset/MyItem/gate_simple_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gate_simple_SE",
-        {
-            "src": "./img/asset/MyItem/gate_simple_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gate_simple_SW",
-        {
-            "src": "./img/asset/MyItem/gate_simple_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneBevel_NE",
-        {
-            "src": "./img/asset/MyItem/gravestoneBevel_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneBevel_NW",
-        {
-            "src": "./img/asset/MyItem/gravestoneBevel_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneBevel_SE",
-        {
-            "src": "./img/asset/MyItem/gravestoneBevel_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneBevel_SW",
-        {
-            "src": "./img/asset/MyItem/gravestoneBevel_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneDecorative_NE",
-        {
-            "src": "./img/asset/MyItem/gravestoneDecorative_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneDecorative_NW",
-        {
-            "src": "./img/asset/MyItem/gravestoneDecorative_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneDecorative_SE",
-        {
-            "src": "./img/asset/MyItem/gravestoneDecorative_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneDecorative_SW",
-        {
-            "src": "./img/asset/MyItem/gravestoneDecorative_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneFlat_NE",
-        {
-            "src": "./img/asset/MyItem/gravestoneFlat_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneFlat_NW",
-        {
-            "src": "./img/asset/MyItem/gravestoneFlat_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneFlat_SE",
-        {
-            "src": "./img/asset/MyItem/gravestoneFlat_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneFlat_SW",
-        {
-            "src": "./img/asset/MyItem/gravestoneFlat_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneFlatOpen_NE",
-        {
-            "src": "./img/asset/MyItem/gravestoneFlatOpen_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneFlatOpen_NW",
-        {
-            "src": "./img/asset/MyItem/gravestoneFlatOpen_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneFlatOpen_SE",
-        {
-            "src": "./img/asset/MyItem/gravestoneFlatOpen_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneFlatOpen_SW",
-        {
-            "src": "./img/asset/MyItem/gravestoneFlatOpen_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneRoof_NE",
-        {
-            "src": "./img/asset/MyItem/gravestoneRoof_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneRoof_NW",
-        {
-            "src": "./img/asset/MyItem/gravestoneRoof_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneRoof_SE",
-        {
-            "src": "./img/asset/MyItem/gravestoneRoof_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneRoof_SW",
-        {
-            "src": "./img/asset/MyItem/gravestoneRoof_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneRound_NE",
-        {
-            "src": "./img/asset/MyItem/gravestoneRound_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneRound_NW",
-        {
-            "src": "./img/asset/MyItem/gravestoneRound_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneRound_SE",
-        {
-            "src": "./img/asset/MyItem/gravestoneRound_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneRound_SW",
-        {
-            "src": "./img/asset/MyItem/gravestoneRound_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneWide_NE",
-        {
-            "src": "./img/asset/MyItem/gravestoneWide_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneWide_NW",
-        {
-            "src": "./img/asset/MyItem/gravestoneWide_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneWide_SE",
-        {
-            "src": "./img/asset/MyItem/gravestoneWide_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "gravestoneWide_SW",
-        {
-            "src": "./img/asset/MyItem/gravestoneWide_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "heart_NE",
-        {
-            "src": "./img/asset/MyItem/heart_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "heart_NW",
-        {
-            "src": "./img/asset/MyItem/heart_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "heart_SE",
-        {
-            "src": "./img/asset/MyItem/heart_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "heart_SW",
-        {
-            "src": "./img/asset/MyItem/heart_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "ironFenceBar_NE",
-        {
-            "src": "./img/asset/MyItem/ironFenceBar_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "ironFenceBar_NW",
-        {
-            "src": "./img/asset/MyItem/ironFenceBar_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "ironFenceBar_SE",
-        {
-            "src": "./img/asset/MyItem/ironFenceBar_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "ironFenceBar_SW",
-        {
-            "src": "./img/asset/MyItem/ironFenceBar_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "jewel_NE",
-        {
-            "src": "./img/asset/MyItem/jewel_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "jewel_NW",
-        {
-            "src": "./img/asset/MyItem/jewel_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "jewel_SE",
-        {
-            "src": "./img/asset/MyItem/jewel_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "jewel_SW",
-        {
-            "src": "./img/asset/MyItem/jewel_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "key_NE",
-        {
-            "src": "./img/asset/MyItem/key_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "key_NW",
-        {
-            "src": "./img/asset/MyItem/key_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "key_SE",
-        {
-            "src": "./img/asset/MyItem/key_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "key_SW",
-        {
-            "src": "./img/asset/MyItem/key_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "ladder_NE",
-        {
-            "src": "./img/asset/MyItem/ladder_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "ladder_NW",
-        {
-            "src": "./img/asset/MyItem/ladder_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "ladder_SE",
-        {
-            "src": "./img/asset/MyItem/ladder_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "ladder_SW",
-        {
-            "src": "./img/asset/MyItem/ladder_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "ladderBroken_NE",
-        {
-            "src": "./img/asset/MyItem/ladderBroken_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "ladderBroken_NW",
-        {
-            "src": "./img/asset/MyItem/ladderBroken_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "ladderBroken_SE",
-        {
-            "src": "./img/asset/MyItem/ladderBroken_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "ladderBroken_SW",
-        {
-            "src": "./img/asset/MyItem/ladderBroken_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "ladderLong_NE",
-        {
-            "src": "./img/asset/MyItem/ladderLong_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "ladderLong_NW",
-        {
-            "src": "./img/asset/MyItem/ladderLong_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "ladderLong_SE",
-        {
-            "src": "./img/asset/MyItem/ladderLong_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "ladderLong_SW",
-        {
-            "src": "./img/asset/MyItem/ladderLong_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lanternCandle_NE",
-        {
-            "src": "./img/asset/MyItem/lanternCandle_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lanternCandle_NW",
-        {
-            "src": "./img/asset/MyItem/lanternCandle_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lanternCandle_SE",
-        {
-            "src": "./img/asset/MyItem/lanternCandle_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lanternCandle_SW",
-        {
-            "src": "./img/asset/MyItem/lanternCandle_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lanternGlass_NE",
-        {
-            "src": "./img/asset/MyItem/lanternGlass_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lanternGlass_NW",
-        {
-            "src": "./img/asset/MyItem/lanternGlass_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lanternGlass_SE",
-        {
-            "src": "./img/asset/MyItem/lanternGlass_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lanternGlass_SW",
-        {
-            "src": "./img/asset/MyItem/lanternGlass_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lever_NE",
-        {
-            "src": "./img/asset/MyItem/lever_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lever_NW",
-        {
-            "src": "./img/asset/MyItem/lever_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lever_SE",
-        {
-            "src": "./img/asset/MyItem/lever_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lever_SW",
-        {
-            "src": "./img/asset/MyItem/lever_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lightpostAll_NE",
-        {
-            "src": "./img/asset/MyItem/lightpostAll_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lightpostAll_NW",
-        {
-            "src": "./img/asset/MyItem/lightpostAll_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lightpostAll_SE",
-        {
-            "src": "./img/asset/MyItem/lightpostAll_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lightpostAll_SW",
-        {
-            "src": "./img/asset/MyItem/lightpostAll_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lightpostDouble_NE",
-        {
-            "src": "./img/asset/MyItem/lightpostDouble_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lightpostDouble_NW",
-        {
-            "src": "./img/asset/MyItem/lightpostDouble_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lightpostDouble_SE",
-        {
-            "src": "./img/asset/MyItem/lightpostDouble_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lightpostDouble_SW",
-        {
-            "src": "./img/asset/MyItem/lightpostDouble_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lightpostSingle_NE",
-        {
-            "src": "./img/asset/MyItem/lightpostSingle_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lightpostSingle_NW",
-        {
-            "src": "./img/asset/MyItem/lightpostSingle_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lightpostSingle_SE",
-        {
-            "src": "./img/asset/MyItem/lightpostSingle_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "lightpostSingle_SW",
-        {
-            "src": "./img/asset/MyItem/lightpostSingle_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_barrel_NE",
-        {
-            "src": "./img/asset/MyItem/machine_barrel_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_barrel_NW",
-        {
-            "src": "./img/asset/MyItem/machine_barrel_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_barrel_SE",
-        {
-            "src": "./img/asset/MyItem/machine_barrel_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_barrel_SW",
-        {
-            "src": "./img/asset/MyItem/machine_barrel_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_barrelLarge_NE",
-        {
-            "src": "./img/asset/MyItem/machine_barrelLarge_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_barrelLarge_NW",
-        {
-            "src": "./img/asset/MyItem/machine_barrelLarge_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_barrelLarge_SE",
-        {
-            "src": "./img/asset/MyItem/machine_barrelLarge_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_barrelLarge_SW",
-        {
-            "src": "./img/asset/MyItem/machine_barrelLarge_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_generator_NE",
-        {
-            "src": "./img/asset/MyItem/machine_generator_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_generator_NW",
-        {
-            "src": "./img/asset/MyItem/machine_generator_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_generator_SE",
-        {
-            "src": "./img/asset/MyItem/machine_generator_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_generator_SW",
-        {
-            "src": "./img/asset/MyItem/machine_generator_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_generatorLarge_NE",
-        {
-            "src": "./img/asset/MyItem/machine_generatorLarge_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_generatorLarge_NW",
-        {
-            "src": "./img/asset/MyItem/machine_generatorLarge_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_generatorLarge_SE",
-        {
-            "src": "./img/asset/MyItem/machine_generatorLarge_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_generatorLarge_SW",
-        {
-            "src": "./img/asset/MyItem/machine_generatorLarge_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_wireless_NE",
-        {
-            "src": "./img/asset/MyItem/machine_wireless_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_wireless_NW",
-        {
-            "src": "./img/asset/MyItem/machine_wireless_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_wireless_SE",
-        {
-            "src": "./img/asset/MyItem/machine_wireless_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_wireless_SW",
-        {
-            "src": "./img/asset/MyItem/machine_wireless_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_wirelessCable_NE",
-        {
-            "src": "./img/asset/MyItem/machine_wirelessCable_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_wirelessCable_NW",
-        {
-            "src": "./img/asset/MyItem/machine_wirelessCable_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_wirelessCable_SE",
-        {
-            "src": "./img/asset/MyItem/machine_wirelessCable_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "machine_wirelessCable_SW",
-        {
-            "src": "./img/asset/MyItem/machine_wirelessCable_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "meteor_detailed_NE",
-        {
-            "src": "./img/asset/MyItem/meteor_detailed_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "meteor_detailed_NW",
-        {
-            "src": "./img/asset/MyItem/meteor_detailed_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "meteor_detailed_SE",
-        {
-            "src": "./img/asset/MyItem/meteor_detailed_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "meteor_detailed_SW",
-        {
-            "src": "./img/asset/MyItem/meteor_detailed_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "meteor_half_NE",
-        {
-            "src": "./img/asset/MyItem/meteor_half_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "meteor_half_NW",
-        {
-            "src": "./img/asset/MyItem/meteor_half_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "meteor_half_SE",
-        {
-            "src": "./img/asset/MyItem/meteor_half_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "meteor_half_SW",
-        {
-            "src": "./img/asset/MyItem/meteor_half_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "meteor_NE",
-        {
-            "src": "./img/asset/MyItem/meteor_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "meteor_NW",
-        {
-            "src": "./img/asset/MyItem/meteor_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "meteor_SE",
-        {
-            "src": "./img/asset/MyItem/meteor_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "meteor_SW",
-        {
-            "src": "./img/asset/MyItem/meteor_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trackCornerSmall_NE",
-        {
-            "src": "./img/asset/MyItem/monorail_trackCornerSmall_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trackCornerSmall_NW",
-        {
-            "src": "./img/asset/MyItem/monorail_trackCornerSmall_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trackCornerSmall_SE",
-        {
-            "src": "./img/asset/MyItem/monorail_trackCornerSmall_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trackCornerSmall_SW",
-        {
-            "src": "./img/asset/MyItem/monorail_trackCornerSmall_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trackSlope_NE",
-        {
-            "src": "./img/asset/MyItem/monorail_trackSlope_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trackSlope_NW",
-        {
-            "src": "./img/asset/MyItem/monorail_trackSlope_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trackSlope_SE",
-        {
-            "src": "./img/asset/MyItem/monorail_trackSlope_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trackSlope_SW",
-        {
-            "src": "./img/asset/MyItem/monorail_trackSlope_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trackStraight_NE",
-        {
-            "src": "./img/asset/MyItem/monorail_trackStraight_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trackStraight_NW",
-        {
-            "src": "./img/asset/MyItem/monorail_trackStraight_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trackStraight_SE",
-        {
-            "src": "./img/asset/MyItem/monorail_trackStraight_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trackStraight_SW",
-        {
-            "src": "./img/asset/MyItem/monorail_trackStraight_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trackSupport_NE",
-        {
-            "src": "./img/asset/MyItem/monorail_trackSupport_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trackSupport_NW",
-        {
-            "src": "./img/asset/MyItem/monorail_trackSupport_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trackSupport_SE",
-        {
-            "src": "./img/asset/MyItem/monorail_trackSupport_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trackSupport_SW",
-        {
-            "src": "./img/asset/MyItem/monorail_trackSupport_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trackSupportCorner_NE",
-        {
-            "src": "./img/asset/MyItem/monorail_trackSupportCorner_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trackSupportCorner_NW",
-        {
-            "src": "./img/asset/MyItem/monorail_trackSupportCorner_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trackSupportCorner_SE",
-        {
-            "src": "./img/asset/MyItem/monorail_trackSupportCorner_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trackSupportCorner_SW",
-        {
-            "src": "./img/asset/MyItem/monorail_trackSupportCorner_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainBox_NE",
-        {
-            "src": "./img/asset/MyItem/monorail_trainBox_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainBox_NW",
-        {
-            "src": "./img/asset/MyItem/monorail_trainBox_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainBox_SE",
-        {
-            "src": "./img/asset/MyItem/monorail_trainBox_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainBox_SW",
-        {
-            "src": "./img/asset/MyItem/monorail_trainBox_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainCargo_NE",
-        {
-            "src": "./img/asset/MyItem/monorail_trainCargo_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainCargo_NW",
-        {
-            "src": "./img/asset/MyItem/monorail_trainCargo_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainCargo_SE",
-        {
-            "src": "./img/asset/MyItem/monorail_trainCargo_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainCargo_SW",
-        {
-            "src": "./img/asset/MyItem/monorail_trainCargo_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainEnd_NE",
-        {
-            "src": "./img/asset/MyItem/monorail_trainEnd_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainEnd_NW",
-        {
-            "src": "./img/asset/MyItem/monorail_trainEnd_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainEnd_SE",
-        {
-            "src": "./img/asset/MyItem/monorail_trainEnd_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainEnd_SW",
-        {
-            "src": "./img/asset/MyItem/monorail_trainEnd_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainFlat_NE",
-        {
-            "src": "./img/asset/MyItem/monorail_trainFlat_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainFlat_NW",
-        {
-            "src": "./img/asset/MyItem/monorail_trainFlat_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainFlat_SE",
-        {
-            "src": "./img/asset/MyItem/monorail_trainFlat_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainFlat_SW",
-        {
-            "src": "./img/asset/MyItem/monorail_trainFlat_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainFront_NE",
-        {
-            "src": "./img/asset/MyItem/monorail_trainFront_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainFront_NW",
-        {
-            "src": "./img/asset/MyItem/monorail_trainFront_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainFront_SE",
-        {
-            "src": "./img/asset/MyItem/monorail_trainFront_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainFront_SW",
-        {
-            "src": "./img/asset/MyItem/monorail_trainFront_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainPassenger_NE",
-        {
-            "src": "./img/asset/MyItem/monorail_trainPassenger_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainPassenger_NW",
-        {
-            "src": "./img/asset/MyItem/monorail_trainPassenger_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainPassenger_SE",
-        {
-            "src": "./img/asset/MyItem/monorail_trainPassenger_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "monorail_trainPassenger_SW",
-        {
-            "src": "./img/asset/MyItem/monorail_trainPassenger_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_stone_NE",
-        {
-            "src": "./img/asset/MyItem/path_stone_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_stone_NW",
-        {
-            "src": "./img/asset/MyItem/path_stone_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_stone_SE",
-        {
-            "src": "./img/asset/MyItem/path_stone_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_stone_SW",
-        {
-            "src": "./img/asset/MyItem/path_stone_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_stoneCircle_NE",
-        {
-            "src": "./img/asset/MyItem/path_stoneCircle_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_stoneCircle_NW",
-        {
-            "src": "./img/asset/MyItem/path_stoneCircle_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_stoneCircle_SE",
-        {
-            "src": "./img/asset/MyItem/path_stoneCircle_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_stoneCircle_SW",
-        {
-            "src": "./img/asset/MyItem/path_stoneCircle_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_stoneCorner_NE",
-        {
-            "src": "./img/asset/MyItem/path_stoneCorner_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_stoneCorner_NW",
-        {
-            "src": "./img/asset/MyItem/path_stoneCorner_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_stoneCorner_SE",
-        {
-            "src": "./img/asset/MyItem/path_stoneCorner_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_stoneCorner_SW",
-        {
-            "src": "./img/asset/MyItem/path_stoneCorner_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_stoneEnd_NE",
-        {
-            "src": "./img/asset/MyItem/path_stoneEnd_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_stoneEnd_NW",
-        {
-            "src": "./img/asset/MyItem/path_stoneEnd_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_stoneEnd_SE",
-        {
-            "src": "./img/asset/MyItem/path_stoneEnd_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_stoneEnd_SW",
-        {
-            "src": "./img/asset/MyItem/path_stoneEnd_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_wood_NE",
-        {
-            "src": "./img/asset/MyItem/path_wood_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_wood_NW",
-        {
-            "src": "./img/asset/MyItem/path_wood_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_wood_SE",
-        {
-            "src": "./img/asset/MyItem/path_wood_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_wood_SW",
-        {
-            "src": "./img/asset/MyItem/path_wood_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_woodCorner_NE",
-        {
-            "src": "./img/asset/MyItem/path_woodCorner_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_woodCorner_NW",
-        {
-            "src": "./img/asset/MyItem/path_woodCorner_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_woodCorner_SE",
-        {
-            "src": "./img/asset/MyItem/path_woodCorner_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_woodCorner_SW",
-        {
-            "src": "./img/asset/MyItem/path_woodCorner_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_woodEnd_NE",
-        {
-            "src": "./img/asset/MyItem/path_woodEnd_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_woodEnd_NW",
-        {
-            "src": "./img/asset/MyItem/path_woodEnd_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_woodEnd_SE",
-        {
-            "src": "./img/asset/MyItem/path_woodEnd_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "path_woodEnd_SW",
-        {
-            "src": "./img/asset/MyItem/path_woodEnd_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pillarLarge_NE",
-        {
-            "src": "./img/asset/MyItem/pillarLarge_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pillarLarge_NW",
-        {
-            "src": "./img/asset/MyItem/pillarLarge_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pillarLarge_SE",
-        {
-            "src": "./img/asset/MyItem/pillarLarge_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pillarLarge_SW",
-        {
-            "src": "./img/asset/MyItem/pillarLarge_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pillarObelisk_NE",
-        {
-            "src": "./img/asset/MyItem/pillarObelisk_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pillarObelisk_NW",
-        {
-            "src": "./img/asset/MyItem/pillarObelisk_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pillarObelisk_SE",
-        {
-            "src": "./img/asset/MyItem/pillarObelisk_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pillarObelisk_SW",
-        {
-            "src": "./img/asset/MyItem/pillarObelisk_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pillarSmall_NE",
-        {
-            "src": "./img/asset/MyItem/pillarSmall_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pillarSmall_NW",
-        {
-            "src": "./img/asset/MyItem/pillarSmall_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pillarSmall_SE",
-        {
-            "src": "./img/asset/MyItem/pillarSmall_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pillarSmall_SW",
-        {
-            "src": "./img/asset/MyItem/pillarSmall_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pillarSquare_NE",
-        {
-            "src": "./img/asset/MyItem/pillarSquare_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pillarSquare_NW",
-        {
-            "src": "./img/asset/MyItem/pillarSquare_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pillarSquare_SE",
-        {
-            "src": "./img/asset/MyItem/pillarSquare_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pillarSquare_SW",
-        {
-            "src": "./img/asset/MyItem/pillarSquare_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_corner_NE",
-        {
-            "src": "./img/asset/MyItem/pipe_corner_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_corner_NW",
-        {
-            "src": "./img/asset/MyItem/pipe_corner_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_corner_SE",
-        {
-            "src": "./img/asset/MyItem/pipe_corner_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_corner_SW",
-        {
-            "src": "./img/asset/MyItem/pipe_corner_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_cornerDiagonal_NE",
-        {
-            "src": "./img/asset/MyItem/pipe_cornerDiagonal_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_cornerDiagonal_NW",
-        {
-            "src": "./img/asset/MyItem/pipe_cornerDiagonal_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_cornerDiagonal_SE",
-        {
-            "src": "./img/asset/MyItem/pipe_cornerDiagonal_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_cornerDiagonal_SW",
-        {
-            "src": "./img/asset/MyItem/pipe_cornerDiagonal_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_cornerRound_NE",
-        {
-            "src": "./img/asset/MyItem/pipe_cornerRound_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_cornerRound_NW",
-        {
-            "src": "./img/asset/MyItem/pipe_cornerRound_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_cornerRound_SE",
-        {
-            "src": "./img/asset/MyItem/pipe_cornerRound_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_cornerRound_SW",
-        {
-            "src": "./img/asset/MyItem/pipe_cornerRound_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_cross_NE",
-        {
-            "src": "./img/asset/MyItem/pipe_cross_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_cross_NW",
-        {
-            "src": "./img/asset/MyItem/pipe_cross_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_cross_SE",
-        {
-            "src": "./img/asset/MyItem/pipe_cross_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_cross_SW",
-        {
-            "src": "./img/asset/MyItem/pipe_cross_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_end_NE",
-        {
-            "src": "./img/asset/MyItem/pipe_end_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_end_NW",
-        {
-            "src": "./img/asset/MyItem/pipe_end_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_end_SE",
-        {
-            "src": "./img/asset/MyItem/pipe_end_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_end_SW",
-        {
-            "src": "./img/asset/MyItem/pipe_end_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_entrance_NE",
-        {
-            "src": "./img/asset/MyItem/pipe_entrance_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_entrance_NW",
-        {
-            "src": "./img/asset/MyItem/pipe_entrance_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_entrance_SE",
-        {
-            "src": "./img/asset/MyItem/pipe_entrance_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_entrance_SW",
-        {
-            "src": "./img/asset/MyItem/pipe_entrance_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_open_NE",
-        {
-            "src": "./img/asset/MyItem/pipe_open_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_open_NW",
-        {
-            "src": "./img/asset/MyItem/pipe_open_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_open_SE",
-        {
-            "src": "./img/asset/MyItem/pipe_open_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_open_SW",
-        {
-            "src": "./img/asset/MyItem/pipe_open_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_rampLarge_NE",
-        {
-            "src": "./img/asset/MyItem/pipe_rampLarge_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_rampLarge_NW",
-        {
-            "src": "./img/asset/MyItem/pipe_rampLarge_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_rampLarge_SE",
-        {
-            "src": "./img/asset/MyItem/pipe_rampLarge_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_rampLarge_SW",
-        {
-            "src": "./img/asset/MyItem/pipe_rampLarge_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_ring_NE",
-        {
-            "src": "./img/asset/MyItem/pipe_ring_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_ring_NW",
-        {
-            "src": "./img/asset/MyItem/pipe_ring_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_ring_SE",
-        {
-            "src": "./img/asset/MyItem/pipe_ring_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_ring_SW",
-        {
-            "src": "./img/asset/MyItem/pipe_ring_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_ringHigh_NE",
-        {
-            "src": "./img/asset/MyItem/pipe_ringHigh_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_ringHigh_NW",
-        {
-            "src": "./img/asset/MyItem/pipe_ringHigh_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_ringHigh_SE",
-        {
-            "src": "./img/asset/MyItem/pipe_ringHigh_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_ringHigh_SW",
-        {
-            "src": "./img/asset/MyItem/pipe_ringHigh_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_ringHighEnd_NE",
-        {
-            "src": "./img/asset/MyItem/pipe_ringHighEnd_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_ringHighEnd_NW",
-        {
-            "src": "./img/asset/MyItem/pipe_ringHighEnd_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_ringHighEnd_SE",
-        {
-            "src": "./img/asset/MyItem/pipe_ringHighEnd_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_ringHighEnd_SW",
-        {
-            "src": "./img/asset/MyItem/pipe_ringHighEnd_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_ringSupport_NE",
-        {
-            "src": "./img/asset/MyItem/pipe_ringSupport_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_ringSupport_NW",
-        {
-            "src": "./img/asset/MyItem/pipe_ringSupport_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_ringSupport_SE",
-        {
-            "src": "./img/asset/MyItem/pipe_ringSupport_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_ringSupport_SW",
-        {
-            "src": "./img/asset/MyItem/pipe_ringSupport_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_split_NE",
-        {
-            "src": "./img/asset/MyItem/pipe_split_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_split_NW",
-        {
-            "src": "./img/asset/MyItem/pipe_split_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_split_SE",
-        {
-            "src": "./img/asset/MyItem/pipe_split_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_split_SW",
-        {
-            "src": "./img/asset/MyItem/pipe_split_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_straight_NE",
-        {
-            "src": "./img/asset/MyItem/pipe_straight_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_straight_NW",
-        {
-            "src": "./img/asset/MyItem/pipe_straight_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_straight_SE",
-        {
-            "src": "./img/asset/MyItem/pipe_straight_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_straight_SW",
-        {
-            "src": "./img/asset/MyItem/pipe_straight_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_supportHigh_NE",
-        {
-            "src": "./img/asset/MyItem/pipe_supportHigh_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_supportHigh_NW",
-        {
-            "src": "./img/asset/MyItem/pipe_supportHigh_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_supportHigh_SE",
-        {
-            "src": "./img/asset/MyItem/pipe_supportHigh_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_supportHigh_SW",
-        {
-            "src": "./img/asset/MyItem/pipe_supportHigh_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_supportLow_NE",
-        {
-            "src": "./img/asset/MyItem/pipe_supportLow_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_supportLow_NW",
-        {
-            "src": "./img/asset/MyItem/pipe_supportLow_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_supportLow_SE",
-        {
-            "src": "./img/asset/MyItem/pipe_supportLow_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "pipe_supportLow_SW",
-        {
-            "src": "./img/asset/MyItem/pipe_supportLow_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "platform_beach_NE",
-        {
-            "src": "./img/asset/MyItem/platform_beach_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "platform_beach_NW",
-        {
-            "src": "./img/asset/MyItem/platform_beach_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "platform_beach_SE",
-        {
-            "src": "./img/asset/MyItem/platform_beach_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "platform_beach_SW",
-        {
-            "src": "./img/asset/MyItem/platform_beach_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "platform_grass_NE",
-        {
-            "src": "./img/asset/MyItem/platform_grass_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "platform_grass_NW",
-        {
-            "src": "./img/asset/MyItem/platform_grass_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "platform_grass_SE",
-        {
-            "src": "./img/asset/MyItem/platform_grass_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "platform_grass_SW",
-        {
-            "src": "./img/asset/MyItem/platform_grass_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "platform_stone_NE",
-        {
-            "src": "./img/asset/MyItem/platform_stone_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "platform_stone_NW",
-        {
-            "src": "./img/asset/MyItem/platform_stone_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "platform_stone_SE",
-        {
-            "src": "./img/asset/MyItem/platform_stone_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "platform_stone_SW",
-        {
-            "src": "./img/asset/MyItem/platform_stone_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "satelliteDish_detailed_NE",
-        {
-            "src": "./img/asset/MyItem/satelliteDish_detailed_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "satelliteDish_detailed_NW",
-        {
-            "src": "./img/asset/MyItem/satelliteDish_detailed_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "satelliteDish_detailed_SE",
-        {
-            "src": "./img/asset/MyItem/satelliteDish_detailed_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "satelliteDish_detailed_SW",
-        {
-            "src": "./img/asset/MyItem/satelliteDish_detailed_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "satelliteDish_large_NE",
-        {
-            "src": "./img/asset/MyItem/satelliteDish_large_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "satelliteDish_large_NW",
-        {
-            "src": "./img/asset/MyItem/satelliteDish_large_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "satelliteDish_large_SE",
-        {
-            "src": "./img/asset/MyItem/satelliteDish_large_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "satelliteDish_large_SW",
-        {
-            "src": "./img/asset/MyItem/satelliteDish_large_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "satelliteDish_NE",
-        {
-            "src": "./img/asset/MyItem/satelliteDish_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "satelliteDish_NW",
-        {
-            "src": "./img/asset/MyItem/satelliteDish_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "satelliteDish_SE",
-        {
-            "src": "./img/asset/MyItem/satelliteDish_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "satelliteDish_SW",
-        {
-            "src": "./img/asset/MyItem/satelliteDish_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "saw_NE",
-        {
-            "src": "./img/asset/MyItem/saw_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "saw_NW",
-        {
-            "src": "./img/asset/MyItem/saw_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "saw_SE",
-        {
-            "src": "./img/asset/MyItem/saw_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "saw_SW",
-        {
-            "src": "./img/asset/MyItem/saw_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "shovelDirt_NE",
-        {
-            "src": "./img/asset/MyItem/shovelDirt_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "shovelDirt_NW",
-        {
-            "src": "./img/asset/MyItem/shovelDirt_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "shovelDirt_SE",
-        {
-            "src": "./img/asset/MyItem/shovelDirt_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "shovelDirt_SW",
-        {
-            "src": "./img/asset/MyItem/shovelDirt_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "sign_NE",
-        {
-            "src": "./img/asset/MyItem/sign_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "sign_NW",
-        {
-            "src": "./img/asset/MyItem/sign_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "sign_SE",
-        {
-            "src": "./img/asset/MyItem/sign_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "sign_SW",
-        {
-            "src": "./img/asset/MyItem/sign_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_block_NE",
-        {
-            "src": "./img/asset/MyItem/statue_block_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_block_NW",
-        {
-            "src": "./img/asset/MyItem/statue_block_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_block_SE",
-        {
-            "src": "./img/asset/MyItem/statue_block_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_block_SW",
-        {
-            "src": "./img/asset/MyItem/statue_block_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_column_NE",
-        {
-            "src": "./img/asset/MyItem/statue_column_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_column_NW",
-        {
-            "src": "./img/asset/MyItem/statue_column_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_column_SE",
-        {
-            "src": "./img/asset/MyItem/statue_column_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_column_SW",
-        {
-            "src": "./img/asset/MyItem/statue_column_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_columnDamaged_NE",
-        {
-            "src": "./img/asset/MyItem/statue_columnDamaged_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_columnDamaged_NW",
-        {
-            "src": "./img/asset/MyItem/statue_columnDamaged_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_columnDamaged_SE",
-        {
-            "src": "./img/asset/MyItem/statue_columnDamaged_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_columnDamaged_SW",
-        {
-            "src": "./img/asset/MyItem/statue_columnDamaged_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_head_NE",
-        {
-            "src": "./img/asset/MyItem/statue_head_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_head_NW",
-        {
-            "src": "./img/asset/MyItem/statue_head_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_head_SE",
-        {
-            "src": "./img/asset/MyItem/statue_head_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_head_SW",
-        {
-            "src": "./img/asset/MyItem/statue_head_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_obelisk_NE",
-        {
-            "src": "./img/asset/MyItem/statue_obelisk_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_obelisk_NW",
-        {
-            "src": "./img/asset/MyItem/statue_obelisk_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_obelisk_SE",
-        {
-            "src": "./img/asset/MyItem/statue_obelisk_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_obelisk_SW",
-        {
-            "src": "./img/asset/MyItem/statue_obelisk_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_ring_NE",
-        {
-            "src": "./img/asset/MyItem/statue_ring_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_ring_NW",
-        {
-            "src": "./img/asset/MyItem/statue_ring_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_ring_SE",
-        {
-            "src": "./img/asset/MyItem/statue_ring_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "statue_ring_SW",
-        {
-            "src": "./img/asset/MyItem/statue_ring_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "tent_detailedClosed_NE",
-        {
-            "src": "./img/asset/MyItem/tent_detailedClosed_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "tent_detailedClosed_NW",
-        {
-            "src": "./img/asset/MyItem/tent_detailedClosed_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "tent_detailedClosed_SE",
-        {
-            "src": "./img/asset/MyItem/tent_detailedClosed_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "tent_detailedClosed_SW",
-        {
-            "src": "./img/asset/MyItem/tent_detailedClosed_SW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "tent_detailedOpen_NE",
-        {
-            "src": "./img/asset/MyItem/tent_detailedOpen_NE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "tent_detailedOpen_NW",
-        {
-            "src": "./img/asset/MyItem/tent_detailedOpen_NW.png"
-        }
-    ],
-    [
-        "MyItem",
-        "tent_detailedOpen_SE",
-        {
-            "src": "./img/asset/MyItem/tent_detailedOpen_SE.png"
-        }
-    ],
-    [
-        "MyItem",
-        "tent_detailedOpen_SW",
-        {
-            "src": "./img/asset/MyItem/tent_detailedOpen_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_blocks_dark_NE",
-        {
-            "src": "./img/asset/MyNature/tree_blocks_dark_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_blocks_dark_NW",
-        {
-            "src": "./img/asset/MyNature/tree_blocks_dark_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_blocks_dark_SE",
-        {
-            "src": "./img/asset/MyNature/tree_blocks_dark_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_blocks_dark_SW",
-        {
-            "src": "./img/asset/MyNature/tree_blocks_dark_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_blocks_fall_NE",
-        {
-            "src": "./img/asset/MyNature/tree_blocks_fall_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_blocks_fall_NW",
-        {
-            "src": "./img/asset/MyNature/tree_blocks_fall_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_blocks_fall_SE",
-        {
-            "src": "./img/asset/MyNature/tree_blocks_fall_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_blocks_fall_SW",
-        {
-            "src": "./img/asset/MyNature/tree_blocks_fall_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_blocks_NE",
-        {
-            "src": "./img/asset/MyNature/tree_blocks_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_blocks_NW",
-        {
-            "src": "./img/asset/MyNature/tree_blocks_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_blocks_SE",
-        {
-            "src": "./img/asset/MyNature/tree_blocks_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_blocks_SW",
-        {
-            "src": "./img/asset/MyNature/tree_blocks_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_cone_dark_NE",
-        {
-            "src": "./img/asset/MyNature/tree_cone_dark_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_cone_dark_NW",
-        {
-            "src": "./img/asset/MyNature/tree_cone_dark_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_cone_dark_SE",
-        {
-            "src": "./img/asset/MyNature/tree_cone_dark_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_cone_dark_SW",
-        {
-            "src": "./img/asset/MyNature/tree_cone_dark_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_cone_fall_NE",
-        {
-            "src": "./img/asset/MyNature/tree_cone_fall_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_cone_fall_NW",
-        {
-            "src": "./img/asset/MyNature/tree_cone_fall_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_cone_fall_SE",
-        {
-            "src": "./img/asset/MyNature/tree_cone_fall_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_cone_fall_SW",
-        {
-            "src": "./img/asset/MyNature/tree_cone_fall_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_cone_NE",
-        {
-            "src": "./img/asset/MyNature/tree_cone_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_cone_NW",
-        {
-            "src": "./img/asset/MyNature/tree_cone_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_cone_SE",
-        {
-            "src": "./img/asset/MyNature/tree_cone_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_cone_SW",
-        {
-            "src": "./img/asset/MyNature/tree_cone_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_default_dark_NE",
-        {
-            "src": "./img/asset/MyNature/tree_default_dark_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_default_dark_NW",
-        {
-            "src": "./img/asset/MyNature/tree_default_dark_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_default_dark_SE",
-        {
-            "src": "./img/asset/MyNature/tree_default_dark_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_default_dark_SW",
-        {
-            "src": "./img/asset/MyNature/tree_default_dark_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_default_fall_NE",
-        {
-            "src": "./img/asset/MyNature/tree_default_fall_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_default_fall_NW",
-        {
-            "src": "./img/asset/MyNature/tree_default_fall_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_default_fall_SE",
-        {
-            "src": "./img/asset/MyNature/tree_default_fall_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_default_fall_SW",
-        {
-            "src": "./img/asset/MyNature/tree_default_fall_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_default_NE",
-        {
-            "src": "./img/asset/MyNature/tree_default_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_default_NW",
-        {
-            "src": "./img/asset/MyNature/tree_default_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_default_SE",
-        {
-            "src": "./img/asset/MyNature/tree_default_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_default_SW",
-        {
-            "src": "./img/asset/MyNature/tree_default_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_detailed_dark_NE",
-        {
-            "src": "./img/asset/MyNature/tree_detailed_dark_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_detailed_dark_NW",
-        {
-            "src": "./img/asset/MyNature/tree_detailed_dark_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_detailed_dark_SE",
-        {
-            "src": "./img/asset/MyNature/tree_detailed_dark_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_detailed_dark_SW",
-        {
-            "src": "./img/asset/MyNature/tree_detailed_dark_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_detailed_fall_NE",
-        {
-            "src": "./img/asset/MyNature/tree_detailed_fall_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_detailed_fall_NW",
-        {
-            "src": "./img/asset/MyNature/tree_detailed_fall_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_detailed_fall_SE",
-        {
-            "src": "./img/asset/MyNature/tree_detailed_fall_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_detailed_fall_SW",
-        {
-            "src": "./img/asset/MyNature/tree_detailed_fall_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_detailed_NE",
-        {
-            "src": "./img/asset/MyNature/tree_detailed_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_detailed_NW",
-        {
-            "src": "./img/asset/MyNature/tree_detailed_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_detailed_SE",
-        {
-            "src": "./img/asset/MyNature/tree_detailed_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_detailed_SW",
-        {
-            "src": "./img/asset/MyNature/tree_detailed_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_fat_darkh_NE",
-        {
-            "src": "./img/asset/MyNature/tree_fat_darkh_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_fat_darkh_NW",
-        {
-            "src": "./img/asset/MyNature/tree_fat_darkh_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_fat_darkh_SE",
-        {
-            "src": "./img/asset/MyNature/tree_fat_darkh_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_fat_darkh_SW",
-        {
-            "src": "./img/asset/MyNature/tree_fat_darkh_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_fat_fall_NE",
-        {
-            "src": "./img/asset/MyNature/tree_fat_fall_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_fat_fall_NW",
-        {
-            "src": "./img/asset/MyNature/tree_fat_fall_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_fat_fall_SE",
-        {
-            "src": "./img/asset/MyNature/tree_fat_fall_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_fat_fall_SW",
-        {
-            "src": "./img/asset/MyNature/tree_fat_fall_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_fat_NE",
-        {
-            "src": "./img/asset/MyNature/tree_fat_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_fat_NW",
-        {
-            "src": "./img/asset/MyNature/tree_fat_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_fat_SE",
-        {
-            "src": "./img/asset/MyNature/tree_fat_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_fat_SW",
-        {
-            "src": "./img/asset/MyNature/tree_fat_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_oak_dark_NE",
-        {
-            "src": "./img/asset/MyNature/tree_oak_dark_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_oak_dark_NW",
-        {
-            "src": "./img/asset/MyNature/tree_oak_dark_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_oak_dark_SE",
-        {
-            "src": "./img/asset/MyNature/tree_oak_dark_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_oak_dark_SW",
-        {
-            "src": "./img/asset/MyNature/tree_oak_dark_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_oak_fall_NE",
-        {
-            "src": "./img/asset/MyNature/tree_oak_fall_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_oak_fall_NW",
-        {
-            "src": "./img/asset/MyNature/tree_oak_fall_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_oak_fall_SE",
-        {
-            "src": "./img/asset/MyNature/tree_oak_fall_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_oak_fall_SW",
-        {
-            "src": "./img/asset/MyNature/tree_oak_fall_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_oak_NE",
-        {
-            "src": "./img/asset/MyNature/tree_oak_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_oak_NW",
-        {
-            "src": "./img/asset/MyNature/tree_oak_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_oak_SE",
-        {
-            "src": "./img/asset/MyNature/tree_oak_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_oak_SW",
-        {
-            "src": "./img/asset/MyNature/tree_oak_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palm_NE",
-        {
-            "src": "./img/asset/MyNature/tree_palm_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palm_NW",
-        {
-            "src": "./img/asset/MyNature/tree_palm_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palm_SE",
-        {
-            "src": "./img/asset/MyNature/tree_palm_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palm_SW",
-        {
-            "src": "./img/asset/MyNature/tree_palm_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palmBend_NE",
-        {
-            "src": "./img/asset/MyNature/tree_palmBend_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palmBend_NW",
-        {
-            "src": "./img/asset/MyNature/tree_palmBend_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palmBend_SE",
-        {
-            "src": "./img/asset/MyNature/tree_palmBend_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palmBend_SW",
-        {
-            "src": "./img/asset/MyNature/tree_palmBend_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palmDetailedShort_NE",
-        {
-            "src": "./img/asset/MyNature/tree_palmDetailedShort_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palmDetailedShort_NW",
-        {
-            "src": "./img/asset/MyNature/tree_palmDetailedShort_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palmDetailedShort_SE",
-        {
-            "src": "./img/asset/MyNature/tree_palmDetailedShort_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palmDetailedShort_SW",
-        {
-            "src": "./img/asset/MyNature/tree_palmDetailedShort_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palmDetailedTall_NE",
-        {
-            "src": "./img/asset/MyNature/tree_palmDetailedTall_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palmDetailedTall_NW",
-        {
-            "src": "./img/asset/MyNature/tree_palmDetailedTall_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palmDetailedTall_SE",
-        {
-            "src": "./img/asset/MyNature/tree_palmDetailedTall_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palmDetailedTall_SW",
-        {
-            "src": "./img/asset/MyNature/tree_palmDetailedTall_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palmShort_NE",
-        {
-            "src": "./img/asset/MyNature/tree_palmShort_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palmShort_NW",
-        {
-            "src": "./img/asset/MyNature/tree_palmShort_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palmShort_SE",
-        {
-            "src": "./img/asset/MyNature/tree_palmShort_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palmShort_SW",
-        {
-            "src": "./img/asset/MyNature/tree_palmShort_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palmTall_NE",
-        {
-            "src": "./img/asset/MyNature/tree_palmTall_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palmTall_NW",
-        {
-            "src": "./img/asset/MyNature/tree_palmTall_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palmTall_SE",
-        {
-            "src": "./img/asset/MyNature/tree_palmTall_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_palmTall_SW",
-        {
-            "src": "./img/asset/MyNature/tree_palmTall_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineDefaultA_NE",
-        {
-            "src": "./img/asset/MyNature/tree_pineDefaultA_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineDefaultA_NW",
-        {
-            "src": "./img/asset/MyNature/tree_pineDefaultA_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineDefaultA_SE",
-        {
-            "src": "./img/asset/MyNature/tree_pineDefaultA_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineDefaultA_SW",
-        {
-            "src": "./img/asset/MyNature/tree_pineDefaultA_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineGroundA_NE",
-        {
-            "src": "./img/asset/MyNature/tree_pineGroundA_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineGroundA_NW",
-        {
-            "src": "./img/asset/MyNature/tree_pineGroundA_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineGroundA_SE",
-        {
-            "src": "./img/asset/MyNature/tree_pineGroundA_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineGroundA_SW",
-        {
-            "src": "./img/asset/MyNature/tree_pineGroundA_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineRoundA_NE",
-        {
-            "src": "./img/asset/MyNature/tree_pineRoundA_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineRoundA_NW",
-        {
-            "src": "./img/asset/MyNature/tree_pineRoundA_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineRoundA_SE",
-        {
-            "src": "./img/asset/MyNature/tree_pineRoundA_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineRoundA_SW",
-        {
-            "src": "./img/asset/MyNature/tree_pineRoundA_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineRoundB_NE",
-        {
-            "src": "./img/asset/MyNature/tree_pineRoundB_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineRoundB_NW",
-        {
-            "src": "./img/asset/MyNature/tree_pineRoundB_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineRoundB_SE",
-        {
-            "src": "./img/asset/MyNature/tree_pineRoundB_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineRoundB_SW",
-        {
-            "src": "./img/asset/MyNature/tree_pineRoundB_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineRoundC_NE",
-        {
-            "src": "./img/asset/MyNature/tree_pineRoundC_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineRoundC_NW",
-        {
-            "src": "./img/asset/MyNature/tree_pineRoundC_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineRoundC_SE",
-        {
-            "src": "./img/asset/MyNature/tree_pineRoundC_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineRoundC_SW",
-        {
-            "src": "./img/asset/MyNature/tree_pineRoundC_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineRoundD_NE",
-        {
-            "src": "./img/asset/MyNature/tree_pineRoundD_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineRoundD_NW",
-        {
-            "src": "./img/asset/MyNature/tree_pineRoundD_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineRoundD_SE",
-        {
-            "src": "./img/asset/MyNature/tree_pineRoundD_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineRoundD_SW",
-        {
-            "src": "./img/asset/MyNature/tree_pineRoundD_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineRoundE_NE",
-        {
-            "src": "./img/asset/MyNature/tree_pineRoundE_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineRoundE_NW",
-        {
-            "src": "./img/asset/MyNature/tree_pineRoundE_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineRoundE_SE",
-        {
-            "src": "./img/asset/MyNature/tree_pineRoundE_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineRoundE_SW",
-        {
-            "src": "./img/asset/MyNature/tree_pineRoundE_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineSmallA_NE",
-        {
-            "src": "./img/asset/MyNature/tree_pineSmallA_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineSmallA_NW",
-        {
-            "src": "./img/asset/MyNature/tree_pineSmallA_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineSmallA_SE",
-        {
-            "src": "./img/asset/MyNature/tree_pineSmallA_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineSmallA_SW",
-        {
-            "src": "./img/asset/MyNature/tree_pineSmallA_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineSmallB_NE",
-        {
-            "src": "./img/asset/MyNature/tree_pineSmallB_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineSmallB_NW",
-        {
-            "src": "./img/asset/MyNature/tree_pineSmallB_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineSmallB_SE",
-        {
-            "src": "./img/asset/MyNature/tree_pineSmallB_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineSmallB_SW",
-        {
-            "src": "./img/asset/MyNature/tree_pineSmallB_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineSmallD_NE",
-        {
-            "src": "./img/asset/MyNature/tree_pineSmallD_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineSmallD_NW",
-        {
-            "src": "./img/asset/MyNature/tree_pineSmallD_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineSmallD_SE",
-        {
-            "src": "./img/asset/MyNature/tree_pineSmallD_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineSmallD_SW",
-        {
-            "src": "./img/asset/MyNature/tree_pineSmallD_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineTallA_NE",
-        {
-            "src": "./img/asset/MyNature/tree_pineTallA_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineTallA_NW",
-        {
-            "src": "./img/asset/MyNature/tree_pineTallA_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineTallA_SE",
-        {
-            "src": "./img/asset/MyNature/tree_pineTallA_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineTallA_SW",
-        {
-            "src": "./img/asset/MyNature/tree_pineTallA_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineTallB_NE",
-        {
-            "src": "./img/asset/MyNature/tree_pineTallB_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineTallB_NW",
-        {
-            "src": "./img/asset/MyNature/tree_pineTallB_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineTallB_SE",
-        {
-            "src": "./img/asset/MyNature/tree_pineTallB_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineTallB_SW",
-        {
-            "src": "./img/asset/MyNature/tree_pineTallB_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineTallC_NE",
-        {
-            "src": "./img/asset/MyNature/tree_pineTallC_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineTallC_NW",
-        {
-            "src": "./img/asset/MyNature/tree_pineTallC_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineTallC_SE",
-        {
-            "src": "./img/asset/MyNature/tree_pineTallC_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineTallC_SW",
-        {
-            "src": "./img/asset/MyNature/tree_pineTallC_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineTallD_NE",
-        {
-            "src": "./img/asset/MyNature/tree_pineTallD_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineTallD_NW",
-        {
-            "src": "./img/asset/MyNature/tree_pineTallD_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineTallD_SE",
-        {
-            "src": "./img/asset/MyNature/tree_pineTallD_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_pineTallD_SW",
-        {
-            "src": "./img/asset/MyNature/tree_pineTallD_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_plateau_dark_NE",
-        {
-            "src": "./img/asset/MyNature/tree_plateau_dark_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_plateau_dark_NW",
-        {
-            "src": "./img/asset/MyNature/tree_plateau_dark_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_plateau_dark_SE",
-        {
-            "src": "./img/asset/MyNature/tree_plateau_dark_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_plateau_dark_SW",
-        {
-            "src": "./img/asset/MyNature/tree_plateau_dark_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_plateau_fall_NE",
-        {
-            "src": "./img/asset/MyNature/tree_plateau_fall_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_plateau_fall_NW",
-        {
-            "src": "./img/asset/MyNature/tree_plateau_fall_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_plateau_fall_SE",
-        {
-            "src": "./img/asset/MyNature/tree_plateau_fall_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_plateau_fall_SW",
-        {
-            "src": "./img/asset/MyNature/tree_plateau_fall_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_plateau_NE",
-        {
-            "src": "./img/asset/MyNature/tree_plateau_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_plateau_NW",
-        {
-            "src": "./img/asset/MyNature/tree_plateau_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_plateau_SE",
-        {
-            "src": "./img/asset/MyNature/tree_plateau_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_plateau_SW",
-        {
-            "src": "./img/asset/MyNature/tree_plateau_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_simple_dark_NE",
-        {
-            "src": "./img/asset/MyNature/tree_simple_dark_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_simple_dark_NW",
-        {
-            "src": "./img/asset/MyNature/tree_simple_dark_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_simple_dark_SE",
-        {
-            "src": "./img/asset/MyNature/tree_simple_dark_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_simple_dark_SW",
-        {
-            "src": "./img/asset/MyNature/tree_simple_dark_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_simple_fall_NE",
-        {
-            "src": "./img/asset/MyNature/tree_simple_fall_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_simple_fall_NW",
-        {
-            "src": "./img/asset/MyNature/tree_simple_fall_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_simple_fall_SE",
-        {
-            "src": "./img/asset/MyNature/tree_simple_fall_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_simple_fall_SW",
-        {
-            "src": "./img/asset/MyNature/tree_simple_fall_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_simple_NE",
-        {
-            "src": "./img/asset/MyNature/tree_simple_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_simple_NW",
-        {
-            "src": "./img/asset/MyNature/tree_simple_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_simple_SE",
-        {
-            "src": "./img/asset/MyNature/tree_simple_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_simple_SW",
-        {
-            "src": "./img/asset/MyNature/tree_simple_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_small_dark_NE",
-        {
-            "src": "./img/asset/MyNature/tree_small_dark_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_small_dark_NW",
-        {
-            "src": "./img/asset/MyNature/tree_small_dark_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_small_dark_SE",
-        {
-            "src": "./img/asset/MyNature/tree_small_dark_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_small_dark_SW",
-        {
-            "src": "./img/asset/MyNature/tree_small_dark_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_small_fall_NE",
-        {
-            "src": "./img/asset/MyNature/tree_small_fall_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_small_fall_NW",
-        {
-            "src": "./img/asset/MyNature/tree_small_fall_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_small_fall_SE",
-        {
-            "src": "./img/asset/MyNature/tree_small_fall_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_small_fall_SW",
-        {
-            "src": "./img/asset/MyNature/tree_small_fall_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_small_NE",
-        {
-            "src": "./img/asset/MyNature/tree_small_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_small_NW",
-        {
-            "src": "./img/asset/MyNature/tree_small_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_small_SE",
-        {
-            "src": "./img/asset/MyNature/tree_small_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_small_SW",
-        {
-            "src": "./img/asset/MyNature/tree_small_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_tall_dark_NE",
-        {
-            "src": "./img/asset/MyNature/tree_tall_dark_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_tall_dark_NW",
-        {
-            "src": "./img/asset/MyNature/tree_tall_dark_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_tall_dark_SE",
-        {
-            "src": "./img/asset/MyNature/tree_tall_dark_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_tall_dark_SW",
-        {
-            "src": "./img/asset/MyNature/tree_tall_dark_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_tall_fall_NE",
-        {
-            "src": "./img/asset/MyNature/tree_tall_fall_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_tall_fall_NW",
-        {
-            "src": "./img/asset/MyNature/tree_tall_fall_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_tall_fall_SE",
-        {
-            "src": "./img/asset/MyNature/tree_tall_fall_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_tall_fall_SW",
-        {
-            "src": "./img/asset/MyNature/tree_tall_fall_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_tall_NE",
-        {
-            "src": "./img/asset/MyNature/tree_tall_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_tall_NW",
-        {
-            "src": "./img/asset/MyNature/tree_tall_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_tall_SE",
-        {
-            "src": "./img/asset/MyNature/tree_tall_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_tall_SW",
-        {
-            "src": "./img/asset/MyNature/tree_tall_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_thin_dark_NE",
-        {
-            "src": "./img/asset/MyNature/tree_thin_dark_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_thin_dark_NW",
-        {
-            "src": "./img/asset/MyNature/tree_thin_dark_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_thin_dark_SE",
-        {
-            "src": "./img/asset/MyNature/tree_thin_dark_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_thin_dark_SW",
-        {
-            "src": "./img/asset/MyNature/tree_thin_dark_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_thin_fall_NE",
-        {
-            "src": "./img/asset/MyNature/tree_thin_fall_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_thin_fall_NW",
-        {
-            "src": "./img/asset/MyNature/tree_thin_fall_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_thin_fall_SE",
-        {
-            "src": "./img/asset/MyNature/tree_thin_fall_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_thin_fall_SW",
-        {
-            "src": "./img/asset/MyNature/tree_thin_fall_SW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_thin_NE",
-        {
-            "src": "./img/asset/MyNature/tree_thin_NE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_thin_NW",
-        {
-            "src": "./img/asset/MyNature/tree_thin_NW.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_thin_SE",
-        {
-            "src": "./img/asset/MyNature/tree_thin_SE.png"
-        }
-    ],
-    [
-        "MyNature",
-        "tree_thin_SW",
-        {
-            "src": "./img/asset/MyNature/tree_thin_SW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_center_NE",
-        {
-            "src": "./img/asset/MyPlatform/platform_center_NE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_center_NW",
-        {
-            "src": "./img/asset/MyPlatform/platform_center_NW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_center_SE",
-        {
-            "src": "./img/asset/MyPlatform/platform_center_SE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_center_SW",
-        {
-            "src": "./img/asset/MyPlatform/platform_center_SW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_centerA_NE",
-        {
-            "src": "./img/asset/MyPlatform/platform_centerA_NE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_centerA_NW",
-        {
-            "src": "./img/asset/MyPlatform/platform_centerA_NW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_centerA_SE",
-        {
-            "src": "./img/asset/MyPlatform/platform_centerA_SE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_centerA_SW",
-        {
-            "src": "./img/asset/MyPlatform/platform_centerA_SW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_corner_NE",
-        {
-            "src": "./img/asset/MyPlatform/platform_corner_NE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_corner_NW",
-        {
-            "src": "./img/asset/MyPlatform/platform_corner_NW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_corner_SE",
-        {
-            "src": "./img/asset/MyPlatform/platform_corner_SE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_corner_SW",
-        {
-            "src": "./img/asset/MyPlatform/platform_corner_SW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_cornerDot_NE",
-        {
-            "src": "./img/asset/MyPlatform/platform_cornerDot_NE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_cornerDot_NW",
-        {
-            "src": "./img/asset/MyPlatform/platform_cornerDot_NW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_cornerDot_SE",
-        {
-            "src": "./img/asset/MyPlatform/platform_cornerDot_SE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_cornerDot_SW",
-        {
-            "src": "./img/asset/MyPlatform/platform_cornerDot_SW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_cornerOpen_NE",
-        {
-            "src": "./img/asset/MyPlatform/platform_cornerOpen_NE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_cornerOpen_NW",
-        {
-            "src": "./img/asset/MyPlatform/platform_cornerOpen_NW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_cornerOpen_SE",
-        {
-            "src": "./img/asset/MyPlatform/platform_cornerOpen_SE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_cornerOpen_SW",
-        {
-            "src": "./img/asset/MyPlatform/platform_cornerOpen_SW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_cornerRound_NE",
-        {
-            "src": "./img/asset/MyPlatform/platform_cornerRound_NE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_cornerRound_NW",
-        {
-            "src": "./img/asset/MyPlatform/platform_cornerRound_NW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_cornerRound_SE",
-        {
-            "src": "./img/asset/MyPlatform/platform_cornerRound_SE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_cornerRound_SW",
-        {
-            "src": "./img/asset/MyPlatform/platform_cornerRound_SW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_end_NE",
-        {
-            "src": "./img/asset/MyPlatform/platform_end_NE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_end_NW",
-        {
-            "src": "./img/asset/MyPlatform/platform_end_NW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_end_SE",
-        {
-            "src": "./img/asset/MyPlatform/platform_end_SE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_end_SW",
-        {
-            "src": "./img/asset/MyPlatform/platform_end_SW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_high_NE",
-        {
-            "src": "./img/asset/MyPlatform/platform_high_NE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_high_NW",
-        {
-            "src": "./img/asset/MyPlatform/platform_high_NW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_high_SE",
-        {
-            "src": "./img/asset/MyPlatform/platform_high_SE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_high_SW",
-        {
-            "src": "./img/asset/MyPlatform/platform_high_SW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_low_NE",
-        {
-            "src": "./img/asset/MyPlatform/platform_low_NE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_low_NW",
-        {
-            "src": "./img/asset/MyPlatform/platform_low_NW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_low_SE",
-        {
-            "src": "./img/asset/MyPlatform/platform_low_SE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_low_SW",
-        {
-            "src": "./img/asset/MyPlatform/platform_low_SW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_side_NE",
-        {
-            "src": "./img/asset/MyPlatform/platform_side_NE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_side_NW",
-        {
-            "src": "./img/asset/MyPlatform/platform_side_NW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_side_SE",
-        {
-            "src": "./img/asset/MyPlatform/platform_side_SE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_side_SW",
-        {
-            "src": "./img/asset/MyPlatform/platform_side_SW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_small_NE",
-        {
-            "src": "./img/asset/MyPlatform/platform_small_NE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_small_NW",
-        {
-            "src": "./img/asset/MyPlatform/platform_small_NW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_small_SE",
-        {
-            "src": "./img/asset/MyPlatform/platform_small_SE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_small_SW",
-        {
-            "src": "./img/asset/MyPlatform/platform_small_SW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_smallDiagonal_NE",
-        {
-            "src": "./img/asset/MyPlatform/platform_smallDiagonal_NE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_smallDiagonal_NW",
-        {
-            "src": "./img/asset/MyPlatform/platform_smallDiagonal_NW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_smallDiagonal_SE",
-        {
-            "src": "./img/asset/MyPlatform/platform_smallDiagonal_SE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_smallDiagonal_SW",
-        {
-            "src": "./img/asset/MyPlatform/platform_smallDiagonal_SW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_straight_NE",
-        {
-            "src": "./img/asset/MyPlatform/platform_straight_NE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_straight_NW",
-        {
-            "src": "./img/asset/MyPlatform/platform_straight_NW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_straight_SE",
-        {
-            "src": "./img/asset/MyPlatform/platform_straight_SE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "platform_straight_SW",
-        {
-            "src": "./img/asset/MyPlatform/platform_straight_SW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "structure_closed_NE",
-        {
-            "src": "./img/asset/MyPlatform/structure_closed_NE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "structure_closed_NW",
-        {
-            "src": "./img/asset/MyPlatform/structure_closed_NW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "structure_closed_SE",
-        {
-            "src": "./img/asset/MyPlatform/structure_closed_SE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "structure_closed_SW",
-        {
-            "src": "./img/asset/MyPlatform/structure_closed_SW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "structure_detailed_NE",
-        {
-            "src": "./img/asset/MyPlatform/structure_detailed_NE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "structure_detailed_NW",
-        {
-            "src": "./img/asset/MyPlatform/structure_detailed_NW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "structure_detailed_SE",
-        {
-            "src": "./img/asset/MyPlatform/structure_detailed_SE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "structure_detailed_SW",
-        {
-            "src": "./img/asset/MyPlatform/structure_detailed_SW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "structure_diagonal_NE",
-        {
-            "src": "./img/asset/MyPlatform/structure_diagonal_NE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "structure_diagonal_NW",
-        {
-            "src": "./img/asset/MyPlatform/structure_diagonal_NW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "structure_diagonal_SE",
-        {
-            "src": "./img/asset/MyPlatform/structure_diagonal_SE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "structure_diagonal_SW",
-        {
-            "src": "./img/asset/MyPlatform/structure_diagonal_SW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "structure_NE",
-        {
-            "src": "./img/asset/MyPlatform/structure_NE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "structure_NW",
-        {
-            "src": "./img/asset/MyPlatform/structure_NW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "structure_SE",
-        {
-            "src": "./img/asset/MyPlatform/structure_SE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "structure_SW",
-        {
-            "src": "./img/asset/MyPlatform/structure_SW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "supports_high_NE",
-        {
-            "src": "./img/asset/MyPlatform/supports_high_NE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "supports_high_NW",
-        {
-            "src": "./img/asset/MyPlatform/supports_high_NW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "supports_high_SE",
-        {
-            "src": "./img/asset/MyPlatform/supports_high_SE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "supports_high_SW",
-        {
-            "src": "./img/asset/MyPlatform/supports_high_SW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "supports_low_NE",
-        {
-            "src": "./img/asset/MyPlatform/supports_low_NE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "supports_low_NW",
-        {
-            "src": "./img/asset/MyPlatform/supports_low_NW.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "supports_low_SE",
-        {
-            "src": "./img/asset/MyPlatform/supports_low_SE.png"
-        }
-    ],
-    [
-        "MyPlatform",
-        "supports_low_SW",
-        {
-            "src": "./img/asset/MyPlatform/supports_low_SW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor__NE",
-        {
-            "src": "./img/asset/MyWall/corridor__NE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor__NW",
-        {
-            "src": "./img/asset/MyWall/corridor__NW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor__SE",
-        {
-            "src": "./img/asset/MyWall/corridor__SE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor__SW",
-        {
-            "src": "./img/asset/MyWall/corridor__SW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_corner_NE",
-        {
-            "src": "./img/asset/MyWall/corridor_corner_NE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_corner_NW",
-        {
-            "src": "./img/asset/MyWall/corridor_corner_NW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_corner_SE",
-        {
-            "src": "./img/asset/MyWall/corridor_corner_SE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_corner_SW",
-        {
-            "src": "./img/asset/MyWall/corridor_corner_SW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_cornerRound_NE",
-        {
-            "src": "./img/asset/MyWall/corridor_cornerRound_NE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_cornerRound_NW",
-        {
-            "src": "./img/asset/MyWall/corridor_cornerRound_NW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_cornerRound_SE",
-        {
-            "src": "./img/asset/MyWall/corridor_cornerRound_SE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_cornerRound_SW",
-        {
-            "src": "./img/asset/MyWall/corridor_cornerRound_SW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_cornerRoundWindow_NE",
-        {
-            "src": "./img/asset/MyWall/corridor_cornerRoundWindow_NE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_cornerRoundWindow_NW",
-        {
-            "src": "./img/asset/MyWall/corridor_cornerRoundWindow_NW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_cornerRoundWindow_SE",
-        {
-            "src": "./img/asset/MyWall/corridor_cornerRoundWindow_SE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_cornerRoundWindow_SW",
-        {
-            "src": "./img/asset/MyWall/corridor_cornerRoundWindow_SW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_cross_NE",
-        {
-            "src": "./img/asset/MyWall/corridor_cross_NE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_cross_NW",
-        {
-            "src": "./img/asset/MyWall/corridor_cross_NW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_cross_SE",
-        {
-            "src": "./img/asset/MyWall/corridor_cross_SE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_cross_SW",
-        {
-            "src": "./img/asset/MyWall/corridor_cross_SW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_detailed_NE",
-        {
-            "src": "./img/asset/MyWall/corridor_detailed_NE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_detailed_NW",
-        {
-            "src": "./img/asset/MyWall/corridor_detailed_NW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_detailed_SE",
-        {
-            "src": "./img/asset/MyWall/corridor_detailed_SE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_detailed_SW",
-        {
-            "src": "./img/asset/MyWall/corridor_detailed_SW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_end_NE",
-        {
-            "src": "./img/asset/MyWall/corridor_end_NE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_end_NW",
-        {
-            "src": "./img/asset/MyWall/corridor_end_NW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_end_SE",
-        {
-            "src": "./img/asset/MyWall/corridor_end_SE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_end_SW",
-        {
-            "src": "./img/asset/MyWall/corridor_end_SW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_open_NE",
-        {
-            "src": "./img/asset/MyWall/corridor_open_NE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_open_NW",
-        {
-            "src": "./img/asset/MyWall/corridor_open_NW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_open_SE",
-        {
-            "src": "./img/asset/MyWall/corridor_open_SE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_open_SW",
-        {
-            "src": "./img/asset/MyWall/corridor_open_SW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_roof_NE",
-        {
-            "src": "./img/asset/MyWall/corridor_roof_NE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_roof_NW",
-        {
-            "src": "./img/asset/MyWall/corridor_roof_NW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_roof_SE",
-        {
-            "src": "./img/asset/MyWall/corridor_roof_SE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_roof_SW",
-        {
-            "src": "./img/asset/MyWall/corridor_roof_SW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_split_NE",
-        {
-            "src": "./img/asset/MyWall/corridor_split_NE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_split_NW",
-        {
-            "src": "./img/asset/MyWall/corridor_split_NW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_split_SE",
-        {
-            "src": "./img/asset/MyWall/corridor_split_SE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_split_SW",
-        {
-            "src": "./img/asset/MyWall/corridor_split_SW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_wall_NE",
-        {
-            "src": "./img/asset/MyWall/corridor_wall_NE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_wall_NW",
-        {
-            "src": "./img/asset/MyWall/corridor_wall_NW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_wall_SE",
-        {
-            "src": "./img/asset/MyWall/corridor_wall_SE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_wall_SW",
-        {
-            "src": "./img/asset/MyWall/corridor_wall_SW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_wallCorner_NE",
-        {
-            "src": "./img/asset/MyWall/corridor_wallCorner_NE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_wallCorner_NW",
-        {
-            "src": "./img/asset/MyWall/corridor_wallCorner_NW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_wallCorner_SE",
-        {
-            "src": "./img/asset/MyWall/corridor_wallCorner_SE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_wallCorner_SW",
-        {
-            "src": "./img/asset/MyWall/corridor_wallCorner_SW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_window_NE",
-        {
-            "src": "./img/asset/MyWall/corridor_window_NE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_window_NW",
-        {
-            "src": "./img/asset/MyWall/corridor_window_NW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_window_SE",
-        {
-            "src": "./img/asset/MyWall/corridor_window_SE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_window_SW",
-        {
-            "src": "./img/asset/MyWall/corridor_window_SW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_windowClosed_NE",
-        {
-            "src": "./img/asset/MyWall/corridor_windowClosed_NE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_windowClosed_NW",
-        {
-            "src": "./img/asset/MyWall/corridor_windowClosed_NW.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_windowClosed_SE",
-        {
-            "src": "./img/asset/MyWall/corridor_windowClosed_SE.png"
-        }
-    ],
-    [
-        "MyWall",
-        "corridor_windowClosed_SW",
-        {
-            "src": "./img/asset/MyWall/corridor_windowClosed_SW.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_E-1",
-        {
-            "src": "./img/asset/UserAstro/astronautA_E-1.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_E-2",
-        {
-            "src": "./img/asset/UserAstro/astronautA_E-2.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_E-3",
-        {
-            "src": "./img/asset/UserAstro/astronautA_E-3.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_N-1",
-        {
-            "src": "./img/asset/UserAstro/astronautA_N-1.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_N-2",
-        {
-            "src": "./img/asset/UserAstro/astronautA_N-2.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_N-3",
-        {
-            "src": "./img/asset/UserAstro/astronautA_N-3.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_NE-1",
-        {
-            "src": "./img/asset/UserAstro/astronautA_NE-1.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_NE-2",
-        {
-            "src": "./img/asset/UserAstro/astronautA_NE-2.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_NE-3",
-        {
-            "src": "./img/asset/UserAstro/astronautA_NE-3.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_NW-1",
-        {
-            "src": "./img/asset/UserAstro/astronautA_NW-1.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_NW-2",
-        {
-            "src": "./img/asset/UserAstro/astronautA_NW-2.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_NW-3",
-        {
-            "src": "./img/asset/UserAstro/astronautA_NW-3.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_S-1",
-        {
-            "src": "./img/asset/UserAstro/astronautA_S-1.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_S-2",
-        {
-            "src": "./img/asset/UserAstro/astronautA_S-2.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_S-3",
-        {
-            "src": "./img/asset/UserAstro/astronautA_S-3.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_SE-1",
-        {
-            "src": "./img/asset/UserAstro/astronautA_SE-1.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_SE-2",
-        {
-            "src": "./img/asset/UserAstro/astronautA_SE-2.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_SE-3",
-        {
-            "src": "./img/asset/UserAstro/astronautA_SE-3.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_SW-1",
-        {
-            "src": "./img/asset/UserAstro/astronautA_SW-1.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_SW-2",
-        {
-            "src": "./img/asset/UserAstro/astronautA_SW-2.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_SW-3",
-        {
-            "src": "./img/asset/UserAstro/astronautA_SW-3.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_W-1",
-        {
-            "src": "./img/asset/UserAstro/astronautA_W-1.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_W-2",
-        {
-            "src": "./img/asset/UserAstro/astronautA_W-2.png"
-        }
-    ],
-    [
-        "UserAstro",
-        "astronautA_W-3",
-        {
-            "src": "./img/asset/UserAstro/astronautA_W-3.png"
-        }
-    ]
-]
 
+        {
+            "src": "./img/asset/_AstroBase/corridor__NE.png",
+            "group": "_AstroBase",
+            "label": "corridor__NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor__NW.png",
+            "group": "_AstroBase",
+            "label": "corridor__NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor__SE.png",
+            "group": "_AstroBase",
+            "label": "corridor__SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor__SW.png",
+            "group": "_AstroBase",
+            "label": "corridor__SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_corner_NE.png",
+            "group": "_AstroBase",
+            "label": "corridor_corner_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_corner_NW.png",
+            "group": "_AstroBase",
+            "label": "corridor_corner_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_corner_SE.png",
+            "group": "_AstroBase",
+            "label": "corridor_corner_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_corner_SW.png",
+            "group": "_AstroBase",
+            "label": "corridor_corner_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_cornerRound_NE.png",
+            "group": "_AstroBase",
+            "label": "corridor_cornerRound_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_cornerRound_NW.png",
+            "group": "_AstroBase",
+            "label": "corridor_cornerRound_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_cornerRound_SE.png",
+            "group": "_AstroBase",
+            "label": "corridor_cornerRound_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_cornerRound_SW.png",
+            "group": "_AstroBase",
+            "label": "corridor_cornerRound_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_cornerRoundWindow_NE.png",
+            "group": "_AstroBase",
+            "label": "corridor_cornerRoundWindow_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_cornerRoundWindow_NW.png",
+            "group": "_AstroBase",
+            "label": "corridor_cornerRoundWindow_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_cornerRoundWindow_SE.png",
+            "group": "_AstroBase",
+            "label": "corridor_cornerRoundWindow_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_cornerRoundWindow_SW.png",
+            "group": "_AstroBase",
+            "label": "corridor_cornerRoundWindow_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_cross_NE.png",
+            "group": "_AstroBase",
+            "label": "corridor_cross_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_cross_NW.png",
+            "group": "_AstroBase",
+            "label": "corridor_cross_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_cross_SE.png",
+            "group": "_AstroBase",
+            "label": "corridor_cross_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_cross_SW.png",
+            "group": "_AstroBase",
+            "label": "corridor_cross_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_detailed_NE.png",
+            "group": "_AstroBase",
+            "label": "corridor_detailed_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_detailed_NW.png",
+            "group": "_AstroBase",
+            "label": "corridor_detailed_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_detailed_SE.png",
+            "group": "_AstroBase",
+            "label": "corridor_detailed_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_detailed_SW.png",
+            "group": "_AstroBase",
+            "label": "corridor_detailed_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_end_NE.png",
+            "group": "_AstroBase",
+            "label": "corridor_end_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_end_NW.png",
+            "group": "_AstroBase",
+            "label": "corridor_end_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_end_SE.png",
+            "group": "_AstroBase",
+            "label": "corridor_end_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_end_SW.png",
+            "group": "_AstroBase",
+            "label": "corridor_end_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_open_NE.png",
+            "group": "_AstroBase",
+            "label": "corridor_open_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_open_NW.png",
+            "group": "_AstroBase",
+            "label": "corridor_open_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_open_SE.png",
+            "group": "_AstroBase",
+            "label": "corridor_open_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_open_SW.png",
+            "group": "_AstroBase",
+            "label": "corridor_open_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_roof_NE.png",
+            "group": "_AstroBase",
+            "label": "corridor_roof_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_roof_NW.png",
+            "group": "_AstroBase",
+            "label": "corridor_roof_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_roof_SE.png",
+            "group": "_AstroBase",
+            "label": "corridor_roof_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_roof_SW.png",
+            "group": "_AstroBase",
+            "label": "corridor_roof_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_split_NE.png",
+            "group": "_AstroBase",
+            "label": "corridor_split_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_split_NW.png",
+            "group": "_AstroBase",
+            "label": "corridor_split_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_split_SE.png",
+            "group": "_AstroBase",
+            "label": "corridor_split_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_split_SW.png",
+            "group": "_AstroBase",
+            "label": "corridor_split_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_wall_NE.png",
+            "group": "_AstroBase",
+            "label": "corridor_wall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_wall_NW.png",
+            "group": "_AstroBase",
+            "label": "corridor_wall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_wall_SE.png",
+            "group": "_AstroBase",
+            "label": "corridor_wall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_wall_SW.png",
+            "group": "_AstroBase",
+            "label": "corridor_wall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_wallCorner_NE.png",
+            "group": "_AstroBase",
+            "label": "corridor_wallCorner_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_wallCorner_NW.png",
+            "group": "_AstroBase",
+            "label": "corridor_wallCorner_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_wallCorner_SE.png",
+            "group": "_AstroBase",
+            "label": "corridor_wallCorner_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_wallCorner_SW.png",
+            "group": "_AstroBase",
+            "label": "corridor_wallCorner_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_window_NE.png",
+            "group": "_AstroBase",
+            "label": "corridor_window_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_window_NW.png",
+            "group": "_AstroBase",
+            "label": "corridor_window_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_window_SE.png",
+            "group": "_AstroBase",
+            "label": "corridor_window_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_window_SW.png",
+            "group": "_AstroBase",
+            "label": "corridor_window_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_windowClosed_NE.png",
+            "group": "_AstroBase",
+            "label": "corridor_windowClosed_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_windowClosed_NW.png",
+            "group": "_AstroBase",
+            "label": "corridor_windowClosed_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_windowClosed_SE.png",
+            "group": "_AstroBase",
+            "label": "corridor_windowClosed_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroBase/corridor_windowClosed_SW.png",
+            "group": "_AstroBase",
+            "label": "corridor_windowClosed_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_center_NE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_center_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_center_NW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_center_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_center_SE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_center_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_center_SW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_center_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_centerA_NE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_centerA_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_centerA_NW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_centerA_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_centerA_SE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_centerA_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_centerA_SW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_centerA_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_corner_NE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_corner_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_corner_NW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_corner_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_corner_SE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_corner_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_corner_SW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_corner_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_cornerDot_NE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_cornerDot_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_cornerDot_NW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_cornerDot_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_cornerDot_SE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_cornerDot_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_cornerDot_SW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_cornerDot_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_cornerOpen_NE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_cornerOpen_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_cornerOpen_NW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_cornerOpen_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_cornerOpen_SE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_cornerOpen_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_cornerOpen_SW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_cornerOpen_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_cornerRound_NE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_cornerRound_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_cornerRound_NW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_cornerRound_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_cornerRound_SE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_cornerRound_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_cornerRound_SW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_cornerRound_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_end_NE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_end_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_end_NW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_end_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_end_SE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_end_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_end_SW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_end_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_high_NE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_high_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_high_NW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_high_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_high_SE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_high_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_high_SW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_high_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_low_NE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_low_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_low_NW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_low_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_low_SE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_low_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_low_SW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_low_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_side_NE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_side_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_side_NW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_side_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_side_SE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_side_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_side_SW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_side_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_small_NE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_small_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_small_NW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_small_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_small_SE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_small_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_small_SW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_small_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_smallDiagonal_NE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_smallDiagonal_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_smallDiagonal_NW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_smallDiagonal_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_smallDiagonal_SE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_smallDiagonal_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_smallDiagonal_SW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_smallDiagonal_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_straight_NE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_straight_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_straight_NW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_straight_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_straight_SE.png",
+            "group": "_AstroPlatform",
+            "label": "platform_straight_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/platform_straight_SW.png",
+            "group": "_AstroPlatform",
+            "label": "platform_straight_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/structure_closed_NE.png",
+            "group": "_AstroPlatform",
+            "label": "structure_closed_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/structure_closed_NW.png",
+            "group": "_AstroPlatform",
+            "label": "structure_closed_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/structure_closed_SE.png",
+            "group": "_AstroPlatform",
+            "label": "structure_closed_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/structure_closed_SW.png",
+            "group": "_AstroPlatform",
+            "label": "structure_closed_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/structure_detailed_NE.png",
+            "group": "_AstroPlatform",
+            "label": "structure_detailed_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/structure_detailed_NW.png",
+            "group": "_AstroPlatform",
+            "label": "structure_detailed_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/structure_detailed_SE.png",
+            "group": "_AstroPlatform",
+            "label": "structure_detailed_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/structure_detailed_SW.png",
+            "group": "_AstroPlatform",
+            "label": "structure_detailed_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/structure_diagonal_NE.png",
+            "group": "_AstroPlatform",
+            "label": "structure_diagonal_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/structure_diagonal_NW.png",
+            "group": "_AstroPlatform",
+            "label": "structure_diagonal_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/structure_diagonal_SE.png",
+            "group": "_AstroPlatform",
+            "label": "structure_diagonal_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/structure_diagonal_SW.png",
+            "group": "_AstroPlatform",
+            "label": "structure_diagonal_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/structure_NE.png",
+            "group": "_AstroPlatform",
+            "label": "structure_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/structure_NW.png",
+            "group": "_AstroPlatform",
+            "label": "structure_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/structure_SE.png",
+            "group": "_AstroPlatform",
+            "label": "structure_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/structure_SW.png",
+            "group": "_AstroPlatform",
+            "label": "structure_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/supports_high_NE.png",
+            "group": "_AstroPlatform",
+            "label": "supports_high_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/supports_high_NW.png",
+            "group": "_AstroPlatform",
+            "label": "supports_high_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/supports_high_SE.png",
+            "group": "_AstroPlatform",
+            "label": "supports_high_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/supports_high_SW.png",
+            "group": "_AstroPlatform",
+            "label": "supports_high_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/supports_low_NE.png",
+            "group": "_AstroPlatform",
+            "label": "supports_low_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/supports_low_NW.png",
+            "group": "_AstroPlatform",
+            "label": "supports_low_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/supports_low_SE.png",
+            "group": "_AstroPlatform",
+            "label": "supports_low_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_AstroPlatform/supports_low_SW.png",
+            "group": "_AstroPlatform",
+            "label": "supports_low_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/altarStone_NE.png",
+            "group": "_ItemGrave",
+            "label": "altarStone_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/altarStone_NW.png",
+            "group": "_ItemGrave",
+            "label": "altarStone_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/altarStone_SE.png",
+            "group": "_ItemGrave",
+            "label": "altarStone_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/altarStone_SW.png",
+            "group": "_ItemGrave",
+            "label": "altarStone_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/altarWood_NE.png",
+            "group": "_ItemGrave",
+            "label": "altarWood_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/altarWood_NW.png",
+            "group": "_ItemGrave",
+            "label": "altarWood_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/altarWood_SE.png",
+            "group": "_ItemGrave",
+            "label": "altarWood_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/altarWood_SW.png",
+            "group": "_ItemGrave",
+            "label": "altarWood_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/coffin_NE.png",
+            "group": "_ItemGrave",
+            "label": "coffin_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/coffin_NW.png",
+            "group": "_ItemGrave",
+            "label": "coffin_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/coffin_SE.png",
+            "group": "_ItemGrave",
+            "label": "coffin_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/coffin_SW.png",
+            "group": "_ItemGrave",
+            "label": "coffin_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/coffinOld_NE.png",
+            "group": "_ItemGrave",
+            "label": "coffinOld_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/coffinOld_NW.png",
+            "group": "_ItemGrave",
+            "label": "coffinOld_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/coffinOld_SE.png",
+            "group": "_ItemGrave",
+            "label": "coffinOld_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/coffinOld_SW.png",
+            "group": "_ItemGrave",
+            "label": "coffinOld_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/crypt_NE.png",
+            "group": "_ItemGrave",
+            "label": "crypt_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/crypt_NW.png",
+            "group": "_ItemGrave",
+            "label": "crypt_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/crypt_SE.png",
+            "group": "_ItemGrave",
+            "label": "crypt_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/crypt_SW.png",
+            "group": "_ItemGrave",
+            "label": "crypt_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneBevel_NE.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneBevel_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneBevel_NW.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneBevel_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneBevel_SE.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneBevel_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneBevel_SW.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneBevel_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneDecorative_NE.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneDecorative_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneDecorative_NW.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneDecorative_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneDecorative_SE.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneDecorative_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneDecorative_SW.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneDecorative_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneFlat_NE.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneFlat_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneFlat_NW.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneFlat_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneFlat_SE.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneFlat_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneFlat_SW.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneFlat_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneFlatOpen_NE.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneFlatOpen_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneFlatOpen_NW.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneFlatOpen_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneFlatOpen_SE.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneFlatOpen_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneFlatOpen_SW.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneFlatOpen_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneRoof_NE.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneRoof_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneRoof_NW.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneRoof_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneRoof_SE.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneRoof_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneRoof_SW.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneRoof_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneRound_NE.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneRound_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneRound_NW.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneRound_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneRound_SE.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneRound_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneRound_SW.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneRound_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneWide_NE.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneWide_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneWide_NW.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneWide_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneWide_SE.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneWide_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemGrave/gravestoneWide_SW.png",
+            "group": "_ItemGrave",
+            "label": "gravestoneWide_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/arrow_NE.png",
+            "group": "_ItemOther",
+            "label": "arrow_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/arrow_NW.png",
+            "group": "_ItemOther",
+            "label": "arrow_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/arrow_SE.png",
+            "group": "_ItemOther",
+            "label": "arrow_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/arrow_SW.png",
+            "group": "_ItemOther",
+            "label": "arrow_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/arrows_NE.png",
+            "group": "_ItemOther",
+            "label": "arrows_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/arrows_NW.png",
+            "group": "_ItemOther",
+            "label": "arrows_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/arrows_SE.png",
+            "group": "_ItemOther",
+            "label": "arrows_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/arrows_SW.png",
+            "group": "_ItemOther",
+            "label": "arrows_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/bannerGreen_E.png",
+            "group": "_ItemOther",
+            "label": "bannerGreen_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/bannerGreen_N.png",
+            "group": "_ItemOther",
+            "label": "bannerGreen_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/bannerGreen_S.png",
+            "group": "_ItemOther",
+            "label": "bannerGreen_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/bannerGreen_W.png",
+            "group": "_ItemOther",
+            "label": "bannerGreen_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/bannerRed_E.png",
+            "group": "_ItemOther",
+            "label": "bannerRed_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/bannerRed_N.png",
+            "group": "_ItemOther",
+            "label": "bannerRed_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/bannerRed_S.png",
+            "group": "_ItemOther",
+            "label": "bannerRed_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/bannerRed_W.png",
+            "group": "_ItemOther",
+            "label": "bannerRed_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/barrel_NE.png",
+            "group": "_ItemOther",
+            "label": "barrel_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/barrel_NW.png",
+            "group": "_ItemOther",
+            "label": "barrel_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/barrel_SE.png",
+            "group": "_ItemOther",
+            "label": "barrel_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/barrel_SW.png",
+            "group": "_ItemOther",
+            "label": "barrel_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/bench_NE.png",
+            "group": "_ItemOther",
+            "label": "bench_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/bench_NW.png",
+            "group": "_ItemOther",
+            "label": "bench_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/bench_SE.png",
+            "group": "_ItemOther",
+            "label": "bench_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/bench_SW.png",
+            "group": "_ItemOther",
+            "label": "bench_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/benchDamaged_NE.png",
+            "group": "_ItemOther",
+            "label": "benchDamaged_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/benchDamaged_NW.png",
+            "group": "_ItemOther",
+            "label": "benchDamaged_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/benchDamaged_SE.png",
+            "group": "_ItemOther",
+            "label": "benchDamaged_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/benchDamaged_SW.png",
+            "group": "_ItemOther",
+            "label": "benchDamaged_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/blade_E.png",
+            "group": "_ItemOther",
+            "label": "blade_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/blade_N.png",
+            "group": "_ItemOther",
+            "label": "blade_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/blade_S.png",
+            "group": "_ItemOther",
+            "label": "blade_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/blade_W.png",
+            "group": "_ItemOther",
+            "label": "blade_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/bones_NE.png",
+            "group": "_ItemOther",
+            "label": "bones_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/bones_NW.png",
+            "group": "_ItemOther",
+            "label": "bones_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/bones_SE.png",
+            "group": "_ItemOther",
+            "label": "bones_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/bones_SW.png",
+            "group": "_ItemOther",
+            "label": "bones_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/campfire_logs_NE.png",
+            "group": "_ItemOther",
+            "label": "campfire_logs_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/campfire_logs_NW.png",
+            "group": "_ItemOther",
+            "label": "campfire_logs_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/campfire_logs_SE.png",
+            "group": "_ItemOther",
+            "label": "campfire_logs_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/campfire_logs_SW.png",
+            "group": "_ItemOther",
+            "label": "campfire_logs_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/campfire_stones_NE.png",
+            "group": "_ItemOther",
+            "label": "campfire_stones_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/campfire_stones_NW.png",
+            "group": "_ItemOther",
+            "label": "campfire_stones_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/campfire_stones_SE.png",
+            "group": "_ItemOther",
+            "label": "campfire_stones_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/campfire_stones_SW.png",
+            "group": "_ItemOther",
+            "label": "campfire_stones_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/chest_NE.png",
+            "group": "_ItemOther",
+            "label": "chest_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/chest_NW.png",
+            "group": "_ItemOther",
+            "label": "chest_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/chest_SE.png",
+            "group": "_ItemOther",
+            "label": "chest_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/chest_SW.png",
+            "group": "_ItemOther",
+            "label": "chest_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/chimney_detailed_NE.png",
+            "group": "_ItemOther",
+            "label": "chimney_detailed_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/chimney_detailed_NW.png",
+            "group": "_ItemOther",
+            "label": "chimney_detailed_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/chimney_detailed_SE.png",
+            "group": "_ItemOther",
+            "label": "chimney_detailed_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/chimney_detailed_SW.png",
+            "group": "_ItemOther",
+            "label": "chimney_detailed_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/chimney_NE.png",
+            "group": "_ItemOther",
+            "label": "chimney_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/chimney_NW.png",
+            "group": "_ItemOther",
+            "label": "chimney_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/chimney_SE.png",
+            "group": "_ItemOther",
+            "label": "chimney_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/chimney_SW.png",
+            "group": "_ItemOther",
+            "label": "chimney_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/coinBronze_NE.png",
+            "group": "_ItemOther",
+            "label": "coinBronze_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/coinBronze_NW.png",
+            "group": "_ItemOther",
+            "label": "coinBronze_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/coinBronze_SE.png",
+            "group": "_ItemOther",
+            "label": "coinBronze_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/coinBronze_SW.png",
+            "group": "_ItemOther",
+            "label": "coinBronze_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/coinGold_NE.png",
+            "group": "_ItemOther",
+            "label": "coinGold_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/coinGold_NW.png",
+            "group": "_ItemOther",
+            "label": "coinGold_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/coinGold_SE.png",
+            "group": "_ItemOther",
+            "label": "coinGold_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/coinGold_SW.png",
+            "group": "_ItemOther",
+            "label": "coinGold_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/coinSilver_NE.png",
+            "group": "_ItemOther",
+            "label": "coinSilver_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/coinSilver_NW.png",
+            "group": "_ItemOther",
+            "label": "coinSilver_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/coinSilver_SE.png",
+            "group": "_ItemOther",
+            "label": "coinSilver_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/coinSilver_SW.png",
+            "group": "_ItemOther",
+            "label": "coinSilver_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/crate_NE.png",
+            "group": "_ItemOther",
+            "label": "crate_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/crate_NW.png",
+            "group": "_ItemOther",
+            "label": "crate_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/crate_SE.png",
+            "group": "_ItemOther",
+            "label": "crate_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/crate_SW.png",
+            "group": "_ItemOther",
+            "label": "crate_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/crateItem_NE.png",
+            "group": "_ItemOther",
+            "label": "crateItem_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/crateItem_NW.png",
+            "group": "_ItemOther",
+            "label": "crateItem_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/crateItem_SE.png",
+            "group": "_ItemOther",
+            "label": "crateItem_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/crateItem_SW.png",
+            "group": "_ItemOther",
+            "label": "crateItem_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/crateItemStrong_NE.png",
+            "group": "_ItemOther",
+            "label": "crateItemStrong_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/crateItemStrong_NW.png",
+            "group": "_ItemOther",
+            "label": "crateItemStrong_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/crateItemStrong_SE.png",
+            "group": "_ItemOther",
+            "label": "crateItemStrong_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/crateItemStrong_SW.png",
+            "group": "_ItemOther",
+            "label": "crateItemStrong_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/crateStrong_NE.png",
+            "group": "_ItemOther",
+            "label": "crateStrong_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/crateStrong_NW.png",
+            "group": "_ItemOther",
+            "label": "crateStrong_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/crateStrong_SE.png",
+            "group": "_ItemOther",
+            "label": "crateStrong_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/crateStrong_SW.png",
+            "group": "_ItemOther",
+            "label": "crateStrong_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/flag_NE.png",
+            "group": "_ItemOther",
+            "label": "flag_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/flag_NW.png",
+            "group": "_ItemOther",
+            "label": "flag_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/flag_SE.png",
+            "group": "_ItemOther",
+            "label": "flag_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/flag_SW.png",
+            "group": "_ItemOther",
+            "label": "flag_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/heart_NE.png",
+            "group": "_ItemOther",
+            "label": "heart_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/heart_NW.png",
+            "group": "_ItemOther",
+            "label": "heart_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/heart_SE.png",
+            "group": "_ItemOther",
+            "label": "heart_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/heart_SW.png",
+            "group": "_ItemOther",
+            "label": "heart_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/jewel_NE.png",
+            "group": "_ItemOther",
+            "label": "jewel_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/jewel_NW.png",
+            "group": "_ItemOther",
+            "label": "jewel_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/jewel_SE.png",
+            "group": "_ItemOther",
+            "label": "jewel_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/jewel_SW.png",
+            "group": "_ItemOther",
+            "label": "jewel_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/key_NE.png",
+            "group": "_ItemOther",
+            "label": "key_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/key_NW.png",
+            "group": "_ItemOther",
+            "label": "key_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/key_SE.png",
+            "group": "_ItemOther",
+            "label": "key_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/key_SW.png",
+            "group": "_ItemOther",
+            "label": "key_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/sign_NE.png",
+            "group": "_ItemOther",
+            "label": "sign_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/sign_NW.png",
+            "group": "_ItemOther",
+            "label": "sign_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/sign_SE.png",
+            "group": "_ItemOther",
+            "label": "sign_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/sign_SW.png",
+            "group": "_ItemOther",
+            "label": "sign_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/stall_E.png",
+            "group": "_ItemOther",
+            "label": "stall_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/stall_N.png",
+            "group": "_ItemOther",
+            "label": "stall_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/stall_S.png",
+            "group": "_ItemOther",
+            "label": "stall_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/stall_W.png",
+            "group": "_ItemOther",
+            "label": "stall_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/stallBench_E.png",
+            "group": "_ItemOther",
+            "label": "stallBench_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/stallBench_N.png",
+            "group": "_ItemOther",
+            "label": "stallBench_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/stallBench_S.png",
+            "group": "_ItemOther",
+            "label": "stallBench_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/stallBench_W.png",
+            "group": "_ItemOther",
+            "label": "stallBench_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/stallGreen_E.png",
+            "group": "_ItemOther",
+            "label": "stallGreen_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/stallGreen_N.png",
+            "group": "_ItemOther",
+            "label": "stallGreen_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/stallGreen_S.png",
+            "group": "_ItemOther",
+            "label": "stallGreen_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/stallGreen_W.png",
+            "group": "_ItemOther",
+            "label": "stallGreen_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/stallRed_E.png",
+            "group": "_ItemOther",
+            "label": "stallRed_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/stallRed_N.png",
+            "group": "_ItemOther",
+            "label": "stallRed_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/stallRed_S.png",
+            "group": "_ItemOther",
+            "label": "stallRed_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/stallRed_W.png",
+            "group": "_ItemOther",
+            "label": "stallRed_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/stallStool_E.png",
+            "group": "_ItemOther",
+            "label": "stallStool_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/stallStool_N.png",
+            "group": "_ItemOther",
+            "label": "stallStool_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/stallStool_S.png",
+            "group": "_ItemOther",
+            "label": "stallStool_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/stallStool_W.png",
+            "group": "_ItemOther",
+            "label": "stallStool_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/tent_detailedClosed_NE.png",
+            "group": "_ItemOther",
+            "label": "tent_detailedClosed_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/tent_detailedClosed_NW.png",
+            "group": "_ItemOther",
+            "label": "tent_detailedClosed_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/tent_detailedClosed_SE.png",
+            "group": "_ItemOther",
+            "label": "tent_detailedClosed_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/tent_detailedClosed_SW.png",
+            "group": "_ItemOther",
+            "label": "tent_detailedClosed_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/tent_detailedOpen_NE.png",
+            "group": "_ItemOther",
+            "label": "tent_detailedOpen_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/tent_detailedOpen_NW.png",
+            "group": "_ItemOther",
+            "label": "tent_detailedOpen_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/tent_detailedOpen_SE.png",
+            "group": "_ItemOther",
+            "label": "tent_detailedOpen_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemOther/tent_detailedOpen_SW.png",
+            "group": "_ItemOther",
+            "label": "tent_detailedOpen_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/borderPillar_NE.png",
+            "group": "_ItemPilar",
+            "label": "borderPillar_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/borderPillar_NW.png",
+            "group": "_ItemPilar",
+            "label": "borderPillar_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/borderPillar_SE.png",
+            "group": "_ItemPilar",
+            "label": "borderPillar_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/borderPillar_SW.png",
+            "group": "_ItemPilar",
+            "label": "borderPillar_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/columnLarge_NE.png",
+            "group": "_ItemPilar",
+            "label": "columnLarge_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/columnLarge_NW.png",
+            "group": "_ItemPilar",
+            "label": "columnLarge_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/columnLarge_SE.png",
+            "group": "_ItemPilar",
+            "label": "columnLarge_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/columnLarge_SW.png",
+            "group": "_ItemPilar",
+            "label": "columnLarge_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarLarge_NE.png",
+            "group": "_ItemPilar",
+            "label": "pillarLarge_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarLarge_NW.png",
+            "group": "_ItemPilar",
+            "label": "pillarLarge_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarLarge_SE.png",
+            "group": "_ItemPilar",
+            "label": "pillarLarge_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarLarge_SW.png",
+            "group": "_ItemPilar",
+            "label": "pillarLarge_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarObelisk_NE.png",
+            "group": "_ItemPilar",
+            "label": "pillarObelisk_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarObelisk_NW.png",
+            "group": "_ItemPilar",
+            "label": "pillarObelisk_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarObelisk_SE.png",
+            "group": "_ItemPilar",
+            "label": "pillarObelisk_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarObelisk_SW.png",
+            "group": "_ItemPilar",
+            "label": "pillarObelisk_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarSmall_NE.png",
+            "group": "_ItemPilar",
+            "label": "pillarSmall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarSmall_NW.png",
+            "group": "_ItemPilar",
+            "label": "pillarSmall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarSmall_SE.png",
+            "group": "_ItemPilar",
+            "label": "pillarSmall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarSmall_SW.png",
+            "group": "_ItemPilar",
+            "label": "pillarSmall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarSquare_NE.png",
+            "group": "_ItemPilar",
+            "label": "pillarSquare_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarSquare_NW.png",
+            "group": "_ItemPilar",
+            "label": "pillarSquare_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarSquare_SE.png",
+            "group": "_ItemPilar",
+            "label": "pillarSquare_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarSquare_SW.png",
+            "group": "_ItemPilar",
+            "label": "pillarSquare_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarStone_E.png",
+            "group": "_ItemPilar",
+            "label": "pillarStone_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarStone_N.png",
+            "group": "_ItemPilar",
+            "label": "pillarStone_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarStone_S.png",
+            "group": "_ItemPilar",
+            "label": "pillarStone_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarStone_W.png",
+            "group": "_ItemPilar",
+            "label": "pillarStone_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarWood_E.png",
+            "group": "_ItemPilar",
+            "label": "pillarWood_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarWood_N.png",
+            "group": "_ItemPilar",
+            "label": "pillarWood_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarWood_S.png",
+            "group": "_ItemPilar",
+            "label": "pillarWood_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/pillarWood_W.png",
+            "group": "_ItemPilar",
+            "label": "pillarWood_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_block_NE.png",
+            "group": "_ItemPilar",
+            "label": "statue_block_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_block_NW.png",
+            "group": "_ItemPilar",
+            "label": "statue_block_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_block_SE.png",
+            "group": "_ItemPilar",
+            "label": "statue_block_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_block_SW.png",
+            "group": "_ItemPilar",
+            "label": "statue_block_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_column_NE.png",
+            "group": "_ItemPilar",
+            "label": "statue_column_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_column_NW.png",
+            "group": "_ItemPilar",
+            "label": "statue_column_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_column_SE.png",
+            "group": "_ItemPilar",
+            "label": "statue_column_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_column_SW.png",
+            "group": "_ItemPilar",
+            "label": "statue_column_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_columnDamaged_NE.png",
+            "group": "_ItemPilar",
+            "label": "statue_columnDamaged_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_columnDamaged_NW.png",
+            "group": "_ItemPilar",
+            "label": "statue_columnDamaged_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_columnDamaged_SE.png",
+            "group": "_ItemPilar",
+            "label": "statue_columnDamaged_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_columnDamaged_SW.png",
+            "group": "_ItemPilar",
+            "label": "statue_columnDamaged_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_head_NE.png",
+            "group": "_ItemPilar",
+            "label": "statue_head_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_head_NW.png",
+            "group": "_ItemPilar",
+            "label": "statue_head_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_head_SE.png",
+            "group": "_ItemPilar",
+            "label": "statue_head_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_head_SW.png",
+            "group": "_ItemPilar",
+            "label": "statue_head_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_obelisk_NE.png",
+            "group": "_ItemPilar",
+            "label": "statue_obelisk_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_obelisk_NW.png",
+            "group": "_ItemPilar",
+            "label": "statue_obelisk_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_obelisk_SE.png",
+            "group": "_ItemPilar",
+            "label": "statue_obelisk_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_obelisk_SW.png",
+            "group": "_ItemPilar",
+            "label": "statue_obelisk_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_ring_NE.png",
+            "group": "_ItemPilar",
+            "label": "statue_ring_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_ring_NW.png",
+            "group": "_ItemPilar",
+            "label": "statue_ring_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_ring_SE.png",
+            "group": "_ItemPilar",
+            "label": "statue_ring_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemPilar/statue_ring_SW.png",
+            "group": "_ItemPilar",
+            "label": "statue_ring_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/barrels_NE.png",
+            "group": "_ItemTech",
+            "label": "barrels_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/barrels_NW.png",
+            "group": "_ItemTech",
+            "label": "barrels_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/barrels_rail_NE.png",
+            "group": "_ItemTech",
+            "label": "barrels_rail_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/barrels_rail_NW.png",
+            "group": "_ItemTech",
+            "label": "barrels_rail_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/barrels_rail_SE.png",
+            "group": "_ItemTech",
+            "label": "barrels_rail_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/barrels_rail_SW.png",
+            "group": "_ItemTech",
+            "label": "barrels_rail_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/barrels_SE.png",
+            "group": "_ItemTech",
+            "label": "barrels_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/barrels_SW.png",
+            "group": "_ItemTech",
+            "label": "barrels_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/gate_complex_NE.png",
+            "group": "_ItemTech",
+            "label": "gate_complex_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/gate_complex_NW.png",
+            "group": "_ItemTech",
+            "label": "gate_complex_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/gate_complex_SE.png",
+            "group": "_ItemTech",
+            "label": "gate_complex_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/gate_complex_SW.png",
+            "group": "_ItemTech",
+            "label": "gate_complex_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/gate_simple_NE.png",
+            "group": "_ItemTech",
+            "label": "gate_simple_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/gate_simple_NW.png",
+            "group": "_ItemTech",
+            "label": "gate_simple_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/gate_simple_SE.png",
+            "group": "_ItemTech",
+            "label": "gate_simple_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/gate_simple_SW.png",
+            "group": "_ItemTech",
+            "label": "gate_simple_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_barrel_NE.png",
+            "group": "_ItemTech",
+            "label": "machine_barrel_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_barrel_NW.png",
+            "group": "_ItemTech",
+            "label": "machine_barrel_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_barrel_SE.png",
+            "group": "_ItemTech",
+            "label": "machine_barrel_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_barrel_SW.png",
+            "group": "_ItemTech",
+            "label": "machine_barrel_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_barrelLarge_NE.png",
+            "group": "_ItemTech",
+            "label": "machine_barrelLarge_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_barrelLarge_NW.png",
+            "group": "_ItemTech",
+            "label": "machine_barrelLarge_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_barrelLarge_SE.png",
+            "group": "_ItemTech",
+            "label": "machine_barrelLarge_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_barrelLarge_SW.png",
+            "group": "_ItemTech",
+            "label": "machine_barrelLarge_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_generator_NE.png",
+            "group": "_ItemTech",
+            "label": "machine_generator_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_generator_NW.png",
+            "group": "_ItemTech",
+            "label": "machine_generator_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_generator_SE.png",
+            "group": "_ItemTech",
+            "label": "machine_generator_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_generator_SW.png",
+            "group": "_ItemTech",
+            "label": "machine_generator_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_generatorLarge_NE.png",
+            "group": "_ItemTech",
+            "label": "machine_generatorLarge_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_generatorLarge_NW.png",
+            "group": "_ItemTech",
+            "label": "machine_generatorLarge_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_generatorLarge_SE.png",
+            "group": "_ItemTech",
+            "label": "machine_generatorLarge_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_generatorLarge_SW.png",
+            "group": "_ItemTech",
+            "label": "machine_generatorLarge_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_wireless_NE.png",
+            "group": "_ItemTech",
+            "label": "machine_wireless_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_wireless_NW.png",
+            "group": "_ItemTech",
+            "label": "machine_wireless_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_wireless_SE.png",
+            "group": "_ItemTech",
+            "label": "machine_wireless_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_wireless_SW.png",
+            "group": "_ItemTech",
+            "label": "machine_wireless_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_wirelessCable_NE.png",
+            "group": "_ItemTech",
+            "label": "machine_wirelessCable_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_wirelessCable_NW.png",
+            "group": "_ItemTech",
+            "label": "machine_wirelessCable_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_wirelessCable_SE.png",
+            "group": "_ItemTech",
+            "label": "machine_wirelessCable_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/machine_wirelessCable_SW.png",
+            "group": "_ItemTech",
+            "label": "machine_wirelessCable_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/satelliteDish_detailed_NE.png",
+            "group": "_ItemTech",
+            "label": "satelliteDish_detailed_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/satelliteDish_detailed_NW.png",
+            "group": "_ItemTech",
+            "label": "satelliteDish_detailed_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/satelliteDish_detailed_SE.png",
+            "group": "_ItemTech",
+            "label": "satelliteDish_detailed_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/satelliteDish_detailed_SW.png",
+            "group": "_ItemTech",
+            "label": "satelliteDish_detailed_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/satelliteDish_large_NE.png",
+            "group": "_ItemTech",
+            "label": "satelliteDish_large_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/satelliteDish_large_NW.png",
+            "group": "_ItemTech",
+            "label": "satelliteDish_large_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/satelliteDish_large_SE.png",
+            "group": "_ItemTech",
+            "label": "satelliteDish_large_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/satelliteDish_large_SW.png",
+            "group": "_ItemTech",
+            "label": "satelliteDish_large_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/satelliteDish_NE.png",
+            "group": "_ItemTech",
+            "label": "satelliteDish_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/satelliteDish_NW.png",
+            "group": "_ItemTech",
+            "label": "satelliteDish_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/satelliteDish_SE.png",
+            "group": "_ItemTech",
+            "label": "satelliteDish_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_ItemTech/satelliteDish_SW.png",
+            "group": "_ItemTech",
+            "label": "satelliteDish_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_bambooStageA_NE.png",
+            "group": "_NatureFlower",
+            "label": "crops_bambooStageA_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_bambooStageA_NW.png",
+            "group": "_NatureFlower",
+            "label": "crops_bambooStageA_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_bambooStageA_SE.png",
+            "group": "_NatureFlower",
+            "label": "crops_bambooStageA_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_bambooStageA_SW.png",
+            "group": "_NatureFlower",
+            "label": "crops_bambooStageA_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_bambooStageB_NE.png",
+            "group": "_NatureFlower",
+            "label": "crops_bambooStageB_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_bambooStageB_NW.png",
+            "group": "_NatureFlower",
+            "label": "crops_bambooStageB_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_bambooStageB_SE.png",
+            "group": "_NatureFlower",
+            "label": "crops_bambooStageB_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_bambooStageB_SW.png",
+            "group": "_NatureFlower",
+            "label": "crops_bambooStageB_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_cornStageA_NE.png",
+            "group": "_NatureFlower",
+            "label": "crops_cornStageA_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_cornStageA_NW.png",
+            "group": "_NatureFlower",
+            "label": "crops_cornStageA_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_cornStageA_SE.png",
+            "group": "_NatureFlower",
+            "label": "crops_cornStageA_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_cornStageA_SW.png",
+            "group": "_NatureFlower",
+            "label": "crops_cornStageA_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_cornStageB_NE.png",
+            "group": "_NatureFlower",
+            "label": "crops_cornStageB_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_cornStageB_NW.png",
+            "group": "_NatureFlower",
+            "label": "crops_cornStageB_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_cornStageB_SE.png",
+            "group": "_NatureFlower",
+            "label": "crops_cornStageB_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_cornStageB_SW.png",
+            "group": "_NatureFlower",
+            "label": "crops_cornStageB_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_cornStageC_NE.png",
+            "group": "_NatureFlower",
+            "label": "crops_cornStageC_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_cornStageC_NW.png",
+            "group": "_NatureFlower",
+            "label": "crops_cornStageC_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_cornStageC_SE.png",
+            "group": "_NatureFlower",
+            "label": "crops_cornStageC_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_cornStageC_SW.png",
+            "group": "_NatureFlower",
+            "label": "crops_cornStageC_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_cornStageD_NE.png",
+            "group": "_NatureFlower",
+            "label": "crops_cornStageD_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_cornStageD_NW.png",
+            "group": "_NatureFlower",
+            "label": "crops_cornStageD_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_cornStageD_SE.png",
+            "group": "_NatureFlower",
+            "label": "crops_cornStageD_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_cornStageD_SW.png",
+            "group": "_NatureFlower",
+            "label": "crops_cornStageD_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_leafsStageA_NE.png",
+            "group": "_NatureFlower",
+            "label": "crops_leafsStageA_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_leafsStageA_NW.png",
+            "group": "_NatureFlower",
+            "label": "crops_leafsStageA_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_leafsStageA_SE.png",
+            "group": "_NatureFlower",
+            "label": "crops_leafsStageA_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_leafsStageA_SW.png",
+            "group": "_NatureFlower",
+            "label": "crops_leafsStageA_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_leafsStageB_NE.png",
+            "group": "_NatureFlower",
+            "label": "crops_leafsStageB_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_leafsStageB_NW.png",
+            "group": "_NatureFlower",
+            "label": "crops_leafsStageB_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_leafsStageB_SE.png",
+            "group": "_NatureFlower",
+            "label": "crops_leafsStageB_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_leafsStageB_SW.png",
+            "group": "_NatureFlower",
+            "label": "crops_leafsStageB_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_wheatStageA_NE.png",
+            "group": "_NatureFlower",
+            "label": "crops_wheatStageA_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_wheatStageA_NW.png",
+            "group": "_NatureFlower",
+            "label": "crops_wheatStageA_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_wheatStageA_SE.png",
+            "group": "_NatureFlower",
+            "label": "crops_wheatStageA_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_wheatStageA_SW.png",
+            "group": "_NatureFlower",
+            "label": "crops_wheatStageA_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_wheatStageB_NE.png",
+            "group": "_NatureFlower",
+            "label": "crops_wheatStageB_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_wheatStageB_NW.png",
+            "group": "_NatureFlower",
+            "label": "crops_wheatStageB_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_wheatStageB_SE.png",
+            "group": "_NatureFlower",
+            "label": "crops_wheatStageB_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/crops_wheatStageB_SW.png",
+            "group": "_NatureFlower",
+            "label": "crops_wheatStageB_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_purpleA_NE.png",
+            "group": "_NatureFlower",
+            "label": "flower_purpleA_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_purpleA_NW.png",
+            "group": "_NatureFlower",
+            "label": "flower_purpleA_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_purpleA_SE.png",
+            "group": "_NatureFlower",
+            "label": "flower_purpleA_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_purpleA_SW.png",
+            "group": "_NatureFlower",
+            "label": "flower_purpleA_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_purpleB_NE.png",
+            "group": "_NatureFlower",
+            "label": "flower_purpleB_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_purpleB_NW.png",
+            "group": "_NatureFlower",
+            "label": "flower_purpleB_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_purpleB_SE.png",
+            "group": "_NatureFlower",
+            "label": "flower_purpleB_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_purpleB_SW.png",
+            "group": "_NatureFlower",
+            "label": "flower_purpleB_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_purpleC_NE.png",
+            "group": "_NatureFlower",
+            "label": "flower_purpleC_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_purpleC_NW.png",
+            "group": "_NatureFlower",
+            "label": "flower_purpleC_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_purpleC_SE.png",
+            "group": "_NatureFlower",
+            "label": "flower_purpleC_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_purpleC_SW.png",
+            "group": "_NatureFlower",
+            "label": "flower_purpleC_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_redA_NE.png",
+            "group": "_NatureFlower",
+            "label": "flower_redA_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_redA_NW.png",
+            "group": "_NatureFlower",
+            "label": "flower_redA_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_redA_SE.png",
+            "group": "_NatureFlower",
+            "label": "flower_redA_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_redA_SW.png",
+            "group": "_NatureFlower",
+            "label": "flower_redA_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_redB_NE.png",
+            "group": "_NatureFlower",
+            "label": "flower_redB_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_redB_NW.png",
+            "group": "_NatureFlower",
+            "label": "flower_redB_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_redB_SE.png",
+            "group": "_NatureFlower",
+            "label": "flower_redB_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_redB_SW.png",
+            "group": "_NatureFlower",
+            "label": "flower_redB_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_redC_NE.png",
+            "group": "_NatureFlower",
+            "label": "flower_redC_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_redC_NW.png",
+            "group": "_NatureFlower",
+            "label": "flower_redC_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_redC_SE.png",
+            "group": "_NatureFlower",
+            "label": "flower_redC_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_redC_SW.png",
+            "group": "_NatureFlower",
+            "label": "flower_redC_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_yellowA_NE.png",
+            "group": "_NatureFlower",
+            "label": "flower_yellowA_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_yellowA_NW.png",
+            "group": "_NatureFlower",
+            "label": "flower_yellowA_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_yellowA_SE.png",
+            "group": "_NatureFlower",
+            "label": "flower_yellowA_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_yellowA_SW.png",
+            "group": "_NatureFlower",
+            "label": "flower_yellowA_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_yellowB_NE.png",
+            "group": "_NatureFlower",
+            "label": "flower_yellowB_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_yellowB_NW.png",
+            "group": "_NatureFlower",
+            "label": "flower_yellowB_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_yellowB_SE.png",
+            "group": "_NatureFlower",
+            "label": "flower_yellowB_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_yellowB_SW.png",
+            "group": "_NatureFlower",
+            "label": "flower_yellowB_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_yellowC_NE.png",
+            "group": "_NatureFlower",
+            "label": "flower_yellowC_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_yellowC_NW.png",
+            "group": "_NatureFlower",
+            "label": "flower_yellowC_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_yellowC_SE.png",
+            "group": "_NatureFlower",
+            "label": "flower_yellowC_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/flower_yellowC_SW.png",
+            "group": "_NatureFlower",
+            "label": "flower_yellowC_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/grass_large_NE.png",
+            "group": "_NatureFlower",
+            "label": "grass_large_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/grass_large_NW.png",
+            "group": "_NatureFlower",
+            "label": "grass_large_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/grass_large_SE.png",
+            "group": "_NatureFlower",
+            "label": "grass_large_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/grass_large_SW.png",
+            "group": "_NatureFlower",
+            "label": "grass_large_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/grass_leafs_NE.png",
+            "group": "_NatureFlower",
+            "label": "grass_leafs_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/grass_leafs_NW.png",
+            "group": "_NatureFlower",
+            "label": "grass_leafs_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/grass_leafs_SE.png",
+            "group": "_NatureFlower",
+            "label": "grass_leafs_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/grass_leafs_SW.png",
+            "group": "_NatureFlower",
+            "label": "grass_leafs_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/grass_leafsLarge_NE.png",
+            "group": "_NatureFlower",
+            "label": "grass_leafsLarge_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/grass_leafsLarge_NW.png",
+            "group": "_NatureFlower",
+            "label": "grass_leafsLarge_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/grass_leafsLarge_SE.png",
+            "group": "_NatureFlower",
+            "label": "grass_leafsLarge_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/grass_leafsLarge_SW.png",
+            "group": "_NatureFlower",
+            "label": "grass_leafsLarge_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/grass_NE.png",
+            "group": "_NatureFlower",
+            "label": "grass_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/grass_NW.png",
+            "group": "_NatureFlower",
+            "label": "grass_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/grass_SE.png",
+            "group": "_NatureFlower",
+            "label": "grass_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/grass_SW.png",
+            "group": "_NatureFlower",
+            "label": "grass_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/lily_large_NE.png",
+            "group": "_NatureFlower",
+            "label": "lily_large_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/lily_large_NW.png",
+            "group": "_NatureFlower",
+            "label": "lily_large_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/lily_large_SE.png",
+            "group": "_NatureFlower",
+            "label": "lily_large_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/lily_large_SW.png",
+            "group": "_NatureFlower",
+            "label": "lily_large_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/lily_small_NE.png",
+            "group": "_NatureFlower",
+            "label": "lily_small_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/lily_small_NW.png",
+            "group": "_NatureFlower",
+            "label": "lily_small_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/lily_small_SE.png",
+            "group": "_NatureFlower",
+            "label": "lily_small_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/lily_small_SW.png",
+            "group": "_NatureFlower",
+            "label": "lily_small_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_red_NE.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_red_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_red_NW.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_red_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_red_SE.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_red_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_red_SW.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_red_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_redGroup_NE.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_redGroup_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_redGroup_NW.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_redGroup_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_redGroup_SE.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_redGroup_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_redGroup_SW.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_redGroup_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_redTall_NE.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_redTall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_redTall_NW.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_redTall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_redTall_SE.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_redTall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_redTall_SW.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_redTall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_tan_NE.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_tan_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_tan_NW.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_tan_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_tan_SE.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_tan_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_tan_SW.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_tan_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_tanGroup_NE.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_tanGroup_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_tanGroup_NW.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_tanGroup_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_tanGroup_SE.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_tanGroup_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_tanGroup_SW.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_tanGroup_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_tanTall_NE.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_tanTall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_tanTall_NW.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_tanTall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_tanTall_SE.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_tanTall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/mushroom_tanTall_SW.png",
+            "group": "_NatureFlower",
+            "label": "mushroom_tanTall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bush_NE.png",
+            "group": "_NatureFlower",
+            "label": "plant_bush_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bush_NW.png",
+            "group": "_NatureFlower",
+            "label": "plant_bush_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bush_SE.png",
+            "group": "_NatureFlower",
+            "label": "plant_bush_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bush_SW.png",
+            "group": "_NatureFlower",
+            "label": "plant_bush_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bushDetailed_NE.png",
+            "group": "_NatureFlower",
+            "label": "plant_bushDetailed_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bushDetailed_NW.png",
+            "group": "_NatureFlower",
+            "label": "plant_bushDetailed_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bushDetailed_SE.png",
+            "group": "_NatureFlower",
+            "label": "plant_bushDetailed_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bushDetailed_SW.png",
+            "group": "_NatureFlower",
+            "label": "plant_bushDetailed_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bushLarge_NE.png",
+            "group": "_NatureFlower",
+            "label": "plant_bushLarge_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bushLarge_NW.png",
+            "group": "_NatureFlower",
+            "label": "plant_bushLarge_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bushLarge_SE.png",
+            "group": "_NatureFlower",
+            "label": "plant_bushLarge_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bushLarge_SW.png",
+            "group": "_NatureFlower",
+            "label": "plant_bushLarge_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bushLargeTriangle_NE.png",
+            "group": "_NatureFlower",
+            "label": "plant_bushLargeTriangle_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bushLargeTriangle_NW.png",
+            "group": "_NatureFlower",
+            "label": "plant_bushLargeTriangle_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bushLargeTriangle_SE.png",
+            "group": "_NatureFlower",
+            "label": "plant_bushLargeTriangle_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bushLargeTriangle_SW.png",
+            "group": "_NatureFlower",
+            "label": "plant_bushLargeTriangle_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bushSmall_NE.png",
+            "group": "_NatureFlower",
+            "label": "plant_bushSmall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bushSmall_NW.png",
+            "group": "_NatureFlower",
+            "label": "plant_bushSmall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bushSmall_SE.png",
+            "group": "_NatureFlower",
+            "label": "plant_bushSmall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bushSmall_SW.png",
+            "group": "_NatureFlower",
+            "label": "plant_bushSmall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bushTriangle_NE.png",
+            "group": "_NatureFlower",
+            "label": "plant_bushTriangle_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bushTriangle_NW.png",
+            "group": "_NatureFlower",
+            "label": "plant_bushTriangle_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bushTriangle_SE.png",
+            "group": "_NatureFlower",
+            "label": "plant_bushTriangle_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_bushTriangle_SW.png",
+            "group": "_NatureFlower",
+            "label": "plant_bushTriangle_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_flatShort_NE.png",
+            "group": "_NatureFlower",
+            "label": "plant_flatShort_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_flatShort_NW.png",
+            "group": "_NatureFlower",
+            "label": "plant_flatShort_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_flatShort_SE.png",
+            "group": "_NatureFlower",
+            "label": "plant_flatShort_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_flatShort_SW.png",
+            "group": "_NatureFlower",
+            "label": "plant_flatShort_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_flatTall_NE.png",
+            "group": "_NatureFlower",
+            "label": "plant_flatTall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_flatTall_NW.png",
+            "group": "_NatureFlower",
+            "label": "plant_flatTall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_flatTall_SE.png",
+            "group": "_NatureFlower",
+            "label": "plant_flatTall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureFlower/plant_flatTall_SW.png",
+            "group": "_NatureFlower",
+            "label": "plant_flatTall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/crater_NE.png",
+            "group": "_NatureRock",
+            "label": "crater_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/crater_NW.png",
+            "group": "_NatureRock",
+            "label": "crater_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/crater_SE.png",
+            "group": "_NatureRock",
+            "label": "crater_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/crater_SW.png",
+            "group": "_NatureRock",
+            "label": "crater_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/craterLarge_NE.png",
+            "group": "_NatureRock",
+            "label": "craterLarge_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/craterLarge_NW.png",
+            "group": "_NatureRock",
+            "label": "craterLarge_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/craterLarge_SE.png",
+            "group": "_NatureRock",
+            "label": "craterLarge_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/craterLarge_SW.png",
+            "group": "_NatureRock",
+            "label": "craterLarge_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/debris_NE.png",
+            "group": "_NatureRock",
+            "label": "debris_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/debris_NW.png",
+            "group": "_NatureRock",
+            "label": "debris_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/debris_SE.png",
+            "group": "_NatureRock",
+            "label": "debris_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/debris_SW.png",
+            "group": "_NatureRock",
+            "label": "debris_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/debrisWood_NE.png",
+            "group": "_NatureRock",
+            "label": "debrisWood_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/debrisWood_NW.png",
+            "group": "_NatureRock",
+            "label": "debrisWood_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/debrisWood_SE.png",
+            "group": "_NatureRock",
+            "label": "debrisWood_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/debrisWood_SW.png",
+            "group": "_NatureRock",
+            "label": "debrisWood_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/meteor_detailed_NE.png",
+            "group": "_NatureRock",
+            "label": "meteor_detailed_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/meteor_detailed_NW.png",
+            "group": "_NatureRock",
+            "label": "meteor_detailed_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/meteor_detailed_SE.png",
+            "group": "_NatureRock",
+            "label": "meteor_detailed_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/meteor_detailed_SW.png",
+            "group": "_NatureRock",
+            "label": "meteor_detailed_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/meteor_half_NE.png",
+            "group": "_NatureRock",
+            "label": "meteor_half_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/meteor_half_NW.png",
+            "group": "_NatureRock",
+            "label": "meteor_half_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/meteor_half_SE.png",
+            "group": "_NatureRock",
+            "label": "meteor_half_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/meteor_half_SW.png",
+            "group": "_NatureRock",
+            "label": "meteor_half_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/meteor_NE.png",
+            "group": "_NatureRock",
+            "label": "meteor_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/meteor_NW.png",
+            "group": "_NatureRock",
+            "label": "meteor_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/meteor_SE.png",
+            "group": "_NatureRock",
+            "label": "meteor_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/meteor_SW.png",
+            "group": "_NatureRock",
+            "label": "meteor_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/platform_beach_NE.png",
+            "group": "_NatureRock",
+            "label": "platform_beach_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/platform_beach_NW.png",
+            "group": "_NatureRock",
+            "label": "platform_beach_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/platform_beach_SE.png",
+            "group": "_NatureRock",
+            "label": "platform_beach_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/platform_beach_SW.png",
+            "group": "_NatureRock",
+            "label": "platform_beach_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/platform_grass_NE.png",
+            "group": "_NatureRock",
+            "label": "platform_grass_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/platform_grass_NW.png",
+            "group": "_NatureRock",
+            "label": "platform_grass_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/platform_grass_SE.png",
+            "group": "_NatureRock",
+            "label": "platform_grass_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/platform_grass_SW.png",
+            "group": "_NatureRock",
+            "label": "platform_grass_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/platform_stone_NE.png",
+            "group": "_NatureRock",
+            "label": "platform_stone_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/platform_stone_NW.png",
+            "group": "_NatureRock",
+            "label": "platform_stone_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/platform_stone_SE.png",
+            "group": "_NatureRock",
+            "label": "platform_stone_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/platform_stone_SW.png",
+            "group": "_NatureRock",
+            "label": "platform_stone_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_crystals_NE.png",
+            "group": "_NatureRock",
+            "label": "rock_crystals_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_crystals_NW.png",
+            "group": "_NatureRock",
+            "label": "rock_crystals_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_crystals_SE.png",
+            "group": "_NatureRock",
+            "label": "rock_crystals_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_crystals_SW.png",
+            "group": "_NatureRock",
+            "label": "rock_crystals_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_crystalsLargeA_NE.png",
+            "group": "_NatureRock",
+            "label": "rock_crystalsLargeA_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_crystalsLargeA_NW.png",
+            "group": "_NatureRock",
+            "label": "rock_crystalsLargeA_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_crystalsLargeA_SE.png",
+            "group": "_NatureRock",
+            "label": "rock_crystalsLargeA_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_crystalsLargeA_SW.png",
+            "group": "_NatureRock",
+            "label": "rock_crystalsLargeA_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_crystalsLargeB_NE.png",
+            "group": "_NatureRock",
+            "label": "rock_crystalsLargeB_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_crystalsLargeB_NW.png",
+            "group": "_NatureRock",
+            "label": "rock_crystalsLargeB_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_crystalsLargeB_SE.png",
+            "group": "_NatureRock",
+            "label": "rock_crystalsLargeB_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_crystalsLargeB_SW.png",
+            "group": "_NatureRock",
+            "label": "rock_crystalsLargeB_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_largeA_NE.png",
+            "group": "_NatureRock",
+            "label": "rock_largeA_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_largeA_NW.png",
+            "group": "_NatureRock",
+            "label": "rock_largeA_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_largeA_SE.png",
+            "group": "_NatureRock",
+            "label": "rock_largeA_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_largeA_SW.png",
+            "group": "_NatureRock",
+            "label": "rock_largeA_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_largeB_NE.png",
+            "group": "_NatureRock",
+            "label": "rock_largeB_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_largeB_NW.png",
+            "group": "_NatureRock",
+            "label": "rock_largeB_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_largeB_SE.png",
+            "group": "_NatureRock",
+            "label": "rock_largeB_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_largeB_SW.png",
+            "group": "_NatureRock",
+            "label": "rock_largeB_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_NE.png",
+            "group": "_NatureRock",
+            "label": "rock_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_NW.png",
+            "group": "_NatureRock",
+            "label": "rock_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_SE.png",
+            "group": "_NatureRock",
+            "label": "rock_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rock_SW.png",
+            "group": "_NatureRock",
+            "label": "rock_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rockLarge_E.png",
+            "group": "_NatureRock",
+            "label": "rockLarge_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rockLarge_N.png",
+            "group": "_NatureRock",
+            "label": "rockLarge_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rockLarge_S.png",
+            "group": "_NatureRock",
+            "label": "rockLarge_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rockLarge_W.png",
+            "group": "_NatureRock",
+            "label": "rockLarge_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rocks_NE.png",
+            "group": "_NatureRock",
+            "label": "rocks_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rocks_NW.png",
+            "group": "_NatureRock",
+            "label": "rocks_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rocks_SE.png",
+            "group": "_NatureRock",
+            "label": "rocks_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rocks_smallA_NE.png",
+            "group": "_NatureRock",
+            "label": "rocks_smallA_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rocks_smallA_NW.png",
+            "group": "_NatureRock",
+            "label": "rocks_smallA_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rocks_smallA_SE.png",
+            "group": "_NatureRock",
+            "label": "rocks_smallA_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rocks_smallA_SW.png",
+            "group": "_NatureRock",
+            "label": "rocks_smallA_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rocks_smallB_NE.png",
+            "group": "_NatureRock",
+            "label": "rocks_smallB_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rocks_smallB_NW.png",
+            "group": "_NatureRock",
+            "label": "rocks_smallB_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rocks_smallB_SE.png",
+            "group": "_NatureRock",
+            "label": "rocks_smallB_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rocks_smallB_SW.png",
+            "group": "_NatureRock",
+            "label": "rocks_smallB_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rocks_SW.png",
+            "group": "_NatureRock",
+            "label": "rocks_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rockSmall_E.png",
+            "group": "_NatureRock",
+            "label": "rockSmall_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rockSmall_N.png",
+            "group": "_NatureRock",
+            "label": "rockSmall_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rockSmall_S.png",
+            "group": "_NatureRock",
+            "label": "rockSmall_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rockSmall_W.png",
+            "group": "_NatureRock",
+            "label": "rockSmall_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rocksTall_NE.png",
+            "group": "_NatureRock",
+            "label": "rocksTall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rocksTall_NW.png",
+            "group": "_NatureRock",
+            "label": "rocksTall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rocksTall_SE.png",
+            "group": "_NatureRock",
+            "label": "rocksTall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rocksTall_SW.png",
+            "group": "_NatureRock",
+            "label": "rocksTall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rockWide_E.png",
+            "group": "_NatureRock",
+            "label": "rockWide_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rockWide_N.png",
+            "group": "_NatureRock",
+            "label": "rockWide_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rockWide_S.png",
+            "group": "_NatureRock",
+            "label": "rockWide_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/rockWide_W.png",
+            "group": "_NatureRock",
+            "label": "rockWide_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeA_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_largeA_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeA_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_largeA_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeA_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_largeA_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeA_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_largeA_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeB_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_largeB_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeB_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_largeB_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeB_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_largeB_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeB_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_largeB_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeC_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_largeC_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeC_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_largeC_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeC_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_largeC_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeC_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_largeC_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeD_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_largeD_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeD_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_largeD_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeD_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_largeD_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeD_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_largeD_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeE_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_largeE_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeE_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_largeE_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeE_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_largeE_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeE_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_largeE_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeF_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_largeF_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeF_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_largeF_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeF_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_largeF_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_largeF_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_largeF_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallA_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallA_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallA_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallA_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallA_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallA_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallA_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallA_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallB_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallB_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallB_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallB_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallB_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallB_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallB_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallB_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallC_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallC_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallC_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallC_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallC_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallC_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallC_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallC_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallD_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallD_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallD_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallD_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallD_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallD_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallD_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallD_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallE_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallE_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallE_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallE_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallE_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallE_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallE_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallE_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallF_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallF_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallF_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallF_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallF_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallF_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallF_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallF_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallFlatA_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallFlatA_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallFlatA_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallFlatA_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallFlatA_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallFlatA_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallFlatA_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallFlatA_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallFlatB_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallFlatB_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallFlatB_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallFlatB_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallFlatB_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallFlatB_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallFlatB_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallFlatB_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallFlatC_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallFlatC_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallFlatC_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallFlatC_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallFlatC_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallFlatC_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallFlatC_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallFlatC_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallG_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallG_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallG_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallG_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallG_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallG_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallG_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallG_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallH_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallH_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallH_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallH_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallH_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallH_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallH_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallH_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallI_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallI_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallI_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallI_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallI_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallI_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallI_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallI_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallTopA_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallTopA_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallTopA_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallTopA_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallTopA_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallTopA_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallTopA_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallTopA_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallTopB_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallTopB_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallTopB_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallTopB_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallTopB_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_smallTopB_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_smallTopB_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_smallTopB_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallA_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_tallA_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallA_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_tallA_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallA_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_tallA_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallA_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_tallA_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallB_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_tallB_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallB_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_tallB_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallB_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_tallB_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallB_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_tallB_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallC_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_tallC_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallC_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_tallC_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallC_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_tallC_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallC_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_tallC_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallD_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_tallD_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallD_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_tallD_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallD_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_tallD_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallD_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_tallD_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallE_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_tallE_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallE_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_tallE_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallE_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_tallE_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallE_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_tallE_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallF_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_tallF_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallF_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_tallF_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallF_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_tallF_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallF_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_tallF_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallG_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_tallG_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallG_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_tallG_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallG_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_tallG_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallG_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_tallG_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallH_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_tallH_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallH_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_tallH_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallH_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_tallH_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallH_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_tallH_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallI_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_tallI_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallI_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_tallI_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallI_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_tallI_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallI_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_tallI_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallJ_NE.png",
+            "group": "_NatureRock",
+            "label": "stone_tallJ_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallJ_NW.png",
+            "group": "_NatureRock",
+            "label": "stone_tallJ_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallJ_SE.png",
+            "group": "_NatureRock",
+            "label": "stone_tallJ_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureRock/stone_tallJ_SW.png",
+            "group": "_NatureRock",
+            "label": "stone_tallJ_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/cactus_short_NE.png",
+            "group": "_NatureTree",
+            "label": "cactus_short_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/cactus_short_NW.png",
+            "group": "_NatureTree",
+            "label": "cactus_short_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/cactus_short_SE.png",
+            "group": "_NatureTree",
+            "label": "cactus_short_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/cactus_short_SW.png",
+            "group": "_NatureTree",
+            "label": "cactus_short_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/cactus_tall_NE.png",
+            "group": "_NatureTree",
+            "label": "cactus_tall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/cactus_tall_NW.png",
+            "group": "_NatureTree",
+            "label": "cactus_tall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/cactus_tall_SE.png",
+            "group": "_NatureTree",
+            "label": "cactus_tall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/cactus_tall_SW.png",
+            "group": "_NatureTree",
+            "label": "cactus_tall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_blocks_dark_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_blocks_dark_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_blocks_dark_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_blocks_dark_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_blocks_dark_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_blocks_dark_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_blocks_dark_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_blocks_dark_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_blocks_fall_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_blocks_fall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_blocks_fall_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_blocks_fall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_blocks_fall_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_blocks_fall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_blocks_fall_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_blocks_fall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_blocks_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_blocks_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_blocks_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_blocks_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_blocks_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_blocks_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_blocks_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_blocks_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_cone_dark_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_cone_dark_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_cone_dark_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_cone_dark_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_cone_dark_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_cone_dark_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_cone_dark_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_cone_dark_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_cone_fall_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_cone_fall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_cone_fall_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_cone_fall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_cone_fall_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_cone_fall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_cone_fall_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_cone_fall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_cone_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_cone_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_cone_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_cone_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_cone_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_cone_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_cone_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_cone_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_default_dark_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_default_dark_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_default_dark_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_default_dark_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_default_dark_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_default_dark_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_default_dark_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_default_dark_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_default_fall_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_default_fall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_default_fall_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_default_fall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_default_fall_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_default_fall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_default_fall_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_default_fall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_default_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_default_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_default_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_default_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_default_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_default_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_default_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_default_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_detailed_dark_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_detailed_dark_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_detailed_dark_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_detailed_dark_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_detailed_dark_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_detailed_dark_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_detailed_dark_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_detailed_dark_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_detailed_fall_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_detailed_fall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_detailed_fall_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_detailed_fall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_detailed_fall_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_detailed_fall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_detailed_fall_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_detailed_fall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_detailed_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_detailed_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_detailed_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_detailed_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_detailed_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_detailed_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_detailed_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_detailed_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_fat_darkh_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_fat_darkh_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_fat_darkh_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_fat_darkh_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_fat_darkh_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_fat_darkh_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_fat_darkh_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_fat_darkh_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_fat_fall_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_fat_fall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_fat_fall_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_fat_fall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_fat_fall_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_fat_fall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_fat_fall_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_fat_fall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_fat_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_fat_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_fat_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_fat_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_fat_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_fat_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_fat_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_fat_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_oak_dark_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_oak_dark_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_oak_dark_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_oak_dark_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_oak_dark_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_oak_dark_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_oak_dark_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_oak_dark_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_oak_fall_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_oak_fall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_oak_fall_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_oak_fall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_oak_fall_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_oak_fall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_oak_fall_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_oak_fall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_oak_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_oak_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_oak_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_oak_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_oak_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_oak_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_oak_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_oak_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palm_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_palm_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palm_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_palm_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palm_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_palm_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palm_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_palm_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palmBend_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_palmBend_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palmBend_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_palmBend_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palmBend_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_palmBend_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palmBend_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_palmBend_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palmDetailedShort_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_palmDetailedShort_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palmDetailedShort_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_palmDetailedShort_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palmDetailedShort_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_palmDetailedShort_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palmDetailedShort_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_palmDetailedShort_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palmDetailedTall_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_palmDetailedTall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palmDetailedTall_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_palmDetailedTall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palmDetailedTall_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_palmDetailedTall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palmDetailedTall_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_palmDetailedTall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palmShort_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_palmShort_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palmShort_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_palmShort_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palmShort_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_palmShort_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palmShort_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_palmShort_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palmTall_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_palmTall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palmTall_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_palmTall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palmTall_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_palmTall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_palmTall_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_palmTall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineDefaultA_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineDefaultA_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineDefaultA_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineDefaultA_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineDefaultA_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineDefaultA_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineDefaultA_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineDefaultA_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineGroundA_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineGroundA_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineGroundA_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineGroundA_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineGroundA_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineGroundA_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineGroundA_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineGroundA_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineRoundA_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineRoundA_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineRoundA_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineRoundA_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineRoundA_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineRoundA_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineRoundA_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineRoundA_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineRoundB_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineRoundB_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineRoundB_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineRoundB_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineRoundB_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineRoundB_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineRoundB_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineRoundB_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineRoundC_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineRoundC_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineRoundC_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineRoundC_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineRoundC_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineRoundC_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineRoundC_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineRoundC_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineRoundD_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineRoundD_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineRoundD_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineRoundD_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineRoundD_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineRoundD_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineRoundD_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineRoundD_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineRoundE_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineRoundE_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineRoundE_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineRoundE_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineRoundE_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineRoundE_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineRoundE_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineRoundE_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineSmallA_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineSmallA_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineSmallA_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineSmallA_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineSmallA_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineSmallA_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineSmallA_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineSmallA_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineSmallB_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineSmallB_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineSmallB_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineSmallB_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineSmallB_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineSmallB_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineSmallB_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineSmallB_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineSmallD_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineSmallD_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineSmallD_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineSmallD_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineSmallD_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineSmallD_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineSmallD_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineSmallD_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineTallA_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineTallA_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineTallA_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineTallA_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineTallA_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineTallA_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineTallA_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineTallA_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineTallB_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineTallB_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineTallB_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineTallB_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineTallB_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineTallB_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineTallB_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineTallB_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineTallC_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineTallC_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineTallC_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineTallC_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineTallC_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineTallC_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineTallC_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineTallC_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineTallD_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineTallD_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineTallD_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineTallD_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineTallD_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_pineTallD_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_pineTallD_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_pineTallD_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_plateau_dark_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_plateau_dark_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_plateau_dark_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_plateau_dark_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_plateau_dark_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_plateau_dark_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_plateau_dark_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_plateau_dark_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_plateau_fall_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_plateau_fall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_plateau_fall_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_plateau_fall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_plateau_fall_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_plateau_fall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_plateau_fall_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_plateau_fall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_plateau_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_plateau_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_plateau_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_plateau_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_plateau_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_plateau_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_plateau_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_plateau_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_simple_dark_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_simple_dark_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_simple_dark_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_simple_dark_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_simple_dark_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_simple_dark_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_simple_dark_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_simple_dark_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_simple_fall_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_simple_fall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_simple_fall_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_simple_fall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_simple_fall_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_simple_fall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_simple_fall_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_simple_fall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_simple_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_simple_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_simple_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_simple_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_simple_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_simple_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_simple_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_simple_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_small_dark_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_small_dark_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_small_dark_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_small_dark_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_small_dark_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_small_dark_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_small_dark_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_small_dark_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_small_fall_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_small_fall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_small_fall_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_small_fall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_small_fall_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_small_fall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_small_fall_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_small_fall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_small_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_small_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_small_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_small_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_small_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_small_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_small_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_small_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_tall_dark_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_tall_dark_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_tall_dark_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_tall_dark_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_tall_dark_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_tall_dark_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_tall_dark_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_tall_dark_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_tall_fall_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_tall_fall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_tall_fall_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_tall_fall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_tall_fall_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_tall_fall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_tall_fall_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_tall_fall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_tall_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_tall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_tall_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_tall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_tall_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_tall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_tall_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_tall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_thin_dark_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_thin_dark_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_thin_dark_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_thin_dark_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_thin_dark_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_thin_dark_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_thin_dark_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_thin_dark_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_thin_fall_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_thin_fall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_thin_fall_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_thin_fall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_thin_fall_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_thin_fall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_thin_fall_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_thin_fall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_thin_NE.png",
+            "group": "_NatureTree",
+            "label": "tree_thin_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_thin_NW.png",
+            "group": "_NatureTree",
+            "label": "tree_thin_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_thin_SE.png",
+            "group": "_NatureTree",
+            "label": "tree_thin_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_NatureTree/tree_thin_SW.png",
+            "group": "_NatureTree",
+            "label": "tree_thin_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roof_E.png",
+            "group": "_Town1",
+            "label": "roof_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roof_N.png",
+            "group": "_Town1",
+            "label": "roof_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roof_S.png",
+            "group": "_Town1",
+            "label": "roof_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roof_W.png",
+            "group": "_Town1",
+            "label": "roof_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofCorner_E.png",
+            "group": "_Town1",
+            "label": "roofCorner_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofCorner_N.png",
+            "group": "_Town1",
+            "label": "roofCorner_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofCorner_S.png",
+            "group": "_Town1",
+            "label": "roofCorner_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofCorner_W.png",
+            "group": "_Town1",
+            "label": "roofCorner_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofCornerInner_E.png",
+            "group": "_Town1",
+            "label": "roofCornerInner_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofCornerInner_N.png",
+            "group": "_Town1",
+            "label": "roofCornerInner_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofCornerInner_S.png",
+            "group": "_Town1",
+            "label": "roofCornerInner_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofCornerInner_W.png",
+            "group": "_Town1",
+            "label": "roofCornerInner_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofCornerRound_E.png",
+            "group": "_Town1",
+            "label": "roofCornerRound_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofCornerRound_N.png",
+            "group": "_Town1",
+            "label": "roofCornerRound_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofCornerRound_S.png",
+            "group": "_Town1",
+            "label": "roofCornerRound_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofCornerRound_W.png",
+            "group": "_Town1",
+            "label": "roofCornerRound_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofFlat_E.png",
+            "group": "_Town1",
+            "label": "roofFlat_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofFlat_N.png",
+            "group": "_Town1",
+            "label": "roofFlat_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofFlat_S.png",
+            "group": "_Town1",
+            "label": "roofFlat_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofFlat_W.png",
+            "group": "_Town1",
+            "label": "roofFlat_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofGable_E.png",
+            "group": "_Town1",
+            "label": "roofGable_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofGable_N.png",
+            "group": "_Town1",
+            "label": "roofGable_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofGable_S.png",
+            "group": "_Town1",
+            "label": "roofGable_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofGable_W.png",
+            "group": "_Town1",
+            "label": "roofGable_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofGableDetail_E.png",
+            "group": "_Town1",
+            "label": "roofGableDetail_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofGableDetail_N.png",
+            "group": "_Town1",
+            "label": "roofGableDetail_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofGableDetail_S.png",
+            "group": "_Town1",
+            "label": "roofGableDetail_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofGableDetail_W.png",
+            "group": "_Town1",
+            "label": "roofGableDetail_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofGableEnd_E.png",
+            "group": "_Town1",
+            "label": "roofGableEnd_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofGableEnd_N.png",
+            "group": "_Town1",
+            "label": "roofGableEnd_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofGableEnd_S.png",
+            "group": "_Town1",
+            "label": "roofGableEnd_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofGableEnd_W.png",
+            "group": "_Town1",
+            "label": "roofGableEnd_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofGableTop_E.png",
+            "group": "_Town1",
+            "label": "roofGableTop_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofGableTop_N.png",
+            "group": "_Town1",
+            "label": "roofGableTop_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofGableTop_S.png",
+            "group": "_Town1",
+            "label": "roofGableTop_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofGableTop_W.png",
+            "group": "_Town1",
+            "label": "roofGableTop_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofLeft_E.png",
+            "group": "_Town1",
+            "label": "roofLeft_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofLeft_N.png",
+            "group": "_Town1",
+            "label": "roofLeft_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofLeft_S.png",
+            "group": "_Town1",
+            "label": "roofLeft_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofLeft_W.png",
+            "group": "_Town1",
+            "label": "roofLeft_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofPoint_E.png",
+            "group": "_Town1",
+            "label": "roofPoint_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofPoint_N.png",
+            "group": "_Town1",
+            "label": "roofPoint_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofPoint_S.png",
+            "group": "_Town1",
+            "label": "roofPoint_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofPoint_W.png",
+            "group": "_Town1",
+            "label": "roofPoint_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofRight_E.png",
+            "group": "_Town1",
+            "label": "roofRight_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofRight_N.png",
+            "group": "_Town1",
+            "label": "roofRight_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofRight_S.png",
+            "group": "_Town1",
+            "label": "roofRight_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofRight_W.png",
+            "group": "_Town1",
+            "label": "roofRight_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofWindow_E.png",
+            "group": "_Town1",
+            "label": "roofWindow_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofWindow_N.png",
+            "group": "_Town1",
+            "label": "roofWindow_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofWindow_S.png",
+            "group": "_Town1",
+            "label": "roofWindow_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/roofWindow_W.png",
+            "group": "_Town1",
+            "label": "roofWindow_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wall_E.png",
+            "group": "_Town1",
+            "label": "wall_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wall_N.png",
+            "group": "_Town1",
+            "label": "wall_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wall_S.png",
+            "group": "_Town1",
+            "label": "wall_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wall_W.png",
+            "group": "_Town1",
+            "label": "wall_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallArch_E.png",
+            "group": "_Town1",
+            "label": "wallArch_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallArch_N.png",
+            "group": "_Town1",
+            "label": "wallArch_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallArch_S.png",
+            "group": "_Town1",
+            "label": "wallArch_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallArch_W.png",
+            "group": "_Town1",
+            "label": "wallArch_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallArchTop_E.png",
+            "group": "_Town1",
+            "label": "wallArchTop_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallArchTop_N.png",
+            "group": "_Town1",
+            "label": "wallArchTop_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallArchTop_S.png",
+            "group": "_Town1",
+            "label": "wallArchTop_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallArchTop_W.png",
+            "group": "_Town1",
+            "label": "wallArchTop_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallArchTopDetail_E.png",
+            "group": "_Town1",
+            "label": "wallArchTopDetail_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallArchTopDetail_N.png",
+            "group": "_Town1",
+            "label": "wallArchTopDetail_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallArchTopDetail_S.png",
+            "group": "_Town1",
+            "label": "wallArchTopDetail_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallArchTopDetail_W.png",
+            "group": "_Town1",
+            "label": "wallArchTopDetail_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallBlock_E.png",
+            "group": "_Town1",
+            "label": "wallBlock_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallBlock_N.png",
+            "group": "_Town1",
+            "label": "wallBlock_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallBlock_S.png",
+            "group": "_Town1",
+            "label": "wallBlock_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallBlock_W.png",
+            "group": "_Town1",
+            "label": "wallBlock_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallBlockHalf_E.png",
+            "group": "_Town1",
+            "label": "wallBlockHalf_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallBlockHalf_N.png",
+            "group": "_Town1",
+            "label": "wallBlockHalf_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallBlockHalf_S.png",
+            "group": "_Town1",
+            "label": "wallBlockHalf_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallBlockHalf_W.png",
+            "group": "_Town1",
+            "label": "wallBlockHalf_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallBroken_E.png",
+            "group": "_Town1",
+            "label": "wallBroken_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallBroken_N.png",
+            "group": "_Town1",
+            "label": "wallBroken_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallBroken_S.png",
+            "group": "_Town1",
+            "label": "wallBroken_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallBroken_W.png",
+            "group": "_Town1",
+            "label": "wallBroken_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCorner_E.png",
+            "group": "_Town1",
+            "label": "wallCorner_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCorner_N.png",
+            "group": "_Town1",
+            "label": "wallCorner_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCorner_S.png",
+            "group": "_Town1",
+            "label": "wallCorner_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCorner_W.png",
+            "group": "_Town1",
+            "label": "wallCorner_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCornerDetail_E.png",
+            "group": "_Town1",
+            "label": "wallCornerDetail_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCornerDetail_N.png",
+            "group": "_Town1",
+            "label": "wallCornerDetail_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCornerDetail_S.png",
+            "group": "_Town1",
+            "label": "wallCornerDetail_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCornerDetail_W.png",
+            "group": "_Town1",
+            "label": "wallCornerDetail_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCornerDiagonal_E.png",
+            "group": "_Town1",
+            "label": "wallCornerDiagonal_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCornerDiagonal_N.png",
+            "group": "_Town1",
+            "label": "wallCornerDiagonal_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCornerDiagonal_S.png",
+            "group": "_Town1",
+            "label": "wallCornerDiagonal_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCornerDiagonal_W.png",
+            "group": "_Town1",
+            "label": "wallCornerDiagonal_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCornerDiagonalHalf_E.png",
+            "group": "_Town1",
+            "label": "wallCornerDiagonalHalf_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCornerDiagonalHalf_N.png",
+            "group": "_Town1",
+            "label": "wallCornerDiagonalHalf_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCornerDiagonalHalf_S.png",
+            "group": "_Town1",
+            "label": "wallCornerDiagonalHalf_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCornerDiagonalHalf_W.png",
+            "group": "_Town1",
+            "label": "wallCornerDiagonalHalf_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCornerEdge_E.png",
+            "group": "_Town1",
+            "label": "wallCornerEdge_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCornerEdge_N.png",
+            "group": "_Town1",
+            "label": "wallCornerEdge_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCornerEdge_S.png",
+            "group": "_Town1",
+            "label": "wallCornerEdge_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCornerEdge_W.png",
+            "group": "_Town1",
+            "label": "wallCornerEdge_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCurved_E.png",
+            "group": "_Town1",
+            "label": "wallCurved_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCurved_N.png",
+            "group": "_Town1",
+            "label": "wallCurved_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCurved_S.png",
+            "group": "_Town1",
+            "label": "wallCurved_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallCurved_W.png",
+            "group": "_Town1",
+            "label": "wallCurved_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDetailCross_E.png",
+            "group": "_Town1",
+            "label": "wallDetailCross_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDetailCross_N.png",
+            "group": "_Town1",
+            "label": "wallDetailCross_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDetailCross_S.png",
+            "group": "_Town1",
+            "label": "wallDetailCross_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDetailCross_W.png",
+            "group": "_Town1",
+            "label": "wallDetailCross_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDetailDiagonal_E.png",
+            "group": "_Town1",
+            "label": "wallDetailDiagonal_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDetailDiagonal_N.png",
+            "group": "_Town1",
+            "label": "wallDetailDiagonal_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDetailDiagonal_S.png",
+            "group": "_Town1",
+            "label": "wallDetailDiagonal_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDetailDiagonal_W.png",
+            "group": "_Town1",
+            "label": "wallDetailDiagonal_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDetailHorizontal_E.png",
+            "group": "_Town1",
+            "label": "wallDetailHorizontal_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDetailHorizontal_N.png",
+            "group": "_Town1",
+            "label": "wallDetailHorizontal_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDetailHorizontal_S.png",
+            "group": "_Town1",
+            "label": "wallDetailHorizontal_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDetailHorizontal_W.png",
+            "group": "_Town1",
+            "label": "wallDetailHorizontal_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDiagonal_E.png",
+            "group": "_Town1",
+            "label": "wallDiagonal_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDiagonal_N.png",
+            "group": "_Town1",
+            "label": "wallDiagonal_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDiagonal_S.png",
+            "group": "_Town1",
+            "label": "wallDiagonal_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDiagonal_W.png",
+            "group": "_Town1",
+            "label": "wallDiagonal_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoor_E.png",
+            "group": "_Town1",
+            "label": "wallDoor_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoor_N.png",
+            "group": "_Town1",
+            "label": "wallDoor_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoor_S.png",
+            "group": "_Town1",
+            "label": "wallDoor_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoor_W.png",
+            "group": "_Town1",
+            "label": "wallDoor_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoorwayBase_E.png",
+            "group": "_Town1",
+            "label": "wallDoorwayBase_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoorwayBase_N.png",
+            "group": "_Town1",
+            "label": "wallDoorwayBase_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoorwayBase_S.png",
+            "group": "_Town1",
+            "label": "wallDoorwayBase_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoorwayBase_W.png",
+            "group": "_Town1",
+            "label": "wallDoorwayBase_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoorwayRound_E.png",
+            "group": "_Town1",
+            "label": "wallDoorwayRound_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoorwayRound_N.png",
+            "group": "_Town1",
+            "label": "wallDoorwayRound_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoorwayRound_S.png",
+            "group": "_Town1",
+            "label": "wallDoorwayRound_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoorwayRound_W.png",
+            "group": "_Town1",
+            "label": "wallDoorwayRound_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoorwaySquare_E.png",
+            "group": "_Town1",
+            "label": "wallDoorwaySquare_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoorwaySquare_N.png",
+            "group": "_Town1",
+            "label": "wallDoorwaySquare_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoorwaySquare_S.png",
+            "group": "_Town1",
+            "label": "wallDoorwaySquare_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoorwaySquare_W.png",
+            "group": "_Town1",
+            "label": "wallDoorwaySquare_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoorwaySquareWide_E.png",
+            "group": "_Town1",
+            "label": "wallDoorwaySquareWide_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoorwaySquareWide_N.png",
+            "group": "_Town1",
+            "label": "wallDoorwaySquareWide_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoorwaySquareWide_S.png",
+            "group": "_Town1",
+            "label": "wallDoorwaySquareWide_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoorwaySquareWide_W.png",
+            "group": "_Town1",
+            "label": "wallDoorwaySquareWide_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoorwaySquareWideCurved_E.png",
+            "group": "_Town1",
+            "label": "wallDoorwaySquareWideCurved_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoorwaySquareWideCurved_N.png",
+            "group": "_Town1",
+            "label": "wallDoorwaySquareWideCurved_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoorwaySquareWideCurved_S.png",
+            "group": "_Town1",
+            "label": "wallDoorwaySquareWideCurved_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallDoorwaySquareWideCurved_W.png",
+            "group": "_Town1",
+            "label": "wallDoorwaySquareWideCurved_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallHalf_E.png",
+            "group": "_Town1",
+            "label": "wallHalf_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallHalf_N.png",
+            "group": "_Town1",
+            "label": "wallHalf_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallHalf_S.png",
+            "group": "_Town1",
+            "label": "wallHalf_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallHalf_W.png",
+            "group": "_Town1",
+            "label": "wallHalf_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallRounded_E.png",
+            "group": "_Town1",
+            "label": "wallRounded_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallRounded_N.png",
+            "group": "_Town1",
+            "label": "wallRounded_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallRounded_S.png",
+            "group": "_Town1",
+            "label": "wallRounded_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallRounded_W.png",
+            "group": "_Town1",
+            "label": "wallRounded_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallSide_E.png",
+            "group": "_Town1",
+            "label": "wallSide_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallSide_N.png",
+            "group": "_Town1",
+            "label": "wallSide_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallSide_S.png",
+            "group": "_Town1",
+            "label": "wallSide_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallSide_W.png",
+            "group": "_Town1",
+            "label": "wallSide_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallSlope_E.png",
+            "group": "_Town1",
+            "label": "wallSlope_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallSlope_N.png",
+            "group": "_Town1",
+            "label": "wallSlope_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallSlope_S.png",
+            "group": "_Town1",
+            "label": "wallSlope_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallSlope_W.png",
+            "group": "_Town1",
+            "label": "wallSlope_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallWindowGlass_E.png",
+            "group": "_Town1",
+            "label": "wallWindowGlass_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallWindowGlass_N.png",
+            "group": "_Town1",
+            "label": "wallWindowGlass_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallWindowGlass_S.png",
+            "group": "_Town1",
+            "label": "wallWindowGlass_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallWindowGlass_W.png",
+            "group": "_Town1",
+            "label": "wallWindowGlass_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallWindowRound_E.png",
+            "group": "_Town1",
+            "label": "wallWindowRound_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallWindowRound_N.png",
+            "group": "_Town1",
+            "label": "wallWindowRound_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallWindowRound_S.png",
+            "group": "_Town1",
+            "label": "wallWindowRound_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallWindowRound_W.png",
+            "group": "_Town1",
+            "label": "wallWindowRound_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallWindowShutters_E.png",
+            "group": "_Town1",
+            "label": "wallWindowShutters_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallWindowShutters_N.png",
+            "group": "_Town1",
+            "label": "wallWindowShutters_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallWindowShutters_S.png",
+            "group": "_Town1",
+            "label": "wallWindowShutters_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallWindowShutters_W.png",
+            "group": "_Town1",
+            "label": "wallWindowShutters_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallWindowSmall_E.png",
+            "group": "_Town1",
+            "label": "wallWindowSmall_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallWindowSmall_N.png",
+            "group": "_Town1",
+            "label": "wallWindowSmall_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallWindowSmall_S.png",
+            "group": "_Town1",
+            "label": "wallWindowSmall_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallWindowSmall_W.png",
+            "group": "_Town1",
+            "label": "wallWindowSmall_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallWindowStone_E.png",
+            "group": "_Town1",
+            "label": "wallWindowStone_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallWindowStone_N.png",
+            "group": "_Town1",
+            "label": "wallWindowStone_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallWindowStone_S.png",
+            "group": "_Town1",
+            "label": "wallWindowStone_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town1/wallWindowStone_W.png",
+            "group": "_Town1",
+            "label": "wallWindowStone_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/poles_E.png",
+            "group": "_Town2",
+            "label": "poles_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/poles_N.png",
+            "group": "_Town2",
+            "label": "poles_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/poles_S.png",
+            "group": "_Town2",
+            "label": "poles_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/poles_W.png",
+            "group": "_Town2",
+            "label": "poles_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/polesHorizontal_E.png",
+            "group": "_Town2",
+            "label": "polesHorizontal_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/polesHorizontal_N.png",
+            "group": "_Town2",
+            "label": "polesHorizontal_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/polesHorizontal_S.png",
+            "group": "_Town2",
+            "label": "polesHorizontal_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/polesHorizontal_W.png",
+            "group": "_Town2",
+            "label": "polesHorizontal_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHigh_E.png",
+            "group": "_Town2",
+            "label": "roofHigh_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHigh_N.png",
+            "group": "_Town2",
+            "label": "roofHigh_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHigh_S.png",
+            "group": "_Town2",
+            "label": "roofHigh_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHigh_W.png",
+            "group": "_Town2",
+            "label": "roofHigh_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighCorner_E.png",
+            "group": "_Town2",
+            "label": "roofHighCorner_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighCorner_N.png",
+            "group": "_Town2",
+            "label": "roofHighCorner_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighCorner_S.png",
+            "group": "_Town2",
+            "label": "roofHighCorner_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighCorner_W.png",
+            "group": "_Town2",
+            "label": "roofHighCorner_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighCornerInner_E.png",
+            "group": "_Town2",
+            "label": "roofHighCornerInner_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighCornerInner_N.png",
+            "group": "_Town2",
+            "label": "roofHighCornerInner_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighCornerInner_S.png",
+            "group": "_Town2",
+            "label": "roofHighCornerInner_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighCornerInner_W.png",
+            "group": "_Town2",
+            "label": "roofHighCornerInner_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighCornerRound_E.png",
+            "group": "_Town2",
+            "label": "roofHighCornerRound_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighCornerRound_N.png",
+            "group": "_Town2",
+            "label": "roofHighCornerRound_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighCornerRound_S.png",
+            "group": "_Town2",
+            "label": "roofHighCornerRound_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighCornerRound_W.png",
+            "group": "_Town2",
+            "label": "roofHighCornerRound_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighFlat_E.png",
+            "group": "_Town2",
+            "label": "roofHighFlat_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighFlat_N.png",
+            "group": "_Town2",
+            "label": "roofHighFlat_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighFlat_S.png",
+            "group": "_Town2",
+            "label": "roofHighFlat_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighFlat_W.png",
+            "group": "_Town2",
+            "label": "roofHighFlat_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighGable_E.png",
+            "group": "_Town2",
+            "label": "roofHighGable_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighGable_N.png",
+            "group": "_Town2",
+            "label": "roofHighGable_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighGable_S.png",
+            "group": "_Town2",
+            "label": "roofHighGable_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighGable_W.png",
+            "group": "_Town2",
+            "label": "roofHighGable_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighGableDetail_E.png",
+            "group": "_Town2",
+            "label": "roofHighGableDetail_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighGableDetail_N.png",
+            "group": "_Town2",
+            "label": "roofHighGableDetail_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighGableDetail_S.png",
+            "group": "_Town2",
+            "label": "roofHighGableDetail_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighGableDetail_W.png",
+            "group": "_Town2",
+            "label": "roofHighGableDetail_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighGableEnd_E.png",
+            "group": "_Town2",
+            "label": "roofHighGableEnd_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighGableEnd_N.png",
+            "group": "_Town2",
+            "label": "roofHighGableEnd_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighGableEnd_S.png",
+            "group": "_Town2",
+            "label": "roofHighGableEnd_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighGableEnd_W.png",
+            "group": "_Town2",
+            "label": "roofHighGableEnd_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighGableTop_E.png",
+            "group": "_Town2",
+            "label": "roofHighGableTop_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighGableTop_N.png",
+            "group": "_Town2",
+            "label": "roofHighGableTop_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighGableTop_S.png",
+            "group": "_Town2",
+            "label": "roofHighGableTop_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighGableTop_W.png",
+            "group": "_Town2",
+            "label": "roofHighGableTop_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighLeft_E.png",
+            "group": "_Town2",
+            "label": "roofHighLeft_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighLeft_N.png",
+            "group": "_Town2",
+            "label": "roofHighLeft_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighLeft_S.png",
+            "group": "_Town2",
+            "label": "roofHighLeft_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighLeft_W.png",
+            "group": "_Town2",
+            "label": "roofHighLeft_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighPoint_E.png",
+            "group": "_Town2",
+            "label": "roofHighPoint_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighPoint_N.png",
+            "group": "_Town2",
+            "label": "roofHighPoint_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighPoint_S.png",
+            "group": "_Town2",
+            "label": "roofHighPoint_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighPoint_W.png",
+            "group": "_Town2",
+            "label": "roofHighPoint_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighRight_E.png",
+            "group": "_Town2",
+            "label": "roofHighRight_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighRight_N.png",
+            "group": "_Town2",
+            "label": "roofHighRight_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighRight_S.png",
+            "group": "_Town2",
+            "label": "roofHighRight_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighRight_W.png",
+            "group": "_Town2",
+            "label": "roofHighRight_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighWindow_E.png",
+            "group": "_Town2",
+            "label": "roofHighWindow_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighWindow_N.png",
+            "group": "_Town2",
+            "label": "roofHighWindow_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighWindow_S.png",
+            "group": "_Town2",
+            "label": "roofHighWindow_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/roofHighWindow_W.png",
+            "group": "_Town2",
+            "label": "roofHighWindow_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWood_E.png",
+            "group": "_Town2",
+            "label": "wallWood_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWood_N.png",
+            "group": "_Town2",
+            "label": "wallWood_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWood_S.png",
+            "group": "_Town2",
+            "label": "wallWood_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWood_W.png",
+            "group": "_Town2",
+            "label": "wallWood_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodArch_E.png",
+            "group": "_Town2",
+            "label": "wallWoodArch_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodArch_N.png",
+            "group": "_Town2",
+            "label": "wallWoodArch_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodArch_S.png",
+            "group": "_Town2",
+            "label": "wallWoodArch_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodArch_W.png",
+            "group": "_Town2",
+            "label": "wallWoodArch_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodArchTop_E.png",
+            "group": "_Town2",
+            "label": "wallWoodArchTop_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodArchTop_N.png",
+            "group": "_Town2",
+            "label": "wallWoodArchTop_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodArchTop_S.png",
+            "group": "_Town2",
+            "label": "wallWoodArchTop_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodArchTop_W.png",
+            "group": "_Town2",
+            "label": "wallWoodArchTop_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodArchTopDetail_E.png",
+            "group": "_Town2",
+            "label": "wallWoodArchTopDetail_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodArchTopDetail_N.png",
+            "group": "_Town2",
+            "label": "wallWoodArchTopDetail_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodArchTopDetail_S.png",
+            "group": "_Town2",
+            "label": "wallWoodArchTopDetail_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodArchTopDetail_W.png",
+            "group": "_Town2",
+            "label": "wallWoodArchTopDetail_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodBlock_E.png",
+            "group": "_Town2",
+            "label": "wallWoodBlock_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodBlock_N.png",
+            "group": "_Town2",
+            "label": "wallWoodBlock_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodBlock_S.png",
+            "group": "_Town2",
+            "label": "wallWoodBlock_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodBlock_W.png",
+            "group": "_Town2",
+            "label": "wallWoodBlock_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodBlockHalf_E.png",
+            "group": "_Town2",
+            "label": "wallWoodBlockHalf_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodBlockHalf_N.png",
+            "group": "_Town2",
+            "label": "wallWoodBlockHalf_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodBlockHalf_S.png",
+            "group": "_Town2",
+            "label": "wallWoodBlockHalf_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodBlockHalf_W.png",
+            "group": "_Town2",
+            "label": "wallWoodBlockHalf_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodBroken_E.png",
+            "group": "_Town2",
+            "label": "wallWoodBroken_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodBroken_N.png",
+            "group": "_Town2",
+            "label": "wallWoodBroken_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodBroken_S.png",
+            "group": "_Town2",
+            "label": "wallWoodBroken_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodBroken_W.png",
+            "group": "_Town2",
+            "label": "wallWoodBroken_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodCorner_E.png",
+            "group": "_Town2",
+            "label": "wallWoodCorner_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodCorner_N.png",
+            "group": "_Town2",
+            "label": "wallWoodCorner_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodCorner_S.png",
+            "group": "_Town2",
+            "label": "wallWoodCorner_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodCorner_W.png",
+            "group": "_Town2",
+            "label": "wallWoodCorner_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodCornerDiagonal_E.png",
+            "group": "_Town2",
+            "label": "wallWoodCornerDiagonal_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodCornerDiagonal_N.png",
+            "group": "_Town2",
+            "label": "wallWoodCornerDiagonal_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodCornerDiagonal_S.png",
+            "group": "_Town2",
+            "label": "wallWoodCornerDiagonal_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodCornerDiagonal_W.png",
+            "group": "_Town2",
+            "label": "wallWoodCornerDiagonal_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodCornerDiagonalHalf_E.png",
+            "group": "_Town2",
+            "label": "wallWoodCornerDiagonalHalf_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodCornerDiagonalHalf_N.png",
+            "group": "_Town2",
+            "label": "wallWoodCornerDiagonalHalf_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodCornerDiagonalHalf_S.png",
+            "group": "_Town2",
+            "label": "wallWoodCornerDiagonalHalf_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodCornerDiagonalHalf_W.png",
+            "group": "_Town2",
+            "label": "wallWoodCornerDiagonalHalf_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodCornerEdge_E.png",
+            "group": "_Town2",
+            "label": "wallWoodCornerEdge_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodCornerEdge_N.png",
+            "group": "_Town2",
+            "label": "wallWoodCornerEdge_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodCornerEdge_S.png",
+            "group": "_Town2",
+            "label": "wallWoodCornerEdge_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodCornerEdge_W.png",
+            "group": "_Town2",
+            "label": "wallWoodCornerEdge_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodCurved_E.png",
+            "group": "_Town2",
+            "label": "wallWoodCurved_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodCurved_N.png",
+            "group": "_Town2",
+            "label": "wallWoodCurved_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodCurved_S.png",
+            "group": "_Town2",
+            "label": "wallWoodCurved_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodCurved_W.png",
+            "group": "_Town2",
+            "label": "wallWoodCurved_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDetailCross_E.png",
+            "group": "_Town2",
+            "label": "wallWoodDetailCross_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDetailCross_N.png",
+            "group": "_Town2",
+            "label": "wallWoodDetailCross_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDetailCross_S.png",
+            "group": "_Town2",
+            "label": "wallWoodDetailCross_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDetailCross_W.png",
+            "group": "_Town2",
+            "label": "wallWoodDetailCross_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDetailDiagonal_E.png",
+            "group": "_Town2",
+            "label": "wallWoodDetailDiagonal_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDetailDiagonal_N.png",
+            "group": "_Town2",
+            "label": "wallWoodDetailDiagonal_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDetailDiagonal_S.png",
+            "group": "_Town2",
+            "label": "wallWoodDetailDiagonal_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDetailDiagonal_W.png",
+            "group": "_Town2",
+            "label": "wallWoodDetailDiagonal_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDetailHorizontal_E.png",
+            "group": "_Town2",
+            "label": "wallWoodDetailHorizontal_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDetailHorizontal_N.png",
+            "group": "_Town2",
+            "label": "wallWoodDetailHorizontal_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDetailHorizontal_S.png",
+            "group": "_Town2",
+            "label": "wallWoodDetailHorizontal_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDetailHorizontal_W.png",
+            "group": "_Town2",
+            "label": "wallWoodDetailHorizontal_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDiagonal_E.png",
+            "group": "_Town2",
+            "label": "wallWoodDiagonal_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDiagonal_N.png",
+            "group": "_Town2",
+            "label": "wallWoodDiagonal_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDiagonal_S.png",
+            "group": "_Town2",
+            "label": "wallWoodDiagonal_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDiagonal_W.png",
+            "group": "_Town2",
+            "label": "wallWoodDiagonal_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoor_E.png",
+            "group": "_Town2",
+            "label": "wallWoodDoor_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoor_N.png",
+            "group": "_Town2",
+            "label": "wallWoodDoor_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoor_S.png",
+            "group": "_Town2",
+            "label": "wallWoodDoor_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoor_W.png",
+            "group": "_Town2",
+            "label": "wallWoodDoor_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoorwayBase_E.png",
+            "group": "_Town2",
+            "label": "wallWoodDoorwayBase_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoorwayBase_N.png",
+            "group": "_Town2",
+            "label": "wallWoodDoorwayBase_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoorwayBase_S.png",
+            "group": "_Town2",
+            "label": "wallWoodDoorwayBase_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoorwayBase_W.png",
+            "group": "_Town2",
+            "label": "wallWoodDoorwayBase_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoorwayRound_E.png",
+            "group": "_Town2",
+            "label": "wallWoodDoorwayRound_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoorwayRound_N.png",
+            "group": "_Town2",
+            "label": "wallWoodDoorwayRound_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoorwayRound_S.png",
+            "group": "_Town2",
+            "label": "wallWoodDoorwayRound_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoorwayRound_W.png",
+            "group": "_Town2",
+            "label": "wallWoodDoorwayRound_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoorwaySquare_E.png",
+            "group": "_Town2",
+            "label": "wallWoodDoorwaySquare_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoorwaySquare_N.png",
+            "group": "_Town2",
+            "label": "wallWoodDoorwaySquare_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoorwaySquare_S.png",
+            "group": "_Town2",
+            "label": "wallWoodDoorwaySquare_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoorwaySquare_W.png",
+            "group": "_Town2",
+            "label": "wallWoodDoorwaySquare_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoorwaySquareWide_E.png",
+            "group": "_Town2",
+            "label": "wallWoodDoorwaySquareWide_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoorwaySquareWide_N.png",
+            "group": "_Town2",
+            "label": "wallWoodDoorwaySquareWide_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoorwaySquareWide_S.png",
+            "group": "_Town2",
+            "label": "wallWoodDoorwaySquareWide_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoorwaySquareWide_W.png",
+            "group": "_Town2",
+            "label": "wallWoodDoorwaySquareWide_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoorwaySquareWideCurved_E.png",
+            "group": "_Town2",
+            "label": "wallWoodDoorwaySquareWideCurved_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoorwaySquareWideCurved_N.png",
+            "group": "_Town2",
+            "label": "wallWoodDoorwaySquareWideCurved_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoorwaySquareWideCurved_S.png",
+            "group": "_Town2",
+            "label": "wallWoodDoorwaySquareWideCurved_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodDoorwaySquareWideCurved_W.png",
+            "group": "_Town2",
+            "label": "wallWoodDoorwaySquareWideCurved_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodHalf_E.png",
+            "group": "_Town2",
+            "label": "wallWoodHalf_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodHalf_N.png",
+            "group": "_Town2",
+            "label": "wallWoodHalf_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodHalf_S.png",
+            "group": "_Town2",
+            "label": "wallWoodHalf_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodHalf_W.png",
+            "group": "_Town2",
+            "label": "wallWoodHalf_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodRounded_E.png",
+            "group": "_Town2",
+            "label": "wallWoodRounded_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodRounded_N.png",
+            "group": "_Town2",
+            "label": "wallWoodRounded_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodRounded_S.png",
+            "group": "_Town2",
+            "label": "wallWoodRounded_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodRounded_W.png",
+            "group": "_Town2",
+            "label": "wallWoodRounded_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodSide_E.png",
+            "group": "_Town2",
+            "label": "wallWoodSide_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodSide_N.png",
+            "group": "_Town2",
+            "label": "wallWoodSide_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodSide_S.png",
+            "group": "_Town2",
+            "label": "wallWoodSide_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodSide_W.png",
+            "group": "_Town2",
+            "label": "wallWoodSide_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodSlope_E.png",
+            "group": "_Town2",
+            "label": "wallWoodSlope_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodSlope_N.png",
+            "group": "_Town2",
+            "label": "wallWoodSlope_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodSlope_S.png",
+            "group": "_Town2",
+            "label": "wallWoodSlope_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodSlope_W.png",
+            "group": "_Town2",
+            "label": "wallWoodSlope_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodWindowGlass_E.png",
+            "group": "_Town2",
+            "label": "wallWoodWindowGlass_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodWindowGlass_N.png",
+            "group": "_Town2",
+            "label": "wallWoodWindowGlass_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodWindowGlass_S.png",
+            "group": "_Town2",
+            "label": "wallWoodWindowGlass_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodWindowGlass_W.png",
+            "group": "_Town2",
+            "label": "wallWoodWindowGlass_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodWindowRound_E.png",
+            "group": "_Town2",
+            "label": "wallWoodWindowRound_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodWindowRound_N.png",
+            "group": "_Town2",
+            "label": "wallWoodWindowRound_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodWindowRound_S.png",
+            "group": "_Town2",
+            "label": "wallWoodWindowRound_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodWindowRound_W.png",
+            "group": "_Town2",
+            "label": "wallWoodWindowRound_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodWindowShutters_E.png",
+            "group": "_Town2",
+            "label": "wallWoodWindowShutters_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodWindowShutters_N.png",
+            "group": "_Town2",
+            "label": "wallWoodWindowShutters_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodWindowShutters_S.png",
+            "group": "_Town2",
+            "label": "wallWoodWindowShutters_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodWindowShutters_W.png",
+            "group": "_Town2",
+            "label": "wallWoodWindowShutters_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodWindowSmall_E.png",
+            "group": "_Town2",
+            "label": "wallWoodWindowSmall_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodWindowSmall_N.png",
+            "group": "_Town2",
+            "label": "wallWoodWindowSmall_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodWindowSmall_S.png",
+            "group": "_Town2",
+            "label": "wallWoodWindowSmall_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodWindowSmall_W.png",
+            "group": "_Town2",
+            "label": "wallWoodWindowSmall_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodWindowStone_E.png",
+            "group": "_Town2",
+            "label": "wallWoodWindowStone_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodWindowStone_N.png",
+            "group": "_Town2",
+            "label": "wallWoodWindowStone_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodWindowStone_S.png",
+            "group": "_Town2",
+            "label": "wallWoodWindowStone_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Town2/wallWoodWindowStone_W.png",
+            "group": "_Town2",
+            "label": "wallWoodWindowStone_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trackCornerSmall_NE.png",
+            "group": "_Train",
+            "label": "monorail_trackCornerSmall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trackCornerSmall_NW.png",
+            "group": "_Train",
+            "label": "monorail_trackCornerSmall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trackCornerSmall_SE.png",
+            "group": "_Train",
+            "label": "monorail_trackCornerSmall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trackCornerSmall_SW.png",
+            "group": "_Train",
+            "label": "monorail_trackCornerSmall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trackSlope_NE.png",
+            "group": "_Train",
+            "label": "monorail_trackSlope_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trackSlope_NW.png",
+            "group": "_Train",
+            "label": "monorail_trackSlope_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trackSlope_SE.png",
+            "group": "_Train",
+            "label": "monorail_trackSlope_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trackSlope_SW.png",
+            "group": "_Train",
+            "label": "monorail_trackSlope_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trackStraight_NE.png",
+            "group": "_Train",
+            "label": "monorail_trackStraight_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trackStraight_NW.png",
+            "group": "_Train",
+            "label": "monorail_trackStraight_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trackStraight_SE.png",
+            "group": "_Train",
+            "label": "monorail_trackStraight_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trackStraight_SW.png",
+            "group": "_Train",
+            "label": "monorail_trackStraight_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trackSupport_NE.png",
+            "group": "_Train",
+            "label": "monorail_trackSupport_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trackSupport_NW.png",
+            "group": "_Train",
+            "label": "monorail_trackSupport_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trackSupport_SE.png",
+            "group": "_Train",
+            "label": "monorail_trackSupport_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trackSupport_SW.png",
+            "group": "_Train",
+            "label": "monorail_trackSupport_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trackSupportCorner_NE.png",
+            "group": "_Train",
+            "label": "monorail_trackSupportCorner_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trackSupportCorner_NW.png",
+            "group": "_Train",
+            "label": "monorail_trackSupportCorner_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trackSupportCorner_SE.png",
+            "group": "_Train",
+            "label": "monorail_trackSupportCorner_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trackSupportCorner_SW.png",
+            "group": "_Train",
+            "label": "monorail_trackSupportCorner_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainBox_NE.png",
+            "group": "_Train",
+            "label": "monorail_trainBox_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainBox_NW.png",
+            "group": "_Train",
+            "label": "monorail_trainBox_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainBox_SE.png",
+            "group": "_Train",
+            "label": "monorail_trainBox_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainBox_SW.png",
+            "group": "_Train",
+            "label": "monorail_trainBox_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainCargo_NE.png",
+            "group": "_Train",
+            "label": "monorail_trainCargo_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainCargo_NW.png",
+            "group": "_Train",
+            "label": "monorail_trainCargo_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainCargo_SE.png",
+            "group": "_Train",
+            "label": "monorail_trainCargo_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainCargo_SW.png",
+            "group": "_Train",
+            "label": "monorail_trainCargo_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainEnd_NE.png",
+            "group": "_Train",
+            "label": "monorail_trainEnd_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainEnd_NW.png",
+            "group": "_Train",
+            "label": "monorail_trainEnd_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainEnd_SE.png",
+            "group": "_Train",
+            "label": "monorail_trainEnd_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainEnd_SW.png",
+            "group": "_Train",
+            "label": "monorail_trainEnd_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainFlat_NE.png",
+            "group": "_Train",
+            "label": "monorail_trainFlat_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainFlat_NW.png",
+            "group": "_Train",
+            "label": "monorail_trainFlat_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainFlat_SE.png",
+            "group": "_Train",
+            "label": "monorail_trainFlat_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainFlat_SW.png",
+            "group": "_Train",
+            "label": "monorail_trainFlat_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainFront_NE.png",
+            "group": "_Train",
+            "label": "monorail_trainFront_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainFront_NW.png",
+            "group": "_Train",
+            "label": "monorail_trainFront_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainFront_SE.png",
+            "group": "_Train",
+            "label": "monorail_trainFront_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainFront_SW.png",
+            "group": "_Train",
+            "label": "monorail_trainFront_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainPassenger_NE.png",
+            "group": "_Train",
+            "label": "monorail_trainPassenger_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainPassenger_NW.png",
+            "group": "_Train",
+            "label": "monorail_trainPassenger_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainPassenger_SE.png",
+            "group": "_Train",
+            "label": "monorail_trainPassenger_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/monorail_trainPassenger_SW.png",
+            "group": "_Train",
+            "label": "monorail_trainPassenger_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_corner_NE.png",
+            "group": "_Train",
+            "label": "pipe_corner_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_corner_NW.png",
+            "group": "_Train",
+            "label": "pipe_corner_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_corner_SE.png",
+            "group": "_Train",
+            "label": "pipe_corner_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_corner_SW.png",
+            "group": "_Train",
+            "label": "pipe_corner_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_cornerDiagonal_NE.png",
+            "group": "_Train",
+            "label": "pipe_cornerDiagonal_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_cornerDiagonal_NW.png",
+            "group": "_Train",
+            "label": "pipe_cornerDiagonal_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_cornerDiagonal_SE.png",
+            "group": "_Train",
+            "label": "pipe_cornerDiagonal_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_cornerDiagonal_SW.png",
+            "group": "_Train",
+            "label": "pipe_cornerDiagonal_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_cornerRound_NE.png",
+            "group": "_Train",
+            "label": "pipe_cornerRound_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_cornerRound_NW.png",
+            "group": "_Train",
+            "label": "pipe_cornerRound_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_cornerRound_SE.png",
+            "group": "_Train",
+            "label": "pipe_cornerRound_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_cornerRound_SW.png",
+            "group": "_Train",
+            "label": "pipe_cornerRound_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_cross_NE.png",
+            "group": "_Train",
+            "label": "pipe_cross_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_cross_NW.png",
+            "group": "_Train",
+            "label": "pipe_cross_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_cross_SE.png",
+            "group": "_Train",
+            "label": "pipe_cross_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_cross_SW.png",
+            "group": "_Train",
+            "label": "pipe_cross_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_end_NE.png",
+            "group": "_Train",
+            "label": "pipe_end_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_end_NW.png",
+            "group": "_Train",
+            "label": "pipe_end_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_end_SE.png",
+            "group": "_Train",
+            "label": "pipe_end_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_end_SW.png",
+            "group": "_Train",
+            "label": "pipe_end_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_entrance_NE.png",
+            "group": "_Train",
+            "label": "pipe_entrance_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_entrance_NW.png",
+            "group": "_Train",
+            "label": "pipe_entrance_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_entrance_SE.png",
+            "group": "_Train",
+            "label": "pipe_entrance_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_entrance_SW.png",
+            "group": "_Train",
+            "label": "pipe_entrance_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_open_NE.png",
+            "group": "_Train",
+            "label": "pipe_open_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_open_NW.png",
+            "group": "_Train",
+            "label": "pipe_open_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_open_SE.png",
+            "group": "_Train",
+            "label": "pipe_open_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_open_SW.png",
+            "group": "_Train",
+            "label": "pipe_open_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_rampLarge_NE.png",
+            "group": "_Train",
+            "label": "pipe_rampLarge_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_rampLarge_NW.png",
+            "group": "_Train",
+            "label": "pipe_rampLarge_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_rampLarge_SE.png",
+            "group": "_Train",
+            "label": "pipe_rampLarge_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_rampLarge_SW.png",
+            "group": "_Train",
+            "label": "pipe_rampLarge_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_ring_NE.png",
+            "group": "_Train",
+            "label": "pipe_ring_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_ring_NW.png",
+            "group": "_Train",
+            "label": "pipe_ring_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_ring_SE.png",
+            "group": "_Train",
+            "label": "pipe_ring_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_ring_SW.png",
+            "group": "_Train",
+            "label": "pipe_ring_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_ringHigh_NE.png",
+            "group": "_Train",
+            "label": "pipe_ringHigh_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_ringHigh_NW.png",
+            "group": "_Train",
+            "label": "pipe_ringHigh_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_ringHigh_SE.png",
+            "group": "_Train",
+            "label": "pipe_ringHigh_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_ringHigh_SW.png",
+            "group": "_Train",
+            "label": "pipe_ringHigh_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_ringHighEnd_NE.png",
+            "group": "_Train",
+            "label": "pipe_ringHighEnd_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_ringHighEnd_NW.png",
+            "group": "_Train",
+            "label": "pipe_ringHighEnd_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_ringHighEnd_SE.png",
+            "group": "_Train",
+            "label": "pipe_ringHighEnd_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_ringHighEnd_SW.png",
+            "group": "_Train",
+            "label": "pipe_ringHighEnd_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_ringSupport_NE.png",
+            "group": "_Train",
+            "label": "pipe_ringSupport_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_ringSupport_NW.png",
+            "group": "_Train",
+            "label": "pipe_ringSupport_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_ringSupport_SE.png",
+            "group": "_Train",
+            "label": "pipe_ringSupport_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_ringSupport_SW.png",
+            "group": "_Train",
+            "label": "pipe_ringSupport_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_split_NE.png",
+            "group": "_Train",
+            "label": "pipe_split_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_split_NW.png",
+            "group": "_Train",
+            "label": "pipe_split_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_split_SE.png",
+            "group": "_Train",
+            "label": "pipe_split_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_split_SW.png",
+            "group": "_Train",
+            "label": "pipe_split_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_straight_NE.png",
+            "group": "_Train",
+            "label": "pipe_straight_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_straight_NW.png",
+            "group": "_Train",
+            "label": "pipe_straight_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_straight_SE.png",
+            "group": "_Train",
+            "label": "pipe_straight_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_straight_SW.png",
+            "group": "_Train",
+            "label": "pipe_straight_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_supportHigh_NE.png",
+            "group": "_Train",
+            "label": "pipe_supportHigh_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_supportHigh_NW.png",
+            "group": "_Train",
+            "label": "pipe_supportHigh_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_supportHigh_SE.png",
+            "group": "_Train",
+            "label": "pipe_supportHigh_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_supportHigh_SW.png",
+            "group": "_Train",
+            "label": "pipe_supportHigh_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_supportLow_NE.png",
+            "group": "_Train",
+            "label": "pipe_supportLow_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_supportLow_NW.png",
+            "group": "_Train",
+            "label": "pipe_supportLow_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_supportLow_SE.png",
+            "group": "_Train",
+            "label": "pipe_supportLow_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Train/pipe_supportLow_SW.png",
+            "group": "_Train",
+            "label": "pipe_supportLow_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence__NE.png",
+            "group": "_Wall",
+            "label": "fence__NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence__NW.png",
+            "group": "_Wall",
+            "label": "fence__NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence__SE.png",
+            "group": "_Wall",
+            "label": "fence__SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence__SW.png",
+            "group": "_Wall",
+            "label": "fence__SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_bend_NE.png",
+            "group": "_Wall",
+            "label": "fence_bend_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_bend_NW.png",
+            "group": "_Wall",
+            "label": "fence_bend_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_bend_SE.png",
+            "group": "_Wall",
+            "label": "fence_bend_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_bend_SW.png",
+            "group": "_Wall",
+            "label": "fence_bend_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_bendCenter_NE.png",
+            "group": "_Wall",
+            "label": "fence_bendCenter_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_bendCenter_NW.png",
+            "group": "_Wall",
+            "label": "fence_bendCenter_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_bendCenter_SE.png",
+            "group": "_Wall",
+            "label": "fence_bendCenter_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_bendCenter_SW.png",
+            "group": "_Wall",
+            "label": "fence_bendCenter_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_corner_NE.png",
+            "group": "_Wall",
+            "label": "fence_corner_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_corner_NW.png",
+            "group": "_Wall",
+            "label": "fence_corner_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_corner_SE.png",
+            "group": "_Wall",
+            "label": "fence_corner_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_corner_SW.png",
+            "group": "_Wall",
+            "label": "fence_corner_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_E.png",
+            "group": "_Wall",
+            "label": "fence_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_gate_NE.png",
+            "group": "_Wall",
+            "label": "fence_gate_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_gate_NW.png",
+            "group": "_Wall",
+            "label": "fence_gate_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_gate_SE.png",
+            "group": "_Wall",
+            "label": "fence_gate_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_gate_SW.png",
+            "group": "_Wall",
+            "label": "fence_gate_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_N.png",
+            "group": "_Wall",
+            "label": "fence_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_planks_NE.png",
+            "group": "_Wall",
+            "label": "fence_planks_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_planks_NW.png",
+            "group": "_Wall",
+            "label": "fence_planks_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_planks_SE.png",
+            "group": "_Wall",
+            "label": "fence_planks_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_planks_SW.png",
+            "group": "_Wall",
+            "label": "fence_planks_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_planksDouble_NE.png",
+            "group": "_Wall",
+            "label": "fence_planksDouble_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_planksDouble_NW.png",
+            "group": "_Wall",
+            "label": "fence_planksDouble_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_planksDouble_SE.png",
+            "group": "_Wall",
+            "label": "fence_planksDouble_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_planksDouble_SW.png",
+            "group": "_Wall",
+            "label": "fence_planksDouble_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_S.png",
+            "group": "_Wall",
+            "label": "fence_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simple_NE.png",
+            "group": "_Wall",
+            "label": "fence_simple_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simple_NW.png",
+            "group": "_Wall",
+            "label": "fence_simple_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simple_SE.png",
+            "group": "_Wall",
+            "label": "fence_simple_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simple_SW.png",
+            "group": "_Wall",
+            "label": "fence_simple_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simpleCenter_NE.png",
+            "group": "_Wall",
+            "label": "fence_simpleCenter_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simpleCenter_NW.png",
+            "group": "_Wall",
+            "label": "fence_simpleCenter_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simpleCenter_SE.png",
+            "group": "_Wall",
+            "label": "fence_simpleCenter_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simpleCenter_SW.png",
+            "group": "_Wall",
+            "label": "fence_simpleCenter_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simpleDiagonal_NE.png",
+            "group": "_Wall",
+            "label": "fence_simpleDiagonal_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simpleDiagonal_NW.png",
+            "group": "_Wall",
+            "label": "fence_simpleDiagonal_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simpleDiagonal_SE.png",
+            "group": "_Wall",
+            "label": "fence_simpleDiagonal_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simpleDiagonal_SW.png",
+            "group": "_Wall",
+            "label": "fence_simpleDiagonal_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simpleDiagonalCenter_NE.png",
+            "group": "_Wall",
+            "label": "fence_simpleDiagonalCenter_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simpleDiagonalCenter_NW.png",
+            "group": "_Wall",
+            "label": "fence_simpleDiagonalCenter_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simpleDiagonalCenter_SE.png",
+            "group": "_Wall",
+            "label": "fence_simpleDiagonalCenter_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simpleDiagonalCenter_SW.png",
+            "group": "_Wall",
+            "label": "fence_simpleDiagonalCenter_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simpleHigh_NE.png",
+            "group": "_Wall",
+            "label": "fence_simpleHigh_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simpleHigh_NW.png",
+            "group": "_Wall",
+            "label": "fence_simpleHigh_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simpleHigh_SE.png",
+            "group": "_Wall",
+            "label": "fence_simpleHigh_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simpleHigh_SW.png",
+            "group": "_Wall",
+            "label": "fence_simpleHigh_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simpleLow_NE.png",
+            "group": "_Wall",
+            "label": "fence_simpleLow_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simpleLow_NW.png",
+            "group": "_Wall",
+            "label": "fence_simpleLow_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simpleLow_SE.png",
+            "group": "_Wall",
+            "label": "fence_simpleLow_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_simpleLow_SW.png",
+            "group": "_Wall",
+            "label": "fence_simpleLow_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fence_W.png",
+            "group": "_Wall",
+            "label": "fence_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fenceBroken_E.png",
+            "group": "_Wall",
+            "label": "fenceBroken_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fenceBroken_N.png",
+            "group": "_Wall",
+            "label": "fenceBroken_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fenceBroken_S.png",
+            "group": "_Wall",
+            "label": "fenceBroken_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fenceBroken_W.png",
+            "group": "_Wall",
+            "label": "fenceBroken_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fenceCurved_E.png",
+            "group": "_Wall",
+            "label": "fenceCurved_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fenceCurved_N.png",
+            "group": "_Wall",
+            "label": "fenceCurved_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fenceCurved_S.png",
+            "group": "_Wall",
+            "label": "fenceCurved_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fenceCurved_W.png",
+            "group": "_Wall",
+            "label": "fenceCurved_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fenceDamaged_NE.png",
+            "group": "_Wall",
+            "label": "fenceDamaged_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fenceDamaged_NW.png",
+            "group": "_Wall",
+            "label": "fenceDamaged_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fenceDamaged_SE.png",
+            "group": "_Wall",
+            "label": "fenceDamaged_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fenceDamaged_SW.png",
+            "group": "_Wall",
+            "label": "fenceDamaged_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fenceGate_E.png",
+            "group": "_Wall",
+            "label": "fenceGate_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fenceGate_N.png",
+            "group": "_Wall",
+            "label": "fenceGate_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fenceGate_NE.png",
+            "group": "_Wall",
+            "label": "fenceGate_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fenceGate_NW.png",
+            "group": "_Wall",
+            "label": "fenceGate_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fenceGate_S.png",
+            "group": "_Wall",
+            "label": "fenceGate_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fenceGate_SE.png",
+            "group": "_Wall",
+            "label": "fenceGate_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fenceGate_SW.png",
+            "group": "_Wall",
+            "label": "fenceGate_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/fenceGate_W.png",
+            "group": "_Wall",
+            "label": "fenceGate_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/hedge_E.png",
+            "group": "_Wall",
+            "label": "hedge_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/hedge_N.png",
+            "group": "_Wall",
+            "label": "hedge_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/hedge_NE.png",
+            "group": "_Wall",
+            "label": "hedge_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/hedge_NW.png",
+            "group": "_Wall",
+            "label": "hedge_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/hedge_S.png",
+            "group": "_Wall",
+            "label": "hedge_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/hedge_SE.png",
+            "group": "_Wall",
+            "label": "hedge_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/hedge_SW.png",
+            "group": "_Wall",
+            "label": "hedge_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/hedge_W.png",
+            "group": "_Wall",
+            "label": "hedge_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/hedgeCorner_NE.png",
+            "group": "_Wall",
+            "label": "hedgeCorner_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/hedgeCorner_NW.png",
+            "group": "_Wall",
+            "label": "hedgeCorner_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/hedgeCorner_SE.png",
+            "group": "_Wall",
+            "label": "hedgeCorner_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/hedgeCorner_SW.png",
+            "group": "_Wall",
+            "label": "hedgeCorner_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/hedgeCurved_E.png",
+            "group": "_Wall",
+            "label": "hedgeCurved_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/hedgeCurved_N.png",
+            "group": "_Wall",
+            "label": "hedgeCurved_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/hedgeCurved_S.png",
+            "group": "_Wall",
+            "label": "hedgeCurved_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/hedgeCurved_W.png",
+            "group": "_Wall",
+            "label": "hedgeCurved_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/hedgeGate_E.png",
+            "group": "_Wall",
+            "label": "hedgeGate_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/hedgeGate_N.png",
+            "group": "_Wall",
+            "label": "hedgeGate_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/hedgeGate_S.png",
+            "group": "_Wall",
+            "label": "hedgeGate_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/hedgeGate_W.png",
+            "group": "_Wall",
+            "label": "hedgeGate_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFence_NE.png",
+            "group": "_Wall",
+            "label": "ironFence_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFence_NW.png",
+            "group": "_Wall",
+            "label": "ironFence_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFence_SE.png",
+            "group": "_Wall",
+            "label": "ironFence_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFence_SW.png",
+            "group": "_Wall",
+            "label": "ironFence_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceBar_NE.png",
+            "group": "_Wall",
+            "label": "ironFenceBar_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceBar_NW.png",
+            "group": "_Wall",
+            "label": "ironFenceBar_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceBar_SE.png",
+            "group": "_Wall",
+            "label": "ironFenceBar_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceBar_SW.png",
+            "group": "_Wall",
+            "label": "ironFenceBar_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceBorder_NE.png",
+            "group": "_Wall",
+            "label": "ironFenceBorder_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceBorder_NW.png",
+            "group": "_Wall",
+            "label": "ironFenceBorder_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceBorder_SE.png",
+            "group": "_Wall",
+            "label": "ironFenceBorder_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceBorder_SW.png",
+            "group": "_Wall",
+            "label": "ironFenceBorder_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceBorderColumn_NE.png",
+            "group": "_Wall",
+            "label": "ironFenceBorderColumn_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceBorderColumn_NW.png",
+            "group": "_Wall",
+            "label": "ironFenceBorderColumn_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceBorderColumn_SE.png",
+            "group": "_Wall",
+            "label": "ironFenceBorderColumn_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceBorderColumn_SW.png",
+            "group": "_Wall",
+            "label": "ironFenceBorderColumn_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceBorderCurve_NE.png",
+            "group": "_Wall",
+            "label": "ironFenceBorderCurve_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceBorderCurve_NW.png",
+            "group": "_Wall",
+            "label": "ironFenceBorderCurve_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceBorderCurve_SE.png",
+            "group": "_Wall",
+            "label": "ironFenceBorderCurve_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceBorderCurve_SW.png",
+            "group": "_Wall",
+            "label": "ironFenceBorderCurve_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceBorderGate_NE.png",
+            "group": "_Wall",
+            "label": "ironFenceBorderGate_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceBorderGate_NW.png",
+            "group": "_Wall",
+            "label": "ironFenceBorderGate_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceBorderGate_SE.png",
+            "group": "_Wall",
+            "label": "ironFenceBorderGate_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceBorderGate_SW.png",
+            "group": "_Wall",
+            "label": "ironFenceBorderGate_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceCurve_NE.png",
+            "group": "_Wall",
+            "label": "ironFenceCurve_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceCurve_NW.png",
+            "group": "_Wall",
+            "label": "ironFenceCurve_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceCurve_SE.png",
+            "group": "_Wall",
+            "label": "ironFenceCurve_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceCurve_SW.png",
+            "group": "_Wall",
+            "label": "ironFenceCurve_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceDamaged_NE.png",
+            "group": "_Wall",
+            "label": "ironFenceDamaged_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceDamaged_NW.png",
+            "group": "_Wall",
+            "label": "ironFenceDamaged_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceDamaged_SE.png",
+            "group": "_Wall",
+            "label": "ironFenceDamaged_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/ironFenceDamaged_SW.png",
+            "group": "_Wall",
+            "label": "ironFenceDamaged_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/rail_corner_NE.png",
+            "group": "_Wall",
+            "label": "rail_corner_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/rail_corner_NW.png",
+            "group": "_Wall",
+            "label": "rail_corner_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/rail_corner_SE.png",
+            "group": "_Wall",
+            "label": "rail_corner_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/rail_corner_SW.png",
+            "group": "_Wall",
+            "label": "rail_corner_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/rail_end_NE.png",
+            "group": "_Wall",
+            "label": "rail_end_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/rail_end_NW.png",
+            "group": "_Wall",
+            "label": "rail_end_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/rail_end_SE.png",
+            "group": "_Wall",
+            "label": "rail_end_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/rail_end_SW.png",
+            "group": "_Wall",
+            "label": "rail_end_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/rail_middle_NE.png",
+            "group": "_Wall",
+            "label": "rail_middle_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/rail_middle_NW.png",
+            "group": "_Wall",
+            "label": "rail_middle_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/rail_middle_SE.png",
+            "group": "_Wall",
+            "label": "rail_middle_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/rail_middle_SW.png",
+            "group": "_Wall",
+            "label": "rail_middle_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/rail_NE.png",
+            "group": "_Wall",
+            "label": "rail_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/rail_NW.png",
+            "group": "_Wall",
+            "label": "rail_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/rail_SE.png",
+            "group": "_Wall",
+            "label": "rail_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/rail_SW.png",
+            "group": "_Wall",
+            "label": "rail_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/stoneWall_NE.png",
+            "group": "_Wall",
+            "label": "stoneWall_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/stoneWall_NW.png",
+            "group": "_Wall",
+            "label": "stoneWall_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/stoneWall_SE.png",
+            "group": "_Wall",
+            "label": "stoneWall_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/stoneWall_SW.png",
+            "group": "_Wall",
+            "label": "stoneWall_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/stoneWallColumn_NE.png",
+            "group": "_Wall",
+            "label": "stoneWallColumn_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/stoneWallColumn_NW.png",
+            "group": "_Wall",
+            "label": "stoneWallColumn_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/stoneWallColumn_SE.png",
+            "group": "_Wall",
+            "label": "stoneWallColumn_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/stoneWallColumn_SW.png",
+            "group": "_Wall",
+            "label": "stoneWallColumn_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/stoneWallCurve_NE.png",
+            "group": "_Wall",
+            "label": "stoneWallCurve_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/stoneWallCurve_NW.png",
+            "group": "_Wall",
+            "label": "stoneWallCurve_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/stoneWallCurve_SE.png",
+            "group": "_Wall",
+            "label": "stoneWallCurve_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/stoneWallCurve_SW.png",
+            "group": "_Wall",
+            "label": "stoneWallCurve_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/stoneWallDamaged_NE.png",
+            "group": "_Wall",
+            "label": "stoneWallDamaged_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/stoneWallDamaged_NW.png",
+            "group": "_Wall",
+            "label": "stoneWallDamaged_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/stoneWallDamaged_SE.png",
+            "group": "_Wall",
+            "label": "stoneWallDamaged_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/_Wall/stoneWallDamaged_SW.png",
+            "group": "_Wall",
+            "label": "stoneWallDamaged_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/alien_E.png",
+            "group": "MyPerso2",
+            "label": "alien_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/alien_N.png",
+            "group": "MyPerso2",
+            "label": "alien_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/alien_NE.png",
+            "group": "MyPerso2",
+            "label": "alien_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/alien_NW.png",
+            "group": "MyPerso2",
+            "label": "alien_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/alien_S.png",
+            "group": "MyPerso2",
+            "label": "alien_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/alien_SE.png",
+            "group": "MyPerso2",
+            "label": "alien_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/alien_SW.png",
+            "group": "MyPerso2",
+            "label": "alien_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/alien_W.png",
+            "group": "MyPerso2",
+            "label": "alien_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/astronautA_E.png",
+            "group": "MyPerso2",
+            "label": "astronautA_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/astronautA_N.png",
+            "group": "MyPerso2",
+            "label": "astronautA_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/astronautA_NE.png",
+            "group": "MyPerso2",
+            "label": "astronautA_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/astronautA_NW.png",
+            "group": "MyPerso2",
+            "label": "astronautA_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/astronautA_S.png",
+            "group": "MyPerso2",
+            "label": "astronautA_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/astronautA_SE.png",
+            "group": "MyPerso2",
+            "label": "astronautA_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/astronautA_SW.png",
+            "group": "MyPerso2",
+            "label": "astronautA_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/astronautA_W.png",
+            "group": "MyPerso2",
+            "label": "astronautA_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/astronautB_E.png",
+            "group": "MyPerso2",
+            "label": "astronautB_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/astronautB_N.png",
+            "group": "MyPerso2",
+            "label": "astronautB_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/astronautB_NE.png",
+            "group": "MyPerso2",
+            "label": "astronautB_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/astronautB_NW.png",
+            "group": "MyPerso2",
+            "label": "astronautB_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/astronautB_S.png",
+            "group": "MyPerso2",
+            "label": "astronautB_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/astronautB_SE.png",
+            "group": "MyPerso2",
+            "label": "astronautB_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/astronautB_SW.png",
+            "group": "MyPerso2",
+            "label": "astronautB_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/astronautB_W.png",
+            "group": "MyPerso2",
+            "label": "astronautB_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/digger_E.png",
+            "group": "MyPerso2",
+            "label": "digger_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/digger_N.png",
+            "group": "MyPerso2",
+            "label": "digger_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/digger_NE.png",
+            "group": "MyPerso2",
+            "label": "digger_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/digger_NW.png",
+            "group": "MyPerso2",
+            "label": "digger_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/digger_S.png",
+            "group": "MyPerso2",
+            "label": "digger_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/digger_SE.png",
+            "group": "MyPerso2",
+            "label": "digger_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/digger_SW.png",
+            "group": "MyPerso2",
+            "label": "digger_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/digger_W.png",
+            "group": "MyPerso2",
+            "label": "digger_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoGreen_E.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoGreen_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoGreen_N.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoGreen_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoGreen_S.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoGreen_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoGreen_W.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoGreen_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoGreenWeapon_E.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoGreenWeapon_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoGreenWeapon_N.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoGreenWeapon_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoGreenWeapon_S.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoGreenWeapon_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoGreenWeapon_W.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoGreenWeapon_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoPurple_E.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoPurple_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoPurple_N.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoPurple_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoPurple_S.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoPurple_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoPurple_W.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoPurple_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoPurpleWeapon_E.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoPurpleWeapon_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoPurpleWeapon_N.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoPurpleWeapon_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoPurpleWeapon_S.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoPurpleWeapon_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoPurpleWeapon_W.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoPurpleWeapon_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoRed_E.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoRed_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoRed_N.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoRed_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoRed_S.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoRed_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoRed_W.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoRed_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoRedWeapon_E.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoRedWeapon_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoRedWeapon_N.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoRedWeapon_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoRedWeapon_S.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoRedWeapon_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoRedWeapon_W.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoRedWeapon_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoYellow_E.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoYellow_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoYellow_N.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoYellow_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoYellow_S.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoYellow_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoYellow_W.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoYellow_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoYellowWeapon_E.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoYellowWeapon_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoYellowWeapon_N.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoYellowWeapon_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoYellowWeapon_S.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoYellowWeapon_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/enemy_ufoYellowWeapon_W.png",
+            "group": "MyPerso2",
+            "label": "enemy_ufoYellowWeapon_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/ghost_E.png",
+            "group": "MyPerso2",
+            "label": "ghost_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/ghost_N.png",
+            "group": "MyPerso2",
+            "label": "ghost_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/ghost_NE.png",
+            "group": "MyPerso2",
+            "label": "ghost_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/ghost_NW.png",
+            "group": "MyPerso2",
+            "label": "ghost_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/ghost_S.png",
+            "group": "MyPerso2",
+            "label": "ghost_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/ghost_SE.png",
+            "group": "MyPerso2",
+            "label": "ghost_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/ghost_SW.png",
+            "group": "MyPerso2",
+            "label": "ghost_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/ghost_W.png",
+            "group": "MyPerso2",
+            "label": "ghost_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/rover_NE.png",
+            "group": "MyPerso2",
+            "label": "rover_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/rover_NW.png",
+            "group": "MyPerso2",
+            "label": "rover_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/rover_SE.png",
+            "group": "MyPerso2",
+            "label": "rover_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/rover_SW.png",
+            "group": "MyPerso2",
+            "label": "rover_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/skeleton_E.png",
+            "group": "MyPerso2",
+            "label": "skeleton_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/skeleton_N.png",
+            "group": "MyPerso2",
+            "label": "skeleton_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/skeleton_NE.png",
+            "group": "MyPerso2",
+            "label": "skeleton_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/skeleton_NW.png",
+            "group": "MyPerso2",
+            "label": "skeleton_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/skeleton_S.png",
+            "group": "MyPerso2",
+            "label": "skeleton_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/skeleton_SE.png",
+            "group": "MyPerso2",
+            "label": "skeleton_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/skeleton_SW.png",
+            "group": "MyPerso2",
+            "label": "skeleton_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/skeleton_W.png",
+            "group": "MyPerso2",
+            "label": "skeleton_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/vampire_E.png",
+            "group": "MyPerso2",
+            "label": "vampire_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/vampire_N.png",
+            "group": "MyPerso2",
+            "label": "vampire_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/vampire_NE.png",
+            "group": "MyPerso2",
+            "label": "vampire_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/vampire_NW.png",
+            "group": "MyPerso2",
+            "label": "vampire_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/vampire_S.png",
+            "group": "MyPerso2",
+            "label": "vampire_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/vampire_SE.png",
+            "group": "MyPerso2",
+            "label": "vampire_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/vampire_SW.png",
+            "group": "MyPerso2",
+            "label": "vampire_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/vampire_W.png",
+            "group": "MyPerso2",
+            "label": "vampire_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/zombie_E.png",
+            "group": "MyPerso2",
+            "label": "zombie_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/zombie_N.png",
+            "group": "MyPerso2",
+            "label": "zombie_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/zombie_NE.png",
+            "group": "MyPerso2",
+            "label": "zombie_NE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/zombie_NW.png",
+            "group": "MyPerso2",
+            "label": "zombie_NW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/zombie_S.png",
+            "group": "MyPerso2",
+            "label": "zombie_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/zombie_SE.png",
+            "group": "MyPerso2",
+            "label": "zombie_SE",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/zombie_SW.png",
+            "group": "MyPerso2",
+            "label": "zombie_SW",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyPerso2/zombie_W.png",
+            "group": "MyPerso2",
+            "label": "zombie_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_crystal_E.png",
+            "group": "MyTower",
+            "label": "detail_crystal_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_crystal_N.png",
+            "group": "MyTower",
+            "label": "detail_crystal_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_crystal_S.png",
+            "group": "MyTower",
+            "label": "detail_crystal_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_crystal_W.png",
+            "group": "MyTower",
+            "label": "detail_crystal_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_crystalLarge_E.png",
+            "group": "MyTower",
+            "label": "detail_crystalLarge_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_crystalLarge_N.png",
+            "group": "MyTower",
+            "label": "detail_crystalLarge_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_crystalLarge_S.png",
+            "group": "MyTower",
+            "label": "detail_crystalLarge_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_crystalLarge_W.png",
+            "group": "MyTower",
+            "label": "detail_crystalLarge_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_dirt_E.png",
+            "group": "MyTower",
+            "label": "detail_dirt_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_dirt_N.png",
+            "group": "MyTower",
+            "label": "detail_dirt_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_dirt_S.png",
+            "group": "MyTower",
+            "label": "detail_dirt_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_dirt_W.png",
+            "group": "MyTower",
+            "label": "detail_dirt_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_dirtLarge_E.png",
+            "group": "MyTower",
+            "label": "detail_dirtLarge_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_dirtLarge_N.png",
+            "group": "MyTower",
+            "label": "detail_dirtLarge_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_dirtLarge_S.png",
+            "group": "MyTower",
+            "label": "detail_dirtLarge_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_dirtLarge_W.png",
+            "group": "MyTower",
+            "label": "detail_dirtLarge_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_rocks_E.png",
+            "group": "MyTower",
+            "label": "detail_rocks_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_rocks_N.png",
+            "group": "MyTower",
+            "label": "detail_rocks_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_rocks_S.png",
+            "group": "MyTower",
+            "label": "detail_rocks_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_rocks_W.png",
+            "group": "MyTower",
+            "label": "detail_rocks_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_rocksLarge_E.png",
+            "group": "MyTower",
+            "label": "detail_rocksLarge_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_rocksLarge_N.png",
+            "group": "MyTower",
+            "label": "detail_rocksLarge_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_rocksLarge_S.png",
+            "group": "MyTower",
+            "label": "detail_rocksLarge_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_rocksLarge_W.png",
+            "group": "MyTower",
+            "label": "detail_rocksLarge_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_tree_E.png",
+            "group": "MyTower",
+            "label": "detail_tree_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_tree_N.png",
+            "group": "MyTower",
+            "label": "detail_tree_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_tree_S.png",
+            "group": "MyTower",
+            "label": "detail_tree_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_tree_W.png",
+            "group": "MyTower",
+            "label": "detail_tree_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_treeLarge_E.png",
+            "group": "MyTower",
+            "label": "detail_treeLarge_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_treeLarge_N.png",
+            "group": "MyTower",
+            "label": "detail_treeLarge_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_treeLarge_S.png",
+            "group": "MyTower",
+            "label": "detail_treeLarge_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/detail_treeLarge_W.png",
+            "group": "MyTower",
+            "label": "detail_treeLarge_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_crystal_E.png",
+            "group": "MyTower",
+            "label": "snow_detail_crystal_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_crystal_N.png",
+            "group": "MyTower",
+            "label": "snow_detail_crystal_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_crystal_S.png",
+            "group": "MyTower",
+            "label": "snow_detail_crystal_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_crystal_W.png",
+            "group": "MyTower",
+            "label": "snow_detail_crystal_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_crystalLarge_E.png",
+            "group": "MyTower",
+            "label": "snow_detail_crystalLarge_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_crystalLarge_N.png",
+            "group": "MyTower",
+            "label": "snow_detail_crystalLarge_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_crystalLarge_S.png",
+            "group": "MyTower",
+            "label": "snow_detail_crystalLarge_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_crystalLarge_W.png",
+            "group": "MyTower",
+            "label": "snow_detail_crystalLarge_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_dirt_E.png",
+            "group": "MyTower",
+            "label": "snow_detail_dirt_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_dirt_N.png",
+            "group": "MyTower",
+            "label": "snow_detail_dirt_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_dirt_S.png",
+            "group": "MyTower",
+            "label": "snow_detail_dirt_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_dirt_W.png",
+            "group": "MyTower",
+            "label": "snow_detail_dirt_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_dirtLarge_E.png",
+            "group": "MyTower",
+            "label": "snow_detail_dirtLarge_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_dirtLarge_N.png",
+            "group": "MyTower",
+            "label": "snow_detail_dirtLarge_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_dirtLarge_S.png",
+            "group": "MyTower",
+            "label": "snow_detail_dirtLarge_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_dirtLarge_W.png",
+            "group": "MyTower",
+            "label": "snow_detail_dirtLarge_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_rocks_E.png",
+            "group": "MyTower",
+            "label": "snow_detail_rocks_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_rocks_N.png",
+            "group": "MyTower",
+            "label": "snow_detail_rocks_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_rocks_S.png",
+            "group": "MyTower",
+            "label": "snow_detail_rocks_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_rocks_W.png",
+            "group": "MyTower",
+            "label": "snow_detail_rocks_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_rocksLarge_E.png",
+            "group": "MyTower",
+            "label": "snow_detail_rocksLarge_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_rocksLarge_N.png",
+            "group": "MyTower",
+            "label": "snow_detail_rocksLarge_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_rocksLarge_S.png",
+            "group": "MyTower",
+            "label": "snow_detail_rocksLarge_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_rocksLarge_W.png",
+            "group": "MyTower",
+            "label": "snow_detail_rocksLarge_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_tree_E.png",
+            "group": "MyTower",
+            "label": "snow_detail_tree_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_tree_N.png",
+            "group": "MyTower",
+            "label": "snow_detail_tree_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_tree_S.png",
+            "group": "MyTower",
+            "label": "snow_detail_tree_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_tree_W.png",
+            "group": "MyTower",
+            "label": "snow_detail_tree_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_treeLarge_E.png",
+            "group": "MyTower",
+            "label": "snow_detail_treeLarge_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_treeLarge_N.png",
+            "group": "MyTower",
+            "label": "snow_detail_treeLarge_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_treeLarge_S.png",
+            "group": "MyTower",
+            "label": "snow_detail_treeLarge_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_detail_treeLarge_W.png",
+            "group": "MyTower",
+            "label": "snow_detail_treeLarge_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_woodStructure_E.png",
+            "group": "MyTower",
+            "label": "snow_woodStructure_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_woodStructure_high_E.png",
+            "group": "MyTower",
+            "label": "snow_woodStructure_high_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_woodStructure_high_N.png",
+            "group": "MyTower",
+            "label": "snow_woodStructure_high_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_woodStructure_high_S.png",
+            "group": "MyTower",
+            "label": "snow_woodStructure_high_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_woodStructure_high_W.png",
+            "group": "MyTower",
+            "label": "snow_woodStructure_high_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_woodStructure_N.png",
+            "group": "MyTower",
+            "label": "snow_woodStructure_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_woodStructure_S.png",
+            "group": "MyTower",
+            "label": "snow_woodStructure_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/snow_woodStructure_W.png",
+            "group": "MyTower",
+            "label": "snow_woodStructure_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_base_E.png",
+            "group": "MyTower",
+            "label": "towerRound_base_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_base_N.png",
+            "group": "MyTower",
+            "label": "towerRound_base_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_base_S.png",
+            "group": "MyTower",
+            "label": "towerRound_base_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_base_W.png",
+            "group": "MyTower",
+            "label": "towerRound_base_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_bottomA_E.png",
+            "group": "MyTower",
+            "label": "towerRound_bottomA_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_bottomA_N.png",
+            "group": "MyTower",
+            "label": "towerRound_bottomA_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_bottomA_S.png",
+            "group": "MyTower",
+            "label": "towerRound_bottomA_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_bottomA_W.png",
+            "group": "MyTower",
+            "label": "towerRound_bottomA_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_bottomB_E.png",
+            "group": "MyTower",
+            "label": "towerRound_bottomB_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_bottomB_N.png",
+            "group": "MyTower",
+            "label": "towerRound_bottomB_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_bottomB_S.png",
+            "group": "MyTower",
+            "label": "towerRound_bottomB_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_bottomB_W.png",
+            "group": "MyTower",
+            "label": "towerRound_bottomB_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_bottomC_E.png",
+            "group": "MyTower",
+            "label": "towerRound_bottomC_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_bottomC_N.png",
+            "group": "MyTower",
+            "label": "towerRound_bottomC_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_bottomC_S.png",
+            "group": "MyTower",
+            "label": "towerRound_bottomC_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_bottomC_W.png",
+            "group": "MyTower",
+            "label": "towerRound_bottomC_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_crystals_E.png",
+            "group": "MyTower",
+            "label": "towerRound_crystals_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_crystals_N.png",
+            "group": "MyTower",
+            "label": "towerRound_crystals_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_crystals_S.png",
+            "group": "MyTower",
+            "label": "towerRound_crystals_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_crystals_W.png",
+            "group": "MyTower",
+            "label": "towerRound_crystals_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_middleA_E.png",
+            "group": "MyTower",
+            "label": "towerRound_middleA_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_middleA_N.png",
+            "group": "MyTower",
+            "label": "towerRound_middleA_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_middleA_S.png",
+            "group": "MyTower",
+            "label": "towerRound_middleA_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_middleA_W.png",
+            "group": "MyTower",
+            "label": "towerRound_middleA_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_middleB_E.png",
+            "group": "MyTower",
+            "label": "towerRound_middleB_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_middleB_N.png",
+            "group": "MyTower",
+            "label": "towerRound_middleB_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_middleB_S.png",
+            "group": "MyTower",
+            "label": "towerRound_middleB_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_middleB_W.png",
+            "group": "MyTower",
+            "label": "towerRound_middleB_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_middleC_E.png",
+            "group": "MyTower",
+            "label": "towerRound_middleC_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_middleC_N.png",
+            "group": "MyTower",
+            "label": "towerRound_middleC_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_middleC_S.png",
+            "group": "MyTower",
+            "label": "towerRound_middleC_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_middleC_W.png",
+            "group": "MyTower",
+            "label": "towerRound_middleC_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_roofA_E.png",
+            "group": "MyTower",
+            "label": "towerRound_roofA_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_roofA_N.png",
+            "group": "MyTower",
+            "label": "towerRound_roofA_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_roofA_S.png",
+            "group": "MyTower",
+            "label": "towerRound_roofA_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_roofA_W.png",
+            "group": "MyTower",
+            "label": "towerRound_roofA_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_roofB_E.png",
+            "group": "MyTower",
+            "label": "towerRound_roofB_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_roofB_N.png",
+            "group": "MyTower",
+            "label": "towerRound_roofB_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_roofB_S.png",
+            "group": "MyTower",
+            "label": "towerRound_roofB_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_roofB_W.png",
+            "group": "MyTower",
+            "label": "towerRound_roofB_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_roofC_E.png",
+            "group": "MyTower",
+            "label": "towerRound_roofC_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_roofC_N.png",
+            "group": "MyTower",
+            "label": "towerRound_roofC_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_roofC_S.png",
+            "group": "MyTower",
+            "label": "towerRound_roofC_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_roofC_W.png",
+            "group": "MyTower",
+            "label": "towerRound_roofC_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleA_E.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleA_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleA_N.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleA_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleA_S.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleA_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleA_W.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleA_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleB_E.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleB_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleB_N.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleB_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleB_S.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleB_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleB_W.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleB_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleC_E.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleC_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleC_N.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleC_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleC_S.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleC_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleC_W.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleC_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleD_E.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleD_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleD_N.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleD_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleD_S.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleD_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleD_W.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleD_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleE_E.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleE_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleE_N.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleE_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleE_S.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleE_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleE_W.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleE_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleF_E.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleF_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleF_N.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleF_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleF_S.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleF_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_sampleF_W.png",
+            "group": "MyTower",
+            "label": "towerRound_sampleF_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_topA_E.png",
+            "group": "MyTower",
+            "label": "towerRound_topA_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_topA_N.png",
+            "group": "MyTower",
+            "label": "towerRound_topA_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_topA_S.png",
+            "group": "MyTower",
+            "label": "towerRound_topA_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_topA_W.png",
+            "group": "MyTower",
+            "label": "towerRound_topA_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_topB_E.png",
+            "group": "MyTower",
+            "label": "towerRound_topB_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_topB_N.png",
+            "group": "MyTower",
+            "label": "towerRound_topB_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_topB_S.png",
+            "group": "MyTower",
+            "label": "towerRound_topB_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_topB_W.png",
+            "group": "MyTower",
+            "label": "towerRound_topB_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_topC_E.png",
+            "group": "MyTower",
+            "label": "towerRound_topC_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_topC_N.png",
+            "group": "MyTower",
+            "label": "towerRound_topC_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_topC_S.png",
+            "group": "MyTower",
+            "label": "towerRound_topC_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerRound_topC_W.png",
+            "group": "MyTower",
+            "label": "towerRound_topC_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_bottomA_E.png",
+            "group": "MyTower",
+            "label": "towerSquare_bottomA_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_bottomA_N.png",
+            "group": "MyTower",
+            "label": "towerSquare_bottomA_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_bottomA_S.png",
+            "group": "MyTower",
+            "label": "towerSquare_bottomA_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_bottomA_W.png",
+            "group": "MyTower",
+            "label": "towerSquare_bottomA_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_bottomB_E.png",
+            "group": "MyTower",
+            "label": "towerSquare_bottomB_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_bottomB_N.png",
+            "group": "MyTower",
+            "label": "towerSquare_bottomB_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_bottomB_S.png",
+            "group": "MyTower",
+            "label": "towerSquare_bottomB_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_bottomB_W.png",
+            "group": "MyTower",
+            "label": "towerSquare_bottomB_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_bottomC_E.png",
+            "group": "MyTower",
+            "label": "towerSquare_bottomC_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_bottomC_N.png",
+            "group": "MyTower",
+            "label": "towerSquare_bottomC_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_bottomC_S.png",
+            "group": "MyTower",
+            "label": "towerSquare_bottomC_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_bottomC_W.png",
+            "group": "MyTower",
+            "label": "towerSquare_bottomC_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_middleA_E.png",
+            "group": "MyTower",
+            "label": "towerSquare_middleA_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_middleA_N.png",
+            "group": "MyTower",
+            "label": "towerSquare_middleA_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_middleA_S.png",
+            "group": "MyTower",
+            "label": "towerSquare_middleA_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_middleA_W.png",
+            "group": "MyTower",
+            "label": "towerSquare_middleA_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_middleB_E.png",
+            "group": "MyTower",
+            "label": "towerSquare_middleB_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_middleB_N.png",
+            "group": "MyTower",
+            "label": "towerSquare_middleB_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_middleB_S.png",
+            "group": "MyTower",
+            "label": "towerSquare_middleB_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_middleB_W.png",
+            "group": "MyTower",
+            "label": "towerSquare_middleB_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_middleC_E.png",
+            "group": "MyTower",
+            "label": "towerSquare_middleC_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_middleC_N.png",
+            "group": "MyTower",
+            "label": "towerSquare_middleC_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_middleC_S.png",
+            "group": "MyTower",
+            "label": "towerSquare_middleC_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_middleC_W.png",
+            "group": "MyTower",
+            "label": "towerSquare_middleC_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_roofA_E.png",
+            "group": "MyTower",
+            "label": "towerSquare_roofA_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_roofA_N.png",
+            "group": "MyTower",
+            "label": "towerSquare_roofA_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_roofA_S.png",
+            "group": "MyTower",
+            "label": "towerSquare_roofA_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_roofA_W.png",
+            "group": "MyTower",
+            "label": "towerSquare_roofA_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_roofB_E.png",
+            "group": "MyTower",
+            "label": "towerSquare_roofB_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_roofB_N.png",
+            "group": "MyTower",
+            "label": "towerSquare_roofB_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_roofB_S.png",
+            "group": "MyTower",
+            "label": "towerSquare_roofB_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_roofB_W.png",
+            "group": "MyTower",
+            "label": "towerSquare_roofB_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_roofC_E.png",
+            "group": "MyTower",
+            "label": "towerSquare_roofC_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_roofC_N.png",
+            "group": "MyTower",
+            "label": "towerSquare_roofC_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_roofC_S.png",
+            "group": "MyTower",
+            "label": "towerSquare_roofC_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_roofC_W.png",
+            "group": "MyTower",
+            "label": "towerSquare_roofC_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleA_E.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleA_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleA_N.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleA_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleA_S.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleA_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleA_W.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleA_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleB_E.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleB_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleB_N.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleB_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleB_S.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleB_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleB_W.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleB_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleC_E.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleC_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleC_N.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleC_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleC_S.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleC_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleC_W.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleC_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleD_E.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleD_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleD_N.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleD_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleD_S.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleD_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleD_W.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleD_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleE_E.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleE_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleE_N.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleE_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleE_S.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleE_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleE_W.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleE_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleF_E.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleF_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleF_N.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleF_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleF_S.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleF_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_sampleF_W.png",
+            "group": "MyTower",
+            "label": "towerSquare_sampleF_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_topA_E.png",
+            "group": "MyTower",
+            "label": "towerSquare_topA_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_topA_N.png",
+            "group": "MyTower",
+            "label": "towerSquare_topA_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_topA_S.png",
+            "group": "MyTower",
+            "label": "towerSquare_topA_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_topA_W.png",
+            "group": "MyTower",
+            "label": "towerSquare_topA_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_topB_E.png",
+            "group": "MyTower",
+            "label": "towerSquare_topB_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_topB_N.png",
+            "group": "MyTower",
+            "label": "towerSquare_topB_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_topB_S.png",
+            "group": "MyTower",
+            "label": "towerSquare_topB_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_topB_W.png",
+            "group": "MyTower",
+            "label": "towerSquare_topB_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_topC_E.png",
+            "group": "MyTower",
+            "label": "towerSquare_topC_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_topC_N.png",
+            "group": "MyTower",
+            "label": "towerSquare_topC_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_topC_S.png",
+            "group": "MyTower",
+            "label": "towerSquare_topC_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/towerSquare_topC_W.png",
+            "group": "MyTower",
+            "label": "towerSquare_topC_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/weapon_ballista_E.png",
+            "group": "MyTower",
+            "label": "weapon_ballista_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/weapon_ballista_N.png",
+            "group": "MyTower",
+            "label": "weapon_ballista_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/weapon_ballista_S.png",
+            "group": "MyTower",
+            "label": "weapon_ballista_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/weapon_ballista_W.png",
+            "group": "MyTower",
+            "label": "weapon_ballista_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/weapon_blaster_E.png",
+            "group": "MyTower",
+            "label": "weapon_blaster_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/weapon_blaster_N.png",
+            "group": "MyTower",
+            "label": "weapon_blaster_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/weapon_blaster_S.png",
+            "group": "MyTower",
+            "label": "weapon_blaster_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/weapon_blaster_W.png",
+            "group": "MyTower",
+            "label": "weapon_blaster_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/weapon_cannon_E.png",
+            "group": "MyTower",
+            "label": "weapon_cannon_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/weapon_cannon_N.png",
+            "group": "MyTower",
+            "label": "weapon_cannon_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/weapon_cannon_S.png",
+            "group": "MyTower",
+            "label": "weapon_cannon_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/weapon_cannon_W.png",
+            "group": "MyTower",
+            "label": "weapon_cannon_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/weapon_catapult_E.png",
+            "group": "MyTower",
+            "label": "weapon_catapult_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/weapon_catapult_N.png",
+            "group": "MyTower",
+            "label": "weapon_catapult_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/weapon_catapult_S.png",
+            "group": "MyTower",
+            "label": "weapon_catapult_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/weapon_catapult_W.png",
+            "group": "MyTower",
+            "label": "weapon_catapult_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/woodStructure_E.png",
+            "group": "MyTower",
+            "label": "woodStructure_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/woodStructure_high_E.png",
+            "group": "MyTower",
+            "label": "woodStructure_high_E",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/woodStructure_high_N.png",
+            "group": "MyTower",
+            "label": "woodStructure_high_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/woodStructure_high_S.png",
+            "group": "MyTower",
+            "label": "woodStructure_high_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/woodStructure_high_W.png",
+            "group": "MyTower",
+            "label": "woodStructure_high_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/woodStructure_N.png",
+            "group": "MyTower",
+            "label": "woodStructure_N",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/woodStructure_S.png",
+            "group": "MyTower",
+            "label": "woodStructure_S",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/MyTower/woodStructure_W.png",
+            "group": "MyTower",
+            "label": "woodStructure_W",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_E-1.png",
+            "group": "UserAstro",
+            "label": "astronautA_E-1",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_E-2.png",
+            "group": "UserAstro",
+            "label": "astronautA_E-2",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_E-3.png",
+            "group": "UserAstro",
+            "label": "astronautA_E-3",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_N-1.png",
+            "group": "UserAstro",
+            "label": "astronautA_N-1",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_N-2.png",
+            "group": "UserAstro",
+            "label": "astronautA_N-2",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_N-3.png",
+            "group": "UserAstro",
+            "label": "astronautA_N-3",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_NE-1.png",
+            "group": "UserAstro",
+            "label": "astronautA_NE-1",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_NE-2.png",
+            "group": "UserAstro",
+            "label": "astronautA_NE-2",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_NE-3.png",
+            "group": "UserAstro",
+            "label": "astronautA_NE-3",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_NW-1.png",
+            "group": "UserAstro",
+            "label": "astronautA_NW-1",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_NW-2.png",
+            "group": "UserAstro",
+            "label": "astronautA_NW-2",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_NW-3.png",
+            "group": "UserAstro",
+            "label": "astronautA_NW-3",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_S-1.png",
+            "group": "UserAstro",
+            "label": "astronautA_S-1",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_S-2.png",
+            "group": "UserAstro",
+            "label": "astronautA_S-2",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_S-3.png",
+            "group": "UserAstro",
+            "label": "astronautA_S-3",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_SE-1.png",
+            "group": "UserAstro",
+            "label": "astronautA_SE-1",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_SE-2.png",
+            "group": "UserAstro",
+            "label": "astronautA_SE-2",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_SE-3.png",
+            "group": "UserAstro",
+            "label": "astronautA_SE-3",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_SW-1.png",
+            "group": "UserAstro",
+            "label": "astronautA_SW-1",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_SW-2.png",
+            "group": "UserAstro",
+            "label": "astronautA_SW-2",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_SW-3.png",
+            "group": "UserAstro",
+            "label": "astronautA_SW-3",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_W-1.png",
+            "group": "UserAstro",
+            "label": "astronautA_W-1",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_W-2.png",
+            "group": "UserAstro",
+            "label": "astronautA_W-2",
+            "cimage": {
+                "ctx": {}
+            }
+        },
+        {
+            "src": "./img/asset/UserAstro/astronautA_W-3.png",
+            "group": "UserAstro",
+            "label": "astronautA_W-3",
+            "cimage": {
+                "ctx": {}
+            }
+        }
+
+]

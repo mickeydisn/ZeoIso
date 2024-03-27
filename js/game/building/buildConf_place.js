@@ -7,12 +7,12 @@ const __Bx = ["B1", "B2", "B3", "B4"]
 
 
 export class BuildConf_Place {
-    constructor() {
-        this.growLoopCount = 50;
-        this.endLoopMax = 2000;
+    constructor(conf={}) {
+        this.growLoopCount = conf.growLoopCount ? conf.growLoopCount : 50
+        this.endLoopMax = conf.endLoopMax ? conf.endLoopMax : 200
+
         this.buildEmpty = false;
         this.nearAdvance = false;
-
 
         this.growTileTag = ['B0', "BsR", "BsL", "BcL1", "BcR1", "BcL2", "BcR2", 'BfR', 'BfL']
         this.emptyTileTag = ["E0", "E1"]

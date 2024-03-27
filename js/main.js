@@ -9,6 +9,7 @@ import { WidjetAssetList } from './game/menu/widjetAssetList.js';
 import { WidjetMiniMap } from './game/menu/widjetMiniMap.js';
 import { GlabalState } from './game/globalState.js';
 import { WidjetActions } from './game/menu/widjetActions.js';
+import { WidjetActionsUtils } from './game/menu/widjetActionsUtils.js';
 
 
 export class Main {
@@ -41,15 +42,16 @@ export class Main {
     start2() {
         this.globalState = new GlabalState()
 
-        this.world = new World();
-        this.world.assetLoader = this.assetLoader;
-        this.world.globalState = this.globalState;
+        this.world = new World(this.assetLoader, this.globalState);
 
+
+        // World Main map 
         {
             const div = this.initMapDiv()
             this.interfaceIso = new InterfaceIso(this.world, div);
         }
 
+        // Menu
         {
             const div = this.body.append('div')
             this.widjetActions = new WidjetActions(this.world, div)
@@ -58,6 +60,13 @@ export class Main {
             const div = this.body.append('div')
             this.widjetAssetList = new WidjetAssetList(this.world, div)
         }
+        {
+            const div = this.body.append('div')
+            this.widjetActionsUtils = new WidjetActionsUtils(this.world, div)
+        }
+
+
+        // MiniMap
         {
             const div = this.body.append('div')
             this.widjetMiniMap = new WidjetMiniMap(this.world, div);
@@ -109,9 +118,6 @@ export class Main {
     }
 
 
-    
-
-
     bindKeyboard() {
 
         const BindThis = this;
@@ -132,9 +138,9 @@ export class Main {
 
         // add pressed key loop. 
         const keyControle = function() {
-            BindThis.world.player.keyLoopControle(keyPressed);
+            this.world.player.keyLoopControle(keyPressed);
         };
-        d3.interval(keyControle, 20);
+        d3.interval(keyControle.bind(this), 20);
         // d3.timer(keyControle);  
 
     }

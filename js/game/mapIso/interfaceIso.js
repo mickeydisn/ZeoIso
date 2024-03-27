@@ -263,26 +263,31 @@ export class InterfaceIso {
         const yy = size - y - 1;
         const metaTile = this.tilesMatrix.tiles[xx][yy];
 
-        const currentlvl = (metaTile.lvl - this.tilesMatrix.avgLvl) * .3;
+        let currentlvl = (metaTile.lvl - this.tilesMatrix.avgLvl) * 1/3;
 
         const lpx = -Math.floor((currentlvl) * 55)
         this.selectedTile[x][y].style("translate", `${lpx}px ${lpx}px`)
-        // console.log(metaTile , tiles.avgLvl)
 
         const height = 1
         const alpha = this.tileAlpha(x, y)
         const color = new Color(metaTile.color[0], metaTile.color[1], metaTile.color[2], alpha)
 
+        /*
+        if (metaTile.isWater) {
+            currentlvl = metaTile.waterLvl
+        }
+        */
+       
         this.iso.add(Shape.SurfaceFlat(Point(xx, yy, currentlvl - height), 1, 1, height), color);
 
         {
-            const diffLvl = (metaTile.lvl - this.tilesMatrix.tiles[xx][yy-1].lvl) * .3;
+            const diffLvl = (metaTile.lvl - this.tilesMatrix.tiles[xx][yy-1].lvl) * 1/3;
             if (diffLvl > 0) {
                 this.iso.add(Shape.SurfaceSE(Point(xx, yy, currentlvl - diffLvl), 1, 1, diffLvl), color);
             }
         }
         {
-            const diffLvl = (metaTile.lvl - this.tilesMatrix.tiles[xx-1][yy].lvl) * .3;
+            const diffLvl = (metaTile.lvl - this.tilesMatrix.tiles[xx-1][yy].lvl) * 1/3;
             if (diffLvl > 0) {
                 this.iso.add(Shape.SurfaceSW(Point(xx, yy, currentlvl - diffLvl), 1, 1, diffLvl), color);
             }
@@ -310,7 +315,7 @@ export class InterfaceIso {
         const metaTile = this.tilesMatrix.tiles[xx][yy];
         const centerTile = this.tilesMatrix.tiles[size / 2 - 1][size / 2 - 1]
 
-        const currentlvl = (metaTile.lvl - this.tilesMatrix.avgLvl) * .3;
+        const currentlvl = (metaTile.lvl - this.tilesMatrix.avgLvl) * 1/3;
 
         const lpx = -Math.floor((currentlvl) * 55)
         this.selectedTile[x][y].style("translate", `${lpx}px ${lpx}px`)

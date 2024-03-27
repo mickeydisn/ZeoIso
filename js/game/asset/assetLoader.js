@@ -7,9 +7,11 @@ export class AssetLoader {
         console.log('== Load Asset Tree == ')
         
 
-        this.loadAssetTree();
-        console.log(this.assetList)
-        // this.assetList = assetConfig;
+        // 
+        // this.loadAssetTree();
+        //console.log(this.assetList)
+        
+        this.assetList = assetConfig;
 
         this.assetTree = Object.fromEntries(this.assetList.map(assetConf => [assetConf.label, assetConf]))
 
@@ -84,7 +86,7 @@ export class AssetLoader {
         } else {
             const [keyParent, canvasFilter] = key.split('#')
             if (this.assetTree[keyParent]) {
-                console.log('-Create New FilterColor Asset ')
+                // console.log('-Create New FilterColor Asset ')
 
                 const parentCimage = this.assetTree[keyParent].cimage
                 const canvasFilterConf = AssetUtils.canvasFilterStrToValue(canvasFilter)

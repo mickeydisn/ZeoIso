@@ -317,6 +317,8 @@ body {
   right:-40px;
 }
 
+
+
 .buttMenuBox#miniMap > label {
   top: calc(70px);
 }
@@ -330,6 +332,25 @@ body {
 .buttMenuBox#tileAsset > label {
   top: calc(70px + 50px + 80px + 50px);
 }
+.buttMenuBox#utilsAction > label {
+  top: calc(70px + 50px + 80px + 50px + 50px);
+}
+
+
+
+
+.buttMenuBox#KeyBoard > label {
+  top: 0;
+}
+.buttMenuBox#KeyBoard > label::before {
+  content: '⌨️🇫🇷';
+  font-size: .8rem;
+}
+
+.buttMenuBox#KeyBoard > input:checked ~ label::before {
+  content: '⌨️🇶';
+  font-size: .8rem;
+}
 
 
 
@@ -339,6 +360,88 @@ body {
   display: block;
   z-index: 50;
 }
+
+
+/* ----------------------------------------------- */
+/* SWITCH 
+/* ----------------------------------------------- */
+
+  /*
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+*/  
+.buttMenuBox > input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.buttMenuBox > label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  background-color: #898989;
+  height: 30px;
+  width: 30px;
+  margin-top:5px;
+  margin-right:5px;
+  font-size: 1.1em;
+  transition-duration: .5s;
+}
+
+.buttMenuBox > label:hover {
+  background-color: #898989;
+  margin-top:0px;
+  margin-right:0px;
+  height: 40px;
+  width: 40px;
+  font-size: 1.6em;
+  transition-duration: .5s;
+}
+
+.buttMenuBox.switch input:checked ~ label {
+  background-color: #DEDEDE;
+  margin-top:0px;
+  margin-right:0px;
+  height: 40px;
+  width: 40px;
+  font-size: 1.6em;
+  transition-duration: .5s;
+}
+
+.buttMenuBox input:checked ~ label:hover {
+  background-color: #898989;
+  transition-duration: .5s;
+
+}
+
+
+.buttMenuBox .slider {
+  display: flex;
+}
+
+.buttMenuBox input ~ .slider {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s .5s, opacity .5s linear;
+}
+
+.buttMenuBox input:checked ~ .slider {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s , opacity .5s linear;
+  /*
+  display: flex;
+  opacity: 1;
+  */
+}
+
 
 /* ----------------------------------------------- */
 /* MenuBox MAIN 
@@ -363,7 +466,7 @@ body {
 
 .widjetMenuBox#floorAction {
   top: 55px;
-  height: 400px;
+  height: 80vh;
   padding-top: 0.1rem;
 }
 .widjetMenuBox#tileAsset {
@@ -371,13 +474,17 @@ body {
   height: 70vh;
 
 }
-
+.widjetMenuBox#utilsAction {
+  top: 55px;
+  height: 80vh;
+  padding-top: 0.1rem;
+}
 
 /* ----------------------------------------------- */
 /* MenuBox FLORE ACTION 
 /* ----------------------------------------------- */
 
-.floorAction {
+.menuAction {
   width: 300px;
   text-align: center;
   overflow: scroll;
@@ -385,11 +492,26 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 
 }
-.floorAction > .row {
+.menuAction > .row {
   grid-column: 1 / 5;
 }
 
-.floorAction > .cell {
+.menuAction > .row.action {
+  grid-column: 1 / 5;
+  cursor: pointer;
+  text-align: left;
+  padding: .2rem 0 .1rem 1rem;
+  background-color: #DEDEDE;
+  transition: 1s;
+  font-weight: 100;
+  font-size: 1rem;
+}
+.menuAction > .row.action:hover {
+  background-color: #AEAEAE;
+  transition: 1s;
+}
+
+.menuAction > .cell {
   display: inline-block;
   width: 64px; 
   height: 64px;
@@ -397,35 +519,46 @@ body {
   overflow: hidden;
   border: 3px solid #DEDEDE;
   margin: 2px;
+  cursor: grab;
+}
+.menuAction > .cell.empty {
+  cursor: pointer;
 }
 
-.floorAction > .cell >  .label {
+.menuAction > .cell >  .label {
   position: absolute;
   font-size: .8rem;
   padding-left: .1rem;
 }
 
+.menuAction > .cell.assetList {
+  font-size: .8rem;
+  bottom: 0px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  padding-bottom: .1rem;
+}
 
-.floorAction > .row > .smalGrid {
+.menuAction > .row > .smalGrid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
-.floorAction > .row > .smalGrid > div {
-  width: 20px; 
-  height: 20px;
-  margin: -1px;
+.menuAction > .row > .smalGrid > div {
+  width: 19px;
+  height: 19px;
   background-color: #000;
   border: 3px solid #AEAEAE;
 }
 
 
 
-.floorAction > .row.input {
+.menuAction > .row.input {
   display: grid;
   grid-template-columns: 1.5em 2.5em 1.5em;
 }
 
-.floorAction > .row.input  .clickBox {
+.menuAction > .row.input  .clickBox {
   display: flex;
   overflow: hidden;
   cursor: pointer;
@@ -436,11 +569,13 @@ body {
   border-radius: 7px;
 }
 
-.floorAction > .row.input  .centerBox {
+.menuAction > .row.input  .centerBox {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+
 
 /* ----------------------------------------------- */
 /* MenuBox ASSET SELECT 
@@ -512,6 +647,7 @@ body {
 
 
 /* ----------------------------------------------- */
+/* MENU BOX TILE ASSET LIST
 /* ----------------------------------------------- */
 
 
@@ -578,101 +714,21 @@ body {
 }
 
 /* ----------------------------------------------- */
-/* SWITCH 
-/* ----------------------------------------------- */
-
-  /*
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-*/  
-.switch > input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.switch > label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-
-  background-color: #898989;
-  height: 30px;
-  width: 30px;
-  margin-top:5px;
-  margin-right:5px;
-  font-size: 1.1em;
-  transition-duration: .5s;
-}
-
-.switch > label:hover {
-  background-color: #898989;
-  margin-top:0px;
-  margin-right:0px;
-  height: 40px;
-  width: 40px;
-  font-size: 1.6em;
-  transition-duration: .5s;
-}
-
-.buttMenuBox input:checked ~ label {
-  background-color: #DEDEDE;
-  margin-top:0px;
-  margin-right:0px;
-  height: 40px;
-  width: 40px;
-  font-size: 1.6em;
-  transition-duration: .5s;
-}
-
-.buttMenuBox input:checked ~ label:hover {
-  background-color: #898989;
-  transition-duration: .5s;
-
-}
-
-
-.buttMenuBox .slider {
-  display: flex;
-}
-
-.buttMenuBox input ~ .slider {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s .5s, opacity .5s linear;
-}
-
-.buttMenuBox input:checked ~ .slider {
-  visibility: visible;
-  opacity: 1;
-  transition: visibility 0s , opacity .5s linear;
-  /*
-  display: flex;
-  opacity: 1;
-  */
-}
-
-/* ----------------------------------------------- */
 /* Minimap
 /* ----------------------------------------------- */
 
 
 #mainMiniMap {
-  z-index: 50;
+  z-index: 350;
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: -80px;
-  left: 40px;
+  top: -210px;
+  left: 80px;
   background: none;
   width: 400px;
   height: 400px;
-  transform: rotateX(56deg) rotateY(0deg) rotateZ(-134deg);
+  transform: rotateX(60deg) rotateY(0deg) rotateZ(-135deg);
 }
 
 #mainMiniMap > canvas {
@@ -702,6 +758,9 @@ body {
   display: flex;
 }
 
+.isoDivBox:hover {
+  z-index: 101;
+}
 
 .isoDivBox .content {
   position: relative;
@@ -734,29 +793,20 @@ body {
 }
 
 .isoDivBox input ~ textarea {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s .5s, opacity .5s linear;
   display:none
 }
 
 .isoDivBox input:checked ~ textarea {
   display:flex;
-  visibility: visible;
-  opacity: 1;
-  transition: visibility 0s , opacity .5s linear;
 }
 
-.isoDivBox input ~ #Markdown {
+.isoDivBox input ~ .Markdown {
   display:flex;
-  visibility: visible;
-  opacity: 1;
-  transition: visibility 0s , opacity .5s linear;
+  flex-direction: column;
+  max-height: 70vh;
+  overflow: scroll;
 }
 
 .isoDivBox input:checked ~ .Markdown {
   display:none;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s .5s, opacity .5s linear;
 }

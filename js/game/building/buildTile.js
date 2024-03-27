@@ -206,7 +206,7 @@ export class BuildTile {
                 }
 
             }
-            console.log('===== Filter Axe ', axe, this.mustBeFill[axe] != null, [...tilesOptions])
+            // console.log('===== Filter Axe ', axe, this.mustBeFill[axe] != null, [...tilesOptions])
             // console.log(">filterNearTiles", axe, this.mustBeFill[axe] != null)
             // tilesOptions.forEach(o => {
             //    console.log('       ', o.near.map(x => x.is))
@@ -217,7 +217,7 @@ export class BuildTile {
         })
 
         if (tilesOptions.length == 0) {
-            console.log("EMPTY")
+            // console.log("EMPTY")
             // this.tile.getLog()
         }
 
@@ -239,7 +239,7 @@ export class BuildTile {
             this.applyBuild(pickedItemConf)
         } else {
             const till = this.buildMarkNearTile();
-            console.log('ERROR NOT FOUND ',  this.x, this.y ,  this, this.mustBeFill);
+            // console.log('ERROR NOT FOUND ',  this.x, this.y ,  this, this.mustBeFill);
             this.ta.colorSquare(this.x, this.y, 1, [255, 0, 0])
 
         }

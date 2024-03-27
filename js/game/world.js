@@ -12,7 +12,11 @@ import { Player } from './player.js';
 
 export class World {
 
-    constructor() {
+    constructor(assetLoader, globalState) {
+
+        this.assetLoader = assetLoader;
+        this.globalState = globalState;
+
         this.size = Math.pow(2, 10);
         this.width = this.size;
         this.height = this.size;
@@ -43,14 +47,14 @@ export class World {
         
         // this.player.setCenter(1500, 400)
         // this.player.setCenter(2000, 1000)
-        // new WorldStart(this).start()
-        //new WorldCv(this).start()
-        
-        //beach hill
-        this.player.setCenter(492, -376)
-        
+        new WorldStart(this).start()
+        // new WorldCv(this).start()
 
-        this.player.setCenter(1056, 147)
+        // = beach hill
+        //this.player.setCenter(492, -376)
+        
+        // == Near Cliff
+        // this.player.setCenter(1056, 147)
         // ========================
         // ========================
 
