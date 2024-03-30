@@ -18,7 +18,7 @@ export class WidjetActions {
         // Create Switch Button 
         this.mainDiv.html( `
 <div class="buttMenuBox  switch" id="floorAction">
-        <input type="checkbox" id="checkbox_menuBox_floorAction" name="MenuBox">
+        <input type="radio" id="checkbox_menuBox_floorAction" name="MenuBox">
         <label for="checkbox_menuBox_floorAction">🏗</label>
         <div class="widjetMenuBox slider" id="floorAction" >
             <div id="content" class="menuAction">  </div>
@@ -46,23 +46,6 @@ export class WidjetActions {
 
         // --------------------------------
 
-        this.contentBox.append('div').classed('row', true).text("Asset Actions")
-        const BPlace = new ButtTileActionAsset(this.GS, this.contentBox, "Place", {func:"itemForceKey"})
-        new ButtTileActionAsset(this.GS, this.contentBox, "Add", {func:"itemForceKey"})
-        this.contentBox.append('div').classed('cell', true)
-
-        this.contentBox.append('div')
-            .classed('cell', true)
-            .classed('assetList', true)
-            .text('Asset List⇩')
-            .on('click', _ => {
-                const openList = this.GS.get('WidjetAssetList.isVisibel')
-                this.GS.set('WidjetAssetList.isVisibel', !openList)
-                this.GS.set("WidjetActions.currentButt", BPlace)
-
-            })
-
-        // --------------------------------
         // --------------------------------
         this.contentBox.append('div').classed('row', true).text("SIZE SELECTOR")
 
@@ -118,7 +101,7 @@ export class WidjetActions {
 
 
 
-class ButtTileAction {
+export class ButtTileAction {
     constructor(GS, parentDiv, key, funcConf) {
         this.GS = GS;
         this.key = key;
@@ -159,47 +142,6 @@ class ButtTileAction {
     }
 }
 
-
-class ButtTileActionAsset extends ButtTileAction {
-    constructor(GS, parentDiv, key, funcConf) {
-        super(GS, parentDiv, key, funcConf)
-        
-        this.GS.sub("WidjetAssetList.currentAssetCanvas", "ButtTileActionAsset_" + key, 
-            this.updateSelectedAssetCanvas.bind(this))
-    }
-
-    get funcConf() {
-        this._funcConf.assetKey = this.GS.get("WidjetAssetList.currentAssetKey");
-        return this._funcConf;
-    }
-
-    initDiv() {
-        super.initDiv()
-        this.contentCanvas = this.mainDiv.append("canvas")
-                .attr("height", 64)
-                .attr("width", 64)
-
-        this.updateCanvas();
-    }
-
-    updateSelectedAssetCanvas(canvas) {
-        this.selectedAsssetCanvas = canvas;
-        this.updateCanvas()
-    }
-
-    updateCanvas() {
-        
-        if (this.selectedAsssetCanvas) {
-            const ctx = this.mainDiv.select('canvas').node().getContext('2d')
-            ctx.clearRect(0, 0, 64, 64)
-            ctx.drawImage(this.selectedAsssetCanvas, 0, 0, 256, 256, 0, 0, 64, 64);
-        } else {
-            const ctx = this.mainDiv.select('canvas').node().getContext('2d')
-            ctx.clearRect(0, 0, 64, 64)
-        }
-    }
-
-}
 
 
 

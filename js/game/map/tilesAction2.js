@@ -20,29 +20,31 @@ export class TilesAction2 {
 			lvlAvgBorder: this.lvlAvgBorder.bind(this),
 
 			colorSquare: this.colorSquare.bind(this),
+
+			addBoxMD : this.addBoxMD.bind(this),
 		}
 	}
 	//--------------------
 
-	doAction(x, y, conf) {
-		this.index[conf.func](x, y, conf)
+	doAction(conf) {
+		this.index[conf.func](conf)
 	}
 
-	itemForceKey(x, y, conf) {
+	itemForceKey(conf) {
 		if (!conf.assetKey) return;
-		const tile = this.fm.getTile(x, y);
+		const tile = this.fm.getTile(conf.x, conf.y);
 		tile.items.splice(0, tile.items.length)
 		tile.items.push({t: 'Asset', key: conf.assetKey, lvl:0})
 	}
 
-	clearItem(x, y) {
-		const tile = this.fm.getTile(x, y);
+	clearItem(conf) {
+		const tile = this.fm.getTile(conf.x, conf.y);
 		tile.items.splice(0, tile.items.length);
 	}
 
-	clearItemSquare(x, y, conf) {
+	clearItemSquare(conf) {
 		conf.size = conf.size ? conf.size : 1		
-		const box = new TilesMatrix(this.world, conf.size, x, y);
+		const box = new TilesMatrix(this.world, conf.size, conf.x, conf.y);
 		box.tiles.forEach(row => {
 			row.forEach(cellTile => {
 				cellTile.items.splice(0, cellTile.items.length)
@@ -52,18 +54,18 @@ export class TilesAction2 {
 
 	// -------------------
 
-	lvlSet(x, y, conf) {
-		const tile = this.fm.getTile(x, y);
+	lvlSet(conf) {
+		const tile = this.fm.getTile(conf.x, conf.y);
 		tile.lvl = conf.lvl;
 	}
 
-	lvlUp(x, y, conf) {
-		const tile = this.fm.getTile(x, y);
+	lvlUp(conf) {
+		const tile = this.fm.getTile(conf.x, conf.y);
 		tile.lvl += conf.lvl;
 	}
 
-	lvlUpSquare(x, y, conf) {
-		const box = new TilesMatrix(this.world, conf.size, x, y);
+	lvlUpSquare(conf) {
+		const box = new TilesMatrix(this.world, conf.size, conf.x, conf.y);
 		box.tiles.forEach(row => {
 			row.forEach(cellTile => {
 				cellTile.lvl += conf.lvl
@@ -71,9 +73,9 @@ export class TilesAction2 {
 		})
 	}
 
-	lvlFlatSquare(x, y, conf) {
-		const tile = this.fm.getTile(x, y);
-		const box = new TilesMatrix(this.world, conf.size, x, y);
+	lvlFlatSquare(conf) {
+		const tile = this.fm.getTile(conf.x, conf.y);
+		const box = new TilesMatrix(this.world, conf.size, conf.x, conf.y);
 		box.tiles.forEach(row => {
 			row.forEach(cellTile => {
 				cellTile.lvl = tile.lvl
@@ -81,9 +83,9 @@ export class TilesAction2 {
 		})
 	}
 
-	lvlAvg(x, y, conf) {
-		const tile = this.fm.getTile(x, y);
-		const box = new TilesMatrix(this.world, conf.size, x, y);
+	lvlAvg(conf) {
+		const tile = this.fm.getTile(conf.x, conf.y);
+		const box = new TilesMatrix(this.world, conf.size, conf.x, conf.y);
 		let sumLvl = 0;
 		box.tiles.forEach(row => {
 			row.forEach(cellTile => {
@@ -94,52 +96,53 @@ export class TilesAction2 {
 		tile.lvl = avgLvl
 	}
 
-	lvlAvgSquare(x, y, conf) {
-		const tile = this.fm.getTile(x, y);
-		const box = new TilesMatrix(this.world, conf.size, x, y);
+	lvlAvgSquare(conf) {
+		const box = new TilesMatrix(this.world, conf.size, conf.x, conf.y);
 		box.tiles.forEach(row => {
 			row.forEach(cellTile => {
-				this.lvlAvg(cellTile.x, cellTile.y, {size:3})
+				this.lvlAvg({x:cellTile.x, y:cellTile.y, size:3})
 			})
 		})
 	}
 
-	lvlAvgBorder(x, y, conf) {
+	lvlAvgBorder(conf) {
+		const x = conf.x
+		const y = conf.y
 		const fCenter = Math.floor(conf.size / 2)
 		const rangeX = Array.from({ length: conf.size }, (_, index) => index - fCenter + x );
 		const rangeY = Array.from({ length: conf.size }, (_, index) => index - fCenter + y );
 
 		rangeX.forEach(xx => {
-			this.lvlAvg(xx, y - fCenter, {size:3});
-			this.lvlAvg(xx, y + (conf.size - fCenter), {size:3});
+			this.lvlAvg({x:xx, y:y - fCenter, size:3});
+			this.lvlAvg({x:xx, y:y + (conf.size - fCenter), size:3});
 		})
 		rangeY.forEach(yy => {
-			this.lvlAvg(x - fCenter, yy, {size:3});
-			this.lvlAvg(x + (conf.size - fCenter), yy, {size:3});
+			this.lvlAvg({x:x - fCenter, y:yy, size:3});
+			this.lvlAvg({x:x + (conf.size - fCenter), y:yy, size:3});
 		})
 
 	}
 
 
-	color(x, y, conf) {
+	color(conf) {
 		const c = [...conf.color]
 		// add alpha is not exist 
 		if (c.length == 3) c.push(255);
 
 		const color = new Uint8Array(c);
-		const tile = this.fm.getTile(x, y);
+		const tile = this.fm.getTile(conf.x, conf.y);
 
 		tile.color = color
 	}
 
 
-	colorSquare(x, y, conf) {
+	colorSquare(conf) {
 		const c = [...conf.color]
 		// add alpha is not exist 
 		if (c.length == 3) c.push(255);
 
 		const color = new Uint8Array(c);
-		const box = new TilesMatrix(this.world, conf.size, x, y);
+		const box = new TilesMatrix(this.world, conf.size, conf.x, conf.y);
 		box.tiles.forEach(row => {
 			row.forEach(cellTile => {
 				cellTile.color = color
@@ -148,8 +151,8 @@ export class TilesAction2 {
 
 	}
 
-	addBoxMD(x, y, conf) {
-		const tile = this.fm.getTile(x, y);
+	addBoxMD(conf) {
+		const tile = this.fm.getTile(conf.x, conf.y);
 		tile.items.push({t:'Box', conf})
 	}
 

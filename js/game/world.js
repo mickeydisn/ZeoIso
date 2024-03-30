@@ -1,5 +1,6 @@
 
 
+import { WorldBiome } from './config/wordBiome.js';
 import { WorldCv } from './config/wordCv.js';
 import { WorldStart } from './config/wordStart.js';
 import {FactoryBiomes} from './map/factoryBiomes.js'
@@ -47,9 +48,12 @@ export class World {
         
         // this.player.setCenter(1500, 400)
         // this.player.setCenter(2000, 1000)
-        new WorldStart(this).start()
+        // new WorldStart(this).start()
         // new WorldCv(this).start()
 
+        this.player.setCenter( 4278, -3031)
+
+        new WorldBiome(this).start()
         // = beach hill
         //this.player.setCenter(492, -376)
         
@@ -65,16 +69,15 @@ export class World {
         // tile.getLog()
         const curentButt = this.globalState.get("WidjetActions.currentButt")
         const curentSize = this.globalState.get("WidjetActions.currentSize")
-        const conf = {...curentButt.funcConf , size : curentSize}
-        console.log(curentButt.funcConf)
-        this.doAction(x, y, conf )
+        const conf = {...curentButt.funcConf , size : curentSize, x:x, y:y}
+        this.doAction(conf)
         // this.GS.set('InterfaceIso.ClickTile', {x: xx - (this.size/2), y: yy - (this.size/2)})
 
     }
 
 
-    doAction(x, y, actionConf) {
-        this.tilesActions2.doAction(x, y, actionConf)
+    doAction(actionConf) {
+        this.tilesActions2.doAction(actionConf)
     }
 
 

@@ -15,16 +15,18 @@ export class WorldCv {
  
         let [x, y] = this.tilesMatrix.getPos();
 
+        /*
         // Name 
         [...Array(20)].map((_, idx )=> {
             this.ta.colorSquare(x, y+idx*2, 3, [0, 0, 0, 255])
             this.ta.colorSquare(x, y+idx*2, 1, [200, 200, 200, 255])
             this.ta.clearItemSquare(x, y+idx*2, 5)
         })
+        */
         this.name(x, y);
 
         // CV
-        y += 18;
+        x += 6;
 
         this.drawCV(x, y);
 
@@ -59,10 +61,10 @@ export class WorldCv {
         {
             const md = `
 <div style="display:flex">
-    <img src="./img/Portai1.jpg" width="100px" height="100px">
+    <img src="./img/Portrai2.png" width="150px" height="150px">
     <div style="display: flex;flex-direction: column;justify-content: center;align-items: flex-end;">
 
-## Hello to my World
+## Hello 
 
  > #### Julien SCHLUTH
  > ###### Paris - France
@@ -73,8 +75,8 @@ export class WorldCv {
             this.ta.addBoxMD(x, y, {md:md, width:'300px'})
         }
         {
-            const md = "#### ↖️ Go to my CV ↖️"
-            this.ta.addBoxMD(x+2, y+8, {md:md, width:'140px'})
+            const md = "#### ↗️ My CV ↗️"
+            this.ta.addBoxMD(x+8, y+2, {md:md, width:'140px', style:"background-color:#333; color:#FFF"})
         }
     }
 
@@ -149,7 +151,7 @@ export class WorldCv {
 
 
             `
-            this.ta.addBoxMD(x, y, {md:md, width:'400px'})
+            this.ta.addBoxMD(x, y, {md:md, width:'500px'})
     }
 
     XP2(x, y) { 
@@ -177,7 +179,7 @@ export class WorldCv {
 
 
         `
-        this.ta.addBoxMD(x, y, {md:md, width:'400px'})
+        this.ta.addBoxMD(x, y, {md:md, width:'500px'})
     }
 
     XP3(x, y) { 
@@ -207,7 +209,7 @@ export class WorldCv {
  to meet changing business needs.
 
         `
-        this.ta.addBoxMD(x, y, {md:md, width:'400px'})
+        this.ta.addBoxMD(x, y, {md:md, width:'500px'})
     }
 
     XP4(x, y) { 
@@ -227,7 +229,7 @@ export class WorldCv {
 
  > Act as a bridge between technical teams and GTM, to anticipate technical requirements enabling the implementation of targeting algorithms. 
           `
-        this.ta.addBoxMD(x, y, {md:md, width:'400px'})
+        this.ta.addBoxMD(x, y, {md:md, width:'500px'})
     }
 
 
@@ -256,7 +258,7 @@ export class WorldCv {
  
 
  `
-        this.ta.addBoxMD(x, y, {md:md, width:'400px'})
+        this.ta.addBoxMD(x, y, {md:md, width:'500px'})
     }
 
 
@@ -281,7 +283,7 @@ export class WorldCv {
  > **1998-2000** - Child Animator / Computer Space Administrator - Metz (57).
 
  `
-        this.ta.addBoxMD(x, y, {md:md, width:'400px'})
+        this.ta.addBoxMD(x, y, {md:md, width:'500px'})
     }
 
 

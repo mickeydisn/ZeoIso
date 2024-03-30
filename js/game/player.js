@@ -7,7 +7,7 @@ export class Player {
         this.GS = this.world.globalState 
         this.fm = world.factoryMap;
 
-        this.speed = .2;
+        this.speed = .3;
         this.lvlJump = 4;
 
         // Real Position (float)
@@ -197,7 +197,7 @@ export class Player {
     }
 
     _directionOfMove(mx, my) {
-
+      /*
         const direction = 
             mx == 0 && my  > 0 ? 'NW' :
               mx  > 0 && my  > 0 ? 'N' :
@@ -208,6 +208,18 @@ export class Player {
             mx  < 0 && my == 0 ? 'SW' :
               mx  < 0 && my  > 0 ? 'W' :
             null
+      */
+            const direction = 
+            mx == 0 && my  > 0 ? 'NW' :
+              mx  > 0 && my  > 0 ? 'N' :
+            mx  > 0 && my == 0 ? 'NE' :
+              mx  > 0 && my  < 0 ? 'E' :
+            mx == 0 && my  < 0 ? 'SE' :
+              mx  < 0 && my  < 0 ? 'S' :
+            mx  < 0 && my == 0 ? 'SW' :
+              mx  < 0 && my  > 0 ? 'W' :
+            null
+      
 
         return direction
     }
@@ -225,23 +237,40 @@ export class Player {
         let move = false;
         let x = 0;
         let y = 0;
+        if (kP['ArrowUp'] || (aze && kP['z']) || (!aze && kP['w'])) {
+          move = true;
+          y = + 1;
+        }
         if (kP['ArrowRight'] || kP['d']) {
           move = true;
           x = + 1;
-        }
-        if (kP['ArrowLeft'] || (aze && kP['q']) || (!aze && kP['a'])) {
-          move = true;
-          x = - 1;
         }
         if (kP['ArrowDown'] || kP['s']) {
           move = true;
           y = - 1;
         }
-        if (kP['ArrowUp'] || (aze && kP['z']) || (!aze && kP['w'])) {
+        if (kP['ArrowLeft'] || (aze && kP['q']) || (!aze && kP['a'])) {
           move = true;
-          y = + 1;
+          x = - 1;
         }
-        this.move(x, y) 
+
+        // Move Rotation , ajuste the movement off the screen oriantation , not on Iso orientation
+        const [xx, yy] = [x, y]
+        /*
+        const [xx, yy] = 
+          x ==  0 && y ==  1 ? [ 1,  1]: // z = zd 
+          x ==  1 && y ==  1 ? [ 1,  0]: // zd = d 
+          x ==  1 && y ==  0 ? [ 1, -1]: // d = ds 
+
+          x ==  1 && y == -1 ? [ 0, -1]: // ds = s
+          x ==  0 && y == -1 ? [-1, -1]: // s = sq 
+          x == -1 && y == -1 ? [-1,  0]: // sq = q
+          x == -1 && y ==  0 ? [-1,  1]: // q = qz
+          x == -1 && y ==  1 ? [ 0,  1]: // qz = z
+          [0, 0]
+        */
+
+        this.move(xx, yy) 
       }
 
 }

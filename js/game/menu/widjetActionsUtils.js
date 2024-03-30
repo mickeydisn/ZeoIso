@@ -5,6 +5,8 @@ const configPlayerTeleport = [
     {label:"Cliff",         x:1028,     y:147},
     {label:"Top Montagne",  x:-1218,    y:1164},
     {label:"0, 0",          x:0,        y:0},
+
+    {label:"Flat",          x:1036,        y:341},
 ]
 
 export class WidjetActionsUtils {
@@ -32,7 +34,7 @@ export class WidjetActionsUtils {
 
 
 <div class="buttMenuBox  switch" id="utilsAction">
-        <input type="checkbox" id="checkbox_menuBox_utilsAction" name="MenuBox">
+        <input type="radio" id="checkbox_menuBox_utilsAction" name="MenuBox">
         <label for="checkbox_menuBox_utilsAction">🥷</label>
         <div class="widjetMenuBox slider" id="utilsAction" >
             <div id="content" class="menuAction">  </div>

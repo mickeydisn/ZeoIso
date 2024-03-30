@@ -58,6 +58,10 @@
                 // const main = new Main()
                 // main.start()
 
+                const TILE_GEN_ZOOM = 2;
+                const CHUNK_SIZE = 4;
+                const DEFINITION = 1;
+
 
                 export class World {
 
@@ -93,18 +97,102 @@
                         this.ctx.mozImageSmoothingEnabled = false;
                         this.ctx.imageSmoothingEnabled = false;
 
-                        this.ctx.fillstyle = '#000'
-                        this.ctx.fillRect(0, 0, this.width, this.height)
-
+                     
                         console.log('World')
-                        this.fillBiome()
+                        this.fillMap()
+                    }
+
+                    _pixelRawLvl(xx, yy, col, row) {
+
+                        let lvlRaw = this.fg.getRawLvl(xx, yy, TILE_GEN_ZOOM)
+
+                        if (lvlRaw < .25) {
+                            this.ctx.fillStyle = `rgb(${255}, ${255}, ${255}, .9)`;
+                        } else if (lvlRaw > .75) {
+                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${0}, .9)`;
+
+                        } else {
+                            const cFunc = d3.scaleLinear([0, 1], [0, 32]);
+                            const c = (Math.abs(cFunc(lvlRaw)) * 4) % 256
+                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .9)`;
+                        }
+                        this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
+                    }
+
+                    _pixelRawPeak(xx, yy, col, row) {
+                        let lvlPeak = this.fg.getRawPeak(xx, yy, TILE_GEN_ZOOM)
+
+                        if (lvlPeak < .02) {
+                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${255}, .001)`;
+                            this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
+                        } else if (lvlPeak > .4) {
+                            const cFunc = d3.scaleLinear([0, 1], [0, 128]);
+                            const c = (Math.abs(cFunc(lvlPeak)) * 16) % 256
+                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .2)`;
+                            this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
+                        }
+                    }
+
+                    _pixelRawErosion(xx, yy, col, row) {
+                        let lvlEro = this.fg.getRawErosion(xx, yy, TILE_GEN_ZOOM)
+
+                        const cFunc = d3.scaleLinear([0, 1], [0, 128]);
+                        const c = (Math.abs(cFunc(lvlEro)) * 16) % 256
+                        if (lvlEro < .3) {
+                            this.ctx.fillStyle = `rgb(${c}, ${0}, ${0}, .2)`;
+                        } else if (lvlEro > .7) {
+                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${c}, .2)`;
+                        } else {
+                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .01)`;
+                        }
+
+                    }
+
+                    _pixelRawPeakErosion(xx, yy, col, row) {
+                        let lvlPeak = this.fg.getRawPeak(xx, yy, TILE_GEN_ZOOM)
+                        let lvlEro = this.fg.getRawErosion(xx, yy, TILE_GEN_ZOOM)
+
+
+                        const lvlSum = (1 - lvlEro) * lvlPeak
+                        const cFunc = d3.scaleLinear([0, 1], [0, 128]);
+                        const c = (Math.abs(cFunc(lvlSum)) * 16) % 256
+                        if (lvlSum < .002) {
+                            this.ctx.fillStyle = `rgb(${c}, ${0}, ${0}, .9)`;
+                        } else if (lvlSum > .3) {
+                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${c}, .5)`;
+                        } else {
+                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .01)`;
+                        }
+                        this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
                     }
 
 
-                    fillBiome () {
-                        const TILE_GEN_ZOOM = 2;
-                        const CHUNK_SIZE = 4;
-                        const DEFINITION = 1;
+                    _pixelRawFlore(xx, yy, col, row) {
+
+                        let lvlFlore = this.fg.getRawFlore(xx, yy, TILE_GEN_ZOOM)
+
+                        if (lvlFlore < .15) {
+                            this.ctx.fillStyle = `rgb(${255}, ${0}, ${0}, .9)`;
+                        } else if (lvlFlore > .85) {
+                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${255}, .9)`;
+                        } else if (lvlFlore > .45 && lvlFlore < .55) {
+                            this.ctx.fillStyle = `rgb(${0}, ${255}, ${0}, .9)`;
+
+                        } else {
+                            const cFunc = d3.scaleLinear([0, 1], [0, 32]);
+                            const c = (Math.abs(cFunc(lvlFlore)) * 4) % 256
+                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .9)`;
+                        }
+                        this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
+                    }
+
+
+
+                    fillMap () {
+
+                        this.ctx.fillstyle = '#000'
+                        this.ctx.fillRect(0, 0, this.width, this.height)
+
                         
                         const width =  Math.floor(this.width / DEFINITION)
                         const height = Math.floor(this.height / DEFINITION)
@@ -112,87 +200,28 @@
                         const x = 2000 // Math.floor(2000 / CHUNK_SIZE)
                         const y = 400 // Math.floor(400 / CHUNK_SIZE)
 
-                        let min = 0.5;
-                        let max = 0.5;
-
                         // Dessiner le damier
                         for (let row = 0; row < height; row++) {
                             for (let col = 0; col < width; col++) {
                                 const yy = CHUNK_SIZE * (-row + Math.floor(height / 2)) + y 
                                 const xx = CHUNK_SIZE * (col - Math.floor(width / 2)) + x 
                                 
-                                let lvlCont = this.fg.getRawLvl(xx, yy, TILE_GEN_ZOOM)
-                                let lvlPeak = this.fg.getRawPeak(xx, yy, TILE_GEN_ZOOM)
-                                let lvlEro = this.fg.getRawErosion(xx, yy, TILE_GEN_ZOOM)
 
                                 {
                                     const c = this.fg.getLvlColor(xx, yy, TILE_GEN_ZOOM)
                                     this.ctx.fillStyle = `rgb(${c[0]}, ${c[1]}, ${c[2]})`;
                                     this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
                                 }
-                                {
 
+                                this._pixelRawLvl(xx, yy, col, row);
 
-                                    if (lvlCont < .25) {
-                                        this.ctx.fillStyle = `rgb(${255}, ${255}, ${255}, .9)`;
-                                    } else if (lvlCont > .75) {
-                                        this.ctx.fillStyle = `rgb(${0}, ${0}, ${0}, .9)`;
+                                // this._pixelRawPeak(xx, yy, col,row);
 
-                                    } else {
-                                        const cFunc = d3.scaleLinear([0, 1], [0, 32]);
-                                        const c = (Math.abs(cFunc(lvlCont)) * 4) % 256
-                                        this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .9)`;
-                                    }
-                                    // this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
+                                // this._pixelRawErosion(xx, yy, col,row);
 
-                                }
-                                {
-                                                                    
-                                    if (lvlPeak < .02) {
-                                        this.ctx.fillStyle = `rgb(${0}, ${0}, ${255}, .001)`;
-                                        // this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
-                                    } else if (lvlPeak > .4) {
-                                        const cFunc = d3.scaleLinear([0, 1], [0, 128]);
-                                        const c = (Math.abs(cFunc(lvlPeak)) * 16) % 256
-                                        this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .2)`;
-                                        // this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
-                                    } 
-                                    
-
-                                }
-
-                                {
-
-                                    const cFunc = d3.scaleLinear([0, 1], [0, 128]);
-                                    const c = (Math.abs(cFunc(lvlEro)) * 16) % 256
-                                    if (lvlEro < .3) {
-                                        this.ctx.fillStyle = `rgb(${c}, ${0}, ${0}, .2)`;
-                                    } else if (lvlEro > .7) {
-                                        this.ctx.fillStyle = `rgb(${0}, ${0}, ${c}, .2)`;
-                                    } else {
-                                        this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .01)`;
-                                    }
-                                    // this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
-                                    
-                                }
-                                {
-
-                                    
-
-                                    const lvlSum = (1 - lvlEro) * lvlPeak
-                                    const cFunc = d3.scaleLinear([0, 1], [0, 128]);
-                                    const c = (Math.abs(cFunc(lvlSum)) * 16) % 256
-                                    if (lvlSum < .002) {
-                                        this.ctx.fillStyle = `rgb(${c}, ${0}, ${0}, .9)`;
-                                    } else if (lvlSum > .3) {
-                                        this.ctx.fillStyle = `rgb(${0}, ${0}, ${c}, .5)`;
-                                    } else {
-                                        this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .01)`;
-                                    }
-                                    this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
-                                    
-                                }
+                                // this._pixelRawPeakErosion(xx, yy, col,row);
                                 
+                                this._pixelRawFlore(xx, yy, col, row)
                             }
                         }
                         console.log(min, max)

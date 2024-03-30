@@ -229,7 +229,8 @@ export class FactoryGenerator {
     return lvl
   }
 
-  getFlore(x, y, t=0, zoom=1, grain=1) {
+
+  getRawFlore(x, y, t=0, zoom=1, grain=1) {
     grain = grain * 2;
     var f0 = 1/15;
     // var f1 = 0.1;
@@ -244,6 +245,11 @@ export class FactoryGenerator {
     lvl += this._noise(f2 * x + t, f2 * y + t) ;
     // lvl += this._noise(f3 * x + t, f3 * y + t) / 4 ;
     lvl /= 4 + 1 ; //  + 1/4;
+    return lvl
+  }
+
+  getFlore(x, y, t=0, zoom=1, grain=1) {
+    const lvl = this.getRawFlore(x, y, t, zoom, grain)
     return lvl * 255 ;
   }
 
@@ -333,93 +339,13 @@ export class FactoryGenerator {
     lvl -= lvl % 4;
 
     var c = new Uint8Array(this.getBiomeColor(x, y, lvl, zoom, 1));
-    
-    /*
-    if (lvl == this.waterLvl) {
-     // Sand
-     c.set([192, 192, 32, 255]);
-    }
-    if (lvl == this.mountLvl) {
-     // Rock 
-     c.set([64, 64, 64, 255]);
-    }
-    */
-
-    const hsl = this.rgbToHsl(c[0], c[1], c[2]);
-    c.set(this.hslToRgb(hsl[0], hsl[1] * 0.3, hsl[2]));
+    const hsl = rgbToHsl(c[0], c[1], c[2]);
+    c.set(hslToRgb(hsl[0], hsl[1] * 0.3, hsl[2]));
 
     return c
   }
 
-
-  /**
-   * Converts an HSL color value to RGB. Conversion formula
-   * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
-   * Assumes h, s, and l are contained in the set [0, 1] and
-   * returns r, g, and b in the set [0, 255].
-   *
-   * @param   {number}  h       The hue
-   * @param   {number}  s       The saturation
-   * @param   {number}  l       The lightness
-   * @return  {Array}           The RGB representation
-   */
-  hslToRgb (h, s, l) {
-      var r, g, b;
-
-      if(s == 0){
-          r = g = b = l; // achromatic
-      }else{
-          var hue2rgb = function hue2rgb(p, q, t){
-              if(t < 0) t += 1;
-              if(t > 1) t -= 1;
-              if(t < 1/6) return p + (q - p) * 6 * t;
-              if(t < 1/2) return q;
-              if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
-              return p;
-          }
-
-          var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
-          var p = 2 * l - q;
-          r = hue2rgb(p, q, h + 1/3);
-          g = hue2rgb(p, q, h);
-          b = hue2rgb(p, q, h - 1/3);
-      }
-
-      return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
-  }
-
-  /**
-   * Converts an RGB color value to HSL. Conversion formula
-   * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
-   * Assumes r, g, and b are contained in the set [0, 255] and
-   * returns h, s, and l in the set [0, 1].
-   *
-   * @param   {number}  r       The red color value
-   * @param   {number}  g       The green color value
-   * @param   {number}  b       The blue color value
-   * @return  {Array}           The HSL representation
-   */
-  rgbToHsl (r, g, b) {
-      r /= 255, g /= 255, b /= 255;
-      var max = Math.max(r, g, b), min = Math.min(r, g, b);
-      var h, s, l = (max + min) / 2;
-
-      if(max == min){
-          h = s = 0; // achromatic
-      }else{
-          var d = max - min;
-          s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-          switch(max){
-              case r: h = (g - b) / d + (g < b ? 6 : 0); break;
-              case g: h = (b - r) / d + 2; break;
-              case b: h = (r - g) / d + 4; break;
-          }
-          h /= 6;
-      }
-
-      return [h, s, l];
-  }
-
+  /*
   getColor(x, y, zoom=1, grain=1) {
     var lvl0, lvla, lvlb, lvlc, lvld ;
 
@@ -429,16 +355,16 @@ export class FactoryGenerator {
 
     var c  = new Uint8Array([0, 0, 0, 255]);
     var item = this.getItem(x, y, zoom, grain);
-    /*
+    / *
     if (zoom <= 1 && item != null) {
       var floreColor = item.color;
       c.set(floreColor);
 
     } else {
-    */  // get color
+    * /  // get color
     var c = this.getLvlColor(x, y, zoom, grain);
 
-      /*
+      / *
       // Biom Shadow
       if (x * zoom % 16 == 0 || y * zoom % 16 == 0) {
           var zzoom = (zoom > 1) ? 8 * zoom : 8;
@@ -452,7 +378,7 @@ export class FactoryGenerator {
             c.set([(c[0] < 16) ? 0 : c[0] - 16, (c[1] < 16) ? 0 : c[1] - 16, (c[2] < 16) ? 0 : c[2] - 16])
           }
       }
-      */
+      * /
 
       // Lvl Shadow 
       var zzoom = (zoom > 1) ? 8 * zoom : 8;
@@ -476,6 +402,7 @@ export class FactoryGenerator {
 
     return c;
   }
+  */
 
   /* ----------- */
 
@@ -497,4 +424,74 @@ export class FactoryGenerator {
     }
   }
 
+}
+
+
+
+/**
+ * Converts an HSL color value to RGB. Conversion formula
+ * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
+ * Assumes h, s, and l are contained in the set [0, 1] and
+ * returns r, g, and b in the set [0, 255].
+ *
+ * @param   {number}  h       The hue
+ * @param   {number}  s       The saturation
+ * @param   {number}  l       The lightness
+ * @return  {Array}           The RGB representation
+ */
+export function hslToRgb (h, s, l) {
+    var r, g, b;
+
+    if(s == 0){
+        r = g = b = l; // achromatic
+    }else{
+        var hue2rgb = function hue2rgb(p, q, t){
+            if(t < 0) t += 1;
+            if(t > 1) t -= 1;
+            if(t < 1/6) return p + (q - p) * 6 * t;
+            if(t < 1/2) return q;
+            if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+            return p;
+        }
+
+        var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+        var p = 2 * l - q;
+        r = hue2rgb(p, q, h + 1/3);
+        g = hue2rgb(p, q, h);
+        b = hue2rgb(p, q, h - 1/3);
+    }
+
+    return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+}
+
+/**
+ * Converts an RGB color value to HSL. Conversion formula
+ * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
+ * Assumes r, g, and b are contained in the set [0, 255] and
+ * returns h, s, and l in the set [0, 1].
+ *
+ * @param   {number}  r       The red color value
+ * @param   {number}  g       The green color value
+ * @param   {number}  b       The blue color value
+ * @return  {Array}           The HSL representation
+ */
+export function  rgbToHsl (r, g, b) {
+    r /= 255, g /= 255, b /= 255;
+    var max = Math.max(r, g, b), min = Math.min(r, g, b);
+    var h, s, l = (max + min) / 2;
+
+    if(max == min){
+        h = s = 0; // achromatic
+    }else{
+        var d = max - min;
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+        switch(max){
+            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+            case g: h = (b - r) / d + 2; break;
+            case b: h = (r - g) / d + 4; break;
+        }
+        h /= 6;
+    }
+
+    return [h, s, l];
 }

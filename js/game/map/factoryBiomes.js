@@ -5,6 +5,7 @@ import { GAME_FLORE_ITEMS } from './data/items.js';
 export class FactoryBiomes {
 	constructor(world) {
 		this.world = world;
+
 		this.biomes = {};
 		this.init();
 	}

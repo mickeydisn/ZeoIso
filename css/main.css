@@ -323,17 +323,20 @@ body {
   top: calc(70px);
 }
 
+
+
 .buttMenuBox#control > label {
-  top: calc(70px + 50px);
-}
-.buttMenuBox#floorAction > label {
-  top: calc(70px + 50px + 80px);
-}
-.buttMenuBox#tileAsset > label {
-  top: calc(70px + 50px + 80px + 50px);
+  top: calc(70px + 80px);
 }
 .buttMenuBox#utilsAction > label {
-  top: calc(70px + 50px + 80px + 50px + 50px);
+  top: calc(70px + 80px + 50px);
+}
+
+.buttMenuBox#floorAction > label {
+  top: calc(70px + 80px + 50px + 50px);
+}
+.buttMenuBox#tileAsset > label {
+  top: calc(70px + 80px + 50px + 50px + 50px);
 }
 
 
@@ -464,14 +467,24 @@ body {
 }
 
 
+.widjetMenuBox#control {
+  top: 55px;
+  height: 80vh;
+  padding-top: 0.1rem;
+  width: 40px;
+  background-color: #0000;
+}
+
+
 .widjetMenuBox#floorAction {
   top: 55px;
   height: 80vh;
   padding-top: 0.1rem;
 }
 .widjetMenuBox#tileAsset {
-  top: calc(50px + 105px);
+  top: 55px;
   height: 70vh;
+  overflow: scroll;
 
 }
 .widjetMenuBox#utilsAction {
@@ -487,7 +500,6 @@ body {
 .menuAction {
   width: 300px;
   text-align: center;
-  overflow: scroll;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 
@@ -588,12 +600,12 @@ body {
 
 
 
-#boxAssetSelected .content {
+#boxAssetSelected .contentAsset {
   display: flex;
   justify-content: space-around;
 }
 
-#boxAssetSelected .content .selector{
+#boxAssetSelected .contentAsset .selector{
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -601,24 +613,24 @@ body {
   
 }
   
-#boxAssetSelected .content .selector > div {
+#boxAssetSelected .contentAsset .selector > div {
   display: flex;
   justify-content: flex-end;
   padding: 0.2em 0;
 }
 
-#boxAssetSelected .content .selector .lable{
+#boxAssetSelected .contentAsset .selector .lable{
   width: 2rem;
   margin-right: 1rem;
 }
-#boxAssetSelected .content .selector .input {
+#boxAssetSelected .contentAsset .selector .input {
   display: grid;
   grid-template-columns: 1.5em 2.5em 1.5em;
 }
 
 
 
-#boxAssetSelected .content .selector .input  .clickBox {
+#boxAssetSelected .contentAsset .selector .input  .clickBox {
   display: flex;
   overflow: hidden;
   cursor: pointer;
@@ -629,13 +641,13 @@ body {
   border-radius: 7px;
 }
 
-#boxAssetSelected .content .selector .input  .centerBox {
+#boxAssetSelected .contentAsset .selector .input  .centerBox {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#boxAssetSelected .content .selector .buttClear {
+#boxAssetSelected .contentAsset .selector .buttClear {
   border-right: 2px solid #aeaeae;
   border-bottom: 2px solid #aeaeae;
   padding: 0.2rem;
@@ -664,10 +676,9 @@ body {
   margin-top: calc(-.3rem - 2px);
   display: none;
   font-size: 0.8em;
-  height: 130px;
   padding-bottom: 1rem;
-  border-left: 1px solid;
-  overflow: scroll;
+  border-left: 3px solid;
+  /* overflow: scroll; */
 }
 #titleAssetHeader:hover + .headerList {
   display: block;
@@ -692,7 +703,7 @@ body {
 .listAsset {
   width: 300px;
   text-align: center;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 .listAsset > .cell {
