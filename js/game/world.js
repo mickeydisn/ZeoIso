@@ -43,17 +43,18 @@ export class World {
 
         // ========================
         // ========================
-         
+
+        this.player.setCenter(1036, 341)
+        new WorldCv(this).start()
+
         this.player.setCenter(2000, 400)
-        
+        /new WorldStart(this).start()
+
         // this.player.setCenter(1500, 400)
-        // this.player.setCenter(2000, 1000)
-        // new WorldStart(this).start()
-        // new WorldCv(this).start()
 
-        this.player.setCenter( 4278, -3031)
+        // this.player.setCenter( 4278, -3031)
 
-        new WorldBiome(this).start()
+        // new WorldBiome(this).start()
         // = beach hill
         //this.player.setCenter(492, -376)
         
@@ -67,9 +68,10 @@ export class World {
 
     clickTile(x, y) {
         // tile.getLog()
+        const tileClickFunction = this.globalState.get("TileClickFunction")
         const curentButt = this.globalState.get("WidjetActions.currentButt")
         const curentSize = this.globalState.get("WidjetActions.currentSize")
-        const conf = {...curentButt.funcConf , size : curentSize, x:x, y:y}
+        const conf = {...tileClickFunction, x:x, y:y}
         this.doAction(conf)
         // this.GS.set('InterfaceIso.ClickTile', {x: xx - (this.size/2), y: yy - (this.size/2)})
 

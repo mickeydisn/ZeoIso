@@ -5,10 +5,10 @@
 
 
 export const RANGE_HEIGHT = [...Array(8)].map((_, x) =>  x * .5)
-export const RANGE_HUE = [...Array(24)].map((_, x) =>   x * 15)
-export const RANGE_SATURATION = [...Array(25)].map((_, x) =>  x * 10 + 10)
-export const RANGE_BRIGHTNESS = [...Array(25)].map((_, x) =>  x * 10 + 10)
-export const RANGE_CONTRAST = [...Array(25)].map((_, x) =>  x * 10 + 10)
+export const RANGE_HUE = [...Array(36)].map((_, x) =>   x * 10)
+export const RANGE_SATURATION = [...Array(50)].map((_, x) =>  x * 5 + 5)
+export const RANGE_BRIGHTNESS = [...Array(50)].map((_, x) =>  x * 5 + 5)
+export const RANGE_CONTRAST = [...Array(50)].map((_, x) =>  x * 5 + 5)
 export const RANGE_INVERT = [0, 1]
 export const RANGE_SHADOW = [
     "", 
@@ -21,9 +21,9 @@ export const RANGE_SHADOW = [
 
 export const CANVAS_FILTER_DEFAULT_IDX =  {
     hue:0, 
-    saturation:9, 
-    brightness:9, 
-    contrast:9,
+    saturation:19, 
+    brightness:19, 
+    contrast:19,
     invert:0,
     shadow:0,
 }

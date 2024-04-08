@@ -1,15 +1,15 @@
 
 const configPlayerTeleport = [
-    {label:"Center",        x:2000,     y:400},
+    {label:"Home",          x:2000,     y:400},
     {label:"Beach Hill",    x:492,      y:-376},
     {label:"Cliff",         x:1028,     y:147},
     {label:"Top Montagne",  x:-1218,    y:1164},
     {label:"0, 0",          x:0,        y:0},
 
-    {label:"Flat",          x:1036,        y:341},
+    {label:"My - CV",          x:1036,        y:341},
 ]
 
-export class WidjetActionsUtils {
+export class WidjetActionsPlayer {
 
     constructor(world, mainDiv) {
         this.world = world;
@@ -21,7 +21,7 @@ export class WidjetActionsUtils {
         this.mainOffset = {x: 0, y:0, z:0};
         this.currentImage = null;
         this.currentSize = 3;
-        this.GS.set("WidjetActionsUtils.currentSize", this.currentSize)
+        this.GS.set("WidjetActionsPlayer.currentSize", this.currentSize)
 
 
         // Create Switch Button 
@@ -33,10 +33,10 @@ export class WidjetActionsUtils {
 </div>
 
 
-<div class="buttMenuBox  switch" id="utilsAction">
-        <input type="radio" id="checkbox_menuBox_utilsAction" name="MenuBox">
-        <label for="checkbox_menuBox_utilsAction">🥷</label>
-        <div class="widjetMenuBox slider" id="utilsAction" >
+<div class="buttMenuBox  switch" id="playerAction">
+        <input type="radio" id="checkbox_menuBox_playerAction" name="MenuBox">
+        <label for="checkbox_menuBox_playerAction">🥷</label>
+        <div class="widjetMenuBox slider" id="playerAction" >
             <div id="content" class="menuAction">  </div>
         </div>
 </div>
@@ -58,11 +58,10 @@ export class WidjetActionsUtils {
 
         }
 
-
         // Generate Content 
         {
             this.contentBox = this.mainDiv.select('#content')
-            this.drawutilsActionList();
+            this.drawplayerActionList();
 
         }
         // Sub to Global state. 
@@ -74,41 +73,58 @@ export class WidjetActionsUtils {
     // ---------------------
     //  Floor Action 
     // ---------------------
-    drawutilsActionList() {
+    drawplayerActionList() {
         this.contentBox.selectAll('div').remove()
 
         // --------------------------------
+        {
+            this.contentBox.append('div').classed('row', true).classed('titel', true)
+                .text("= PLAYER ACTION =")
+        }
+        {
+            this.contentBox.append('div').classed('row', true).classed('subtitel', true)
+                .text("Boost:")
 
-        this.contentBox.append('div').classed('row', true).text("Teleportation")
-
-        configPlayerTeleport.forEach(conf => {
             const divx = this.contentBox.append('div')
                 .classed('row', true)
                 .classed('action', true)
-                .text("🌀 " + conf.label)
+                .text("💊 Speep-Boost" )
+
+            const boostTime = 10
             divx.on('click', _ => {
-                    this.world.player.setCenter(conf.x, conf.y)
+                this.world.player.speed += 1;
+                divx.text("💊 Speep-Boost - " + boostTime + "s -");
+
+                [...Array(boostTime)].forEach((_, idx) => {
+                    setTimeout(_ => {
+                        divx.text("💊 Speep-Boost - " + (boostTime - idx) + "s -")
+                    }, idx * 1000)
                 })
-
-        })
-
-        /*
-            const BPlace = new ButtUtilsAction(this.GS, this.contentBox, "Place", {func:"itemForceKey"})
-            new ButtUtilsAction(this.GS, this.contentBox, "Add", {func:"itemForceKey"})
-            this.contentBox.append('div').classed('cell', true)
-        */
-        /*
-        this.contentBox.append('div')
-            .classed('cell', true)
-            .classed('assetList', true)
-            .text('Asset List⇩')
-            .on('click', _ => {
-                const openList = this.GS.get('WidjetAssetList.isVisibel')
-                this.GS.set('WidjetAssetList.isVisibel', !openList)
-                this.GS.set("WidjetActionsUtils.currentButt", BPlace)
-
+            
+                setTimeout(_ => {
+                    this.world.player.speed -= 1;
+                    divx.text("💊 Speep-Boost ");
+                }, boostTime * 1000)
+            
             })
-        */
+        }
+        {
+
+            this.contentBox.append('div').classed('row', true).classed('subtitel', true)
+                .text("Teleportation:")
+
+            configPlayerTeleport.forEach(conf => {
+                const divx = this.contentBox.append('div')
+                    .classed('row', true)
+                    .classed('action', true)
+                    .text("🌀 " + conf.label)
+                divx.on('click', _ => {
+                        this.world.player.setCenter(conf.x, conf.y)
+                    })
+            })
+    
+        }
+
 
     }
 
@@ -116,7 +132,7 @@ export class WidjetActionsUtils {
 
 
 
-class ButtUtilsAction {
+class ButtplayerAction {
     constructor(GS, parentDiv, key, funcConf) {
         this.GS = GS;
         this.key = key;
@@ -126,7 +142,7 @@ class ButtUtilsAction {
 
         this.initDiv();
 
-        this.GS.sub("WidjetActionsUtils.currentButt", "ButtTileActionUtils_" + key, 
+        this.GS.sub("WidjetActionsPlayer.currentButt", "ButtTileActionUtils_" + key, 
             this.updateCurrentAction.bind(this))
     }
     
@@ -153,6 +169,6 @@ class ButtUtilsAction {
     }
 
     click() {
-        this.GS.set("WidjetActionsUtils.currentButt", this)
+        this.GS.set("WidjetActionsPlayer.currentButt", this)
     }
 }

@@ -13,19 +13,26 @@ export class Tile {
 		this._waterLvl = 0;
 		this.color = [0, 0, 0, 1]
 		this.items = []
+		this.temporatyItems = []
 		this.lvlGen();
 		this.colorGen();
-		this.updateItems();
+		this.ItemsGen();
 
 	}
 
 	get isBlock() {
-		return true &&
+		return (
 			this.buildTile != null && 
 			this.buildTile.conf != null &&
-			!this.buildTile.conf.allowMove
+			!this.buildTile.conf.allowMove 
+			) // || ( this.items.length > 0 )
 	}
 
+	get isFrise() {
+		return false || 
+			this.buildTile != null ||
+			this.isWater
+	}
 
 	get waterLvl() {
 		if (this.isWater) {
@@ -33,49 +40,51 @@ export class Tile {
 		}
 		return this._lvl
 	}
+	set waterLvl(lvl) {
+		this._waterLvl = lvl
+	}
 
 	get lvl () { 
 		return this._lvl
 	}
 
 	set lvl(lvl) {
-		if (this.buildTile != null) return ;
+		if (this.isFrise) return ;
 		if (this.isWater && lvl > this._waterLvl) {
 			return;
 		}
 		this._lvl = lvl
 	}
+
+	set color(color) {
+		if (this.isFrise) return ;
+		this._color = color
+	}
+
+	get color() {
+		return this._color
+	}
+	
+	updateColor([r, g, b, a]) {
+		if (this.buildTile != null || this.isWater) return ;
+        this.color = new Uint8Array([r, g, b, a]);
+    }
+	
 	
 	lvlGen() {
-		const [lvl ,waterLvl] = this.fg.getLvlGen(this.x, this.y, TILE_GEN_ZOOM)
+		const [lvl, waterLvl] = this.fg.getLvlGen(this.x, this.y, TILE_GEN_ZOOM)
 		this._lvl = lvl
 		this._waterLvl = waterLvl
 		if (lvl != waterLvl) {
 			this.isWater = true;
 		}
-		/*
-		let rawLvl = this.fg.getRawLvl() * 256
-		// Creta a gap on the water lvl
-		if (rawLvl < this.fg.waterLvl) {
-			rawLvl -= 1
-		}
-		// Ajuste Lvl to be more natural ( less liear )
-		if (rawLvl < 80) {
-			this._lvl =  0.0008 * Math.pow(rawLvl - 80, 3) + 70 // 0.001 => Deep Sea, 0.0001 => Flat Sea
-		} else {
-			this._lvl = 0.03 * Math.pow(rawLvl - 80, 2) + 70 // 0.01 => Flat Montagne , 0.05 => Hight montagne
-		}
-		  	*/
 	}
 
 	colorGen() {
-		this.color = this.fg.getLvlColor(this.x, this.y, TILE_GEN_ZOOM)
+		this._color = this.fg.getLvlColor(this.x, this.y, TILE_GEN_ZOOM)
 	}
-    updateColor([r, g, b, a]) {
-        this.color = new Uint8Array([r, g, b, a]);
-    }
 
-	updateItems() {
+	ItemsGen() {
 		this.items = []
 		const itemskey = this.fg.getItem(this.x, this.y, TILE_GEN_ZOOM)
 		if (itemskey) {
@@ -84,6 +93,14 @@ export class Tile {
 
 		// this.items.push({t: 'Pyramid', lvl:0})
 	}
+
+	clearItem() {
+		this.items.splice(0, this.items.length);
+	}
+	clearTemporatyItem() {
+		this.temporatyItems.splice(0, this.temporatyItems.length);
+	}
+
 
     getLog() {
         console.log(`   ==================== `);
@@ -109,5 +126,15 @@ export class Tile {
         // console.log("   |  near.mustBeFill ", JSON.stringify(this.buildTile.getNearBuildMustBeFill()))
         console.log(`   ==================== `)
     }
+
+
+	saveAsJson() {
+		return {
+			lvl: this._lvl,
+			// waterLvl: this._waterLvl,
+			color : [...this.color],
+			items: this.items,
+		}
+	}
 
 }

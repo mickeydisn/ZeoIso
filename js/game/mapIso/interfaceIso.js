@@ -24,6 +24,7 @@ export class InterfaceIso {
         this.mainDiv = mainDiv;
         this.size = 20;
         this.c = {
+            selected: new Color(160, 60, 50, .2),
             red: new Color(160, 60, 50, 1),
             blue: new Color(80, 100, 240, .5),
             flore: new Color(53, 148, 56),
@@ -193,10 +194,29 @@ export class InterfaceIso {
         const lvl = currentlvl + (itemConf.lvl || 0);
 
         switch (expr) {
+            case 'Asset':
+            case 'Svg': {
+                try {
+                    const cimage = this.assetLoader.getAsset(itemConf.key)
+                    if (cimage && cimage.ctx) {
+                        const p = this.iso._translatePoint(Point(x+off.x, y+off.y, lvl))
+                            this.ctx.drawImage(cimage, p.x - 127 + 64, p.y - 172 + 64 - 1, 128, 128);
+                    }
+                } catch(e) {
+                    console.log('errorDraw', itemConf.key)
+                }
+            }
+            break;
             case 'Box': {
                 this.updateTilesBox(this.iso._translatePoint(Point(x, y, lvl)), metaTile, itemConf);
             }
             break;
+            case 'Selected': {
+                const height = itemConf.height || .1;
+                this.iso.add(Shape.Prism(Point(x, y, lvl), 1, 1, height), this.c.selected);
+            }
+            break;
+            /*
             case 'Pyramid': {
                 this.iso.add(Shape.Pyramid(Point(x, y, lvl)), this.c.red);
             }
@@ -218,15 +238,7 @@ export class InterfaceIso {
                 this.iso.add(Shape.Cylinder(Point(x+.5, y+.5, lvl), stretch / 2, face, height), this.c.red);
             }
             break;
-            case 'Asset':
-            case 'Svg': {
-                const cimage = this.assetLoader.getAsset(itemConf.key)
-                if (cimage) {
-                    const p = this.iso._translatePoint(Point(x+off.x, y+off.y, lvl))
-                    this.ctx.drawImage(cimage, p.x - 127 + 64, p.y - 172 + 64 - 1, 128, 128);
-                }
-            }
-            break;
+            */
             default:
                 console.log(`Sorry, we are out of ${expr}.`);                
         }
@@ -277,7 +289,7 @@ export class InterfaceIso {
             currentlvl = metaTile.waterLvl
         }
         */
-       
+
         this.iso.add(Shape.SurfaceFlat(Point(xx, yy, currentlvl - height), 1, 1, height), color);
 
         {
@@ -292,7 +304,7 @@ export class InterfaceIso {
                 this.iso.add(Shape.SurfaceSW(Point(xx, yy, currentlvl - diffLvl), 1, 1, diffLvl), color);
             }
         }
-        const items = [...metaTile.items]
+        const items = [...metaTile.items, ...metaTile.temporatyItems]
         // Draw Item,
         // const items = ;
         
@@ -349,7 +361,7 @@ export class InterfaceIso {
 
         const size = this.size;
         this.ctx.clearRect(0, 0, 1400, 700);
-        // Draw Flore
+        // Draw tiles
         for (let x = 0; x < size ; x++) {
             for (let y = 0; y < size ; y++) {
 
@@ -368,23 +380,27 @@ export class InterfaceIso {
         }
         // iso.addImage();
 
+        
+        // Check if divBox is in current screen .
         const xx = this.tilesMatrix.x;
         const yy = this.tilesMatrix.y;
 
-        this.isoDivBoxs = this.isoDivBoxs.filter(box => {
-            if (
-                box.x < xx - size / 2 + 1 || 
-                box.x > xx + size / 2 - 2 ||
-                box.y < yy - size / 2 + 1 || 
-                box.y > yy + size / 2 - 2 
-            ) {
-                console.log("=== HIDE", box.x, box.y, xx, yy)
-                box.hide()
-                return false
-            }
-            return true
-        })
-
+        this.isoDivBoxs = this.isoDivBoxs
+            .filter(box => {
+                const dx = box.x < xx ? xx - box.x : box.x - xx 
+                const dy = box.y < yy ? yy - box.y : box.y - yy 
+                const maxDist = box.conf.maxDist ? box.conf.maxDist : size / 2 - 1
+                if (
+                    dx > maxDist || 
+                    dy > maxDist
+                ) {
+                    console.log("=== HIDE", maxDist, box.x, box.y, xx, yy)
+                    box.hide()
+                    return false
+                }
+                return true
+            })
+        
     }
 
 
@@ -409,17 +425,34 @@ export class InterfaceIso {
 
     // -----------------
 
+    // Update the position of the divbox div box .  
     updateTilesBox(boxPoint, metaTile, itemConf) {
 
+        // ( create if not existe - first draw )
         if (!metaTile.divBox) {
-            metaTile.divBox = new IsoDivBox(this.canavBox, metaTile.x, metaTile.y, itemConf);
+            metaTile.divBox = new IsoDivBox(this.canavBox, metaTile, itemConf);
         }
 
-        if (this.isoDivBoxs.filter(x => x === metaTile.divBox).length == 0){
-            this.isoDivBoxs.push(metaTile.divBox)
+        const xx = this.tilesMatrix.x;
+        const yy = this.tilesMatrix.y;
+
+        const dx = metaTile.x < xx ? xx - metaTile.x : metaTile.x - xx 
+        const dy = metaTile.y < yy ? yy - metaTile.y : metaTile.y - yy 
+        const maxDist = metaTile.divBox.conf.maxDist ? metaTile.divBox.conf.maxDist : this.size / 2 - 1
+
+
+        if (dx < maxDist && dy < maxDist) {
+            console.log("=== Show", maxDist) 
+            // add the tile box in the list of existing box. 
+            if (this.isoDivBoxs.filter(x => x === metaTile.divBox).length == 0){
+                this.isoDivBoxs.push(metaTile.divBox)
+            }
+            // Update position of the box
+            metaTile.divBox.update(boxPoint.x, boxPoint.y)
+        } else {
+            metaTile.divBox.hide()
         }
 
-        metaTile.divBox.update(boxPoint.x, boxPoint.y)
 
     }
 

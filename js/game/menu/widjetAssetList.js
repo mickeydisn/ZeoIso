@@ -1,5 +1,5 @@
 import * as AssetUtils from "../asset/assetUtils.js" 
-import { ButtTileAction } from "./widjetActions.js";
+import { ButtTileActionAsset } from "./widjetBtt.js";
 
 
 export class WidjetAssetList {
@@ -28,7 +28,7 @@ export class WidjetAssetList {
 
 <div class="buttMenuBox  switch" id="control">
     <input type="radio" id="checkbox_menuBox_control", name="MenuBox">
-    <label for="checkbox_menuBox_control">🔧</label>
+    <label for="checkbox_menuBox_control">🍪</label>
     <div class="widjetMenuBox slider" id="control" ></div>
 </div>
 
@@ -57,15 +57,21 @@ export class WidjetAssetList {
         {
             
         // --------------------------------
+
+
         {
 
             const content = this.boxAssetAction
                 .classed('content', true)
                 .classed('menuAction', true)
 
-            content.append('div').classed('row', true).text("Asset Actions")
-            const BPlace = new ButtTileActionAsset(this.GS, content, "Place", {func:"itemForceKey"})
-            new ButtTileActionAsset(this.GS, content, "Add", {func:"itemForceKey"})
+            content.append('div').classed('row', true).classed('titel', true).text("= ASSET ACTION =")
+        
+
+            content.append('div').classed('row', true).classed('subtitel', true)
+                .text("Asset Actions:")
+            this.firstAction = new ButtTileActionAsset(this.GS, content, "Place", {func:"itemForceKey"})
+            new ButtTileActionAsset(this.GS, content, "Add", {func:"itemAddKey"})
             content.append('div').classed('cell', true)
             content.append('div').classed('cell', true)
         }
@@ -74,6 +80,17 @@ export class WidjetAssetList {
         }
 
         this.drawUpdate();
+
+
+        { // First action . 
+            const changeInput = this.mainDiv.select('#checkbox_menuBox_tileAsset')
+            changeInput.on('change', e => {
+                if (changeInput.property('checked') && this.firstAction) {
+                    this.firstAction.click()
+                }
+            })
+        }
+
 
         this.GS.set('WidjetAssetList.isVisibel', false)
         this.GS.sub('WidjetAssetList.isVisibel', 'WidjetAssetList', this.setIsVisibel.bind(this))
@@ -203,7 +220,7 @@ export class WidjetAssetList {
 
         this.boxAssetSelected.append('div')
             .classed('title', true)
-            .text('Current Select')
+            .text('Current Select:')
 
         const content = this.boxAssetSelected.append('div')
             .classed('contentAsset', true)
@@ -217,7 +234,7 @@ export class WidjetAssetList {
         // C.append('hr')
 
 
-        const buttClear = C.append('div')
+        C.append('div')
             .on('click', _ => {
                 this.colorOffset = {...AssetUtils.CANVAS_FILTER_DEFAULT_IDX};
                 // this.drawHeader();
@@ -309,48 +326,3 @@ export class WidjetAssetList {
 
 
 
-
-class ButtTileActionAsset extends ButtTileAction {
-    constructor(GS, parentDiv, key, funcConf) {
-        super(GS, parentDiv, key, funcConf)
-        
-        this.GS.sub("WidjetAssetList.currentAssetCanvas", "ButtTileActionAsset_" + key, 
-            this.updateSelectedAssetCanvas.bind(this))
-    }
-
-    get funcConf() {
-        this._funcConf.assetKey = this.GS.get("WidjetAssetList.currentAssetKey");
-        return this._funcConf;
-    }
-
-    initDiv() {
-        super.initDiv()
-        this.contentCanvas = this.mainDiv.append("canvas")
-                .attr("height", 64)
-                .attr("width", 64)
-
-        this.updateCanvas();
-    }
-
-    updateSelectedAssetCanvas(canvas) {
-        console.log("UPDATE CANVA . ", canvas)
-        this.selectedAsssetCanvas = canvas;
-        this.updateCanvas()
-    }
-
-    updateCanvas() {
-        if (this.selectedAsssetCanvas) {
-            const ctx = this.mainDiv.select('canvas').node().getContext('2d')
-            ctx.clearRect(0, 0, 64, 64)
-            // ctx.fillStyle = "green";
-            // ctx.fillRect(0, 0, 64, 64)
-            ctx.drawImage(this.selectedAsssetCanvas, 0, 0, 256, 256, 0, 0, 64, 64);
-        } else {
-            const ctx = this.mainDiv.select('canvas').node().getContext('2d')
-            ctx.clearRect(0, 0, 64, 64)
-            // ctx.fillStyle = "red";
-            // ctx.fillRect(0, 0, 64, 64)
-        }
-    }
-
-}

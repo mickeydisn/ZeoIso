@@ -1,6 +1,8 @@
 
+import { ButtTileAction, ButtTileActionSelect } from "./widjetBtt.js";
 
-export class WidjetActions {
+
+export class WidjetActionsTiles {
 
     constructor(world, mainDiv) {
         this.world = world;
@@ -32,6 +34,16 @@ export class WidjetActions {
             this.drawFloorActionList();
 
         }
+
+        { // First action . 
+            const changeInput = this.mainDiv.select('#checkbox_menuBox_floorAction')
+            changeInput.on('change', e => {
+                if (changeInput.property('checked') && this.firstAction) {
+                    this.firstAction.click()
+                }
+            })
+        }
+
         // Sub to Global state. 
        
     }
@@ -46,8 +58,14 @@ export class WidjetActions {
 
         // --------------------------------
 
+        {
+            this.contentBox.append('div').classed('row', true).classed('titel', true)
+                .text("= TILES ACTION =")
+        }
+
         // --------------------------------
-        this.contentBox.append('div').classed('row', true).text("SIZE SELECTOR")
+        this.contentBox.append('div').classed('row', true).classed('subtitel', true)
+            .text("Effect size:")
 
         const sizeInput = this.contentBox.append('div').classed('row', true).classed('input', true)
             .html(`
@@ -71,14 +89,16 @@ export class WidjetActions {
 
         // --------------------------------
 
-        this.contentBox.append('div').classed('row', true).text("Clear Actions")
-        new ButtTileAction(this.GS, this.contentBox, "Clear Item", {func:"clearItemSquare", size:1})
-        new ButtTileAction(this.GS, this.contentBox, "Clear Color", {func:"clearColorSquare", size:1})
-        new ButtTileAction(this.GS, this.contentBox, "Clear Lvl", {func:"clearLvlSquare", size:1})
+        this.contentBox.append('div').classed('row', true).classed('subtitel', true)
+            .text("Clear Actions:")
+        this.firstAction = new ButtTileAction(this.GS, this.contentBox, "Clear Item", {func:"clearItemSquare", size:1})
+        new ButtTileAction(this.GS, this.contentBox, "Restore Color", {func:"clearColorSquare", size:1})
+        new ButtTileAction(this.GS, this.contentBox, "Restore Lvl", {func:"clearLvlSquare", size:1})
         this.contentBox.append('div').classed('cell', true).classed('empty', true)
 
         // --------------------------------
-        this.contentBox.append('div').classed('row', true).text("Lvl Actions")
+        this.contentBox.append('div').classed('row', true).classed('subtitel', true)
+            .text("Lvl Actions:")
         new ButtTileAction(this.GS, this.contentBox, "Up", {func:"lvlUpSquare", size:1, lvl:1})
         new ButtTileAction(this.GS, this.contentBox, "Down", {func:"lvlUpSquare", size:1, lvl:-1})
         this.contentBox.append('div').classed('cell', true).classed('empty', true)
@@ -91,57 +111,19 @@ export class WidjetActions {
 
         // --------------------------------
 
-        this.contentBox.append('div').classed('row', true).text("Color Actions")
+        this.contentBox.append('div').classed('row', true).classed('subtitel', true)
+            .text("Color Actions:")
         
         new ButtTileActionColor(this.GS, this.contentBox, "Color", {func:"colorSquare", sire:1, color:[0,0,0]})
-     
+
+        
+        this.contentBox.append('div').classed('row', true).classed('subtitel', true)
+            .text("Copy Selection:")
+        new ButtTileActionSelect(this.GS, this.contentBox, "Copy", {func:"selectedCopy"})
+        this.contentBox.append('div').classed('cell', true).classed('empty', true)
     }
 
 }
-
-
-
-export class ButtTileAction {
-    constructor(GS, parentDiv, key, funcConf) {
-        this.GS = GS;
-        this.key = key;
-        this._funcConf = funcConf;
-
-        this.parentDiv = parentDiv;
-
-        this.initDiv();
-
-        this.GS.sub("WidjetActions.currentButt", "ButtTileActionAsset_" + key, 
-            this.updateCurrentAction.bind(this))
-    }
-    
-    get funcConf () { return  this._funcConf }
-
-    updateCurrentAction(buttObj) {
-       
-        if (this !== buttObj) {
-            this.mainDiv.style('border-color', "#AEAEAE")
-        } else {
-            this.mainDiv.style('border-color', "#363636")
-        }
-    }
-
-    initDiv() {
-        this.mainDiv = this.parentDiv.append('div')
-            .classed('cell', true)
-            .on('click', _ => this.click())
-        this.mainDiv.style('border-color', "#AEAEAE")
-
-        this.mainDiv.append('div')
-            .classed('label', true)
-            .text(this.key);
-    }
-
-    click() {
-        this.GS.set("WidjetActions.currentButt", this)
-    }
-}
-
 
 
 
@@ -208,25 +190,28 @@ class ButtTileActionColor extends ButtTileAction {
 
         [...Array(12)].forEach((_, idx) => {
             const hue =  Math.floor(idx * (360 / 12))
-            const c = d3.rgb(`hsl(${hue}, 50%, 75%)`) 
-            const bColor = this.colorGrid.append('div')
-                .style('background-color', `rgb(${c.r}, ${c.g}, ${c.b} )`);                
-            _addClick(bColor, c);
-        });            
-
-        [...Array(12)].forEach((_, idx) => {
-            const hue =  Math.floor(idx * (360 / 12))
             const c = d3.rgb(`hsl(${hue}, 50%, 50%)`) 
+            const c2 = d3.rgb(`hsl(${hue}, 50%, 70%)`) 
             const bColor = this.colorGrid.append('div')
-                .style('background-color', `rgb(${c.r}, ${c.g}, ${c.b} )`);                
+                .style('background-color', `rgb(${c2.r}, ${c2.g}, ${c2.b} )`);                
             _addClick(bColor, c);
         });            
 
         [...Array(12)].forEach((_, idx) => {
             const hue =  Math.floor(idx * (360 / 12))
             const c = d3.rgb(`hsl(${hue}, 50%, 25%)`) 
+            const c2 = d3.rgb(`hsl(${hue}, 50%, 45%)`) 
             const bColor = this.colorGrid.append('div')
-                .style('background-color', `rgb(${c.r}, ${c.g}, ${c.b} )`);                
+                .style('background-color', `rgb(${c2.r}, ${c2.g}, ${c2.b} )`);                
+            _addClick(bColor, c);
+        });            
+
+        [...Array(12)].forEach((_, idx) => {
+            const hue =  Math.floor(idx * (360 / 12))
+            const c = d3.rgb(`hsl(${hue}, 50%, 10%)`) 
+            const c2 = d3.rgb(`hsl(${hue}, 50%, 30%)`) 
+            const bColor = this.colorGrid.append('div')
+                .style('background-color', `rgb(${c2.r}, ${c2.g}, ${c2.b} )`);                
             _addClick(bColor, c);
         });            
 

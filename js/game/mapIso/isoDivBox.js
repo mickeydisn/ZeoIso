@@ -3,12 +3,17 @@ import { TILE_HEIGHT } from "./interfaceIso.js"
 
 
 export class IsoDivBox {
-    constructor(canavBox, x, y, boxConf) {
+    constructor(canavBox, tile, boxConf) {
         this.canavBox = canavBox
-        this.x = x
-        this.y = y
+        this.tile = tile
+        this.x = tile.x
+        this.y = tile.y
+        this.isHide = false;
         this.boxConf = boxConf
-        this.conf = boxConf.conf
+        this.conf = {
+            openDist: 10,
+            ...boxConf.conf
+        }
         this.init()
     }
 
@@ -18,16 +23,19 @@ export class IsoDivBox {
         this.initDraw()
     }
 
+
     hide() {
+        this.isHide = true;
         this.mainDiv
             .style('display', "none")
     }
 
     update(x, y) {
+        this.isHide = false;
         this.mainDiv
-        .style('display', "flex")
-        .style('top', (y - TILE_HEIGHT - 5) + "px")
-        .style('left', (x - 5) + "px")
+            .style('display', "flex")
+            .style('top', (y - TILE_HEIGHT - 5) + "px")
+            .style('left', (x - 5) + "px")
     }
 
 
@@ -39,6 +47,21 @@ export class IsoDivBox {
             .style('width', this.conf.width ? this.conf.width : "10vw")
 
 
+        if ( true || this.conf.canBeRemove) {
+            const idx = Math.random(100000)
+
+            const btt = this.content.append('label')
+                .attr('id', 'buttRemove')
+                .style("border", "1px solid #000")
+                    .text('✕')
+
+            btt.on('click', _ => {
+                this.hide()
+                this.tile.clearItem()
+            })
+            
+        }
+
         if ( this.conf.canBeEdit) {
             const idx = Math.random(100000)
             this.content.append('input')
@@ -49,7 +72,7 @@ export class IsoDivBox {
                 .attr('id', 'buttEditLabel')
                 .attr('for', 'buttEdit_'+idx)
                 .style("border", "1px solid #000")
-                    .text('Edit')
+                    .text('⚙️')
 
 
             const textEdit = this.content.append('textarea')

@@ -8,8 +8,9 @@ import { AssetLoader } from './game/asset/assetLoader.js';
 import { WidjetAssetList } from './game/menu/widjetAssetList.js';
 import { WidjetMiniMap } from './game/menu/widjetMiniMap.js';
 import { GlabalState } from './game/globalState.js';
-import { WidjetActions } from './game/menu/widjetActions.js';
-import { WidjetActionsUtils } from './game/menu/widjetActionsUtils.js';
+import { WidjetActionsTiles } from './game/menu/widjetActionsTiles.js';
+import { WidjetActionsPlayer } from './game/menu/widjetActionsPlayer.js';
+import { WidjetActionsBuilding } from './game/menu/widjetActionsBuilding.js';
 
 
 export class Main {
@@ -54,15 +55,20 @@ export class Main {
         // Menu
         {
             const div = this.body.append('div')
-            this.widjetActions = new WidjetActions(this.world, div)
+            new WidjetActionsTiles(this.world, div)
         }
         {
             const div = this.body.append('div')
-            this.widjetAssetList = new WidjetAssetList(this.world, div)
+            new WidjetAssetList(this.world, div)
         }
         {
             const div = this.body.append('div')
-            this.widjetActionsUtils = new WidjetActionsUtils(this.world, div)
+            new WidjetActionsPlayer(this.world, div)
+        } 
+        {
+            const div = this.body.append('div')
+            new WidjetActionsBuilding(this.world, div)
+            
         }
 
 
@@ -72,6 +78,16 @@ export class Main {
             this.widjetMiniMap = new WidjetMiniMap(this.world, div);
         }
 
+        // Keyboard not affect radio butt
+        var radioButtons = document.querySelectorAll('input[type="radio"]');
+        radioButtons.forEach(function (radioButton) {
+          radioButton.addEventListener('keydown', function (event) {
+            if (event.key === 'ArrowUp' || event.key === 'ArrowDown' || event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+              event.preventDefault();
+            }
+          });
+        });
+    
 
         this.bindKeyboard();
         this.startGameLoop();

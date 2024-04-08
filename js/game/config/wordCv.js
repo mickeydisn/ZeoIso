@@ -134,24 +134,22 @@ export class WorldCv {
 
 #### Oct2021 - Now - @Salsify/Alkemics ( Scale-up - Retail)
 ---
-### Senior Data Engineer / Lead BI Solutions Architect 
-
+### Senior Data Engineer / Lead BI Solutions Architect
 
 #### **Setting up knowledge sharing**
 
- > Join Us DataTeam . ( Interface Production data , avec la data US ) 
+ > Upon the company's acquisition, I transitioned to an American team responsible for managing the company's BI data. Spearheading knowledge sharing efforts between the two entities, we facilitated the exchange of business and data insights, leveraging concrete data and processes to drive the realization of new global projects.
 
-#### **Architechtures for process integration**
+#### **Architectures for process integration**
 
-> Creation of Connector , and integration of existing stack in a bigger on ( integration on AWS )
+ > In an integration context, led the seamless migration of all existing BI solutions to the new environment, encompassing dashboards, GTM data sources, and access rights (Google/Salesforce, etc.). 
+ > Introduced innovative technical solutions to establish production data connectivity to a dedicated data center, optimizing job scheduling and data extraction/storage processes. Pre-manipulation of production data, enhancing the availability of actionable insights for the US BI team.
 
-#### Developed internal BI products
+#### **Influencer internal BI products**
 
- > Alkemics DataCulture - Share knowledge of UE data , and workflow .           
-
-
-            `
-            this.ta.addBoxMD(x, y, {md:md, width:'500px'})
+ > Empowered all business areas with data-driven decision-making capabilities. Instilled confidence in existing dashboards and BI tools through innovative enhancements. Orchestrated regular company-wide meetings and conferences on pertinent topics, fostering collaboration and alignment with GTM teams through dedicated weekly sessions.
+        `
+        this.ta.addBoxMD(x, y, {md:md, width:'500px'})
     }
 
     XP2(x, y) { 
@@ -172,9 +170,9 @@ export class WorldCv {
 
 #### Developed internal BI products
 
- > Facilitating communication with Go-to-market teams, utilizing Kanban boards and Slack Channel to  bring people together around a data subject and identify ad hoc analyses and future BI products. 
-
- > Introduced a BI Web platform with a DataBoard feature, providing comprehensive data handling tools covering all market processes of the company centralised all in one place.
+ > Facilitating communication with Go-to-market teams, utilizing Kanban boards and Slack Channel to bring people together around a data subject and identify ad hoc analyses and future BI products.
+ 
+ > Introduced a BI Web platform with a DataBoard feature, providing comprehensive data handling tools covering all market processes of the company centralized all in one place. Used in the daily work of teams.
             
 
 

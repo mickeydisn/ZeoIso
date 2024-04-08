@@ -6,7 +6,8 @@ export class GlabalState {
         this.world = world;
         console.log('=== GlabalState == ')
         this._state = {
-            "KeboardType": 'azerty'
+            "KeboardType": 'azerty',
+            "TileClickFunction": null,
         }
 
         this._sub = {}

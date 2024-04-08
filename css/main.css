@@ -328,17 +328,20 @@ body {
 .buttMenuBox#control > label {
   top: calc(70px + 80px);
 }
-.buttMenuBox#utilsAction > label {
+.buttMenuBox#playerAction > label {
   top: calc(70px + 80px + 50px);
 }
 
 .buttMenuBox#floorAction > label {
-  top: calc(70px + 80px + 50px + 50px);
+  top: calc(70px + 80px + 50px + 250px);
 }
 .buttMenuBox#tileAsset > label {
-  top: calc(70px + 80px + 50px + 50px + 50px);
+  top: calc(70px + 80px + 50px + 250px + 50px);
 }
 
+.buttMenuBox#buildingAction > label {
+  top: calc(70px + 80px + 50px + 250px + 50px + 50px);
+}
 
 
 
@@ -462,36 +465,28 @@ body {
   font-size: 1.2rem;
   font-stretch: condensed;
 
-  top: 8vh;
-  height: 10vh;
+  top: 55px;
+  height: 80vh;
+  padding-top: 0.1rem;
+  overflow: scroll;
 }
 
 
 .widjetMenuBox#control {
-  top: 55px;
-  height: 80vh;
-  padding-top: 0.1rem;
   width: 40px;
   background-color: #0000;
 }
 
-
+/*
 .widjetMenuBox#floorAction {
-  top: 55px;
-  height: 80vh;
-  padding-top: 0.1rem;
 }
 .widjetMenuBox#tileAsset {
-  top: 55px;
-  height: 70vh;
-  overflow: scroll;
 
 }
-.widjetMenuBox#utilsAction {
-  top: 55px;
-  height: 80vh;
+.widjetMenuBox#playerAction {
   padding-top: 0.1rem;
 }
+*/
 
 /* ----------------------------------------------- */
 /* MenuBox FLORE ACTION 
@@ -506,6 +501,15 @@ body {
 }
 .menuAction > .row {
   grid-column: 1 / 5;
+  text-align: left;
+}
+.menuAction > .row.titel {
+  text-align: center;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+.menuAction > .row.subtitel {
+  padding-top: 1rem;
 }
 
 .menuAction > .row.action {
@@ -524,7 +528,9 @@ body {
 }
 
 .menuAction > .cell {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 64px; 
   height: 64px;
   position: relative;
@@ -820,4 +826,35 @@ body {
 
 .isoDivBox input:checked ~ .Markdown {
   display:none;
+}
+
+.isoDivBox >  .content > label#buttRemove {
+  border: 1px solid rgb(0, 0, 0);
+  position: absolute;
+  background-color: #000;
+  color: #FFF;
+  height: 15px;
+  width: 15px;
+  top: 0px;
+  right: 0px;
+  font-size: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+
+.isoDivBox >  .content > label#buttEditLabel {
+  border: 1px solid rgb(0, 0, 0);
+  position: absolute;
+  background-color: #000;
+  color: #FFF;
+  height: 15px;
+  width: 15px;
+  top: 0px;
+  right: 20px;
+  font-size: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }

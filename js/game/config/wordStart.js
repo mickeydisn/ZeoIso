@@ -32,7 +32,7 @@ export class WorldStart {
         this.infinitStart(x, y)
         
         
-        this.markdown1(x, y)
+        this.markdown1(x, y + 15)
 
         this.ta.lvlUpSquare(x,y+10, 3, 35)
         this.ta.lvlAvgSquare(x,y+10, 5)
@@ -56,6 +56,7 @@ export class WorldStart {
         this.ta.addBoxMD(x, y, {
             md:md, 
             width:'140px', 
+            maxDist:3,
             canBeEdit:false,
             style: `    
                 text-align: center;

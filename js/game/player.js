@@ -7,7 +7,7 @@ export class Player {
         this.GS = this.world.globalState 
         this.fm = world.factoryMap;
 
-        this.speed = .3;
+        this.speed = .2;
         this.lvlJump = 4;
 
         // Real Position (float)
@@ -254,21 +254,49 @@ export class Player {
           x = - 1;
         }
 
-        // Move Rotation , ajuste the movement off the screen oriantation , not on Iso orientation
-        const [xx, yy] = [x, y]
-        /*
         const [xx, yy] = 
-          x ==  0 && y ==  1 ? [ 1,  1]: // z = zd 
-          x ==  1 && y ==  1 ? [ 1,  0]: // zd = d 
-          x ==  1 && y ==  0 ? [ 1, -1]: // d = ds 
+        x ==  0 && y ==  1 ?  [ 1,  0]:  
+        x ==  1 && y ==  1 ? [.75, -.75]: 
+        x ==  1 && y ==  0 ? [ 0, -1]:  
 
-          x ==  1 && y == -1 ? [ 0, -1]: // ds = s
-          x ==  0 && y == -1 ? [-1, -1]: // s = sq 
-          x == -1 && y == -1 ? [-1,  0]: // sq = q
-          x == -1 && y ==  0 ? [-1,  1]: // q = qz
-          x == -1 && y ==  1 ? [ 0,  1]: // qz = z
+        x ==  1 && y == -1 ? [-1.25, -1.25]: 
+        x ==  0 && y == -1 ? [-1,  0]: 
+        x == -1 && y == -1 ? [-.75,  .75]:
+        x == -1 && y ==  0 ? [ 0,  1]: 
+        x == -1 && y ==  1 ? [ 1.25,  1.25]:  
+        [0, 0]
+      
+        
+         
+        /*
+        // Normal
+        const [xx, yy] = 
+          x ==  0 && y ==  1 ? [ 0,  1]:  
+          x ==  1 && y ==  1 ? [ 1.25,  1.25]:  
+          x ==  1 && y ==  0 ? [ 1,  0]:  
+
+          x ==  1 && y == -1 ? [.75, -.75]: 
+          x ==  0 && y == -1 ? [ 0, -1]:  
+          x == -1 && y == -1 ? [-1.25, -1.25]: 
+          x == -1 && y ==  0 ? [-1,  0]: 
+          x == -1 && y ==  1 ? [-.75,  .75]: 
           [0, 0]
         */
+
+        /*
+        // Move Rotation , ajuste the movement off the screen oriantation , not on Iso orientation
+        const [xx, yy] = 
+          x ==  0 && y ==  1 ? [ 1.25,  1.25]: // z = zd 
+          x ==  1 && y ==  1 ? [ 1,  0]: // zd = d 
+          x ==  1 && y ==  0 ? [ .75, -.75]: // d = ds 
+
+          x ==  1 && y == -1 ? [ 0, -1]: // ds = s
+          x ==  0 && y == -1 ? [-1.25, -1.25]: // s = sq 
+          x == -1 && y == -1 ? [-1,  0]: // sq = q
+          x == -1 && y ==  0 ? [-.75,  .75]: // q = qz
+          x == -1 && y ==  1 ? [ 0,  1]: // qz = z
+          [0, 0]
+        */        
 
         this.move(xx, yy) 
       }
