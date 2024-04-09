@@ -5,11 +5,9 @@ export class ButtTileAction {
         this.GS = GS;
         this.key = key;
         this._funcConf = funcConf;
-
         this.parentDiv = parentDiv;
-
+        this.isActif = false;
         this.initDiv();
-
         this.GS.sub("WidjetActions.currentButt", "ButtTileActionAsset_" + key, 
             this.updateCurrentAction.bind(this))
     }
@@ -19,8 +17,10 @@ export class ButtTileAction {
     updateCurrentAction(buttObj) {
        
         if (this !== buttObj) {
+            this.isActif = false;
             this.mainDiv.style('border-color', "#AEAEAE")
         } else {
+            this.isActif = true;
             this.mainDiv.style('border-color', "#363636")
         }
     }
@@ -77,6 +77,14 @@ export class ButtTileActionAsset extends ButtTileAction {
         
         this.GS.sub("WidjetAssetList.currentAssetCanvas", "ButtTileActionAsset_" + key, 
             this.updateSelectedAssetCanvas.bind(this))
+        this.GS.sub("WidjetAssetList.currentAssetKey", 'ButtTileActionAsset_' + key, assetKey => {
+            if( this.isActif ) {
+                console.log('ActifClik', assetKey)
+                this._funcConf.assetKey = assetKey
+                this.GS.set("TileClickFunction", {...this._funcConf})
+            }
+        })
+
     }
 
     get funcConf() {
@@ -94,7 +102,6 @@ export class ButtTileActionAsset extends ButtTileAction {
     }
 
     updateSelectedAssetCanvas(canvas) {
-        console.log("UPDATE CANVA . ", canvas)
         this.selectedAsssetCanvas = canvas;
         this.updateCanvas()
     }

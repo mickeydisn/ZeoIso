@@ -52,21 +52,22 @@ export class Main {
             this.interfaceIso = new InterfaceIso(this.world, div);
         }
 
+        const divMenu = this.body.append('div')
         // Menu
         {
-            const div = this.body.append('div')
+            const div = divMenu.append('div')
             new WidjetActionsTiles(this.world, div)
         }
         {
-            const div = this.body.append('div')
+            const div = divMenu.append('div')
             new WidjetAssetList(this.world, div)
         }
         {
-            const div = this.body.append('div')
+            const div = divMenu.append('div')
             new WidjetActionsPlayer(this.world, div)
         } 
         {
-            const div = this.body.append('div')
+            const div = divMenu.append('div')
             new WidjetActionsBuilding(this.world, div)
             
         }
