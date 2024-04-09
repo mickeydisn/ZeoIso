@@ -78,12 +78,14 @@ export class WidjetActionsTiles {
             this.currentSize = this.currentSize > 1 ? this.currentSize - 2 : this.currentSize;
             sizeInput.select('#label').text(this.currentSize);
             this.GS.set("WidjetActions.currentSize", this.currentSize)
+            this.GS.get("WidjetActions.currentButt").click()
 
         })
         sizeInput.select('#add').on('click', _ => {
             this.currentSize = this.currentSize + 2;
             sizeInput.select('#label').text(this.currentSize);
             this.GS.set("WidjetActions.currentSize", this.currentSize)
+            this.GS.get("WidjetActions.currentButt").click()
         })
 
 
