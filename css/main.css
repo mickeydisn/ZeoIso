@@ -58,7 +58,7 @@ body {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  height: 2.5em;
+  height: 1rem;
   width: 80vw;
 }
 
@@ -71,7 +71,8 @@ body {
   font-size: 1.2em;
   font-weight: bold;
   text-shadow: rgb(153, 153, 153) 2px 2px;
-  padding: 1vw;
+  top: 20px;
+  position: relative;
 }
 
 #mainCenter > #mainMapContent{
@@ -88,7 +89,6 @@ body {
 }
 
 #mainMap > div { /* Zoom */
-  border: 1px solid rgb(222, 222, 222);
   width: 1401px;
   height: 700px;
   position: relative;
@@ -318,11 +318,14 @@ body {
 }
 
 
+.buttMenuBox#settingAction > label {
+  top: 0px;
+  right: 10px;
+}
 
 .buttMenuBox#miniMap > label {
   top: calc(70px);
 }
-
 
 
 .buttMenuBox#control > label {
@@ -331,6 +334,12 @@ body {
 .buttMenuBox#playerAction > label {
   top: calc(70px + 80px + 50px);
 }
+
+.buttMenuBox#achivementAction > label {
+  top: calc(70px + 80px + 50px + 50px);
+}
+
+
 
 .buttMenuBox#floorAction > label {
   top: calc(70px + 80px + 50px + 250px);

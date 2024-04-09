@@ -5123,7 +5123,7 @@ export const assetConfig = [
         {
             "src": "./img/asset/NatureRock/rockLarge_NE.png",
             "group": "NatureRock",
-            "label": "rockLarge_E",
+            "label": "rockLarge_NE",
             "cimage": {
                 "ctx": {}
             }
@@ -5131,7 +5131,7 @@ export const assetConfig = [
         {
             "src": "./img/asset/NatureRock/rockLarge_NW.png",
             "group": "NatureRock",
-            "label": "rockLarge_N",
+            "label": "rockLarge_NW",
             "cimage": {
                 "ctx": {}
             }
@@ -5139,7 +5139,7 @@ export const assetConfig = [
         {
             "src": "./img/asset/NatureRock/rockLarge_SE.png",
             "group": "NatureRock",
-            "label": "rockLarge_S",
+            "label": "rockLarge_SE",
             "cimage": {
                 "ctx": {}
             }
@@ -5147,7 +5147,7 @@ export const assetConfig = [
         {
             "src": "./img/asset/NatureRock/rockLarge_SW.png",
             "group": "NatureRock",
-            "label": "rockLarge_W",
+            "label": "rockLarge_SW",
             "cimage": {
                 "ctx": {}
             }
@@ -5251,7 +5251,7 @@ export const assetConfig = [
         {
             "src": "./img/asset/NatureRock/rockSmall_NE.png",
             "group": "NatureRock",
-            "label": "rockSmall_E",
+            "label": "rockSmall_NE",
             "cimage": {
                 "ctx": {}
             }
@@ -5259,7 +5259,7 @@ export const assetConfig = [
         {
             "src": "./img/asset/NatureRock/rockSmall_NW.png",
             "group": "NatureRock",
-            "label": "rockSmall_N",
+            "label": "rockSmall_NW",
             "cimage": {
                 "ctx": {}
             }
@@ -5267,7 +5267,7 @@ export const assetConfig = [
         {
             "src": "./img/asset/NatureRock/rockSmall_SE.png",
             "group": "NatureRock",
-            "label": "rockSmall_S",
+            "label": "rockSmall_SE",
             "cimage": {
                 "ctx": {}
             }
@@ -5275,7 +5275,7 @@ export const assetConfig = [
         {
             "src": "./img/asset/NatureRock/rockSmall_SW.png",
             "group": "NatureRock",
-            "label": "rockSmall_W",
+            "label": "rockSmall_SW",
             "cimage": {
                 "ctx": {}
             }
@@ -5315,7 +5315,7 @@ export const assetConfig = [
         {
             "src": "./img/asset/NatureRock/rockWide_NE.png",
             "group": "NatureRock",
-            "label": "rockWide_E",
+            "label": "rockWide_NE",
             "cimage": {
                 "ctx": {}
             }
@@ -5323,7 +5323,7 @@ export const assetConfig = [
         {
             "src": "./img/asset/NatureRock/rockWide_NW.png",
             "group": "NatureRock",
-            "label": "rockWide_N",
+            "label": "rockWide_NW",
             "cimage": {
                 "ctx": {}
             }
@@ -5331,7 +5331,7 @@ export const assetConfig = [
         {
             "src": "./img/asset/NatureRock/rockWide_SE.png",
             "group": "NatureRock",
-            "label": "rockWide_S",
+            "label": "rockWide_SE",
             "cimage": {
                 "ctx": {}
             }
@@ -5339,7 +5339,7 @@ export const assetConfig = [
         {
             "src": "./img/asset/NatureRock/rockWide_SW.png",
             "group": "NatureRock",
-            "label": "rockWide_W",
+            "label": "rockWide_SW",
             "cimage": {
                 "ctx": {}
             }

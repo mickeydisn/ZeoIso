@@ -6,7 +6,8 @@ export class GlabalState {
         this.world = world;
         console.log('=== GlabalState == ')
         this._state = {
-            "KeboardType": 'azerty',
+            "Setting.KeboardType": 'azerty',
+            "Setting.Zoom": 1.4,
             "TileClickFunction": null,
         }
 

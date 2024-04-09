@@ -22,16 +22,16 @@ export class WidjetActionsPlayer {
         this.currentImage = null;
         this.currentSize = 3;
         this.GS.set("WidjetActionsPlayer.currentSize", this.currentSize)
-
-
-        // Create Switch Button 
-        this.mainDiv.html( `
-
+/*
 <div class="buttMenuBox" id="KeyBoard">
         <input type="checkbox" id="checkbox_menuBox_KeyBoard" name="MenuBox">
         <label for="checkbox_menuBox_KeyBoard"></label>
 </div>
 
+*/
+
+        // Create Switch Button 
+        this.mainDiv.html( `
 
 <div class="buttMenuBox  switch" id="playerAction">
         <input type="radio" id="checkbox_menuBox_playerAction" name="MenuBox">
@@ -42,21 +42,22 @@ export class WidjetActionsPlayer {
 </div>
         `)
 
-        // Generate Content 
+        /* / Generate Content 
         {
             const changeInput = this.mainDiv.select('#checkbox_menuBox_KeyBoard')
             changeInput
                 .on('change', e => {
                     console.log("checkbox_menuBox_KeyBoard", changeInput.property('checked'))
                     if (changeInput.property('checked')) {
-                        this.GS.set('KeboardType', "qwzert")
+                        this.GS.set('Setting.KeboardType', "qwzert")
                     } else {
-                        this.GS.set('KeboardType', "azerty")
+                        this.GS.set('Setting.KeboardType', "azerty")
                     }
 
                 })
 
         }
+        */
 
         // Generate Content 
         {

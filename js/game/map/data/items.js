@@ -342,13 +342,13 @@ export const GAME_FLORE_ITEMS = [
     {cFilter:'H285',  key: 'grass_leafs'},
     {cFilter:'H285',  key: 'grass_leafsLarge'},
     {cFilter:'H285',  key: 'grass'},
-    {cFilter:'H285',  key: 'crops_wheatStageA_NE'},
+    {cFilter:'H285',  key: 'crops_wheatStageA'},
 
     {cFilter:'H295',  key: 'grass_large'},
     {cFilter:'H295',  key: 'grass_leafs'},
     {cFilter:'H295',  key: 'grass_leafsLarge'},
     {cFilter:'H295',  key: 'grass'},
-    {cFilter:'H295',  key: 'crops_wheatStageA_NE'},
+    {cFilter:'H295',  key: 'crops_wheatStageA'},
 
 ].map((x, idx) => {return {
     b: [1],  l:{min:0, max:255}, flore:{mod:32, eq:idx, min:0, max:255}, ...x, 
@@ -394,9 +394,9 @@ export const GAME_FLORE_ITEMS = [
 
 // Plante
 
-{cFilter:'H240_C90_S70_B110',  key: 'crops_bambooStageA_NE'},
-{cFilter:'H240_C90_S70_B110',  key: 'crops_bambooStageB_NE'},
-{cFilter:'H240_C90_S70_B110',  key: 'crops_wheatStageA_NE'},
+{cFilter:'H240_C90_S70_B110',  key: 'crops_bambooStageA'},
+{cFilter:'H240_C90_S70_B110',  key: 'crops_bambooStageB'},
+{cFilter:'H240_C90_S70_B110',  key: 'crops_wheatStageA'},
 
 ].map((x, idx) => {return {
     b: [3],  l:{min:0, max:255}, flore:{mod:32, eq:idx, min:0, max:255}, ...x, 
@@ -445,15 +445,15 @@ export const GAME_FLORE_ITEMS = [
     // Tree
     {cFilter:'H315_C160_S60_B60',  key: 'tree_detailed'},
     {cFilter:'H315_C160_S60_B60',  key: 'tree_oak'},
-    {cFilter:'H315_C160_S60_B60',  key: 'tree_small_NE'},
+    {cFilter:'H315_C160_S60_B60',  key: 'tree_small'},
 
     {cFilter:'H325_C160_S60_B60',  key: 'tree_detailed'},
     {cFilter:'H325_C160_S60_B60',  key: 'tree_oak'},
-    {cFilter:'H325_C160_S60_B60',  key: 'tree_small_NE'},
+    {cFilter:'H325_C160_S60_B60',  key: 'tree_small'},
 
     {cFilter:'H305_C160_S60_B60',  key: 'tree_detailed'},
     {cFilter:'H305_C160_S60_B60',  key: 'tree_oak'},
-    {cFilter:'H305_C160_S60_B60',  key: 'tree_small_NE'},
+    {cFilter:'H305_C160_S60_B60',  key: 'tree_small'},
 
     // Plante
     {cFilter:'H0',  key: 'flower_redA'},
@@ -472,17 +472,17 @@ export const GAME_FLORE_ITEMS = [
     // Tree
     {cFilter:'C120_B90',  key: 'tree_detailed_dark'},
     {cFilter:'C120_B90',  key: 'tree_default_dark'},
-    {cFilter:'C120_B90',  key: 'tree_fat_dark'},
+    {cFilter:'C120_B90',  key: 'tree_fat_darkh'},
     {cFilter:'C120_B90',  key: 'tree_small_dark'},
 
     {cFilter:'H5_C120_B90',  key: 'tree_detailed_dark'},
     {cFilter:'H5_C120_B90',  key: 'tree_default_dark'},
-    {cFilter:'H5_C120_B90',  key: 'tree_fat_dark'},
+    {cFilter:'H5_C120_B90',  key: 'tree_fat_darkh'},
     {cFilter:'H5_C120_B90',  key: 'tree_small_dark'},
 
     {cFilter:'H355_C120_B90',  key: 'tree_detailed_dark'},
     {cFilter:'H355_C120_B90',  key: 'tree_default_dark'},
-    {cFilter:'H355_C120_B90',  key: 'tree_fat_dark'},
+    {cFilter:'H355_C120_B90',  key: 'tree_fat_darkh'},
     {cFilter:'H355_C120_B90',  key: 'tree_small_dark'},
 
     // Plante
@@ -592,8 +592,8 @@ export const GAME_FLORE_ITEMS = [
     {cFilter:'H180_C110_S120_B80_I1',  key: 'stone_tallF'},
     {cFilter:'H180_C110_S120_B80_I1',  key: 'stone_tallH'},
     {cFilter:'H180_C110_S120_B80_I1',  key: 'stone_tallJ'},
-    {cFilter:'H180_C110_S120_B80_I1',  key: 'stone_largeD_NE'},
-    {cFilter:'H180_C110_S120_B80_I1',  key: 'stone_largeF_NE'},
+    {cFilter:'H180_C110_S120_B80_I1',  key: 'stone_largeD'},
+    {cFilter:'H180_C110_S120_B80_I1',  key: 'stone_largeF'},
     
 
 ].map((x, idx) => {return {

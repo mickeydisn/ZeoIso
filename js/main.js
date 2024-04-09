@@ -11,6 +11,8 @@ import { GlabalState } from './game/globalState.js';
 import { WidjetActionsTiles } from './game/menu/widjetActionsTiles.js';
 import { WidjetActionsPlayer } from './game/menu/widjetActionsPlayer.js';
 import { WidjetActionsBuilding } from './game/menu/widjetActionsBuilding.js';
+import { WidjetActionsSetting } from './game/menu/widjetActionsSetting.js';
+import { WidjetActionsAchivement } from './game/menu/widjetActionAchivement.js';
 
 
 export class Main {
@@ -69,9 +71,18 @@ export class Main {
         {
             const div = divMenu.append('div')
             new WidjetActionsBuilding(this.world, div)
+        }
+        {
+            const div = divMenu.append('div')
+            new WidjetActionsSetting(this.world, div)
             
         }
-
+        {
+            const div = divMenu.append('div')
+            new WidjetActionsAchivement(this.world, div)
+            
+        }
+        
 
         // MiniMap
         {

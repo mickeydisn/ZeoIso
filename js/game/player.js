@@ -28,8 +28,8 @@ export class Player {
         this.keyMoveY = 0;
 
 
-        this.GS.sub('KeboardType', 'Player', this.updateKeyType.bind(this))
-        this.keyboardAzert = this.GS.get('KeboardType').localeCompare("azerty") == 0
+        this.GS.sub('Setting.KeboardType', 'Player', this.updateKeyType.bind(this))
+        this.updateKeyType(this.GS.get('Setting.KeboardType'))
     }
 
 

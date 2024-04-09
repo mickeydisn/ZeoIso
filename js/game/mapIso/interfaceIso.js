@@ -49,21 +49,19 @@ export class InterfaceIso {
         this.position = {x:10, y:15, direction:0}; // dic : 0-NE, 1-SE, 2-SW, 3-NW
         this.chunkSize = {x: 20, y:20};
         */
+
+        this.updateZoom(this.GS.get("Setting.Zoom"));
+        this.GS.sub('Setting.Zoom', "InterfaceIso", this.updateZoom.bind(this))
     }
 
     init() {
         console.log('=== GameContext- Init')
+
         this.draw();
-        // this.drawCurrentSelect();
-        // this.drawItemListHeader();
-        // this.drawItemList();
-        // this.drawHeader();
         this.drawMap();
         this.drawSelectTiled();
-        this.iso = new Isomer(document.getElementById("canvas"));
 
-        // this.chunks = {0: {0: this.loadChunk()}};
-        // this.chunk = this.loadChunk();
+        this.iso = new Isomer(document.getElementById("canvas"));
         this.drawUpdate();
     }
 
@@ -74,11 +72,14 @@ export class InterfaceIso {
             
     //        mapDiv
         this.mapDiv = this.mainDiv.append('div')
-            .style('border','1px solid #DEDEDE')
             .style('width', "1401px")
             .style('height', "700px")
             .style('position', "relative")
-            .style('zoom', "1.4")
+            
+    }
+
+    updateZoom(z) {
+        this.mapDiv.style('zoom', z)
     }
 
     // ---------------------
