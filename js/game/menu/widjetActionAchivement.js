@@ -1,28 +1,11 @@
+import { WidjetActions } from "./widjetAction.js";
 
-export class WidjetActionsAchivement {
+export class WidjetActionsAchivement extends WidjetActions {
 
     constructor(world, mainDiv) {
-        this.world = world;
-        this.assetLoader = this.world.assetLoader
-        this.GS = this.world.globalState;
+        super(world, mainDiv)
 
-        
-        console.log('=== WidjetAssetList - Init')
-
-        this.mainDiv = mainDiv
-
-        // Create Switch Button 
-        this.mainDiv.html( `
-
-
-<div class="buttMenuBox  switch" id="achivementAction">
-        <input type="radio" id="checkbox_menuBox_achivementAction" name="MenuBox">
-        <label for="checkbox_menuBox_achivementAction">🥇</label>
-        <div class="widjetMenuBox slider" id="achivementAction" >
-            <div id="content" class="menuAction">  </div>
-        </div>
-</div>
-        `)
+        this._createMainButt('achivementAction', '🥇')
 
         // Generate Content 
         {

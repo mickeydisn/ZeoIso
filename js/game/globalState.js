@@ -8,6 +8,7 @@ export class GlabalState {
         this._state = {
             "Setting.KeboardType": 'azerty',
             "Setting.Zoom": 1.4,
+            "Menu.Selected": null,
             "TileClickFunction": null,
         }
 

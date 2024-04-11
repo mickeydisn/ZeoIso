@@ -1,31 +1,18 @@
 import { ButtTileAction } from "./widjetBtt.js";
+import { WidjetActions } from "./widjetAction.js";
 
-
-export class WidjetActionsBuilding {
+export class WidjetActionsBuilding extends WidjetActions {
 
     constructor(world, mainDiv) {
-        this.world = world;
-        this.GS = this.world.globalState;
-        
-        console.log('=== WidjetAssetList - Init')
+        super(world, mainDiv)
 
-        this.mainDiv = mainDiv
+        this._createMainButt('buildingAction', '🏢')
+
+
         this.mainOffset = {x: 0, y:0, z:0};
         this.currentImage = null;
         this.currentSize = 3;
         this.GS.set("WidjetActions.currentSize", this.currentSize)
-
-
-        // Create Switch Button 
-        this.mainDiv.html( `
-<div class="buttMenuBox  switch" id="buildingAction">
-        <input type="radio" id="checkbox_menuBox_buildingAction" name="MenuBox">
-        <label for="checkbox_menuBox_buildingAction">🏢</label>
-        <div class="widjetMenuBox slider" id="buildingAction" >
-            <div id="content" class="menuAction">  </div>
-        </div>
-</div>
-        `)
 
         // Generate Content 
         {
@@ -56,32 +43,34 @@ export class WidjetActionsBuilding {
         this.contentBox.selectAll('div').remove()
 
         // --------------------------------
-
         this.contentBox.append('div').classed('row', true).classed('titel', true)
             .text("= BUILDING ACTION =")
-        // --------------------------------
-        this.contentBox.append('div').classed('row', true).classed('subtitel', true)
-            .text("Effect size:")
 
-        const sizeInput = this.contentBox.append('div').classed('row', true).classed('input', true)
-            .html(`
-        <div class="clickBox" id="remove">-</div>
-        <div class="centerBox" id="label">${this.currentSize}</div>
-        <div class="clickBox" id="add">+</div>
-        `)
 
-        sizeInput.select('#remove').on('click', _ => {
-            this.currentSize = this.currentSize > 1 ? this.currentSize - 2 : this.currentSize;
-            sizeInput.select('#label').text(this.currentSize);
-            this.GS.set("WidjetActions.currentSize", this.currentSize)
+        /*/ --------------------------------
+        {
+            this.contentBox.append('div').classed('row', true).classed('subtitel', true)
+                .text("Effect size:")
 
-        })
-        sizeInput.select('#add').on('click', _ => {
-            this.currentSize = this.currentSize + 2;
-            sizeInput.select('#label').text(this.currentSize);
-            this.GS.set("WidjetActions.currentSize", this.currentSize)
-        })
+            const sizeInput = this.contentBox.append('div').classed('row', true).classed('input', true)
+                .html(`
+            <div class="clickBox" id="remove">-</div>
+            <div class="centerBox" id="label">${this.currentSize}</div>
+            <div class="clickBox" id="add">+</div>
+            `)
 
+            sizeInput.select('#remove').on('click', _ => {
+                this.currentSize = this.currentSize > 1 ? this.currentSize - 2 : this.currentSize;
+                sizeInput.select('#label').text(this.currentSize);
+                this.GS.set("WidjetActions.currentSize", this.currentSize)
+
+            })
+            sizeInput.select('#add').on('click', _ => {
+                this.currentSize = this.currentSize + 2;
+                sizeInput.select('#label').text(this.currentSize);
+                this.GS.set("WidjetActions.currentSize", this.currentSize)
+            })
+        } /* */
 
         // --------------------------------
 

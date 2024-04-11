@@ -2,30 +2,24 @@ import * as AssetUtils from "../asset/assetUtils.js"
 import { ButtTileActionAsset } from "./widjetBtt.js";
 
 
-export class WidjetAssetList {
+import { WidjetActions } from "./widjetAction.js";
+
+export class WidjetAssetList extends WidjetActions {
 
     constructor(world, mainDiv) {
-        this.world = world
-        this.GS = this.world.globalState;
-        this.assetLoader = this.world.assetLoader
+        super(world, mainDiv)
 
+        this._createMainButt('tileAsset', '🏡')
 
-
-        console.log('=== WidjetAssetList - Init')
         this.mainControl = 'NatureTree'
         this.colorOffset = {...AssetUtils.CANVAS_FILTER_DEFAULT_IDX};
         this.mainOffset = {x: 0, y:0, z:0};
         this.currentAssetCanvas = null;
         this.selectAssetKey = null;
 
-
-        this.mainDiv = mainDiv
-
         this.mainDiv.attr('id', 'mainDiv')
 
-// 
-        this.mainDiv.html( `
-
+/*
 <div class="buttMenuBox  switch" id="control">
     <input type="radio" id="checkbox_menuBox_control", name="MenuBox">
     <label for="checkbox_menuBox_control">🍪</label>
@@ -37,47 +31,40 @@ export class WidjetAssetList {
         <label for="checkbox_menuBox_tileAsset">🏡</label>
         <div class="widjetMenuBox slider" id="tileAsset" ></div>
 </div>
+*/
 
-        `)
 
-
-        {
-            const tileAsset = this.mainDiv.select('.widjetMenuBox#tileAsset')
-
-            this.boxAssetAction = tileAsset.append('div')
-            
-            this.boxAssetSelected = tileAsset.append('div')
-                .attr('id', 'boxAssetSelected')
-            this.boxItemListHeader = tileAsset.append('div')
-                .classed('listAssetHeader', true)
-            this.boxItemList = tileAsset.append('div')
-                .classed('listAsset', true)
-        }
-
-        {
+        this.content = this.mainDiv.select('#content')
             
         // --------------------------------
 
 
         {
 
-            const content = this.boxAssetAction
-                .classed('content', true)
-                .classed('menuAction', true)
 
-            content.append('div').classed('row', true).classed('titel', true).text("= ASSET ACTION =")
+            this.content.append('div').classed('row', true).classed('titel', true).text("= ASSET ACTION =")
         
 
-            content.append('div').classed('row', true).classed('subtitel', true)
+            this.content.append('div').classed('row', true).classed('subtitel', true)
                 .text("Asset Actions:")
-            this.firstAction = new ButtTileActionAsset(this.GS, content, "Place", {func:"itemForceKey"})
-            new ButtTileActionAsset(this.GS, content, "Add", {func:"itemAddKey"})
-            content.append('div').classed('cell', true)
-            content.append('div').classed('cell', true)
+
+            this.firstAction = new ButtTileActionAsset(this.GS, this.content, "Place", {func:"itemForceKey"})
+            new ButtTileActionAsset(this.GS, this.content, "Add", {func:"itemAddKey"})
+            this.content.append('div').classed('cell', true)
+            this.content.append('div').classed('cell', true)
         }
 
+        this.boxAssetSelected = this.content.append('div')
+            .classed('row', true)
+            .attr('id', 'boxAssetSelected')
 
-        }
+        this.boxItemListHeader = this.content.append('div')
+            .classed('row', true)
+            .classed('listAssetHeader', true)
+
+        this.boxItemList = this.content.append('div')
+            .classed('row', true)
+            .classed('listAsset', true)
 
         this.drawUpdate();
 

@@ -9,55 +9,19 @@ const configPlayerTeleport = [
     {label:"My - CV",          x:1036,        y:341},
 ]
 
-export class WidjetActionsPlayer {
+import { WidjetActions } from "./widjetAction.js";
+
+export class WidjetActionsPlayer extends WidjetActions {
 
     constructor(world, mainDiv) {
-        this.world = world;
-        this.GS = this.world.globalState;
-        
-        console.log('=== WidjetAssetList - Init')
+        super(world, mainDiv)
 
-        this.mainDiv = mainDiv
+        this._createMainButt('playerAction', '🥷')
+
         this.mainOffset = {x: 0, y:0, z:0};
         this.currentImage = null;
         this.currentSize = 3;
         this.GS.set("WidjetActionsPlayer.currentSize", this.currentSize)
-/*
-<div class="buttMenuBox" id="KeyBoard">
-        <input type="checkbox" id="checkbox_menuBox_KeyBoard" name="MenuBox">
-        <label for="checkbox_menuBox_KeyBoard"></label>
-</div>
-
-*/
-
-        // Create Switch Button 
-        this.mainDiv.html( `
-
-<div class="buttMenuBox  switch" id="playerAction">
-        <input type="radio" id="checkbox_menuBox_playerAction" name="MenuBox">
-        <label for="checkbox_menuBox_playerAction">🥷</label>
-        <div class="widjetMenuBox slider" id="playerAction" >
-            <div id="content" class="menuAction">  </div>
-        </div>
-</div>
-        `)
-
-        /* / Generate Content 
-        {
-            const changeInput = this.mainDiv.select('#checkbox_menuBox_KeyBoard')
-            changeInput
-                .on('change', e => {
-                    console.log("checkbox_menuBox_KeyBoard", changeInput.property('checked'))
-                    if (changeInput.property('checked')) {
-                        this.GS.set('Setting.KeboardType', "qwzert")
-                    } else {
-                        this.GS.set('Setting.KeboardType', "azerty")
-                    }
-
-                })
-
-        }
-        */
 
         // Generate Content 
         {

@@ -1,32 +1,21 @@
 
 import { ButtTileAction, ButtTileActionSelect } from "./widjetBtt.js";
 
+import { WidjetActions } from "./widjetAction.js";
 
-export class WidjetActionsTiles {
+export class WidjetActionsTiles extends WidjetActions {
 
     constructor(world, mainDiv) {
-        this.world = world;
-        this.GS = this.world.globalState;
-        
-        console.log('=== WidjetAssetList - Init')
+        super(world, mainDiv)
 
-        this.mainDiv = mainDiv
+        this._createMainButt('floorAction', '🏗')
+
+
         this.mainOffset = {x: 0, y:0, z:0};
         this.currentImage = null;
         this.currentSize = 3;
         this.GS.set("WidjetActions.currentSize", this.currentSize)
 
-
-        // Create Switch Button 
-        this.mainDiv.html( `
-<div class="buttMenuBox  switch" id="floorAction">
-        <input type="radio" id="checkbox_menuBox_floorAction" name="MenuBox">
-        <label for="checkbox_menuBox_floorAction">🏗</label>
-        <div class="widjetMenuBox slider" id="floorAction" >
-            <div id="content" class="menuAction">  </div>
-        </div>
-</div>
-        `)
 
         // Generate Content 
         {

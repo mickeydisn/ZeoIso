@@ -320,7 +320,6 @@ body {
 
 .buttMenuBox#settingAction > label {
   top: 0px;
-  right: 10px;
 }
 
 .buttMenuBox#miniMap > label {
@@ -350,21 +349,6 @@ body {
 
 .buttMenuBox#buildingAction > label {
   top: calc(70px + 80px + 50px + 250px + 50px + 50px);
-}
-
-
-
-.buttMenuBox#KeyBoard > label {
-  top: 0;
-}
-.buttMenuBox#KeyBoard > label::before {
-  content: '⌨️🇫🇷';
-  font-size: .8rem;
-}
-
-.buttMenuBox#KeyBoard > input:checked ~ label::before {
-  content: '⌨️🇶';
-  font-size: .8rem;
 }
 
 

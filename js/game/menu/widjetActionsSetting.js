@@ -1,32 +1,19 @@
 
+import { WidjetActions } from "./widjetAction.js";
 
-export class WidjetActionsSetting {
+export class WidjetActionsSetting extends WidjetActions {
 
     constructor(world, mainDiv) {
-        this.world = world;
-        this.GS = this.world.globalState;
-        
-        console.log('=== WidjetAssetList - Init')
+        super(world, mainDiv)
 
-        this.mainDiv = mainDiv
+        this._createMainButt('settingAction', '⚙️')
 
-        // Create Switch Button 
-        this.mainDiv.html( `
 
+/*
 <div class="buttMenuBox" id="KeyBoard">
         <input type="checkbox" id="checkbox_menuBox_KeyBoard" name="MenuBox">
         <label for="checkbox_menuBox_KeyBoard"></label>
 </div>
-
-
-<div class="buttMenuBox  switch" id="settingAction">
-        <input type="radio" id="checkbox_menuBox_settingAction" name="MenuBox">
-        <label for="checkbox_menuBox_settingAction">⚙️</label>
-        <div class="widjetMenuBox slider" id="settingAction" >
-            <div id="content" class="menuAction">  </div>
-        </div>
-</div>
-        `)
 
         // Generate Content 
         {
@@ -43,6 +30,7 @@ export class WidjetActionsSetting {
                 })
 
         }
+*/
 
         // Generate Content 
         {
@@ -67,6 +55,23 @@ export class WidjetActionsSetting {
             this.contentBox.append('div').classed('row', true).classed('titel', true)
                 .text("= SETTING =")
         }
+
+        // KEYBOARD
+        {
+            this.contentBox.append('div').classed('row', true).classed('subtitel', true)
+                .text("Keyboard:")
+            
+            const zoomBox = this.contentBox.append('div').classed('row', true)
+            zoomBox.html(`
+                <input type="radio" checked id="SettingKeyBoard_AZERT" name="SettingKeyBoard">AZERT</input>
+                <input type="radio" id="SettingKeyBoard_QWERTY" name="SettingKeyBoard">QWERTY</input>
+            `)
+
+            zoomBox.select('#SettingKeyBoard_AZERT').on('click', _ => {this.GS.set("Setting.KeboardType", 'azerty')})
+            zoomBox.select('#SettingKeyBoard_QWERTY').on('click', _ => {this.GS.set("Setting.KeboardType", 'qwzert')})
+        }
+
+        // ZOOM 
         {
             this.contentBox.append('div').classed('row', true).classed('subtitel', true)
                 .text("Zoom:")

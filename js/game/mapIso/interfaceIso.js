@@ -290,6 +290,10 @@ export class InterfaceIso {
             currentlvl = metaTile.waterLvl
         }
         */
+        if (metaTile.isFrise) {
+            this.iso.add(Shape.Prism(Point(xx, yy, currentlvl), 1, 1, .1), this.c.selected);
+
+        }
 
         this.iso.add(Shape.SurfaceFlat(Point(xx, yy, currentlvl - height), 1, 1, height), color);
 
@@ -443,9 +447,9 @@ export class InterfaceIso {
 
 
         if (dx < maxDist && dy < maxDist) {
-            console.log("=== Show", maxDist) 
             // add the tile box in the list of existing box. 
             if (this.isoDivBoxs.filter(x => x === metaTile.divBox).length == 0){
+                console.log("=== Show", maxDist) 
                 this.isoDivBoxs.push(metaTile.divBox)
             }
             // Update position of the box
