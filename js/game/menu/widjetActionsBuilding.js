@@ -46,52 +46,44 @@ export class WidjetActionsBuilding extends WidjetActions {
         this.contentBox.append('div').classed('row', true).classed('titel', true)
             .text("= BUILDING ACTION =")
 
-
-        /*/ --------------------------------
-        {
-            this.contentBox.append('div').classed('row', true).classed('subtitel', true)
-                .text("Effect size:")
-
-            const sizeInput = this.contentBox.append('div').classed('row', true).classed('input', true)
-                .html(`
-            <div class="clickBox" id="remove">-</div>
-            <div class="centerBox" id="label">${this.currentSize}</div>
-            <div class="clickBox" id="add">+</div>
-            `)
-
-            sizeInput.select('#remove').on('click', _ => {
-                this.currentSize = this.currentSize > 1 ? this.currentSize - 2 : this.currentSize;
-                sizeInput.select('#label').text(this.currentSize);
-                this.GS.set("WidjetActions.currentSize", this.currentSize)
-
-            })
-            sizeInput.select('#add').on('click', _ => {
-                this.currentSize = this.currentSize + 2;
-                sizeInput.select('#label').text(this.currentSize);
-                this.GS.set("WidjetActions.currentSize", this.currentSize)
-            })
-        } /* */
-
         // --------------------------------
 
         this.contentBox.append('div').classed('row', true).classed('subtitel', true)
-            .text("Clear Actions")
-        this.firstAction = new ButtTileAction(this.GS, this.contentBox, "Clear Item", {func:"clearItemSquare", size:1})
-        new ButtTileAction(this.GS, this.contentBox, "Clear Color", {func:"clearColorSquare", size:1})
-        new ButtTileAction(this.GS, this.contentBox, "Clear Lvl", {func:"clearLvlSquare", size:1})
+            .text("Building Base")
+        this.firstAction = new ButtTileAction( this.GS, this.contentBox,
+            "Base_10", {
+                func:"buildingBase", buildType:'base', growLoopCount:10
+        })
+        this.firstAction = new ButtTileAction( this.GS, this.contentBox,
+            "Base_40", {
+                func:"buildingBase", buildType:'base', growLoopCount:40
+        })
+        this.firstAction = new ButtTileAction( this.GS, this.contentBox,
+            "Base_100", {
+                func:"buildingBase", buildType:'base', growLoopCount:100
+        })
+        // this.contentBox.append('div').classed('cell', true).classed('empty', true)
+        // this.contentBox.append('div').classed('cell', true).classed('empty', true)
         this.contentBox.append('div').classed('cell', true).classed('empty', true)
 
         // --------------------------------
+   
         this.contentBox.append('div').classed('row', true).classed('subtitel', true)
-            .text("Lvl Actions")
-        new ButtTileAction(this.GS, this.contentBox, "Up", {func:"lvlUpSquare", size:1, lvl:1})
-        new ButtTileAction(this.GS, this.contentBox, "Down", {func:"lvlUpSquare", size:1, lvl:-1})
-        this.contentBox.append('div').classed('cell', true).classed('empty', true)
-        this.contentBox.append('div').classed('cell', true).classed('empty', true)
-
-        new ButtTileAction(this.GS, this.contentBox, "Smoth", {func:"lvlAvgSquare", size:1})
-        new ButtTileAction(this.GS, this.contentBox, "Flat", {func:"lvlFlatSquare", size:1})
-        new ButtTileAction(this.GS, this.contentBox, "Smoth\nBorder", {func:"lvlAvgBorder", size:1})
+            .text("Building Place")
+        this.firstAction = new ButtTileAction( this.GS, this.contentBox,
+            "Place_10", {
+                func:"buildingBase", buildType:'place', growLoopCount:10
+        })
+        this.firstAction = new ButtTileAction( this.GS, this.contentBox,
+            "Place_40", {
+                func:"buildingBase", buildType:'place', growLoopCount:40
+        })
+        this.firstAction = new ButtTileAction( this.GS, this.contentBox,
+            "Place_100", {
+                func:"buildingBase", buildType:'place', growLoopCount:100
+        })
+        // this.contentBox.append('div').classed('cell', true).classed('empty', true)
+        // this.contentBox.append('div').classed('cell', true).classed('empty', true)
         this.contentBox.append('div').classed('cell', true).classed('empty', true)
 
         // --------------------------------

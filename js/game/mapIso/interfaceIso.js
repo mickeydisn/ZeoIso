@@ -13,7 +13,7 @@ export const TILE_WIGTH = 60 / 2;
 
 
 const DISPLAY_LVL_ALPHA = .3
-const DISPLAY_LVL_ALPHA_DIFF = 4
+const DISPLAY_LVL_ALPHA_DIFF = 3
 
 export class InterfaceIso {
 
@@ -261,10 +261,11 @@ export class InterfaceIso {
             return 1            
         }
 
-        const d = Math.max(xx - pc, yy - pc)
+        let d = Math.max(Math.abs(xx - pc), Math.abs(yy - pc))
+        d *= 1.4
         const cone = Math.abs(x - y) > 3
 
-        return cone || (centerTile.lvl + DISPLAY_LVL_ALPHA_DIFF - d > metaTile.lvl) ? 1 : DISPLAY_LVL_ALPHA
+        return cone || (centerTile.lvl + DISPLAY_LVL_ALPHA_DIFF + d > metaTile.lvl) ? 1 : DISPLAY_LVL_ALPHA
 
 
 

@@ -56,7 +56,7 @@ export class BuildConf_Base {
         }, {
             Tw: 2,
             color: [0, 0, 0], 
-            key: "corridor_", sufix:"#H8_I1",
+            key: "corridor_",
             near:[
                 {is:'B1', con:['B0', 'B1', null]},
                 {is:'E0', con:['E1', null]},
@@ -165,7 +165,7 @@ export class BuildConf_Base {
         }, {
             Tw: .001, 
             color: [0, 0, 0], 
-            key: "corridor_end",  
+            key: "corridor_end",   sufix:"#H8_I1",
             allowMove:true,
             near:[
                 {is:'E0', con:['E1', null]},
@@ -177,7 +177,7 @@ export class BuildConf_Base {
         { 
             Tw: .001, 
             color: [0, 0, 0], 
-            key: "corridor_end",  
+            key: "corridor_end",   sufix:"#H8_I1",
             allowMove:true,
             near:[
                 {is:'E0', con:['E1', null]},

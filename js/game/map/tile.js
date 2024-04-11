@@ -95,6 +95,7 @@ export class Tile {
 	}
 
 	clearItem() {
+		if (this.isFrise) return 
 		this.items.splice(0, this.items.length);
 	}
 	clearTemporatyItem() {

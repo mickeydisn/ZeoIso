@@ -1,3 +1,6 @@
+import { BuildConf_Base } from "../building/buildConf_base.js";
+import { BuildConf_Place } from "../building/buildConf_place.js";
+import { FactoryBuilding } from "../building/building.js";
 import { TilesMatrix, TilesMatrixSelected } from "./tilesMatrix.js";
 
 export class TilesAction2 {
@@ -32,34 +35,14 @@ export class TilesAction2 {
 
 			addBoxMD : this.addBoxMD.bind(this),
 
+
+			buildingBase: this.buildingBase.bind(this),
+
+
 			selectedCopy : this.selectedCopy.bind(this),
 		}
 	}
 	//--------------------
-
-	selectedCopy(conf) {
-		if (conf.state == 0) {
-			console.log('State.0')
-			this.tileSelected1 = conf;
-			// Display Selected Start
-			this.clearAllTemporatyItems()
-			this.temporatyItemsForceKey({...conf, t:'Selected'})
-		} else {
-			this.tileSelected2 = conf;
-			if (this.tileSelected1 && this.tileSelected2) {
-				const tilesMatris = new TilesMatrixSelected(this.world, this.tileSelected1.x, this.tileSelected1.y, this.tileSelected2.x, this.tileSelected2.y)
-			// Display Selected Arrea
-				this.clearAllTemporatyItems()
-				tilesMatris.tiles.flat().forEach(tile => {
-					this._tileTemporatyItemsForceKey(tile, {t:'Selected'})
-				})
-				const saveTiles = tilesMatris.saveAsJson()
-				const stringSave =  '[\n  ' + saveTiles.map(x =>  JSON.stringify(x)).join(',\n  ') + '\n]'
-				console.log('tilesMatris',stringSave)
-			}
-		}
-	}
-
 
 	doAction(conf) {
 		console.log(conf)
@@ -264,6 +247,55 @@ export class TilesAction2 {
 	addBoxMD(conf) {
 		const tile = this.fm.getTile(conf.x, conf.y);
 		tile.items.push({t:'Box', conf})
+	}
+
+
+
+
+	// ---------------------
+	// Select And Copy
+	// ---------------------
+
+	selectedCopy(conf) {
+		if (conf.state == 0) {
+			console.log('State.0')
+			this.tileSelected1 = conf;
+			// Display Selected Start
+			this.clearAllTemporatyItems()
+			this.temporatyItemsForceKey({...conf, t:'Selected'})
+		} else {
+			this.tileSelected2 = conf;
+			if (this.tileSelected1 && this.tileSelected2) {
+				const tilesMatris = new TilesMatrixSelected(this.world, this.tileSelected1.x, this.tileSelected1.y, this.tileSelected2.x, this.tileSelected2.y)
+			// Display Selected Arrea
+				this.clearAllTemporatyItems()
+				tilesMatris.tiles.flat().forEach(tile => {
+					this._tileTemporatyItemsForceKey(tile, {t:'Selected'})
+				})
+				const saveTiles = tilesMatris.saveAsJson()
+				const stringSave =  '[\n  ' + saveTiles.map(x =>  JSON.stringify(x)).join(',\n  ') + '\n]'
+				console.log('tilesMatris',stringSave)
+			}
+		}
+	}
+
+	// ---------------------
+	// Select And Copy
+	// ---------------------
+
+
+	buildingBase(conf) {
+		const growLoopCount = conf.growLoopCount ? conf.growLoopCount : 10
+
+		const buildConf = conf.buildType == null ? null :
+			conf.buildType.localeCompare("base") == 0 ?  new BuildConf_Base({growLoopCount:growLoopCount}) :
+			conf.buildType.localeCompare("place") == 0 ?  new BuildConf_Place({growLoopCount:growLoopCount}) :
+			null
+
+		if (buildConf) {
+			const factoryBuilding = new FactoryBuilding(this.world, buildConf)
+			factoryBuilding.start(conf.x, conf.y);
+		}
 	}
 
 
