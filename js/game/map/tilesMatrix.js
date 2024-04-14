@@ -35,13 +35,13 @@ export class TilesMatrixSelected  {
 		this.avgLvl /= this.sizeX * this.sizeY
 	}
 
-	saveAsJson(){
+	toJson(){
 		const baseLvl = this.tiles[0][0].lvl
 		return this.rangeX.map((x, idx) => {
 			return this.rangeY.map((y, idy) => {
 				const tile = this.tiles[idx][idy]
 				return {
-					...tile.saveAsJson(),
+					...tile.toJson(),
 					x: idx,
 					y: idy,
 					lvl: tile.lvl - baseLvl

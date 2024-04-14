@@ -60,6 +60,7 @@ export class Biome {
 		this.name = biomeConf.name;
 		this.id = biomeConf.id;
 		this.rgb = biomeConf.rgb
+		this.lvlType = biomeConf.lvlType
 		this.initColor();
 		this.floreCondition = ["null"];
 		this.initFlore();

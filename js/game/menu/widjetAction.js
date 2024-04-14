@@ -26,7 +26,17 @@ export class WidjetActions {
         })
 
         this.GS.sub('Menu.Selected', `Menu.Selected_${nameId}`, curentId => {
-            this.isOpen = nameId != curentId ? false : ! this.isOpen
+
+            if (nameId == curentId) {
+                this.isOpen = ! this.isOpen
+                if (this.isOpen == false) {
+                    this.GS.set("TileClickFunction", null)
+                    this.GS.set("WidjetActions.currentButt", null)
+                }
+            } else {
+                this.isOpen = false
+            }
+    
             input.property('checked', this.isOpen);
         } )
     }

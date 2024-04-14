@@ -23,13 +23,12 @@ export class BuildTile {
 
         this.ta.lvlSet(this.x, this.y, building.lvl)
         
-        this.tile.buildTile = this;
         // console.log(this.x , this.y, this.tile)
-
         // this.ta.colorSquare(x, y, 1, [0, 0, 0, 255])
         this.ta.lvlFlatSquare(this.x, this.y, 3)
         this.ta.lvlAvgSquare(this.x, this.y, 5)
         this.ta.lvlAvgSquare(this.x, this.y, 7)
+        this.tile.buildTile = this;
 
     }
 

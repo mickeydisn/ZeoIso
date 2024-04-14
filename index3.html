@@ -45,21 +45,28 @@
 
 
             <div class="Menu">
-                <input type="checkbox" id="Layer1"></input><label for="Layer1"> Layer1</label> </br>
-                <input type="checkbox" id="Layer2"></input><label for="Layer2"> Layer2</label> </br>
-                <input type="checkbox" id="Layer3"></input><label for="Layer3"> Layer3</label> </br>
-                <input type="checkbox" id="Layer4"></input><label for="Layer4"> Layer4</label> </br>
+                <input type="radio" checked id="vBiome" name="Layer"></input><label for="vBiome"> vBiome</label> </br>
+                <input type="radio" id="vLvl" name="Layer"></input><label for="vLvl"> vLvl</label> </br>
+                <input type="radio" id="vLvlGen" name="Layer"></input><label for="vLvlGen"> vLvlGen</label> </br>
+                <input type="radio" id="vPeak" name="Layer"></input><label for="vPeak"> vPeak</label> </br>
+                <input type="radio" id="vErosion" name="Layer"></input><label for="vErosion"> vErosion</label> </br>
+                <input type="radio" id="vFlore" name="Layer"></input><label for="vFlore"> vFlore</label> </br>
 
             </div>
 
             <script derer type="module">
                 import {FactoryBiomes} from './js/game/map/factoryBiomes.js'
                 import {FactoryGenerator} from './js/game/map/factoryGenerator.js'
+                import { FactoryTileGenerator } from './js/game/map/factoryTileGenerator.js';
+                import { FactoryTileRawGenerator } from './js/game/map/factoryTileRawGenerator.js';
+                import { GenTile } from './js/game/map/tile.js';
+
+
                 // const main = new Main()
                 // main.start()
 
                 const TILE_GEN_ZOOM = 2;
-                const CHUNK_SIZE = 4;
+                const CHUNK_SIZE = 4 * 2;
                 const DEFINITION = 1;
 
 
@@ -67,32 +74,45 @@
 
                     constructor() {
                         this.size = Math.pow(2, 10);
-                        this.width = 2800;
-                        this.height = 1600;
+                        this.width = 2800 / 2;
+                        this.height = 1600 / 2;
                     
+                        this.view = 'vBiome'
 
-                        this.zoom = 1;
-                        this.grain = 16;
-                    
+                        this.zoom = 1;                    
 
                         this.seed = "mickey";
 
                         this.factoryBiomes = new FactoryBiomes(this);
                         this.fg = new FactoryGenerator(this);
 
+                        this.factoryTileRawGenerator = new FactoryTileRawGenerator(this);
+                        this.factoryTileGenerator = new FactoryTileGenerator(this);
+
+                        // console.log('RawTile',)
+
+
                         this.init()
                     }
 
                     init() {
 
-                        this.canvas = d3.select('body').append('canvas')
-                            .attr('id', "canvas")
-                            .attr('width', this.width)
-                            .attr('height', this.height)
-                            // .style('position','absolute')
-                            .style('width', this.width + "px")
-                            .style('height', this.height + "px")
-                        this.ctx = this.canvas.node().getContext('2d')
+                        this.canvas = d3.select('body')
+                            .append('div')
+                                .style('overflow', "scroll")
+                                .style('height', "100vh")
+                                .style('width', "100vw")
+                                .style('display', "flex")
+                                .style('justify-content', "center")
+                                .style('align-items', "center")
+                            .append('canvas')
+                                .attr('id', "canvas")
+                                .attr('width', this.width)
+                                .attr('height', this.height)
+                                // .style('position','absolute')
+                                .style('width', this.width + "px")
+                                .style('height', this.height + "px")
+                            this.ctx = this.canvas.node().getContext('2d')
                         this.ctx.webkitImageSmoothingEnabled = false;
                         this.ctx.mozImageSmoothingEnabled = false;
                         this.ctx.imageSmoothingEnabled = false;
@@ -101,52 +121,98 @@
                         console.log('World')
                         this.fillMap()
                     }
+                    
+                    _pixelRawLvl(tile, col, row) {
 
-                    _pixelRawLvl(xx, yy, col, row) {
+                        let lvlRaw = tile.rLvl * 256
 
-                        let lvlRaw = this.fg.getRawLvl(xx, yy, TILE_GEN_ZOOM)
 
-                        if (lvlRaw < .25) {
-                            this.ctx.fillStyle = `rgb(${255}, ${255}, ${255}, .9)`;
-                        } else if (lvlRaw > .75) {
-                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${0}, .9)`;
 
+                        if (lvlRaw < 80) {
+                            this.ctx.fillStyle = `rgb(${96}, ${96}, ${255}, .3)`;
+                        } else if (lvlRaw > 192) {
+                            this.ctx.fillStyle = `rgb(${64}, ${32}, ${0}, .3)`;
                         } else {
-                            const cFunc = d3.scaleLinear([0, 1], [0, 32]);
-                            const c = (Math.abs(cFunc(lvlRaw)) * 4) % 256
+                            const cFunc = d3.scaleLinear([80, 192], [0, 256 - 1]);
+                            const rc = cFunc(lvlRaw) 
+                            const c = rc - rc % 16
                             this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .9)`;
                         }
                         this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
                     }
 
-                    _pixelRawPeak(xx, yy, col, row) {
-                        let lvlPeak = this.fg.getRawPeak(xx, yy, TILE_GEN_ZOOM)
+                    _pixelGen2Lvl(tile, col, row) {
+                        const lvl = tile.gen2Lvl 
+
+                        if (lvl < 80) {
+                                this.ctx.fillStyle = `rgb(${96}, ${96}, ${255}, .9)`;
+                        } else if (lvl > 192) {
+                            this.ctx.fillStyle = `rgb(${200}, ${96}, ${32}, .9)`;
+                        } else {
+                            const cFunc = d3.scaleLinear([80, 192], [0, 256 - 1]);
+                            const rc = cFunc(lvl) 
+                            const c = rc - rc % 16
+                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .9)`;
+                        }
+                        this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
+                        
+                    }
+
+                    // rPeak rErosion rFlore
+
+                    _pixelRawPeak(tile, col, row) {
+                        let lvlPeak = tile.rPeak
 
                         if (lvlPeak < .02) {
-                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${255}, .001)`;
+                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${255}, .3)`;
                             this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
                         } else if (lvlPeak > .4) {
                             const cFunc = d3.scaleLinear([0, 1], [0, 128]);
                             const c = (Math.abs(cFunc(lvlPeak)) * 16) % 256
-                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .2)`;
+                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .3)`;
                             this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
                         }
                     }
 
-                    _pixelRawErosion(xx, yy, col, row) {
-                        let lvlEro = this.fg.getRawErosion(xx, yy, TILE_GEN_ZOOM)
+                    _pixelRawErosion(tile, col, row) {
+                        let lvlEro = tile.rErosion
 
-                        const cFunc = d3.scaleLinear([0, 1], [0, 128]);
-                        const c = (Math.abs(cFunc(lvlEro)) * 16) % 256
+                        const cFunc = d3.scaleLinear([0, 1], [0, 256]);
+                        const cx = cFunc(lvlEro)
+                        const c = cx - cx % 16
                         if (lvlEro < .3) {
-                            this.ctx.fillStyle = `rgb(${c}, ${0}, ${0}, .2)`;
+                            this.ctx.fillStyle = `rgb(${c}, ${0}, ${0}, .5)`;
+                            this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
                         } else if (lvlEro > .7) {
-                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${c}, .2)`;
-                        } else {
-                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .01)`;
-                        }
+                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${c}, .5)`;
+                            this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
+                        } 
 
                     }
+
+
+
+                    _pixelRawFlore(tile, col, row) {
+
+                        let lvlFlore = tile.rFlore
+
+                        if (lvlFlore < .15) {
+                            this.ctx.fillStyle = `rgb(${255}, ${0}, ${0}, .9)`;
+                        } else if (lvlFlore > .85) {
+                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${255}, .9)`;
+                        } else if (lvlFlore > .45 && lvlFlore < .55) {
+                            this.ctx.fillStyle = `rgb(${0}, ${255}, ${0}, .9)`;
+
+                        } else {
+                            const cFunc = d3.scaleLinear([0, 1], [0, 32]);
+                            const c = (Math.abs(cFunc(lvlFlore)) * 4) % 256
+                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .9)`;
+                        }
+                        this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
+                    }
+
+
+
 
                     _pixelRawPeakErosion(xx, yy, col, row) {
                         let lvlPeak = this.fg.getRawPeak(xx, yy, TILE_GEN_ZOOM)
@@ -166,32 +232,10 @@
                         this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
                     }
 
-
-                    _pixelRawFlore(xx, yy, col, row) {
-
-                        let lvlFlore = this.fg.getRawFlore(xx, yy, TILE_GEN_ZOOM)
-
-                        if (lvlFlore < .15) {
-                            this.ctx.fillStyle = `rgb(${255}, ${0}, ${0}, .9)`;
-                        } else if (lvlFlore > .85) {
-                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${255}, .9)`;
-                        } else if (lvlFlore > .45 && lvlFlore < .55) {
-                            this.ctx.fillStyle = `rgb(${0}, ${255}, ${0}, .9)`;
-
-                        } else {
-                            const cFunc = d3.scaleLinear([0, 1], [0, 32]);
-                            const c = (Math.abs(cFunc(lvlFlore)) * 4) % 256
-                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .9)`;
-                        }
-                        this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
-                    }
-
-
-
                     fillMap () {
 
-                        this.ctx.fillstyle = '#000'
-                        this.ctx.fillRect(0, 0, this.width, this.height)
+                        // this.ctx.fillstyle = '#000'
+                        // this.ctx.fillRect(0, 0, this.width, this.height)
 
                         
                         const width =  Math.floor(this.width / DEFINITION)
@@ -206,14 +250,35 @@
                                 const yy = CHUNK_SIZE * (-row + Math.floor(height / 2)) + y 
                                 const xx = CHUNK_SIZE * (col - Math.floor(width / 2)) + x 
                                 
+                                const tile = new GenTile(this, xx, yy)
+                                
 
-                                {
-                                    const c = this.fg.getLvlColor(xx, yy, TILE_GEN_ZOOM)
+                                if (this.view.localeCompare('vBiome') == 0 ) {
+                                    const c = tile.genColor
                                     this.ctx.fillStyle = `rgb(${c[0]}, ${c[1]}, ${c[2]})`;
                                     this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
+                                } /**/
+                                
+                                if (this.view.localeCompare('vLvl') == 0) {
+                                    this._pixelRawLvl(tile, col, row);
+                                }
+                                if (this.view.localeCompare('vLvlGen') == 0) {
+                                    this._pixelGen2Lvl(tile, col, row);
+                                }
+                                
+                                if (this.view.localeCompare('vPeak') == 0) {
+                                    this._pixelRawPeak(tile, col, row);
+                                }
+                                if (this.view.localeCompare('vErosion') == 0) {
+                                    this._pixelRawErosion(tile, col, row);
+                                }
+                                if (this.view.localeCompare('vFlore') == 0) {
+                                    this._pixelRawFlore(tile, col, row);
                                 }
 
-                                this._pixelRawLvl(xx, yy, col, row);
+                                
+                    
+                    
 
                                 // this._pixelRawPeak(xx, yy, col,row);
 
@@ -221,17 +286,32 @@
 
                                 // this._pixelRawPeakErosion(xx, yy, col,row);
                                 
-                                this._pixelRawFlore(xx, yy, col, row)
+                                // this._pixelRawFlore(xx, yy, col, row)
                             }
                         }
-                        console.log(min, max)
+                        // console.log(min, max)
                     }
 
                 }
 
 
-                new World();
+                const world = new World();
                 console.log('Hello' , )
+
+                const apply = inputId => {
+                    const input = d3.select("#" + inputId)
+                    input.on('click', _ => {
+                        world.view = inputId
+                        world.fillMap()
+                    })
+                }
+                apply('vBiome')
+                apply('vLvl')
+                apply('vLvlGen')
+                
+                apply('vPeak')
+                apply('vErosion')
+                apply('vFlore')
 
             </script>
 

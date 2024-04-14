@@ -6,6 +6,9 @@ import { WorldStart } from './config/wordStart.js';
 import {FactoryBiomes} from './map/factoryBiomes.js'
 import {FactoryGenerator} from './map/factoryGenerator.js'
 import {FactoryMap} from './map/factoryMap.js'
+import { FactoryTileGenerator } from './map/factoryTileGenerator.js';
+import { FactoryTileRawGenerator } from './map/factoryTileRawGenerator.js';
+import { GenTile, RawTile } from './map/tile.js';
 import { TilesAction } from './map/tilesAction.js';
 import { TilesAction2 } from './map/tilesAction2.js';
 import { TilesMatrix } from './map/tilesMatrix.js'
@@ -32,6 +35,12 @@ export class World {
 
         this.factoryBiomes = new FactoryBiomes(this);
         this.factoryGenerator = new FactoryGenerator(this);
+        this.factoryTileRawGenerator = new FactoryTileRawGenerator(this);
+        this.factoryTileGenerator = new FactoryTileGenerator(this);
+
+        console.log('RawTile', new GenTile(this, 110, 110))
+
+
         this.factoryMap = new FactoryMap(this)
         this.tilesMatrix = new TilesMatrix(this)
 
@@ -71,8 +80,15 @@ export class World {
         const tileClickFunction = this.globalState.get("TileClickFunction")
         const curentButt = this.globalState.get("WidjetActions.currentButt")
         const curentSize = this.globalState.get("WidjetActions.currentSize")
-        const conf = {...tileClickFunction, x:x, y:y}
-        this.doAction(conf)
+
+        if (tileClickFunction) {
+            const conf = {...tileClickFunction, x:x, y:y}
+            this.doAction(conf)
+        } else {
+            const tileJson = this.factoryMap.getTile(x,y).toJson()
+            console.log(tileJson)
+        }
+        
         // this.GS.set('InterfaceIso.ClickTile', {x: xx - (this.size/2), y: yy - (this.size/2)})
 
     }

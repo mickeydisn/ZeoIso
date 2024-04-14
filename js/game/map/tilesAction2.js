@@ -272,7 +272,7 @@ export class TilesAction2 {
 				tilesMatris.tiles.flat().forEach(tile => {
 					this._tileTemporatyItemsForceKey(tile, {t:'Selected'})
 				})
-				const saveTiles = tilesMatris.saveAsJson()
+				const saveTiles = tilesMatris.toJson()
 				const stringSave =  '[\n  ' + saveTiles.map(x =>  JSON.stringify(x)).join(',\n  ') + '\n]'
 				console.log('tilesMatris',stringSave)
 			}

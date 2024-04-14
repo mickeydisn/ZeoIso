@@ -1,6 +1,139 @@
 export const TILE_GEN_ZOOM = 2
 
-export class Tile {
+
+
+export class RawTile {
+
+	constructor(world, x, y) {
+		this.world = world;
+		this.x = x; 
+		this.y = y;
+
+		const ftrg = this.world.factoryTileRawGenerator;
+		Object.assign(this, ftrg.getRawTile(x, y, TILE_GEN_ZOOM));
+		Object.assign(this, ftrg.getFuncTile(x, y, TILE_GEN_ZOOM));
+	}
+
+}
+
+
+export class GenTile extends RawTile {
+	constructor(world, x, y) {
+		super(world, x, y);
+		const frg = this.world.factoryTileGenerator;
+		Object.assign(this, frg.getGenTile(this))
+	}
+}
+
+
+export class Tile extends GenTile {
+	constructor(world, x, y) {
+		super(world, x, y);
+
+		this._lvl = 0;
+		this._waterLvl = 0;
+
+		this._color = [0, 0, 0, 1]
+		this.items = []
+
+		this.buildTile = null;
+		this.temporatyItems = []
+
+		this.lvlGen();
+		this.colorGen();
+		this.itemsGen();
+	}
+
+	get isBlock() {
+		return (
+			this.buildTile != null && 
+			this.buildTile.conf != null &&
+			!this.buildTile.conf.allowMove 
+			) // || ( this.items.length > 0 )
+	}
+
+	get isFrise() {
+		return false || 
+			this.buildTile != null ||
+			this.isWater
+	}
+
+	get waterLvl() {
+		if (this.isWater) {
+			return this._waterLvl
+		}
+		return this._lvl
+	}
+	set waterLvl(lvl) {
+		this._waterLvl = lvl
+	}
+
+	get lvl () { 
+		return this._lvl
+	}
+
+	set lvl(lvl) {
+		if (this.isFrise) return ;
+		if (this.isWater && lvl > this._waterLvl) {
+			return;
+		}
+		this._lvl = lvl // - lvl % .25
+	}
+
+	set color(color) {
+		if (this.isFrise) return ;
+		this._color = color
+	}
+
+	get color() {
+		return this._color
+	}
+
+	updateColor([r, g, b, a]) {
+		if (this.buildTile != null || this.isWater) return ;
+        this.color = new Uint8Array([r, g, b, a]);
+    }
+
+
+	clearItem() {
+		if (this.isFrise) return 
+		this.items.splice(0, this.items.length);
+	}
+	clearTemporatyItem() {
+		this.temporatyItems.splice(0, this.temporatyItems.length);
+	}
+
+
+	lvlGen() {
+		this._lvl = this.gen2Lvl
+		this._waterLvl = this.gen2Lvl
+		if (this._lvl != this._waterLvl) {
+			this.isWater = true;
+		}
+	}
+
+	colorGen() {
+		this._color = this.genColor
+	}
+
+	itemsGen() {
+		this.items = this.genItems
+		// this.items.push({t: 'Pyramid', lvl:0})
+	}
+
+
+	toJson() {
+		return {
+			lvl: this._lvl,
+			// waterLvl: this._waterLvl,
+			color : [...this.color],
+			items: this.items,
+		}
+	}
+
+}
+
+export class Tile2 {
 	constructor(world, x, y) {
 		this.world = world;
 		this.fg = this.world.factoryGenerator;
@@ -53,7 +186,7 @@ export class Tile {
 		if (this.isWater && lvl > this._waterLvl) {
 			return;
 		}
-		this._lvl = lvl
+		this._lvl = lvl 
 	}
 
 	set color(color) {
@@ -129,7 +262,7 @@ export class Tile {
     }
 
 
-	saveAsJson() {
+	toJson() {
 		return {
 			lvl: this._lvl,
 			// waterLvl: this._waterLvl,
