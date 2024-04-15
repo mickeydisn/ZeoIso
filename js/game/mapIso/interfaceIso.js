@@ -37,26 +37,14 @@ export class InterfaceIso {
             blue: new Color(80, 100, 240, .5),
             flore: new Color(53, 148, 56),
         }
-        this.selectedTile = null;
 
+        this.selectedTile = null;
         this.tilesMatrix = world.tilesMatrix
         this.assetLoader = this.world.assetLoader; //new AssetLoader(_ => this.init())
 
         // list of Div That folow the iso cell.
         this.isoDivBoxs = [];
-
         this.init();
-
-        /*
-
-        this.mainControl = 'Tile';
-        this.mainDirection = 'SE';
-        this.colorOffset = {hue:0, saturation:100, contrast:100};
-        this.mainOffset = {x: 0, y:0, z:0};
-
-        this.position = {x:10, y:15, direction:0}; // dic : 0-NE, 1-SE, 2-SW, 3-NW
-        this.chunkSize = {x: 20, y:20};
-        */
 
         this.updateZoom(this.GS.get("Setting.Zoom"));
         this.GS.sub('Setting.Zoom', "InterfaceIso", this.updateZoom.bind(this))
@@ -75,8 +63,6 @@ export class InterfaceIso {
     }
 
     draw() {
-        this.mainDiv            
-    //        mapDiv
         this.mapDiv = this.mainDiv.append('div')
             .style('width', (1400 - 30) + "px")
             .style('height', (700 - 30) + "px")

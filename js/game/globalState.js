@@ -7,14 +7,15 @@ export class GlabalState {
         console.log('=== GlabalState == ')
         this._state = {
             "Setting.KeboardType": 'azerty',
+            "Setting.PlayerMove" : 0,
             "Setting.Zoom": 1.4,
             "Menu.Selected": null,
             "TileClickFunction": null,
+            "TileInfo.position" : [0, 0],
         }
 
         this._sub = {}
     }
-
 
     sub(stateKey, subKey, callFunction) {
         console.log('=====SUB==', stateKey, subKey)
@@ -30,7 +31,7 @@ export class GlabalState {
     }
 
     set(stateKey, value) {
-        console.log('==GS=Set===(', stateKey, value)
+        // console.log('==GS=Set===(', stateKey, value)
         // Call Function for eash substription 
         if (this._sub[stateKey]) {
             this._sub[stateKey].forEach(([subKey, callFunction]) => {

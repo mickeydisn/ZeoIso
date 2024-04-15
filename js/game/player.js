@@ -27,10 +27,21 @@ export class Player {
         this.keyMoveX = 0;
         this.keyMoveY = 0;
 
-
-        this.GS.sub('Setting.KeboardType', 'Player', this.updateKeyType.bind(this))
-        this.updateKeyType(this.GS.get('Setting.KeboardType'))
+        this.GS.sub('Setting.PlayerMove', 'Player', this.updateSettingPlayerMove.bind(this))
+        this.updateSettingPlayerMove(this.GS.get('Setting.PlayerMove'))
+        
+        this.GS.sub('Setting.KeboardType', 'Player', this.updateSettingKeboardType.bind(this))
+        this.updateSettingKeboardType(this.GS.get('Setting.KeboardType'))
     }
+
+
+    updateSettingKeboardType(keyType) {
+      this.keyboardAzert = keyType.localeCompare("azerty") == 0 
+    }    
+    updateSettingPlayerMove(key) {
+      this.settingPlayerMove = key
+    }    
+
 
 
     get currentAsset() {
@@ -75,7 +86,8 @@ export class Player {
             
         if (this.tileX != tileFloorX || this.tileY != tileFloorY) {
             this.tileX = tileFloorX            
-            this.tileY = tileFloorY            
+            this.tileY = tileFloorY   
+            this.GS.set("TileInfo.position", [tileFloorX, tileFloorY])         
             this.world.tilesMatrix.setCenter(this.tileX, this.tileY);
         }
     }
@@ -226,10 +238,6 @@ export class Player {
 
 
 
-    updateKeyType(keyType) {
-      this.keyboardAzert = keyType.localeCompare("azerty") == 0 
-    }    
-
     keyLoopControle (keyPressed) {
         const kP = keyPressed
         const aze = this.keyboardAzert
@@ -254,7 +262,7 @@ export class Player {
           x = - 1;
         }
 
-        const [xx, yy] = 
+        let [xx, yy] = 
         x ==  0 && y ==  1 ?  [ 1,  0]:  
         x ==  1 && y ==  1 ? [.75, -.75]: 
         x ==  1 && y ==  0 ? [ 0, -1]:  
@@ -267,9 +275,24 @@ export class Player {
         [0, 0]
       
         
-         
-        /*
-        // Normal
+        if (this.settingPlayerMove == 1) {
+          // Move Rotation , ajuste the movement off the screen oriantation , not on Iso orientation
+          [xx, yy] = 
+            x ==  0 && y ==  1 ? [ 1.25,  1.25]: // z = zd 
+            x ==  1 && y ==  1 ? [ 1,  0]: // zd = d 
+            x ==  1 && y ==  0 ? [ .75, -.75]: // d = ds 
+
+            x ==  1 && y == -1 ? [ 0, -1]: // ds = s
+            x ==  0 && y == -1 ? [-1.25, -1.25]: // s = sq 
+            x == -1 && y == -1 ? [-1,  0]: // sq = q
+            x == -1 && y ==  0 ? [-.75,  .75]: // q = qz
+            x == -1 && y ==  1 ? [ 0,  1]: // qz = z
+            [0, 0]
+        }
+
+
+                /*
+        // Normal ( Off )
         const [xx, yy] = 
           x ==  0 && y ==  1 ? [ 0,  1]:  
           x ==  1 && y ==  1 ? [ 1.25,  1.25]:  
@@ -282,21 +305,6 @@ export class Player {
           x == -1 && y ==  1 ? [-.75,  .75]: 
           [0, 0]
         */
-
-        /*
-        // Move Rotation , ajuste the movement off the screen oriantation , not on Iso orientation
-        const [xx, yy] = 
-          x ==  0 && y ==  1 ? [ 1.25,  1.25]: // z = zd 
-          x ==  1 && y ==  1 ? [ 1,  0]: // zd = d 
-          x ==  1 && y ==  0 ? [ .75, -.75]: // d = ds 
-
-          x ==  1 && y == -1 ? [ 0, -1]: // ds = s
-          x ==  0 && y == -1 ? [-1.25, -1.25]: // s = sq 
-          x == -1 && y == -1 ? [-1,  0]: // sq = q
-          x == -1 && y ==  0 ? [-.75,  .75]: // q = qz
-          x == -1 && y ==  1 ? [ 0,  1]: // qz = z
-          [0, 0]
-        */        
 
         this.move(xx, yy) 
       }

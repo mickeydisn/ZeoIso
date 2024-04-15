@@ -19,21 +19,6 @@ export class WidjetAssetList extends WidjetActions {
 
         this.mainDiv.attr('id', 'mainDiv')
 
-/*
-<div class="buttMenuBox  switch" id="control">
-    <input type="radio" id="checkbox_menuBox_control", name="MenuBox">
-    <label for="checkbox_menuBox_control">🍪</label>
-    <div class="widjetMenuBox slider" id="control" ></div>
-</div>
-
-<div class="buttMenuBox  switch" id="tileAsset">
-        <input type="radio" id="checkbox_menuBox_tileAsset", name="MenuBox">
-        <label for="checkbox_menuBox_tileAsset">🏡</label>
-        <div class="widjetMenuBox slider" id="tileAsset" ></div>
-</div>
-*/
-
-
         this.content = this.mainDiv.select('#content')
             
         // --------------------------------

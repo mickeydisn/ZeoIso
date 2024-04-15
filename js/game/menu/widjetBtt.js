@@ -10,6 +10,7 @@ export class ButtTileAction {
         this.initDiv();
         this.GS.sub("WidjetActions.currentButt", "ButtTileActionAsset_" + key, 
             this.updateCurrentAction.bind(this))
+
     }
     
     get funcConf () { return  this._funcConf }

@@ -66,7 +66,7 @@
                 // main.start()
 
                 const TILE_GEN_ZOOM = 2;
-                const CHUNK_SIZE = 4 * 2;
+                const CHUNK_SIZE = 6 ; // 4 * 2 ;
                 const DEFINITION = 1;
 
 
@@ -135,8 +135,9 @@
                         } else {
                             const cFunc = d3.scaleLinear([80, 192], [0, 256 - 1]);
                             const rc = cFunc(lvlRaw) 
-                            const c = rc - rc % 16
-                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .9)`;
+                            let c = rc - rc % 16
+                            c = c % 128
+                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, 1)`;
                         }
                         this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
                     }
@@ -145,14 +146,15 @@
                         const lvl = tile.gen2Lvl 
 
                         if (lvl < 80) {
-                                this.ctx.fillStyle = `rgb(${96}, ${96}, ${255}, .9)`;
+                                this.ctx.fillStyle = `rgb(${96}, ${96}, ${255}, .2)`;
                         } else if (lvl > 192) {
-                            this.ctx.fillStyle = `rgb(${200}, ${96}, ${32}, .9)`;
+                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${0}, .5)`;
                         } else {
                             const cFunc = d3.scaleLinear([80, 192], [0, 256 - 1]);
                             const rc = cFunc(lvl) 
-                            const c = rc - rc % 16
-                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .9)`;
+                            let c = rc - rc % 16
+                            c = c % 128
+                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, 1)`;
                         }
                         this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
                         
@@ -197,16 +199,16 @@
                         let lvlFlore = tile.rFlore
 
                         if (lvlFlore < .15) {
-                            this.ctx.fillStyle = `rgb(${255}, ${0}, ${0}, .9)`;
+                            this.ctx.fillStyle = `rgb(${255}, ${0}, ${0}, .5)`;
                         } else if (lvlFlore > .85) {
-                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${255}, .9)`;
+                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${255}, .5)`;
                         } else if (lvlFlore > .45 && lvlFlore < .55) {
-                            this.ctx.fillStyle = `rgb(${0}, ${255}, ${0}, .9)`;
+                            this.ctx.fillStyle = `rgb(${0}, ${255}, ${0}, .5)`;
 
                         } else {
                             const cFunc = d3.scaleLinear([0, 1], [0, 32]);
                             const c = (Math.abs(cFunc(lvlFlore)) * 4) % 256
-                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .9)`;
+                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .1)`;
                         }
                         this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
                     }

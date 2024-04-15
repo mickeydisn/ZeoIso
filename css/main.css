@@ -323,6 +323,12 @@ body {
   right:-40px;
 }
 
+.buttMenuBox  pre {
+  text-align: left;
+  font-size: .7rem;
+  overflow: scroll;
+}
+
 
 .buttMenuBox#settingAction > label {
   top: 0px;
@@ -333,9 +339,10 @@ body {
 }
 
 
-.buttMenuBox#control > label {
+.buttMenuBox#tileInfoAction > label {
   top: calc(70px + 80px);
 }
+
 .buttMenuBox#playerAction > label {
   top: calc(70px + 80px + 50px);
 }

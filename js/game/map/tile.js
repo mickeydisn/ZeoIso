@@ -124,15 +124,22 @@ export class Tile extends GenTile {
 
 	toJson() {
 		return {
+			x: this.x,
+			y: this.y,
+			biome: this.rawBiome,
+			FLvl: this.flvl,
 			lvl: this._lvl,
 			// waterLvl: this._waterLvl,
 			color : [...this.color],
 			items: this.items,
+
+			genColor: this.genColor,
+
 		}
 	}
 
 }
-
+/*
 export class Tile2 {
 	constructor(world, x, y) {
 		this.world = world;
@@ -264,6 +271,9 @@ export class Tile2 {
 
 	toJson() {
 		return {
+			x: this.x,
+			y: this.y,
+			biome: this.biome,
 			lvl: this._lvl,
 			// waterLvl: this._waterLvl,
 			color : [...this.color],
@@ -272,3 +282,4 @@ export class Tile2 {
 	}
 
 }
+*/

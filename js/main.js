@@ -13,6 +13,7 @@ import { WidjetActionsPlayer } from './game/menu/widjetActionsPlayer.js';
 import { WidjetActionsBuilding } from './game/menu/widjetActionsBuilding.js';
 import { WidjetActionsSetting } from './game/menu/widjetActionsSetting.js';
 import { WidjetActionsAchivement } from './game/menu/widjetActionAchivement.js';
+import { WidjetActionsTileInfo } from './game/menu/widjetTileInfo.js';
 
 
 export class Main {
@@ -80,6 +81,11 @@ export class Main {
         {
             const div = divMenu.append('div')
             new WidjetActionsAchivement(this.world, div)
+            
+        }
+        {
+            const div = divMenu.append('div')
+            new WidjetActionsTileInfo(this.world, div)
             
         }
         {

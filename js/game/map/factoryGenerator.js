@@ -345,65 +345,7 @@ export class FactoryGenerator {
     return c
   }
 
-  /*
-  getColor(x, y, zoom=1, grain=1) {
-    var lvl0, lvla, lvlb, lvlc, lvld ;
-
-    // wied grid alignement
-    x = (x > 0) ? x : x + 1;
-    y = (y > 0) ? y : y + 1;
-
-    var c  = new Uint8Array([0, 0, 0, 255]);
-    var item = this.getItem(x, y, zoom, grain);
-    / *
-    if (zoom <= 1 && item != null) {
-      var floreColor = item.color;
-      c.set(floreColor);
-
-    } else {
-    * /  // get color
-    var c = this.getLvlColor(x, y, zoom, grain);
-
-      / *
-      // Biom Shadow
-      if (x * zoom % 16 == 0 || y * zoom % 16 == 0) {
-          var zzoom = (zoom > 1) ? 8 * zoom : 8;
-          bio0 = this.getBiome(x, y, zoom, 16).name;
-          bioa = this.getBiome((x + 1), (y + 1), zoom, 16).name;
-          biob = this.getBiome((x + 1), (y - 1), zoom, 16).name;
-          bioc = this.getBiome((x - 1), (y + 1), zoom, 16).name;
-          biod = this.getBiome((x - 1), (y - 1), zoom, 16).name;
-          if ( bio0 != bioa || bio0 != biob || bio0 != bioc || bio0 != biod) {
-            // c.set([255, 255, 255])
-            c.set([(c[0] < 16) ? 0 : c[0] - 16, (c[1] < 16) ? 0 : c[1] - 16, (c[2] < 16) ? 0 : c[2] - 16])
-          }
-      }
-      * /
-
-      // Lvl Shadow 
-      var zzoom = (zoom > 1) ? 8 * zoom : 8;
-      lvl0 = this.getLvl(x, y, zoom, grain);
-      lvla = this.getLvl((x + 1), (y + 1), zoom, grain);         
-      lvlb = this.getLvl((x + 1), (y - 1), zoom, grain);         
-      lvlc = this.getLvl((x - 1), (y + 1), zoom, grain);         
-      lvld = this.getLvl((x - 1), (y - 1), zoom, grain);        
-      lvl0 -= lvl0 % zzoom;
-      lvla -= lvla % zzoom;
-      lvlb -= lvlb % zzoom;
-      lvlc -= lvlc % zzoom;
-      lvld -= lvld % zzoom;
-      if ( lvl0 > lvla || lvl0 > lvlb ) {
-        c.set([c[0] + 32 , c[1] + 32, c[2] + 32])
-      }
-      if ( lvl0 > lvlc || lvl0 > lvld ) {
-        c.set([(c[0] < 32) ? c[0] : c[0] - 32, (c[1] < 32) ? c[1] : c[1] - 32, (c[2] < 32) ? c[2] : c[2] - 32])
-      }
-    //}
-
-    return c;
-  }
-  */
-
+ 
   /* ----------- */
 
  getCellInfo (cx, cy) {

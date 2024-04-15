@@ -75,6 +75,8 @@ export class World {
             this.doAction(conf)
         } else {
             const tileJson = this.factoryMap.getTile(x,y).toJson()
+            this.globalState.set("TileInfo.position", [x, y])         
+
             console.log(tileJson)
         }
         

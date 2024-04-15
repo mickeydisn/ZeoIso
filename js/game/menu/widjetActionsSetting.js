@@ -71,6 +71,22 @@ export class WidjetActionsSetting extends WidjetActions {
             zoomBox.select('#SettingKeyBoard_QWERTY').on('click', _ => {this.GS.set("Setting.KeboardType", 'qwzert')})
         }
 
+        // PlayerMove
+        {
+            this.contentBox.append('div').classed('row', true).classed('subtitel', true)
+                .text("PlayerMove:")
+            
+            const zoomBox = this.contentBox.append('div').classed('row', true)
+            zoomBox.html(`
+                <input type="radio" checked id="SettingPlayerMove_Precision" name="SettingPlayerMove">Precision</input>
+                <input type="radio" id="SettingPlayerMove_Battel" name="SettingPlayerMove">Battel</input>
+            `)
+
+            zoomBox.select('#SettingPlayerMove_Precision').on('click', _ => {this.GS.set("Setting.PlayerMove", 0)})
+            zoomBox.select('#SettingPlayerMove_Battel').on('click', _ => {this.GS.set("Setting.PlayerMove", 1)})
+        }
+        
+
         // ZOOM 
         {
             this.contentBox.append('div').classed('row', true).classed('subtitel', true)
