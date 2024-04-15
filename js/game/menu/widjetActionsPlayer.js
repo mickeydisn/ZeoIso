@@ -5,6 +5,8 @@ const configPlayerTeleport = [
     {label:"Cliff",         x:1028,     y:147},
     {label:"Top Montagne",  x:-1218,    y:1164},
     {label:"Hill Ice",  x:2765, y:-5654},
+    {label:"Mix",  x:3902, y:-4584},
+
     {label:"0, 0",          x:0,        y:0},
 
     {label:"My - CV",          x:1036,        y:341},

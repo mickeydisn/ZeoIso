@@ -82,6 +82,11 @@ export class Main {
             new WidjetActionsAchivement(this.world, div)
             
         }
+        {
+            this.divFPS = divMenu.append('div')
+                .attr("id", "FPS")
+                .text("100 FPS")
+        }
         
 
         // MiniMap
@@ -116,7 +121,7 @@ export class Main {
     startGameLoop() {
 
         // Définir le FPS fixe
-        const fixedFPS = 160;
+        const fixedFPS = 300;
         const fixedFrameTime = 1000 / fixedFPS;
 
         // Variables pour le calcul du FPS réel
@@ -126,23 +131,23 @@ export class Main {
 
         const bindThis = this
         const gameLoop = function () {
-
             const currentTime = performance.now();
             const elapsedTime = currentTime - lastTime;
-            frameTime = frameTime * .99 + elapsedTime * .01
             lastTime = currentTime;
-
+            frameTime += elapsedTime
             bindThis.loop();
-
             frameCount++;
             if (frameCount >= 100) {
-                frameCount = 0;
+                frameTime /= frameCount;
                 const realFPS = (1000 / frameTime).toFixed(2);
-                // console.log("Real FPS:", realFPS);
-            }
+                bindThis.divFPS.text("FPS:" + realFPS)
 
+                frameCount = 0;
+                frameTime = 0;
+            }
         }
-        d3.interval(gameLoop, fixedFrameTime);
+        setInterval(gameLoop, fixedFrameTime);
+        // d3.interval(gameLoop, fixedFrameTime);
     }
 
 

@@ -1,3 +1,5 @@
+const MAP_DEFINITION = 3
+const CHUNK_SIZE = 5 ;
 
 export class WidjetMiniMap {
 
@@ -7,7 +9,7 @@ export class WidjetMiniMap {
         this.fm = this.world.factoryMap;
 
         this.mainDiv = mainDiv;
-        this.size = 1000;
+        this.size = 800;
         this.init();
         this.refreshRate = 0;
     }
@@ -59,12 +61,11 @@ export class WidjetMiniMap {
         console.log('Click:', clickX, clickY)
         console.log('ClickCenter:', clickX - this.size / 2, clickY - this.size / 2)
         
-        const xx = Math.floor(( clickX - this.size / 2 ) / 5)
-        const yy = Math.floor(( clickY - this.size / 2 ) / 5)
+        const xx = Math.floor(( clickX - this.size / 2 ) / MAP_DEFINITION)
+        const yy = Math.floor(( clickY - this.size / 2 ) / MAP_DEFINITION)
         console.log('XX,YY', xx, yy)
 
         let [x, y] = this.world.tilesMatrix.getPos();
-        const CHUNK_SIZE = 20;
         console.log(x, y, xx, yy)
 
         this.world.player.setCenter(x + yy * CHUNK_SIZE, y + xx * CHUNK_SIZE);
@@ -84,35 +85,42 @@ export class WidjetMiniMap {
         // this.tilesMatrix.update();
         const ctx = this.ctx;
         // Définir la taille d'une case
-        let squareSize = 5;
 
         let [x, y] = this.world.tilesMatrix.getPos();
-        const CHUNK_SIZE = 20;
 		const modx = x % CHUNK_SIZE
 		const mody = y % CHUNK_SIZE
         x = x - modx;
         y = y - mody;
 
-        const matrixSize = Math.floor(this.size / squareSize)
+        const matrixSize = Math.floor(this.size / MAP_DEFINITION)
 
         // Dessiner le damier
         for (let row = 0; row < matrixSize; row++) {
             for (let col = 0; col < matrixSize; col++) {
-                const xx = CHUNK_SIZE * (row - Math.floor(matrixSize / 2)) + x 
-                const yy = CHUNK_SIZE * (col - Math.floor(matrixSize / 2)) + y 
-                
-                const c = this.fm.getTileColor(xx, yy)
-                ctx.fillStyle = `rgb(${c[0]}, ${c[1]}, ${c[2]})`;
-                ctx.fillRect(col * squareSize, row * squareSize, squareSize, squareSize);
 
-                const lvl = this.fm.getTileLvl(xx, yy)
-                const alpha = 
-                    lvl < 0 ? 0 : 
-                    lvl > 425 ? .65 : 
-                    Math.floor((lvl/425) * 20 * .6) / 20 
+                if (Math.abs(row - matrixSize / 2) <= 1 && Math.abs(col - matrixSize / 2) <= 1) {
+                    ctx.fillStyle = `rgb(255, 0, 0)`;
+                    ctx.fillRect(col * MAP_DEFINITION, row * MAP_DEFINITION, MAP_DEFINITION, MAP_DEFINITION);
+    
+                } else {
 
-                ctx.fillStyle = `rgba(0, 0, 0, ${alpha})`;
-                ctx.fillRect(col * squareSize, row * squareSize, squareSize, squareSize);
+                    const xx = CHUNK_SIZE * (row - Math.floor(matrixSize / 2)) + x 
+                    const yy = CHUNK_SIZE * (col - Math.floor(matrixSize / 2)) + y 
+                    
+                    const tile = this.fm.getTileNoGen(xx, yy)
+                    const c = tile.genColor
+                    ctx.fillStyle = `rgb(${c[0]}, ${c[1]}, ${c[2]})`;
+                    ctx.fillRect(col * MAP_DEFINITION, row * MAP_DEFINITION, MAP_DEFINITION, MAP_DEFINITION);
+
+                    const lvl = tile.gen2Lvl
+                    let alpha = (lvl % 8) / 8 
+                    alpha = alpha - alpha % .05
+                    alpha *= .5
+
+                    ctx.fillStyle = `rgba(0, 0, 0, ${alpha})`;
+                    ctx.fillRect(col * MAP_DEFINITION, row * MAP_DEFINITION, MAP_DEFINITION, MAP_DEFINITION);
+
+                }
 
             }
         }

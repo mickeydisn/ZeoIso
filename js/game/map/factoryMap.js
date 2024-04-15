@@ -1,5 +1,5 @@
 import { Chunk, CHUNK_SIZE } from "./chunk.js";
-import { TILE_GEN_ZOOM } from "./tile.js";
+import { GenTile, TILE_GEN_ZOOM } from "./tile.js";
 
 
 export class FactoryMap {
@@ -58,11 +58,23 @@ export class FactoryMap {
 		return chunk.get(modx, mody);	
 	}
 
+
+	getTileNoGen(x, y) {
+		const [cx, cy, modx, mody] = this.chunkPoint(x, y);
+		const chunk = this.getExistingChunk(cx, cy);
+		if (chunk === null) {
+			const tile = new GenTile(this.world, x, y)
+			return tile
+		}
+		return chunk.get(modx, mody);	
+	}
+
 	getTileColor(x, y) {
 		const [cx, cy, modx, mody] = this.chunkPoint(x, y);
 		const chunk = this.getExistingChunk(cx, cy);
 		if (chunk === null) {
-			return this.fg.getLvlColor(x, y, TILE_GEN_ZOOM)
+			const tile = new GenTile(this.world, x, y)
+			return tile.genColor
 		}
 		return chunk.get(modx, mody).color;	
 	}
@@ -70,8 +82,8 @@ export class FactoryMap {
 		const [cx, cy, modx, mody] = this.chunkPoint(x, y);
 		const chunk = this.getExistingChunk(cx, cy);
 		if (chunk === null) {
-			const [lvl , _waterLvl] = this.fg.getLvlGen(x, y, TILE_GEN_ZOOM)
-			return lvl
+			const tile = new GenTile(this.world, x, y)
+			return tile.genLvl2
 		}
 		return chunk.get(modx, mody).lvl;	
 	}

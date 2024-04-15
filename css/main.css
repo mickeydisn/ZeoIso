@@ -41,7 +41,15 @@ body {
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 }
  
-  
+#FPS {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #DEDEDE;
+  font-family: monospace;
+  font-size: 1rem;
+}  
+
 #mainCenter {
   display: inline-flex;
   justify-content: start;
@@ -80,13 +88,11 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 80vw;
+  width: 100vw;
+  top: 0px;
+  position: absolute;
 }
 
-#mainMap {
-  display: flex;
-  flex-direction: column;
-}
 
 #mainMap > div { /* Zoom */
   width: 1401px;

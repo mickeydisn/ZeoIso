@@ -12,6 +12,7 @@ import { GenTile, RawTile } from './map/tile.js';
 import { TilesAction } from './map/tilesAction.js';
 import { TilesAction2 } from './map/tilesAction2.js';
 import { TilesMatrix } from './map/tilesMatrix.js'
+import { SIZE20 } from './mapIso/interfaceIso.js';
 import { Player } from './player.js';
 
 export class World {
@@ -42,7 +43,7 @@ export class World {
 
 
         this.factoryMap = new FactoryMap(this)
-        this.tilesMatrix = new TilesMatrix(this)
+        this.tilesMatrix = new TilesMatrix(this, SIZE20)
 
 
         this.tilesActions = new TilesAction(this)
@@ -57,21 +58,9 @@ export class World {
         new WorldCv(this).start()
 
         this.player.setCenter(2000, 400)
-        /new WorldStart(this).start()
-
-        // this.player.setCenter(1500, 400)
-
-        // this.player.setCenter( 4278, -3031)
+        new WorldStart(this).start()
 
         // new WorldBiome(this).start()
-        // = beach hill
-        //this.player.setCenter(492, -376)
-        
-        // == Near Cliff
-        // this.player.setCenter(1056, 147)
-        // ========================
-        // ========================
-
 
     }
 

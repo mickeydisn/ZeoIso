@@ -11,6 +11,14 @@ const Color  = Isomer.Color;
 export const TILE_HEIGHT = 34 / 2; // Definie by hand , can be ajusted . 
 export const TILE_WIGTH = 60 / 2;
 
+export const SIZE20 = 40;
+const SIZE20_D = SIZE20 - 20
+
+// ISO CALIBRATION
+const ISO_CANVA_YORIGINE =  660 + 32 * (SIZE20_D / 2);
+const ISO_TILE_LEFT = 248 - 22.6 * SIZE20_D; 
+const ISO_TILE_TOP = -114 - 22.45 * SIZE20_D; 
+
 
 const DISPLAY_LVL_ALPHA = .3
 const DISPLAY_LVL_ALPHA_DIFF = 3
@@ -22,7 +30,7 @@ export class InterfaceIso {
         this.GS = this.world.globalState;
         this.fm = this.world.factoryMap;
         this.mainDiv = mainDiv;
-        this.size = 20;
+        this.size = SIZE20;
         this.c = {
             selected: new Color(160, 60, 50, .2),
             red: new Color(160, 60, 50, 1),
@@ -62,19 +70,18 @@ export class InterfaceIso {
         this.drawSelectTiled();
 
         this.iso = new Isomer(document.getElementById("canvas"));
+        this.iso.originY = ISO_CANVA_YORIGINE
         this.drawUpdate();
     }
 
     draw() {
-        this.mainDiv
-            .style('display', 'flex')
-            .style('flex-direction', 'column')
-            
+        this.mainDiv            
     //        mapDiv
         this.mapDiv = this.mainDiv.append('div')
-            .style('width', "1401px")
-            .style('height', "700px")
+            .style('width', (1400 - 30) + "px")
+            .style('height', (700 - 30) + "px")
             .style('position', "relative")
+            .style('overflow', 'hidden')
             
     }
 
@@ -139,28 +146,29 @@ export class InterfaceIso {
             .style('width', "10px")
             .style('height', "10px")            
 
+
+            
         // Div for grid 
-        const size = 902;
+        const size =  45 * SIZE20 + 2;
         this.canavBoxTiles = this.absolutBox.append('div')
+            .style('border', '1px solid #000')
+        
             .style('width', size + 'px')
             .style('height', size + 'px')
             .style('position', 'absolute')
-            .style('left', '250px')
-            .style('top', '-110px')
+            .style('left', ISO_TILE_LEFT + 'px')
+            .style('top', ISO_TILE_TOP + 'px')
             .style('transition', '0.3s')
             .style('transform', 'rotateX(60deg) rotateY(0deg) rotateZ(45deg)')
             .style('transform-style', 'preserve-3d')
             .style('display', 'grid')
-            .style('grid-template-columns', 'repeat(20, 5%)')
+            .style('grid-template-columns', `repeat(${SIZE20}, ${100 / SIZE20}%)`)
             .style('z-index', '40')
 
 
     }
 
     drawSelectTiled() {
-        const size = 902;
-        const partSize = ((size - 2 * 20)/ 20);
-
         this.selectedTile = [...Array(this.size)].map(
             x => [...Array(this.size)].map(
                 y => null
@@ -171,7 +179,7 @@ export class InterfaceIso {
             for(let j = 0; j < this.size; j++) {
                 const tileClick = this.canavBoxTiles.append('div')
                     .classed('tileClickBox', 'true')
-                    // .style('background-color', '#F001')
+                    /// .style('box-shadow', 'inset 0 0 0 1px')
                     // .text(i + ',' + j)
                 this.selectedTile[i][j] = tileClick;
 
@@ -209,7 +217,7 @@ export class InterfaceIso {
             }
             break;
             case 'Box': {
-                this.updateTilesBox(this.iso._translatePoint(Point(x, y, lvl)), metaTile, itemConf);
+                this.drawTilesBox(this.iso._translatePoint(Point(x, y, lvl)), metaTile, itemConf);
             }
             break;
             case 'Selected': {
@@ -267,8 +275,6 @@ export class InterfaceIso {
 
         return cone || (centerTile.lvl + DISPLAY_LVL_ALPHA_DIFF + d > metaTile.lvl) ? 1 : DISPLAY_LVL_ALPHA
 
-
-
     }
 
     drawTile(x, y){
@@ -293,11 +299,9 @@ export class InterfaceIso {
         */
         if (metaTile.isFrise) {
             this.iso.add(Shape.Prism(Point(xx, yy, currentlvl), 1, 1, .1), this.c.selected);
-
         }
 
         this.iso.add(Shape.SurfaceFlat(Point(xx, yy, currentlvl - height), 1, 1, height), color);
-
         {
             const diffLvl = (metaTile.lvl - this.tilesMatrix.tiles[xx][yy-1].lvl) * 1/3;
             if (diffLvl > 0) {
@@ -419,8 +423,8 @@ export class InterfaceIso {
         const left = - off.x * TILE_WIGTH + off.y * TILE_WIGTH; 
 
         this.absolutBox
-            .style('top', `${top}px`)
-            .style('left', `${left}px`)
+            .style('top', `${top - 15}px`)
+            .style('left', `${left - 15}px`)
     }
 
     drawUpdate() {
@@ -432,7 +436,7 @@ export class InterfaceIso {
     // -----------------
 
     // Update the position of the divbox div box .  
-    updateTilesBox(boxPoint, metaTile, itemConf) {
+    drawTilesBox(boxPoint, metaTile, itemConf) {
 
         // ( create if not existe - first draw )
         if (!metaTile.divBox) {

@@ -167,15 +167,25 @@ export class TilesAction2 {
 		})
 		const avgLvl = sumLvl / (conf.size * conf.size)
 		tile.lvl = avgLvl
+		tile.color = new Uint8Array([0, 0, 255]);
 	}
 
 	lvlAvgSquare(conf) {
+		conf.size = conf.size ? conf.size : 1		
+		const box = new TilesMatrix(this.world, conf.size, conf.x, conf.y);
+		box.tiles.forEach(row => {
+			row.forEach(cellTile => {
+				cellTile.lvl = new TilesMatrix(this.world, conf.size, cellTile.x, cellTile.y).avgLvl
+			})
+		})
+		/*
 		const box = new TilesMatrix(this.world, conf.size, conf.x, conf.y);
 		box.tiles.forEach(row => {
 			row.forEach(cellTile => {
 				this.lvlAvg({x:cellTile.x, y:cellTile.y, size:3})
 			})
 		})
+		*/
 	}
 
 	lvlAvgBorder(conf) {
@@ -200,8 +210,6 @@ export class TilesAction2 {
 	// Color of Tiles
 	// ---------------------
 
-
-
 	clearColor(conf) {
 		this.fm.getTile(conf.x, conf.y).colorGen();
 	}
@@ -215,7 +223,6 @@ export class TilesAction2 {
 			})
 		})
 	}
-
 
 	color(conf) {
 		const c = [...conf.color]

@@ -34,6 +34,10 @@ export class WidjetActions {
                     this.GS.set("WidjetActions.currentButt", null)
                 }
             } else {
+                if (this.isOpen == true) {
+                    this.GS.set("TileClickFunction", null)
+                    this.GS.set("WidjetActions.currentButt", null)
+                }
                 this.isOpen = false
             }
     
