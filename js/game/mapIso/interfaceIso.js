@@ -11,7 +11,7 @@ const Color  = Isomer.Color;
 export const TILE_HEIGHT = 34 / 2; // Definie by hand , can be ajusted . 
 export const TILE_WIGTH = 60 / 2;
 
-export const SIZE20 = 40;
+export const SIZE20 = 20;
 const SIZE20_D = SIZE20 - 20
 
 // ISO CALIBRATION
