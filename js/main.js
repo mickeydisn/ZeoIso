@@ -152,8 +152,8 @@ export class Main {
                 frameTime = 0;
             }
         }
-        setInterval(gameLoop, fixedFrameTime);
-        // d3.interval(gameLoop, fixedFrameTime);
+        // setInterval(gameLoop, fixedFrameTime);
+        d3.interval(gameLoop, 1000 / 20);
     }
 
 

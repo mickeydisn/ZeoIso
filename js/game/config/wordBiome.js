@@ -9,7 +9,7 @@ export class WorldBiome {
     constructor(world) {
         this.world = world
         this.tilesMatrix = world.tilesMatrix
-        this.ta = world.tilesActions2
+        this.ta = world.tilesActions
 
 
 		this.biomesConifg = world.factoryBiomes.biomes;

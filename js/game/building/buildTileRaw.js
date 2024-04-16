@@ -4,7 +4,7 @@ import {AXE_DIRECTION} from "./utils.js";
 import { TILE_GEN_ZOOM } from "../map/tile.js";
 
 
-export class BuildTile {
+export class BuildTileRaw {
     constructor(world, building, x, y) {
         this.world = world;
         this.fm = world.factoryMap;
@@ -15,25 +15,38 @@ export class BuildTile {
         this.x = x;
         this.y = y;
 
-        
         this.conf = null;
         this.mustBeFill = [null, null, null, null];
-
         this.tile = this.fm.getTile(this.x, this.y)
 
+        this.tile.buildTile = this;
+    }
+
+    initTileBulding() {
         this.ta.lvlSet({x:this.x, y:this.y, lvl:building.lvl})
-        
-        // console.log(this.x , this.y, this.tile)
-        // this.ta.colorSquare(x, y, 1, [0, 0, 0, 255])
         this.ta.lvlFlatSquare({x:this.x, y:this.y, size:3})
         this.ta.clearItem({x:this.x, y:this.y})
-        this.tile.buildTile = this;
         this.ta.lvlAvgSquare({x:this.x, y:this.y, size:5})
         this.ta.lvlAvgSquare({x:this.x, y:this.y, size:7})
-
     }
 
     // -----------------------
+
+    get nearTiles() {
+        if (!this._nearTiles) {
+            this._nearTiles = [0, 1, 2, 3].map(axe => {
+                const [dx, dy] = AXE_DIRECTION[axe]
+                return  this.fm.getTile(this.x + dx, this.y + dy);
+            })
+        }
+        return this._nearTiles
+    }
+
+    get neatBuilding() {
+        return this.nearTiles.map(tile => {
+            return tile.buildTile
+        }) 
+    }
 
     buildMarkNearTile() {
         return [0, 1, 2, 3].map(axe => {
@@ -95,13 +108,6 @@ export class BuildTile {
 
     // --------------
 
-    getNearTiles() {
-        // For Each Axe
-        return [0, 1, 2, 3].map(axe => {
-            const [dx, dy] = AXE_DIRECTION[axe]
-            return  this.fm.getTile(this.x + dx, this.y + dy);
-        })
-    }
 
     getNearVoid() {
         return this.getNearTiles()

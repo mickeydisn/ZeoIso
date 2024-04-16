@@ -42,6 +42,26 @@ export const AXE_DIRECTION = [
 ]
 
 
+
+export const axeNextTile2 = (conf)  => {
+    let face = conf.face;
+    return ['_NW', '_NE', '_SE', '_SW'].map(axeKey => {
+        const confAxe = { ...conf}
+        if (confAxe.key) confAxe.key = confAxe.key + axeKey + (confAxe.sufix ? confAxe.sufix : '')
+
+        confAxe.face = face;
+        face = shiftArrayByOne(face)
+        return confAxe
+    })
+}
+
+export const axeNextTileOfList2 = (confs) => {
+    return confs.map(conf => axeNextTile(conf)).flat()
+}
+
+
+
+
 export const axeNextTile = (conf)  => {
     let near = conf.near;
     return ['_NW', '_NE', '_SE', '_SW'].map(axeKey => {

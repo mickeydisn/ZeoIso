@@ -14,39 +14,49 @@ export class Chunk {
 		this.x = cx * this.size; 
 		this.y = cy * this.size;
 
-		this.GS = 4;
-		this.matrixGen = [...Array(this.size + this.GS)].map(
-            x => [...Array(this.size)].map(
+
+		// Generat a bigger chunk to have a clean smooth edge ( we store only the matrix after copy it ) 
+		this.sizeBorder = 2
+		this.sizeFull = this.size + 2 * this.sizeBorder
+		this.matrixGen = [...Array(this.sizeFull)].map(
+            x => [...Array(this.sizeFull)].map(
                 y => null
             )
         );
-
 		this.matrix = [...Array(this.size)].map(
             x => [...Array(this.size)].map(
                 y => null
             )
         );
 
-		// this.matrix = Array.from({ length: 16 }, () => Array.from({ length: 16 }, () => null));
-
+	
+		// Init a matrix ( generate each tiles )
 		this.initGenMatrix()
+		// Smmoth the matrix 
 		this.smoothMatrix()
 		this.smoothMatrix()
+		// Copy and store only the center of the matix 
 		this.copyMatrix()
+		// Delete the original matrix with border . 
+		this.matrixGen = null;
 	}
 
 	get(x, y) {return this.matrix[x][y]}
 
 	initGenMatrix() {
-		for (let i = 0; i < this.size + this.GS; i++) {
-			for (let j = 0; j < this.size + this.GS; j++) {
-				this.matrixGen[i][j] = new Tile(this.world, this.x + i, this.y + j )
+		for (let i = 0; i < this.sizeFull; i++) {
+			for (let j = 0; j < this.sizeFull; j++) {
+				this.matrixGen[i][j] = new Tile(
+					this.world, 
+					this.x + i - this.sizeBorder, 
+					this.y + j - this.sizeBorder 
+				)
 			}
 		}
 	}
 
 	copyMatrix() {
-		const k = this.GS / 2
+		const k = this.sizeBorder
 		for (let i = 0; i < this.size; i++) {
 			for (let j = 0; j < this.size; j++) {
 				this.matrix[i][j] = this.matrixGen[i + k][j + k]
@@ -56,8 +66,8 @@ export class Chunk {
 
 	smoothMatrix() {
 		// Smoth 
-		for (let i = 1; i < this.size + this.GS - 1; i++) {
-			for (let j = 1; j < this.size + this.GS - 1; j++) {
+		for (let i = 1; i < this.sizeFull - 1; i++) {
+			for (let j = 1; j < this.sizeFull - 1; j++) {
 				const sum = this.matrixGen[i][j].lvl + 
 					this.matrixGen[i + 1][j].lvl +
 					this.matrixGen[i - 1][j].lvl +
@@ -79,7 +89,7 @@ export class Chunk {
 	smoothSide() {
 		const sm = this.size - 1
 		// Smoth 
-		for (let i = 1; i < this.size + this.GS - 1; i++) {
+		for (let i = 1; i < this.sizeFull - 1; i++) {
 			{
 				// Top
 				const j = 0;
@@ -96,7 +106,7 @@ export class Chunk {
 			}
 			{
 				// Left
-				const j = this.size + this.GS - 1;
+				const j = this.sizeFull - 1;
 				const sum = this.matrixGen[i][j].lvl + 
 					this.matrixGen[i + 1][j].lvl +
 					this.matrixGen[i - 1][j].lvl +
@@ -110,7 +120,7 @@ export class Chunk {
 			}
 		}
 		// Smoth 
-		for (let j = 1; j < this.size + this.GS - 1; j++) {
+		for (let j = 1; j < this.sizeFull - 1; j++) {
 			{
 				// Top
 				const i = 0;
@@ -127,7 +137,7 @@ export class Chunk {
 			}
 			{
 				// Left
-				const i = this.size + this.GS - 1;
+				const i = this.sizeFull - 1;
 				const sum = this.matrixGen[i][j].lvl + 
 					// this.matrix[i + 1][j].lvl +
 					this.matrixGen[i - 1][j].lvl +

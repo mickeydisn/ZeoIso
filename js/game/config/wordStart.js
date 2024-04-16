@@ -8,7 +8,7 @@ export class WorldStart {
     constructor(world) {
         this.world = world
         this.tilesMatrix = world.tilesMatrix
-        this.ta = world.tilesActions2
+        this.ta = world.tilesActions
     }
 
     start() {
@@ -41,13 +41,6 @@ export class WorldStart {
         this.ta.lvlAvgSquare({x:x,y:y+10, size:5})
         this.ta.colorSquare({x:x, y:y+10, size:5, color:[0, 0, 0, 255]})
         
-        /*
-        // this.tilesActions.lvlUpSquare(x + 20 ,y + 5, 5, 5)
-        {
-            const factoryBuilding = new FactoryBuilding(this, new BuildConf_Donjon1())
-            factoryBuilding.start(x, y);
-        }
-        */
     }
 
 

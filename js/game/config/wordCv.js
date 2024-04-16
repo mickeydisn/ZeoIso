@@ -30,29 +30,6 @@ export class WorldCv {
 
         this.drawCV(x, y);
 
-
-
-        // this.ta.lvlUpSquare(x, y-10, 3, 2)
-        // this.ta.colorSquare(x, y-10, 3, [0, 0, 0, 255])
-
-        // this.infinitStart(x, y)
-        // this.markdown1(x, y)
-
-        // this.markdown2(x, y)
-        /*
-        this.ta.lvlUpSquare(x,y+10, 3, 35)
-        this.ta.lvlAvgSquare(x,y+10, 5)
-        this.ta.lvlAvgSquare(x,y+10, 5)
-        this.ta.lvlAvgSquare(x,y+10, 5)
-        this.ta.colorSquare(x, y+10, 5, [0, 0, 0, 255])
-        */
-        /*
-        // this.tilesActions.lvlUpSquare(x + 20 ,y + 5, 5, 5)
-        {
-            const factoryBuilding = new FactoryBuilding(this, new BuildConf_Donjon1())
-            factoryBuilding.start(x, y);
-        }
-        */
     }
 
 
@@ -72,11 +49,11 @@ export class WorldCv {
 </div>
 </div>
     `
-            this.ta.addBoxMD(x, y, {md:md, width:'300px'})
+            this.ta.addBoxMD({x:x, y:y, md:md, width:'300px'})
         }
         {
             const md = "#### ↗️ My CV ↗️"
-            this.ta.addBoxMD(x+8, y+2, {md:md, width:'140px', style:"background-color:#333; color:#FFF"})
+            this.ta.addBoxMD({x:x+8, y:y+2, md:md, width:'140px', style:"background-color:#333; color:#FFF"})
         }
     }
 
@@ -88,39 +65,39 @@ export class WorldCv {
         const xspaceDate = 9;
 
         [...Array((xspace + xspaceDate) * 5 / 2)].map((_, idx )=> {
-            this.ta.colorSquare(x+idx*2, y, 3, [0, 0, 0, 255])
-            this.ta.colorSquare(x+idx*2, y, 1, [128, 128, 0, 255])
-            this.ta.clearItemSquare(x+idx, y*2, 5)
+            this.ta.colorSquare({x:x+idx*2, y:y, size:3, color:[0, 0, 0, 255]})
+            this.ta.colorSquare({x:x+idx*2, y:y, size:1, color:[128, 128, 0, 255]})
+            this.ta.clearItemSquare({x:x+idx, y:y*2, size:5})
         })
 
 
         x += 8;
-        this.ta.addBoxMD(x, y, {md:"#### 📆 Now\n##### @Paris", width:'90px'})
+        this.ta.addBoxMD({x:x, y:y, md:"#### 📆 Now\n##### @Paris", width:'90px'})
         x += xspaceDate;
         this.XP1(x, y)
         x += xspace;
 
-        this.ta.addBoxMD(x, y, {md:"#### 📆 2021\n##### @Paris", width:'90px'})
+        this.ta.addBoxMD({x:x, y:y, md:"#### 📆 2021\n##### @Paris", width:'90px'})
         x += xspaceDate;
         this.XP2(x, y)
         x += xspace;
 
-        this.ta.addBoxMD(x, y, {md:"#### 📆 2017\n##### @Paris", width:'90px'})
+        this.ta.addBoxMD({x:x, y:y, md:"#### 📆 2017\n##### @Paris", width:'90px'})
         x += xspaceDate;
         this.XP3(x, y)
         x += xspace;
 
-        this.ta.addBoxMD(x, y, {md:"#### 📆 2014\n##### @Paris", width:'90px'})
+        this.ta.addBoxMD({x:x, y:y, md:"#### 📆 2014\n##### @Paris", width:'90px'})
         x += xspaceDate;
         this.XP4(x, y)
         x += xspace;
 
-        this.ta.addBoxMD(x, y, {md:"#### 📆 2011\n##### _@Lannion(22) - France_", width:'90px'})
+        this.ta.addBoxMD({x:x, y:y, md:"#### 📆 2011\n##### _@Lannion(22) - France_", width:'90px'})
         x += xspaceDate;
         this.XP5(x, y)
         x += xspace;
 
-        this.ta.addBoxMD(x, y, {md:"#### 📆 2008\n##### _@Metz(57) - France_", width:'90px'})
+        this.ta.addBoxMD({x:x, y:y, md:"#### 📆 2008\n##### _@Metz(57) - France_", width:'90px'})
         x += xspaceDate;
         this.XP6(x, y)
         x += xspace;
@@ -149,7 +126,7 @@ export class WorldCv {
 
  > Empowered all business areas with data-driven decision-making capabilities. Instilled confidence in existing dashboards and BI tools through innovative enhancements. Orchestrated regular company-wide meetings and conferences on pertinent topics, fostering collaboration and alignment with GTM teams through dedicated weekly sessions.
         `
-        this.ta.addBoxMD(x, y, {md:md, width:'500px'})
+        this.ta.addBoxMD({x:x, y:y, md:md, width:'500px'})
     }
 
     XP2(x, y) { 
@@ -177,7 +154,7 @@ export class WorldCv {
 
 
         `
-        this.ta.addBoxMD(x, y, {md:md, width:'500px'})
+        this.ta.addBoxMD({x:x, y:y, md:md, width:'500px'})
     }
 
     XP3(x, y) { 
@@ -207,7 +184,7 @@ export class WorldCv {
  to meet changing business needs.
 
         `
-        this.ta.addBoxMD(x, y, {md:md, width:'500px'})
+        this.ta.addBoxMD({x:x, y:y, md:md, width:'500px'})
     }
 
     XP4(x, y) { 
@@ -227,7 +204,7 @@ export class WorldCv {
 
  > Act as a bridge between technical teams and GTM, to anticipate technical requirements enabling the implementation of targeting algorithms. 
           `
-        this.ta.addBoxMD(x, y, {md:md, width:'500px'})
+        this.ta.addBoxMD({x:x, y:y, md:md, width:'500px'})
     }
 
 
@@ -256,7 +233,7 @@ export class WorldCv {
  
 
  `
-        this.ta.addBoxMD(x, y, {md:md, width:'500px'})
+        this.ta.addBoxMD({x:x, y:y, md:md, width:'500px'})
     }
 
 
@@ -281,12 +258,8 @@ export class WorldCv {
  > **1998-2000** - Child Animator / Computer Space Administrator - Metz (57).
 
  `
-        this.ta.addBoxMD(x, y, {md:md, width:'500px'})
+        this.ta.addBoxMD({x:x, y:y, md:md, width:'500px'})
     }
-
-
-
-    
 
 
 
@@ -300,14 +273,14 @@ export class WorldCv {
 | baz | bim |
 
 `
-        this.ta.addBoxMD(x, y-5, {md:md, width:'100px'})
+        this.ta.addBoxMD({x:x, y:y-5, md:md, width:'100px'})
     }
 
 
     _MD(x, y, md) {
-        this.ta.colorSquare(x, y, 1, [0, 0, 0, 255])
-        this.ta.lvlUp(x, y, 2)
-        this.ta.addBoxMD(x, y, {md:md, width:'140px'})
+        this.ta.colorSquare({x:x, y:y, size:1, color:[0, 0, 0, 255]})
+        this.ta.lvlUp({x:x, y:y, size:2})
+        this.ta.addBoxMD({x:x, y:y, md:md, width:'140px'})
     }
 
 

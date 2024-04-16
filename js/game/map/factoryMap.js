@@ -39,8 +39,8 @@ export class FactoryMap {
 	}
 
 	chunkPoint(x, y) { 
-		const modx = x >= 0 ? x % CHUNK_SIZE : CHUNK_SIZE -1 + x % CHUNK_SIZE
-		const mody = y >= 0 ? y % CHUNK_SIZE : CHUNK_SIZE -1 + y % CHUNK_SIZE
+		const modx = x >= 0 ? x % CHUNK_SIZE :  (CHUNK_SIZE + (x % CHUNK_SIZE)) % CHUNK_SIZE
+		const mody = y >= 0 ? y % CHUNK_SIZE :  (CHUNK_SIZE + (y % CHUNK_SIZE)) % CHUNK_SIZE
 
 		const xx = x - modx
 		const yy = y - mody

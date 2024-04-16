@@ -71,9 +71,7 @@ export class InterfaceIso {
             
     }
 
-    updateZoom(z) {
-        this.mapDiv.style('zoom', z)
-    }
+
 
     // ---------------------
     // CLICK TILE
@@ -88,6 +86,12 @@ export class InterfaceIso {
         this.world.clickTile(xx, yy)
     }
 
+    updateZoom(z) {
+        this.mapDiv.style('zoom', z)
+    }
+
+    // -------------
+    // INIT MAP LAYER . 
     // -------------
 
     drawMap() {
@@ -131,7 +135,6 @@ export class InterfaceIso {
             .style('left', "10px")
             .style('width', "10px")
             .style('height', "10px")            
-
 
             
         // Div for grid 
@@ -282,10 +285,10 @@ export class InterfaceIso {
         if (metaTile.isWater) {
             currentlvl = metaTile.waterLvl
         }
-        */
         if (metaTile.isFrise) {
             this.iso.add(Shape.Prism(Point(xx, yy, currentlvl), 1, 1, .1), this.c.selected);
         }
+        */
 
         this.iso.add(Shape.SurfaceFlat(Point(xx, yy, currentlvl - height), 1, 1, height), color);
         {

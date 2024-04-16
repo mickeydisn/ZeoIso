@@ -97,8 +97,12 @@ export class TilesMatrix {
 		this.rangeX.map((x, idx) => {
 			this.rangeY.map((y, idy) => {
 				const tile = this.fm.getTile(x, y)
-				this.tiles[idx][idy] = tile
-				this.avgLvl += tile.lvl
+				if (!tile) {
+					console.log('---ERROR', x, y, tile, this)
+				} else {
+					this.tiles[idx][idy] = tile
+					this.avgLvl += tile.lvl
+				}
 			})
 		})
 		this.avgLvl /= this.size * this.size

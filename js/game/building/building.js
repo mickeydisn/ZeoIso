@@ -21,7 +21,6 @@ export class FactoryBuilding {
     constructor(world, conf) {
         this.world = world;
         this.fm = world.factoryMap;
-        this.ta = world.tilesActions;
 
         this.conf = conf; 
 

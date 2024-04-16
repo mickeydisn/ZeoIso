@@ -3,7 +3,7 @@ import { BuildConf_Place } from "../building/buildConf_place.js";
 import { FactoryBuilding } from "../building/building.js";
 import { TilesMatrix, TilesMatrixSelected } from "./tilesMatrix.js";
 
-export class TilesAction2 {
+export class TilesActions {
 	constructor(world) {
 		this.world = world;
 		this.fm = this.world.factoryMap;
@@ -167,7 +167,6 @@ export class TilesAction2 {
 		})
 		const avgLvl = sumLvl / (conf.size * conf.size)
 		tile.lvl = avgLvl
-		tile.color = new Uint8Array([0, 0, 255]);
 	}
 
 	lvlAvgSquare(conf) {
@@ -175,17 +174,10 @@ export class TilesAction2 {
 		const box = new TilesMatrix(this.world, conf.size, conf.x, conf.y);
 		box.tiles.forEach(row => {
 			row.forEach(cellTile => {
-				cellTile.lvl = new TilesMatrix(this.world, conf.size, cellTile.x, cellTile.y).avgLvl
-			})
-		})
-		/*
-		const box = new TilesMatrix(this.world, conf.size, conf.x, conf.y);
-		box.tiles.forEach(row => {
-			row.forEach(cellTile => {
 				this.lvlAvg({x:cellTile.x, y:cellTile.y, size:3})
 			})
 		})
-		*/
+		
 	}
 
 	lvlAvgBorder(conf) {

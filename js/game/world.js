@@ -9,8 +9,7 @@ import {FactoryMap} from './map/factoryMap.js'
 import { FactoryTileGenerator } from './map/factoryTileGenerator.js';
 import { FactoryTileRawGenerator } from './map/factoryTileRawGenerator.js';
 import { GenTile, RawTile } from './map/tile.js';
-import { TilesAction } from './map/tilesAction.js';
-import { TilesAction2 } from './map/tilesAction2.js';
+import { TilesActions } from './map/tilesActions.js';
 import { TilesMatrix } from './map/tilesMatrix.js'
 import { SIZE20 } from './mapIso/interfaceIso.js';
 import { Player } from './player.js';
@@ -45,9 +44,7 @@ export class World {
         this.factoryMap = new FactoryMap(this)
         this.tilesMatrix = new TilesMatrix(this, SIZE20)
 
-
-        this.tilesActions = new TilesAction(this)
-        this.tilesActions2 = new TilesAction2(this)
+        this.tilesActions = new TilesActions(this)
 
         this.player = new Player(this)
 
@@ -77,6 +74,8 @@ export class World {
             const tileJson = this.factoryMap.getTile(x,y).toJson()
             this.globalState.set("TileInfo.position", [x, y])         
 
+            const chunk = this.factoryMap.chunkPoint(x,y)
+            console.log(chunk)
             console.log(tileJson)
         }
         
@@ -86,7 +85,7 @@ export class World {
 
 
     doAction(actionConf) {
-        this.tilesActions2.doAction(actionConf)
+        this.tilesActions.doAction(actionConf)
     }
 
 
