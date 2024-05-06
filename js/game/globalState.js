@@ -18,8 +18,8 @@ export class GlabalState {
     }
 
     sub(stateKey, subKey, callFunction) {
-        console.log('=====SUB==', stateKey, subKey)
-        console.log(this._sub[stateKey])
+        // console.log('=====SUB==', stateKey, subKey)
+        // console.log(this._sub[stateKey])
         if (!this._sub[stateKey]) {
             this._sub[stateKey] = [[subKey, callFunction]]
         } else {

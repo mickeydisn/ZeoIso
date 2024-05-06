@@ -1,4 +1,5 @@
 
+
 export class Player {
 
 
@@ -32,6 +33,8 @@ export class Player {
         
         this.GS.sub('Setting.KeboardType', 'Player', this.updateSettingKeboardType.bind(this))
         this.updateSettingKeboardType(this.GS.get('Setting.KeboardType'))
+
+        this.spaceActionNow = 0;
     }
 
 
@@ -260,6 +263,9 @@ export class Player {
         if (kP['ArrowLeft'] || (aze && kP['q']) || (!aze && kP['a'])) {
           move = true;
           x = - 1;
+        } 
+        if (kP['Space'] || kP[' ']) {
+          this.sapceAction()
         }
 
         let [xx, yy] = 
@@ -307,6 +313,29 @@ export class Player {
         */
 
         this.move(xx, yy) 
+
+        
+      }
+
+
+      sapceAction() {
+        const now = Date.now();
+        console.log(now)
+        if (now - this.spaceActionNow > 200) {
+          this.spaceActionNow = now
+          // const synth = new window.Tone.PolySynth(window.Tone.Synth).toDestination();
+          const synth = new window.Tone.MonoSynth().toDestination();
+          synth.set({
+            "volume": -4,
+          });
+          console.log("Play Note")
+          //play a middle 'C' for the duration of an 8th note
+          synth.triggerAttackRelease("B2", "16n");
+  
+        }
+
+
+
       }
 
 }

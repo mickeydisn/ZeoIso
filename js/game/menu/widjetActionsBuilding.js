@@ -11,8 +11,8 @@ export class WidjetActionsBuilding extends WidjetActions {
 
         this.mainOffset = {x: 0, y:0, z:0};
         this.currentImage = null;
-        this.currentSize = 3;
-        this.GS.set("WidjetActions.currentSize", this.currentSize)
+        this.growSize = 10;
+        this.GS.set("WidjetActions.growSize", this.growSize)
 
         // Generate Content 
         {
@@ -47,44 +47,87 @@ export class WidjetActionsBuilding extends WidjetActions {
             .text("= BUILDING ACTION =")
 
         // --------------------------------
-
+        // --------------------------------
         this.contentBox.append('div').classed('row', true).classed('subtitel', true)
-            .text("Building Base")
-        this.firstAction = new ButtTileAction( this.GS, this.contentBox,
-            "Base_10", {
-                func:"buildingBase", buildType:'base', growLoopCount:10
+            .text("Grow size:")
+
+        const sizeInput = this.contentBox.append('div').classed('row', true).classed('input', true)
+            .html(`
+        <div class="clickBox" id="remove">-</div>
+        <div class="centerBox" id="label">${this.growSize}</div>
+        <div class="clickBox" id="add">+</div>
+        `)
+
+        sizeInput.select('#remove').on('click', _ => {
+            this.growSize = this.growSize > 10 ? this.growSize - 10 : this.growSize;
+            sizeInput.select('#label').text(this.growSize);
+            this.GS.set("WidjetActions.growSize", this.growSize)
+            this.GS.get("WidjetActions.currentButt").click()
         })
-        this.firstAction = new ButtTileAction( this.GS, this.contentBox,
-            "Base_40", {
-                func:"buildingBase", buildType:'base', growLoopCount:40
+        sizeInput.select('#add').on('click', _ => {
+            this.growSize = this.growSize + 10;
+            sizeInput.select('#label').text(this.growSize);
+            this.GS.set("WidjetActions.growSize", this.growSize)
+            this.GS.get("WidjetActions.currentButt").click()
         })
-        this.firstAction = new ButtTileAction( this.GS, this.contentBox,
-            "Base_100", {
-                func:"buildingBase", buildType:'base', growLoopCount:100
-        })
-        // this.contentBox.append('div').classed('cell', true).classed('empty', true)
-        // this.contentBox.append('div').classed('cell', true).classed('empty', true)
-        this.contentBox.append('div').classed('cell', true).classed('empty', true)
 
         // --------------------------------
-   
-        this.contentBox.append('div').classed('row', true).classed('subtitel', true)
-            .text("Building Place")
-        this.firstAction = new ButtTileAction( this.GS, this.contentBox,
-            "Place_10", {
-                func:"buildingBase", buildType:'place', growLoopCount:10
-        })
-        this.firstAction = new ButtTileAction( this.GS, this.contentBox,
-            "Place_40", {
-                func:"buildingBase", buildType:'place', growLoopCount:40
-        })
-        this.firstAction = new ButtTileAction( this.GS, this.contentBox,
-            "Place_100", {
-                func:"buildingBase", buildType:'place', growLoopCount:100
-        })
-        // this.contentBox.append('div').classed('cell', true).classed('empty', true)
-        // this.contentBox.append('div').classed('cell', true).classed('empty', true)
-        this.contentBox.append('div').classed('cell', true).classed('empty', true)
+        {
+            this.contentBox
+                .append('div').classed('row', true).classed('subtitel', true)
+                .text("Building Place / Base ")
+            this.firstAction = new ButtTileAction(
+                this.GS, this.contentBox,
+                "Place", {
+                    func:"wcBuild", buildType:'place3', growLoopCount:10
+                })
+
+            this.firstAction = new ButtTileAction(
+                this.GS, this.contentBox,
+                "Base", {
+                    func:"wcBuild", buildType:'base3', growLoopCount:10
+                })
+
+            this.firstAction = new ButtTileAction(
+                this.GS, this.contentBox,
+                "BaseBorder", {
+                    func:"wcBuild", buildType:'baseBorder3', growLoopCount:10
+                })
+            // this.contentBox.append('div').classed('cell', true).classed('empty', true)
+            // this.contentBox.append('div').classed('cell', true).classed('empty', true)
+            this.contentBox.append('div').classed('cell', true).classed('empty', true)
+       }
+
+        // --------------------------------
+
+
+        // --------------------------------
+        {
+            this.contentBox
+                .append('div').classed('row', true).classed('subtitel', true)
+                .text("Building House3")
+            this.firstAction = new ButtTileAction(
+                this.GS, this.contentBox,
+                "House_3", {
+                    func:"wcBuild", buildType:'house3', growLoopCount:10
+                })
+            this.firstAction = new ButtTileAction( 
+                this.GS, this.contentBox,
+                "House_4", {
+                    func:"wcBuild", buildType:'house4', growLoopCount:10
+                })
+            this.firstAction = new ButtTileAction( 
+                this.GS, this.contentBox,
+                "House_5", {
+                    func:"wcBuild", buildType:'house5', growLoopCount:10
+                })
+            // this.contentBox.append('div').classed('cell', true).classed('empty', true)
+            // this.contentBox.append('div').classed('cell', true).classed('empty', true)
+            this.contentBox.append('div').classed('cell', true).classed('empty', true)
+        }
+
+        
+
 
         // --------------------------------
     }

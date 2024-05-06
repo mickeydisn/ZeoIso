@@ -67,7 +67,10 @@ export class Biome {
 	}
 
 	initColor (){
-	    this.color = eval('(lvl, flore) => [' + this.rgb.join(',') +', 255]');
+		const rgbFunc= this.rgb.map(x => `(${x}) & 0xFF`)
+	    this.color = eval('(lvl, flore) => [' + rgbFunc.join(',') +', 255]');
+
+		// & 0xFF;
 	}
 
 	initFlore (){

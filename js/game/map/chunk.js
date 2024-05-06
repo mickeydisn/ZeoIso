@@ -1,6 +1,6 @@
 import { Tile } from "./tile.js";
 
-export const CHUNK_SIZE = 40
+export const CHUNK_SIZE = 32
 
 
 export class Chunk {
@@ -68,16 +68,16 @@ export class Chunk {
 		// Smoth 
 		for (let i = 1; i < this.sizeFull - 1; i++) {
 			for (let j = 1; j < this.sizeFull - 1; j++) {
-				const sum = this.matrixGen[i][j].lvl + 
-					this.matrixGen[i + 1][j].lvl +
-					this.matrixGen[i - 1][j].lvl +
-					this.matrixGen[i][j + 1].lvl +
-					this.matrixGen[i][j - 1].lvl +
-					this.matrixGen[i + 1][j + 1].lvl +
-					this.matrixGen[i - 1][j - 1].lvl +
-					this.matrixGen[i - 1][j + 1].lvl +
-					this.matrixGen[i + 1][j - 1].lvl
-				this.matrixGen[i][j].lvl = sum / 9;
+				const sum = this.matrixGen[i][j].gen3Lvl + 
+					this.matrixGen[i + 1][j].gen3Lvl +
+					this.matrixGen[i - 1][j].gen3Lvl +
+					this.matrixGen[i][j + 1].gen3Lvl +
+					this.matrixGen[i][j - 1].gen3Lvl +
+					this.matrixGen[i + 1][j + 1].gen3Lvl +
+					this.matrixGen[i - 1][j - 1].gen3Lvl +
+					this.matrixGen[i - 1][j + 1].gen3Lvl +
+					this.matrixGen[i + 1][j - 1].gen3Lvl
+				this.matrixGen[i][j].gen3Lvl = sum / 9;
 			}
 		}
 		// this.smoothSide()
@@ -93,30 +93,30 @@ export class Chunk {
 			{
 				// Top
 				const j = 0;
-				const sum = this.matrixGen[i][j].lvl + 
-					this.matrixGen[i + 1][j].lvl +
-					this.matrixGen[i - 1][j].lvl +
-					this.matrixGen[i][j + 1].lvl +
-					// this.matrix[i][j - 1].lvl +
-					this.matrixGen[i + 1][j + 1].lvl +
-					// this.matrix[i - 1][j - 1].lvl +
-					this.matrixGen[i - 1][j + 1].lvl 
-					// this.matrix[i + 1][j - 1].lvl
-				this.matrixGen[i][j].lvl = sum / 6;
+				const sum = this.matrixGen[i][j].gen3Lvl + 
+					this.matrixGen[i + 1][j].gen3Lvl +
+					this.matrixGen[i - 1][j].gen3Lvl +
+					this.matrixGen[i][j + 1].gen3Lvl +
+					// this.matrix[i][j - 1].gen3Lvl +
+					this.matrixGen[i + 1][j + 1].gen3Lvl +
+					// this.matrix[i - 1][j - 1].gen3Lvl +
+					this.matrixGen[i - 1][j + 1].gen3Lvl 
+					// this.matrix[i + 1][j - 1].gen3Lvl
+				this.matrixGen[i][j].gen3Lvl = sum / 6;
 			}
 			{
 				// Left
 				const j = this.sizeFull - 1;
-				const sum = this.matrixGen[i][j].lvl + 
-					this.matrixGen[i + 1][j].lvl +
-					this.matrixGen[i - 1][j].lvl +
-					// this.matrix[i][j + 1].lvl +
-					this.matrixGen[i][j - 1].lvl +
-					// this.matrix[i + 1][j + 1].lvl +
-					this.matrixGen[i - 1][j - 1].lvl +
-					// this.matrix[i - 1][j + 1].lvl +
-					this.matrixGen[i + 1][j - 1].lvl
-				this.matrixGen[i][j].lvl = sum / 6;
+				const sum = this.matrixGen[i][j].gen3Lvl + 
+					this.matrixGen[i + 1][j].gen3Lvl +
+					this.matrixGen[i - 1][j].gen3Lvl +
+					// this.matrix[i][j + 1].gen3Lvl +
+					this.matrixGen[i][j - 1].gen3Lvl +
+					// this.matrix[i + 1][j + 1].gen3Lvl +
+					this.matrixGen[i - 1][j - 1].gen3Lvl +
+					// this.matrix[i - 1][j + 1].gen3Lvl +
+					this.matrixGen[i + 1][j - 1].gen3Lvl
+				this.matrixGen[i][j].gen3Lvl = sum / 6;
 			}
 		}
 		// Smoth 
@@ -124,30 +124,30 @@ export class Chunk {
 			{
 				// Top
 				const i = 0;
-				const sum = this.matrixGen[i][j].lvl + 
-					this.matrixGen[i + 1][j].lvl +
-					// this.matrix[i - 1][j].lvl +
-					this.matrixGen[i][j + 1].lvl +
-					this.matrixGen[i][j - 1].lvl +
-					this.matrixGen[i + 1][j + 1].lvl +
-					// this.matrix[i - 1][j - 1].lvl +
-					// this.matrix[i - 1][j + 1].lvl 
-					this.matrixGen[i + 1][j - 1].lvl
-				this.matrixGen[i][j].lvl = sum / 6;
+				const sum = this.matrixGen[i][j].gen3Lvl + 
+					this.matrixGen[i + 1][j].gen3Lvl +
+					// this.matrix[i - 1][j].gen3Lvl +
+					this.matrixGen[i][j + 1].gen3Lvl +
+					this.matrixGen[i][j - 1].gen3Lvl +
+					this.matrixGen[i + 1][j + 1].gen3Lvl +
+					// this.matrix[i - 1][j - 1].gen3Lvl +
+					// this.matrix[i - 1][j + 1].gen3Lvl 
+					this.matrixGen[i + 1][j - 1].gen3Lvl
+				this.matrixGen[i][j].gen3Lvl = sum / 6;
 			}
 			{
 				// Left
 				const i = this.sizeFull - 1;
-				const sum = this.matrixGen[i][j].lvl + 
-					// this.matrix[i + 1][j].lvl +
-					this.matrixGen[i - 1][j].lvl +
-					this.matrixGen[i][j + 1].lvl +
-					this.matrixGen[i][j - 1].lvl +
-					// this.matrix[i + 1][j + 1].lvl +
-					this.matrixGen[i - 1][j - 1].lvl +
-					this.matrixGen[i - 1][j + 1].lvl
-					// this.matrix[i + 1][j - 1].lvl
-				this.matrixGen[i][j].lvl = sum / 6;
+				const sum = this.matrixGen[i][j].gen3Lvl + 
+					// this.matrix[i + 1][j].gen3Lvl +
+					this.matrixGen[i - 1][j].gen3Lvl +
+					this.matrixGen[i][j + 1].gen3Lvl +
+					this.matrixGen[i][j - 1].gen3Lvl +
+					// this.matrix[i + 1][j + 1].gen3Lvl +
+					this.matrixGen[i - 1][j - 1].gen3Lvl +
+					this.matrixGen[i - 1][j + 1].gen3Lvl
+					// this.matrix[i + 1][j - 1].gen3Lvl
+				this.matrixGen[i][j].gen3Lvl = sum / 6;
 			}
 		}
 		

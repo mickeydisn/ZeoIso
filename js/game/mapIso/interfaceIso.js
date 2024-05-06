@@ -1,5 +1,5 @@
 import { Isomer } from "../../iso/isomer.js";
-import { IsoDivBox } from "./isoDivBox.js";
+import { IsoDivBox, IsoDivBoxMarkDown, IsoDivCityBox } from "./isoDivBox.js";
 
 const Point  = Isomer.Point;
 const Path   = Isomer.Path;
@@ -11,7 +11,7 @@ const Color  = Isomer.Color;
 export const TILE_HEIGHT = 34 / 2; // Definie by hand , can be ajusted . 
 export const TILE_WIGTH = 60 / 2;
 
-export const SIZE20 = 20;
+export const SIZE20 = 30;
 const SIZE20_D = SIZE20 - 20
 
 // ISO CALIBRATION
@@ -270,13 +270,17 @@ export class InterfaceIso {
         const size = this.size;
         const xx = size - x - 1;
         const yy = size - y - 1;
+        // Get the Matrix to display
         const metaTile = this.tilesMatrix.tiles[xx][yy];
-
+        // Comput the matrix lvl to display
         let currentlvl = (metaTile.lvl - this.tilesMatrix.avgLvl) * 1/3;
 
+        // Update the SelectedTile layer position 
         const lpx = -Math.floor((currentlvl) * 55)
         this.selectedTile[x][y].style("translate", `${lpx}px ${lpx}px`)
 
+
+        // Get Tile Floor information of the tile . 
         const height = 1
         const alpha = this.tileAlpha(x, y)
         const color = new Color(metaTile.color[0], metaTile.color[1], metaTile.color[2], alpha)
@@ -290,7 +294,9 @@ export class InterfaceIso {
         }
         */
 
+        // Display the Floor ( Horizontal Floor tile)
         this.iso.add(Shape.SurfaceFlat(Point(xx, yy, currentlvl - height), 1, 1, height), color);
+        // Display Floor Border ( Vertical Foor of the tile - only front )
         {
             const diffLvl = (metaTile.lvl - this.tilesMatrix.tiles[xx][yy-1].lvl) * 1/3;
             if (diffLvl > 0) {
@@ -303,20 +309,22 @@ export class InterfaceIso {
                 this.iso.add(Shape.SurfaceSW(Point(xx, yy, currentlvl - diffLvl), 1, 1, diffLvl), color);
             }
         }
+
+        // Create list of item to add to the tile . 
         const items = [...metaTile.items, ...metaTile.temporatyItems]
-        // Draw Item,
-        // const items = ;
-        
+
+        // If tile is the center of the matrix -> add player asset to the list of display item  )
         if (x == size / 2 - 1 && y == size / 2 - 1 ) {
             const asset = this.world.player.currentAsset;
             const tilePos = this.world.player.tileIsoPos;
-            // console.log(tilePos, tilePos.off)
             items.push({t:'Svg', key:asset, off:tilePos.off});
         }
         
+        // Draw Each item on the list. 
         items
             .sort((a, b) => (a.lvl || 0) - (b.lvl || 0))
             .forEach(item => this.drawTileItem(xx, yy, metaTile, item, currentlvl))   
+
     }
 
     drawTileBorder(x, y, axe){
@@ -388,12 +396,12 @@ export class InterfaceIso {
             .filter(box => {
                 const dx = box.x < xx ? xx - box.x : box.x - xx 
                 const dy = box.y < yy ? yy - box.y : box.y - yy 
-                const maxDist = box.conf.maxDist ? box.conf.maxDist : size / 2 - 1
+                const hideDistance = box.conf.hideDistance ? box.conf.hideDistance : size / 2 - 1
                 if (
-                    dx > maxDist || 
-                    dy > maxDist
+                    dx >= hideDistance || 
+                    dy >= hideDistance
                 ) {
-                    console.log("=== HIDE", maxDist, box.x, box.y, xx, yy)
+                    console.log("=== HIDE", hideDistance, box.x, box.y, xx, yy)
                     box.hide()
                     return false
                 }
@@ -429,7 +437,7 @@ export class InterfaceIso {
 
         // ( create if not existe - first draw )
         if (!metaTile.divBox) {
-            metaTile.divBox = new IsoDivBox(this.canavBox, metaTile, itemConf);
+            metaTile.divBox = new IsoDivBoxMarkDown(this.canavBox, metaTile, itemConf);
         }
 
         const xx = this.tilesMatrix.x;
@@ -437,25 +445,64 @@ export class InterfaceIso {
 
         const dx = metaTile.x < xx ? xx - metaTile.x : metaTile.x - xx 
         const dy = metaTile.y < yy ? yy - metaTile.y : metaTile.y - yy 
-        const maxDist = metaTile.divBox.conf.maxDist ? metaTile.divBox.conf.maxDist : this.size / 2 - 1
+        const hideDistance = metaTile.divBox.conf.hideDistance ? metaTile.divBox.conf.hideDistance : this.size / 2 - 1
 
 
-        if (dx < maxDist && dy < maxDist) {
+        if (dx < hideDistance && dy < hideDistance) {
             // add the tile box in the list of existing box. 
             if (this.isoDivBoxs.filter(x => x === metaTile.divBox).length == 0){
-                console.log("=== Show", maxDist) 
+                console.log("=== Show", hideDistance) 
+                metaTile.divBox.show()
                 this.isoDivBoxs.push(metaTile.divBox)
             }
             // Update position of the box
             metaTile.divBox.update(boxPoint.x, boxPoint.y)
         } else {
-            metaTile.divBox.hide()
+            if (!metaTile.divBox.isHide) {
+                console.log("=== Hide", hideDistance) 
+                metaTile.divBox.hide()
+            }
         }
 
 
     }
 
 
+    // Update the position of the divbox div box .  
+    drawTilesCityBox(boxPoint, metaTile) {
+
+        // ( create if not existe - first draw )
+        if (!metaTile.divBox) {
+            metaTile.divBox = new IsoDivCityBox(this.canavBox, metaTile, {
+                hideDistance: metaTile.cityNode.hideDistance
+            });
+        }
+        const xx = this.tilesMatrix.x;
+        const yy = this.tilesMatrix.y;
+
+        const dx = metaTile.x < xx ? xx - metaTile.x : metaTile.x - xx 
+        const dy = metaTile.y < yy ? yy - metaTile.y : metaTile.y - yy 
+        const hideDistance = metaTile.cityNode.hideDistance ? metaTile.cityNode.hideDistance : this.size / 2 - 1
+
+
+        if (dx < hideDistance && dy < hideDistance) {
+            // add the tile box in the list of existing box. 
+            if (this.isoDivBoxs.filter(x => x === metaTile.divBox).length == 0){
+                console.log("=== Show", hideDistance) 
+                metaTile.divBox.show()
+                this.isoDivBoxs.push(metaTile.divBox)
+            }
+            // Update position of the box
+            metaTile.divBox.update(boxPoint.x, boxPoint.y)
+        } else {
+            if (!metaTile.divBox.isHide) {
+                console.log("=== Hide", hideDistance) 
+                metaTile.divBox.hide()
+            }
+        }
+
+
+    }
     //: --------
 
 

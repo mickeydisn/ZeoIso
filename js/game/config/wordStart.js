@@ -52,7 +52,7 @@ export class WorldStart {
             y:y,
             md:md, 
             width:'140px', 
-            maxDist:3,
+            hideDistance:3,
             canBeEdit:false,
             style: `    
                 text-align: center;

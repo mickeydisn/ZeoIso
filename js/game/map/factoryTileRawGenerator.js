@@ -33,6 +33,7 @@ export class FactoryTileRawGenerator {
       rPeak: this.getRawPeak(x, y, zoom),
       rErosion: this.getRawErosion(x, y, zoom),
       rFlore: this.getRawFlore(x, y, zoom),
+      rBuildTile: this.getRawBuildTile(x, y, zoom),
     }
   }
 
@@ -182,6 +183,23 @@ export class FactoryTileRawGenerator {
       dencity = 1 - dencity
     }
     return dencity ;
+  }
+
+  getRawBuildTile(x, y, t=0, zoom=1) {
+    var f0 = 42;
+    // var f1 = 0.1;
+    var f2 = 0.75;
+    // var f3 = 300;
+    var lvl = 0;
+
+    [x, y] = this._zoom_and_grain(x, y, zoom);
+    
+    lvl += this._noise(f0 * x + t, f0 * y + t) * 5;
+    // lvl += this._noise(f1 * x + t, f1 * y + t) / 2;
+    // lvl += this._noise(f2 * x + t, f2 * y + t) ;
+    // lvl += this._noise(f3 * x + t, f3 * y + t) / 4 ;
+    lvl /= 4 + 1 ; //  + 1/4;
+    return lvl
   }
 
 

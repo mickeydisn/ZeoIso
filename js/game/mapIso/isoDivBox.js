@@ -20,22 +20,43 @@ export class IsoDivBox {
     init() {
         this.mainDiv = this.canavBox.append('div')
             .classed('isoDivBox', true)
-        this.initDraw()
     }
 
 
     hide() {
         this.isHide = true;
         this.mainDiv
+            .classed('isHide', true)
+            .classed('isShow', false)
             .style('display', "none")
+    }
+
+    show() {
+        this.isHide = true;
+        this.mainDiv
+            .classed('isHide', false)
+            .classed('isShow', true)
+            .style('display', "flex")
     }
 
     update(x, y) {
         this.isHide = false;
         this.mainDiv
-            .style('display', "flex")
+            // .style('display', "flex")
             .style('top', (y - TILE_HEIGHT - 5) + "px")
             .style('left', (x - 5) + "px")
+    }
+
+
+
+
+}
+
+
+export class IsoDivBoxMarkDown extends IsoDivBox {
+    constructor(canavBox, tile, boxConf) {
+        super(canavBox, tile, boxConf)
+        this.initDraw()
     }
 
 
@@ -110,5 +131,15 @@ export class IsoDivBox {
 
     }
 
+
+}
+
+
+
+
+export class IsoDivCityBox extends IsoDivBox {
+    constructor(canavBox, tile, boxConf) {
+        super(canavBox, tile, {})
+    }
 
 }

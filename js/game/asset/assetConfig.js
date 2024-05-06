@@ -8064,2918 +8064,2920 @@ export const assetConfig = [
                 "ctx": {}
             }
         },
-        {
-            "src": "./img/asset/Town1/roof_E.png",
-            "group": "Town1",
-            "label": "roof_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roof_N.png",
-            "group": "Town1",
-            "label": "roof_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roof_S.png",
-            "group": "Town1",
-            "label": "roof_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roof_W.png",
-            "group": "Town1",
-            "label": "roof_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofCorner_E.png",
-            "group": "Town1",
-            "label": "roofCorner_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofCorner_N.png",
-            "group": "Town1",
-            "label": "roofCorner_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofCorner_S.png",
-            "group": "Town1",
-            "label": "roofCorner_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofCorner_W.png",
-            "group": "Town1",
-            "label": "roofCorner_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofCornerInner_E.png",
-            "group": "Town1",
-            "label": "roofCornerInner_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofCornerInner_N.png",
-            "group": "Town1",
-            "label": "roofCornerInner_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofCornerInner_S.png",
-            "group": "Town1",
-            "label": "roofCornerInner_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofCornerInner_W.png",
-            "group": "Town1",
-            "label": "roofCornerInner_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofCornerRound_E.png",
-            "group": "Town1",
-            "label": "roofCornerRound_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofCornerRound_N.png",
-            "group": "Town1",
-            "label": "roofCornerRound_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofCornerRound_S.png",
-            "group": "Town1",
-            "label": "roofCornerRound_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofCornerRound_W.png",
-            "group": "Town1",
-            "label": "roofCornerRound_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofFlat_E.png",
-            "group": "Town1",
-            "label": "roofFlat_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofFlat_N.png",
-            "group": "Town1",
-            "label": "roofFlat_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofFlat_S.png",
-            "group": "Town1",
-            "label": "roofFlat_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofFlat_W.png",
-            "group": "Town1",
-            "label": "roofFlat_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofGable_E.png",
-            "group": "Town1",
-            "label": "roofGable_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofGable_N.png",
-            "group": "Town1",
-            "label": "roofGable_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofGable_S.png",
-            "group": "Town1",
-            "label": "roofGable_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofGable_W.png",
-            "group": "Town1",
-            "label": "roofGable_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofGableDetail_E.png",
-            "group": "Town1",
-            "label": "roofGableDetail_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofGableDetail_N.png",
-            "group": "Town1",
-            "label": "roofGableDetail_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofGableDetail_S.png",
-            "group": "Town1",
-            "label": "roofGableDetail_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofGableDetail_W.png",
-            "group": "Town1",
-            "label": "roofGableDetail_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofGableEnd_E.png",
-            "group": "Town1",
-            "label": "roofGableEnd_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofGableEnd_N.png",
-            "group": "Town1",
-            "label": "roofGableEnd_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofGableEnd_S.png",
-            "group": "Town1",
-            "label": "roofGableEnd_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofGableEnd_W.png",
-            "group": "Town1",
-            "label": "roofGableEnd_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofGableTop_E.png",
-            "group": "Town1",
-            "label": "roofGableTop_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofGableTop_N.png",
-            "group": "Town1",
-            "label": "roofGableTop_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofGableTop_S.png",
-            "group": "Town1",
-            "label": "roofGableTop_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofGableTop_W.png",
-            "group": "Town1",
-            "label": "roofGableTop_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofLeft_E.png",
-            "group": "Town1",
-            "label": "roofLeft_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofLeft_N.png",
-            "group": "Town1",
-            "label": "roofLeft_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofLeft_S.png",
-            "group": "Town1",
-            "label": "roofLeft_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofLeft_W.png",
-            "group": "Town1",
-            "label": "roofLeft_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofPoint_E.png",
-            "group": "Town1",
-            "label": "roofPoint_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofPoint_N.png",
-            "group": "Town1",
-            "label": "roofPoint_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofPoint_S.png",
-            "group": "Town1",
-            "label": "roofPoint_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofPoint_W.png",
-            "group": "Town1",
-            "label": "roofPoint_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofRight_E.png",
-            "group": "Town1",
-            "label": "roofRight_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofRight_N.png",
-            "group": "Town1",
-            "label": "roofRight_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofRight_S.png",
-            "group": "Town1",
-            "label": "roofRight_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofRight_W.png",
-            "group": "Town1",
-            "label": "roofRight_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofWindow_E.png",
-            "group": "Town1",
-            "label": "roofWindow_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofWindow_N.png",
-            "group": "Town1",
-            "label": "roofWindow_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofWindow_S.png",
-            "group": "Town1",
-            "label": "roofWindow_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/roofWindow_W.png",
-            "group": "Town1",
-            "label": "roofWindow_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wall_E.png",
-            "group": "Town1",
-            "label": "wall_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wall_N.png",
-            "group": "Town1",
-            "label": "wall_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wall_S.png",
-            "group": "Town1",
-            "label": "wall_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wall_W.png",
-            "group": "Town1",
-            "label": "wall_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallArch_E.png",
-            "group": "Town1",
-            "label": "wallArch_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallArch_N.png",
-            "group": "Town1",
-            "label": "wallArch_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallArch_S.png",
-            "group": "Town1",
-            "label": "wallArch_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallArch_W.png",
-            "group": "Town1",
-            "label": "wallArch_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallArchTop_E.png",
-            "group": "Town1",
-            "label": "wallArchTop_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallArchTop_N.png",
-            "group": "Town1",
-            "label": "wallArchTop_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallArchTop_S.png",
-            "group": "Town1",
-            "label": "wallArchTop_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallArchTop_W.png",
-            "group": "Town1",
-            "label": "wallArchTop_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallArchTopDetail_E.png",
-            "group": "Town1",
-            "label": "wallArchTopDetail_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallArchTopDetail_N.png",
-            "group": "Town1",
-            "label": "wallArchTopDetail_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallArchTopDetail_S.png",
-            "group": "Town1",
-            "label": "wallArchTopDetail_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallArchTopDetail_W.png",
-            "group": "Town1",
-            "label": "wallArchTopDetail_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallBlock_E.png",
-            "group": "Town1",
-            "label": "wallBlock_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallBlock_N.png",
-            "group": "Town1",
-            "label": "wallBlock_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallBlock_S.png",
-            "group": "Town1",
-            "label": "wallBlock_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallBlock_W.png",
-            "group": "Town1",
-            "label": "wallBlock_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallBlockHalf_E.png",
-            "group": "Town1",
-            "label": "wallBlockHalf_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallBlockHalf_N.png",
-            "group": "Town1",
-            "label": "wallBlockHalf_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallBlockHalf_S.png",
-            "group": "Town1",
-            "label": "wallBlockHalf_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallBlockHalf_W.png",
-            "group": "Town1",
-            "label": "wallBlockHalf_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallBroken_E.png",
-            "group": "Town1",
-            "label": "wallBroken_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallBroken_N.png",
-            "group": "Town1",
-            "label": "wallBroken_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallBroken_S.png",
-            "group": "Town1",
-            "label": "wallBroken_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallBroken_W.png",
-            "group": "Town1",
-            "label": "wallBroken_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCorner_E.png",
-            "group": "Town1",
-            "label": "wallCorner_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCorner_N.png",
-            "group": "Town1",
-            "label": "wallCorner_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCorner_S.png",
-            "group": "Town1",
-            "label": "wallCorner_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCorner_W.png",
-            "group": "Town1",
-            "label": "wallCorner_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCornerDetail_E.png",
-            "group": "Town1",
-            "label": "wallCornerDetail_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCornerDetail_N.png",
-            "group": "Town1",
-            "label": "wallCornerDetail_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCornerDetail_S.png",
-            "group": "Town1",
-            "label": "wallCornerDetail_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCornerDetail_W.png",
-            "group": "Town1",
-            "label": "wallCornerDetail_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCornerDiagonal_E.png",
-            "group": "Town1",
-            "label": "wallCornerDiagonal_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCornerDiagonal_N.png",
-            "group": "Town1",
-            "label": "wallCornerDiagonal_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCornerDiagonal_S.png",
-            "group": "Town1",
-            "label": "wallCornerDiagonal_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCornerDiagonal_W.png",
-            "group": "Town1",
-            "label": "wallCornerDiagonal_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCornerDiagonalHalf_E.png",
-            "group": "Town1",
-            "label": "wallCornerDiagonalHalf_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCornerDiagonalHalf_N.png",
-            "group": "Town1",
-            "label": "wallCornerDiagonalHalf_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCornerDiagonalHalf_S.png",
-            "group": "Town1",
-            "label": "wallCornerDiagonalHalf_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCornerDiagonalHalf_W.png",
-            "group": "Town1",
-            "label": "wallCornerDiagonalHalf_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCornerEdge_E.png",
-            "group": "Town1",
-            "label": "wallCornerEdge_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCornerEdge_N.png",
-            "group": "Town1",
-            "label": "wallCornerEdge_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCornerEdge_S.png",
-            "group": "Town1",
-            "label": "wallCornerEdge_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCornerEdge_W.png",
-            "group": "Town1",
-            "label": "wallCornerEdge_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCurved_E.png",
-            "group": "Town1",
-            "label": "wallCurved_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCurved_N.png",
-            "group": "Town1",
-            "label": "wallCurved_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCurved_S.png",
-            "group": "Town1",
-            "label": "wallCurved_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallCurved_W.png",
-            "group": "Town1",
-            "label": "wallCurved_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDetailCross_E.png",
-            "group": "Town1",
-            "label": "wallDetailCross_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDetailCross_N.png",
-            "group": "Town1",
-            "label": "wallDetailCross_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDetailCross_S.png",
-            "group": "Town1",
-            "label": "wallDetailCross_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDetailCross_W.png",
-            "group": "Town1",
-            "label": "wallDetailCross_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDetailDiagonal_E.png",
-            "group": "Town1",
-            "label": "wallDetailDiagonal_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDetailDiagonal_N.png",
-            "group": "Town1",
-            "label": "wallDetailDiagonal_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDetailDiagonal_S.png",
-            "group": "Town1",
-            "label": "wallDetailDiagonal_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDetailDiagonal_W.png",
-            "group": "Town1",
-            "label": "wallDetailDiagonal_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDetailHorizontal_E.png",
-            "group": "Town1",
-            "label": "wallDetailHorizontal_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDetailHorizontal_N.png",
-            "group": "Town1",
-            "label": "wallDetailHorizontal_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDetailHorizontal_S.png",
-            "group": "Town1",
-            "label": "wallDetailHorizontal_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDetailHorizontal_W.png",
-            "group": "Town1",
-            "label": "wallDetailHorizontal_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDiagonal_E.png",
-            "group": "Town1",
-            "label": "wallDiagonal_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDiagonal_N.png",
-            "group": "Town1",
-            "label": "wallDiagonal_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDiagonal_S.png",
-            "group": "Town1",
-            "label": "wallDiagonal_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDiagonal_W.png",
-            "group": "Town1",
-            "label": "wallDiagonal_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoor_E.png",
-            "group": "Town1",
-            "label": "wallDoor_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoor_N.png",
-            "group": "Town1",
-            "label": "wallDoor_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoor_S.png",
-            "group": "Town1",
-            "label": "wallDoor_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoor_W.png",
-            "group": "Town1",
-            "label": "wallDoor_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoorwayBase_E.png",
-            "group": "Town1",
-            "label": "wallDoorwayBase_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoorwayBase_N.png",
-            "group": "Town1",
-            "label": "wallDoorwayBase_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoorwayBase_S.png",
-            "group": "Town1",
-            "label": "wallDoorwayBase_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoorwayBase_W.png",
-            "group": "Town1",
-            "label": "wallDoorwayBase_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoorwayRound_E.png",
-            "group": "Town1",
-            "label": "wallDoorwayRound_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoorwayRound_N.png",
-            "group": "Town1",
-            "label": "wallDoorwayRound_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoorwayRound_S.png",
-            "group": "Town1",
-            "label": "wallDoorwayRound_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoorwayRound_W.png",
-            "group": "Town1",
-            "label": "wallDoorwayRound_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoorwaySquare_E.png",
-            "group": "Town1",
-            "label": "wallDoorwaySquare_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoorwaySquare_N.png",
-            "group": "Town1",
-            "label": "wallDoorwaySquare_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoorwaySquare_S.png",
-            "group": "Town1",
-            "label": "wallDoorwaySquare_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoorwaySquare_W.png",
-            "group": "Town1",
-            "label": "wallDoorwaySquare_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoorwaySquareWide_E.png",
-            "group": "Town1",
-            "label": "wallDoorwaySquareWide_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoorwaySquareWide_N.png",
-            "group": "Town1",
-            "label": "wallDoorwaySquareWide_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoorwaySquareWide_S.png",
-            "group": "Town1",
-            "label": "wallDoorwaySquareWide_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoorwaySquareWide_W.png",
-            "group": "Town1",
-            "label": "wallDoorwaySquareWide_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoorwaySquareWideCurved_E.png",
-            "group": "Town1",
-            "label": "wallDoorwaySquareWideCurved_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoorwaySquareWideCurved_N.png",
-            "group": "Town1",
-            "label": "wallDoorwaySquareWideCurved_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoorwaySquareWideCurved_S.png",
-            "group": "Town1",
-            "label": "wallDoorwaySquareWideCurved_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallDoorwaySquareWideCurved_W.png",
-            "group": "Town1",
-            "label": "wallDoorwaySquareWideCurved_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallHalf_E.png",
-            "group": "Town1",
-            "label": "wallHalf_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallHalf_N.png",
-            "group": "Town1",
-            "label": "wallHalf_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallHalf_S.png",
-            "group": "Town1",
-            "label": "wallHalf_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallHalf_W.png",
-            "group": "Town1",
-            "label": "wallHalf_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallRounded_E.png",
-            "group": "Town1",
-            "label": "wallRounded_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallRounded_N.png",
-            "group": "Town1",
-            "label": "wallRounded_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallRounded_S.png",
-            "group": "Town1",
-            "label": "wallRounded_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallRounded_W.png",
-            "group": "Town1",
-            "label": "wallRounded_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallSide_E.png",
-            "group": "Town1",
-            "label": "wallSide_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallSide_N.png",
-            "group": "Town1",
-            "label": "wallSide_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallSide_S.png",
-            "group": "Town1",
-            "label": "wallSide_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallSide_W.png",
-            "group": "Town1",
-            "label": "wallSide_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallSlope_E.png",
-            "group": "Town1",
-            "label": "wallSlope_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallSlope_N.png",
-            "group": "Town1",
-            "label": "wallSlope_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallSlope_S.png",
-            "group": "Town1",
-            "label": "wallSlope_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallSlope_W.png",
-            "group": "Town1",
-            "label": "wallSlope_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallWindowGlass_E.png",
-            "group": "Town1",
-            "label": "wallWindowGlass_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallWindowGlass_N.png",
-            "group": "Town1",
-            "label": "wallWindowGlass_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallWindowGlass_S.png",
-            "group": "Town1",
-            "label": "wallWindowGlass_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallWindowGlass_W.png",
-            "group": "Town1",
-            "label": "wallWindowGlass_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallWindowRound_E.png",
-            "group": "Town1",
-            "label": "wallWindowRound_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallWindowRound_N.png",
-            "group": "Town1",
-            "label": "wallWindowRound_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallWindowRound_S.png",
-            "group": "Town1",
-            "label": "wallWindowRound_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallWindowRound_W.png",
-            "group": "Town1",
-            "label": "wallWindowRound_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallWindowShutters_E.png",
-            "group": "Town1",
-            "label": "wallWindowShutters_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallWindowShutters_N.png",
-            "group": "Town1",
-            "label": "wallWindowShutters_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallWindowShutters_S.png",
-            "group": "Town1",
-            "label": "wallWindowShutters_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallWindowShutters_W.png",
-            "group": "Town1",
-            "label": "wallWindowShutters_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallWindowSmall_E.png",
-            "group": "Town1",
-            "label": "wallWindowSmall_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallWindowSmall_N.png",
-            "group": "Town1",
-            "label": "wallWindowSmall_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallWindowSmall_S.png",
-            "group": "Town1",
-            "label": "wallWindowSmall_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallWindowSmall_W.png",
-            "group": "Town1",
-            "label": "wallWindowSmall_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallWindowStone_E.png",
-            "group": "Town1",
-            "label": "wallWindowStone_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallWindowStone_N.png",
-            "group": "Town1",
-            "label": "wallWindowStone_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallWindowStone_S.png",
-            "group": "Town1",
-            "label": "wallWindowStone_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town1/wallWindowStone_W.png",
-            "group": "Town1",
-            "label": "wallWindowStone_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/poles_E.png",
-            "group": "Town2",
-            "label": "poles_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/poles_N.png",
-            "group": "Town2",
-            "label": "poles_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/poles_S.png",
-            "group": "Town2",
-            "label": "poles_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/poles_W.png",
-            "group": "Town2",
-            "label": "poles_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/polesHorizontal_E.png",
-            "group": "Town2",
-            "label": "polesHorizontal_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/polesHorizontal_N.png",
-            "group": "Town2",
-            "label": "polesHorizontal_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/polesHorizontal_S.png",
-            "group": "Town2",
-            "label": "polesHorizontal_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/polesHorizontal_W.png",
-            "group": "Town2",
-            "label": "polesHorizontal_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHigh_E.png",
-            "group": "Town2",
-            "label": "roofHigh_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHigh_N.png",
-            "group": "Town2",
-            "label": "roofHigh_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHigh_S.png",
-            "group": "Town2",
-            "label": "roofHigh_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHigh_W.png",
-            "group": "Town2",
-            "label": "roofHigh_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighCorner_E.png",
-            "group": "Town2",
-            "label": "roofHighCorner_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighCorner_N.png",
-            "group": "Town2",
-            "label": "roofHighCorner_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighCorner_S.png",
-            "group": "Town2",
-            "label": "roofHighCorner_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighCorner_W.png",
-            "group": "Town2",
-            "label": "roofHighCorner_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighCornerInner_E.png",
-            "group": "Town2",
-            "label": "roofHighCornerInner_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighCornerInner_N.png",
-            "group": "Town2",
-            "label": "roofHighCornerInner_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighCornerInner_S.png",
-            "group": "Town2",
-            "label": "roofHighCornerInner_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighCornerInner_W.png",
-            "group": "Town2",
-            "label": "roofHighCornerInner_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighCornerRound_E.png",
-            "group": "Town2",
-            "label": "roofHighCornerRound_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighCornerRound_N.png",
-            "group": "Town2",
-            "label": "roofHighCornerRound_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighCornerRound_S.png",
-            "group": "Town2",
-            "label": "roofHighCornerRound_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighCornerRound_W.png",
-            "group": "Town2",
-            "label": "roofHighCornerRound_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighFlat_E.png",
-            "group": "Town2",
-            "label": "roofHighFlat_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighFlat_N.png",
-            "group": "Town2",
-            "label": "roofHighFlat_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighFlat_S.png",
-            "group": "Town2",
-            "label": "roofHighFlat_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighFlat_W.png",
-            "group": "Town2",
-            "label": "roofHighFlat_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighGable_E.png",
-            "group": "Town2",
-            "label": "roofHighGable_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighGable_N.png",
-            "group": "Town2",
-            "label": "roofHighGable_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighGable_S.png",
-            "group": "Town2",
-            "label": "roofHighGable_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighGable_W.png",
-            "group": "Town2",
-            "label": "roofHighGable_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighGableDetail_E.png",
-            "group": "Town2",
-            "label": "roofHighGableDetail_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighGableDetail_N.png",
-            "group": "Town2",
-            "label": "roofHighGableDetail_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighGableDetail_S.png",
-            "group": "Town2",
-            "label": "roofHighGableDetail_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighGableDetail_W.png",
-            "group": "Town2",
-            "label": "roofHighGableDetail_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighGableEnd_E.png",
-            "group": "Town2",
-            "label": "roofHighGableEnd_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighGableEnd_N.png",
-            "group": "Town2",
-            "label": "roofHighGableEnd_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighGableEnd_S.png",
-            "group": "Town2",
-            "label": "roofHighGableEnd_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighGableEnd_W.png",
-            "group": "Town2",
-            "label": "roofHighGableEnd_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighGableTop_E.png",
-            "group": "Town2",
-            "label": "roofHighGableTop_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighGableTop_N.png",
-            "group": "Town2",
-            "label": "roofHighGableTop_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighGableTop_S.png",
-            "group": "Town2",
-            "label": "roofHighGableTop_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighGableTop_W.png",
-            "group": "Town2",
-            "label": "roofHighGableTop_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighLeft_E.png",
-            "group": "Town2",
-            "label": "roofHighLeft_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighLeft_N.png",
-            "group": "Town2",
-            "label": "roofHighLeft_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighLeft_S.png",
-            "group": "Town2",
-            "label": "roofHighLeft_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighLeft_W.png",
-            "group": "Town2",
-            "label": "roofHighLeft_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighPoint_E.png",
-            "group": "Town2",
-            "label": "roofHighPoint_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighPoint_N.png",
-            "group": "Town2",
-            "label": "roofHighPoint_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighPoint_S.png",
-            "group": "Town2",
-            "label": "roofHighPoint_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighPoint_W.png",
-            "group": "Town2",
-            "label": "roofHighPoint_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighRight_E.png",
-            "group": "Town2",
-            "label": "roofHighRight_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighRight_N.png",
-            "group": "Town2",
-            "label": "roofHighRight_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighRight_S.png",
-            "group": "Town2",
-            "label": "roofHighRight_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighRight_W.png",
-            "group": "Town2",
-            "label": "roofHighRight_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighWindow_E.png",
-            "group": "Town2",
-            "label": "roofHighWindow_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighWindow_N.png",
-            "group": "Town2",
-            "label": "roofHighWindow_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighWindow_S.png",
-            "group": "Town2",
-            "label": "roofHighWindow_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/roofHighWindow_W.png",
-            "group": "Town2",
-            "label": "roofHighWindow_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWood_E.png",
-            "group": "Town2",
-            "label": "wallWood_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWood_N.png",
-            "group": "Town2",
-            "label": "wallWood_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWood_S.png",
-            "group": "Town2",
-            "label": "wallWood_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWood_W.png",
-            "group": "Town2",
-            "label": "wallWood_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodArch_E.png",
-            "group": "Town2",
-            "label": "wallWoodArch_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodArch_N.png",
-            "group": "Town2",
-            "label": "wallWoodArch_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodArch_S.png",
-            "group": "Town2",
-            "label": "wallWoodArch_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodArch_W.png",
-            "group": "Town2",
-            "label": "wallWoodArch_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodArchTop_E.png",
-            "group": "Town2",
-            "label": "wallWoodArchTop_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodArchTop_N.png",
-            "group": "Town2",
-            "label": "wallWoodArchTop_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodArchTop_S.png",
-            "group": "Town2",
-            "label": "wallWoodArchTop_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodArchTop_W.png",
-            "group": "Town2",
-            "label": "wallWoodArchTop_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodArchTopDetail_E.png",
-            "group": "Town2",
-            "label": "wallWoodArchTopDetail_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodArchTopDetail_N.png",
-            "group": "Town2",
-            "label": "wallWoodArchTopDetail_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodArchTopDetail_S.png",
-            "group": "Town2",
-            "label": "wallWoodArchTopDetail_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodArchTopDetail_W.png",
-            "group": "Town2",
-            "label": "wallWoodArchTopDetail_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodBlock_E.png",
-            "group": "Town2",
-            "label": "wallWoodBlock_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodBlock_N.png",
-            "group": "Town2",
-            "label": "wallWoodBlock_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodBlock_S.png",
-            "group": "Town2",
-            "label": "wallWoodBlock_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodBlock_W.png",
-            "group": "Town2",
-            "label": "wallWoodBlock_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodBlockHalf_E.png",
-            "group": "Town2",
-            "label": "wallWoodBlockHalf_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodBlockHalf_N.png",
-            "group": "Town2",
-            "label": "wallWoodBlockHalf_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodBlockHalf_S.png",
-            "group": "Town2",
-            "label": "wallWoodBlockHalf_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodBlockHalf_W.png",
-            "group": "Town2",
-            "label": "wallWoodBlockHalf_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodBroken_E.png",
-            "group": "Town2",
-            "label": "wallWoodBroken_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodBroken_N.png",
-            "group": "Town2",
-            "label": "wallWoodBroken_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodBroken_S.png",
-            "group": "Town2",
-            "label": "wallWoodBroken_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodBroken_W.png",
-            "group": "Town2",
-            "label": "wallWoodBroken_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodCorner_E.png",
-            "group": "Town2",
-            "label": "wallWoodCorner_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodCorner_N.png",
-            "group": "Town2",
-            "label": "wallWoodCorner_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodCorner_S.png",
-            "group": "Town2",
-            "label": "wallWoodCorner_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodCorner_W.png",
-            "group": "Town2",
-            "label": "wallWoodCorner_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodCornerDiagonal_E.png",
-            "group": "Town2",
-            "label": "wallWoodCornerDiagonal_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodCornerDiagonal_N.png",
-            "group": "Town2",
-            "label": "wallWoodCornerDiagonal_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodCornerDiagonal_S.png",
-            "group": "Town2",
-            "label": "wallWoodCornerDiagonal_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodCornerDiagonal_W.png",
-            "group": "Town2",
-            "label": "wallWoodCornerDiagonal_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodCornerDiagonalHalf_E.png",
-            "group": "Town2",
-            "label": "wallWoodCornerDiagonalHalf_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodCornerDiagonalHalf_N.png",
-            "group": "Town2",
-            "label": "wallWoodCornerDiagonalHalf_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodCornerDiagonalHalf_S.png",
-            "group": "Town2",
-            "label": "wallWoodCornerDiagonalHalf_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodCornerDiagonalHalf_W.png",
-            "group": "Town2",
-            "label": "wallWoodCornerDiagonalHalf_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodCornerEdge_E.png",
-            "group": "Town2",
-            "label": "wallWoodCornerEdge_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodCornerEdge_N.png",
-            "group": "Town2",
-            "label": "wallWoodCornerEdge_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodCornerEdge_S.png",
-            "group": "Town2",
-            "label": "wallWoodCornerEdge_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodCornerEdge_W.png",
-            "group": "Town2",
-            "label": "wallWoodCornerEdge_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodCurved_E.png",
-            "group": "Town2",
-            "label": "wallWoodCurved_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodCurved_N.png",
-            "group": "Town2",
-            "label": "wallWoodCurved_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodCurved_S.png",
-            "group": "Town2",
-            "label": "wallWoodCurved_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodCurved_W.png",
-            "group": "Town2",
-            "label": "wallWoodCurved_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDetailCross_E.png",
-            "group": "Town2",
-            "label": "wallWoodDetailCross_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDetailCross_N.png",
-            "group": "Town2",
-            "label": "wallWoodDetailCross_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDetailCross_S.png",
-            "group": "Town2",
-            "label": "wallWoodDetailCross_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDetailCross_W.png",
-            "group": "Town2",
-            "label": "wallWoodDetailCross_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDetailDiagonal_E.png",
-            "group": "Town2",
-            "label": "wallWoodDetailDiagonal_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDetailDiagonal_N.png",
-            "group": "Town2",
-            "label": "wallWoodDetailDiagonal_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDetailDiagonal_S.png",
-            "group": "Town2",
-            "label": "wallWoodDetailDiagonal_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDetailDiagonal_W.png",
-            "group": "Town2",
-            "label": "wallWoodDetailDiagonal_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDetailHorizontal_E.png",
-            "group": "Town2",
-            "label": "wallWoodDetailHorizontal_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDetailHorizontal_N.png",
-            "group": "Town2",
-            "label": "wallWoodDetailHorizontal_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDetailHorizontal_S.png",
-            "group": "Town2",
-            "label": "wallWoodDetailHorizontal_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDetailHorizontal_W.png",
-            "group": "Town2",
-            "label": "wallWoodDetailHorizontal_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDiagonal_E.png",
-            "group": "Town2",
-            "label": "wallWoodDiagonal_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDiagonal_N.png",
-            "group": "Town2",
-            "label": "wallWoodDiagonal_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDiagonal_S.png",
-            "group": "Town2",
-            "label": "wallWoodDiagonal_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDiagonal_W.png",
-            "group": "Town2",
-            "label": "wallWoodDiagonal_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoor_E.png",
-            "group": "Town2",
-            "label": "wallWoodDoor_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoor_N.png",
-            "group": "Town2",
-            "label": "wallWoodDoor_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoor_S.png",
-            "group": "Town2",
-            "label": "wallWoodDoor_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoor_W.png",
-            "group": "Town2",
-            "label": "wallWoodDoor_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoorwayBase_E.png",
-            "group": "Town2",
-            "label": "wallWoodDoorwayBase_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoorwayBase_N.png",
-            "group": "Town2",
-            "label": "wallWoodDoorwayBase_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoorwayBase_S.png",
-            "group": "Town2",
-            "label": "wallWoodDoorwayBase_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoorwayBase_W.png",
-            "group": "Town2",
-            "label": "wallWoodDoorwayBase_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoorwayRound_E.png",
-            "group": "Town2",
-            "label": "wallWoodDoorwayRound_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoorwayRound_N.png",
-            "group": "Town2",
-            "label": "wallWoodDoorwayRound_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoorwayRound_S.png",
-            "group": "Town2",
-            "label": "wallWoodDoorwayRound_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoorwayRound_W.png",
-            "group": "Town2",
-            "label": "wallWoodDoorwayRound_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoorwaySquare_E.png",
-            "group": "Town2",
-            "label": "wallWoodDoorwaySquare_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoorwaySquare_N.png",
-            "group": "Town2",
-            "label": "wallWoodDoorwaySquare_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoorwaySquare_S.png",
-            "group": "Town2",
-            "label": "wallWoodDoorwaySquare_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoorwaySquare_W.png",
-            "group": "Town2",
-            "label": "wallWoodDoorwaySquare_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoorwaySquareWide_E.png",
-            "group": "Town2",
-            "label": "wallWoodDoorwaySquareWide_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoorwaySquareWide_N.png",
-            "group": "Town2",
-            "label": "wallWoodDoorwaySquareWide_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoorwaySquareWide_S.png",
-            "group": "Town2",
-            "label": "wallWoodDoorwaySquareWide_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoorwaySquareWide_W.png",
-            "group": "Town2",
-            "label": "wallWoodDoorwaySquareWide_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoorwaySquareWideCurved_E.png",
-            "group": "Town2",
-            "label": "wallWoodDoorwaySquareWideCurved_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoorwaySquareWideCurved_N.png",
-            "group": "Town2",
-            "label": "wallWoodDoorwaySquareWideCurved_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoorwaySquareWideCurved_S.png",
-            "group": "Town2",
-            "label": "wallWoodDoorwaySquareWideCurved_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodDoorwaySquareWideCurved_W.png",
-            "group": "Town2",
-            "label": "wallWoodDoorwaySquareWideCurved_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodHalf_E.png",
-            "group": "Town2",
-            "label": "wallWoodHalf_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodHalf_N.png",
-            "group": "Town2",
-            "label": "wallWoodHalf_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodHalf_S.png",
-            "group": "Town2",
-            "label": "wallWoodHalf_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodHalf_W.png",
-            "group": "Town2",
-            "label": "wallWoodHalf_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodRounded_E.png",
-            "group": "Town2",
-            "label": "wallWoodRounded_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodRounded_N.png",
-            "group": "Town2",
-            "label": "wallWoodRounded_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodRounded_S.png",
-            "group": "Town2",
-            "label": "wallWoodRounded_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodRounded_W.png",
-            "group": "Town2",
-            "label": "wallWoodRounded_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodSide_E.png",
-            "group": "Town2",
-            "label": "wallWoodSide_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodSide_N.png",
-            "group": "Town2",
-            "label": "wallWoodSide_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodSide_S.png",
-            "group": "Town2",
-            "label": "wallWoodSide_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodSide_W.png",
-            "group": "Town2",
-            "label": "wallWoodSide_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodSlope_E.png",
-            "group": "Town2",
-            "label": "wallWoodSlope_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodSlope_N.png",
-            "group": "Town2",
-            "label": "wallWoodSlope_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodSlope_S.png",
-            "group": "Town2",
-            "label": "wallWoodSlope_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodSlope_W.png",
-            "group": "Town2",
-            "label": "wallWoodSlope_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodWindowGlass_E.png",
-            "group": "Town2",
-            "label": "wallWoodWindowGlass_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodWindowGlass_N.png",
-            "group": "Town2",
-            "label": "wallWoodWindowGlass_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodWindowGlass_S.png",
-            "group": "Town2",
-            "label": "wallWoodWindowGlass_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodWindowGlass_W.png",
-            "group": "Town2",
-            "label": "wallWoodWindowGlass_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodWindowRound_E.png",
-            "group": "Town2",
-            "label": "wallWoodWindowRound_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodWindowRound_N.png",
-            "group": "Town2",
-            "label": "wallWoodWindowRound_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodWindowRound_S.png",
-            "group": "Town2",
-            "label": "wallWoodWindowRound_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodWindowRound_W.png",
-            "group": "Town2",
-            "label": "wallWoodWindowRound_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodWindowShutters_E.png",
-            "group": "Town2",
-            "label": "wallWoodWindowShutters_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodWindowShutters_N.png",
-            "group": "Town2",
-            "label": "wallWoodWindowShutters_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodWindowShutters_S.png",
-            "group": "Town2",
-            "label": "wallWoodWindowShutters_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodWindowShutters_W.png",
-            "group": "Town2",
-            "label": "wallWoodWindowShutters_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodWindowSmall_E.png",
-            "group": "Town2",
-            "label": "wallWoodWindowSmall_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodWindowSmall_N.png",
-            "group": "Town2",
-            "label": "wallWoodWindowSmall_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodWindowSmall_S.png",
-            "group": "Town2",
-            "label": "wallWoodWindowSmall_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodWindowSmall_W.png",
-            "group": "Town2",
-            "label": "wallWoodWindowSmall_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodWindowStone_E.png",
-            "group": "Town2",
-            "label": "wallWoodWindowStone_E",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodWindowStone_N.png",
-            "group": "Town2",
-            "label": "wallWoodWindowStone_N",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodWindowStone_S.png",
-            "group": "Town2",
-            "label": "wallWoodWindowStone_S",
-            "cimage": {
-                "ctx": {}
-            }
-        },
-        {
-            "src": "./img/asset/Town2/wallWoodWindowStone_W.png",
-            "group": "Town2",
-            "label": "wallWoodWindowStone_W",
-            "cimage": {
-                "ctx": {}
-            }
-        },
+// TOWN 
+{
+    "src": "./img/asset/Town1/roof_NE.png",
+    "group": "Town1",
+    "label": "roof_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roof_NW.png",
+    "group": "Town1",
+    "label": "roof_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roof_SE.png",
+    "group": "Town1",
+    "label": "roof_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roof_SW.png",
+    "group": "Town1",
+    "label": "roof_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofCorner_NE.png",
+    "group": "Town1",
+    "label": "roofCorner_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofCorner_NW.png",
+    "group": "Town1",
+    "label": "roofCorner_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofCorner_SE.png",
+    "group": "Town1",
+    "label": "roofCorner_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofCorner_SW.png",
+    "group": "Town1",
+    "label": "roofCorner_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofCornerInner_NE.png",
+    "group": "Town1",
+    "label": "roofCornerInner_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofCornerInner_NW.png",
+    "group": "Town1",
+    "label": "roofCornerInner_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofCornerInner_SE.png",
+    "group": "Town1",
+    "label": "roofCornerInner_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofCornerInner_SW.png",
+    "group": "Town1",
+    "label": "roofCornerInner_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofCornerRound_NE.png",
+    "group": "Town1",
+    "label": "roofCornerRound_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofCornerRound_NW.png",
+    "group": "Town1",
+    "label": "roofCornerRound_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofCornerRound_SE.png",
+    "group": "Town1",
+    "label": "roofCornerRound_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofCornerRound_SW.png",
+    "group": "Town1",
+    "label": "roofCornerRound_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofFlat_NE.png",
+    "group": "Town1",
+    "label": "roofFlat_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofFlat_NW.png",
+    "group": "Town1",
+    "label": "roofFlat_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofFlat_SE.png",
+    "group": "Town1",
+    "label": "roofFlat_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofFlat_SW.png",
+    "group": "Town1",
+    "label": "roofFlat_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofGable_NE.png",
+    "group": "Town1",
+    "label": "roofGable_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofGable_NW.png",
+    "group": "Town1",
+    "label": "roofGable_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofGable_SE.png",
+    "group": "Town1",
+    "label": "roofGable_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofGable_SW.png",
+    "group": "Town1",
+    "label": "roofGable_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofGableDetail_NE.png",
+    "group": "Town1",
+    "label": "roofGableDetail_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofGableDetail_NW.png",
+    "group": "Town1",
+    "label": "roofGableDetail_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofGableDetail_SE.png",
+    "group": "Town1",
+    "label": "roofGableDetail_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofGableDetail_SW.png",
+    "group": "Town1",
+    "label": "roofGableDetail_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofGableEnd_NE.png",
+    "group": "Town1",
+    "label": "roofGableEnd_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofGableEnd_NW.png",
+    "group": "Town1",
+    "label": "roofGableEnd_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofGableEnd_SE.png",
+    "group": "Town1",
+    "label": "roofGableEnd_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofGableEnd_SW.png",
+    "group": "Town1",
+    "label": "roofGableEnd_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofGableTop_NE.png",
+    "group": "Town1",
+    "label": "roofGableTop_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofGableTop_NW.png",
+    "group": "Town1",
+    "label": "roofGableTop_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofGableTop_SE.png",
+    "group": "Town1",
+    "label": "roofGableTop_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofGableTop_SW.png",
+    "group": "Town1",
+    "label": "roofGableTop_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofLeft_NE.png",
+    "group": "Town1",
+    "label": "roofLeft_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofLeft_NW.png",
+    "group": "Town1",
+    "label": "roofLeft_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofLeft_SE.png",
+    "group": "Town1",
+    "label": "roofLeft_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofLeft_SW.png",
+    "group": "Town1",
+    "label": "roofLeft_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofPoint_NE.png",
+    "group": "Town1",
+    "label": "roofPoint_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofPoint_NW.png",
+    "group": "Town1",
+    "label": "roofPoint_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofPoint_SE.png",
+    "group": "Town1",
+    "label": "roofPoint_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofPoint_SW.png",
+    "group": "Town1",
+    "label": "roofPoint_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofRight_NE.png",
+    "group": "Town1",
+    "label": "roofRight_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofRight_NW.png",
+    "group": "Town1",
+    "label": "roofRight_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofRight_SE.png",
+    "group": "Town1",
+    "label": "roofRight_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofRight_SW.png",
+    "group": "Town1",
+    "label": "roofRight_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofWindow_NE.png",
+    "group": "Town1",
+    "label": "roofWindow_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofWindow_NW.png",
+    "group": "Town1",
+    "label": "roofWindow_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofWindow_SE.png",
+    "group": "Town1",
+    "label": "roofWindow_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/roofWindow_SW.png",
+    "group": "Town1",
+    "label": "roofWindow_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wall_NE.png",
+    "group": "Town1",
+    "label": "wall_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wall_NW.png",
+    "group": "Town1",
+    "label": "wall_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wall_SE.png",
+    "group": "Town1",
+    "label": "wall_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wall_SW.png",
+    "group": "Town1",
+    "label": "wall_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallArch_NE.png",
+    "group": "Town1",
+    "label": "wallArch_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallArch_NW.png",
+    "group": "Town1",
+    "label": "wallArch_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallArch_SE.png",
+    "group": "Town1",
+    "label": "wallArch_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallArch_SW.png",
+    "group": "Town1",
+    "label": "wallArch_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallArchTop_NE.png",
+    "group": "Town1",
+    "label": "wallArchTop_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallArchTop_NW.png",
+    "group": "Town1",
+    "label": "wallArchTop_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallArchTop_SE.png",
+    "group": "Town1",
+    "label": "wallArchTop_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallArchTop_SW.png",
+    "group": "Town1",
+    "label": "wallArchTop_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallArchTopDetail_NE.png",
+    "group": "Town1",
+    "label": "wallArchTopDetail_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallArchTopDetail_NW.png",
+    "group": "Town1",
+    "label": "wallArchTopDetail_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallArchTopDetail_SE.png",
+    "group": "Town1",
+    "label": "wallArchTopDetail_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallArchTopDetail_SW.png",
+    "group": "Town1",
+    "label": "wallArchTopDetail_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallBlock_NE.png",
+    "group": "Town1",
+    "label": "wallBlock_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallBlock_NW.png",
+    "group": "Town1",
+    "label": "wallBlock_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallBlock_SE.png",
+    "group": "Town1",
+    "label": "wallBlock_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallBlock_SW.png",
+    "group": "Town1",
+    "label": "wallBlock_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallBlockHalf_NE.png",
+    "group": "Town1",
+    "label": "wallBlockHalf_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallBlockHalf_NW.png",
+    "group": "Town1",
+    "label": "wallBlockHalf_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallBlockHalf_SE.png",
+    "group": "Town1",
+    "label": "wallBlockHalf_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallBlockHalf_SW.png",
+    "group": "Town1",
+    "label": "wallBlockHalf_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallBroken_NE.png",
+    "group": "Town1",
+    "label": "wallBroken_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallBroken_NW.png",
+    "group": "Town1",
+    "label": "wallBroken_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallBroken_SE.png",
+    "group": "Town1",
+    "label": "wallBroken_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallBroken_SW.png",
+    "group": "Town1",
+    "label": "wallBroken_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCorner_NE.png",
+    "group": "Town1",
+    "label": "wallCorner_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCorner_NW.png",
+    "group": "Town1",
+    "label": "wallCorner_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCorner_SE.png",
+    "group": "Town1",
+    "label": "wallCorner_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCorner_SW.png",
+    "group": "Town1",
+    "label": "wallCorner_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCornerDetail_NE.png",
+    "group": "Town1",
+    "label": "wallCornerDetail_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCornerDetail_NW.png",
+    "group": "Town1",
+    "label": "wallCornerDetail_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCornerDetail_SE.png",
+    "group": "Town1",
+    "label": "wallCornerDetail_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCornerDetail_SW.png",
+    "group": "Town1",
+    "label": "wallCornerDetail_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCornerDiagonal_NE.png",
+    "group": "Town1",
+    "label": "wallCornerDiagonal_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCornerDiagonal_NW.png",
+    "group": "Town1",
+    "label": "wallCornerDiagonal_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCornerDiagonal_SE.png",
+    "group": "Town1",
+    "label": "wallCornerDiagonal_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCornerDiagonal_SW.png",
+    "group": "Town1",
+    "label": "wallCornerDiagonal_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCornerDiagonalHalf_NE.png",
+    "group": "Town1",
+    "label": "wallCornerDiagonalHalf_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCornerDiagonalHalf_NW.png",
+    "group": "Town1",
+    "label": "wallCornerDiagonalHalf_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCornerDiagonalHalf_SE.png",
+    "group": "Town1",
+    "label": "wallCornerDiagonalHalf_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCornerDiagonalHalf_SW.png",
+    "group": "Town1",
+    "label": "wallCornerDiagonalHalf_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCornerEdge_NE.png",
+    "group": "Town1",
+    "label": "wallCornerEdge_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCornerEdge_NW.png",
+    "group": "Town1",
+    "label": "wallCornerEdge_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCornerEdge_SE.png",
+    "group": "Town1",
+    "label": "wallCornerEdge_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCornerEdge_SW.png",
+    "group": "Town1",
+    "label": "wallCornerEdge_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCurved_NE.png",
+    "group": "Town1",
+    "label": "wallCurved_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCurved_NW.png",
+    "group": "Town1",
+    "label": "wallCurved_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCurved_SE.png",
+    "group": "Town1",
+    "label": "wallCurved_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallCurved_SW.png",
+    "group": "Town1",
+    "label": "wallCurved_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDetailCross_NE.png",
+    "group": "Town1",
+    "label": "wallDetailCross_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDetailCross_NW.png",
+    "group": "Town1",
+    "label": "wallDetailCross_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDetailCross_SE.png",
+    "group": "Town1",
+    "label": "wallDetailCross_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDetailCross_SW.png",
+    "group": "Town1",
+    "label": "wallDetailCross_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDetailDiagonal_NE.png",
+    "group": "Town1",
+    "label": "wallDetailDiagonal_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDetailDiagonal_NW.png",
+    "group": "Town1",
+    "label": "wallDetailDiagonal_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDetailDiagonal_SE.png",
+    "group": "Town1",
+    "label": "wallDetailDiagonal_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDetailDiagonal_SW.png",
+    "group": "Town1",
+    "label": "wallDetailDiagonal_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDetailHorizontal_NE.png",
+    "group": "Town1",
+    "label": "wallDetailHorizontal_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDetailHorizontal_NW.png",
+    "group": "Town1",
+    "label": "wallDetailHorizontal_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDetailHorizontal_SE.png",
+    "group": "Town1",
+    "label": "wallDetailHorizontal_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDetailHorizontal_SW.png",
+    "group": "Town1",
+    "label": "wallDetailHorizontal_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDiagonal_NE.png",
+    "group": "Town1",
+    "label": "wallDiagonal_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDiagonal_NW.png",
+    "group": "Town1",
+    "label": "wallDiagonal_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDiagonal_SE.png",
+    "group": "Town1",
+    "label": "wallDiagonal_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDiagonal_SW.png",
+    "group": "Town1",
+    "label": "wallDiagonal_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoor_NE.png",
+    "group": "Town1",
+    "label": "wallDoor_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoor_NW.png",
+    "group": "Town1",
+    "label": "wallDoor_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoor_SE.png",
+    "group": "Town1",
+    "label": "wallDoor_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoor_SW.png",
+    "group": "Town1",
+    "label": "wallDoor_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoorwayBase_NE.png",
+    "group": "Town1",
+    "label": "wallDoorwayBase_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoorwayBase_NW.png",
+    "group": "Town1",
+    "label": "wallDoorwayBase_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoorwayBase_SE.png",
+    "group": "Town1",
+    "label": "wallDoorwayBase_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoorwayBase_SW.png",
+    "group": "Town1",
+    "label": "wallDoorwayBase_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoorwayRound_NE.png",
+    "group": "Town1",
+    "label": "wallDoorwayRound_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoorwayRound_NW.png",
+    "group": "Town1",
+    "label": "wallDoorwayRound_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoorwayRound_SE.png",
+    "group": "Town1",
+    "label": "wallDoorwayRound_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoorwayRound_SW.png",
+    "group": "Town1",
+    "label": "wallDoorwayRound_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoorwaySquare_NE.png",
+    "group": "Town1",
+    "label": "wallDoorwaySquare_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoorwaySquare_NW.png",
+    "group": "Town1",
+    "label": "wallDoorwaySquare_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoorwaySquare_SE.png",
+    "group": "Town1",
+    "label": "wallDoorwaySquare_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoorwaySquare_SW.png",
+    "group": "Town1",
+    "label": "wallDoorwaySquare_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoorwaySquareWide_NE.png",
+    "group": "Town1",
+    "label": "wallDoorwaySquareWide_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoorwaySquareWide_NW.png",
+    "group": "Town1",
+    "label": "wallDoorwaySquareWide_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoorwaySquareWide_SE.png",
+    "group": "Town1",
+    "label": "wallDoorwaySquareWide_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoorwaySquareWide_SW.png",
+    "group": "Town1",
+    "label": "wallDoorwaySquareWide_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoorwaySquareWideCurved_NE.png",
+    "group": "Town1",
+    "label": "wallDoorwaySquareWideCurved_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoorwaySquareWideCurved_NW.png",
+    "group": "Town1",
+    "label": "wallDoorwaySquareWideCurved_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoorwaySquareWideCurved_SE.png",
+    "group": "Town1",
+    "label": "wallDoorwaySquareWideCurved_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallDoorwaySquareWideCurved_SW.png",
+    "group": "Town1",
+    "label": "wallDoorwaySquareWideCurved_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallHalf_NE.png",
+    "group": "Town1",
+    "label": "wallHalf_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallHalf_NW.png",
+    "group": "Town1",
+    "label": "wallHalf_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallHalf_SE.png",
+    "group": "Town1",
+    "label": "wallHalf_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallHalf_SW.png",
+    "group": "Town1",
+    "label": "wallHalf_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallRounded_NE.png",
+    "group": "Town1",
+    "label": "wallRounded_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallRounded_NW.png",
+    "group": "Town1",
+    "label": "wallRounded_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallRounded_SE.png",
+    "group": "Town1",
+    "label": "wallRounded_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallRounded_SW.png",
+    "group": "Town1",
+    "label": "wallRounded_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallSide_NE.png",
+    "group": "Town1",
+    "label": "wallSide_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallSide_NW.png",
+    "group": "Town1",
+    "label": "wallSide_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallSide_SE.png",
+    "group": "Town1",
+    "label": "wallSide_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallSide_SW.png",
+    "group": "Town1",
+    "label": "wallSide_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallSlope_NE.png",
+    "group": "Town1",
+    "label": "wallSlope_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallSlope_NW.png",
+    "group": "Town1",
+    "label": "wallSlope_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallSlope_SE.png",
+    "group": "Town1",
+    "label": "wallSlope_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallSlope_SW.png",
+    "group": "Town1",
+    "label": "wallSlope_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallWindowGlass_NE.png",
+    "group": "Town1",
+    "label": "wallWindowGlass_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallWindowGlass_NW.png",
+    "group": "Town1",
+    "label": "wallWindowGlass_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallWindowGlass_SE.png",
+    "group": "Town1",
+    "label": "wallWindowGlass_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallWindowGlass_SW.png",
+    "group": "Town1",
+    "label": "wallWindowGlass_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallWindowRound_NE.png",
+    "group": "Town1",
+    "label": "wallWindowRound_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallWindowRound_NW.png",
+    "group": "Town1",
+    "label": "wallWindowRound_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallWindowRound_SE.png",
+    "group": "Town1",
+    "label": "wallWindowRound_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallWindowRound_SW.png",
+    "group": "Town1",
+    "label": "wallWindowRound_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallWindowShutters_NE.png",
+    "group": "Town1",
+    "label": "wallWindowShutters_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallWindowShutters_NW.png",
+    "group": "Town1",
+    "label": "wallWindowShutters_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallWindowShutters_SE.png",
+    "group": "Town1",
+    "label": "wallWindowShutters_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallWindowShutters_SW.png",
+    "group": "Town1",
+    "label": "wallWindowShutters_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallWindowSmall_NE.png",
+    "group": "Town1",
+    "label": "wallWindowSmall_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallWindowSmall_NW.png",
+    "group": "Town1",
+    "label": "wallWindowSmall_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallWindowSmall_SE.png",
+    "group": "Town1",
+    "label": "wallWindowSmall_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallWindowSmall_SW.png",
+    "group": "Town1",
+    "label": "wallWindowSmall_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallWindowStone_NE.png",
+    "group": "Town1",
+    "label": "wallWindowStone_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallWindowStone_NW.png",
+    "group": "Town1",
+    "label": "wallWindowStone_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallWindowStone_SE.png",
+    "group": "Town1",
+    "label": "wallWindowStone_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town1/wallWindowStone_SW.png",
+    "group": "Town1",
+    "label": "wallWindowStone_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/poles_NE.png",
+    "group": "Town2",
+    "label": "poles_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/poles_NW.png",
+    "group": "Town2",
+    "label": "poles_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/poles_SE.png",
+    "group": "Town2",
+    "label": "poles_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/poles_SW.png",
+    "group": "Town2",
+    "label": "poles_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/polesHorizontal_NE.png",
+    "group": "Town2",
+    "label": "polesHorizontal_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/polesHorizontal_NW.png",
+    "group": "Town2",
+    "label": "polesHorizontal_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/polesHorizontal_SE.png",
+    "group": "Town2",
+    "label": "polesHorizontal_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/polesHorizontal_SW.png",
+    "group": "Town2",
+    "label": "polesHorizontal_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHigh_NE.png",
+    "group": "Town2",
+    "label": "roofHigh_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHigh_NW.png",
+    "group": "Town2",
+    "label": "roofHigh_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHigh_SE.png",
+    "group": "Town2",
+    "label": "roofHigh_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHigh_SW.png",
+    "group": "Town2",
+    "label": "roofHigh_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighCorner_NE.png",
+    "group": "Town2",
+    "label": "roofHighCorner_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighCorner_NW.png",
+    "group": "Town2",
+    "label": "roofHighCorner_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighCorner_SE.png",
+    "group": "Town2",
+    "label": "roofHighCorner_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighCorner_SW.png",
+    "group": "Town2",
+    "label": "roofHighCorner_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighCornerInner_NE.png",
+    "group": "Town2",
+    "label": "roofHighCornerInner_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighCornerInner_NW.png",
+    "group": "Town2",
+    "label": "roofHighCornerInner_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighCornerInner_SE.png",
+    "group": "Town2",
+    "label": "roofHighCornerInner_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighCornerInner_SW.png",
+    "group": "Town2",
+    "label": "roofHighCornerInner_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighCornerRound_NE.png",
+    "group": "Town2",
+    "label": "roofHighCornerRound_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighCornerRound_NW.png",
+    "group": "Town2",
+    "label": "roofHighCornerRound_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighCornerRound_SE.png",
+    "group": "Town2",
+    "label": "roofHighCornerRound_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighCornerRound_SW.png",
+    "group": "Town2",
+    "label": "roofHighCornerRound_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighFlat_NE.png",
+    "group": "Town2",
+    "label": "roofHighFlat_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighFlat_NW.png",
+    "group": "Town2",
+    "label": "roofHighFlat_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighFlat_SE.png",
+    "group": "Town2",
+    "label": "roofHighFlat_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighFlat_SW.png",
+    "group": "Town2",
+    "label": "roofHighFlat_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighGable_NE.png",
+    "group": "Town2",
+    "label": "roofHighGable_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighGable_NW.png",
+    "group": "Town2",
+    "label": "roofHighGable_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighGable_SE.png",
+    "group": "Town2",
+    "label": "roofHighGable_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighGable_SW.png",
+    "group": "Town2",
+    "label": "roofHighGable_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighGableDetail_NE.png",
+    "group": "Town2",
+    "label": "roofHighGableDetail_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighGableDetail_NW.png",
+    "group": "Town2",
+    "label": "roofHighGableDetail_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighGableDetail_SE.png",
+    "group": "Town2",
+    "label": "roofHighGableDetail_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighGableDetail_SW.png",
+    "group": "Town2",
+    "label": "roofHighGableDetail_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighGableEnd_NE.png",
+    "group": "Town2",
+    "label": "roofHighGableEnd_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighGableEnd_NW.png",
+    "group": "Town2",
+    "label": "roofHighGableEnd_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighGableEnd_SE.png",
+    "group": "Town2",
+    "label": "roofHighGableEnd_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighGableEnd_SW.png",
+    "group": "Town2",
+    "label": "roofHighGableEnd_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighGableTop_NE.png",
+    "group": "Town2",
+    "label": "roofHighGableTop_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighGableTop_NW.png",
+    "group": "Town2",
+    "label": "roofHighGableTop_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighGableTop_SE.png",
+    "group": "Town2",
+    "label": "roofHighGableTop_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighGableTop_SW.png",
+    "group": "Town2",
+    "label": "roofHighGableTop_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighLeft_NE.png",
+    "group": "Town2",
+    "label": "roofHighLeft_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighLeft_NW.png",
+    "group": "Town2",
+    "label": "roofHighLeft_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighLeft_SE.png",
+    "group": "Town2",
+    "label": "roofHighLeft_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighLeft_SW.png",
+    "group": "Town2",
+    "label": "roofHighLeft_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighPoint_NE.png",
+    "group": "Town2",
+    "label": "roofHighPoint_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighPoint_NW.png",
+    "group": "Town2",
+    "label": "roofHighPoint_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighPoint_SE.png",
+    "group": "Town2",
+    "label": "roofHighPoint_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighPoint_SW.png",
+    "group": "Town2",
+    "label": "roofHighPoint_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighRight_NE.png",
+    "group": "Town2",
+    "label": "roofHighRight_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighRight_NW.png",
+    "group": "Town2",
+    "label": "roofHighRight_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighRight_SE.png",
+    "group": "Town2",
+    "label": "roofHighRight_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighRight_SW.png",
+    "group": "Town2",
+    "label": "roofHighRight_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighWindow_NE.png",
+    "group": "Town2",
+    "label": "roofHighWindow_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighWindow_NW.png",
+    "group": "Town2",
+    "label": "roofHighWindow_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighWindow_SE.png",
+    "group": "Town2",
+    "label": "roofHighWindow_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/roofHighWindow_SW.png",
+    "group": "Town2",
+    "label": "roofHighWindow_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWood_NE.png",
+    "group": "Town2",
+    "label": "wallWood_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWood_NW.png",
+    "group": "Town2",
+    "label": "wallWood_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWood_SE.png",
+    "group": "Town2",
+    "label": "wallWood_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWood_SW.png",
+    "group": "Town2",
+    "label": "wallWood_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodArch_NE.png",
+    "group": "Town2",
+    "label": "wallWoodArch_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodArch_NW.png",
+    "group": "Town2",
+    "label": "wallWoodArch_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodArch_SE.png",
+    "group": "Town2",
+    "label": "wallWoodArch_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodArch_SW.png",
+    "group": "Town2",
+    "label": "wallWoodArch_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodArchTop_NE.png",
+    "group": "Town2",
+    "label": "wallWoodArchTop_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodArchTop_NW.png",
+    "group": "Town2",
+    "label": "wallWoodArchTop_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodArchTop_SE.png",
+    "group": "Town2",
+    "label": "wallWoodArchTop_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodArchTop_SW.png",
+    "group": "Town2",
+    "label": "wallWoodArchTop_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodArchTopDetail_NE.png",
+    "group": "Town2",
+    "label": "wallWoodArchTopDetail_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodArchTopDetail_NW.png",
+    "group": "Town2",
+    "label": "wallWoodArchTopDetail_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodArchTopDetail_SE.png",
+    "group": "Town2",
+    "label": "wallWoodArchTopDetail_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodArchTopDetail_SW.png",
+    "group": "Town2",
+    "label": "wallWoodArchTopDetail_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodBlock_NE.png",
+    "group": "Town2",
+    "label": "wallWoodBlock_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodBlock_NW.png",
+    "group": "Town2",
+    "label": "wallWoodBlock_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodBlock_SE.png",
+    "group": "Town2",
+    "label": "wallWoodBlock_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodBlock_SW.png",
+    "group": "Town2",
+    "label": "wallWoodBlock_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodBlockHalf_NE.png",
+    "group": "Town2",
+    "label": "wallWoodBlockHalf_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodBlockHalf_NW.png",
+    "group": "Town2",
+    "label": "wallWoodBlockHalf_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodBlockHalf_SE.png",
+    "group": "Town2",
+    "label": "wallWoodBlockHalf_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodBlockHalf_SW.png",
+    "group": "Town2",
+    "label": "wallWoodBlockHalf_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodBroken_NE.png",
+    "group": "Town2",
+    "label": "wallWoodBroken_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodBroken_NW.png",
+    "group": "Town2",
+    "label": "wallWoodBroken_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodBroken_SE.png",
+    "group": "Town2",
+    "label": "wallWoodBroken_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodBroken_SW.png",
+    "group": "Town2",
+    "label": "wallWoodBroken_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodCorner_NE.png",
+    "group": "Town2",
+    "label": "wallWoodCorner_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodCorner_NW.png",
+    "group": "Town2",
+    "label": "wallWoodCorner_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodCorner_SE.png",
+    "group": "Town2",
+    "label": "wallWoodCorner_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodCorner_SW.png",
+    "group": "Town2",
+    "label": "wallWoodCorner_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodCornerDiagonal_NE.png",
+    "group": "Town2",
+    "label": "wallWoodCornerDiagonal_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodCornerDiagonal_NW.png",
+    "group": "Town2",
+    "label": "wallWoodCornerDiagonal_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodCornerDiagonal_SE.png",
+    "group": "Town2",
+    "label": "wallWoodCornerDiagonal_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodCornerDiagonal_SW.png",
+    "group": "Town2",
+    "label": "wallWoodCornerDiagonal_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodCornerDiagonalHalf_NE.png",
+    "group": "Town2",
+    "label": "wallWoodCornerDiagonalHalf_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodCornerDiagonalHalf_NW.png",
+    "group": "Town2",
+    "label": "wallWoodCornerDiagonalHalf_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodCornerDiagonalHalf_SE.png",
+    "group": "Town2",
+    "label": "wallWoodCornerDiagonalHalf_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodCornerDiagonalHalf_SW.png",
+    "group": "Town2",
+    "label": "wallWoodCornerDiagonalHalf_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodCornerEdge_NE.png",
+    "group": "Town2",
+    "label": "wallWoodCornerEdge_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodCornerEdge_NW.png",
+    "group": "Town2",
+    "label": "wallWoodCornerEdge_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodCornerEdge_SE.png",
+    "group": "Town2",
+    "label": "wallWoodCornerEdge_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodCornerEdge_SW.png",
+    "group": "Town2",
+    "label": "wallWoodCornerEdge_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodCurved_NE.png",
+    "group": "Town2",
+    "label": "wallWoodCurved_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodCurved_NW.png",
+    "group": "Town2",
+    "label": "wallWoodCurved_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodCurved_SE.png",
+    "group": "Town2",
+    "label": "wallWoodCurved_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodCurved_SW.png",
+    "group": "Town2",
+    "label": "wallWoodCurved_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDetailCross_NE.png",
+    "group": "Town2",
+    "label": "wallWoodDetailCross_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDetailCross_NW.png",
+    "group": "Town2",
+    "label": "wallWoodDetailCross_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDetailCross_SE.png",
+    "group": "Town2",
+    "label": "wallWoodDetailCross_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDetailCross_SW.png",
+    "group": "Town2",
+    "label": "wallWoodDetailCross_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDetailDiagonal_NE.png",
+    "group": "Town2",
+    "label": "wallWoodDetailDiagonal_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDetailDiagonal_NW.png",
+    "group": "Town2",
+    "label": "wallWoodDetailDiagonal_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDetailDiagonal_SE.png",
+    "group": "Town2",
+    "label": "wallWoodDetailDiagonal_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDetailDiagonal_SW.png",
+    "group": "Town2",
+    "label": "wallWoodDetailDiagonal_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDetailHorizontal_NE.png",
+    "group": "Town2",
+    "label": "wallWoodDetailHorizontal_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDetailHorizontal_NW.png",
+    "group": "Town2",
+    "label": "wallWoodDetailHorizontal_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDetailHorizontal_SE.png",
+    "group": "Town2",
+    "label": "wallWoodDetailHorizontal_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDetailHorizontal_SW.png",
+    "group": "Town2",
+    "label": "wallWoodDetailHorizontal_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDiagonal_NE.png",
+    "group": "Town2",
+    "label": "wallWoodDiagonal_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDiagonal_NW.png",
+    "group": "Town2",
+    "label": "wallWoodDiagonal_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDiagonal_SE.png",
+    "group": "Town2",
+    "label": "wallWoodDiagonal_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDiagonal_SW.png",
+    "group": "Town2",
+    "label": "wallWoodDiagonal_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoor_NE.png",
+    "group": "Town2",
+    "label": "wallWoodDoor_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoor_NW.png",
+    "group": "Town2",
+    "label": "wallWoodDoor_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoor_SE.png",
+    "group": "Town2",
+    "label": "wallWoodDoor_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoor_SW.png",
+    "group": "Town2",
+    "label": "wallWoodDoor_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoorwayBase_NE.png",
+    "group": "Town2",
+    "label": "wallWoodDoorwayBase_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoorwayBase_NW.png",
+    "group": "Town2",
+    "label": "wallWoodDoorwayBase_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoorwayBase_SE.png",
+    "group": "Town2",
+    "label": "wallWoodDoorwayBase_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoorwayBase_SW.png",
+    "group": "Town2",
+    "label": "wallWoodDoorwayBase_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoorwayRound_NE.png",
+    "group": "Town2",
+    "label": "wallWoodDoorwayRound_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoorwayRound_NW.png",
+    "group": "Town2",
+    "label": "wallWoodDoorwayRound_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoorwayRound_SE.png",
+    "group": "Town2",
+    "label": "wallWoodDoorwayRound_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoorwayRound_SW.png",
+    "group": "Town2",
+    "label": "wallWoodDoorwayRound_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoorwaySquare_NE.png",
+    "group": "Town2",
+    "label": "wallWoodDoorwaySquare_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoorwaySquare_NW.png",
+    "group": "Town2",
+    "label": "wallWoodDoorwaySquare_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoorwaySquare_SE.png",
+    "group": "Town2",
+    "label": "wallWoodDoorwaySquare_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoorwaySquare_SW.png",
+    "group": "Town2",
+    "label": "wallWoodDoorwaySquare_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoorwaySquareWide_NE.png",
+    "group": "Town2",
+    "label": "wallWoodDoorwaySquareWide_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoorwaySquareWide_NW.png",
+    "group": "Town2",
+    "label": "wallWoodDoorwaySquareWide_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoorwaySquareWide_SE.png",
+    "group": "Town2",
+    "label": "wallWoodDoorwaySquareWide_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoorwaySquareWide_SW.png",
+    "group": "Town2",
+    "label": "wallWoodDoorwaySquareWide_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoorwaySquareWideCurved_NE.png",
+    "group": "Town2",
+    "label": "wallWoodDoorwaySquareWideCurved_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoorwaySquareWideCurved_NW.png",
+    "group": "Town2",
+    "label": "wallWoodDoorwaySquareWideCurved_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoorwaySquareWideCurved_SE.png",
+    "group": "Town2",
+    "label": "wallWoodDoorwaySquareWideCurved_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodDoorwaySquareWideCurved_SW.png",
+    "group": "Town2",
+    "label": "wallWoodDoorwaySquareWideCurved_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodHalf_NE.png",
+    "group": "Town2",
+    "label": "wallWoodHalf_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodHalf_NW.png",
+    "group": "Town2",
+    "label": "wallWoodHalf_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodHalf_SE.png",
+    "group": "Town2",
+    "label": "wallWoodHalf_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodHalf_SW.png",
+    "group": "Town2",
+    "label": "wallWoodHalf_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodRounded_NE.png",
+    "group": "Town2",
+    "label": "wallWoodRounded_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodRounded_NW.png",
+    "group": "Town2",
+    "label": "wallWoodRounded_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodRounded_SE.png",
+    "group": "Town2",
+    "label": "wallWoodRounded_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodRounded_SW.png",
+    "group": "Town2",
+    "label": "wallWoodRounded_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodSide_NE.png",
+    "group": "Town2",
+    "label": "wallWoodSide_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodSide_NW.png",
+    "group": "Town2",
+    "label": "wallWoodSide_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodSide_SE.png",
+    "group": "Town2",
+    "label": "wallWoodSide_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodSide_SW.png",
+    "group": "Town2",
+    "label": "wallWoodSide_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodSlope_NE.png",
+    "group": "Town2",
+    "label": "wallWoodSlope_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodSlope_NW.png",
+    "group": "Town2",
+    "label": "wallWoodSlope_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodSlope_SE.png",
+    "group": "Town2",
+    "label": "wallWoodSlope_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodSlope_SW.png",
+    "group": "Town2",
+    "label": "wallWoodSlope_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodWindowGlass_NE.png",
+    "group": "Town2",
+    "label": "wallWoodWindowGlass_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodWindowGlass_NW.png",
+    "group": "Town2",
+    "label": "wallWoodWindowGlass_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodWindowGlass_SE.png",
+    "group": "Town2",
+    "label": "wallWoodWindowGlass_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodWindowGlass_SW.png",
+    "group": "Town2",
+    "label": "wallWoodWindowGlass_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodWindowRound_NE.png",
+    "group": "Town2",
+    "label": "wallWoodWindowRound_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodWindowRound_NW.png",
+    "group": "Town2",
+    "label": "wallWoodWindowRound_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodWindowRound_SE.png",
+    "group": "Town2",
+    "label": "wallWoodWindowRound_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodWindowRound_SW.png",
+    "group": "Town2",
+    "label": "wallWoodWindowRound_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodWindowShutters_NE.png",
+    "group": "Town2",
+    "label": "wallWoodWindowShutters_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodWindowShutters_NW.png",
+    "group": "Town2",
+    "label": "wallWoodWindowShutters_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodWindowShutters_SE.png",
+    "group": "Town2",
+    "label": "wallWoodWindowShutters_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodWindowShutters_SW.png",
+    "group": "Town2",
+    "label": "wallWoodWindowShutters_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodWindowSmall_NE.png",
+    "group": "Town2",
+    "label": "wallWoodWindowSmall_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodWindowSmall_NW.png",
+    "group": "Town2",
+    "label": "wallWoodWindowSmall_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodWindowSmall_SE.png",
+    "group": "Town2",
+    "label": "wallWoodWindowSmall_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodWindowSmall_SW.png",
+    "group": "Town2",
+    "label": "wallWoodWindowSmall_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodWindowStone_NE.png",
+    "group": "Town2",
+    "label": "wallWoodWindowStone_NE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodWindowStone_NW.png",
+    "group": "Town2",
+    "label": "wallWoodWindowStone_NW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodWindowStone_SE.png",
+    "group": "Town2",
+    "label": "wallWoodWindowStone_SE",
+    "cimage": {
+        "ctx": {}
+    }
+},
+{
+    "src": "./img/asset/Town2/wallWoodWindowStone_SW.png",
+    "group": "Town2",
+    "label": "wallWoodWindowStone_SW",
+    "cimage": {
+        "ctx": {}
+    }
+},
+// END TOWN 
         {
             "src": "./img/asset/Train/monorail_trackCornerSmall_NE.png",
             "group": "Train",

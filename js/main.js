@@ -14,6 +14,7 @@ import { WidjetActionsBuilding } from './game/menu/widjetActionsBuilding.js';
 import { WidjetActionsSetting } from './game/menu/widjetActionsSetting.js';
 import { WidjetActionsAchivement } from './game/menu/widjetActionAchivement.js';
 import { WidjetActionsTileInfo } from './game/menu/widjetTileInfo.js';
+import { WidjetInterfaceMap } from './game/menu/widjetInterfaceMap.js';
 
 
 export class Main {
@@ -98,7 +99,8 @@ export class Main {
         // MiniMap
         {
             const div = this.body.append('div')
-            this.widjetMiniMap = new WidjetMiniMap(this.world, div);
+            // this.widjetMiniMap = new WidjetMiniMap(this.world, div);
+            this.widjetMiniMap = new WidjetInterfaceMap(this.world, div);
         }
 
         // Keyboard not affect radio butt
@@ -119,7 +121,7 @@ export class Main {
 
     loop() {
         this.interfaceIso.drawUpdate();
-        this.widjetMiniMap.drawUpdate();
+        // this.widjetMiniMap.drawUpdate();
 
     }
 
@@ -127,7 +129,7 @@ export class Main {
     startGameLoop() {
 
         // Définir le FPS fixe
-        const fixedFPS = 300;
+        const fixedFPS = 20;
         const fixedFrameTime = 1000 / fixedFPS;
 
         // Variables pour le calcul du FPS réel
@@ -152,8 +154,29 @@ export class Main {
                 frameTime = 0;
             }
         }
+
         // setInterval(gameLoop, fixedFrameTime);
-        d3.interval(gameLoop, 1000 / 20);
+        let loopInterval = d3.interval(gameLoop, 1000 / 20);
+        this.world.globalState.sub("TabVisiblity", "MainDisplayLoop", isVisibel => {
+            if (isVisibel) {
+                console.log("MainDisplayLoop: Start");
+                loopInterval.stop()
+                loopInterval = d3.interval(gameLoop, 1000/ 20);
+            } else {
+                console.log("MainDisplayLoop: Stop");
+                loopInterval.stop()
+            }
+        })
+        
+        window.addEventListener('focus', _ => {
+            console.log("focus-processing");
+            this.world.globalState.set("TabVisiblity", true)
+        }, false);
+        window.addEventListener('blur', _ => {
+            console.log("blur-processing");
+            this.world.globalState.set("TabVisiblity", false)
+        }, false);
+
     }
 
 
@@ -178,10 +201,20 @@ export class Main {
         // add pressed key loop. 
         const keyControle = function() {
             this.world.player.keyLoopControle(keyPressed);
-        };
-        d3.interval(keyControle.bind(this), 20);
-        // d3.timer(keyControle);  
+        }.bind(this);
+        let keyInterval = d3.interval(keyControle, 20);
 
+        // d3.timer(keyControle);  
+        this.world.globalState.sub("TabVisiblity", "MainKeabordLoop", isVisibel => {
+            if (isVisibel) {
+                console.log("MainKeabordLoop: Start");
+                keyInterval.stop()
+                keyInterval = d3.interval(keyControle, 20);
+            } else {
+                console.log("MainKeabordLoop: Stop");
+                keyInterval.stop()
+            }
+        })
     }
 
        

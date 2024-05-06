@@ -1,15 +1,14 @@
 
 
-import { WorldBiome } from './config/wordBiome.js';
-import { WorldCv } from './config/wordCv.js';
-import { WorldStart } from './config/wordStart.js';
+import { WorldWcBuilding } from './config/wordWcBuilding.js';
+// import { WorldCv} from './config/wordCv.js';
 import {FactoryBiomes} from './map/factoryBiomes.js'
 import {FactoryGenerator} from './map/factoryGenerator.js'
 import {FactoryMap} from './map/factoryMap.js'
 import { FactoryTileGenerator } from './map/factoryTileGenerator.js';
 import { FactoryTileRawGenerator } from './map/factoryTileRawGenerator.js';
 import { GenTile, RawTile } from './map/tile.js';
-import { TilesActions } from './map/tilesActions.js';
+import { TilesActions } from './build/tilesActions.js';
 import { TilesMatrix } from './map/tilesMatrix.js'
 import { SIZE20 } from './mapIso/interfaceIso.js';
 import { Player } from './player.js';
@@ -52,11 +51,12 @@ export class World {
         // ========================
 
         this.player.setCenter(1036, 341)
-        new WorldCv(this).start()
+        // new WorldCv(this).start()
 
         this.player.setCenter(2000, 400)
-        new WorldStart(this).start()
+        // new WorldStart(this).start()
 
+        new WorldWcBuilding(this).start()
         // new WorldBiome(this).start()
 
     }

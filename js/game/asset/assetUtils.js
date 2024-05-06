@@ -81,6 +81,7 @@ export const canvasFilterStrToValue = (str) => {
 
 
 export const colorVariation = (source, cFilter) => {
+    if (!source) return null;
     const hue = cFilter.hue ? cFilter.hue : 0
     const saturation = cFilter.saturation ? cFilter.saturation : 100
     const contrast = cFilter.contrast ? cFilter.contrast : 100
@@ -103,6 +104,10 @@ export const colorVariation = (source, cFilter) => {
         filter +=" drop-shadow("+ cFilter.shadow + ")";
     }
     dest.ctx.filter = filter
-    dest.ctx.drawImage(source,0, 0, dest.width, dest.height);
-    return dest        
+    try {
+        dest.ctx.drawImage(source,0, 0, dest.width, dest.height);
+        return dest        
+    } catch(e) {
+        return null
+    }
 }

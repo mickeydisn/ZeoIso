@@ -23,7 +23,7 @@ export class WidjetActionsTileInfo extends WidjetActions {
     //  Floor Action 
     // ---------------------
     drawUpdate(pos) {
-        console.log(pos)
+        // console.log(pos)
         const tile = this.fm.getTile(pos[0], pos[1])
         const t = tile.toJson()
         this.contentBox.selectAll('div').remove()

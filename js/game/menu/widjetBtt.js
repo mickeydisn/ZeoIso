@@ -39,6 +39,10 @@ export class ButtTileAction {
 
     click() {
         const curentSize = this.GS.get("WidjetActions.currentSize")
+        const growSize = this.GS.get("WidjetActions.growSize")
+        console.log("click : ", this.funcConf, growSize)
+        if (this.funcConf.growLoopCount) this.funcConf.growLoopCount = growSize;
+
         this.GS.set("TileClickFunction", {...this.funcConf, size : curentSize })
         this.GS.set("WidjetActions.currentButt", this)
     }

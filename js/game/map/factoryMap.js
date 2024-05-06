@@ -52,6 +52,10 @@ export class FactoryMap {
 			mody,
 		] }
 
+	getRoundTile(x, y) {
+		return this.getTile(Math.round(x), Math.round(y))
+	}
+
 	getTile(x, y) {
 		const [cx, cy, modx, mody] = this.chunkPoint(x, y);
 		const chunk = this.getChunk(cx, cy);

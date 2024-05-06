@@ -103,14 +103,14 @@ export const GAME_BIOMES_MATRIS = [
 export const GAME_BIOMES = [ 
     {id:"10",    name:"Volcanic",            lvlType: 'Hill', rgb:[  "192 - lvl / 3",                 "0", "128 - lvl / 4"]},
     {id:"9",     name:"Sand Desert",         lvlType: 'Plan', rgb:[  "192 - lvl / 3",   "64 - lvl * 0.65",             "0"]},
-    {id:"8",     name:"Tropical Jungle",     lvlType: 'Hill', rgb:[  "192 - lvl / 3",  "128 - lvl * 0.65",             "0"]},
+    {id:"8",     name:"Tropical Jungle",     lvlType: 'Plat', rgb:[  "192 - lvl / 3",  "128 - lvl * 0.65",             "0"]},
 
-    {id:"7",     name:"Fertile Steppe",      lvlType: 'Plat', rgb:[  "192 - lvl / 3",  "176 - lvl * 0.65",             "0"]},
+    {id:"7",     name:"Fertile Steppe",      lvlType: 'Hill', rgb:[  "192 - lvl / 3",  "176 - lvl * 0.65",             "0"]},
     {id:"6",     name:"Rainforest",          lvlType: 'Coli', rgb:[  "255 - lvl / 2",  "192 - lvl * 0.70",             "0"]},
     {id:"5",     name:"Plateau",             lvlType: 'Plat', rgb:[  "255 - lvl / 2",  "224 - lvl * 0.75",             "0"]},
  
     {id:"4",     name:"Swamp",               lvlType: 'Plan', rgb:[  "255 - lvl / 2", " 256 - lvl * 0.75",             "0"]},
-    {id:"3",     name:"Savannah",            lvlType: 'Plat', rgb:[  "192 - lvl / 3", " 256 - lvl * 0.75",             "0"]},
+    {id:"3",     name:"Savannah",            lvlType: 'Coli', rgb:[  "192 - lvl / 3", " 256 - lvl * 0.75",             "0"]},
     {id:"2",     name:"Deciduous Forest",    lvlType: 'Coli', rgb:[  "128 - lvl / 4", " 256 - lvl * 0.75",             "0"]},
     {id:"1",     name:"Grassland",           lvlType: 'Plan', rgb:[   "96 - lvl / 8", " 256 - lvl * 0.75",             "0"]},
  
@@ -129,14 +129,11 @@ export const GAME_BIOMES = [
  
     // {id:"river", name:"River",    rgb:[             "32",          "64 + lvl", "64 + lvl * 3"]},
 
-
-
     {id:"ocean", name:"Ocean",    lvlType: 'Coli', rgb:[             "32",          "64 + lvl", "64 + lvl * 3"]},
     {id:"mont1", name:"Montagne", lvlType: 'Coli', rgb:["(lvl - 192) * 2 + 64", "(lvl - 192) * 2 + 64", "(lvl - 192) * 2 + 64"]},
     {id:"beach", name:"Beach",    lvlType: 'Coli', rgb:[           "192",        "192", "32"]},
     {id:"mountL", name:"Mont",    lvlType: 'Coli', rgb:[            "64",         "64", "64"]},
 
     {id:"river", name:"River",    lvlType: 'River', rgb:[             "0",          "0", "0"]},
-    
 ]
 
