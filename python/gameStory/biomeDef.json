@@ -1,0 +1,180 @@
+[
+  {
+    "name": "Volcanic",
+    "description": "Lava flows and ash clouds dominate this biome",
+    "positiveEnvironement": "Dynamic, ever-changing environment",
+    "hostilEnvironement": "Toxic gases, extreme temperatures",
+    "backgroundStory": "Legend says ancient volcanoes shaped this land"
+  },
+  {
+    "name": "Sand Desert",
+    "description": "Endless dunes of golden sand stretch far and wide",
+    "positiveEnvironement": "Sunny days, gentle breezes",
+    "hostilEnvironement": "Blinding sandstorms, scorching heat",
+    "backgroundStory": "Ancient travelers sought refuge beneath towering cacti"
+  },
+  {
+    "name": "Tropical Jungle",
+    "description": "Vibrant flowers and lush foliage surround you",
+    "positiveEnvironement": "Warm sunshine, gentle rainfall",
+    "hostilEnvironement": "Sweltering heat, treacherous terrain",
+    "backgroundStory": "Legend says ancient civilizations thrived beneath the canopy"
+  },
+  {
+    "name": "Fertile Steppe",
+    "description": "Rolling hills of green stretch as far as the eye can see",
+    "positiveEnvironement": "Gentle winds, fertile soil",
+    "hostilEnvironement": "Harsh weather, predators lurking",
+    "backgroundStory": "Herders once roamed these plains with their flocks"
+  },
+  {
+    "name": "Rainforest",
+    "description": "Towering trees block out the sunlight",
+    "positiveEnvironement": "Misty mornings, exotic wildlife",
+    "hostilEnvironement": "Choking humidity, treacherous terrain",
+    "backgroundStory": "Ancient civilizations hid in mist-shrouded valleys"
+  },
+  {
+    "name": "Plateau",
+    "description": "Rolling plateaus of grass stretch far and wide",
+    "positiveEnvironement": "Clear skies, gentle breezes",
+    "hostilEnvironement": "Harsh winds, rugged terrain",
+    "backgroundStory": "Nomadic tribes once roamed these open plains"
+  },
+
+ {
+    "name": "Swamp",
+    "description": "Mysterious wetlands abound",
+    "positiveEnvironement": "Cool, damp, and humid air",
+    "hostilEnvironement": "Muddy, treacherous terrain, deadly insects",
+    "backgroundStory": "Ancient secrets hidden in murky waters"
+  },
+  {
+    "name": "Savannah",
+    "description": "Golden grasslands stretch far",
+    "positiveEnvironement": "Warm, sunny skies, gentle breeze",
+    "hostilEnvironement": "Harsh heat, dry conditions, fierce predators",
+    "backgroundStory": "Ancient civilizations thrived beneath starry night"
+  },
+  {
+    "name": "Deciduous Forest",
+    "description": "Dense canopies shelter many",
+    "positiveEnvironement": "Cool, shaded, and misty mornings",
+    "hostilEnvironement": "Twisted trees, dark shadows, hidden dangers",
+    "backgroundStory": "Ancient stories whispered among ancient leaves"
+  },
+  {
+    "name": "Grassland",
+    "description": "Rolling hills of green",
+    "positiveEnvironement": "Breezy, sunny days, soft grass",
+    "hostilEnvironement": "Harsh storms, dry conditions, fierce winds",
+    "backgroundStory": "Wild herds roam free beneath open skies"
+  }, 
+    
+ {
+    "name": "Steppe",
+    "description": "Dry grasslands with few trees",
+    "positiveEnvironement": "Sunny, warm, open spaces",
+    "hostilEnvironement": "Harsh, dry, limited resources",
+    "backgroundStory": "Endless plains where nomads roam"
+  },
+  {
+    "name": "Prairie",
+    "description": "Tall grasslands with diverse wildlife",
+    "positiveEnvironement": "Lush, green, abundant life",
+    "hostilEnvironement": "Stormy, windy, unpredictable weather",
+    "backgroundStory": "Wild buffalo herds on the open range"
+  },
+  {
+    "name": "Tundra",
+    "description": "Treeless Arctic lands with limited growth",
+    "positiveEnvironement": "Cool, crisp, fragile ecosystem",
+    "hostilEnvironement": "Harsh, cold, limited food sources",
+    "backgroundStory": "The frozen wilderness where polar bears roam"
+  },
+  {
+    "name": "Coniferous Forest",
+    "description": "Evergreen forests with towering trees",
+    "positiveEnvironement": "Cool, shaded, rich in resources",
+    "hostilEnvironement": "Dark, dense, limited sunlight",
+    "backgroundStory": "Ancient giants stand watch over the forest"
+  }, 
+      
+  {
+    "name": "Alpine Tundra",
+    "description": "Harsh mountainous terrain",
+    "positiveEnvironement": "Crisp air, abundant water",
+    "hostilEnvironement": "Harsh winds, steep cliffs",
+    "backgroundStory": "A land of rugged beauty and cold"
+  },
+  {
+    "name": "Temperate Forest",
+    "description": "Lush deciduous forest ecosystem",
+    "positiveEnvironement": "Warm climate, abundant life",
+    "hostilEnvironement": "Dense foliage, frequent storms",
+    "backgroundStory": "A land of vibrant growth and ancient secrets"
+  },
+  {
+    "name": "Frozen Desert",
+    "description": "Arctic desert landscape with permafrost",
+    "positiveEnvironement": "Cold climate, abundant snow",
+    "hostilEnvironement": "Harsh winds, limited resources",
+    "backgroundStory": "A land of icy beauty and frozen tundras"
+  },
+  {
+    "name": "Ice Taiga",
+    "description": "Subarctic forest ecosystem with permafrost",
+    "positiveEnvironement": "Cold climate, abundant snow",
+    "hostilEnvironement": "Harsh winds, dense foliage",
+    "backgroundStory": "A land of frozen forests and icy landscapes"
+  },
+  {
+    "name": "Ashen Desert",
+    "description": "Barren desert landscape with frequent ashfalls",
+    "positiveEnvironement": "Hot climate, abundant minerals",
+    "hostilEnvironement": "Toxic ash, limited resources",
+    "backgroundStory": "A land of scorched earth and volcanic power"
+  },
+  {
+    "name": "Ice Desert",
+    "description": "Polar desert ecosystem with permafrost",
+    "positiveEnvironement": "Cold climate, abundant ice",
+    "hostilEnvironement": "Harsh winds, limited resources",
+    "backgroundStory": "A land of frozen wastelands and icy beauty"
+  }, 
+  {
+    "name": "Ocean",
+    "description": "Deep blue sea biome",
+    "positiveEnvironement": "Cool, Calm, Clear",
+    "hostilEnvironement": "Dark, Icy, Isolated",
+    "backgroundStory": "The ocean's vastness holds many secrets"
+  },
+  {
+    "name": "Montagne",
+    "description": "Mountainous terrain biome",
+    "positiveEnvironement": "Rugged, Rocky, Refreshing",
+    "hostilEnvironement": "Steep, Treacherous, Tense",
+    "backgroundStory": "The mountains stand tall, guarding ancient secrets"
+  },
+  {
+    "name": "Beach",
+    "description": "Sandy coastal biome",
+    "positiveEnvironement": "Warm, Sunny, Serene",
+    "hostilEnvironement": "Crowded, Noisy, Nasty",
+    "backgroundStory": "The beach calls out to adventurers, full of hidden treasures"
+  },
+  {
+    "name": "Mont",
+    "description": "Mountainous biome",
+    "positiveEnvironement": "Tall, Towering, Tranquil",
+    "hostilEnvironement": "Harsh, Isolated, Icy",
+    "backgroundStory": "The mountains whisper secrets to those who dare climb them"
+  },
+  {
+    "name": "River",
+    "description": "Flowing water biome",
+    "positiveEnvironement": "Clear, Cool, Calm",
+    "hostilEnvironement": "Swift, Sudden, Swirling",
+    "backgroundStory": "The river's currents carry ancient tales and hidden truths"
+  }
+]

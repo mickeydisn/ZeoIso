@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../../service-automation"
+		},
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../automation-dashboard"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
