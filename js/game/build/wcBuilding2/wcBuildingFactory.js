@@ -20,7 +20,7 @@ export class AbstractBuilding {
     }
 }
 
-export class WcBuilding extends AbstractBuilding{
+export class WcBuildingFactory extends AbstractBuilding{
 
 
     constructor(world, conf) {
@@ -33,6 +33,17 @@ export class WcBuilding extends AbstractBuilding{
         return Math.sqrt(xx * xx + yy * yy)
     }
 
+    test(x, y) {
+        this.conf.init();
+        const buildTile = new WcBuildTile(this.world, this, x, y, 0)
+        const validBuild = buildTile.pickTestAndUndo(this.conf.TILE_START_OPTIONS)
+        // const validBuild = buildTile.pickAndApply(this.conf.TILE_START_OPTIONS)
+        
+        // buildTile.tile.wcBuild = null
+        return validBuild
+    }
+
+
     async start(x, y) {
         // Create the first building Tile :   
         this.mainLvl = this.fm.getTile(x, y).lvl   
@@ -40,21 +51,15 @@ export class WcBuilding extends AbstractBuilding{
         this.conf.mainLvl = this.mainLvl
         this.conf.init();        
 
-        console.log('== Start Building')
+        console.info('== Start Building')
         this.mainTile = new WcBuildTile(this.world, this, x, y, 0)
-        const propTiles = this.mainTile._updatePosibleFace()
-
-        console.log(propTiles)
-
-        console.log('== Start Building 2')
-
-        const buildTileConf = this.conf.TILE_START
- 
-        const validConf = this.mainTile.updateDrawConfiguration(buildTileConf);
-        if (!validConf) {
-            return 
+        if (!this.mainTile.pickAndApply(this.conf.TILE_START_OPTIONS)) {
+            console.log("== Not posible to build")
+            this.mainTile.tile.wcBuild = null
+            return
         }
-        console.log('== Start Building 3', this.conf.growLoopCount)
+
+        console.log('== Start Building 2', this.conf.growLoopCount)
 
         this.updateAllListWithNearBuilding(this.mainTile)
 
@@ -63,19 +68,19 @@ export class WcBuilding extends AbstractBuilding{
 
         for (let it = 0; it < this.conf.growLoopCount; it++) {
             console.log("-------------------------------", it , "-----------------")
-            await new Promise(resolve => setTimeout(resolve, 10));
+            await new Promise(resolve => setTimeout(resolve, 50));
 
             // const sfxr = require("jsfxr").sfxr;
-            //var a = window.sfxr.toAudio("34T6PkmBRh7nXfpAFeLJwuHBBMKjHw8RdGtvnsg8CxTsv9RN8LfGoRL3xRL3hnJ5KLt6YRerKhs4FUAYvUgogpGBhWMQruZbb5D5cw4eh2sVPNGNNSzks1m6m");
-            //a.play();
+            var a = window.sfxr.toAudio("5CxcQvHmPLeugicoVTogZ3mnuVBwFq1VP5g3DiTq6o5YNwhnyH1Fpztvxu8zFyjj1jtnvad4nmooavzfeGadM2W3kA8qfvshWg5vj2tnHhd3MgZUG1TzaNKXu");
+            a.play();
 
             const forcedList = this.forcedList
             if (forcedList.length > 0) {
-                // console.log("ForceList", it, this.forcedList)
                 const popBuildTile = this.forcedList.shift();
     
-                popBuildTile.randomConfig(0)
-                this.updateAllListWithNearBuilding(popBuildTile)
+                if (popBuildTile.randomConfig(0)) {
+                    this.updateAllListWithNearBuilding(popBuildTile)
+                }
 
                 continue;
             } 
@@ -85,22 +90,22 @@ export class WcBuilding extends AbstractBuilding{
                 // console.log("OpenList", it, openList)
                 const popBuildTile = openList.shift();
     
-                popBuildTile.randomConfig(1)
-                this.updateAllListWithNearBuilding(popBuildTile)
+                if (popBuildTile.randomConfig(1)) {
+                    this.updateAllListWithNearBuilding(popBuildTile)
+                }
 
                 continue;
             }
     
         }
 
-
-
         for (let it = 0; it < this.conf.endLoopMax; it++) {
             console.log("-------------------------------", it , "------------=====")
-            await new Promise(resolve => setTimeout(resolve, 10));
+            await new Promise(resolve => setTimeout(resolve, 50));
+            
             // const sfxr = require("jsfxr").sfxr;
-            //var a = window.sfxr.toAudio("34T6PkmBRh7nXfpAFeLJwuHBBMKjHw8RdGtvnsg8CxTsv9RN8LfGoRL3xRL3hnJ5KLt6YRerKhs4FUAYvUgogpGBhWMQruZbb5D5cw4eh2sVPNGNNSzks1m6m");
-            //a.play();
+            var a = window.sfxr.toAudio("5CxcQvHmPLeugicoVTogZ3mnuVBwFq1VP5g3DiTq6o5YNwhnyH1Fpztvxu8zFyjj1jtnvad4nmooavzfeGadM2W3kA8qfvshWg5vj2tnHhd3MgZUG1TzaNKXu");
+            a.play();
 
 
             const forcedList = this.forcedList
@@ -108,9 +113,9 @@ export class WcBuilding extends AbstractBuilding{
                 // console.log("ForceList", it, this.forcedList)
                 const popBuildTile = this.forcedList.shift();
     
-                popBuildTile.randomConfig(0)
-                this.updateAllListWithNearBuilding(popBuildTile)
-
+                if (popBuildTile.randomConfig(0)) {
+                    this.updateAllListWithNearBuilding(popBuildTile)
+                }
                 continue;
             } 
 
@@ -119,8 +124,9 @@ export class WcBuilding extends AbstractBuilding{
                 // console.log("openList2", it, openList2)
                 const popBuildTile = openList2.shift();
     
-                popBuildTile.randomConfig(2)
-                this.updateAllListWithNearBuilding(popBuildTile)
+                if (popBuildTile.randomConfig(2)) {
+                    this.updateAllListWithNearBuilding(popBuildTile)
+                }
                 continue;
             }
     
@@ -129,8 +135,9 @@ export class WcBuilding extends AbstractBuilding{
                 // console.log("== notConfiguredList", it, notConfiguredList)
                 const popBuildTile = notConfiguredList.shift();
     
-                popBuildTile.randomConfig(0)
-                this.updateAllListWithNearBuilding(popBuildTile)
+                if (popBuildTile.randomConfig(0)) {
+                    this.updateAllListWithNearBuilding(popBuildTile)
+                }
                 continue;
             }
             break;

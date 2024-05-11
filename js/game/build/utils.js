@@ -24,7 +24,7 @@ export const intersect = function(lA, lB) {
 // Example usage:
 const A = [1, 2, 3, 4, 5];
 const B = shiftArrayByOne(A);
-console.log(B); // Output: [2, 3, 4, 5, 1]
+//  Output: [2, 3, 4, 5, 1]
 */
 export const shiftArrayByOne = function (A) {
     return A.map((_, index, array) => array[(index + array.length - 1) % array.length]);
@@ -39,6 +39,13 @@ export const AXE_DIRECTION = [
     [0, -1],
     [-1, 0],
 ]
+export const AXE_DIRECTION2 = [
+    [ 1,  1],
+    [-1,  1],
+    [ 1, -1],
+    [-1, -1],
+]
+
 
 export const axeNextTile = (conf)  => {
     let near = conf.near;

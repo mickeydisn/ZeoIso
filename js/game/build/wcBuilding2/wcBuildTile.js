@@ -3,33 +3,28 @@ import { pickRandomWeightedObject } from "./AbstractBuildConf.js";
 
 
 export class BuildTile {
-    constructor(world, build, x, y) {
+    constructor(world, buildFactory, x, y) {
         this.world = world;
         this.fm = world.factoryMap;
         this.fg = world.factoryGenerator;
         this.ta = this.world.tilesActions
 
-        this.building = build;
+        this.buildFactory = buildFactory;
         this.x = x;
         this.y = y;
 
         this.tile = this.fm.getTile(this.x, this.y)
-        this.tile.buildTile = this;
-        this.isConfigured = false;
-        
+        this.tile.wcBuild = this;
+        this.isConfigured = false;        
         this.drawConf = {}
-
     }
-
 
     get nearBuilding() {
         return this.tile.nearTiles.map(tile => {
-            return tile.buildTile
+            return tile.wcBuild
         }) 
     }
     
-
-
     _applyBuildItemList(drawConf) {
         this.ta.clearItem({x:this.x, y:this.y})
         
@@ -39,7 +34,6 @@ export class BuildTile {
                 this.ta.itemAddKey({x:this.x, y:this.y, assetKey:item.key, h:h})
             }
         })
-        
         
     }
     _applyBuildFunction(drawConf) {
@@ -77,12 +71,14 @@ export class BuildTile {
             this.ta.doAction({func:'lvlSet', x: this.x, y: this.y, lvl:drawConf.lvl})
         }
 
+        if (!drawConf.allowMove) {
+            this.ta.doAction({func:'setBlocked', x: this.x, y: this.y, isBlock:true})
+        }
+
         if (drawConf.isFrise) {
             this.ta.doAction({func:'setFrise', x: this.x, y: this.y, isFrise:true})
         }
     }
-
-
 
     toJson() {
         return {
@@ -106,7 +102,7 @@ export class WcBuildTile extends BuildTile {
         this.isConfigured = false;
         this._nearTiles = null
 
-        this.possibleFace = [...this.building.conf.listFaceKey]
+        this.possibleFace = [...this.buildFactory.conf.listFaceKey]
 
         // check close validation 
 
@@ -120,64 +116,65 @@ export class WcBuildTile extends BuildTile {
         })
     }
 
-    /*
-    set buildTileConf(drawConf) {
-        // Validation ? 
-        // this.tile.color = [128, 128, 128];
-        this.possibleFace = [drawConf.face]
-        this.isConfigured = true;
-        console.log('===BUILD', drawConf)
-        const propTiles = this._propagate();
-        console.log(propTiles)
-
-        if (propTiles.includes(null)) {
-            console.log("Error")
-            throw "Error"
-        } else {
-            this.applyBuild(drawConf);
-            this._buildTileConf = drawConf;
-        }
-
-    }
-    */
-
-    tryFaceConfiguration(faces){
+    tryFaceConfiguration(face){
         this.savePossibleFace = this.possibleFace;
 
-        this.possibleFace = [faces]
+        this.possibleFace = [face]
         const propTiles = this._propagate();
         return [...new Set([this, ...propTiles])]
     }
-    updateDrawConfiguration(drawConf) {
- 
-        const propTiles = this.tryFaceConfiguration(drawConf.face)
+    undoFaceConfiguration(propTiles) {
+        propTiles.forEach(tile => {
+            if (tile == null) return;
+            if (typeof tile.savePossibleFace === 'string') {
+                console.log('UNDO', tile.savePossibleFace)
+                tile.tile.wcBuild = null;
+            } else {
+                tile.possibleFace = tile.savePossibleFace ? tile.savePossibleFace : tile.possibleFace
+            }
+            tile.savePossibleFace = null;
+        })
+    }
+    tryApplyFaceConfigurationAndUndo(face) {
+        const propTiles = this.tryFaceConfiguration(face)
  
         if (propTiles.includes(null)) {
             // undo propagation
-            console.log('UNDO -- ', propTiles)
-            propTiles.forEach(tile => {
-                if (tile == null) return;
-                if (typeof tile.savePossibleFace === 'string') {
-                    console.log('UNDO', tile.savePossibleFace)
-                    tile.tile.buildTile = null;
-                } else {
-                    tile.possibleFace = tile.savePossibleFace ? tile.savePossibleFace : tile.possibleFace
-                }
-                tile.savePossibleFace = null;
-            })
+            this.undoFaceConfiguration(propTiles)
             return false;
         } else {
             // clear undo 
+            this.undoFaceConfiguration(propTiles)
+            return true
+        }
+
+    }
+    tryApplyFaceConfiguration(face) {
+        const propTiles = this.tryFaceConfiguration(face)
+ 
+        if (propTiles.includes(null)) {
+            this.undoFaceConfiguration(propTiles)
+            return false;
+        } else {
             propTiles.forEach(tile => {
                 tile.savePossibleFace = null;
             })
+            return true
+        }
+                    
+    }
+    updateDrawConfiguration(drawConf) {
+ 
+        const propTilesValide = this.tryApplyFaceConfiguration(drawConf.face)
+ 
+        if (propTilesValide) {
             // Apply Config
             this.applyBuild(drawConf);
             this._buildTileConf = drawConf;
             this.isConfigured = true;
             return true
         }
-
+        return false;
     }
 
     /** 
@@ -205,7 +202,7 @@ export class WcBuildTile extends BuildTile {
             // if the neighbor tileBuilding , create a new one 
             if (this.nearBuilding[axe] == null) {
                 const [dx, dy] = AXE_DIRECTION[axe]
-                const newBuildTile = new WcBuildTile(this.world, this.building, this.x + dx , this.y + dy, this._propagateNumber+1);
+                const newBuildTile = new WcBuildTile(this.world, this.buildFactory, this.x + dx , this.y + dy, this._propagateNumber+1);
                 newBuildTile.savePossibleFace = "NEW"
                 this.nearBuilding[axe] = newBuildTile
                 const propAxeTiles = newBuildTile._updatePosibleFace()
@@ -219,7 +216,7 @@ export class WcBuildTile extends BuildTile {
                 continue 
 ;            }
             // build the list of match for this axe ( = reverse the link )
-            const nearMatch = [...new Set(nearAxeFace.map(face => this.building.conf.reverseFaceLinkList(face)).flat())]
+            const nearMatch = [...new Set(nearAxeFace.map(face => this.buildFactory.conf.reverseFaceLinkList(face)).flat())]
             // console.log(axe, nearAxeFace, nearMatch)
 
             /// probagate the match filter
@@ -243,9 +240,9 @@ export class WcBuildTile extends BuildTile {
             return nearMatch.includes(face[axe]) 
         })
         if (this.possibleFace.length == 0) {
-            this.tile.color = [255, 255, 255];
-            console.log('====Error Propage Possible Face lenght : 0')
-            console.log('nearMatch', this,  nearMatch, idxP)
+            // this.tile.color = [255, 255, 255];
+            // console.error('====Error Propage Possible Face lenght : 0')
+            // console.error('nearMatch', this, axe,  nearMatch, idxP)
             return [this, null];
         }
 
@@ -278,7 +275,7 @@ export class WcBuildTile extends BuildTile {
 
             const nearPosibleFace = this.nearBuilding[axe].possibleFace
             const nearAxeFace = [...new Set(nearPosibleFace.map(f => f[(axe + 2) % 4]))]
-            const nearMatch = [...new Set(nearAxeFace.map(face => this.building.conf.reverseFaceLinkList(face)).flat())]
+            const nearMatch = [...new Set(nearAxeFace.map(face => this.buildFactory.conf.reverseFaceLinkList(face)).flat())]
             const propAxeTiles = this._propagatePosibleFace(axe, nearMatch, 0)
             propTiles.push(propAxeTiles)
             isError = propAxeTiles.includes(null)
@@ -288,21 +285,25 @@ export class WcBuildTile extends BuildTile {
     }
 
 
+    _isBuildFace(axe) {
+        const nearB = this.nearBuilding[axe]
+        return nearB != null && nearB.isConfigured 
+    }
 
+    /*
+    get startPossibleFace() {
 
+        
+    }
+    */
 
     get closePossibleFace() {
-        const maskBuildFace = [0, 1, 2, 3].map(axe => {
-            const nearB = this.nearBuilding[axe]
-            return nearB != null && nearB.isConfigured 
-        })
-
-        const faceWeightIndex = this.building.conf.faceLinkWeight
+        const faceWeightIndex = this.buildFactory.conf.faceLinkWeight
         const filteredPossibleFace = this.possibleFace
             .filter(face => {
                 const alowFaceKey = face
                     .filter((faceKey, axe) => {
-                        if (maskBuildFace[axe]) return true
+                        if (this._isBuildFace(axe)) return true
                         if (faceKey == null) return true // this.nearBuilding[axe] == null
                         if (Object.keys(faceWeightIndex).includes(faceKey)
                                 && faceWeightIndex[faceKey] > 0
@@ -329,18 +330,13 @@ export class WcBuildTile extends BuildTile {
 
 
     get expendPossibleFace() {
-        const maskBuildFace = [0, 1, 2, 3].map(axe => {
-            const nearB = this.nearBuilding[axe]
-            return nearB != null && nearB.isConfigured 
-        })
-
         // console.log('ExpendPossibleFace:', {...this.possibleFace})
-        const faceWeightIndex = this.building.conf.faceLinkWeight
+        const faceWeightIndex = this.buildFactory.conf.faceLinkWeight
         return this.possibleFace
             .filter(face => {
                 const alowFaceKey = face
                     .filter((faceKey, axe) => {
-                        if (maskBuildFace[axe]) return true;
+                        if (this._isBuildFace(axe)) return true;
                         // if (faceKey == null) return true; //this.nearBuilding[axe] == null;
                         if (Object.keys(faceWeightIndex).includes(faceKey) && faceWeightIndex[faceKey] > 0) {
                             return true;
@@ -350,6 +346,48 @@ export class WcBuildTile extends BuildTile {
                 return alowFaceKey.length == 4
             })
     }
+
+
+    pickTestAndUndo(tileConfigurations) {
+        // Pick and apply config to the tile
+        let listList = [...tileConfigurations]
+        console.log(listList)
+        let pickTileConf = pickRandomWeightedObject(listList, this.tile.rBuildTile)
+        let validConf = false
+        while (listList.length > 0 && !validConf) {
+            validConf = this.tryApplyFaceConfigurationAndUndo(pickTileConf.face)
+            if (validConf) return true;
+            
+            console.log('BAD CHOISE')
+            listList = listList.filter(x => x != pickTileConf)
+            pickTileConf = pickRandomWeightedObject(listList, this.tile.rBuildTile)
+        }
+        console.log('ALMOST BAD CHOISE')
+        return false
+        
+    }
+
+    pickAndApply(tileConfigurations) {
+
+        // Pick and apply config to the tile
+        let listList = [...tileConfigurations]
+        let pickTileConf = pickRandomWeightedObject(listList, this.tile.rBuildTile)
+        let validConf = false
+        while (listList.length > 0 && !validConf) {
+            validConf = this.updateDrawConfiguration(pickTileConf)
+            if (validConf) return true;
+            
+            console.log('BAD CHOISE')
+            listList = listList.filter(x => x != pickTileConf)
+            pickTileConf = pickRandomWeightedObject(listList, this.tile.rBuildTile)
+        }
+
+        console.log('ALMOST BAD CHOISE')
+        this.isConfigured = true
+        this._buildTileConf.face = [null, null, null, null]
+        return false
+    }
+
     /*
     updateFaceValide() {
         const nearFaceValidation = this.nearFaceValidation
@@ -368,7 +406,7 @@ export class WcBuildTile extends BuildTile {
         // get all tile Config from the faceKey
         const keyFace = alowFace.map(x => x.join('|'))
         const tileConf = keyFace.map(key => {
-            return this.building.conf.indexTileOptions_KeyFaceKey[key]
+            return this.buildFactory.conf.indexTileOptions_KeyFaceKey[key]
         }).flat().filter(x => x)
 
 
@@ -379,34 +417,13 @@ export class WcBuildTile extends BuildTile {
 
             console.log("========Error-random", this)
             console.log("indexTileOptions", keyFace)
-            return ;
+            return false;
         } 
-        
-        // Pick and apply config to the tile
-        {
-            let listList = [...tileConf]
-            let pickTileConf = pickRandomWeightedObject(listList, this.tile.rBuildTile)
-            let validConf = false
-            while (listList.length > 0 && !validConf) {
-                validConf = this.updateDrawConfiguration(pickTileConf)
-    
-                if (!validConf) {
-                    console.log('BAD CHOISE')
-                    listList = listList.filter(x => x != pickTileConf)
-                    pickTileConf = pickRandomWeightedObject(listList, this.tile.rBuildTile)
-                    // throw("BAD CHOISE")
-                }
-            }
-            if (listList.length == 0) {
-                console.log('ALMOST BAD CHOISE')
-                this.isConfigured = true
-                this._buildTileConf.face = [null, null, null, null]
-            }
-        }
+        return this.pickAndApply(tileConf)
     }
 
     get score() {
-        const faceWeightIndex = this.building.conf.faceLinkWeight
+        const faceWeightIndex = this.buildFactory.conf.faceLinkWeight
         const scoreWeigthFace = this.possibleFace
             .map(face => {
                 return [0, 1, 2, 3]
@@ -423,9 +440,11 @@ export class WcBuildTile extends BuildTile {
 
     toJson() {
         return {
-            score : this.score,
-            possibleFace: this.possibleFace.map(x => x.join('|')),
+            isPath: this.isPath,
+            isConfigured: this.isConfigured,
             confFace : this._buildTileConf.face.join('|'),
+            score : this.score,
+            // possibleFace: this.possibleFace.map(x => x.join('|')),
         }
     }
 

@@ -1,6 +1,6 @@
 
 
-const DEFAULT_CITY_PARAM =  {
+const CITY_DEFAULT_PARAM =  {
     mainRoad : {
         count : 30,
         color : "#000000",

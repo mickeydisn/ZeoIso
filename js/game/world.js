@@ -37,8 +37,6 @@ export class World {
         this.factoryTileRawGenerator = new FactoryTileRawGenerator(this);
         this.factoryTileGenerator = new FactoryTileGenerator(this);
 
-        console.log('RawTile', new GenTile(this, 110, 110))
-
 
         this.factoryMap = new FactoryMap(this)
         this.tilesMatrix = new TilesMatrix(this, SIZE20)
@@ -74,9 +72,7 @@ export class World {
             const tileJson = this.factoryMap.getTile(x,y).toJson()
             this.globalState.set("TileInfo.position", [x, y])         
 
-            const chunk = this.factoryMap.chunkPoint(x,y)
-            console.log(chunk)
-            console.log(tileJson)
+            // const chunk = this.factoryMap.chunkPoint(x,y)
         }
         
         // this.GS.set('InterfaceIso.ClickTile', {x: xx - (this.size/2), y: yy - (this.size/2)})

@@ -89,7 +89,7 @@ export class WidjetActionsAchivement extends WidjetActions {
             // ctx.drawImage(cimage, 32, 32, 192, 192, 0, 0, 128, 128);
 
         } else {
-            console.log('notFind', assetKey)
+            console.error('notFind', assetKey)
         }
     }
 }

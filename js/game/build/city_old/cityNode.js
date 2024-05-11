@@ -85,15 +85,13 @@ export class Node{
 
     nodesDistance(nodes) {
         let distanceMap = nodes.map(endNode => {
-            const x = Math.abs(this.x - endNode.x);
-            const y =  Math.abs(this.y - endNode.y);
             return [this.nodeDistance(endNode), endNode];
         })
         distanceMap = distanceMap.sort((a, b) => a[0] - b[0]);
         return distanceMap;
     }
 
-    nodeMinDistance(nodes) {
+    nodesMinDistance(nodes) {
         return this.nodesDistance(nodes)[0];
     }
 
@@ -185,3 +183,7 @@ export  class CityNode extends Node {
     }
 
 }
+
+
+
+

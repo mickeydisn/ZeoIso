@@ -15,6 +15,7 @@ import { WidjetActionsSetting } from './game/menu/widjetActionsSetting.js';
 import { WidjetActionsAchivement } from './game/menu/widjetActionAchivement.js';
 import { WidjetActionsTileInfo } from './game/menu/widjetTileInfo.js';
 import { WidjetInterfaceMap } from './game/menu/widjetInterfaceMap.js';
+import { WidjetActionsPlayerAct } from './game/menu/widjetActionsPlayerAct.js';
 
 
 export class Main {
@@ -41,7 +42,7 @@ export class Main {
     }
 
     start() {
-        console.log('== Init World ==');
+        console.info('== Init World ==');
         this.assetLoader = new AssetLoader(_ => this.start2())
     }
     start2() {
@@ -69,6 +70,10 @@ export class Main {
         {
             const div = divMenu.append('div')
             new WidjetActionsPlayer(this.world, div)
+        } 
+        {
+            const div = divMenu.append('div')
+            new WidjetActionsPlayerAct(this.world, div)
         } 
         {
             const div = divMenu.append('div')
@@ -159,21 +164,21 @@ export class Main {
         let loopInterval = d3.interval(gameLoop, 1000 / 20);
         this.world.globalState.sub("TabVisiblity", "MainDisplayLoop", isVisibel => {
             if (isVisibel) {
-                console.log("MainDisplayLoop: Start");
+                console.info("MainDisplayLoop: Start");
                 loopInterval.stop()
                 loopInterval = d3.interval(gameLoop, 1000/ 20);
             } else {
-                console.log("MainDisplayLoop: Stop");
+                console.info("MainDisplayLoop: Stop");
                 loopInterval.stop()
             }
         })
         
         window.addEventListener('focus', _ => {
-            console.log("focus-processing");
+            console.info("focus-processing");
             this.world.globalState.set("TabVisiblity", true)
         }, false);
         window.addEventListener('blur', _ => {
-            console.log("blur-processing");
+            console.info("blur-processing");
             this.world.globalState.set("TabVisiblity", false)
         }, false);
 
@@ -207,11 +212,11 @@ export class Main {
         // d3.timer(keyControle);  
         this.world.globalState.sub("TabVisiblity", "MainKeabordLoop", isVisibel => {
             if (isVisibel) {
-                console.log("MainKeabordLoop: Start");
+                console.info("MainKeabordLoop: Start");
                 keyInterval.stop()
                 keyInterval = d3.interval(keyControle, 20);
             } else {
-                console.log("MainKeabordLoop: Stop");
+                console.info("MainKeabordLoop: Stop");
                 keyInterval.stop()
             }
         })

@@ -1,4 +1,4 @@
-import { AXE_DIRECTION } from "../build/utils.js";
+import { AXE_DIRECTION, AXE_DIRECTION2 } from "../build/utils.js";
 
 export const TILE_GEN_ZOOM = 2
 
@@ -44,9 +44,9 @@ export class GenTile extends RawTile {
 	get isBlock() {
 		return (
 			this._isBlock || (
-				this.buildTile != null && 
-				this.buildTile.conf != null &&
-				!this.buildTile.conf.allowMove
+				this.wcBuild != null && 
+				this.wcBuild.conf != null &&
+				!this.wcBuild.conf.allowMove
 			)			 
 		) // || ( this.items.length > 0 )
 	}
@@ -121,7 +121,7 @@ export class Tile extends GenTile {
 		this._isFrise = false;
 
 		*/
-		this.buildTile = null;
+		this.wcBuild = null;
 		this.temporatyItems = []
 
 		this.lvlGen();
@@ -139,7 +139,7 @@ export class Tile extends GenTile {
 
 
 	updateColor([r, g, b, a]) {
-		if (this.buildTile != null || this.isWater) return ;
+		if (this.wcBuild != null || this.isWater) return ;
         this.color = new Uint8Array([r, g, b, a]);
     }
 
@@ -168,14 +168,17 @@ export class Tile extends GenTile {
 		return {
 			x: this.x,
 			y: this.y,
-			// biome: this.rawBiome,
-			buildTile: this.buildTile ? this.buildTile.toJson() : null,
-			FLvl: this.flvl,
 			lvl: this._lvl,
+			isBlock: this.isBlock,
+			isFrise: this.isFrise,
+			biome: {name: this.rawBiome.name, lvlType: this.rawBiome.lvlType},
+			buildTile: this.wcBuild ? this.wcBuild.toJson() : null,
+			cityNode: this.cityNode ? this.cityNode.toJson() : null,
+			
+			// FLvl: this.flvl,
 			// waterLvl: this._waterLvl,
-			color : [...this.color],
 			items: this.items,
-
+			color : [...this.color],
 			genColor: this.genColor,
 
 		}
@@ -191,4 +194,24 @@ export class Tile extends GenTile {
         }
         return this._nearTiles
     }
+	nearTilesAxe(size=1) {
+    	return  [0, 1, 2, 3].map(axe => {
+			const [dx, dy] = AXE_DIRECTION[axe]
+			return  this.fm.getTile(this.x + (dx * size), this.y + (dy * size));
+		})
+	}
+
+	get nearCrossTiles() {
+        if (!this._nearTilesCross) {
+            this._nearTilesCross = [0, 1, 2, 3].map(axe => {
+                const [dx, dy] = AXE_DIRECTION2[axe]
+                return  this.fm.getTile(this.x + dx, this.y + dy);
+            })
+        }
+        return this._nearTilesCross	
+	}
+
+	get nearTiles3() {
+		return [...this.nearTiles, ...this.nearCrossTiles]
+	}
 }

@@ -31,7 +31,7 @@ export class FactoryMap {
 
 		let newChunk = chunkRow.get(cy);
 		if (newChunk === undefined) {
-			console.log('newChunk')
+			// console.log('newChunk')
 			newChunk = new Chunk(this.world, cx, cy);
 			chunkRow.set(cy, newChunk);
 		}

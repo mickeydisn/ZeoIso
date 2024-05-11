@@ -15,7 +15,7 @@ export class AbstractWcBuildConf {
     constructor(conf) {
         Object.assign(this, conf)
         this.growLoopCount = conf.growLoopCount ? conf.growLoopCount : 10
-        this.endLoopMax = conf.endLoopMax ? conf.endLoopMax : 20000
+        this.endLoopMax = conf.endLoopMax ? conf.endLoopMax : 2000
 
         this.preInit();
         // this.init();        
@@ -26,7 +26,7 @@ export class AbstractWcBuildConf {
     }
 
     init() {
-        this.startTileOptions = axeNextTileOfList([this.__TILE_START])
+        this.startTileOptions = axeNextTileOfList(Array.isArray(this.__TILE_START) ? this.__TILE_START : [this.__TILE_START])
         this.listTileOptions = axeNextTileOfList(this.__TILE_LIST)
 
         this.listTileOptions.forEach(tconf => { tconf.lvl=this.mainLvl})
@@ -34,7 +34,6 @@ export class AbstractWcBuildConf {
         const keyFaceKeyEntrie = this.listTileOptions
             .map(tileOpt => [tileOpt.face.join('|'), tileOpt])
 
-        // console.log (keyFaceKeyEntrie)
 
         this.indexTileOptions_KeyFaceKey = keyFaceKeyEntrie.reduce((acc, v) => { 
                 if(!acc[v[0]]) acc[v[0]] = []; 
@@ -52,14 +51,14 @@ export class AbstractWcBuildConf {
     get __TILE_START() { return [] }
     get __TILE_LIST() { return [] }
 
-
+    get TILE_START_OPTIONS() { return this.startTileOptions }
     get TILE_START() { return pickRandomWeightedObject(this.startTileOptions) }
 
 
     reverseFaceLink(face) {
         const filterLink = this.faceLinks.filter(x => x[0].localeCompare(face) == 0)
         if (filterLink.length == 0 && face != null) {
-            console.log ('==ERROR== not existing faceLink:', face)
+            console.error ('==ERROR== not existing faceLink:', face)
         }
         return filterLink.length ? filterLink[0][1] : null
     }
@@ -67,7 +66,7 @@ export class AbstractWcBuildConf {
     reverseFaceLinkList(face) {
         const filterLink = this.faceLinks.filter(x => x[0].localeCompare(face) == 0)
         if (filterLink.length == 0 && face != null) {
-            console.log ('==ERROR== not existing faceLink:', face)
+            console.error ('==ERROR== not existing faceLink:', face)
         }
         return filterLink.length ? filterLink.map(l => l[1]) : null
     }

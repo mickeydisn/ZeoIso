@@ -4,7 +4,7 @@ import * as AssetUtils from "../asset/assetUtils.js"
 export class AssetLoader {
     constructor(callback) {
         this.callback = callback;
-        console.log('== Load Asset Tree == ')
+        console.info('== Load Asset Tree == ')
         
 
         // 
@@ -15,14 +15,14 @@ export class AssetLoader {
 
         this.assetTree = Object.fromEntries(this.assetList.map(assetConf => [assetConf.label, assetConf]))
 
-        console.log('== Load Asset Files == ')
+        console.info('== Load Asset Files == ')
         this.loadAssetFiles()
     }
 
     oneImageCallBack() {
         this.countLoad -= 1;
         if (this.countLoad == 0) {
-            console.log("== End Load Image == ")
+            console.info("== End Load Image == ")
             this.callback()
         }
     }
@@ -73,7 +73,6 @@ export class AssetLoader {
         })
 
         /*
-        console.log("DRAW IMAGE")
         const p = this._translatePoint(Point(10, 10, 0))
         this.canvas.ctx.drawImage(image, p.x - 105, p.y - 142, 210, 210);
         */
@@ -86,7 +85,6 @@ export class AssetLoader {
         } else {
             const [keyParent, canvasFilter] = key.split('#')
             if (this.assetTree[keyParent]) {
-                // console.log('-Create New FilterColor Asset ')
 
                 const parentCimage = this.assetTree[keyParent].cimage
                 const canvasFilterConf = AssetUtils.canvasFilterStrToValue(canvasFilter)
@@ -140,11 +138,6 @@ export class AssetLoader {
                 const splitName = fileName.substring(0, fileName.length - 4)// .split('_')
                 return {src:path, group:dir, label:splitName}
             })
-
-        console.log('========= assetList ==========')
-        console.log(this.assetList)
-
-        console.log('==============================')
 
     }
 

@@ -4,7 +4,7 @@ export class GlabalState {
 
     constructor(world) {
         this.world = world;
-        console.log('=== GlabalState == ')
+        console.info('=== GlabalState == ')
         this._state = {
             "Setting.KeboardType": 'azerty',
             "Setting.PlayerMove" : 0,

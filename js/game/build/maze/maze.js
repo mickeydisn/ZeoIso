@@ -29,7 +29,6 @@ export class Maze {
             ..._conf
         }
         Object.assign(this, conf);
-        console.log('MAZE', this)
         this.init()  
 
         this.centerList = []
@@ -74,7 +73,7 @@ export class Maze {
             const [dx, dy, currentTile] = openList.pop()
 
             const fromTile = this.fm.getTile(currentTile.x - dx * 2, currentTile.y - dy * 2)
-            if (currentTile.buildTile && currentTile.buildTile.isConfigured) {
+            if (currentTile.wcBuild && currentTile.wcBuild.isConfigured) {
                 continue
             }
 
@@ -108,7 +107,6 @@ export class Maze {
     updateTile(tile) {
         const x = tile.x;
         const y = tile.y;
-        console.log(x, y, tile)
         tile.clearItem()
         tile.lvl = this.mainLvl
         tile.colorGen() // color = [255, 0, 0]

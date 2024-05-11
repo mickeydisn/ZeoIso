@@ -41,7 +41,8 @@ export class InterfaceIso {
         this.selectedTile = null;
         this.tilesMatrix = world.tilesMatrix
         this.assetLoader = this.world.assetLoader; //new AssetLoader(_ => this.init())
-
+        this.frameSubCount = 0;
+        this.frameCount = 0;
         // list of Div That folow the iso cell.
         this.isoDivBoxs = [];
         this.init();
@@ -195,7 +196,9 @@ export class InterfaceIso {
             case 'Asset':
             case 'Svg': {
                 try {
-                    const cimage = this.assetLoader.getAsset(itemConf.key)
+                    const key = itemConf.key
+                    const keySelect = Array.isArray(key) ? key[this.frameCount % key.length] : key
+                    const cimage = this.assetLoader.getAsset(keySelect)
                     if (cimage && cimage.ctx) {
                         const p = this.iso._translatePoint(Point(x+off.x, y+off.y, lvl))
                             this.ctx.drawImage(cimage, p.x - 127 + 64, p.y - 172 + 64 - 1, 128, 128);
@@ -319,7 +322,13 @@ export class InterfaceIso {
             const tilePos = this.world.player.tileIsoPos;
             items.push({t:'Svg', key:asset, off:tilePos.off});
         }
-        
+
+        // if is a CityNode
+        if (metaTile.cityNode) {
+            items.push({t:'Svg', key:metaTile.cityNode.asset.key});
+            this.drawTilesCityBox(this.iso._translatePoint(Point(x, y, currentlvl)), metaTile);
+        }
+
         // Draw Each item on the list. 
         items
             .sort((a, b) => (a.lvl || 0) - (b.lvl || 0))
@@ -425,6 +434,10 @@ export class InterfaceIso {
     }
 
     drawUpdate() {
+        const SubFrameMax = 3
+        this.frameSubCount = (this.frameSubCount + 1)  % SubFrameMax;
+        this.frameCount += this.frameSubCount == 0 ? 1 : 0;
+        this.frameCount = this.frameCount % 120;
         this.tilesMatrix.update();
         this.updateAbsolutOffset();
         this.drawIso();
@@ -474,7 +487,8 @@ export class InterfaceIso {
         // ( create if not existe - first draw )
         if (!metaTile.divBox) {
             metaTile.divBox = new IsoDivCityBox(this.canavBox, metaTile, {
-                hideDistance: metaTile.cityNode.hideDistance
+                hideDistance: metaTile.cityNode.hideDistance, 
+                md: '### Hello'
             });
         }
         const xx = this.tilesMatrix.x;
@@ -488,7 +502,7 @@ export class InterfaceIso {
         if (dx < hideDistance && dy < hideDistance) {
             // add the tile box in the list of existing box. 
             if (this.isoDivBoxs.filter(x => x === metaTile.divBox).length == 0){
-                console.log("=== Show", hideDistance) 
+                console.info("=== Show", hideDistance) 
                 metaTile.divBox.show()
                 this.isoDivBoxs.push(metaTile.divBox)
             }
@@ -496,7 +510,7 @@ export class InterfaceIso {
             metaTile.divBox.update(boxPoint.x, boxPoint.y)
         } else {
             if (!metaTile.divBox.isHide) {
-                console.log("=== Hide", hideDistance) 
+                console.info("=== Hide", hideDistance) 
                 metaTile.divBox.hide()
             }
         }

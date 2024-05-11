@@ -370,10 +370,10 @@ body {
 
 .buttMenuBox {
   position: absolute;
-  width: 100vw;
+  width: calc(100vw - 80px);
   height: 100vh;
   top: 0px;
-  left: -40px;
+  left: 40px;
 }
 
 .buttMenuBox > label {
@@ -386,39 +386,60 @@ body {
   overflow: scroll;
 }
 
+.buttMenuBox#miniMap > label {
+  top: calc(70px);
+  left: -40px;
+}
+
+.buttMenuBox#playerActionAct > label {
+  top: calc(70px + 50px);
+  left: -40px;
+}
+
+.buttMenuBox#playerActionAct > div {
+  top: calc(70px + 50px);
+  left: 0px;
+  width: 4px;
+  height: 40px;
+  padding: 0px;
+  margin: 0px;
+}
 
 .buttMenuBox#settingAction > label {
   top: 0px;
-}
-
-.buttMenuBox#miniMap > label {
-  top: calc(70px);
+  right:-40px;
 }
 
 
 .buttMenuBox#tileInfoAction > label {
-  top: calc(70px + 80px);
+  top: calc(70px);
+  right:-40px;
 }
 
 .buttMenuBox#playerAction > label {
-  top: calc(70px + 80px + 50px);
+  top: calc(70px + 50px);
+  right:-40px;
 }
+
 
 .buttMenuBox#achivementAction > label {
-  top: calc(70px + 80px + 50px + 50px);
+  top: calc(70px + 50px + 50px);
+  right:-40px;
 }
-
 
 
 .buttMenuBox#floorAction > label {
-  top: calc(70px + 80px + 50px + 250px);
+  top: calc(70px + 50px + 250px);
+  right:-40px;
 }
 .buttMenuBox#tileAsset > label {
-  top: calc(70px + 80px + 50px + 250px + 50px);
+  top: calc(70px + 50px + 250px + 50px);
+  right:-40px;
 }
 
 .buttMenuBox#buildingAction > label {
-  top: calc(70px + 80px + 50px + 250px + 50px + 50px);
+  top: calc(70px + 50px + 250px + 50px + 50px);
+  right:-40px;
 }
 
 
@@ -843,8 +864,12 @@ body {
   display: none;
 }
 .isoDivBox.isShow {
-  opacity: .8;
+  opacity: .6;
   display: flex;
+  transition: all 1s;
+}
+.isoDivBox.isShow:hover {
+  opacity: 1;
   transition: all 1s;
 }
 
@@ -862,6 +887,7 @@ body {
 /*  width: 400px; */
 }
 
+/*
 .isoDivBox .content input{
   position: absolute;
   opacity: 0;
@@ -900,6 +926,7 @@ body {
 .isoDivBox input:checked ~ .Markdown {
   display:none;
 }
+*/
 
 .isoDivBox >  .content > label#buttRemove {
   border: 1px solid rgb(0, 0, 0);
@@ -931,3 +958,106 @@ body {
   justify-content: center;
   display: flex;
 }
+
+
+
+
+.isoDivBox >  .content > div > .buttAction {
+  background-color: #DEDEDE;
+  padding: .1em .5em;
+  border: 1px solid #333;
+  box-shadow: 2px 2px 0px #999;
+  font-size: .8rem;
+  font-family: monospace;
+  font-weight: bold;
+  transition: all 1s;
+  cursor: pointer;
+  margin: 0 .1rem;
+}
+
+.isoDivBox >  .content > div > .buttAction:hover {
+  background-color: #BEBEBE;
+  transition: all 1s;
+}
+
+
+.isoDivBox >  .content > .titleDiv {
+  display: flex;
+  width: 90%;
+  justify-content: flex-start;
+  margin: .5rem 0 0 0;
+  display: flex;
+  font-size: 2em;
+  font-weight: 900;
+}
+.isoDivBox >  .content > .titleDiv > div:nth-child(1) {
+  cursor: pointer;
+}
+
+.isoDivBox >  .content > .pageDiv {
+  display: flex;
+  justify-content: flex-start;
+  width: calc(100% - 4rem);
+}
+
+
+.isoDivBox >  .content > .stepList{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  width: calc(100% - 6rem);
+  padding: 1rem 0 1rem 0;
+}
+
+.isoDivBox >  .content > .stepList > div { 
+  cursor: pointer;
+  padding: 0rem .1rem 0rem .1rem;
+  font-size: .9em;
+  font-weight: 900;
+  transition: all .3s;
+}
+
+.isoDivBox >  .content > .stepList > div:hover { 
+  background-color: #AEAEAE;
+  transition: all .3s;
+}
+
+
+
+.isoDivBox >  .content > .actionDiv {
+  display: flex;
+  justify-content: center;
+  background-color: #BEBEBE;
+  padding: .8rem;
+  margin: .7rem;
+  border: 1px solid;
+}
+
+.isoDivBox >  .content > .paramDiv {
+  border: 1px solid;
+  width: 90%;
+  padding: .5em;
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.isoDivBox >  .content > .paramDiv > div > H3 {
+  margin: .2rem 0 .1rem 0;
+  display:none;
+}
+
+.isoDivBox >  .content > .paramDiv .form-control > p {
+  padding: 0 0 0 1.5em;
+  margin: 0 0 0 1.5rem !important;
+  display: block !important;
+}
+
+.isoDivBox >  .content > .paramDiv .form-control > input{
+  margin: 0 0 0 1em;
+}
+.isoDivBox >  .content > .paramDiv .form-control > select{
+  margin: 0 0 0 1em;
+}
+  

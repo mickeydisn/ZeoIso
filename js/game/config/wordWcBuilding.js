@@ -1,11 +1,5 @@
-import { City } from "../build/city/objectCity.js"
 import { CustomBuilding } from "../build/customBuilding/mainCitySpawn.js"
-import { Maze } from "../build/maze/maze.js"
-import { PathFactory } from "../build/path.js"
-import { WcBuildConf_Base3 } from "../build/wcBuilding2/buildConf_base3.js"
-import { WcBuildConf_House3 } from "../build/wcBuilding2/buildConf_house3.js"
-import { WcBuildConf_Place3 } from "../build/wcBuilding2/buildConf_place3.js"
-import { WcBuilding } from "../build/wcBuilding2/wcBuilding.js"
+import { CityTileNode } from "../build/wcCity/cityTileNode.js"
 
 
 export class WorldWcBuilding {
@@ -14,6 +8,8 @@ export class WorldWcBuilding {
         this.world = world
         this.tilesMatrix = world.tilesMatrix
         this.ta = world.tilesActions
+        this.fm = this.world.factoryMap
+
     }
 
     start() {
@@ -37,15 +33,36 @@ export class WorldWcBuilding {
 
 
         const centreCity = new CustomBuilding(this.world, {})
-        centreCity.start(x, y)
+        centreCity.start(x-20, y-20)
 
         this.world.player.setCenter(x+5, y+5)
 
+        {
+            const tile = this.fm.getTile(x, y)
+            new CityTileNode(this.world, tile, {})
+        }
+
         /*
-        const path = new PathFactory(this.world, {})
-        const wcPath = path.start({x:x, y:y}, {x:x + 10, y:y + 5})
-        console.log("wcPath", wcPath)
+        const pathFactory = new PathFactory(this.world, {})
+        pathFactory.createWcPath({x:x, y:y}, {x:x + 8, y:y + 8}).start(0).then(_ => {
+            this.ta.doAction({func:'clearAllSquare', x:x + 8, y:y + 8, size:3})
+            this.ta.doAction({func:'colorSquare', x:x + 8, y:y + 8, size:3, color:[64, 0, 0]})
+        })
+
+        pathFactory.createWcPath({x:x, y:y}, {x:x + 8, y:y - 8}).start(0).then(_ => {
+            this.ta.doAction({func:'clearAllSquare', x:x + 8, y:y - 8, size:3})
+            this.ta.doAction({func:'colorSquare', x:x + 8, y:y - 8, size:3, color:[64, 0, 0]})
+        })
+
+        pathFactory.createWcPath({x:x, y:y}, {x:x + 8, y:y}).start(0).then(_ => {
+            this.ta.doAction({func:'clearAllSquare', x:x + 8, y:y, size:3})
+            this.ta.doAction({func:'colorSquare', x:x + 8, y:y, size:3, color:[64, 0, 0]})
+                
+        })
         */
+
+        // console.log("wcPath", wcPath)
+        
         
         /*
         const startCity = new City(this.world, x, y, {})

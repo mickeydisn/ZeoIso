@@ -8,10 +8,11 @@
   font-size: .8em;
   font-weight: 400;
   overflow-y: scroll;
-  height: 40vh;
+  /* height: 40vh; */
   margin: 1em 0 0 0;
   padding: 0 0 1em 0;
-  
+  font-weight: 500;
+  font-family: sans-serif;
 }
 
 .Markdown table {

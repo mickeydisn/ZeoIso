@@ -3,12 +3,15 @@ import { AbstractWcBuildConf } from "./AbstractBuildConf.js";
 
 
 
-export class WcBuildConf_House4 extends AbstractWcBuildConf {
+export class WcBuildConf_House4b extends AbstractWcBuildConf {
     constructor(conf={}) {
         super(conf)
 
         this.faceLinkWeight = {
-            'X' : 0,
+            'X' : 1,
+            
+
+            /**/
             'Bo': 0,
             'Bi': 1,
 
@@ -16,14 +19,21 @@ export class WcBuildConf_House4 extends AbstractWcBuildConf {
             'Br': 2,
 
             '0' : 0,
+            /**/
             // 'Ci': 8,
-            
+
+
             'Ci': 4,
             'Cr' : 6,
             'Cl' : 6,
             
             'Wo': 0,
+            'WoD': 0,
+            'SWoD': 8,
+
             'Wi': 8,
+            'WiD': 8,
+
             'Wr' : 10,
             'Wl' : 10,
             
@@ -34,6 +44,12 @@ export class WcBuildConf_House4 extends AbstractWcBuildConf {
         this.faceLinks = [
             ['X', 'X', 1],
 
+            /* -----------* /
+            ['X', 'Ci', 1],
+            ['Ci', 'X', 1],
+            /**/
+            
+            /* -----------*/
             ['Bo', 'Bi', 1],
             ['Bi', 'Bo', 1],
 
@@ -42,12 +58,21 @@ export class WcBuildConf_House4 extends AbstractWcBuildConf {
 
             ['0', 'Ci', 1],
             ['Ci', '0', 1],
+            /**/
 
+            
             ['Cl', 'Cr', 1],
             ['Cr', 'Cl', 1],
 
             ['Wo', 'Wi', 1],
             ['Wi', 'Wo', 1],
+
+            ['Wo', 'WiD', 1],
+            ['WiD', 'Wo', 1],
+
+            ['SWoD', 'WiD', 1],
+            ['WiD', 'SWoD', 1],
+
 
             ['Wl', 'Wr', 1],
             ['Wr', 'Wl', 1],
@@ -69,30 +94,14 @@ export class WcBuildConf_House4 extends AbstractWcBuildConf {
         this.WALL_SUFFIX = '#H0_S120_C70_B115'
     }
 
-    get __TILE_START() { return {    
-        face: ['A', 'A', 'A', 'A'],
+    get __TILE_START() { return {  
+        face: ['SWoD', 'Cl', 'Ci', 'Cr'],
         items: [
-            { weight: .5, color: [0, 0, 0], isFrise: true, functions: [
-                //...actionsEmptyFlat
-            ], items:[
-                {h:2, key: this.ROOF_PREFIX + "Point", keyR:3, sufix:this.ROOF_SUFFIX },
-                {h:1.5, key: this.WALL_PREFIX + "BlockHalf", keyR:0, sufix:this.WALL_SUFFIX },
-            ]},
-            
-            // { weight: .5, colorT: [0, 0, 0], h:2.15, key: this.ROOF_PREFIX + "Flat", keyR:3},
-            // { weight: .5, colorT: [0, 0, 0], h:3, key: this.ROOF_PREFIX + "Point", keyR:3},
-        ]
-        /*     
-        face: ['Wr', 'A', 'Wl', 'Wi'],
-        items: [
-            { weight: 1, color: [0, 0, 0], isFrise: true, allowMove:true, functions: [
-                // ...actionsEmptyFlat
-            ], items:[
-                {h:1, key: this.ROOF_PREFIX + "", keyR:3, sufix:this.ROOF_SUFFIX },
-                {h:0, key: this.WALL_PREFIX + "Door", keyR:1, sufix:this.WALL_SUFFIX },
+            { weight:0, color: [128, 128, 128],  allowMove:true, isFrise: true, functions: [/*...actionsEmptyFlat*/], items:[
+                // {h:1, key: "Corner", keyR:3, sufix:this.ROOF_SUFFIX },
+                {h:0, key: "platform_side", keyR:0, sufix:this.WALL_SUFFIX },
             ]},
         ]
-        */
     }}
 
     get __TILE_LIST() { 
@@ -150,6 +159,9 @@ export class WcBuildConf_House4 extends AbstractWcBuildConf {
                     ]},
                 ]
             }, 
+
+            // * --------------------------------------------------
+
             /// O - Bi
             {
                 face: ['Bo', 'X', 'X', 'X'],
@@ -167,22 +179,6 @@ export class WcBuildConf_House4 extends AbstractWcBuildConf {
                 ]
             }, 
 
-
-/*
-
-
-platform_side
-platform_cornerOpen
-platform_cornerDot
-
-fence_simple
-fence_corner
-fence_simpleDiagonWl
-
-
-
-
-*/
             /// O - Bi
             {
                 face: ['0', 'Bi', 'Bi', 'Bi'],
@@ -222,34 +218,10 @@ fence_simpleDiagonWl
                     ]},
                 ]
             }, 
-            /// O - A 
-            /*
-            {
-                face: ['Wo', '0', '0', '0'],
-                items: [
-                    { weight:.1, color: [128, 128, 128],  allowMove:true, isFrise: true, functions: [
-                        ...actionsEmptyFlat
-                    ]},
-                ]
-            }, {
-                face: ['Wo', 'Wo', '0', '0'],
-                items: [
-                    { weight:.1, color: [128, 128, 128],  allowMove:true, isFrise: true, functions: [
-                        ...actionsEmptyFlat
-                    ]},
-                    // { weight:.1, colorT: [255, 255, 255], key: "platform_cornerOpen", sufix: "#H50", keyR:1,  allowMove:true},
-                    // { weight:.1, colorT: [255, 255, 255], key: "platform_cornerDot", sufix: "#H50", keyR:1,  allowMove:true},
+            
+            /* ----------------------------------------------- */
 
-                ]
-            }, 
-            */
-
-            /// O - A 
-            // R , L  W W { weight:0, colorT: [255, 255, 255], key: "platform_cornerOpen", keyR:3,  allowMove:true},
-            // R O L W { weight:0, colorT: [255, 255, 255], key: "platform_side", keyR:3,  allowMove:true},
-            // O O L R { weight:1, colorT: [255, 255, 255], key: "platform_cornerDot", sufix:"#H90", keyR:1,  allowMove:true},
-            // { weight:0, colorT: [0, 0, 0], key: "platform_center", keyR:2,  allowMove:true, }
-
+            /// W - C 
             {
                 face: ['Wo', 'Cl', 'Ci', 'Cr'],
                 items: [
@@ -280,39 +252,41 @@ fence_simpleDiagonWl
 
             /// A - Wi 
             {
-                face: ['A', 'Wi', 'Wi', 'Wi'],
+                face: ['A', 'Wi', 'WiD', 'Wi'],
                 items: [
-                    { weight:0, color: [128, 128, 128],  allowMove:true, isFrise: true, functions: [...actionsEmptyFlat], items:[
+                    { weight:0, color: [128, 128, 128],  allowMove:false, isFrise: true, functions: [...actionsEmptyFlat], items:[
+                        {h:0, key: "platform_center", keyR:0, sufix:this.WALL_SUFFIX },
                         {h:0, key: "corridor_end", keyR:2, sufix:this.WALL_SUFFIX },
                     ]},
                 ]
             } , {
                 face: ['A', 'Wi', 'A', 'Wi'],
                 items: [
-                    { weight:30, color: [128, 128, 128],  allowMove:true, isFrise: true, functions: [...actionsEmptyFlat], items:[
+                    { weight:30, color: [128, 128, 128],  allowMove:false, isFrise: true, functions: [...actionsEmptyFlat], items:[
                         {h:0, key: "corridor_", keyR:0, sufix:this.WALL_SUFFIX },
                     ]},
-                    { weight:10, color: [128, 128, 128],  allowMove:true, isFrise: true, functions: [...actionsEmptyFlat], items:[
+                    { weight:10, color: [128, 128, 128],  allowMove:false, isFrise: true, functions: [...actionsEmptyFlat], items:[
                         {h:0, key: "corridor_detailed", keyR:0, sufix:this.WALL_SUFFIX },
                     ]},
-                    { weight:10, color: [128, 128, 128],  allowMove:true, isFrise: true, functions: [...actionsEmptyFlat], items:[
+                    { weight:10, color: [128, 128, 128],  allowMove:false, isFrise: true, functions: [...actionsEmptyFlat], items:[
                         {h:0, key: "corridor_window", keyR:0, sufix:this.WALL_SUFFIX },
                     ]},
                 ]
             }, {
                 face: ['A', 'A', 'Wi', 'Wi'],
                 items: [
-                    { weight:10, color: [128, 128, 128],  allowMove:true, isFrise: true, functions: [...actionsEmptyFlat], items:[
+                    { weight:10, color: [128, 128, 128],  allowMove:false, isFrise: true, functions: [...actionsEmptyFlat], items:[
                         {h:0, key: "corridor_corner", keyR:3, sufix:this.WALL_SUFFIX },
                     ]},
-                    { weight:10, color: [128, 128, 128],  allowMove:true, isFrise: true, functions: [...actionsEmptyFlat], items:[
+                    { weight:10, color: [128, 128, 128],  allowMove:false, isFrise: true, functions: [...actionsEmptyFlat], items:[
+                        {h:0, key: "platform_center", keyR:0, sufix:this.WALL_SUFFIX },
                         {h:0, key: "corridor_cornerRound", keyR:3, sufix:this.WALL_SUFFIX },
                     ]},
                 ]
             }, {
                 face: ['A', 'A', 'A', 'Wi'],
                 items: [
-                    { weight:20, color: [128, 128, 128],  allowMove:true, isFrise: true, functions: [...actionsEmptyFlat], items:[
+                    { weight:20, color: [128, 128, 128],  allowMove:false, isFrise: true, functions: [...actionsEmptyFlat], items:[
                         {h:0, key: "corridor_split", keyR:0, sufix:this.WALL_SUFFIX },
                     ]},
                 ]
@@ -321,63 +295,13 @@ fence_simpleDiagonWl
             {
                 face: ['A', 'A', 'A', 'A'],
                 items: [
-                    { weight:20, color: [128, 128, 128],  allowMove:true, isFrise: true, functions: [...actionsEmptyFlat], items:[
+                    { weight:20, color: [128, 128, 128],  allowMove:false, isFrise: true, functions: [...actionsEmptyFlat], items:[
                         {h:0, key: "corridor_cross", keyR:0, sufix:this.WALL_SUFFIX },
                     ]},
                 ]
             }            
 
-            /// A - 0 
-            /*
-            {weight: 6, colorT: [0, 0, 0], key: "corridor_"},
-            { weight: 1, colorT: [0, 0, 0], key: "corridor_corner", keyR:3,  },
-            { weight: 6, colorT: [0, 0, 0], key: "corridor_split", keyR:0},
-            { weight: 1, colorT: [0, 0, 0], key: "corridor_cross"},
-            *
-            {
-                face: ['Wr', 'Wl', 'Wi', 'Wi'],
-                items: [
-                    { weight: .1, color: [128, 128, 128], isFrise: true,  functions: [...actionsEmptyFlat], items:[
-                        // {h:1, key: "Corner", keyR:3, sufix:this.ROOF_SUFFIX },
-                        {h:0, key: "corridor_corner", keyR:3, sufix:this.WALL_SUFFIX },
-                    ]},
-                    
-                ]
-            },
-            {
-                face: ['Wr', 'A', 'Wl', 'Wi'],
-                items: [
-                    { weight: 1, color: [0, 0, 0], isFrise: true, functions: [...actionsEmptyFlat], items:[
-                        // {h:1, key:  + "", keyR:3, sufix:this.ROOF_SUFFIX },
-                        {h:0, key:  "corridor_split", keyR:0, sufix:this.WALL_SUFFIX },
-                    ]},
-                    
-                ]
-            },
-
-            {
-                face: ['A', 'A', 'Wl', 'Wr'],
-                items: [
-                    {weight: 4, color: [0, 0, 0], isFrise: true, functions: [...actionsEmptyFlat], items:[
-                        {h:0, key: "corridor_cross", keyR:1, sufix:this.ROOF_SUFFIX },
-                    ]},
-                ],
-            }, 
-            {
-                face: ['A', 'A', 'A', 'A'],
-                items: [
-                    { weight: .5, color: [0, 0, 0], isFrise: true,  functions: [...actionsEmptyFlat], items:[
-                        {h:2, key: this.ROOF_PREFIX + "Point", keyR:3, sufix:this.ROOF_SUFFIX },
-                        {h:1.5, key: this.WALL_PREFIX + "BlockHalf", keyR:0, sufix:this.WALL_SUFFIX },
-                    ]},
-
-                    // { weight: .5, colorT: [0, 0, 0], h:2.15, key: this.ROOF_PREFIX + "Flat", keyR:3},
-                    // { weight: .5, colorT: [0, 0, 0], h:3, key: this.ROOF_PREFIX + "Point", keyR:3},
-                ]
-            },
-            */
-
-
+          
     ]
 
 
@@ -386,22 +310,3 @@ fence_simpleDiagonWl
 }
 
 
-
-
-
-/*
-wWllWoodCorner
-
-wWllWoodCornerDiagonWl
-
-wWllWood
-wWllWoodDetWilCross
-wWllWoodDetWilDiagonWl
-wWllWoodDetWilHorizontWl
-
-
-wWllWoodDoor
-wWllWoodWindowGlass
-wWllWoodWindowShutters
-
-*/

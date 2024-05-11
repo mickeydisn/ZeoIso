@@ -58,16 +58,11 @@ export class WidjetMiniMap {
     }
 
     onClick(clickX, clickY) {
-        console.log('Click:', clickX, clickY)
-        console.log('ClickCenter:', clickX - this.size / 2, clickY - this.size / 2)
-        
         const xx = Math.floor(( clickX - this.size / 2 ) / MAP_DEFINITION)
         const yy = Math.floor(( clickY - this.size / 2 ) / MAP_DEFINITION)
-        console.log('XX,YY', xx, yy)
-
+        
         let [x, y] = this.world.tilesMatrix.getPos();
-        console.log(x, y, xx, yy)
-
+        
         this.world.player.setCenter(x + yy * CHUNK_SIZE, y + xx * CHUNK_SIZE);
     }
 
@@ -80,7 +75,6 @@ export class WidjetMiniMap {
             this.refreshRate += 1;
             return;
         }
-        console.log("UpdateMiniMap")
         this.refreshRate = 0;
         // this.tilesMatrix.update();
         const ctx = this.ctx;

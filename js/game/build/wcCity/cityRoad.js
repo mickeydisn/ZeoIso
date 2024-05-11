@@ -60,7 +60,6 @@ export class RoadLine {
         // Return a object with the x and y coordinates of the intersection
         let x = x1 + ua * (x2 - x1)
         let y = y1 + ua * (y2 - y1)
-        // console.log(x, y)
         return new Node(x, y);
     }
 
@@ -75,14 +74,14 @@ export class RoadLine {
             newLine.push(new Line(newn1, newn2))
         }
         return newLine
-    }
+    } 
 
 }
 
-export class CityRoad extends Line {
-    constructor(n1, n2, param) {
+export class CityRoad extends RoadLine {
+    constructor(n1, n2, wcPath) {
         super(n1, n2);
-        this.param = param;
+        this.wcPath = wcPath;
     }
 }
 

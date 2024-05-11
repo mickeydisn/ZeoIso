@@ -1,14 +1,16 @@
-import { BuildConf_Base } from "./building1/buildConf_base.js";
-import { BuildConf_Place } from "./building1/buildConf_place.js";
-import { FactoryBuilding } from "./building1/building.js";
+
+import { TilesMatrix, TilesMatrixSelected } from "../map/tilesMatrix.js";
 import { WcBuildConf_Base3 } from "./wcBuilding2/buildConf_base3.js";
 import { WcBuildConf_BaseBorder3 } from "./wcBuilding2/buildConf_baseBorder3.js";
 import { WcBuildConf_House3 } from "./wcBuilding2/buildConf_house3.js";
-import { WcBuildConf_Place3 } from "./wcBuilding2/buildConf_place3.js";
-import { WcBuilding } from "./wcBuilding2/wcBuilding.js";
-import { TilesMatrix, TilesMatrixSelected } from "../map/tilesMatrix.js";
-import { WcBuildConf_House4 } from "./wcBuilding2/buildConf_house4.js";
+import { WcBuildConf_House3a } from "./wcBuilding2/buildConf_house3a.js";
+import { WcBuildConf_House3b } from "./wcBuilding2/buildConf_house3b.js";
+import { WcBuildConf_House4D } from "./wcBuilding2/buildConf_house4D.js";
+import { WcBuildConf_House4a } from "./wcBuilding2/buildConf_house4a.js";
+import { WcBuildConf_House4b } from "./wcBuilding2/buildConf_house4b.js";
 import { WcBuildConf_House5 } from "./wcBuilding2/buildConf_house5.js";
+import { WcBuildConf_Place3 } from "./wcBuilding2/buildConf_place3.js";
+import { WcBuildingFactory } from "./wcBuilding2/wcBuildingFactory.js";
 
 export class TilesActions {
 	constructor(world) {
@@ -18,10 +20,12 @@ export class TilesActions {
 		// List to store pointer on Tiles containe temporaty display item (like for selection / preview .. )
 		this.listTilesWithTempItems = []
 		this.init();
+
 	}
 
 	init() {
 		this.index = {
+			doFunction : this.doFunction.bind(this),
 			setBlocked: this.setBlocked.bind(this),
 			setBlockedSquare: this.setBlockedSquare.bind(this),
 
@@ -38,6 +42,10 @@ export class TilesActions {
 			clearLvl: this.clearLvl.bind(this),
 			clearLvlSquare: this.clearLvlSquare.bind(this),
 
+			clearAll: this.clearAll.bind(this),
+			clearAllSquare: this.clearAllSquare.bind(this),
+
+
 			lvlSet: this.lvlSet.bind(this),
 			lvlUp: this.lvlUp.bind(this),
 			lvlUpSquare: this.lvlUpSquare.bind(this),
@@ -49,16 +57,24 @@ export class TilesActions {
 
 			addBoxMD : this.addBoxMD.bind(this),
 
-			buildingBase: this.buildingBase.bind(this),
 			wcBuild: this.wcBuild.bind(this),
+			setBuildTile: this.wcBuild.bind(this),
 
 			selectedCopy : this.selectedCopy.bind(this),
+			temporatyItemsForceKey: this.temporatyItemsForceKey.bind(this),
+			clearAllTemporatyItems: this.clearAllTemporatyItems.bind(this),
 		}
 	}
 	//--------------------
 
 	doAction(conf) {
 		this.index[conf.func](conf)
+	}
+	// ---------------------
+
+	doFunction(conf) {
+		conf.do(conf.x, conf.y);
+		if (conf.callback) conf.callback();
 	}
 
 	// ---------------------
@@ -95,6 +111,30 @@ export class TilesActions {
 		})
 	}
 
+
+	clearAllTile(tile) {
+		tile.isBlock = false
+		tile.isFrise = false
+		tile.wcBuild = null
+		tile.colorGen();
+		tile.clearItem();
+	}
+	clearAll(conf) {
+		const tile = this.fm.getTile(conf.x, conf.y);
+		this.clearAllTile(tile)
+	}
+	clearAllSquare(conf) {
+		conf.size = conf.size ? conf.size : 1		
+		const box = new TilesMatrix(this.world, conf.size, conf.x, conf.y);
+		box.tiles.forEach(row => {
+			row.forEach(cellTile => {
+				this.clearAllTile(cellTile)
+			})
+		})
+		
+	}
+
+
 	// ---------------------
 	// Add item to a Tiles 
 	// ---------------------
@@ -114,22 +154,24 @@ export class TilesActions {
 		tile.items.push({t: 'Asset', key: conf.assetKey, lvl:h})
 	}
 
+	clearItem(conf) {
+		this.fm.getTile(conf.x, conf.y).clearItem();
+	}
+
+	// Temporaty
 	_tileTemporatyItemsForceKey(tile, conf) {
 		tile.temporatyItems.splice(0, tile.temporatyItems.length)
-		if (conf.t) {
-			console.log("PushCon", conf)
-			tile.temporatyItems.push(conf)
-		} else {
-			tile.clearTemporatyItem()
-		}
+		tile.temporatyItems.push(conf)
 		// Cause is a temps we want to store a link to the tile. 
 		this.listTilesWithTempItems.push(tile)
 	}
 
+	//assetKey
 	temporatyItemsForceKey(conf) {
-		if (!conf.assetKey && !conf.t) return;
+		if (!conf.assetKey) return;
 		const tile = this.fm.getTile(conf.x, conf.y);
-		this._tileTemporatyItemsForceKey(tile, conf)
+		const h = conf.h ? conf.h : 0
+		this._tileTemporatyItemsForceKey(tile, {t:'Asset', key:conf.assetKey, lvl:h})
 	}
 
 	clearAllTemporatyItems(conf=null) {
@@ -139,9 +181,6 @@ export class TilesActions {
 		this.listTilesWithTempItems = []
 	}
 
-	clearItem(conf) {
-		this.fm.getTile(conf.x, conf.y).clearItem();
-	}
 
 	clearItemSquare(conf) {
 		conf.size = conf.size ? conf.size : 1		
@@ -293,7 +332,7 @@ export class TilesActions {
 
 	addBoxMD(conf) {
 		const tile = this.fm.getTile(conf.x, conf.y);
-		tile.items.push({t:'Box', conf})
+		tile.items.push({t:'Box', ...conf})
 	}
 
 
@@ -305,7 +344,6 @@ export class TilesActions {
 
 	selectedCopy(conf) {
 		if (conf.state == 0) {
-			console.log('State.0')
 			this.tileSelected1 = conf;
 			// Display Selected Start
 			this.clearAllTemporatyItems()
@@ -321,7 +359,6 @@ export class TilesActions {
 				})
 				const saveTiles = tilesMatris.toJson()
 				const stringSave =  '[\n  ' + saveTiles.map(x =>  JSON.stringify(x)).join(',\n  ') + '\n]'
-				console.log('tilesMatris',stringSave)
 			}
 		}
 	}
@@ -338,30 +375,29 @@ export class TilesActions {
 			conf.buildType.localeCompare("base3") == 0 ?  new WcBuildConf_Base3({growLoopCount:growLoopCount}) :
 			conf.buildType.localeCompare("baseBorder3") == 0 ?  new WcBuildConf_BaseBorder3({growLoopCount:growLoopCount}) :
 			conf.buildType.localeCompare("house3") == 0 ?  new WcBuildConf_House3({growLoopCount:growLoopCount}) :
-			conf.buildType.localeCompare("house4") == 0 ?  new WcBuildConf_House4({growLoopCount:growLoopCount}) :
+			conf.buildType.localeCompare("house3a") == 0 ?  new WcBuildConf_House3a({growLoopCount:growLoopCount}) :
+			conf.buildType.localeCompare("house3b") == 0 ?  new WcBuildConf_House3b({growLoopCount:growLoopCount}) :
+			conf.buildType.localeCompare("house4a") == 0 ?  new WcBuildConf_House4a({growLoopCount:growLoopCount}) :
+			conf.buildType.localeCompare("house4b") == 0 ?  new WcBuildConf_House4b({growLoopCount:growLoopCount}) :
+			conf.buildType.localeCompare("house4D") == 0 ?  new WcBuildConf_House4D({growLoopCount:growLoopCount}) :
 			conf.buildType.localeCompare("house5") == 0 ?  new WcBuildConf_House5({growLoopCount:growLoopCount}) :
 			null
 
-			if (buildConf) {
-				const factoryBuilding = new WcBuilding(this.world, buildConf)
-				factoryBuilding.start(conf.x, conf.y);
-			}
-				
-	}
-
-	buildingBase(conf) {
-		const growLoopCount = conf.growLoopCount ? conf.growLoopCount : 10
-
-		const buildConf = conf.buildType == null ? null :
-			conf.buildType.localeCompare("base") == 0 ?  new BuildConf_Base({growLoopCount:growLoopCount}) :
-			conf.buildType.localeCompare("place") == 0 ?  new BuildConf_Place({growLoopCount:growLoopCount}) :
-			null
-
 		if (buildConf) {
-			const factoryBuilding = new FactoryBuilding(this.world, buildConf)
-			factoryBuilding.start(conf.x, conf.y);
+			const factoryBuilding = new WcBuildingFactory(this.world, buildConf)
+			factoryBuilding.start(conf.x, conf.y).then(_ => {
+				if(conf.callback) {
+					conf.callback();
+				}
+			});
 		}
 	}
 
+	setBuildTile(conf) {
+		const tile = this.fm.getTile(conf.x, conf.y);
+
+	}
 
 }
+
+

@@ -204,7 +204,7 @@ City.prototype = {
             const nearNodes = startNode.getNodeConnected(2);
             const arround = startNode.getNodesAroud(param.length, param.alphaStep)
             let arroundNear = arround.map(endNode => {
-                const [dist, node] = endNode.nodeMinDistance(this.gridNodes)
+                const [dist, node] = endNode.nodesMinDistance(this.gridNodes)
                 return [dist, startNode, node];
             })
             arroundNear = arroundNear
@@ -228,7 +228,7 @@ City.prototype = {
             centerNode.push(new CityNode(this.gridNodes[i * step].x, this.gridNodes[i * step].y))
         }
         this.gridNodes.forEach(node => {
-            const movingNode = node.nodeMinDistance(centerNode)[1];
+            const movingNode = node.nodesMinDistance(centerNode)[1];
             movingNode.move(node);
         })
         this.centerNode = centerNode;

@@ -12,10 +12,10 @@ export const RANGE_CONTRAST = [...Array(50)].map((_, x) =>  x * 5 + 5)
 export const RANGE_INVERT = [0, 1]
 export const RANGE_SHADOW = [
     "", 
-    "0px 0px 10px #F00",
-    "10px 10px 10px #0F0",
-    "10px 10px #009",
-    "10px 10px #0009",
+    " drop-shadow(-3px -3px 3px #FFF) drop-shadow(3px -3px 3px #FFF)",
+    " drop-shadow(-3px -3px 5px #FFF) drop-shadow(3px -3px 5px #FFF)",
+    " drop-shadow(-3px -3px 8px #FFF) drop-shadow(3px -3px 8px #FFF)",
+
 ]
 
 
@@ -61,6 +61,7 @@ export const canvasFilterStrToValue = (str) => {
             token[0] == 'S' ? "saturation" :
             token[0] == 'B' ? "brightness" :
             token[0] == 'I' ? "invert" :
+            token[0] == 'R' ? "shadow" :
             null
 
         const value = new Number(token.substring(1))
@@ -70,7 +71,6 @@ export const canvasFilterStrToValue = (str) => {
         }
     })
 
-    // console.log('canvasFilterStrToValue' , conf)
     return conf
 }
 
@@ -101,7 +101,8 @@ export const colorVariation = (source, cFilter) => {
         filter +=" invert(1)";
     }
     if (cFilter.shadow) {
-        filter +=" drop-shadow("+ cFilter.shadow + ")";
+        //filter +=" drop-shadow("+ cFilter.shadow + ")";
+        filter += RANGE_SHADOW[Number(cFilter.shadow)];
     }
     dest.ctx.filter = filter
     try {

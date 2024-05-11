@@ -101,8 +101,6 @@ export class Player {
       if (this.mapX != mapX || this.mapY != mapY ) {
           this.mapX = mapX            
           this.mapY = mapY            
-          // console.log('Change Position', this.x, this.y, this.mapX, this.mapY)
-          // this.world.tilesMatrix.setCenter(this.tileX, this.tileY);
       }
     }
 
@@ -121,12 +119,10 @@ export class Player {
         const currentTile = this.fm.getTile(this.mapX, this.mapY)
         const wantTile = this.fm.getTile(wantX, wantY)
         const lvlDiff = currentTile.lvl - wantTile.lvl
-        // console.log('WantChange', [wantX, wantY], [DX, DY])
         
         if (wantTile.isBlock || Math.abs(lvlDiff) > this.lvlJump) {
           this.wantedX = this.x
           this.wantedY = this.y
-          // console.log("TileBlock")
           return
         }
         
@@ -333,8 +329,15 @@ export class Player {
           synth.triggerAttackRelease("B2", "16n");
   
         }
+      }
 
 
+      clickAction() {
+        /*
+        this.GS.set("TileClickFunction", { 
+            func:'doFunction', do: this.doSelecetNearNodeFunction, callback:callback
+        })
+        */
 
       }
 

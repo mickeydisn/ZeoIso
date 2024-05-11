@@ -297,32 +297,6 @@ export class  City {
 
     }
 
-    /*
-    evalNode (node) {
-        const tile = this.fm.getRoundTile(node.x, node.y).lvl
-        const lvl = tile.lvl;
-        / *
-        if (lvl < this.world.factoryGenerator.waterLvl + 1) {
-            return 0;
-        }
-
-        const density = tile.fDensity;
-        if (density < 196) {
-            return 0;
-        }
-        * /
-
-        const minDistance = node.nodeMeanMinDisance(this.gridNodes);
-        if (density < this.param.mainRoad.length) {
-            return 0;
-        }
-        // if (minDistance < 16) {
-        //     return 0;
-        // }
-        return (density / 255) * minDistance;
-    }
-    */
-
     connectSubRoads () {
         const param = this.param.connectRoad;
         const crossNodes = this.gridNodes.filter(node => {
@@ -332,7 +306,7 @@ export class  City {
             const nearNodes = startNode.getNodeConnected(2);
             const arround = startNode.getNodesAroud(param.length, param.alphaStep)
             let arroundNear = arround.map(endNode => {
-                const [dist, node] = endNode.nodeMinDistance(this.gridNodes)
+                const [dist, node] = endNode.nodesMinDistance(this.gridNodes)
                 return [dist, startNode, node];
             })
             arroundNear = arroundNear
@@ -356,7 +330,7 @@ export class  City {
             centerNode.push(new CityNode(this.gridNodes[i * step].x, this.gridNodes[i * step].y))
         }
         this.gridNodes.forEach(node => {
-            const movingNode = node.nodeMinDistance(centerNode)[1];
+            const movingNode = node.nodesMinDistance(centerNode)[1];
             movingNode.move(node);
         })
         this.centerNode = centerNode;

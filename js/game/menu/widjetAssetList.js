@@ -239,7 +239,6 @@ export class WidjetAssetList extends WidjetActions {
             const currentAssetCanvas =  AssetUtils.colorVariation(cimage, colorConfig)
 
             const colorFilter = AssetUtils.canvasFilterValueToStr(colorConfig)
-            console.log(colorFilter)
             this.currentAssetKey = colorFilter ? this.selectAssetKey + '#' + colorFilter :  this.selectAssetKey
 
             const canvas = canvasBox.append('canvas')

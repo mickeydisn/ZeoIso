@@ -28,6 +28,12 @@
             <script src="./scripts/tiledCanvas.js"></script>
             <script src="./scripts/marked.min.js"></script>
 
+
+            <script src="https://sfxr.me/riffwave.js"></script>
+            <script src="https://sfxr.me/sfxr.js"></script>
+            <script src="https://unpkg.com/tone@14.9.17/build/Tone.js"></script>
+
+
             <link rel="shortcut icon" href="">
             <style>
                 .Menu {
@@ -82,6 +88,70 @@
                 iso.add(Shape.Prism(Point(0,  .4, 0), 2, .2, .1), c.blue);
                 iso.add(Shape.Prism(Point(0, 1.4, 0), 2, .2, .1), c.blue);
 
+                d3.select('body').on('click', _ => {
+                    d3.select('body').on('click', null)
+                    console.log('Hello')
+                    // -----------
+                    
+
+                    let spaceActionNow = 0;
+                    const keyControle = function() {
+                        const now = Date.now();
+                        if (now - spaceActionNow > 200) {
+                            console.log(now)
+                            spaceActionNow = now
+                            // const synth = new window.Tone.PolySynth(window.Tone.Synth).toDestination();
+                            const synth = new window.Tone.MonoSynth(
+                                {
+                                    detune : 0 ,
+                                    oscillator : {
+                                        type : 'square'
+                                    } ,
+                                    filter : {
+                                        Q : 6 ,
+                                        type : 'lowpass' ,
+                                        rolloff : -24
+                                    } ,
+                                    envelope : {
+                                        attack : 0.005 ,
+                                        decay : 0.1 ,
+                                        sustain : 0.9 ,
+                                        release : 1
+                                    } ,
+                                    filterEnvelope : {
+                                        attack : 0.06 ,
+                                        decay : 0.2 ,
+                                        sustain : 0.5 ,
+                                        release : 2 ,
+                                        baseFrequency : 200 ,
+                                        octaves : 7 ,
+                                        exponent : 2
+                                    }
+                                }
+                            ).toDestination();
+                            synth.set({
+                                "volume": -4,
+                            });
+                            const tNow = Tone.now();
+                            //play a middle 'C' for the duration of an 8th note
+                            synth.triggerAttackRelease("B4", "8n");
+                            // synth.triggerAttack("B4");
+                            // synth.triggerRelease(tNow + 1);
+                    
+                        }  
+                    }
+                    let keyInterval = d3.interval(keyControle, 20);
+
+                    /// -------------- /
+
+                })
+                /*
+                const audioCtx = new AudioContext();
+                audioCtx.resume().then(_ => {
+                    console.log("ResumerAudoContext ")
+                })
+                */
+     
 
             </script>
 

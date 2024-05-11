@@ -70,7 +70,7 @@ export class WidjetActionsBuilding extends WidjetActions {
             this.GS.set("WidjetActions.growSize", this.growSize)
             this.GS.get("WidjetActions.currentButt").click()
         })
-
+        /*
         // --------------------------------
         {
             this.contentBox
@@ -96,7 +96,8 @@ export class WidjetActionsBuilding extends WidjetActions {
             // this.contentBox.append('div').classed('cell', true).classed('empty', true)
             // this.contentBox.append('div').classed('cell', true).classed('empty', true)
             this.contentBox.append('div').classed('cell', true).classed('empty', true)
-       }
+       }    
+       */
 
         // --------------------------------
 
@@ -105,17 +106,55 @@ export class WidjetActionsBuilding extends WidjetActions {
         {
             this.contentBox
                 .append('div').classed('row', true).classed('subtitel', true)
-                .text("Building House3")
+                .text("Building House")
             this.firstAction = new ButtTileAction(
                 this.GS, this.contentBox,
                 "House_3", {
                     func:"wcBuild", buildType:'house3', growLoopCount:10
                 })
+            this.firstAction = new ButtTileAction(
+                this.GS, this.contentBox,
+                "House_3a", {
+                    func:"wcBuild", buildType:'house3a', growLoopCount:10
+                })                
+            this.firstAction = new ButtTileAction(
+                this.GS, this.contentBox,
+                "House_3b", {
+                    func:"wcBuild", buildType:'house3b', growLoopCount:10
+                })                
+            // this.contentBox.append('div').classed('cell', true).classed('empty', true)
+            // this.contentBox.append('div').classed('cell', true).classed('empty', true)
+            this.contentBox.append('div').classed('cell', true).classed('empty', true)
+        }
+
+        // --------------------------------
+        {
+            this.contentBox
+                .append('div').classed('row', true).classed('subtitel', true)
+                .text("Building Mini Base")           
             this.firstAction = new ButtTileAction( 
                 this.GS, this.contentBox,
-                "House_4", {
-                    func:"wcBuild", buildType:'house4', growLoopCount:10
+                "House_4a", {
+                    func:"wcBuild", buildType:'house4a', growLoopCount:10
                 })
+            this.firstAction = new ButtTileAction( 
+                this.GS, this.contentBox,
+                "House_4b", {
+                    func:"wcBuild", buildType:'house4b', growLoopCount:10
+                })
+            this.firstAction = new ButtTileAction( 
+                this.GS, this.contentBox,
+                "House_4D", {
+                    func:"wcBuild", buildType:'house4D', growLoopCount:10
+                })
+            // this.contentBox.append('div').classed('cell', true).classed('empty', true)
+        }
+
+        // --------------------------------
+        {
+            this.contentBox
+                .append('div').classed('row', true).classed('subtitel', true)
+                .text("Building Big Base")
             this.firstAction = new ButtTileAction( 
                 this.GS, this.contentBox,
                 "House_5", {
@@ -125,7 +164,8 @@ export class WidjetActionsBuilding extends WidjetActions {
             // this.contentBox.append('div').classed('cell', true).classed('empty', true)
             this.contentBox.append('div').classed('cell', true).classed('empty', true)
         }
-
+        
+        
         
 
 

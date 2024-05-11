@@ -85,7 +85,7 @@ class Node{
         return distanceMap;
     }
 
-    nodeMinDistance(nodes) {
+    nodesMinDistance(nodes) {
         return this.nodesDistance(nodes)[0];
     }
 

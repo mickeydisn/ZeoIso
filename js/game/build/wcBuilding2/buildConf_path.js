@@ -12,6 +12,18 @@ export class WcBuildConf_Path extends AbstractWcBuildConf {
             'P1' : 6,
             'P2' : 8,
             'P3' : 10,
+
+
+            'Br':0,
+            'Bl':0,
+            'Bi':0,
+            'Bo':0,
+            '0':0,
+
+            'S0':0,
+
+            'Wo':0,
+            'Wi':0,
         }
 
         this.faceLinks = [
@@ -19,6 +31,30 @@ export class WcBuildConf_Path extends AbstractWcBuildConf {
 
             ['X', 'X', 1],
             
+
+            ['S0', 'P1', 1],
+            ['P1', 'S0', 1],
+
+            ['X', 'S0', 1],
+            ['X', 'Br', 1],
+            ['X', 'Bl', 1],
+            ['X', 'Bi', 1],
+            ['X', 'Bo', 1],
+            ['X',  '0', 1],
+            ['X', 'Wo', 1],
+            ['X', 'Wi', 1],
+
+            ['S0', 'X', 1],
+            ['Br', 'X', 1],
+            ['Bl', 'X', 1],
+            ['Bi', 'X', 1],
+            ['Bo', 'X', 1],
+            [ '0', 'X', 1],
+            ['Wo', 'X', 1],
+            ['Wi', 'X', 1],
+
+
+
             /*
             [ 'X', 'X0', 1],
             ['X0', 'X', 1],
@@ -62,17 +98,25 @@ export class WcBuildConf_Path extends AbstractWcBuildConf {
     }
 
     get __TILE_START() { return { 
-        face: ['P2', 'P2', 'P2', 'P2'],
+        face: ['P1', 'P1', 'P1', 'P1'],
         items: [
-            { weight:1, color: [52, 52, 52],  allowMove:true,  empty:true, isFrise: true, functions: [
+            { weight:1, color: [52, 52, 52],  allowMove:true, isFrise: true, functions: [
                 // ...actionsEmpty
+                ], items: [
+                    {key: "mushroom_red", keyR:2, sufix:"#H0_C130_B110_I1" },
             ]},
-            { weight:1, color: [62, 62, 68],  allowMove:true,  empty:true, isFrise: true, functions: [
+            { weight:1, color: [62, 62, 68],  allowMove:true, isFrise: true, functions: [
                 // ...actionsEmpty
+                ], items: [
+                    {key: "mushroom_red", keyR:2, sufix:"#H0_C130_B110_I1" },
             ]},
-            { weight:1, color: [62, 68, 68],  allowMove:true,  empty:true, isFrise: true, functions: [
+            { weight:1, color: [62, 68, 68],  allowMove:true,  isFrise: true, functions: [
                 // ...actionsEmpty
-            ]},
+                ], items: [
+                    {key: "mushroom_red", keyR:2, sufix:"#H0_C130_B110_I1" },
+                    
+                ],
+            }
         ]
     }}
 
@@ -86,95 +130,12 @@ export class WcBuildConf_Path extends AbstractWcBuildConf {
 
 
         return [
-            /*
-            // X - null
-            {
-                face: ['X', null, null, null],
-                items: [
-                    { weight:0, colorT: [255, 96, 96], allowMove:true,  empty:true, functions: [
-                        ...actionsEmpty
-                    ]},
-                ]
-            }, {
-                face: ['X', 'X', null, null],
-                items: [
-                    { weight:0, colorT: [96, 196, 96],  allowMove:true,  empty:true, functions: [
-                        ...actionsEmpty
-                    ]},
-                ]
-            }, {
-                face: ['X', null, 'X', null],
-                items: [
-                    { weight:0, colorT: [96, 96, 196],  allowMove:true,  empty:true, functions: [
-                        ...actionsEmpty
-                    ]},
-                ]
-            }, {
-                face: ['X', 'X', 'X', null],
-                items: [
-                    { weight:0, colorT: [96, 196, 196],  allowMove:true,  empty:true, functions: [
-                        ...actionsEmpty
-                    ]},
-                ]
-            }, 
-            */
+            
             // == X ===
             {
                 face: ['X', 'X', 'X', 'X'],
                 items: [
-                    { weight:0, colorT: [64, 64, 64],  allowMove:true,  empty:true, functions: [
-                        ...actionsEmpty
-                    ]},
-                ]
-            }, 
-
-            /*
-            // == P1 - X ===
-            {
-                face: ['P1', 'X', 'X', 'X'],
-                items: [
-                    { weight:0, color: [32, 32, 32],  allowMove:true,  empty:true, isFrise: true, functions: [
-                        ...actionsEmpty
-                    ]},
-                ]
-            }, 
-
-            {
-                face: ['P1', 'X', 'P1', 'X'],
-                items: [
-                    { weight:0, color: [32, 32, 32],  allowMove:true,  empty:true, isFrise: true, functions: [
-                        ...actionsEmpty
-                    ]},
-                ]
-            }, 
-
-
-            {
-                face: ['P1', 'P1', 'X', 'X'],
-                items: [
-                    { weight:0, color: [32, 32, 32],  allowMove:true,  empty:true, isFrise: true, functions: [
-                        ...actionsEmpty
-                    ]},
-                ]
-            }, 
-
-
-            {
-                face: ['P1', 'P1', 'P1', 'X'],
-                items: [
-                    { weight:0, color: [32, 32, 32],  allowMove:true,  empty:true, isFrise: true, functions: [
-                        ...actionsEmpty
-                    ]},
-                ]
-            }, 
-
-            */
-
-            // == P1 ===
-            {
-                face: ['P1', 'P1', 'P1', 'P1'],
-                items: [
-                    { weight:1, color: [52, 52, 52],  allowMove:true,  empty:true, isFrise: true, functions: [
+                    { weight:0, color: [52, 52, 52],  allowMove:true,  empty:true, isFrise: true, functions: [
                         ...actionsEmpty
                     ]},
                     { weight:1, color: [62, 62, 68],  allowMove:true,  empty:true, isFrise: true, functions: [
@@ -187,47 +148,31 @@ export class WcBuildConf_Path extends AbstractWcBuildConf {
             }, 
 
 
-            /*
-            // == P2 - P1 ===
+            // == P1 ===
             {
-                face: ['P2', 'P1', 'P1', 'P1'],
+                face: ['P1', 'P1', 'P1', 'P1'],
                 items: [
-                    { weight:0, color: [32, 32, 32],  allowMove:true,  empty:true, isFrise: true, functions: [
-                        ...actionsEmpty
+                    { weight:1, color: [52, 52, 52],  allowMove:true, isFrise: true, functions: [
+                        // ...actionsEmpty
+                        ], items: [
+                            {key: "mushroom_red", keyR:2, sufix:"#H0_C130_B110_I1" },
                     ]},
-                ]
-            }, 
-
-            {
-                face: ['P2', 'P1', 'P2', 'P1'],
-                items: [
-                    { weight:0, color: [32, 32, 32],  allowMove:true,  empty:true, isFrise: true, functions: [
-                        ...actionsEmpty
+                    { weight:1, color: [62, 62, 68],  allowMove:true, isFrise: true, functions: [
+                        // ...actionsEmpty
+                        ], items: [
+                            {key: "mushroom_red", keyR:2, sufix:"#H0_C130_B110_I1" },
                     ]},
-                ]
-            }, 
-
-
-            {
-                face: ['P2', 'P2', 'P1', 'P1'],
-                items: [
-                    { weight:0, color: [32, 32, 32],  allowMove:true,  empty:true, isFrise: true, functions: [
-                        ...actionsEmpty
-                    ]},
+                    { weight:1, color: [62, 68, 68],  allowMove:true,  isFrise: true, functions: [
+                        // ...actionsEmpty
+                        ], items: [
+                            {key: "mushroom_red", keyR:2, sufix:"#H0_C130_B110_I1" },
+                            
+                        ],
+                    }
                 ]
             }, 
 
 
-            {
-                face: ['P2', 'P2', 'P2', 'P1'],
-                items: [
-                    { weight:0, color: [32, 32, 32],  allowMove:true,  empty:true, isFrise: true, functions: [
-                        ...actionsEmpty
-                    ]},
-                ]
-            }, 
-            */
-            
             // == P2 ===
             {
                 face: ['P2', 'P2', 'P2', 'P2'],

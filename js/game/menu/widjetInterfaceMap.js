@@ -185,10 +185,6 @@ export class WidjetInterfaceMap {
   initTiles() {
     var size =  this.size;
     var canvas = this.createEmptyCanvas(size, size, "canvasFlore");
-    console.log("createEmptyCanvas", size, canvas)
-
-    console.log(canvas.node())
-    console.log(canvas[0])
 
     this.tiledFlore = new TiledCanvas(canvas.node(), {
         chunkSize: 128,       //The amount of pixels each chunk is wide and high
@@ -199,27 +195,6 @@ export class WidjetInterfaceMap {
       });
     this.tiledFlore.requestUserChunk = this.requestFloreChunk.bind(this);
     
-    /*
-    for (var x = -5; x < 5; x +=1){
-      console.log('loading Flore', x)
-      for (var y = -5; y < 5; y +=1)
-        this.tiledFlore.requestChunk(x,y)
-    }
-    */
-    
-    //this.tiledFlore.execute();
-    /* 
-    var canvas = this.createEmptyCanvas(size, size, "canvasBuilding");
-    this.tiledBuilding = new TiledCanvas(canvas.node(), {
-        chunkSize: 128,       //The amount of pixels each chunk is wide and high
-        fadeTime: 1000 ,         //The time images fade when loading from external source
-        maxLoadedChunks: 20 * 20 * 4    // We'll try never loading more than this amount of chunks if possible
-    });
-    this.tiledBuilding.requestUserChunk = this.requestBuildingChunk.bind(this);
-    this.reDrawBuilding();
-    this.tiledBuilding.execute();
-    */
-
   }
 
   moveP(p){
