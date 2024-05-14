@@ -28,7 +28,13 @@
 
 
 body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
+
   background-color: #DEDEDE;
   /* background-color: #222222; */
   display: flex;
@@ -1122,9 +1128,8 @@ body {
 
 
 .clickMove div {
-  width: 10em;
-  height: 10em;
-  border-radius: 10em;
+  width: 15em;
+  height: 15em;
   position: absolute;
   z-index: 41;
 }
@@ -1134,14 +1139,19 @@ body {
 
 }
 .clickMove div#ArrowUp {
-  top: 1em; right: 2em;
+  top: 0em; right: 0em;
+  border-radius: 0  0 0 10em;
+
 }
 .clickMove div#ArrowRight {
-  bottom: 1em; right: 2em;
+  bottom: 0em; right: 0em;
+  border-radius:  10em 0 0 0;
 }
 .clickMove div#ArrowDown {
-  bottom: 1em; left: 2em;
+  bottom: 0em; left: 0em;
+  border-radius: 0 10em 0 0;
 }
 .clickMove div#ArrowLeft {
-  top: 1em; left: 2em;
+  top: 0em; left: 0em;
+  border-radius: 0 0 10em  0;
 }
