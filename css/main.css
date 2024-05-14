@@ -28,6 +28,7 @@
 
 
 body {
+  user-select: none;
   background-color: #DEDEDE;
   /* background-color: #222222; */
   display: flex;

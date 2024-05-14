@@ -127,9 +127,8 @@ export class Main {
                 
             ['ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft'].forEach(axe => {
                 this.divClickMove.select('#' + axe)
-                .on('mousedown' , _ => { this.clickPress[axe] = true })
-                .on('mouseup' , _ => { this.clickPress[axe] = false })
-                .on('mouseout' , _ => { this.clickPress[axe] = false })
+                .on('touchstart' , _ => { this.clickPress[axe] = true })
+                .on('touchend' , _ => { this.clickPress[axe] = false })
                 
             })
         }
