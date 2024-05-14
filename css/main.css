@@ -1117,20 +1117,21 @@ body {
   left: 0px;
   top: 0px;
   position: absolute;
-  background: #F005;
 }
 
 
 .clickMove div {
   width: 10em;
   height: 10em;
-  background: #000;
   border-radius: 10em;
   position: absolute;
   z-index: 41;
 }
 
+.clickMove div:hover {
+  background: #0006;
 
+}
 .clickMove div#ArrowUp {
   top: 1em; right: 2em;
 }

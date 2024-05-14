@@ -129,6 +129,8 @@ export class Main {
                 this.divClickMove.select('#' + axe)
                 .on('mousedown' , _ => { this.clickPress[axe] = true })
                 .on('mouseup' , _ => { this.clickPress[axe] = false })
+                .on('mouseout' , _ => { this.clickPress[axe] = false })
+                
             })
         }
 
