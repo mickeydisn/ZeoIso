@@ -32,7 +32,7 @@ export class WidjetInterfaceMap {
         this.init();
         this.refreshRate = 0;
 
-        this.GS.sub("TileInfo.position", "WidjetInterfaceMap", this.moveP.bind(this)) 
+        // this.GS.sub("TileInfo.position", "WidjetInterfaceMap", this.moveP.bind(this)) 
 
 
     }
@@ -69,10 +69,7 @@ export class WidjetInterfaceMap {
         
        const menuInteface = this.mainDiv.select('.widjetMenuBox#mainInterfaceMap')
             .style('width', this.size + 'px')
-            // .style('height', this.size + 'px')
-            // .style('justify-content', 'center')
-            // .style('align-items', 'center')
-        // this.contentDiv = menuInteface.insert("div",":first-child")
+
         this.contentDiv = menuInteface.append("div")
                 .attr('id', 'content')
 
@@ -91,25 +88,14 @@ export class WidjetInterfaceMap {
             thisRef.updateZoom(zoom)
           })
         })
-        /*
-        this.canvas = this.contentDiv.append('canvas')
-            .attr('id', "MiniMapCanvas")
-            .attr('width', this.size)
-            .attr('height', this.size)
-            .style('width', this.size + 'px')
-            .style('height', this.size + 'px')
 
-        this.ctx = this.canvas.node().getContext('2d')
-        this.ctx.webkitImageSmoothingEnabled = false;
-        this.ctx.mozImageSmoothingEnabled = false;
-        this.ctx.imageSmoothingEnabled = false;
 
-        document.getElementById('MiniMapCanvas').addEventListener('click', function(event) { 
-            console.log("========MiniMap Click", event)
-            this.onClick(event.offsetX, event.offsetY)
-        }.bind(this), false);
-        */
-
+        this.mainDiv.select('input').on('click', _ => {
+          console.log('CLICK')
+          const centreX = this.world.tilesMatrix.x;
+          const centreY = this.world.tilesMatrix.y;
+          this.moveP([centreX, centreY])
+      })
     }
 
     onClick(clickX, clickY) {
@@ -149,34 +135,7 @@ export class WidjetInterfaceMap {
 
     var rect = this.contentDiv.node().parentNode.getBoundingClientRect();
     this.contentDiv
-      // .style('top', (rect.height / 2) + 'px')
-      // .style('left', (rect.width / 2) + 'px')
-    
-    /*
-    this.selectedObject = this.contentDiv.append('div')
-      .style('position', 'absolute')
-      .style('z-index', '100')
-      .style('border', '.5px solid #FFF')
-      .style('height', '17px')
-      .style('width', '17px')
-    */
-    /*
-    var clickSurface = this.createEmptyCanvas(this.world.size, this.world.size, "canvasClickInterface");
-    clickSurface.style('z-index', '200');
-    */
-    /*
-    var funcClickControle = this.clickControle.bind(this);
-    // var funcZoomControle = this.zoomControle.bind(this);
-    clickSurface
-      .on('click', function () {
-        funcClickControle(d3.mouse(this));
-      })
-      // .on("wheel", function(d){
-      //   funcZoomControle(d3.event.wheelDelta > 0);
-      // });
 
-    */
-    // this.center();
     this.move(0, 0);
 
   }
@@ -228,112 +187,6 @@ export class WidjetInterfaceMap {
     this.update();
   }
 
-  /*
-
-  clearBuilding() {
-    this.tiledBuilding.clearAll();
-  }
-
-  drawCity (city) {
-    city.draw(this.tiledBuilding.context, this.world.zoom);
-  }
-
-  drawBuilding (build) {
-    if (build.imageData != null) {
-      var z = 16 / this.world.zoom;
-      var xDisplay = build.x * z;
-      var yDisplay = build.y * z;
-      this.tiledBuilding.context.drawImage(build.imageData, xDisplay, yDisplay, z, z);
-    }
-  }
-
-  drawAllBuilding () {
-    console.log("drawAllBuilding")
-    this.clearBuilding();
-    var world = this.world;
-    if (world.factoryBuilding)
-      world.factoryBuilding.openList.forEach(function (build) {
-        world.interfaceMap.drawBuilding(build);
-      })
-    if (world.factoryCity)
-      world.factoryCity.openList.forEach(function (build) {
-        world.interfaceMap.drawCity(build);
-      })
-
-    this.reDrawBuilding();
-  }
-
-  reDrawBuilding() {
-    this.focalX = this.x;
-    this.focalY = this.y;
-    var x = Math.round(this.x / (this.world.zoom));
-    var y = Math.round(this.y / (this.world.zoom));
-    this.tiledBuilding.drawingRegion(
-      -512 * 2 + this.x + 512, // + thix.x / (this.world.zoom * 128), 
-      -512 * 2 + this.y + 512, 
-      512 * 2 + this.x + 512,
-      512 * 2 + this.y + 512, 
-    );
-    
-    this.tiledBuilding.execute();
-  }
-
-  
- appliedZoomLvl(n, grain=null) {
-        var size = this.world.size;
-        var half = size / 2;
-        var x = (this.x + half) * this.world.zoom; 
-        var y = (this.y + half) * this.world.zoom;
-
-        // this.world.appliedZoomLvl(n);
-        // if (grain)
-        //   this.world.appliedGrainLvl(grain);
-  
-        // this.world.interfaceMenu.ButtomZoomLvl.value.text(1 / this.world.zoom);
-
-        this.x = x / this.world.zoom - half; 
-        this.y = y / this.world.zoom - half;
-
-        this.clearFlore();
-        this.clearBuilding();
-        this.drawAllBuilding();
-  }
-
-
-
-  appliedZoom(n) {
-        var size = this.world.size;
-        var half = size / 2;
-        var x = (this.x + half) * this.world.zoom; 
-        var y = (this.y + half) * this.world.zoom;
-
-        this.zoom = n
-
-        // this.world.appliedZoom(n)
-        // this.world.interfaceMenu.ButtomZoomLvl.value.text(1 / this.world.zoom);
-
-        this.x = x / this.world.zoom - half; 
-        this.y = y / this.world.zoom - half;
-
-        this.clearFlore();
-        /*
-        this.clearBuilding();
-        this.drawAllBuilding();
-        * /
-  }
-  appliedGrain(n) {
-      this.grain = n
-      // this.world.appliedGrain(n)
-      // this.world.interfaceMenu.ButtomZoomGrain.value.text(this.world.grain);
-
-      this.clearFlore()
-      /*
-      this.clearBuilding();
-      this.drawAllBuilding();
-      * /
-  }
-*/
-
   drawSelectedCase (){
 
     var boxSize = 16 / this.zoomOut;
@@ -356,32 +209,6 @@ export class WidjetInterfaceMap {
 
   }
 
-  /*
-  clickControle(cord) {
-    var boxSize = 16 / this.world.zoom;
-    var x = Math.round(cord[0] / this.zoom) + this.x;
-    var y = Math.round(cord[1] / this.zoom) + this.y;
-    x -= x >= 0 ? x % boxSize : x % boxSize + boxSize;
-    y -= y >= 0 ? y % boxSize : y % boxSize + boxSize;
-    this.selectX = x / boxSize;
-    this.selectY = y / boxSize;
-
-    this.world.interfaceMenu.onClickTile(this.selectX, this.selectY);
-    this.drawSelectedCase();
-
-  }
-
-  zoomControle(uup) {
-    if (uup && this.zoom < 4) {
-      this.zoom *= 1 + this._scale_speed;
-    }  
-    if (!uup && this.zoom > 0.5) {
-      this.zoom /= 1 + this._scale_speed;
-    }  
-    this.move();
-  }
-
-  */
 
   requestFloreChunk (cx, cy, callback){
     var size = this.tiledFlore.settings.chunkSize;
@@ -425,19 +252,5 @@ export class WidjetInterfaceMap {
     callback(canvas);
   }
 
-/*
-  requestBuildingChunk(cx, cy, callback){
-    var size = this.tiledBuilding.settings.chunkSize;
-    var imgData = new ImageData(size, size);
-
-    var canvas = document.createElement("canvas");
-    canvas.width = size;
-    canvas.height = size;
-    canvas.getContext("2d").putImageData(imgData, 0, 0);
-    callback(canvas);
-  }
-
-
-*/
 
 }

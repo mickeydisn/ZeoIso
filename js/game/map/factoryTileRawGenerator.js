@@ -89,6 +89,39 @@ export class FactoryTileRawGenerator {
 
   /* --- */
 
+  getRawLvl1(x, y, zoom=1) {    
+    const fw = 1/ 200;
+    let lvl = 0;
+
+    [x, y] = this._zoom_and_grain(x, y, zoom);
+
+    lvl += this._noise(fw * x, fw * y) * 8;
+    lvl /= 8 // + 4 + 1 + 1/4 // + 1/8
+    return lvl;
+  }
+  getRawLvl2(x, y, zoom=1) {    
+    const fa = 1/ 20;
+    [x, y] = this._zoom_and_grain(x, y, zoom);
+
+    let lvl = 0;
+    lvl += this._noise(fa * x, fa * y) * 4;
+
+    lvl /= 4 // + 1/8
+    return lvl;
+  }
+  getRawLvl3(x, y, zoom=1) {    
+    const fw = 1/ 200;
+    const fa = 1/ 20;
+    let lvl = 0;
+
+    [x, y] = this._zoom_and_grain(x, y, zoom);
+
+    lvl += this._noise(fw * x, fw * y) * 8;
+    lvl += this._noise(fa * x, fa * y) * 4;
+    lvl /= 8 + 4  // + 1/8
+    return lvl;
+  }
+
 
   getRawLvl(x, y, zoom=1) {    
     const fw = 1/ 200;

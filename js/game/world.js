@@ -12,6 +12,7 @@ import { TilesActions } from './build/tilesActions.js';
 import { TilesMatrix } from './map/tilesMatrix.js'
 import { SIZE20 } from './mapIso/interfaceIso.js';
 import { Player } from './player.js';
+import { CustomBuilding } from './build/customBuilding/mainCitySpawn.js';
 
 export class World {
 
@@ -50,6 +51,15 @@ export class World {
 
         this.player.setCenter(1036, 341)
         // new WorldCv(this).start()
+
+
+        this.player.setCenter(0, 0)
+        const centreCity = new CustomBuilding(this, {})
+        centreCity.start(10, 0)
+        const centreCity2 = new CustomBuilding(this, {})
+        centreCity2.start(-10, 0)
+
+        // new WorldWcBuilding(this).start()
 
         this.player.setCenter(2000, 400)
         // new WorldStart(this).start()

@@ -39,6 +39,9 @@ body {
   margin: 0px;
 
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  width: 100%;
+  height: 100%;
+  position: fixed;
 }
  
 #FPS {
@@ -93,7 +96,24 @@ body {
   position: absolute;
 }
 
+/* --------------- */
 
+#mainMiniWorld {
+  background-color: #DEDEDE99;
+  width: calc(100% + 80px);
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  left: -2.6rem;
+  top: 0px;
+  align-items: center;
+  padding: 0;
+  overflow: hidden;
+  z-index: 49;
+}
+
+
+/* --------------- */
 
 #mainInterfaceMap  {
   background-color: #DEDEDE99;
@@ -373,11 +393,11 @@ body {
   width: calc(100vw - 80px);
   height: 100vh;
   top: 0px;
-  left: 40px;
+  left: 2.6rem;
 }
 
 .buttMenuBox > label {
-  right:-40px;
+  right:-2.6rem;
 }
 
 .buttMenuBox  pre {
@@ -388,58 +408,62 @@ body {
 
 .buttMenuBox#miniMap > label {
   top: calc(70px);
-  left: -40px;
+  left: -2.6rem;
+}
+.buttMenuBox#miniWorld > label {
+  top: calc(70px + 50px);
+  left: -2.6rem;
 }
 
 .buttMenuBox#playerActionAct > label {
-  top: calc(70px + 50px);
-  left: -40px;
+  top: calc(70px + 50px + 50px);
+  left: -2.6rem;
 }
 
 .buttMenuBox#playerActionAct > div {
   top: calc(70px + 50px);
   left: 0px;
   width: 4px;
-  height: 40px;
+  height: 2.6rem;
   padding: 0px;
   margin: 0px;
 }
 
 .buttMenuBox#settingAction > label {
   top: 0px;
-  right:-40px;
+  right:-2.6rem;
 }
 
 
 .buttMenuBox#tileInfoAction > label {
   top: calc(70px);
-  right:-40px;
+  right:-2.6rem;
 }
 
 .buttMenuBox#playerAction > label {
   top: calc(70px + 50px);
-  right:-40px;
+  right:-2.6rem;
 }
 
 
 .buttMenuBox#achivementAction > label {
   top: calc(70px + 50px + 50px);
-  right:-40px;
+  right:-2.6rem;
 }
 
 
 .buttMenuBox#floorAction > label {
   top: calc(70px + 50px + 250px);
-  right:-40px;
+  right:-2.6rem;
 }
 .buttMenuBox#tileAsset > label {
   top: calc(70px + 50px + 250px + 50px);
-  right:-40px;
+  right:-2.6rem;
 }
 
 .buttMenuBox#buildingAction > label {
   top: calc(70px + 50px + 250px + 50px + 50px);
-  right:-40px;
+  right:-2.6rem;
 }
 
 
@@ -477,11 +501,11 @@ body {
   cursor: pointer;
 
   background-color: #898989;
-  height: 30px;
-  width: 30px;
+  height: 2.4rem;
+  width: 2.4rem;
   margin-top:5px;
   margin-right:5px;
-  font-size: 1.1em;
+  font-size: 1.8rem;
   transition-duration: .5s;
 }
 
@@ -489,9 +513,9 @@ body {
   background-color: #898989;
   margin-top:0px;
   margin-right:0px;
-  height: 40px;
-  width: 40px;
-  font-size: 1.6em;
+  height: 2.6rem;
+  width: 2.6rem;
+  font-size: 1.9rem;
   transition-duration: .5s;
 }
 
@@ -499,9 +523,9 @@ body {
   background-color: #DEDEDE;
   margin-top:0px;
   margin-right:0px;
-  height: 40px;
-  width: 40px;
-  font-size: 1.6em;
+  height: 2.6rem;
+  width: 2.6rem;
+  font-size: 1.9rem;
   transition-duration: .5s;
 }
 
@@ -557,7 +581,7 @@ body {
 
 
 .widjetMenuBox#control {
-  width: 40px;
+  width: 2.6rem;
   background-color: #0000;
 }
 
@@ -1016,6 +1040,11 @@ body {
   font-size: .9em;
   font-weight: 900;
   transition: all .3s;
+  border: 1px solid #333;
+  margin: .2rem 0;
+  padding: 0 .4rem;
+  width: 100%;
+  text-align: left;
 }
 
 .isoDivBox >  .content > .stepList > div:hover { 
@@ -1056,8 +1085,61 @@ body {
 
 .isoDivBox >  .content > .paramDiv .form-control > input{
   margin: 0 0 0 1em;
+  font-size: 1.2rem;
+  padding: .4rem;
+  background: #DEDEDE;
+  font-weight: bold;
 }
 .isoDivBox >  .content > .paramDiv .form-control > select{
   margin: 0 0 0 1em;
+  font-size: 1.2rem;
+  padding: .4rem;
+  background: #DEDEDE;
+  font-weight: bold;
+}
+
+.isoDivBox >  .content > .paramDiv .form-control > input:focus-visible {
+  outline: #333 auto 1px
+}
+
+.isoDivBox >  .content > .paramDiv .form-control > select:focus-visible {
+  outline: #333 auto 1px
 }
   
+
+/* ----------------------------------------------- */
+/* CLICK MOVE
+/* ----------------------------------------------- */
+
+.clickMove {
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  background: #F005;
+}
+
+
+.clickMove div {
+  width: 10em;
+  height: 10em;
+  background: #000;
+  border-radius: 10em;
+  position: absolute;
+  z-index: 41;
+}
+
+
+.clickMove div#ArrowUp {
+  top: 1em; right: 2em;
+}
+.clickMove div#ArrowRight {
+  bottom: 1em; right: 2em;
+}
+.clickMove div#ArrowDown {
+  bottom: 1em; left: 2em;
+}
+.clickMove div#ArrowLeft {
+  top: 1em; left: 2em;
+}

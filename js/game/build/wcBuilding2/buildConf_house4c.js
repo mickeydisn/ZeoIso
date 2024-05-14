@@ -89,9 +89,12 @@ export class WcBuildConf_House4c extends AbstractWcBuildConf {
         // this.WALL_PREFIX = "wWllWood"
         this.WALL_PREFIX = "wall"
 
-        this.ROOF_SUFFIX = '#H0_S100_C100_B100' // '#H190_S75_C75_B125'
+        // this.ROOF_SUFFIX = '#H0_S100_C100_B100' // '#H190_S75_C75_B125'
         // this.WALL_SUFFIX = '#H0_S100_C100_B100' // '#H200_S20_C135_B105'
-        this.WALL_SUFFIX = '#H0_S120_C70_B115'
+        // this.WALL_SUFFIX = '#H0_S120_C70_B115'
+        this.ROOF_SUFFIX = '#H0_S100_C100_B100' // '#H190_S75_C75_B125'
+        this.WALL_SUFFIX = '#H170_S120_C70_B115' // '#H200_S20_C135_B105'
+
     }
 
     get __TILE_START() { return {  

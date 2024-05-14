@@ -1,4 +1,6 @@
 import { CustomBuilding } from "../build/customBuilding/mainCitySpawn.js"
+import { Maze } from "../build/maze/maze.js"
+import { PathFactory } from "../build/path.js"
 import { CityTileNode } from "../build/wcCity/cityTileNode.js"
 
 

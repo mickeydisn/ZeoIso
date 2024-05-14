@@ -3,6 +3,18 @@ key : 'name of asset in loader '
 near : open position in near tile[ NW, NE , SE , SW ]
 */
 
+import { WcBuildConf_Base3 } from "./buildConf_base3.js";
+import { WcBuildConf_BaseBorder3 } from "./buildConf_baseBorder3.js";
+import { WcBuildConf_House3 } from "./buildConf_house3.js";
+import { WcBuildConf_House3a } from "./buildConf_house3a.js";
+import { WcBuildConf_House3b } from "./buildConf_house3b.js";
+import { WcBuildConf_House4D } from "./buildConf_house4D.js";
+import { WcBuildConf_House4a } from "./buildConf_house4a.js";
+import { WcBuildConf_House4b } from "./buildConf_house4b.js";
+import { WcBuildConf_House4c } from "./buildConf_house4c.js";
+import { WcBuildConf_House5 } from "./buildConf_house5.js";
+import { WcBuildConf_House6a } from "./buildConf_house6a.js";
+import { WcBuildConf_Place3 } from "./buildConf_place3.js";
 import { WcBuildTile } from "./wcBuildTile.js";
 
 // ====================================================
@@ -15,10 +27,28 @@ export class AbstractBuilding {
         this.fm = world.factoryMap;
         this.conf = conf; 
 
+        // Create by Child
+        this._wcBuildChilds = []
+
+
+        // Use on propagation
         this.allTileBuildingList = []
         // this.openList = []
     }
+
+
+    addChild(wcBuild) {
+        if (!this._wcBuildChilds.includes(wcBuild)) {
+            this._wcBuildChilds.push(wcBuild)
+        }
+    }
+    removeChild(wcBuild) {
+        const idx = this._wcBuildChilds.indexOf(wcBuild)
+        if (idx) this._wcBuildChilds.slice(idx, 1);
+    }
+
 }
+
 
 export class WcBuildingFactory extends AbstractBuilding{
 
@@ -38,7 +68,12 @@ export class WcBuildingFactory extends AbstractBuilding{
         const buildTile = new WcBuildTile(this.world, this, x, y, 0)
         const validBuild = buildTile.pickTestAndUndo(this.conf.TILE_START_OPTIONS)
         // const validBuild = buildTile.pickAndApply(this.conf.TILE_START_OPTIONS)
-        
+        if (!validBuild) {
+            this._wcBuildChilds.forEach(t => {
+                t.removeBuilding()
+
+            })
+        }
         // buildTile.tile.wcBuild = null
         return validBuild
     }
@@ -56,18 +91,18 @@ export class WcBuildingFactory extends AbstractBuilding{
         if (!this.mainTile.pickAndApply(this.conf.TILE_START_OPTIONS)) {
             console.log("== Not posible to build")
             this.mainTile.tile.wcBuild = null
-            return
+            return false
         }
 
         console.log('== Start Building 2', this.conf.growLoopCount)
-
-        this.updateAllListWithNearBuilding(this.mainTile)
+        // console.log(this.mainTile)
+        this.updateAllListWithnearWcBuild(this.mainTile)
 
         // console.log(this.openList)
         // this.openList = this.openList.sort((a, b) => a.score - b.score)
 
         for (let it = 0; it < this.conf.growLoopCount; it++) {
-            console.log("-------------------------------", it , "-----------------")
+            // console.log("-------------------------------", it , "-----------------")
             await new Promise(resolve => setTimeout(resolve, 50));
 
             // const sfxr = require("jsfxr").sfxr;
@@ -79,7 +114,7 @@ export class WcBuildingFactory extends AbstractBuilding{
                 const popBuildTile = this.forcedList.shift();
     
                 if (popBuildTile.randomConfig(0)) {
-                    this.updateAllListWithNearBuilding(popBuildTile)
+                    this.updateAllListWithnearWcBuild(popBuildTile)
                 }
 
                 continue;
@@ -91,7 +126,7 @@ export class WcBuildingFactory extends AbstractBuilding{
                 const popBuildTile = openList.shift();
     
                 if (popBuildTile.randomConfig(1)) {
-                    this.updateAllListWithNearBuilding(popBuildTile)
+                    this.updateAllListWithnearWcBuild(popBuildTile)
                 }
 
                 continue;
@@ -100,7 +135,7 @@ export class WcBuildingFactory extends AbstractBuilding{
         }
 
         for (let it = 0; it < this.conf.endLoopMax; it++) {
-            console.log("-------------------------------", it , "------------=====")
+            // console.log("-------------------------------", it , "------------=====")
             await new Promise(resolve => setTimeout(resolve, 50));
             
             // const sfxr = require("jsfxr").sfxr;
@@ -114,7 +149,7 @@ export class WcBuildingFactory extends AbstractBuilding{
                 const popBuildTile = this.forcedList.shift();
     
                 if (popBuildTile.randomConfig(0)) {
-                    this.updateAllListWithNearBuilding(popBuildTile)
+                    this.updateAllListWithnearWcBuild(popBuildTile)
                 }
                 continue;
             } 
@@ -125,7 +160,7 @@ export class WcBuildingFactory extends AbstractBuilding{
                 const popBuildTile = openList2.shift();
     
                 if (popBuildTile.randomConfig(2)) {
-                    this.updateAllListWithNearBuilding(popBuildTile)
+                    this.updateAllListWithnearWcBuild(popBuildTile)
                 }
                 continue;
             }
@@ -136,7 +171,7 @@ export class WcBuildingFactory extends AbstractBuilding{
                 const popBuildTile = notConfiguredList.shift();
     
                 if (popBuildTile.randomConfig(0)) {
-                    this.updateAllListWithNearBuilding(popBuildTile)
+                    this.updateAllListWithnearWcBuild(popBuildTile)
                 }
                 continue;
             }
@@ -176,9 +211,9 @@ export class WcBuildingFactory extends AbstractBuilding{
             }).sort((a, b) => b.score - a.score)
     }
 
-    updateAllListWithNearBuilding(tile) {
-        // console.log(">> updateAllListWithNearBuilding")
-        tile.nearBuilding.forEach(nearBuild => {
+    updateAllListWithnearWcBuild(tile) {
+        // console.log("tile.nearWcBuild", tile.nearWcBuild)
+        tile.nearWcBuild.forEach(nearBuild => {
             if(nearBuild == null) return;
             if(this.allTileBuildingList.includes(nearBuild)) return;
             this.allTileBuildingList.push(nearBuild);
@@ -190,3 +225,29 @@ export class WcBuildingFactory extends AbstractBuilding{
 
 }
 
+
+export class WcBuildingFactory2 extends WcBuildingFactory{
+    constructor(world, conf) {
+
+        // console.log(conf)
+        const growLoopCount = conf.growLoopCount ? conf.growLoopCount : 10
+
+		const buildConf = conf.buildType == null ? null :
+			conf.buildType.localeCompare("place3") == 0 ?  new WcBuildConf_Place3({growLoopCount:growLoopCount}) :
+			conf.buildType.localeCompare("base3") == 0 ?  new WcBuildConf_Base3({growLoopCount:growLoopCount}) :
+			conf.buildType.localeCompare("baseBorder3") == 0 ?  new WcBuildConf_BaseBorder3({growLoopCount:growLoopCount}) :
+			conf.buildType.localeCompare("house3") == 0 ?  new WcBuildConf_House3({growLoopCount:growLoopCount}) :
+			conf.buildType.localeCompare("house3a") == 0 ?  new WcBuildConf_House3a({growLoopCount:growLoopCount}) :
+			conf.buildType.localeCompare("house3b") == 0 ?  new WcBuildConf_House3b({growLoopCount:growLoopCount}) :
+			conf.buildType.localeCompare("house4a") == 0 ?  new WcBuildConf_House4a({growLoopCount:growLoopCount}) :
+			conf.buildType.localeCompare("house4b") == 0 ?  new WcBuildConf_House4b({growLoopCount:growLoopCount}) :
+			conf.buildType.localeCompare("house4c") == 0 ?  new WcBuildConf_House4c({growLoopCount:growLoopCount}) :
+			conf.buildType.localeCompare("house4D") == 0 ?  new WcBuildConf_House4D({growLoopCount:growLoopCount}) :
+			conf.buildType.localeCompare("house5") == 0 ?  new WcBuildConf_House5({growLoopCount:growLoopCount}) :
+			conf.buildType.localeCompare("house6a") == 0 ?  new WcBuildConf_House6a({growLoopCount:growLoopCount}) :
+			null
+
+
+        super(world, buildConf)
+    }
+}

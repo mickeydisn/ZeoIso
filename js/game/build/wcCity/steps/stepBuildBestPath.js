@@ -5,11 +5,18 @@ import { STEP_ERROR, abstractStep } from "./abstractStep.js";
 
 
 const PATH_CONFIG = {
+    /*
     length: 12,
     minDist: 10,
     crossDist: 16,
 
     alphaStep : 10,
+    */
+
+    length: 15,
+    minDist: 13,
+    crossDist: 20,
+    alphaStep : 20,
 
     lvlDeviationCount: 4,
     lvlDefviationAlpha: 2,  
@@ -27,7 +34,7 @@ const PATH_CONFIG = {
     ]},
 }
 
-const stepBestPathBuilder_Waiting = {...abstractStep, 
+const stepWaiting = {...abstractStep, 
     title: "Path Builder",
     text: `> ### Waiting path to build `, 
     isValidated : (cityNode) =>  {
@@ -36,7 +43,7 @@ const stepBestPathBuilder_Waiting = {...abstractStep,
 }
 
 
-const stepBestPathBuilder_NoPath = {...abstractStep, 
+const stepNoPath = {...abstractStep, 
     title: "Path Builder",
     text: `> ### No path to build `, 
     isValidated: (cityNode) => {
@@ -45,11 +52,10 @@ const stepBestPathBuilder_NoPath = {...abstractStep,
 }
 
 
-const stepBestPathBuilder_Build = {...abstractStep, 
+export const stepBestPathBuilder_Build = {...abstractStep, 
     title: "Path Builder",
     text: `> ### Build the path `, 
     isValidated: (cityNode) => {
-        console.log('ENTER')
         const bestNearNode = cityNode.getBestNearNode(PATH_CONFIG)
         cityNode.sData = {
             bestNode: bestNearNode ? bestNearNode.node : null
@@ -57,7 +63,6 @@ const stepBestPathBuilder_Build = {...abstractStep,
         return bestNearNode != null
     },
     doEnter: (cityNode, callback=_ => {}) => { 
-        console.log('Validate')
         if (cityNode.sData && cityNode.sData.bestNode) {
             const n = cityNode.sData.bestNode
             cityNode.ta.doAction({func:'clearAllTemporatyItems'})
@@ -68,7 +73,6 @@ const stepBestPathBuilder_Build = {...abstractStep,
         // callback()
     },
     undo:(cityNode, callback=_ => {}) => { 
-        console.log('UNDO')
         cityNode.sData = null,
         cityNode.ta.doAction({func:'clearAllTemporatyItems'})
         callback(); 
@@ -99,9 +103,9 @@ export const section_BuildBestPath = {
     title: "Path Builder",
     isValidated:true,
     steps: [
-        stepBestPathBuilder_Waiting,
+        stepWaiting,
         stepBestPathBuilder_Build,
-        stepBestPathBuilder_NoPath,
+        stepNoPath,
         STEP_ERROR,
     ],
 }

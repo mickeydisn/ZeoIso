@@ -9,6 +9,7 @@ export const abstractStep = {
         return true
     },
     undo: (cityNode, callback=_ => {}) => { 
+        console.log('#UNDO#')
         cityNode.sData = null,
         cityNode.ta.doAction({func:'clearAllTemporatyItems'})
         callback(); 
@@ -22,7 +23,10 @@ export const abstractStep = {
 export const STEP_ERROR = {...abstractStep, 
     title: "Error",
     text: `> ### No a Valide Step `, 
-    isValidated : (cityNode) =>  true,
+    isValidated : (cityNode) =>  {
+        console.log('NO VALIDE STEP ', cityNode)
+        return true
+    }
 }
 
 

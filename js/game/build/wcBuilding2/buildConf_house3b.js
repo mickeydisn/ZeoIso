@@ -120,16 +120,16 @@ export class WcBuildConf_House3b extends AbstractWcBuildConf {
     }
 
     get __TILE_START() { 
-        const actionsEmptyFlat = [
+        const actionsEmpty = [
             {func:"lvlAvgSquare",size:5},
         ]
         return  [
 
             {
-                face: ['Wo', 'X', 'X', 'X'],
+                face: ['Wo', 'X', 'Sx', 'X'],
                 items: [
-                    { weight:0, color: [128, 128, 128],  allowMove:true, isFrise: true, functions: [
-                        ...actionsEmptyFlat
+                    { weight:0, color: [64, 64, 64],  allowMove:true, isFrise: true, functions: [
+                        ...actionsEmpty
                     ], empty:true},
                 ]
             }
@@ -138,7 +138,7 @@ export class WcBuildConf_House3b extends AbstractWcBuildConf {
             face: ['Wr', 'A', 'Wl', 'WiD'],
             items: [
                 { weight: 0, color: [0, 0, 0], allowMove:false, isFrise: true, functions: [
-                    // ...actionsEmptyFlat
+                    // ...actionsEmpty
                 ], items:[
                     {h:1, key: this.ROOF_PREFIX + "", keyR:3, sufix:this.ROOF_SUFFIX },
                     {h:0, key: this.WALL_PREFIX + "Door", keyR:1, sufix:this.WALL_SUFFIX },
@@ -150,7 +150,7 @@ export class WcBuildConf_House3b extends AbstractWcBuildConf {
             face: ['Wr', 'Wl', 'WiD', 'Wi'],
             items: [
                 { weight: 0, color: [128, 128, 128], isFrise: true, functions: [
-                    ...actionsEmptyFlat
+                    ...actionsEmpty
                 ], items:[
                     {h:1, key: this.ROOF_PREFIX + "Corner", keyR:3, sufix:this.ROOF_SUFFIX },
                     {h:0, key: this.WALL_PREFIX + "WindowGlass", keyR:1, sufix:this.WALL_SUFFIX },
@@ -162,7 +162,7 @@ export class WcBuildConf_House3b extends AbstractWcBuildConf {
             face: ['Wr', 'Wl', 'Wi', 'WiD'],
             items: [
                 { weight: 0, color: [128, 128, 128], isFrise: true, functions: [
-                    ...actionsEmptyFlat
+                    ...actionsEmpty
                 ], items:[
                     {h:1, key: this.ROOF_PREFIX + "Corner", keyR:3, sufix:this.ROOF_SUFFIX },
                     {h:0, key: this.WALL_PREFIX + "Door", keyR:3, sufix:this.WALL_SUFFIX },
@@ -177,15 +177,15 @@ export class WcBuildConf_House3b extends AbstractWcBuildConf {
     get __TILE_LIST() { 
         console.log('__TILE_LIST', this.mainLvl)
 
-        const actionsEmptyFlat = [
-            {func:"lvlAvgSquare",size:5},
-            {func:"lvlAvgSquare", size:7},
-            // {func:"setFrise", isFrise:true},
-            // this.tile.isFrise = true
-        ]
         const actionsEmpty = [
             {func:"lvlAvgSquare",size:5},
             {func:"lvlAvgSquare", size:7},
+        ]
+        const actionsColor = [
+            {func:"lvlAvgSquare",size:5},
+            {func:"lvlAvgSquare", size:7},
+            {func:"colorSquare",size:5, color:[128, 128, 128]},
+            {func:"clearItemSquare",size:5},
         ]
 
 
@@ -198,7 +198,7 @@ export class WcBuildConf_House3b extends AbstractWcBuildConf {
                 face: ['WoDs', 'X', 'S0i', 'X'],
                 items: [
                     { weight:0, color: [52, 52, 52], allowMove:true, isFrise: true, functions: [
-                        ...actionsEmptyFlat
+                        ...actionsEmpty
                     ], items:[
                         // {h:2, key: "fence_simple", keyR:1, sufix:this.ROOF_SUFFIX },
                     ]},
@@ -208,7 +208,7 @@ export class WcBuildConf_House3b extends AbstractWcBuildConf {
                 face: ['SBr', '0', 'Bl', 'Sx'],
                 items: [
                     { weight:0, color: [52, 52, 52],  allowMove:true, isFrise: true, functions: [
-                        ...actionsEmptyFlat
+                        ...actionsEmpty
                     ], items:[
                         {h:0, key: "fence_simple", keyR:1, sufix:this.ROOF_SUFFIX },
                     ]},
@@ -218,7 +218,7 @@ export class WcBuildConf_House3b extends AbstractWcBuildConf {
                 face: ['Br', '0', 'SBl', 'Sx'],
                 items: [
                     { weight:0, color: [52, 52, 52],  allowMove:true, isFrise: true, functions: [
-                        ...actionsEmptyFlat
+                        ...actionsEmpty
                     ], items:[
                         {h:0, key: "fence_simple", keyR:1, sufix:this.ROOF_SUFFIX },
                     ]},
@@ -228,7 +228,7 @@ export class WcBuildConf_House3b extends AbstractWcBuildConf {
                 face: ['SBr', 'Bl', 'Sx', 'Sx'],
                 items: [
                     { weight:0, color: [52, 52, 52],  allowMove:true, isFrise: true, functions: [
-                        ...actionsEmptyFlat
+                        ...actionsEmpty
                     ], items:[
                         {h:0, key: "fence_corner", keyR:2, sufix:this.ROOF_SUFFIX },
                     ]},
@@ -238,29 +238,30 @@ export class WcBuildConf_House3b extends AbstractWcBuildConf {
                 face: ['Br', 'SBl', 'Sx', 'Sx'],
                 items: [
                     { weight:0, color: [52, 52, 52],  allowMove:true, isFrise: true, functions: [
-                        ...actionsEmptyFlat
+                        ...actionsEmpty
                     ], items:[
                         {h:0, key: "fence_corner", keyR:2, sufix:this.ROOF_SUFFIX },
                     ]},
                 ]
             },
+            */
             {
                 face: ['Sx', 'X', 'X', 'X'],
                 items: [
                     { weight:0, color: [52, 52, 52],  allowMove:true, isFrise: true, functions: [
-                        ...actionsEmptyFlat
+                        ...actionsEmpty
                     ], items:[
                         // {h:0, key: "fence_corner", keyR:2, sufix:this.ROOF_SUFFIX },
                     ]},
                 ]
             },
 
-
+            /*
             {
                 face: ['Wr', 'Wl', 'WiDs', 'Wi'],
                 items: [
                     { weight: 0, color: [128, 128, 128], isFrise: true, functions: [
-                        ...actionsEmptyFlat
+                        ...actionsEmpty
                     ], items:[
                         {h:1, key: this.ROOF_PREFIX + "Corner", keyR:3, sufix:this.ROOF_SUFFIX },
                         {h:0, key: this.WALL_PREFIX + "WindowGlass", keyR:1, sufix:this.WALL_SUFFIX },
@@ -272,7 +273,7 @@ export class WcBuildConf_House3b extends AbstractWcBuildConf {
                 face: ['Wr', 'Wl', 'Wi', 'WiDs'],
                 items: [
                     { weight: 0, color: [128, 128, 128], isFrise: true, functions: [
-                        ...actionsEmptyFlat
+                        ...actionsEmpty
                     ], items:[
                         {h:1, key: this.ROOF_PREFIX + "Corner", keyR:3, sufix:this.ROOF_SUFFIX },
                         {h:0, key: this.WALL_PREFIX + "Door", keyR:3, sufix:this.WALL_SUFFIX },
@@ -331,7 +332,7 @@ export class WcBuildConf_House3b extends AbstractWcBuildConf {
                 face: ['Br', 'Bl', 'X', 'X'],
                 items: [
                     { weight:0, colorT: [128, 128, 128], allowMove:true, isFrise: true, functions: [
-                        ...actionsEmptyFlat
+                        ...actionsEmpty
                     ], items:[
                         {h:0, key: "fence_corner", keyR:2, sufix:this.ROOF_SUFFIX },
                     ]},
@@ -340,7 +341,7 @@ export class WcBuildConf_House3b extends AbstractWcBuildConf {
                 face: ['Br', '0', 'Bl', 'X'],
                 items: [
                     { weight:0, colorT: [128, 128, 128],  allowMove:true, isFrise: true, functions: [
-                        ...actionsEmptyFlat
+                        ...actionsEmpty
                     ], items:[
                         {h:0, key: "fence_simple", keyR:1, sufix:this.ROOF_SUFFIX },
                     ]},
@@ -352,7 +353,7 @@ export class WcBuildConf_House3b extends AbstractWcBuildConf {
                 face: ['0', '0', 'Bl', 'Br'],
                 items: [
                     { weight:0, colorT: [128, 128, 128],  allowMove:true, isFrise: true, functions: [
-                        ...actionsEmptyFlat
+                        ...actionsEmpty
                     ], empty:true},
                     // { weight:0, colorT: [255, 255, 255], key: "platform_cornerDot", keyR:1,  allowMove:true},
                 ]
@@ -362,7 +363,7 @@ export class WcBuildConf_House3b extends AbstractWcBuildConf {
                 face: ['0', '0', '0', '0'],
                 items: [
                     { weight:0, colorT: [128, 128, 128],  allowMove:true, isFrise: true, functions: [
-                        ...actionsEmptyFlat
+                        ...actionsEmpty
                     ], empty:true},
                 ]
             }, 
@@ -372,14 +373,14 @@ export class WcBuildConf_House3b extends AbstractWcBuildConf {
                 face: ['Wo', 'X', 'X', 'X'],
                 items: [
                     { weight:.1, color: [128, 128, 128],  allowMove:true, isFrise: true, functions: [
-                        ...actionsEmptyFlat
+                        ...actionsColor
                     ], empty:true},
                 ]
             }, {
                 face: ['Wo', 'Wo', 'X', 'X'],
                 items: [
                     { weight:.1, color: [128, 128, 128],  allowMove:true, isFrise: true, functions: [
-                        ...actionsEmptyFlat
+                        ...actionsColor
                     ], empty:true},
                     // { weight:.1, colorT: [255, 255, 255], key: "platform_cornerOpen", sufix: "#H50", keyR:1,  allowMove:true},
                     // { weight:.1, colorT: [255, 255, 255], key: "platform_cornerDot", sufix: "#H50", keyR:1,  allowMove:true},
@@ -391,7 +392,7 @@ export class WcBuildConf_House3b extends AbstractWcBuildConf {
                 face: ['A', 'A', 'Wl', 'Wr'],
                 items: [
                     {weight: 4, color: [0, 0, 0], h:1, allowMove:false, isFrise: true, functions: [
-                        ...actionsEmptyFlat
+                        ...actionsEmpty
                     ], items:[
                         {h:1, key: this.ROOF_PREFIX + "CornerInner", keyR:3, sufix:this.ROOF_SUFFIX },
                     ]},
@@ -401,7 +402,7 @@ export class WcBuildConf_House3b extends AbstractWcBuildConf {
                 face: ['Wr', 'A', 'Wl', 'WiD'],
                 items: [
                     { weight: 0, color: [0, 0, 0], allowMove:false, isFrise: true, functions: [
-                        ...actionsEmptyFlat
+                        ...actionsEmpty
                     ], items:[
                         {h:1, key: this.ROOF_PREFIX + "", keyR:3, sufix:this.ROOF_SUFFIX },
                         {h:0, key: this.WALL_PREFIX + "Door", keyR:1, sufix:this.WALL_SUFFIX },
@@ -412,19 +413,19 @@ export class WcBuildConf_House3b extends AbstractWcBuildConf {
                 face: ['Wr', 'A', 'Wl', 'Wi'],
                 items: [
                     { weight: .1, color: [0, 0, 0], allowMove:false, isFrise: true, functions: [
-                        ...actionsEmptyFlat
+                        ...actionsEmpty
                     ], items:[
                         {h:1, key: this.ROOF_PREFIX + "", keyR:3, sufix:this.ROOF_SUFFIX },
                         {h:0, key: this.WALL_PREFIX + "Door", keyR:1, sufix:this.WALL_SUFFIX },
                     ]},
                     { weight: 4, color: [0, 0, 0], allowMove:false, isFrise: true, functions: [
-                        ...actionsEmptyFlat
+                        ...actionsEmpty
                     ], items:[
                         {h:1, key: this.ROOF_PREFIX + "", keyR:3, sufix:this.ROOF_SUFFIX },
                         {h:0, key: this.WALL_PREFIX + "WindowGlass", keyR:1, sufix:this.WALL_SUFFIX },
                     ]},
                     { weight: 4, color: [0, 0, 0], allowMove:false, isFrise: true,  functions: [
-                        ...actionsEmptyFlat
+                        ...actionsEmpty
                     ], items:[
                         {h:1, key: this.ROOF_PREFIX + "Window", keyR:3, sufix:this.ROOF_SUFFIX },
                         {h:0, key: this.WALL_PREFIX + "WindowGlass", keyR:1, sufix:this.WALL_SUFFIX },
@@ -436,7 +437,7 @@ export class WcBuildConf_House3b extends AbstractWcBuildConf {
                 face: ['A', 'A', 'A', 'A'],
                 items: [
                     { weight: 2, color: [0, 0, 0], allowMove:false, isFrise: true, functions: [
-                        ...actionsEmptyFlat
+                        ...actionsEmpty
                     ], items:[
                         {h:2, key: this.ROOF_PREFIX + "Point", keyR:3, sufix:this.ROOF_SUFFIX },
                         {h:1, key: this.WALL_PREFIX + "Block", keyR:0, sufix:this.WALL_SUFFIX },
@@ -451,13 +452,13 @@ export class WcBuildConf_House3b extends AbstractWcBuildConf {
                 face: ['Wr', 'Wl', 'Wi', 'Wi'],
                 items: [
                     { weight: .1, color: [128, 128, 128], allowMove:false, isFrise: true, functions: [
-                        ...actionsEmptyFlat
+                        ...actionsEmpty
                     ], items:[
                         {h:1, key: this.ROOF_PREFIX + "Corner", keyR:3, sufix:this.ROOF_SUFFIX },
                         {h:0, key: this.WALL_PREFIX + "Corner", keyR:2, sufix:this.WALL_SUFFIX },
                     ]},
                     { weight: .1, color: [128, 128, 128], allowMove:false, isFrise: true, functions: [
-                        ...actionsEmptyFlat
+                        ...actionsEmpty
                     ], items:[
                         {h:1, key: this.ROOF_PREFIX + "CornerRound", keyR:3, sufix:this.ROOF_SUFFIX },
                         {h:0, key: this.WALL_PREFIX + "CornerDiagonal", keyR:2, sufix:this.WALL_SUFFIX },

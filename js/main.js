@@ -16,6 +16,8 @@ import { WidjetActionsAchivement } from './game/menu/widjetActionAchivement.js';
 import { WidjetActionsTileInfo } from './game/menu/widjetTileInfo.js';
 import { WidjetInterfaceMap } from './game/menu/widjetInterfaceMap.js';
 import { WidjetActionsPlayerAct } from './game/menu/widjetActionsPlayerAct.js';
+import { InterfaceIso2 } from './game/mapIso/interfaceIso2.js';
+import { WidjetMiniWorld } from './game/menu/widjetMiniWorld.js';
 
 
 export class Main {
@@ -56,7 +58,16 @@ export class Main {
             const div = this.initMapDiv()
             this.interfaceIso = new InterfaceIso(this.world, div);
         }
-
+        
+        /*
+        // MiniWorld 
+        {
+            const div = this.body.append('div')
+            this.interfaceIso2 = new InterfaceIso2(this.world, div);
+            this.interfaceIso2.drawUpdate()
+        }
+        */
+        
         const divMenu = this.body.append('div')
         // Menu
         {
@@ -100,12 +111,37 @@ export class Main {
                 .text("100 FPS")
         }
         
+        // Move 
+        {
+
+            this.clickPress = {
+                ArrowUp: false, ArrowRight: false, ArrowDown: false, ArrowLeft: false, 
+            }
+            this.divClickMove = divMenu.append('div').classed('clickMove', true)
+                .html(`
+                    <div id="ArrowUp"></div>
+                    <div id="ArrowRight"></div>
+                    <div id="ArrowDown"></div>
+                    <div id="ArrowLeft"></div>
+                `);
+                
+            ['ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft'].forEach(axe => {
+                this.divClickMove.select('#' + axe)
+                .on('mousedown' , _ => { this.clickPress[axe] = true })
+                .on('mouseup' , _ => { this.clickPress[axe] = false })
+            })
+        }
 
         // MiniMap
         {
             const div = this.body.append('div')
             // this.widjetMiniMap = new WidjetMiniMap(this.world, div);
             this.widjetMiniMap = new WidjetInterfaceMap(this.world, div);
+        }
+        {
+            const div = this.body.append('div')
+            // this.widjetMiniMap = new WidjetMiniMap(this.world, div);
+            this.widjetMiniMap = new WidjetMiniWorld(this.world, div);
         }
 
         // Keyboard not affect radio butt
@@ -126,6 +162,7 @@ export class Main {
 
     loop() {
         this.interfaceIso.drawUpdate();
+        // this.interfaceIso2.drawUpdate();
         // this.widjetMiniMap.drawUpdate();
 
     }
@@ -161,12 +198,12 @@ export class Main {
         }
 
         // setInterval(gameLoop, fixedFrameTime);
-        let loopInterval = d3.interval(gameLoop, 1000 / 20);
+        let loopInterval = d3.interval(gameLoop, 1000 / 40);
         this.world.globalState.sub("TabVisiblity", "MainDisplayLoop", isVisibel => {
             if (isVisibel) {
                 console.info("MainDisplayLoop: Start");
                 loopInterval.stop()
-                loopInterval = d3.interval(gameLoop, 1000/ 20);
+                loopInterval = d3.interval(gameLoop, 1000/ 40);
             } else {
                 console.info("MainDisplayLoop: Stop");
                 loopInterval.stop()
@@ -205,7 +242,8 @@ export class Main {
 
         // add pressed key loop. 
         const keyControle = function() {
-            this.world.player.keyLoopControle(keyPressed);
+            console.log(this.clickPress)
+            this.world.player.keyLoopControle({...this.clickPress , ...keyPressed});
         }.bind(this);
         let keyInterval = d3.interval(keyControle, 20);
 

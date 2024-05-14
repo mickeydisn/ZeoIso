@@ -58,7 +58,7 @@ export class InterfaceIso {
         this.drawMap();
         this.drawSelectTiled();
 
-        this.iso = new Isomer(document.getElementById("canvas"));
+        this.iso = new Isomer(document.getElementById("canvasMap"));
         this.iso.originY = ISO_CANVA_YORIGINE
         this.drawUpdate();
     }
@@ -113,7 +113,7 @@ export class InterfaceIso {
             .style('height', "700px")
 
         this.canvas = canvaBox.append('canvas')
-            .attr('id', "canvas")
+            .attr('id', "canvasMap")
             .attr('width', "1400")
             .attr('height', "700")
             // .style('position','absolute')

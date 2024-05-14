@@ -235,8 +235,6 @@ export class Player {
         return direction
     }
 
-
-
     keyLoopControle (keyPressed) {
         const kP = keyPressed
         const aze = this.keyboardAzert

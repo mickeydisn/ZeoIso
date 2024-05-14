@@ -111,13 +111,20 @@ export  class CityNode extends Node {
                 if(!nodeGraph.map(x => x.node).includes(broNode)) {
                     nodeGraph.push({p:pIter, node:broNode, parent:currentNodeInfo});
                     if (pIter < pIterMax) {
-                        openNode.push({p:pIter, node:broNode, parent:currentNodeInfo});
+                        
+                        openNode.push({
+                            p:pIter, 
+                            node:broNode, 
+                            parent:currentNodeInfo,
+                            distance:this.nodeDistance(broNode)
+                        });
                     }
                 }
             })
         }
 
-        return nodeGraph
+        return nodeGraph.sort((a, b) => a.p - b.p ?  a.p - b.p :  a.distance - b.distance);
+
     }
 
     nodeGraphDistance(nodeGraph) {

@@ -8,7 +8,9 @@ import { WcBuildConf_House3b } from "./wcBuilding2/buildConf_house3b.js";
 import { WcBuildConf_House4D } from "./wcBuilding2/buildConf_house4D.js";
 import { WcBuildConf_House4a } from "./wcBuilding2/buildConf_house4a.js";
 import { WcBuildConf_House4b } from "./wcBuilding2/buildConf_house4b.js";
+import { WcBuildConf_House4c } from "./wcBuilding2/buildConf_house4c.js";
 import { WcBuildConf_House5 } from "./wcBuilding2/buildConf_house5.js";
+import { WcBuildConf_House6a } from "./wcBuilding2/buildConf_house6a.js";
 import { WcBuildConf_Place3 } from "./wcBuilding2/buildConf_place3.js";
 import { WcBuildingFactory } from "./wcBuilding2/wcBuildingFactory.js";
 
@@ -379,8 +381,10 @@ export class TilesActions {
 			conf.buildType.localeCompare("house3b") == 0 ?  new WcBuildConf_House3b({growLoopCount:growLoopCount}) :
 			conf.buildType.localeCompare("house4a") == 0 ?  new WcBuildConf_House4a({growLoopCount:growLoopCount}) :
 			conf.buildType.localeCompare("house4b") == 0 ?  new WcBuildConf_House4b({growLoopCount:growLoopCount}) :
+			conf.buildType.localeCompare("house4c") == 0 ?  new WcBuildConf_House4c({growLoopCount:growLoopCount}) :
 			conf.buildType.localeCompare("house4D") == 0 ?  new WcBuildConf_House4D({growLoopCount:growLoopCount}) :
 			conf.buildType.localeCompare("house5") == 0 ?  new WcBuildConf_House5({growLoopCount:growLoopCount}) :
+			conf.buildType.localeCompare("house6a") == 0 ?  new WcBuildConf_House6a({growLoopCount:growLoopCount}) :
 			null
 
 		if (buildConf) {

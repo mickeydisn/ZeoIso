@@ -1,8 +1,7 @@
-import { PathFactory } from "../path.js";
 import { CityNode } from "./cityNode.js";
-import { CityRoad } from "./cityRoad.js";
-import { section_BuildBestHouse } from "./steps/stepBuildBestHouse.js";
+import { section_BuildBestHouse, section_BuildBestHouse3b } from "./steps/stepBuildBestHouse.js";
 import { section_BuildBestPath } from "./steps/stepBuildBestPath.js";
+import { section_BuildGraphPath } from "./steps/stepBuildPathGraph.js";
 import { section_RemoveBuilding } from "./steps/stepRemoveHouse.js";
 
 
@@ -26,6 +25,8 @@ const STEPS_DEFAULT_PATH = [
     section_BuildBestPath,
     // section_BuildHouse,
     section_BuildBestHouse,
+    section_BuildBestHouse3b,
+    section_BuildGraphPath,
 ]
 
 export class CityTileNode extends CityNode {
@@ -41,8 +42,6 @@ export class CityTileNode extends CityNode {
         this.fm = world.factoryMap;
         this.ta = world.tilesActions;
         this.GS = world.globalState
-
-
 
         this.isHide = false;
         this.hideDistance = 1;
@@ -68,15 +67,22 @@ export class CityTileNode extends CityNode {
 
     get currentStep() {
         const curentStep = this.STEPS[this._currentStepIdx]
+        console.log('--STEP: ', curentStep.title)
+
         if (curentStep.steps) {
-            const valideStep = curentStep.steps.filter(step => step.isValidated(this))
-            if (valideStep)
-                return { type:curentStep.type, ...valideStep[0]}; 
-            else 
-                return { type:curentStep.type, 
-                    title: "## Error",
-                    text: `> No valide Step `, 
-                }; 
+            let subStep = null;
+            const subStepList = [...curentStep.steps]
+            while(subStepList.length > 0) {
+                subStep = subStepList.shift()
+                console.log('CHECK: ', subStep.title, subStep.text)
+                if (subStep.isValidated(this)) {
+                    return { type:curentStep.type, ...subStep}; 
+                }                               
+            }
+            return { type:curentStep.type, 
+                title: "## Error",
+                text: `> No valide Step `, 
+            }; 
         }
         this._currentStep = curentStep
         return curentStep
@@ -86,8 +92,9 @@ export class CityTileNode extends CityNode {
     /**
      * Returns the previous validated step.
      */
-    get homeStep() {
+    homeStep() {
         this.currentStepIdx =  0;
+        this.sData =  null;
         return this.currentStep;
     }
     
@@ -121,6 +128,7 @@ export class CityTileNode extends CityNode {
 
     toJson() {
         return {
+            // sData: this.sData,
             power: this.power,
             alphaStep: this.alphaStep,
             isHide: this.isHide,
@@ -159,10 +167,10 @@ export class CitNodeHouse extends CityTileNode {
         super(world, tile, conf)
         this.STEPS = STEPS_DEFAULT_HOUSE
         this.asset = {key: [
-            "statue_obelisk_NW#_H180_C100_S95_B100_R1",
-            "statue_obelisk_NW#_H180_C100_S95_B100_R1",
-            "statue_obelisk_NW#_H180_C100_S95_B100_R2",
-            "statue_obelisk_NW#_H180_C100_S95_B100_R2"
+            "coinGold_NW#_H190_C110_S80_B80_R1",
+            "coinGold_NW#_H190_C110_S80_B80_R1",
+            "coinGold_NW#_H190_C110_S80_B80_R2",
+            "coinGold_NW#_H190_C110_S80_B80_R2",
         ]}
     }
 }

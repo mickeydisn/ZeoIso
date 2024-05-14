@@ -45,8 +45,14 @@
 
 
             <div class="Menu">
-                <input type="radio" checked id="vBiome" name="Layer"></input><label for="vBiome"> vBiome</label> </br>
+                <input type="radio" checked id="vEmpty" name="Layer"></input><label for="vEmpty"> vEmpty</label> </br>
+                <input type="radio" id="vLvl1" name="Layer"></input><label for="vLvl1"> vLvl 1</label> </br>
+                <input type="radio" id="vLvl2" name="Layer"></input><label for="vLvl2"> vLvl 2</label> </br>
+                <input type="radio" id="vLvl3" name="Layer"></input><label for="vLvl3"> vLvl 3</label> </br>
                 <input type="radio" id="vLvl" name="Layer"></input><label for="vLvl"> vLvl</label> </br>
+                <input type="radio" checked id="vHydro" name="Layer"></input><label for="vHydro"> vHidro</label> </br>
+                <input type="radio" checked id="vTemp" name="Layer"></input><label for="vTemp"> vTemp</label> </br>
+                <input type="radio" checked id="vBiome" name="Layer"></input><label for="vBiome"> vBiome</label> </br>
                 <input type="radio" id="vLvlGen" name="Layer"></input><label for="vLvlGen"> vLvlGen</label> </br>
                 <input type="radio" id="vPeak" name="Layer"></input><label for="vPeak"> vPeak</label> </br>
                 <input type="radio" id="vErosion" name="Layer"></input><label for="vErosion"> vErosion</label> </br>
@@ -66,16 +72,20 @@
                 // main.start()
 
                 const TILE_GEN_ZOOM = 2;
-                const CHUNK_SIZE = 6 ; // 4 * 2 ;
-                const DEFINITION = 1;
+                const CHUNK_SIZE = 6 * 2 ; // 4 * 2 ;
+                const DEFINITION = 2;
+
+                const CENTER_X = -600 // Math.floor(2000 / CHUNK_SIZE)
+                const CENTER_Y = 0 // Math.floor(400 / CHUNK_SIZE)
+
 
 
                 export class World {
 
                     constructor() {
                         this.size = Math.pow(2, 10);
-                        this.width = 2800 / 2;
-                        this.height = 1600 / 2;
+                        this.width = 400;
+                        this.height = 700;
                     
                         this.view = 'vBiome'
 
@@ -121,43 +131,84 @@
                         console.log('World')
                         this.fillMap()
                     }
-                    
-                    _pixelRawLvl(tile, col, row) {
 
-                        let lvlRaw = tile.rLvl * 256
-
-
-
-                        if (lvlRaw < 80) {
-                            this.ctx.fillStyle = `rgb(${96}, ${96}, ${255}, .3)`;
-                        } else if (lvlRaw > 192) {
-                            this.ctx.fillStyle = `rgb(${64}, ${32}, ${0}, .3)`;
-                        } else {
-                            const cFunc = d3.scaleLinear([80, 192], [0, 256 - 1]);
+                    /*
+                          fHydro: this.getFuncHydro(x, y, zoom),
+                          fTemp: this.getFuncTemperature(x, y, zoom),
+                    */
+                    _pixelRawHydro(tile, col, row) {
+                        let lvlRaw = tile.fHydro
+                        {
+                            const cFunc = d3.scaleLinear([0, 255], [0, 256 - 1]);
                             const rc = cFunc(lvlRaw) 
-                            let c = rc - rc % 16
-                            c = c % 128
-                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, 1)`;
+                            let c = rc - rc % 32
+                            // c = c % 128
+                            this.ctx.fillStyle = `rgb(0, ${c}, 0, .1)`;
+                        }
+                        this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
+                    }
+                    _pixelRawTemp(tile, col, row) {
+                        let lvlRaw = tile.fTemp
+                        {
+                            const cFunc = d3.scaleLinear([0, 255], [0, 256 - 1]);
+                            const rc = cFunc(lvlRaw) 
+                            let c = rc - rc % 32
+                            // c = c % 128
+                            this.ctx.fillStyle = `rgb(${c}, 0, 0, .1)`;
                         }
                         this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
                     }
 
-                    _pixelGen2Lvl(tile, col, row) {
-                        const lvl = tile.gen2Lvl 
 
-                        if (lvl < 80) {
-                                this.ctx.fillStyle = `rgb(${96}, ${96}, ${255}, .2)`;
-                        } else if (lvl > 192) {
-                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${0}, .5)`;
+                    __drawLvl(lvlRaw, col, row) {
+
+                        if (lvlRaw < 80) {
+                            const cFuncA = d3.scaleLinear([0, 80], [0, 96]);
+                            const cFuncB = d3.scaleLinear([0, 80], [0, 255]);
+                            let cr = cFuncA(lvlRaw); cr = cr - cr % 16
+                            let cg = cr
+                            let cb = cFuncB(lvlRaw); cb = cb - cb % 16
+                            this.ctx.fillStyle = `rgb(${cr}, ${cg}, ${cb}, .1)`;
+                        } else if (lvlRaw > 192) {
+                            const cFuncA = d3.scaleLinear([192, 256], [255, 0]);
+                            const cFuncB = d3.scaleLinear([192, 256], [128, 0]);
+                            let cr = cFuncA(lvlRaw); cr = cr - cr % 16
+                            let cg = cFuncB(lvlRaw); cg = cg - cg % 16
+                            let cb = 0
+                            this.ctx.fillStyle = `rgb(${cr}, ${cg}, ${cb}, .1)`;
                         } else {
-                            const cFunc = d3.scaleLinear([80, 192], [0, 256 - 1]);
-                            const rc = cFunc(lvl) 
+                            const cFunc = d3.scaleLinear([80, 192], [0, 512 - 1]);
+                            const rc = cFunc(lvlRaw) 
                             let c = rc - rc % 16
-                            c = c % 128
-                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, 1)`;
+                            c = c < 256 ? 255 - c :( c - 255 ) 
+                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .1)`;
                         }
                         this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
-                        
+                    }
+
+
+                    _pixelRawLvl1(tile, col, row) {
+                        let lvlRaw = this.factoryTileRawGenerator.getRawLvl1(tile.x, tile.y, 2) * 255
+                        this.__drawLvl(lvlRaw, col, row)
+                    }
+                    _pixelRawLvl2(tile, col, row) {
+                        let lvlRaw = this.factoryTileRawGenerator.getRawLvl2(tile.x, tile.y, 2) * 255
+                        this.__drawLvl(lvlRaw, col, row)
+                    }
+                    _pixelRawLvl3(tile, col, row) {
+                        let lvlRaw = this.factoryTileRawGenerator.getRawLvl3(tile.x, tile.y, 2) * 255
+                        this.__drawLvl(lvlRaw, col, row)
+                    }
+
+                    _pixelRawLvl(tile, col, row) {
+
+                        let lvlRaw = tile.rLvl * 256
+                        this.__drawLvl(lvlRaw, col, row)
+                    }
+
+                    _pixelGen2Lvl(tile, col, row) {
+                        const lvl = tile.gen2Lvl 
+                        this.__drawLvl(lvl, col, row)
                     }
 
                     // rPeak rErosion rFlore
@@ -166,12 +217,12 @@
                         let lvlPeak = tile.rPeak
 
                         if (lvlPeak < .02) {
-                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${255}, .3)`;
+                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${255}, .1)`;
                             this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
                         } else if (lvlPeak > .4) {
                             const cFunc = d3.scaleLinear([0, 1], [0, 128]);
                             const c = (Math.abs(cFunc(lvlPeak)) * 16) % 256
-                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .3)`;
+                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .1)`;
                             this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
                         }
                     }
@@ -182,11 +233,11 @@
                         const cFunc = d3.scaleLinear([0, 1], [0, 256]);
                         const cx = cFunc(lvlEro)
                         const c = cx - cx % 16
-                        if (lvlEro < .3) {
-                            this.ctx.fillStyle = `rgb(${c}, ${0}, ${0}, .5)`;
+                        if (lvlEro < .1) {
+                            this.ctx.fillStyle = `rgb(${c}, ${0}, ${0}, .1)`;
                             this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
                         } else if (lvlEro > .7) {
-                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${c}, .5)`;
+                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${c}, .1)`;
                             this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
                         } 
 
@@ -199,16 +250,16 @@
                         let lvlFlore = tile.rFlore
 
                         if (lvlFlore < .15) {
-                            this.ctx.fillStyle = `rgb(${255}, ${0}, ${0}, .5)`;
+                            this.ctx.fillStyle = `rgb(${255}, ${0}, ${0}, .2)`;
                         } else if (lvlFlore > .85) {
-                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${255}, .5)`;
+                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${255}, .2)`;
                         } else if (lvlFlore > .45 && lvlFlore < .55) {
-                            this.ctx.fillStyle = `rgb(${0}, ${255}, ${0}, .5)`;
+                            this.ctx.fillStyle = `rgb(${0}, ${255}, ${0}, .2)`;
 
                         } else {
                             const cFunc = d3.scaleLinear([0, 1], [0, 32]);
                             const c = (Math.abs(cFunc(lvlFlore)) * 4) % 256
-                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .1)`;
+                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .2)`;
                         }
                         this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
                     }
@@ -225,11 +276,11 @@
                         const cFunc = d3.scaleLinear([0, 1], [0, 128]);
                         const c = (Math.abs(cFunc(lvlSum)) * 16) % 256
                         if (lvlSum < .002) {
-                            this.ctx.fillStyle = `rgb(${c}, ${0}, ${0}, .9)`;
-                        } else if (lvlSum > .3) {
-                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${c}, .5)`;
+                            this.ctx.fillStyle = `rgb(${c}, ${0}, ${0}, .1)`;
+                        } else if (lvlSum > .1) {
+                            this.ctx.fillStyle = `rgb(${0}, ${0}, ${c}, .1)`;
                         } else {
-                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .01)`;
+                            this.ctx.fillStyle = `rgb(${c}, ${c}, ${c}, .1)`;
                         }
                         this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
                     }
@@ -243,8 +294,8 @@
                         const width =  Math.floor(this.width / DEFINITION)
                         const height = Math.floor(this.height / DEFINITION)
 
-                        const x = 2000 // Math.floor(2000 / CHUNK_SIZE)
-                        const y = 400 // Math.floor(400 / CHUNK_SIZE)
+                        const x = CENTER_X // Math.floor(2000 / CHUNK_SIZE)
+                        const y = CENTER_Y // Math.floor(400 / CHUNK_SIZE)
 
                         // Dessiner le damier
                         for (let row = 0; row < height; row++) {
@@ -254,15 +305,35 @@
                                 
                                 const tile = new GenTile(this, xx, yy)
                                 
-                                if (this.view.localeCompare('vBiome') == 0 ) {
-                                    const c = tile.genColor
-                                    this.ctx.fillStyle = `rgb(${c[0]}, ${c[1]}, ${c[2]})`;
+                                if (this.view.localeCompare('vEmpty') == 0 ) {
+                                    this.ctx.fillStyle = `rgb(0, 0, 0, .2)`;
                                     this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
                                 } /**/
+                                if (this.view.localeCompare('vBiome') == 0 ) {
+                                    const c = tile.genColor
+                                    this.ctx.fillStyle = `rgb(${c[0]}, ${c[1]}, ${c[2]}, .1)`;
+                                    this.ctx.fillRect(col * DEFINITION, row * DEFINITION, DEFINITION, DEFINITION);
+                                } /**/
+                                if (this.view.localeCompare('vTemp') == 0) {
+                                    this._pixelRawTemp(tile, col, row);
+                                }
+                                if (this.view.localeCompare('vHydro') == 0) {
+                                    this._pixelRawHydro(tile, col, row);
+                                }
                                 
+                                if (this.view.localeCompare('vLvl1') == 0) {
+                                    this._pixelRawLvl1(tile, col, row);
+                                }
+                                if (this.view.localeCompare('vLvl2') == 0) {
+                                    this._pixelRawLvl2(tile, col, row);
+                                }
+                                if (this.view.localeCompare('vLvl3') == 0) {
+                                    this._pixelRawLvl3(tile, col, row);
+                                }
                                 if (this.view.localeCompare('vLvl') == 0) {
                                     this._pixelRawLvl(tile, col, row);
                                 }
+
                                 if (this.view.localeCompare('vLvlGen') == 0) {
                                     this._pixelGen2Lvl(tile, col, row);
                                 }
@@ -306,13 +377,68 @@
                         world.fillMap()
                     })
                 }
+                apply('vEmpty')
                 apply('vBiome')
+                apply('vHydro')
+                apply('vTemp')
+                apply('vLvl1')
+                apply('vLvl2')
+                apply('vLvl3')
                 apply('vLvl')
                 apply('vLvlGen')
                 
                 apply('vPeak')
                 apply('vErosion')
                 apply('vFlore')
+
+                function delay(time) {
+                    return new Promise(resolve => setTimeout(resolve, time));
+                }
+
+                async function draw(what, count) {
+                    for (let i = 0; i < count ; i++) {
+                    world.view = what ; world.fillMap() ; await delay(5);
+                }
+
+                }
+
+                await draw("vEmpty" , 20);
+
+                await draw("vLvl1" , 30);
+                await draw("vLvl2" , 30);
+
+                await draw("vLvl1" , 10);
+                await draw("vLvl2" , 6);
+                await draw("vLvl1" , 10);
+                await draw("vLvl2" , 6);
+
+                await draw("vLvl3" , 30);
+
+                await draw("vLvl" , 30);
+                await delay(1000);
+
+                await draw("vBiome" , 30);
+                await draw("vLvl" , 5);
+                await delay(1000);
+
+                await draw("vBiome" , 20);
+
+                await delay(1000);
+
+                await draw("vEmpty" , 20);
+
+                await draw("vHydro" , 30);
+                await draw("vTemp" , 30);
+                await draw("vHydro" , 4);
+
+                await delay(800);
+                await draw("vBiome" , 20);
+                await draw("vTemp" , 10);
+                await delay(800);
+
+                await draw("vBiome" , 20);
+
+
 
             </script>
 

@@ -61,6 +61,7 @@ export class WidjetActionsPlayer extends WidjetActions {
             const boostTime = 10
             divx.on('click', _ => {
                 this.world.player.speed += 1;
+                this.world.player.lvlJump += 100;
                 divx.text("💊 Speep-Boost - " + boostTime + "s -");
 
                 [...Array(boostTime)].forEach((_, idx) => {
@@ -71,6 +72,7 @@ export class WidjetActionsPlayer extends WidjetActions {
             
                 setTimeout(_ => {
                     this.world.player.speed -= 1;
+                    this.world.player.lvlJump -= 100;
                     divx.text("💊 Speep-Boost ");
                 }, boostTime * 1000)
             

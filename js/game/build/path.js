@@ -18,7 +18,7 @@ export class WcPath extends AbstractBuilding {
     }
 
 
-    async start(time=50) {
+    async start(time=10) {
 
 
         for( let it = 0; it < this.tileList.length; it++) {
@@ -27,7 +27,7 @@ export class WcPath extends AbstractBuilding {
             const tile =   this.tileList[it]          
             await new Promise(resolve => setTimeout(resolve, time));
             // const sfxr = require("jsfxr").sfxr;
-            var a = window.sfxr.toAudio("34T6PkmBRh7nXfpAFeLJwuHBBMKjHw8RdGtvnsg8CxTsv9RN8LfGoRL3xRL3hnJ5KLt6YRerKhs4FUAYvUgogpGBhWMQruZbb5D5cw4eh2sVPNGNNSzks1m6m");
+            var a = window.sfxr.toAudio("7BMHBGLKidWDzXRmKSdRbAHRrA7x2yLzn7PpFnCT7zQiGB3B4KTKJ3ySN3NHfsY1xgwsZ4DrE5Gghk4zhYmiZU2LU2QSNwUpxvSinbUBPSjNgkSVRvSV1Zaps");
             a.play();
             // TODO :: Change the tile !!! 
             const bTile = tile.wcBuild ? tile.wcBuild : new WcBuildTile(this.world, this, tile.x, tile.y)
@@ -37,15 +37,15 @@ export class WcPath extends AbstractBuilding {
             const tileDrawConf = this.conf.TILE_START
             bTile.updateDrawConfiguration(tileDrawConf)
 
-            this.updateAllListWithNearBuilding(bTile);
+            this.updateAllListWithnearWcBuild(bTile);
 
         }
 
         for (let it = 0; it < this.conf.endLoopMax; it++) {
         // for (let it = 0; it < 0; it++) {
-            await new Promise(resolve => setTimeout(resolve, time));
+            await new Promise(resolve => setTimeout(resolve, time/4));
             // const sfxr = require("jsfxr").sfxr;
-            var a = window.sfxr.toAudio("34T6PkmBRh7nXfpAFeLJwuHBBMKjHw8RdGtvnsg8CxTsv9RN8LfGoRL3xRL3hnJ5KLt6YRerKhs4FUAYvUgogpGBhWMQruZbb5D5cw4eh2sVPNGNNSzks1m6m");
+            var a = window.sfxr.toAudio("7BMHBGLKidWDzXRmKSdRbAHRrA7x2yLzn7PpFnCT7zQiGB3B4KTKJ3ySN3NHfsY1xgwsZ4DrE5Gghk4zhYmiZU2LU2QSNwUpxvSinbUBPSjNgkSVRvSV1Zaps");
             a.play();
 
 
@@ -55,7 +55,7 @@ export class WcPath extends AbstractBuilding {
                 const isConf = popBuildTile.randomConfig(0)
                 if (isConf) {
                     popBuildTile.isPath = 1
-                    this.updateAllListWithNearBuilding(popBuildTile)
+                    this.updateAllListWithnearWcBuild(popBuildTile)
                 }
 
                 continue;
@@ -67,7 +67,7 @@ export class WcPath extends AbstractBuilding {
                 const isConf = popBuildTile.randomConfig(2)
                 if (isConf) {
                     popBuildTile.isPath = true
-                    this.updateAllListWithNearBuilding(popBuildTile)
+                    this.updateAllListWithnearWcBuild(popBuildTile)
                 }
                 continue;
             }
@@ -94,8 +94,8 @@ export class WcPath extends AbstractBuilding {
             }).sort((a, b) => b.score - a.score)
     }
 
-    updateAllListWithNearBuilding(tile) {
-        tile.nearBuilding.forEach(nearBuild => {
+    updateAllListWithnearWcBuild(tile) {
+        tile.nearWcBuild.forEach(nearBuild => {
             if(nearBuild == null) return;
             if(this.allTileBuildingList.includes(nearBuild)) return;
             this.allTileBuildingList.push(nearBuild);

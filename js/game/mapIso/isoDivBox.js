@@ -136,7 +136,6 @@ export class IsoDivBoxMarkDown extends IsoDivBox {
 export class IsoDivCityBox extends IsoDivBox {
     constructor(canavBox, tile, boxConf) {
         super(canavBox, tile, boxConf)
-        this.cityNode = tile.cityNode
 
         this.currentStepAction = _ => {return true}
 
@@ -146,8 +145,8 @@ export class IsoDivCityBox extends IsoDivBox {
 
     show() {
         super.show()
-        // this.cityNode.currentStepIdx = 0
-        // this.currentStep = this.cityNode.currentStep;
+        // this.tile.cityNode.currentStepIdx = 0
+        // this.currentStep = this.tile.cityNode.currentStep;
         this.updateContent()
     }
 
@@ -174,15 +173,16 @@ export class IsoDivCityBox extends IsoDivBox {
         // Title
         {
             const titleDiv = this.contentDiv.append('div').classed('titleDiv', true)
-            this.titleHomeDive = titleDiv.append('div').text('⇧').on('click', _ => {
-
-                const cityStep = this.cityNode.currentStep 
+            this.titleHomeDiv = titleDiv.append('div').text('⇧').on('click', _ => {
+                /*
+                const cityStep = this.tile.cityNode.currentStep 
                 if (cityStep.undo) {
-                    cityStep.undo(this.cityNode, _ => {})
+                    cityStep.undo(this.tile.cityNode, _ => {})
                 }
-
-                this.cityNode.currentStepIdx = 0
-                this.currentStep = this.tile.cityNode.currentStep;
+                */
+                console.log('----- UNDO_CLICK')
+                
+                this.currentStep = this.tile.cityNode.homeStep();
                 this.updateContent()
             })
             this.titleDiv = titleDiv.append('div')  
@@ -199,14 +199,18 @@ export class IsoDivCityBox extends IsoDivBox {
                 `)
 
             this.stepDiv.select('div:nth-child(1)').on('click', _ => {
-                this.currentStep = this.cityNode.presStep
+                this.currentStep = this.tile.cityNode.presStep
                 this.updateContent()
             })
             this.stepDiv.select('div:nth-child(2)').on('click', _ => {
-                this.currentStep = this.cityNode.nextStep
+                this.currentStep = this.tile.cityNode.nextStep
                 this.updateContent()
             })
         } */
+
+        // MD
+        this.initMDContent()
+
         // StepList
         {
 
@@ -220,9 +224,6 @@ export class IsoDivCityBox extends IsoDivBox {
             this.doParamDiv.style('display', 'none')
             //this.initStepListContent()
         }
-
-        // MD
-        this.initMDContent()
 
         // Action
         {
@@ -244,11 +245,11 @@ export class IsoDivCityBox extends IsoDivBox {
     }
 
     initStepListContent() {
-        this.cityNode.STEPS.forEach((step, idx) => {
+        this.tile.cityNode.STEPS.forEach((step, idx) => {
             if (idx == 0) return ;
             this.stepListDiv.append('div').text("● " + step.title).on('click', _ => {
-                this.cityNode.currentStepIdx = idx
-                this.currentStep = this.cityNode.currentStep;
+                this.tile.cityNode.currentStepIdx = idx
+                this.currentStep = this.tile.cityNode.currentStep;
                 this.updateContent()
             })
         })
@@ -288,8 +289,8 @@ export class IsoDivCityBox extends IsoDivBox {
         // this.stepDiv.style('display', 'none')
         this.MDDiv.style('display', 'none') 
         this.stepListDiv.style('display', 'none') 
-        this.doParamDiv.style('display', 'none')
 
+        this.doParamDiv.style('display', 'none')
 
         this.currentStepUndoActionDiv.style('display', 'none') 
         this.currentStepUndoActionDiv.on('click', _ => {})
@@ -303,16 +304,18 @@ export class IsoDivCityBox extends IsoDivBox {
 
 
         if (cityStep.type.localeCompare('menu') == 0) {
-            this.titleHomeDive.style('display', 'none') 
+            this.titleDiv.style('display', 'none') 
+            this.titleHomeDiv.style('display', 'none') 
             this.stepListDiv.style('display', 'flex') 
         } else {
            //  this.stepDiv.style('display', 'flex')
             this.MDDiv.style('display', 'flex') 
-            this.titleHomeDive.style('display', 'flex') 
+            this.titleHomeDiv.style('display', 'flex') 
+            this.titleDiv.style('display', 'flex') 
         }  
 
         if (cityStep.type.localeCompare('Build') == 0) {
-
+            let editor = null
             if (cityStep.doParamShema) {
                 this.doParamDiv.style('display', 'flex')
 
@@ -333,39 +336,36 @@ export class IsoDivCityBox extends IsoDivBox {
                 })
                 // Initialize the editor
                 this.doParamDiv.select('div').remove()
-                var editor = new JSONEditor(this.doParamDiv.node(),{
+                editor = new JSONEditor(this.doParamDiv.node(),{
                     schema: {
                         // "title": "Person",
                         type: "object",
                         required: [
-                            "age", "gender",
+                            "buildType", "growLoopCount",
                           ],
                         properties: {
-                          "name": {
-                            title:"Name",
-                            type: "string",
-                            description: "First and Last name",
-                            minLength: 4,
-                            default: "Jeremy Dorn"
-                          },
-                          "age": {
-                            title:"Age",
-                            type: "integer",
-                            enum: [
-                               1, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
-                              ],
-                            default: 10,
-                            minimum: 1,
-                            maximum: 100
-                          },
-                          "gender": {
-                            title: "Gender",
-                            type: "string",
-                            enum: [
-                              "male",
-                              "female"
-                            ]
-                          }
+                            "buildType": {
+                                title: "Building Type",
+                                type: "string",
+                                enum: [
+                                    "house3a",
+                                    "house3b",
+                                    "house4a",
+                                    "house6a",
+                                    // "Big Lab",
+                                ]
+                            },    
+                            "growLoopCount": {
+                                title:"Building Size",
+                                type: "integer",
+                                enum: [
+                                   1, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+                                  ],
+                                default: 10,
+                                minimum: 1,
+                                maximum: 100
+                              },
+    
                         }
                       }
                 });
@@ -373,7 +373,7 @@ export class IsoDivCityBox extends IsoDivBox {
             }
             
             if (cityStep.doEnter) {
-                console.log('DO_ENTER')
+                console.log('DO_ENTER: ', cityStep.title, cityStep.text)
                 cityStep.doEnter(this.tile.cityNode, _ => { this.updateContent() })
             }
             /*
@@ -385,9 +385,11 @@ export class IsoDivCityBox extends IsoDivBox {
             }
             */
             if (cityStep.do) {
+                console.log('DO_BUTT: ', cityStep.title, cityStep.text)
                 this.currentStepActionDiv.style('display', 'flex') 
                 this.currentStepActionDiv.on('click', _ => {
-                    const param = {}
+                    const param = editor ? editor.getValue() : {}
+                    console.log('DO: ', cityStep.title, cityStep.text)
                     cityStep.do(this.tile.cityNode, param, _ => { this.updateContent() })
                 })
             }

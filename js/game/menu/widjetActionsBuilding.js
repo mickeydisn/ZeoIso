@@ -166,7 +166,22 @@ export class WidjetActionsBuilding extends WidjetActions {
         }
         
         
-        
+        // --------------------------------
+        {
+            this.contentBox
+                .append('div').classed('row', true).classed('subtitel', true)
+                .text("Building Cimetier")
+            this.firstAction = new ButtTileAction( 
+                this.GS, this.contentBox,
+                "House_6a", {
+                    func:"wcBuild", buildType:'house6a', growLoopCount:10
+                })
+            // this.contentBox.append('div').classed('cell', true).classed('empty', true)
+            // this.contentBox.append('div').classed('cell', true).classed('empty', true)
+            this.contentBox.append('div').classed('cell', true).classed('empty', true)
+        }
+            
+            
 
 
         // --------------------------------
