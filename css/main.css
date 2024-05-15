@@ -1128,8 +1128,8 @@ body {
 
 
 .clickMove div {
-  width: 15em;
-  height: 15em;
+  width: 12em;
+  height: 12em;
   position: absolute;
   z-index: 41;
 }

@@ -1,6 +1,6 @@
 export const assetOptiConfig = [ 
     {
-        "src": "../img/asset_opti/ItemTech.png",
+        "src": "./img/asset_opti/ItemTech.png",
         "group": "ItemTech",
         "images": [
             {
@@ -60,7 +60,7 @@ export const assetOptiConfig = [
         "imgWidth": 192
     },
     {
-        "src": "../img/asset_opti/AstroBase.png",
+        "src": "./img/asset_opti/AstroBase.png",
         "group": "AstroBase",
         "images": [
             {
@@ -124,7 +124,7 @@ export const assetOptiConfig = [
         "imgWidth": 192
     },
     {
-        "src": "../img/asset_opti/Wall.png",
+        "src": "./img/asset_opti/Wall.png",
         "group": "Wall",
         "images": [
             {
@@ -280,7 +280,7 @@ export const assetOptiConfig = [
         "imgWidth": 192
     },
     {
-        "src": "../img/asset_opti/ItemPilar.png",
+        "src": "./img/asset_opti/ItemPilar.png",
         "group": "ItemPilar",
         "images": [
             {
@@ -336,7 +336,7 @@ export const assetOptiConfig = [
         "imgWidth": 192
     },
     {
-        "src": "../img/asset_opti/NatureRock.png",
+        "src": "./img/asset_opti/NatureRock.png",
         "group": "NatureRock",
         "images": [
             {
@@ -556,7 +556,7 @@ export const assetOptiConfig = [
         "imgWidth": 192
     },
     {
-        "src": "../img/asset_opti/AstroRocket.png",
+        "src": "./img/asset_opti/AstroRocket.png",
         "group": "AstroRocket",
         "images": [
             {
@@ -604,7 +604,7 @@ export const assetOptiConfig = [
         "imgWidth": 192
     },
     {
-        "src": "../img/asset_opti/Town2.png",
+        "src": "./img/asset_opti/Town2.png",
         "group": "Town2",
         "images": [
             {
@@ -796,7 +796,7 @@ export const assetOptiConfig = [
         "imgWidth": 192
     },
     {
-        "src": "../img/asset_opti/NatureFlower.png",
+        "src": "./img/asset_opti/NatureFlower.png",
         "group": "NatureFlower",
         "images": [
             {
@@ -960,7 +960,7 @@ export const assetOptiConfig = [
         "imgWidth": 192
     },
     {
-        "src": "../img/asset_opti/AstroPlatform.png",
+        "src": "./img/asset_opti/AstroPlatform.png",
         "group": "AstroPlatform",
         "images": [
             {
@@ -1044,14 +1044,14 @@ export const assetOptiConfig = [
         "imgWidth": 192
     },
     {
-        "src": "../img/asset_opti/MyTower.png",
+        "src": "./img/asset_opti/MyTower.png",
         "group": "MyTower",
         "images": [],
         "imgHeight": 224,
         "imgWidth": 192
     },
     {
-        "src": "../img/asset_opti/ItemOther.png",
+        "src": "./img/asset_opti/ItemOther.png",
         "group": "ItemOther",
         "images": [
             {
@@ -1191,7 +1191,7 @@ export const assetOptiConfig = [
         "imgWidth": 192
     },
     {
-        "src": "../img/asset_opti/ItemGrave.png",
+        "src": "./img/asset_opti/ItemGrave.png",
         "group": "ItemGrave",
         "images": [
             {
@@ -1247,7 +1247,7 @@ export const assetOptiConfig = [
         "imgWidth": 192
     },
     {
-        "src": "../img/asset_opti/Train.png",
+        "src": "./img/asset_opti/Train.png",
         "group": "Train",
         "images": [
             {
@@ -1363,14 +1363,14 @@ export const assetOptiConfig = [
         "imgWidth": 192
     },
     {
-        "src": "../img/asset_opti/UserAstro.png",
+        "src": "./img/asset_opti/UserAstro.png",
         "group": "UserAstro",
         "images": [],
         "imgHeight": 224,
         "imgWidth": 192
     },
     {
-        "src": "../img/asset_opti/Town1.png",
+        "src": "./img/asset_opti/Town1.png",
         "group": "Town1",
         "images": [
             {
@@ -1558,7 +1558,7 @@ export const assetOptiConfig = [
         "imgWidth": 192
     },
     {
-        "src": "../img/asset_opti/NatureTree.png",
+        "src": "./img/asset_opti/NatureTree.png",
         "group": "NatureTree",
         "images": [
             {
@@ -1788,7 +1788,7 @@ export const assetOptiConfig = [
    
 // ----------- 8 axes
     {
-        "src": "../img/asset_opti/UserAstro.png",
+        "src": "./img/asset_opti/UserAstro.png",
         "group": "UserAstro",
         "images": [
             {
@@ -1811,7 +1811,7 @@ export const assetOptiConfig = [
         "imgWidth": 192
     },
     {
-        "src": "../img/asset_opti/MyPerso2.png",
+        "src": "./img/asset_opti/MyPerso2.png",
         "group": "MyPerso2",
         "images": [
             {
