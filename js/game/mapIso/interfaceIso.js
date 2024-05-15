@@ -195,7 +195,7 @@ export class InterfaceIso {
         switch (expr) {
             case 'Asset':
             case 'Svg': {
-                try {
+                // try {
                     const key = itemConf.key
                     const keySelect = Array.isArray(key) ? key[this.frameCount % key.length] : key
                     const cimage = this.assetLoader.getAsset(keySelect)
@@ -203,9 +203,9 @@ export class InterfaceIso {
                         const p = this.iso._translatePoint(Point(x+off.x, y+off.y, lvl))
                             this.ctx.drawImage(cimage, p.x - 127 + 64, p.y - 172 + 64 - 1, 128, 128);
                     }
-                } catch(e) {
+                /* } catch(e) {
                     console.log('errorDraw', itemConf.key)
-                }
+                } */
             }
             break;
             case 'Box': {

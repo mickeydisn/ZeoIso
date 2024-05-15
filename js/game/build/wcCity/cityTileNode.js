@@ -46,7 +46,16 @@ export class CityTileNode extends CityNode {
         this.isHide = false;
         this.hideDistance = 1;
         
-        this.asset = {key: "statue_obelisk_NW#_H180_C150_S95_B75_I1"}
+        this.asset = {key: [
+            "statue_obelisk_NW#_H180_C150_S95_B75_I1_R10",
+            "statue_obelisk_NW#_H180_C150_S95_B75_I1_R10",
+            "statue_obelisk_NW#_H180_C150_S95_B75_I1_R10",
+            "statue_obelisk_NW#_H180_C150_S95_B75_I1_R10",
+            "statue_obelisk_NW#_H180_C150_S95_B75_I1_R10",
+            "statue_obelisk_NW#_H180_C150_S95_B75_I1_R9",
+            "statue_obelisk_NW#_H180_C150_S95_B75_I1_R8",
+            "statue_obelisk_NW#_H180_C150_S95_B75_I1_R7",
+        ]}
         this.text = "# Hello word"
 
         this.STEPS = STEPS_DEFAULT_PATH
