@@ -18,6 +18,7 @@ import { WidjetInterfaceMap } from './game/menu/widjetInterfaceMap.js';
 import { WidjetActionsPlayerAct } from './game/menu/widjetActionsPlayerAct.js';
 import { InterfaceIso2 } from './game/mapIso/interfaceIso2.js';
 import { WidjetMiniWorld } from './game/menu/widjetMiniWorld.js';
+import { AssetLoaderOpti } from './game/asset/assetLoaderOpti.js';
 
 
 export class Main {
@@ -45,7 +46,7 @@ export class Main {
 
     start() {
         console.info('== Init World ==');
-        this.assetLoader = new AssetLoader(_ => this.start2())
+        this.assetLoader = new AssetLoaderOpti(_ => this.start2())
     }
     start2() {
         this.globalState = new GlabalState()
@@ -74,10 +75,12 @@ export class Main {
             const div = divMenu.append('div')
             new WidjetActionsTiles(this.world, div)
         }
+        /*
         {
             const div = divMenu.append('div')
             new WidjetAssetList(this.world, div)
         }
+        */
         {
             const div = divMenu.append('div')
             new WidjetActionsPlayer(this.world, div)
@@ -95,11 +98,13 @@ export class Main {
             new WidjetActionsSetting(this.world, div)
             
         }
+        
         {
             const div = divMenu.append('div')
             new WidjetActionsAchivement(this.world, div)
             
         }
+        
         {
             const div = divMenu.append('div')
             new WidjetActionsTileInfo(this.world, div)

@@ -45,15 +45,13 @@ export class Player {
       this.settingPlayerMove = key
     }    
 
-
-
     get currentAsset() {
 
         const x = Math.floor((Math.abs(this.offx) + Math.abs(this.offy)) * 3)
         const s = x % 3 + 1;
 
         const baseName = 'astronautA'
-        return `${baseName}_${this.direction}-${s}`
+        return `${baseName}-${s}_${this.direction}`
     }
 
     setCenter(xx, yy) {
