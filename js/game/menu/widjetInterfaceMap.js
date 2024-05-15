@@ -42,7 +42,7 @@ export class WidjetInterfaceMap {
         console.log('=== MiniMap - Init')
         this.drawInit();
 
-        this.drawUpdate();
+        // this.drawUpdate();
     }
 
     drawInit() {

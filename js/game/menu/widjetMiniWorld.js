@@ -20,7 +20,7 @@ export class WidjetMiniWorld {
         console.log('=== MiniWorld - Init')
         this.drawInit();
 
-        this.drawUpdate();
+        // this.drawUpdate();
     }
 
     drawInit() {
