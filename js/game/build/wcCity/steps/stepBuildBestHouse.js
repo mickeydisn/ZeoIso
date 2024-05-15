@@ -22,7 +22,6 @@ const PATH_CONFIG = {
 }
 
 const stepWaiting = {...abstractStep, 
-    title: "House Builder",
     text: `> ### ...Waiting To Build `, 
     isValidated : (cityNode) =>  {
         return cityNode.sData && cityNode.sData.isWaiting
@@ -30,9 +29,7 @@ const stepWaiting = {...abstractStep,
 }
 
 
-
-const stepBuildingHouseStartHouse3b =  {...abstractStep,
-    title: "House Builder",
+const stepBuildingHouseStarConf = (bType, gCount) => {return {...abstractStep,
     text: `> ## House Configuration. ... `, 
 
     isValidated: (cityNode) => !cityNode.sData,
@@ -42,18 +39,17 @@ const stepBuildingHouseStartHouse3b =  {...abstractStep,
         cityNode.sData = {
             isWaiting:false,
             param : {
-                buildType:"house3b",
-                growLoopCount:20,
+                buildType:bType,
+                growLoopCount:gCount,
             },
             possibleTiles: null,
             selectedTile: null,
         }
         callback()
     },
-}
+}}
 
 const stepBuildingHouseStart =  {...abstractStep,
-    title: "House Builder",
     text: `> ## House Configuration. ... `, 
     doParamShema : {'toto':1},
 
@@ -80,7 +76,6 @@ const stepBuildingHouseStart =  {...abstractStep,
 }
 
 const stepBuildingHouseCheck =  {...abstractStep,
-    title: "House Builder",
     text: `> ## Check the configuration ... `, 
 
     isValidated: (cityNode) => cityNode.sData && cityNode.sData.param && cityNode.sData.possibleTiles == null,
@@ -168,7 +163,6 @@ const stepBuildingHouseCheck =  {...abstractStep,
 
 // Node Valide Not Exist
 const stepNoWai ={...abstractStep,
-    title: "House Builder",
     text: ` > # House can be construct ... `, 
     isValidated: (cityNode) => cityNode.sData && cityNode.sData.possibleTiles &&  cityNode.sData.possibleTiles.length == 0,
 }
@@ -177,7 +171,6 @@ const stepNoWai ={...abstractStep,
 
 // Node Is Selected Ready to be Build 
 const stepBuildingHouseFinal = {...abstractStep,
-    title: "House Builder",
     text: ` > Build the house Auto`, 
     isValidated: (cityNode) =>  cityNode.sData && cityNode.sData.selectedTile != null,
 
@@ -204,9 +197,8 @@ const stepBuildingHouseFinal = {...abstractStep,
 
 // Node Is Selected Ready to be Build 
 const stepBuildingHouseFinalCheck = {...abstractStep,
-    title: "House Builder",
     text: ` > Build the house `, 
-    isValidated: (cityNode) =>  cityNode.sData && cityNode.sData.selectedTile != null,
+    isValidated: (cityNode) =>  stepBuildingHouseFinal.isValidate(cityNode),
 
     doEnter: (cityNode, callback=_ => {}) => { 
         cityNode.ta.doAction({func:'clearAllTemporatyItems'})
@@ -231,9 +223,11 @@ const stepBuildingHouseFinalCheck = {...abstractStep,
 }
 
 
+
+
 export const section_BuildBestHouse = {
     type:"Build", 
-    title: "House Builder",
+    title: "Builder: House",
     isValidated:true,
     steps: [
         stepWaiting,
@@ -245,16 +239,63 @@ export const section_BuildBestHouse = {
     ] 
 }
 
-export const section_BuildBestHouse3b = {
+export const section_BuildBestHouse3a = {
     type:"Build", 
-    title: "House 3B Builder",
+    title: "Auto Builder: House 3a ",
     isValidated:true,
     steps: [
+        stepBuildingHouseStarConf('house3a', 30),
         stepWaiting,
-        stepBuildingHouseStartHouse3b,
         stepBuildingHouseCheck,
         stepNoWai, 
         stepBuildingHouseFinal,
         STEP_ERROR
     ] 
 }
+export const section_BuildBestHouse3b = {
+    type:"Build", 
+    title: "Auto Builder: House 3b ",
+    isValidated:true,
+    steps: [
+        stepBuildingHouseStarConf('house3b', 10),
+        stepWaiting,
+        stepBuildingHouseCheck,
+        stepNoWai, 
+        stepBuildingHouseFinal,
+        STEP_ERROR
+    ] 
+}
+export const section_BuildBestHouse4a = {
+    type:"Build", 
+    title: "Auto Builder: House 4a ",
+    isValidated:true,
+    steps: [
+        stepBuildingHouseStarConf('house4a', 30),
+        stepWaiting,
+        stepBuildingHouseCheck,
+        stepNoWai, 
+        stepBuildingHouseFinal,
+        STEP_ERROR
+    ] 
+}
+export const section_BuildBestHouse6a = {
+    type:"Build", 
+    title: "Auto Builder: House 6a ",
+    isValidated:true,
+    steps: [
+        stepBuildingHouseStarConf('house6a', 30),
+        stepWaiting,
+        stepBuildingHouseCheck,
+        stepNoWai, 
+        stepBuildingHouseFinal,
+        STEP_ERROR
+    ] 
+}
+
+
+export const section_BuildBestHouse_LIST = [
+    section_BuildBestHouse3a,
+    section_BuildBestHouse3b,
+    section_BuildBestHouse4a,
+    section_BuildBestHouse6a,
+]

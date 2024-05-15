@@ -1133,11 +1133,12 @@ body {
   position: absolute;
   z-index: 41;
 }
-
+/*
 .clickMove div:hover {
   background: #0006;
 
 }
+*/
 .clickMove div#ArrowUp {
   top: 0em; right: 0em;
   border-radius: 0  0 0 10em;

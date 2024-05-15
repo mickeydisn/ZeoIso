@@ -74,7 +74,7 @@ export class InterfaceIso2 {
     draw() {
         this.mainDiv
             .style("position", "absolute")
-            .style('zoom', ".15")
+            .style('zoom', ".3")
             .style('top', "50%")
  
         this.mapDiv = this.mainDiv.append('div')
@@ -104,7 +104,7 @@ export class InterfaceIso2 {
     // -------------
 
     drawMap() {
-        const GRID_SIZE = 6
+        const GRID_SIZE = 3
         this.mapGrid = []
         for (let x = - GRID_SIZE; x <= GRID_SIZE; x++) 
             for (let y = - GRID_SIZE; y <= GRID_SIZE; y++) {

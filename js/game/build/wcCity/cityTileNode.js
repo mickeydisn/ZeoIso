@@ -1,5 +1,5 @@
 import { CityNode } from "./cityNode.js";
-import { section_BuildBestHouse, section_BuildBestHouse3b } from "./steps/stepBuildBestHouse.js";
+import { section_BuildBestHouse, section_BuildBestHouse3b, section_BuildBestHouse_LIST } from "./steps/stepBuildBestHouse.js";
 import { section_BuildBestPath } from "./steps/stepBuildBestPath.js";
 import { section_BuildGraphPath } from "./steps/stepBuildPathGraph.js";
 import { section_RemoveBuilding } from "./steps/stepRemoveHouse.js";
@@ -23,10 +23,10 @@ const STEPS_DEFAULT_PATH = [
         isValidated: true,
     },
     section_BuildBestPath,
+    section_BuildGraphPath,
     // section_BuildHouse,
     section_BuildBestHouse,
-    section_BuildBestHouse3b,
-    section_BuildGraphPath,
+    ...section_BuildBestHouse_LIST,
 ]
 
 export class CityTileNode extends CityNode {
@@ -74,9 +74,14 @@ export class CityTileNode extends CityNode {
             const subStepList = [...curentStep.steps]
             while(subStepList.length > 0) {
                 subStep = subStepList.shift()
-                console.log('CHECK: ', subStep.title, subStep.text)
-                if (subStep.isValidated(this)) {
-                    return { type:curentStep.type, ...subStep}; 
+                const isVal = subStep.isValidated(this)
+                console.log('CHECK: ',isVal,  subStep.title, subStep.text)
+                if (isVal) {
+                    return { 
+                        type:curentStep.type, 
+                        title:curentStep.title, 
+                        ...subStep
+                    }; 
                 }                               
             }
             return { type:curentStep.type, 
