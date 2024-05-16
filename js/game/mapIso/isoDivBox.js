@@ -155,7 +155,7 @@ export class IsoDivCityBox extends IsoDivBox {
             .classed('content', true)
             .style('border','1px solid #FFF')
             .style('position', "absolute")
-            .style('width', this.conf.width ? this.conf.width : "400px")
+            .style('width', this.conf.width ? this.conf.width : "600px")
 
     
         if ( true || this.conf.canBeRemove) {

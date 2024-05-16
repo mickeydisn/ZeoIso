@@ -1,3 +1,7 @@
+import { AbstractWcBuildConf } from "../wcBuilding2/AbstractBuildConf.js";
+import { WcBuildConf_Path } from "../wcBuilding2/buildConf_path.js";
+import { BuildTile, WcBuildTile } from "../wcBuilding2/wcBuildTile.js";
+import { AbstractBuilding } from "../wcBuilding2/wcBuildingFactory.js";
 
 
 
@@ -13,6 +17,45 @@ export class CustomBuilding {
         this.allTileList = []
         // this.openList = []
     }
+
+    drawWcBuilding (x, y) {
+        const buildingConf = new WcBuildConf_Path()
+        buildingConf.init()
+        const building = new AbstractBuilding(this.world, buildingConf)
+
+        { const bTile = new WcBuildTile(this.world, building, x-2, y-1).manual('NO'); bTile.isPath = 2 }
+        { const bTile = new WcBuildTile(this.world, building, x-2, y+0).manual('NO'); bTile.isPath = 2 }
+        { const bTile = new WcBuildTile(this.world, building, x-2, y+1).manual('NO'); bTile.isPath = 2 }
+
+        { const bTile = new WcBuildTile(this.world, building, x-1, y-2).manual('NO'); bTile.isPath = 2 }
+        { const bTile = new WcBuildTile(this.world, building, x-1, y-1).manual('NO'); bTile.isPath = 2 }
+        { const bTile = new WcBuildTile(this.world, building, x-1, y+0).manual('NO'); bTile.isPath = 2 }
+        { const bTile = new WcBuildTile(this.world, building, x-1, y+1).manual('NO'); bTile.isPath = 2 }
+        { const bTile = new WcBuildTile(this.world, building, x-1, y+2).manual('NO'); bTile.isPath = 2 }
+
+        { const bTile = new WcBuildTile(this.world, building, x+0, y-2).manual('NO'); bTile.isPath = 2 }
+        { const bTile = new WcBuildTile(this.world, building, x+0, y-1).manual('NO'); bTile.isPath = 2 }
+        { const bTile = new WcBuildTile(this.world, building, x+0, y+0).manual('NO'); bTile.isPath = 2 }
+        { const bTile = new WcBuildTile(this.world, building, x+0, y+1).manual('NO'); bTile.isPath = 2 }
+        { const bTile = new WcBuildTile(this.world, building, x+0, y+2).manual('NO'); bTile.isPath = 2 }
+
+        { const bTile = new WcBuildTile(this.world, building, x+1, y-2).manual('NO'); bTile.isPath = 2 }
+        { const bTile = new WcBuildTile(this.world, building, x+1, y-1).manual('NO'); bTile.isPath = 2 }
+        { const bTile = new WcBuildTile(this.world, building, x+1, y+0).manual('NO'); bTile.isPath = 2 }
+        { const bTile = new WcBuildTile(this.world, building, x+1, y+1).manual('NO'); bTile.isPath = 2 }
+        { const bTile = new WcBuildTile(this.world, building, x+1, y+2).manual('NO'); bTile.isPath = 2 }
+
+        { const bTile = new WcBuildTile(this.world, building, x+2, y-1).manual('NO'); bTile.isPath = 2 }
+        { const bTile = new WcBuildTile(this.world, building, x+2, y+0).manual('NO'); bTile.isPath = 2 }
+        { const bTile = new WcBuildTile(this.world, building, x+2, y+1).manual('NO'); bTile.isPath = 2 }
+
+        { const bTile = new WcBuildTile(this.world, building, x+3, y).manual('NO'); bTile.isPath = 2 }
+        { const bTile = new WcBuildTile(this.world, building, x-3, y).manual('NO'); bTile.isPath = 2 }
+        { const bTile = new WcBuildTile(this.world, building, x, y+3).manual('NO'); bTile.isPath = 2 }
+        { const bTile = new WcBuildTile(this.world, building, x, y-3).manual('NO'); bTile.isPath = 2 }
+
+    }
+
 
     actionDrawList(x, y) { return  [
 
@@ -47,6 +90,12 @@ export class CustomBuilding {
         {func:'setFrise', x:x-2, y:y+2, isFrise:false},
         {func:'setFrise', x:x-2, y:y-2, isFrise:false},
 
+        {func:'setFrise', x:x+3, y:y, isFrise:false},
+        {func:'setFrise', x:x-3, y:y, isFrise:false},
+        {func:'setFrise', x:x, y:y+3, isFrise:false},
+        {func:'setFrise', x:x, y:y-3, isFrise:false},
+
+
         {func:'clearLvlSquare', x:x, y:y,  size:5},
         {func:'clearColorSquare', x:x, y:y,  size:5}
 
@@ -60,7 +109,7 @@ export class CustomBuilding {
             this.ta.doAction(action)
         })
 
-
+        this.drawWcBuilding(x, y)
 
         // this.md(x, y)
 

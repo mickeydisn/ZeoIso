@@ -19,6 +19,7 @@ export class BuildTile {
         this.tile.wcBuild = this;
         this.isConfigured = false;        
         this.drawConf = {}
+
     }
 
     removeBuilding() {
@@ -107,13 +108,22 @@ export class WcBuildTile extends BuildTile {
             face:[null, null, null, null],
         }
         this.isConfigured = false;
-        this._nearTiles = null
-
         this.possibleFace = [...this.buildFactory.conf.listFaceKey]
 
+        this._nearTiles = null
         // check close validation 
 
     }
+
+    manual(face='X') {
+        this._buildTileConf = {
+            face:[face, face, face, face],
+        }
+        this.isConfigured = true;
+        // this.possibleFace = [[face, face, face, face]]
+        return this
+    }
+
 
 
     get nearFaceValidation() {
@@ -182,6 +192,14 @@ export class WcBuildTile extends BuildTile {
             return true
         }
         return false;
+    }
+    forceUpdateDrawConfiguration(drawConf) {
+        const propTilesValide = this.tryApplyFaceConfiguration(drawConf.face)
+        // Apply Config
+        this.applyBuild(drawConf);
+        this._buildTileConf = drawConf;
+        this.isConfigured = true;
+        return true
     }
 
     /** 

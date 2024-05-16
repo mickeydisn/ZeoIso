@@ -55,6 +55,13 @@ export class WcBuildConf_Path extends AbstractWcBuildConf {
 
 
 
+            ['NO' , 'X'],
+            ['NO', 'P2'],
+            ['NO', 'P3'],
+            ['X' , 'NO'],
+            ['P2', 'NO'],
+            ['P3', 'NO'],
+
             /*
             [ 'X', 'X0', 1],
             ['X0', 'X', 1],

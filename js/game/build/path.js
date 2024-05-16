@@ -33,14 +33,16 @@ export class WcPath extends AbstractBuilding {
             const bTile = tile.wcBuild ? tile.wcBuild : new WcBuildTile(this.world, this, tile.x, tile.y)
             bTile.isPath = 2
             // bTile.applyBuild(tileDrawConf)
-
+            
+            // if (!bTile.tile.isFrise) {
             const tileDrawConf = this.conf.TILE_START
             bTile.updateDrawConfiguration(tileDrawConf)
+            //}
 
             this.updateAllListWithnearWcBuild(bTile);
 
         }
-
+        
         for (let it = 0; it < this.conf.endLoopMax; it++) {
         // for (let it = 0; it < 0; it++) {
             await new Promise(resolve => setTimeout(resolve, time/4));
@@ -74,7 +76,7 @@ export class WcPath extends AbstractBuilding {
     
             break;
         }
-
+        
 
     }
 

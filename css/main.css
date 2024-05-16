@@ -891,6 +891,7 @@ body {
   align-items: center;
   z-index: 100;
   display: flex;
+  font-size: 1.4em;
 }
 
 .isoDivBox.isHide {

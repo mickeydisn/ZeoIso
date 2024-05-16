@@ -16,7 +16,9 @@ export class AbstractWcBuildConf {
         Object.assign(this, conf)
         this.growLoopCount = conf.growLoopCount ? conf.growLoopCount : 10
         this.endLoopMax = conf.endLoopMax ? conf.endLoopMax : 2000
-
+        this.faceLinkWeight = {}
+        this.faceLinks = []
+        this.listFaceKey = []
         this.preInit();
         // this.init();        
     }
