@@ -914,11 +914,13 @@ body {
 
 .isoDivBox .content {
   position: relative;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   display: flex;
   flex-direction: column;
   background-color: #DEDEDE;
+  max-height: 90vh;
+  overflow: scroll;
 /*  width: 400px; */
 }
 
