@@ -90,44 +90,44 @@ export class AssetLoaderOpti {
             }
 
             this.assetTree[info.label + '_NE'] =  {
-                "group": info.group,
+                "group": assetInfo.group,
                 "label": info.label + '_NE',
                 "cimage": __cutImage(0, idx)
             }
             this.assetTree[info.label + '_NW'] =  {
-                "group": info.group,
+                "group": assetInfo.group,
                 "label": info.label + '_NW',
                 "cimage": __cutImage(1, idx)
             }
             this.assetTree[info.label + '_SW'] =  {
-                "group": info.group,
+                "group": assetInfo.group,
                 "label": info.label + '_SW',
                 "cimage": __cutImage(2, idx)
             }
             this.assetTree[info.label + '_SE'] =  {
-                "group": info.group,
+                "group": assetInfo.group,
                 "label": info.label + '_SE',
                 "cimage": __cutImage(3, idx)
             }
 
             if (info['8axes']) {
                 this.assetTree[info.label + '_N'] =  {
-                    "group": info.group,
+                    "group": assetInfo.group,
                     "label": info.label + '_N',
                     "cimage": __cutImage(4, idx)
                 }
                 this.assetTree[info.label + '_W'] =  {
-                    "group": info.group,
+                    "group": assetInfo.group,
                     "label": info.label + '_W',
                     "cimage": __cutImage(5, idx)
                 }
                 this.assetTree[info.label + '_S'] =  {
-                    "group": info.group,
+                    "group": assetInfo.group,
                     "label": info.label + '_S',
                     "cimage": __cutImage(6, idx)
                 }
                 this.assetTree[info.label + '_E'] =  {
-                    "group": info.group,
+                    "group": assetInfo.group,
                     "label": info.label + '_E',
                     "cimage": __cutImage(7, idx)
                 }

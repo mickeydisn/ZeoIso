@@ -75,12 +75,12 @@ export class Main {
             const div = divMenu.append('div')
             new WidjetActionsTiles(this.world, div)
         }
-        /*
+        
         {
             const div = divMenu.append('div')
             new WidjetAssetList(this.world, div)
         }
-        */
+        
         {
             const div = divMenu.append('div')
             new WidjetActionsPlayer(this.world, div)

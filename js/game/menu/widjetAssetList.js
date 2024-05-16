@@ -137,14 +137,15 @@ export class WidjetAssetList extends WidjetActions {
     drawItemList() {
         this.boxItemList.selectAll('div').remove()
 
-        const group = this.assetLoader.assetList
+        const assetList = Object.entries(this.assetLoader.assetTree).map( ([_, v]) => v)
         
+         const group = assetList
             .filter((assetConf) => {
+                if (!assetConf.group) return false
                 const checkMainSelect = 
                     assetConf.group.endsWith(this.mainControl) 
                 return checkMainSelect
             })
-        
             .reduce((rv, assetConf) => {
                 const glabel = assetConf.label.split('_')[0]
                 rv[glabel] = rv[glabel] || []
@@ -163,12 +164,24 @@ export class WidjetAssetList extends WidjetActions {
                         .append('div')
                             .classed('contentImg', true)
       
+                /*
                 contentImg.append('img')
                         .attr('src', src)
                         .style('width', '64px')
                         .style('height', '64px')
                         .style('zoom', '2.5')
-
+                */
+                const canvas = contentImg.append('canvas')
+                    .attr('width', '64px')
+                    .attr('height', '64px')
+                const ctx = canvas.node().getContext("2d")
+                // Draw the cut portion of the source image onto the destination canvas
+                ctx.drawImage(
+                    assetConf.cimage, 
+                    42 , 42, 255 - 84, 255 - 64, 
+                    0, 0, 64, 64
+                );
+                
                 contentImg.on('click', function(_) {
                     console.log("=== CLICK ", assetConf.label)
                     this.selectAssetKey = assetConf.label;

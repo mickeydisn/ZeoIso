@@ -14,57 +14,55 @@ export class CustomBuilding {
         // this.openList = []
     }
 
+    actionDrawList(x, y) { return  [
+
+        {func:'clearItemSquare', x:x, y:y, size:5},
+        {func:'colorSquare', x:x, y:y, size:5, color:[128, 128, 128, 255]},
+
+        {func:'lvlFlatSquare', x:x, y:y, size:5, color:[128, 128, 128, 255]},
+
+        {func:'itemAddKey',  x:x, y:y, assetKey:'crypt_NE#_C110_S40_B90'},
+        // {func:'setBlocked',  x:x, y:y, isBlock:true},
+        
+        {func:'itemAddKey',  x:x+2, y:y, assetKey:'fence_planksDouble_NE#_C110_S40_B90'},
+        {func:'itemAddKey',  x:x+2, y:y, assetKey:'columnLarge_NE#_C110_S40_B90'},
+        {func:'setBlocked',  x:x+2, y:y, isBlock:true},
+
+        {func:'itemAddKey',  x:x-2, y:y, assetKey:'columnLarge_SW#_C110_S40_B90'},
+        {func:'itemAddKey',  x:x-2, y:y, assetKey:'fence_planksDouble_SW#_C110_S40_B90'},
+        {func:'setBlocked',  x:x-2, y:y, isBlock:true},
+
+        {func:'itemAddKey',  x:x, y:y+2, assetKey:'fence_planksDouble_NW#_C110_S40_B90'},
+        {func:'itemAddKey',  x:x, y:y+2, assetKey:'columnLarge_NW#_C110_S40_B90'},
+        {func:'setBlocked',  x:x, y:y+2, isBlock:true},
+
+        {func:'itemAddKey',  x:x, y:y-2, assetKey:'columnLarge_SE#_C110_S40_B90'},
+        {func:'itemAddKey',  x:x, y:y-2, assetKey:'fence_planksDouble_SE#_C110_S40_B90'},
+        {func:'setBlocked',  x:x, y:y-2, isBlock:true},
+
+        {func:'setFriseSquare', x:x, y:y, size:5, isFrise:true},
+
+        {func:'setFrise', x:x+2, y:y+2, isFrise:false},
+        {func:'setFrise', x:x+2, y:y-2, isFrise:false},
+        {func:'setFrise', x:x-2, y:y+2, isFrise:false},
+        {func:'setFrise', x:x-2, y:y-2, isFrise:false},
+
+        {func:'clearLvlSquare', x:x, y:y,  size:5},
+        {func:'clearColorSquare', x:x, y:y,  size:5}
+
+    ]}
 
     start(x, y) {
         // Create the first building Tile :   
         this.mainLvl = this.fm.getTile(x, y).lvl   
 
-        const actionList =  [
-
-            {func:'clearItemSquare', x:x, y:y, size:5},
-            {func:'colorSquare', x:x, y:y, size:5, color:[128, 128, 128, 255]},
-
-            {func:'lvlFlatSquare', x:x, y:y, size:5, color:[128, 128, 128, 255]},
-
-            {func:'itemAddKey',  x:x, y:y, assetKey:'crypt_NE#_C110_S40_B90'},
-            // {func:'setBlocked',  x:x, y:y, isBlock:true},
-            
-            {func:'itemAddKey',  x:x+2, y:y, assetKey:'fence_planksDouble_NE#_C110_S40_B90'},
-            {func:'itemAddKey',  x:x+2, y:y, assetKey:'columnLarge_NE#_C110_S40_B90'},
-            {func:'setBlocked',  x:x+2, y:y, isBlock:true},
-
-            {func:'itemAddKey',  x:x-2, y:y, assetKey:'columnLarge_SW#_C110_S40_B90'},
-            {func:'itemAddKey',  x:x-2, y:y, assetKey:'fence_planksDouble_SW#_C110_S40_B90'},
-            {func:'setBlocked',  x:x-2, y:y, isBlock:true},
-
-            {func:'itemAddKey',  x:x, y:y+2, assetKey:'fence_planksDouble_NW#_C110_S40_B90'},
-            {func:'itemAddKey',  x:x, y:y+2, assetKey:'columnLarge_NW#_C110_S40_B90'},
-            {func:'setBlocked',  x:x, y:y+2, isBlock:true},
-
-            {func:'itemAddKey',  x:x, y:y-2, assetKey:'columnLarge_SE#_C110_S40_B90'},
-            {func:'itemAddKey',  x:x, y:y-2, assetKey:'fence_planksDouble_SE#_C110_S40_B90'},
-            {func:'setBlocked',  x:x, y:y-2, isBlock:true},
-
-
-   
-
-            {func:'setFriseSquare', x:x, y:y, size:5, isFrise:true},
-
-            {func:'setFrise', x:x+2, y:y+2, isFrise:false},
-            {func:'setFrise', x:x+2, y:y-2, isFrise:false},
-            {func:'setFrise', x:x-2, y:y+2, isFrise:false},
-            {func:'setFrise', x:x-2, y:y-2, isFrise:false},
-
-            {func:'clearLvlSquare', x:x, y:y,  size:5},
-            {func:'clearColorSquare', x:x, y:y,  size:5}
-
-        ]
-
-        actionList.forEach(action => {
+        this.actionDrawList(x, y).forEach(action => {
             this.ta.doAction(action)
         })
 
-        this.md(x, y)
+
+
+        // this.md(x, y)
 
     }
 

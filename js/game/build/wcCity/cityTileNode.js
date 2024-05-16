@@ -29,13 +29,41 @@ const STEPS_DEFAULT_PATH = [
     ...section_BuildBestHouse_LIST,
 ]
 
+const CITY_NODE_DEFAULT_CONF = {
+    asset: {
+        key: [10, 10, 10, 10, 10, 10, 9, 8, 7].map(x => "statue_obelisk_NW#_H180_C150_S95_B75_I1_R" + x)
+    },
+    STEPS: [
+
+        {
+            type:"menu",
+            title: "Menu",
+            isValidated: true,
+        }, {
+            type:"MD",
+            title: "Intro",
+            text: ` HELLO WORD `, 
+            isValidated: true,
+        }, {
+            type:"Quest", 
+            title: "Quest",
+            text: `> Collect Biome Resource .. `, 
+            isValidated: true,
+        },
+        section_BuildBestPath,
+        section_BuildGraphPath,
+        // section_BuildHouse,
+        section_BuildBestHouse,
+        ...section_BuildBestHouse_LIST,
+    ]
+}
+
 export class CityTileNode extends CityNode {
 
     constructor(world, tile, conf={}) {
         super(world, tile.x, tile.y)
         this.world = world
         this.tile = tile
-        this.conf = conf
 
         tile.cityNode = this
 
@@ -46,20 +74,14 @@ export class CityTileNode extends CityNode {
         this.isHide = false;
         this.hideDistance = 1;
         
-        this.asset = {key: [
-            "statue_obelisk_NW#_H180_C150_S95_B75_I1_R10",
-            "statue_obelisk_NW#_H180_C150_S95_B75_I1_R10",
-            "statue_obelisk_NW#_H180_C150_S95_B75_I1_R10",
-            "statue_obelisk_NW#_H180_C150_S95_B75_I1_R10",
-            "statue_obelisk_NW#_H180_C150_S95_B75_I1_R10",
-            "statue_obelisk_NW#_H180_C150_S95_B75_I1_R9",
-            "statue_obelisk_NW#_H180_C150_S95_B75_I1_R8",
-            "statue_obelisk_NW#_H180_C150_S95_B75_I1_R7",
-        ]}
         this.text = "# Hello word"
 
-        this.STEPS = STEPS_DEFAULT_PATH
+        // this.asset = null //  {key:  [10, 10, 10, 10, 10, 10, 9, 8, 7].map(x => "statue_obelisk_NW#_H180_C150_S95_B75_I1_R" + x)}
+        // this.STEPS = null // STEPS_DEFAULT_PATH
         this._currentStepIdx = 0
+
+        Object.assign(this, CITY_NODE_DEFAULT_CONF)
+        Object.assign(this, conf)
 
     }
 

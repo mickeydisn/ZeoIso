@@ -68,7 +68,7 @@ export class WidjetInterfaceMap {
         `)
         
        const menuInteface = this.mainDiv.select('.widjetMenuBox#mainInterfaceMap')
-            .style('width', this.size + 'px')
+            // .style('width', this.size + 'px')
 
         this.contentDiv = menuInteface.append("div")
                 .attr('id', 'content')
@@ -119,7 +119,7 @@ export class WidjetInterfaceMap {
       var canvas = this.contentDiv.append('canvas')
         .style('background', 'transparent')
         .style('image-rendering', 'pixelated')
-        .style('position', 'absolute')
+        // .style('position', 'absolute')
         .attr('id', name)
         .attr('height', height)
         .attr('width', width)

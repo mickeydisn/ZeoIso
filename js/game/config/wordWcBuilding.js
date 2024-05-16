@@ -1,6 +1,7 @@
 import { CustomBuilding } from "../build/customBuilding/mainCitySpawn.js"
 import { Maze } from "../build/maze/maze.js"
 import { PathFactory } from "../build/path.js"
+import { CityFactory } from "../build/wcCity/cityFactory.js"
 import { CityTileNode } from "../build/wcCity/cityTileNode.js"
 
 
@@ -29,11 +30,15 @@ export class WorldWcBuilding {
         this.name(x, y);
 
 
-        this.ta.colorSquare({x:x, y:y, size:3, color:[0, 0, 0, 255]})
-        this.ta.colorSquare({x:x, y:y, size:1, color:[128, 128, 0, 255]})
+        // this.ta.colorSquare({x:x, y:y, size:3, color:[0, 0, 0, 255]})
+        // this.ta.colorSquare({x:x, y:y, size:1, color:[128, 128, 0, 255]})
         // this.ta.clearItemSquare({x:x, y:y, size:5})
 
 
+
+        new CityFactory(this.world, {}).start(x-2, y-2)
+
+        /*
         const centreCity = new CustomBuilding(this.world, {})
         centreCity.start(x-20, y-20)
 
@@ -43,6 +48,9 @@ export class WorldWcBuilding {
             const tile = this.fm.getTile(x, y)
             new CityTileNode(this.world, tile, {})
         }
+        */
+
+
 
         /*
         const pathFactory = new PathFactory(this.world, {})

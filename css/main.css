@@ -123,25 +123,22 @@ body {
 /* --------------- */
 
 #mainInterfaceMap  {
+  left: 2rem;
   background-color: #DEDEDE99;
-  width: 600px;
-  height: 666px;
   padding: 0px;
   margin: 0px;
-  left: 60px;
-  top: 60px;
+  width: calc(100vw - (2* 4.8rem));
   align-items: center;
-  padding: 0 1.5rem 2rem 1.5rem;
-  overflow: hidden;
+  flex-direction: row;
+  min-height: 100vh;
   /* transform: rotateX(-60deg) rotateY(0deg) rotateZ(-45deg); */
 }
 
 #mainInterfaceMap #menu {
-  /* border: 1px solid #000; */ 
   margin: 0;
   padding: 0;
   display: flex;
-
+  flex-direction: column;
 }
 #mainInterfaceMap #menu > span {
   padding: 1rem;
@@ -149,7 +146,7 @@ body {
   transition: all 1s;
   font-size: 1.4em;
   /* transform: rotateZ(45deg); */
-  border-radius: 2em;
+  border-radius: 2.4em;
 }
 
 #mainInterfaceMap #menu > span:hover {
@@ -159,7 +156,7 @@ body {
 
 
 #mainInterfaceMap > div#content {
-  width: 1px;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -170,7 +167,8 @@ body {
 }
 
 #mainInterfaceMap  .centerDot {
-  border: 4px solid #333;
+  position: absolute;
+  border: 2px solid #333;
   z-index: 10000;
   border-radius: 4px;
   box-shadow: 0px 0px 3px 0px #DEDEDE;
@@ -397,7 +395,7 @@ body {
 
 .buttMenuBox {
   position: absolute;
-  width: calc(100vw - 80px);
+  width: calc(100vw - (2 * 2.6rem));
   height: 100vh;
   top: 0px;
   left: 2.6rem;
@@ -414,21 +412,21 @@ body {
 }
 
 .buttMenuBox#miniMap > label {
-  top: calc(70px);
+  top: calc(4rem);
   left: -2.6rem;
 }
 .buttMenuBox#miniWorld > label {
-  top: calc(70px + 50px);
+  top: calc(4rem + 3rem);
   left: -2.6rem;
 }
 
 .buttMenuBox#playerActionAct > label {
-  top: calc(70px + 50px + 50px);
+  top: calc(4rem + 2 * 3rem);
   left: -2.6rem;
 }
 
 .buttMenuBox#playerActionAct > div {
-  top: calc(70px + 50px);
+  top: calc(4rem + 50px);
   left: 0px;
   width: 4px;
   height: 2.6rem;
@@ -436,40 +434,42 @@ body {
   margin: 0px;
 }
 
+/* --- */
+
 .buttMenuBox#settingAction > label {
   top: 0px;
   right:-2.6rem;
 }
 
-
 .buttMenuBox#tileInfoAction > label {
-  top: calc(70px);
+  top: calc(4rem);
   right:-2.6rem;
 }
 
 .buttMenuBox#playerAction > label {
-  top: calc(70px + 50px);
+  top: calc(4rem + 3rem);
   right:-2.6rem;
 }
 
 
 .buttMenuBox#achivementAction > label {
-  top: calc(70px + 50px + 50px);
+  top: calc(4rem + 2 * 3rem);
   right:-2.6rem;
 }
+/* --- */
 
 
 .buttMenuBox#floorAction > label {
-  top: calc(70px + 50px + 250px);
+  top: calc(4rem + 4 * 3rem);
   right:-2.6rem;
 }
 .buttMenuBox#tileAsset > label {
-  top: calc(70px + 50px + 250px + 50px);
+  top: calc(4rem + 5 * 3rem);
   right:-2.6rem;
 }
 
 .buttMenuBox#buildingAction > label {
-  top: calc(70px + 50px + 250px + 50px + 50px);
+  top: calc(4rem + 6 * 3rem);
   right:-2.6rem;
 }
 
@@ -580,9 +580,12 @@ body {
   font-size: 1.2rem;
   font-stretch: condensed;
 
-  top: 55px;
-  height: 80vh;
+  top: 0px;
+  right: 20px;
+
+  max-height: 100vh;
   padding-top: 0.1rem;
+  padding-bottom: 3rem;
   overflow: scroll;
 }
 
@@ -838,9 +841,9 @@ body {
 }
 
 .listAsset > .cell > .contentImg {
-  top: -60px;
+  /* top: -60px;
   left: -46px;
-  width: 64px;
+  */ width: 64px;
   height: 64px;
   position: absolute;
 }
