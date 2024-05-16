@@ -30,6 +30,7 @@ const STEPS_DEFAULT_PATH = [
 ]
 
 const CITY_NODE_DEFAULT_CONF = {
+    type:'Node',
     asset: {
         key: [10, 10, 10, 10, 10, 10, 9, 8, 7].map(x => "statue_obelisk_NW#_H180_C150_S95_B75_I1_R" + x)
     },
@@ -201,6 +202,7 @@ const STEPS_DEFAULT_HOUSE = [
 export class CitNodeHouse extends CityTileNode {
     constructor(world, tile, conf={}) {
         super(world, tile, conf)
+        this.type = 'HouseNode'
         this.STEPS = STEPS_DEFAULT_HOUSE
         this.asset = {key: [
             "coinGold_NW#_H190_C110_S80_B80_R1",
