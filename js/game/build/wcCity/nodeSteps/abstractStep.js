@@ -3,7 +3,6 @@
 
 
 export const abstractStep = {
-    title: "",
     text: "", // Markdonw text
     isValidate: (cityNode) => {
         return true
@@ -15,12 +14,12 @@ export const abstractStep = {
         callback(); 
     }
     // doEnter: (cityNode, callback=_ => {}) => { }
-    // do: (cityNode, param={}, callback=_ => {}) => {}
+    // do: (cityNode, callback=_ => {}, param={}) => {}
 
 }
 
 
-export const STEP_ERROR = {...abstractStep, 
+export const SUBSTEP_ERROR = {...abstractStep, 
     title: "Error",
     text: `> ### No a Valide Step `, 
     isValidated : (cityNode) =>  {
@@ -29,4 +28,11 @@ export const STEP_ERROR = {...abstractStep,
     }
 }
 
+
+export const SUBSTEP_WATTING = {...abstractStep, 
+    text: `> ### ...Waiting `, 
+    isValidated : (cityNode) =>  {
+        return cityNode.sData && cityNode.sData.isWaiting
+    },
+}
 

@@ -5,6 +5,7 @@ export class WcBuildConf_House3a extends AbstractWcBuildConf {
     constructor(conf={}) {
         super(conf)
 
+
         this.faceLinkWeight = {
             
             'P1' : 0,

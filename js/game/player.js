@@ -34,9 +34,66 @@ export class Player {
         this.GS.sub('Setting.KeboardType', 'Player', this.updateSettingKeboardType.bind(this))
         this.updateSettingKeboardType(this.GS.get('Setting.KeboardType'))
 
+        // -----------
         this.spaceActionNow = 0;
+
+
+        // -----
+        // Place where the progression of the story is store. 
+        this.storyProgress = {
+          INTRO: { START:true, END:false },
+        }
+
+        this._inventory = {
+          MEMORY_GRAVE: {itemId:'MEMORY_GRAVE', count:10}
+        }
     }
 
+    // ----- 
+
+      get inventory() {
+        return Object.values(this._inventory)
+    }
+
+    get inventoryIndex() {
+        return this._inventory
+    } 
+
+    inventoryAdd(itemId, count) {
+        if (!itemId) return
+        const icount = count ? count : 1
+
+        if (this._inventory[itemId]) {
+            this._inventory[itemId].count += icount
+        } else {
+            this._inventory[itemId] = {itemId:itemId, count:icount}
+        }
+        this.GS.set("Player.inventory.update", 1) 
+    }
+    inventoryHave(itemId, count) {
+        return itemId
+            && this._inventory[itemId]
+            && this._inventory[itemId].count >= count
+    }
+    
+    inventoryRemove(itemId, count) {
+        if (!itemId) return
+        if (!this._inventory[itemId]) return 
+
+        const icount = count ? count : 1
+        this._inventory[itemId].count -= icount
+        if (this._inventory[itemId].count <= 0) {
+            delete this._inventory[itemId]
+        }
+        this.GS.set("Player.inventory.update", 1) 
+    }
+    inventoryEmpty() {
+      this._inventory = {}
+      this.GS.set("Player.inventory.update", 1) 
+    }
+
+  
+      // --------------------------------
 
     updateSettingKeboardType(keyType) {
       this.keyboardAzert = keyType.localeCompare("azerty") == 0 
@@ -264,7 +321,6 @@ export class Player {
         x ==  0 && y ==  1 ?  [ 1,  0]:  
         x ==  1 && y ==  1 ? [.75, -.75]: 
         x ==  1 && y ==  0 ? [ 0, -1]:  
-
         x ==  1 && y == -1 ? [-1.25, -1.25]: 
         x ==  0 && y == -1 ? [-1,  0]: 
         x == -1 && y == -1 ? [-.75,  .75]:

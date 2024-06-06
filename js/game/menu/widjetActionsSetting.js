@@ -52,13 +52,13 @@ export class WidjetActionsSetting extends WidjetActions {
 
         // --------------------------------
         {
-            this.contentBox.append('div').classed('row', true).classed('titel', true)
+            this.contentBox.append('div').classed('row', true).classed('title', true)
                 .text("= SETTING =")
         }
 
         // KEYBOARD
         {
-            this.contentBox.append('div').classed('row', true).classed('subtitel', true)
+            this.contentBox.append('div').classed('row', true).classed('subtitle', true)
                 .text("Keyboard:")
             
             const zoomBox = this.contentBox.append('div').classed('row', true)
@@ -73,7 +73,7 @@ export class WidjetActionsSetting extends WidjetActions {
 
         // PlayerMove
         {
-            this.contentBox.append('div').classed('row', true).classed('subtitel', true)
+            this.contentBox.append('div').classed('row', true).classed('subtitle', true)
                 .text("PlayerMove:")
             
             const zoomBox = this.contentBox.append('div').classed('row', true)
@@ -89,7 +89,7 @@ export class WidjetActionsSetting extends WidjetActions {
 
         // ZOOM 
         {
-            this.contentBox.append('div').classed('row', true).classed('subtitel', true)
+            this.contentBox.append('div').classed('row', true).classed('subtitle', true)
                 .text("Zoom:")
             
             const zoomBox = this.contentBox.append('div').classed('row', true)

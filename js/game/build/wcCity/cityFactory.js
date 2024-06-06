@@ -1,8 +1,5 @@
 import { CustomBuilding } from "../customBuilding/mainCitySpawn.js";
-import { CityTileNode } from "./cityTileNode.js";
-import { section_BuildBestHouse3a, section_BuildBestHouse3b, section_BuildBestHouse4a, section_BuildBestHouse6a } from "./steps/stepBuildBestHouse.js";
-import { section_BuildBestPath } from "./steps/stepBuildBestPath.js";
-import { section_StartNode } from "./steps/stepStartNode.js";
+import { CitNodeCenter } from "./config/cityNodeCenter.js";
 
 
 export class CityFactory {
@@ -15,18 +12,12 @@ export class CityFactory {
         this.ta = world.tilesActions;
         this.GS = world.globalState
 
-        this.nodeList = []
+        this.cityNodes = []
+        this.entities = []
 
-
-        this.inventory = {
-            STEPS: {
-                'StartNode' : [],
-                'PathNode' : [],
-                'HouseNode' : [],
-            },
-        }
-
+        
     }
+
 
 
     start(x, y) {
@@ -36,27 +27,38 @@ export class CityFactory {
 
         {
             const tile = this.fm.getTile(x, y)
-            new CityTileNode(this.world, tile, {
-                type:'StartNode',
-                asset : {key : [10, 10, 10, 10, 10, 8, 6].map(x => 'crypt_NE#_C110_S40_B90_R' + x)},
-                STEPS: [
-                    {
-                        type:"menu",
-                        title: "Menu",
-                        isValidated: true,
-                    }, 
-                    {...section_StartNode, title:"Story"},
-                    {...section_BuildBestPath, title:"== Build a road =="},
-                    {...section_BuildBestHouse3b, title:"== Build a House =="},
-                    {...section_BuildBestHouse4a, title:"== Build a Lab =="},
-                    {...section_BuildBestHouse6a, title:"== Build a Grave yard =="},
-                    {...section_BuildBestHouse3a, title:"== Build a Communoty Center =="},
-                ]
-            })
+            new CitNodeCenter(this.world, this, tile, {})
         }
-
-
     }
+
     // --------------------------------
+
+	addEntity(entity) {
+		if (!this.entities.includes(entity)) {
+			this.entities.push(entity)
+		}
+	}
+	removeEntity(entity) {
+		const index = this.entities.indexOf(entity);
+		if (index > -1) {
+			this.entities.splice(index, 1);
+		}
+	}
+
+    doTick() {
+        this.entities.forEach(e => e.doTick())
+    }
+
+    // --------------------------------
+
+    appendNode(cityNode) {
+        if (!this.cityNodes.includes(cityNode)) {
+            this.cityNodes.push(cityNode)
+        }
+    }
+    removeNode(cityNode) {
+        const idx = this.cityNodes.findIndex(cityNode)
+        if (idx) this.cityNodes.splice(idx, 1)
+    }
 }
 

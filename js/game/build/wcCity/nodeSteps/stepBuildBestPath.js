@@ -1,7 +1,7 @@
 import { PathFactory } from "../../path.js";
 import { CityRoad } from "../cityRoad.js";
-import { CityTileNode } from "../cityTileNode.js";
-import { STEP_ERROR, abstractStep } from "./abstractStep.js";
+import { SUBSTEP_ERROR, SUBSTEP_WATTING, abstractStep } from "./abstractStep.js";
+import { CitNodeRoad } from "../config/cityNodeRoad.js";
 
 
 const PATH_CONFIG = {
@@ -34,18 +34,12 @@ const PATH_CONFIG = {
     ]},
 }
 
-const stepWaiting = {...abstractStep, 
-    text: `> ### Waiting path to build `, 
-    isValidated : (cityNode) =>  {
-        return cityNode.sData && cityNode.sData.isWaiting
-    },
-}
 
-
-const stepBuildingPathStart =  {...abstractStep,
+const SUBSTEP_BuildingPathStart =  {...abstractStep,
     text: `> ## Path Configuration. ... `, 
 
-    isValidated: (cityNode) => !cityNode.sData,
+    isValidated: (cityNode) => 
+        !cityNode.sData,
 
     doEnter: (cityNode, callback=_ => {} ) => {
         cityNode.ta.doAction({func:'clearAllTemporatyItems'})
@@ -54,30 +48,20 @@ const stepBuildingPathStart =  {...abstractStep,
             pathConfig: PATH_CONFIG,
             param : null,
             possibleTiles: null,
-            selectedTile: null,
+            bestNode: null,
         }
         callback()
     },
 
 }
 
-export const stepBuildingPathCheckPossible_old = {...abstractStep, 
-    text: `> ### Build the path Auto `, 
-    isValidated: (cityNode) => cityNode.sData &&  !cityNode.sData.isChecked,
-    doEnter: (cityNode, callback=_ => {}) => { 
-        const bestNearNodeInfo = cityNode.getBestNearNode(PATH_CONFIG)
-        cityNode.sData.bestNode = bestNearNodeInfo ? bestNearNodeInfo.node : null
-        cityNode.sData.isChecked = true
-        callback(); 
-    }
-}
-
-
-export const stepBuildingPathCheckPossible = {...abstractStep, 
+const SUBSTEP_BuildingPathCheckPossible = {...abstractStep, 
     text: `> ### Select All possible node for a path  `, 
+
     isValidated: (cityNode) => 
         cityNode.sData &&  
         cityNode.sData.possibleTiles == null,
+
     doEnter: (cityNode, callback=_ => {}) => { 
         const NEAR_ITER_LIMIT=2
         const ITER_LIMIT=40
@@ -141,7 +125,7 @@ export const stepBuildingPathCheckPossible = {...abstractStep,
 
 
 // Node Valide Not Exist
-const stepNoWai = {...abstractStep,
+const SUBSTEP_NoWai = {...abstractStep,
     text: ` > # Path can be construct ... `, 
     isValidated: (cityNode) => 
         cityNode.sData && 
@@ -150,7 +134,7 @@ const stepNoWai = {...abstractStep,
 }
 
 
-export const stepBuildingPathChoiseBest = {...abstractStep, 
+const SUBSTEP_BuildingPathChoiseBest = {...abstractStep, 
     text: `> ### Chose the best   `, 
     isValidated: (cityNode) =>
         cityNode.sData && 
@@ -172,6 +156,7 @@ export const stepBuildingPathChoiseBest = {...abstractStep,
 
         // Use pathfinder to check the true path lenght ( filter > conf.length + 5)
         let bestNodeInfo = false
+        let bestNode = false;
         while(nodeFilterC.length) {
             bestNodeInfo = nodeFilterC.shift()
             const path = new PathFactory(cityNode.world, {})
@@ -180,103 +165,123 @@ export const stepBuildingPathChoiseBest = {...abstractStep,
             if (wcPath.tileList.length >= config.length + 5) {
                 bestNode = false
             } else {
+                bestNode = true
                 break
             }
         }
         console.log("bestNode", bestNodeInfo )
-        cityNode.sData.bestNode = bestNodeInfo.node
+        if (bestNode) {
+            cityNode.sData.bestNode = bestNodeInfo.node
+        }
         callback()
      }
 }
 
 
 // Node Valide Not Exist
-const stepNoWai2 = {...abstractStep,
+const SUBSTEP_NoWai2 = {...abstractStep,
     text: ` > # Path No Valide Node ... `, 
     isValidated: (cityNode) => 
         cityNode.sData && 
-        cityNode.sData.bestNode === false
+        cityNode.sData.bestNode == null
 }
 
 
 
-export const stepBuildingPathFinal = {...abstractStep, 
+const SUBSTEP_BuildingPathFinal = {...abstractStep, 
     text: `> ### Build the path Auto `, 
-    isValidated: (cityNode) => 
-        cityNode.sData && 
-        cityNode.sData.bestNode,
-
-    doEnter: (cityNode, callback=_ => {}) => { 
+    isValidated: (cityNode) => {
+        console.log("ISVALIDE", cityNode, cityNode.sData.bestNode != null)
+        return cityNode.sData 
+        && cityNode.sData.bestNode
+    },
+    doEnter: (cityNode, callback=_ => {}, callend=null) => { 
+        console.log("DOENTER", cityNode)
         const bestNode = cityNode.sData.bestNode
         const nCityTile = cityNode.fm.getTile(bestNode.x, bestNode.y)
-        const nCityTileNode = nCityTile.cityNode ? nCityTile.cityNode : new CityTileNode(cityNode.world, nCityTile, cityNode.conf)
+        const nCityNode = nCityTile.cityNode 
+            ? nCityTile.cityNode 
+            : new CitNodeRoad(cityNode.world, cityNode.cityFactory, nCityTile, cityNode.conf)
 
         cityNode.ta.doAction({func:'clearAllTemporatyItems'})
         const path = new PathFactory(cityNode.world, {})
-        const wcPath = path.createWcPath({x:cityNode.x, y:cityNode.y}, {x:nCityTileNode.x, y:nCityTileNode.y})
+        const wcPath = path.createWcPath({x:cityNode.x, y:cityNode.y}, {x:nCityNode.x, y:nCityNode.y})
+        
         wcPath.start().then(_ => {
-            const newRoad = new CityRoad(cityNode, nCityTileNode, wcPath)
+            const newRoad = new CityRoad(cityNode, nCityNode, wcPath)
             cityNode.addRoad(newRoad)
-            nCityTileNode.addRoad(newRoad)
+            nCityNode.addRoad(newRoad)
             cityNode.homeStep()
-            callback(); 
+            callend ? callend() : callback(); 
         })
         cityNode.sData.isWaiting = true
         callback(); 
     }
 }
 
-
-// Node Is Selected Ready to be Build 
-const stepBuildingPathFinalCheck = {...abstractStep,
-    text: ` > Build the Path Check `, 
-    isValidated: (cityNode) =>  stepBuildingPathFinal.isValidate(cityNode),
-
-    doEnter: (cityNode, callback=_ => {}) => { 
-        if (cityNode.sData && cityNode.sData.bestNode) {
-            const n = cityNode.sData.bestNode
-            cityNode.ta.doAction({func:'clearAllTemporatyItems'})
-            cityNode.ta.doAction({func:'temporatyItemsForceKey', x:n.x, y:n.y, assetKey:"statue_obelisk_NW#_C130_B110_I1_R3"})
-        } else {
-            console.log('Not a Valide Path')
-        }
-    },  
-
-    do: (cityNode, param={}, callback=_ => {}) => {
-        if (stepBuildingPathFinal.isValidate(cityNode)) {
-
-        }
-        stepBuildingPathFinal.doEnter(cityNode, callback)
-    }
-}
+export const SUBSTEP_LIST_BuildBestPath = [
+    SUBSTEP_BuildingPathStart,
+    SUBSTEP_BuildingPathCheckPossible,
+    SUBSTEP_NoWai,
+    SUBSTEP_BuildingPathChoiseBest,
+    SUBSTEP_NoWai2,
+    SUBSTEP_BuildingPathFinal,
+]
 
 
-export const section_BuildBestPath = {
+export const STEP_BuildBestPath = {
     title: "Auto Builder: Path",
     type:"Build", 
     isValidated:true,
     steps: [
-        stepWaiting,
-        stepBuildingPathStart,
-        stepBuildingPathCheckPossible,
-        stepNoWai,
-        stepBuildingPathChoiseBest,
-        stepNoWai2,
-        stepBuildingPathFinal,
-        STEP_ERROR,
+        SUBSTEP_WATTING,
+        ...SUBSTEP_LIST_BuildBestPath,
+        SUBSTEP_ERROR,
     ],
 }
 
 // --------------
 
+export const SUBSTEP_BestPathBuilder_Build = {...abstractStep, 
+    text: `> ### Build the path `,
+    isValidated: (cityNode) => !cityNode.sData,
+    
+    doEnter: (cityNode, callback=_ => {}, callend=_ => {}) => {
 
-const stepNoPath = {...abstractStep, 
-    text: `> ### No path to build `, 
-    isValidated: (cityNode) => {
-        return cityNode.sData && cityNode.sData.bestNode == null
+        const fFinal = _ => {
+            if (SUBSTEP_BuildingPathFinal.isValidated(cityNode)) {
+                SUBSTEP_BuildingPathFinal.doEnter(cityNode, callback, callend)
+            }
+        }
+        const fError = _ => {
+            cityNode.homeStep()
+            callend(); 
+        }
+        const fChoiseBest = _ => {
+            if (SUBSTEP_BuildingPathChoiseBest.isValidated(cityNode)) {
+                SUBSTEP_BuildingPathChoiseBest.doEnter(cityNode, fFinal)
+            } else {
+                fError()
+            }
+        }
+        
+        const fCheckPossible = _ => {
+            if (SUBSTEP_BuildingPathCheckPossible.isValidated(cityNode)) {
+                SUBSTEP_BuildingPathCheckPossible.doEnter(cityNode, fChoiseBest)
+            } else {
+                fError()
+            }
+        }
+        const fCheckPathStart = _ => {
+            if (SUBSTEP_BuildingPathStart.isValidated(cityNode)) {
+                SUBSTEP_BuildingPathStart.doEnter(cityNode, fCheckPossible)
+            } else {
+                fError()
+            }
+        }
+        fCheckPathStart()
     }
 }
-
 
 export const stepBestPathBuilder_Build = {...abstractStep, 
     text: `> ### Build the path `, 
@@ -302,18 +307,18 @@ export const stepBestPathBuilder_Build = {...abstractStep,
         cityNode.ta.doAction({func:'clearAllTemporatyItems'})
         callback(); 
     },
-    do: (cityNode, param={}, callback=_ => {}) => { 
+    do: (cityNode, callback=_ => {}, param={}) => { 
         const bestNode = cityNode.sData.bestNode
         const nCityTile = cityNode.fm.getTile(bestNode.x, bestNode.y)
-        const nCityTileNode = nCityTile.cityNode ? nCityTile.cityNode : new CityTileNode(cityNode.world, nCityTile, cityNode.conf)
+        const nCityNode = nCityTile.cityNode ? nCityTile.cityNode : new CitNodeRoad(cityNode.world, cityNode.cityFactory, nCityTile, cityNode.conf)
 
         cityNode.ta.doAction({func:'clearAllTemporatyItems'})
         const path = new PathFactory(cityNode.world, {})
-        const wcPath = path.createWcPath({x:cityNode.x, y:cityNode.y}, {x:nCityTileNode.x, y:nCityTileNode.y})
+        const wcPath = path.createWcPath({x:cityNode.x, y:cityNode.y}, {x:nCityNode.x, y:nCityNode.y})
         wcPath.start().then(_ => {
-            const newRoad = new CityRoad(cityNode, nCityTileNode, wcPath)
+            const newRoad = new CityRoad(cityNode, nCityNode, wcPath)
             cityNode.addRoad(newRoad)
-            nCityTileNode.addRoad(newRoad)
+            nCityNode.addRoad(newRoad)
             cityNode.homeStep()
             callback(); 
         })
@@ -323,14 +328,3 @@ export const stepBestPathBuilder_Build = {...abstractStep,
 }
 
 
-export const section_BuildBestPath_old = {
-    title: "Path Builder",
-    type:"Build", 
-    isValidated:true,
-    steps: [
-        stepWaiting,
-        stepBuildingPathFinalCheck,
-        stepNoPath,
-        STEP_ERROR,
-    ],
-}

@@ -30,7 +30,7 @@ export class WidjetActionsTileInfo extends WidjetActions {
 
         // --------------------------------
         {
-            this.contentBox.append('div').classed('row', true).classed('titel', true)
+            this.contentBox.append('div').classed('row', true).classed('title', true)
                 .text("= INFO =")
         }
         {

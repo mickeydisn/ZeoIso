@@ -117,7 +117,8 @@ export class PathFactory {
         const conf = {
             maxLvlDiff: 4,   
             propagateLimit: 2000,
-            colapseLimit: 500,     
+            colapseLimit: 500,  
+            axeCount:8,   
             ..._conf
         }
         Object.assign(this, conf);
@@ -149,7 +150,8 @@ export class PathFactory {
         return line + diag
     }
 
-    createWcPath(pStart, pEnd) {
+
+    createPath(pStart, pEnd) {
         this.tileStart = this.fm.getTile(pStart.x, pStart.y)
         this.tileEnd = this.fm.getTile(pEnd.x, pEnd.y)
 
@@ -160,7 +162,6 @@ export class PathFactory {
         this.allList = [this.tileStart]
         const score = this.score(this.tileStart, this.tileEnd)
         this.openList.push({score:score, tile:this.tileStart})
-
         let i = 0;
         while (this.openList.length && i++ < this.propagateLimit && !this.allList.includes(this.tileEnd)) {
             this.propagate()
@@ -175,16 +176,24 @@ export class PathFactory {
                 tileList.push(current)
                 current = this.parentIndex[`${current.x}_${current.y}`]
             }
-            return new WcPath(this.world, tileList)
+            return tileList.reverse()
         }
         return null
+    }
+    createWcPath(pStart, pEnd) {
+        const tileList =  this.createPath(pStart, pEnd)
+        if (tileList) {
+            return new WcPath(this.world, tileList)
+        } else {
+            return null            
+        }
     }
 
     propagate() {
         this.openList = this.openList.sort((a, b) => a.score - b.score)
         const bestTileConf = this.openList.shift()
         const bestTile = bestTileConf.tile
-        const nears = bestTile.nearTiles3
+        const nears = this.axeCount == 4 ?  bestTile.nearTiles : bestTile.nearTiles3 
         const nearsNew = nears.filter(n => {
             const canMove =  PathFactory.canMove(bestTile, n)
             const isValide = this.isValideTile(n)

@@ -48,12 +48,12 @@ export class WidjetActionsTiles extends WidjetActions {
         // --------------------------------
 
         {
-            this.contentBox.append('div').classed('row', true).classed('titel', true)
+            this.contentBox.append('div').classed('row', true).classed('title', true)
                 .text("= TILES ACTION =")
         }
 
         // --------------------------------
-        this.contentBox.append('div').classed('row', true).classed('subtitel', true)
+        this.contentBox.append('div').classed('row', true).classed('subtitle', true)
             .text("Effect size:")
 
         const sizeInput = this.contentBox.append('div').classed('row', true).classed('input', true)
@@ -80,7 +80,7 @@ export class WidjetActionsTiles extends WidjetActions {
 
         // --------------------------------
 
-        this.contentBox.append('div').classed('row', true).classed('subtitel', true)
+        this.contentBox.append('div').classed('row', true).classed('subtitle', true)
             .text("Clear Actions:")
         this.firstAction = new ButtTileAction(this.GS, this.contentBox, "Clear Item", {func:"clearItemSquare", size:1})
         new ButtTileAction(this.GS, this.contentBox, "Restore Color", {func:"clearColorSquare", size:1})
@@ -88,7 +88,7 @@ export class WidjetActionsTiles extends WidjetActions {
         this.contentBox.append('div').classed('cell', true).classed('empty', true)
 
         // --------------------------------
-        this.contentBox.append('div').classed('row', true).classed('subtitel', true)
+        this.contentBox.append('div').classed('row', true).classed('subtitle', true)
             .text("Lvl Actions:")
         new ButtTileAction(this.GS, this.contentBox, "Up", {func:"lvlUpSquare", size:1, lvl:1})
         new ButtTileAction(this.GS, this.contentBox, "Down", {func:"lvlUpSquare", size:1, lvl:-1})
@@ -102,13 +102,13 @@ export class WidjetActionsTiles extends WidjetActions {
 
         // --------------------------------
 
-        this.contentBox.append('div').classed('row', true).classed('subtitel', true)
+        this.contentBox.append('div').classed('row', true).classed('subtitle', true)
             .text("Color Actions:")
         
         new ButtTileActionColor(this.GS, this.contentBox, "Color", {func:"colorSquare", sire:1, color:[0,0,0]})
 
         
-        this.contentBox.append('div').classed('row', true).classed('subtitel', true)
+        this.contentBox.append('div').classed('row', true).classed('subtitle', true)
             .text("Copy Selection:")
         new ButtTileActionSelect(this.GS, this.contentBox, "Copy", {func:"selectedCopy"})
         this.contentBox.append('div').classed('cell', true).classed('empty', true)

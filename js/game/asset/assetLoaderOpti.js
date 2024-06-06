@@ -59,7 +59,7 @@ export class AssetLoaderOpti {
         const c = document.createElement("canvas");
         c.width = w
         c.height = h
-        c.ctx = c.getContext("2d"); // attach context to the canvas for easy reference
+        c.ctx = c.getContext("2d", { willReadFrequently: true }); // attach context to the canvas for easy reference
         c.ctx.drawImage(image, 0, 0, w, h);
         return c;
     }
@@ -78,7 +78,7 @@ export class AssetLoaderOpti {
                 const dest = document.createElement("canvas");
                 dest.width = 256; ;
                 dest.height = 256; ;
-                dest.ctx = dest.getContext("2d");
+                dest.ctx = dest.getContext("2d", { willReadFrequently: true });
                 // Draw the cut portion of the source image onto the destination canvas
                 dest.ctx.drawImage(
                     sourceImg, 

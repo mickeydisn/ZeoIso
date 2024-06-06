@@ -89,6 +89,11 @@ export class WcBuildConf_House6a extends AbstractWcBuildConf {
             ['Cl', 'Cr', 1],
             ['Cr', 'Cl', 1],
 
+            ['Clc', 'Cr', 1],
+            ['Cr', 'Clc', 1],
+            ['Cl', 'Crc', 1],
+            ['Crc', 'Cl', 1],
+
             ['Wo', 'Wi', 1],
             ['Wi', 'Wo', 1],
 
@@ -193,7 +198,7 @@ export class WcBuildConf_House6a extends AbstractWcBuildConf {
             },
 
             {
-                face: ['Ci', 'SCi', 'Cr', 'Cl'],
+                face: ['Ci', 'SCi', 'Crc', 'Clc'],
                 items: [
                     { weight:.01, color: [32, 32, 128],  allowMove:true, isFrise: true, functions: [...actionsEmptyFlat], items:[
                         // {h:1, key: "Corner", keyR:3, sufix:this.ROOF_SUFFIX },
@@ -202,7 +207,7 @@ export class WcBuildConf_House6a extends AbstractWcBuildConf {
                 ]
             }, 
             {
-                face: ['SCi', 'Ci', 'Cr', 'Cl'],
+                face: ['SCi', 'Ci', 'Crc', 'Clc'],
                 items: [
                     { weight:.01, color: [32, 128, 32],  allowMove:true, isFrise: true, functions: [...actionsEmptyFlat], items:[
                         // {h:1, key: "Corner", keyR:3, sufix:this.ROOF_SUFFIX },
@@ -256,7 +261,7 @@ export class WcBuildConf_House6a extends AbstractWcBuildConf {
             {
                 face: ['Bo', 'Xl', 'X', 'Xr'],
                 items: [
-                    { weight:0, color: [92, 92, 92],  allowMove:true, isFrise: true, functions: [...actionsColor], items:[
+                    { weight:0, color: [92, 92, 92],  allowMove:false, isFrise: true, functions: [...actionsColor], items:[
                         {h:0, key: "ironFenceBorder", keyR:2, sufix:this.FENCE_SUFFIX },
                     ]},
                 ]
@@ -264,7 +269,7 @@ export class WcBuildConf_House6a extends AbstractWcBuildConf {
             }, {
                 face: ['Bo', 'Bo', 'Xl', 'Xr'],
                 items: [
-                    { weight:0, color: [92, 92, 92],  allowMove:true, isFrise: true, functions: [...actionsColor], items:[
+                    { weight:0, color: [92, 92, 92],  allowMove:false, isFrise: true, functions: [...actionsColor], items:[
                         {h:0, key: "ironFenceBorderCurve", keyR:1, sufix:this.FENCE_SUFFIX },
                     ]},
                 ]
@@ -347,7 +352,7 @@ export class WcBuildConf_House6a extends AbstractWcBuildConf {
 
             /// W - C 
             {
-                face: ['Ci', 'Ci', 'Cr', 'Cl'],
+                face: ['Ci', 'Ci', 'Crc', 'Clc'],
                 items: [
                     { weight:0, color: [128, 128, 128],  allowMove:true, isFrise: true, functions: [...actionsEmptyFlat], items:[
                         // {h:1, key: "Corner", keyR:3, sufix:this.ROOF_SUFFIX },

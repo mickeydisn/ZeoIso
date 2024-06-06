@@ -27,12 +27,12 @@ export class WidjetActionsAchivement extends WidjetActions {
 
         // --------------------------------
         {
-            this.contentBox.append('div').classed('row', true).classed('titel', true)
+            this.contentBox.append('div').classed('row', true).classed('title', true)
                 .text("= Achivement =")
         }
         {
 
-            // this.contentBox.append('div').classed('row', true).classed('subtitel', true)
+            // this.contentBox.append('div').classed('row', true).classed('subtitle', true)
             //    .text("Zoom:")
             this._drawBiomeList(this.contentBox)
         }
@@ -61,7 +61,7 @@ export class WidjetActionsAchivement extends WidjetActions {
             const bBox = parentBox.append('div').classed('row', true).classed('achBiome', true)
                 .style('border', `1px solid rgb(${c[0]} ${c[1]} ${c[2]})`)
 
-            bBox.append('div').classed('titel', true)
+            bBox.append('div').classed('title', true)
                 .text(biome.name)
             
             items.forEach(i => {
@@ -83,7 +83,7 @@ export class WidjetActionsAchivement extends WidjetActions {
             const canvas = canvasBox.append('canvas')
                 .attr('width', '128px')
                 .attr('height', '128px')
-            const ctx = canvas.node().getContext("2d")
+            const ctx = canvas.node().getContext("2d", )
             ctx.drawImage(cimage, 0, 0, 255, 255, 0, 0, 128, 128);
 
             // ctx.drawImage(cimage, 32, 32, 192, 192, 0, 0, 128, 128);

@@ -121,6 +121,8 @@ export class Tile extends GenTile {
 		this._isFrise = false;
 
 		*/
+
+		this.entities = []
 		this.wcBuild = null;
 		this.temporatyItems = []
 
@@ -142,6 +144,19 @@ export class Tile extends GenTile {
 		if (this.wcBuild != null || this.isWater) return ;
         this.color = new Uint8Array([r, g, b, a]);
     }
+
+
+	addEntity(entity) {
+		if (!this.entities.includes(entity)) {
+			this.entities.push(entity)
+		}
+	}
+	removeEntity(entity) {
+		const index = this.entities.indexOf(entity);
+		if (index > -1) {
+			this.entities.splice(index, 1);
+		}
+	}
 
 
 	clearItem() {
@@ -177,6 +192,8 @@ export class Tile extends GenTile {
 			
 			// FLvl: this.flvl,
 			// waterLvl: this._waterLvl,
+			entity: this.entities.length,
+
 			items: this.items,
 			color : [...this.color],
 			genColor: this.genColor,

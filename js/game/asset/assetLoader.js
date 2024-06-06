@@ -29,14 +29,14 @@ export class AssetLoader {
 
     imageToCanvas(image) {
         const c = document.createElement("canvas");
-        c.width = 256; // image.naturalWidth;
-        c.height = 256; // image.naturalHeight;
-        c.ctx = c.getContext("2d"); // attach context to the canvas for easy reference
+        c.width = 128; // image.naturalWidth;
+        c.height = 128; // image.naturalHeight;
+        c.ctx = c.getContext("2d", { willReadFrequently: true }); // attach context to the canvas for easy reference
         // cut the image ()
         if (image.naturalWidth == 512 && image.naturalHeight == 512) {
-            c.ctx.drawImage(image, 128, 128, 256, 256, 0, 0, 256, 256);
+            c.ctx.drawImage(image, 128, 128, 256, 256, 0, 0, 128, 128);
         } if (image.naturalWidth == 256 && image.naturalHeight == 256) {
-            c.ctx.drawImage(image, 0, 0, 256, 256);
+            c.ctx.drawImage(image, 0, 0, 128, 128);
         } else {
             // const [w, h] = [image.naturalWidth, image.naturalHeight]
         }

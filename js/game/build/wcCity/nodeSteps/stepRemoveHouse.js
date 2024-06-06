@@ -1,12 +1,4 @@
-import { STEP_ERROR, abstractStep } from "./abstractStep.js";
-
-const stepWaiting = {...abstractStep, 
-    title: "Remove House",
-    text: `> ### ...Waiting  `, 
-    isValidated : (cityNode) =>  {
-        return cityNode.sData && cityNode.sData.isWaiting
-    },
-}
+import { SUBSTEP_ERROR, SUBSTEP_WATTING, abstractStep } from "./abstractStep.js";
 
 
 const stepNoValide = {...abstractStep, 
@@ -29,7 +21,7 @@ const stepRemoveBuilding = {...abstractStep,
     undo:(cityNode, callback=_ => {}) => { 
         callback(); 
     },
-    do: (cityNode, param={}, callback=_ => {}) => { 
+    do: (cityNode, callback=_ => {}, param={}) => { 
         console.log("Remove : cityNode.buildFactory", cityNode.buildFactory)
         cityNode.buildFactory.allTileBuildingList.forEach(buildTile => {
             cityNode.ta.clearAllTile(buildTile.tile)          
@@ -47,10 +39,10 @@ export const section_RemoveBuilding = {
     title: "Remove House",
     isValidated:true,
     steps: [
-        stepWaiting,
+        SUBSTEP_WATTING,
         stepNoValide,
         stepRemoveBuilding,
-        STEP_ERROR,
+        SUBSTEP_ERROR,
     ],
 }
 

@@ -27,10 +27,10 @@ export class WidjetAssetList extends WidjetActions {
         {
 
 
-            this.content.append('div').classed('row', true).classed('titel', true).text("= ASSET ACTION =")
+            this.content.append('div').classed('row', true).classed('title', true).text("= ASSET ACTION =")
         
 
-            this.content.append('div').classed('row', true).classed('subtitel', true)
+            this.content.append('div').classed('row', true).classed('subtitle', true)
                 .text("Asset Actions:")
 
             this.firstAction = new ButtTileActionAsset(this.GS, this.content, "Place", {func:"itemForceKey"})

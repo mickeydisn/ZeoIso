@@ -249,6 +249,7 @@ export class Main {
         // add pressed key loop. 
         const keyControle = function() {
             this.world.player.keyLoopControle({...this.clickPress , ...keyPressed});
+            this.world.myCityFactory.doTick();
         }.bind(this);
         let keyInterval = d3.interval(keyControle, 20);
 

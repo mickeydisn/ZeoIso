@@ -75,9 +75,7 @@ export const canvasFilterStrToValue = (str) => {
 }
 
 
-
 // ------------------------
-
 
 
 export const colorVariation = (source, cFilter) => {
@@ -91,7 +89,7 @@ export const colorVariation = (source, cFilter) => {
     const canvas = document.createElement("canvas");
     canvas.width = 256; // image.naturalWidth;
     canvas.height = 256; // image.naturalHeight;
-    canvas.ctx = canvas.getContext("2d"); // attach context to the canvas for easy reference
+    canvas.ctx = canvas.getContext("2d", { willReadFrequently: true }); // attach context to the canvas for easy reference
 
     if (hue || saturation != 100 || contrast != 100 || brightness != 100) {
 
@@ -123,7 +121,7 @@ export const colorVariation = (source, cFilter) => {
         const canvasN = document.createElement("canvas");
         canvasN.width = 256; // image.naturalWidth;
         canvasN.height = 256; // image.naturalHeight;
-        canvasN.ctx = canvasN.getContext("2d"); // attach context to the canvas for easy reference
+        canvasN.ctx = canvasN.getContext("2d", { willReadFrequently: true }); // attach context to the canvas for easy reference
         canvasN.ctx.putImageData(imageData, 0, 0);
         source = canvasN
     }

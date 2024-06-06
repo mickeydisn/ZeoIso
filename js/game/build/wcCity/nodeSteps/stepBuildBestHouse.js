@@ -1,32 +1,9 @@
-import { WcBuildConf_House3a } from "../../wcBuilding2/buildConf_house3a.js"
-import { WcBuildingFactory, WcBuildingFactory2 } from "../../wcBuilding2/wcBuildingFactory.js"
-import { CitNodeHouse } from "../cityTileNode.js"
-import { STEP_ERROR, abstractStep } from "./abstractStep.js"
+import { WcBuildingFactory2 } from "../../wcBuilding2/wcBuildingFactory.js"
+import { CitNodeGrave } from "../config/cityNodeGrave.js"
+import { CitNodeHouse } from "../config/cityNodeHouse.js"
+import { CitNodeLab } from "../config/cityNodeLab.js"
+import { SUBSTEP_ERROR, SUBSTEP_WATTING, abstractStep } from "./abstractStep.js"
 
-
-
-const PATH_CONFIG = {
-    length: 4,
-    minDist: 3,
-    crossDist: null,
-    alphaStep : 8,
-
-    lvlDeviationCount: 4,
-    lvlDefviationAlpha: 2,  
-    asset: {key: [
-        "statue_obelisk_NW#_H180_C150_S95_B75_I1_R1",
-        "statue_obelisk_NW#_H180_C150_S95_B75_I1_R2",
-        "statue_obelisk_NW#_H180_C150_S95_B75_I1_R3",
-        "statue_obelisk_NW#_H180_C150_S95_B75_I1_R2",
-    ]},
-}
-
-const stepWaiting = {...abstractStep, 
-    text: `> ### ...Waiting To Build `, 
-    isValidated : (cityNode) =>  {
-        return cityNode.sData && cityNode.sData.isWaiting
-    },
-}
 
 
 const stepBuildingHouseStarConf = (bType, gCount) => {return {...abstractStep,
@@ -49,31 +26,6 @@ const stepBuildingHouseStarConf = (bType, gCount) => {return {...abstractStep,
     },
 }}
 
-const stepBuildingHouseStart =  {...abstractStep,
-    text: `> ## House Configuration. ... `, 
-    doParamShema : {'toto':1},
-
-    isValidated: (cityNode) => !cityNode.sData,
-
-    doEnter: (cityNode, callback=_ => {} ) => {
-        cityNode.ta.doAction({func:'clearAllTemporatyItems'})
-        cityNode.sData = {
-            isWaiting:false,
-            param : null,
-            possibleTiles: null,
-            selectedTile: null,
-        }
-    },
-
-    doParamShema : {'toto':1},
-
-    do: (cityNode, param={}, callback=_ => {}) => {
-        console.log("param", param)
-        cityNode.sData.param = param
-        callback()
-    },
-
-}
 
 const stepBuildingHouseCheck =  {...abstractStep,
     text: `> ## Check the configuration ... `, 
@@ -162,7 +114,7 @@ const stepBuildingHouseCheck =  {...abstractStep,
 
 
 // Node Valide Not Exist
-const stepNoWai ={...abstractStep,
+const stepNoWai = {...abstractStep,
     text: ` > # House can be construct ... `, 
     isValidated: (cityNode) => cityNode.sData && cityNode.sData.possibleTiles &&  cityNode.sData.possibleTiles.length == 0,
 }
@@ -174,7 +126,7 @@ const stepBuildingHouseFinal = {...abstractStep,
     text: ` > Build the house Auto`, 
     isValidated: (cityNode) =>  cityNode.sData && cityNode.sData.selectedTile != null,
 
-    doEnter: (cityNode, callback=_ => {}) => {
+    doEnter: (cityNode, callback=_ => {}, callend=null) => {
         cityNode.ta.doAction({func:'clearAllTemporatyItems'})
         // console.log("param", param)
         // const HOUSE_CONFIGURATION = new WcBuildConf_House3b({growLoopCount:5})
@@ -182,18 +134,124 @@ const stepBuildingHouseFinal = {...abstractStep,
         const building = new WcBuildingFactory2(cityNode.world, cityNode.sData.param)// HOUSE_CONFIGURATION)
         const n = cityNode.sData.selectedTile
         building.start(n.x, n.y).then(_ => {
-            cityNode.sData = null
-
-            const cityNodeHouse = n.cityNode ? n.cityNode : new CitNodeHouse(cityNode.world, n)
+            const param = cityNode.sData.param
+            const cityNodeHouse = n.cityNode ? n.cityNode 
+                : param.buildType == 'house3b' ? new CitNodeHouse(cityNode.world, cityNode.cityFactory, n)
+                : param.buildType == 'house4a' ? new CitNodeLab(cityNode.world, cityNode.cityFactory, n)
+                : param.buildType == 'house6a' ? new CitNodeGrave(cityNode.world, cityNode.cityFactory, n)
+                :  new CitNodeHouse(cityNode.world, cityNode.cityFactory, n)
             cityNodeHouse.buildFactory = building;
+            cityNode.sData = null
             cityNode.homeStep()
-            callback()
+            callend ? callend() : callback(); 
         })
         console.log('DO WAITING')
         cityNode.sData.isWaiting = true
         callback()
     }
 }
+
+
+export const CREATE_SUBSTEP_BUILD = (btype, gCount) => {return {...abstractStep, 
+    text: `> ### Build the path `,
+    isValidated: (cityNode) => true,
+    
+    doEnter: (cityNode, callback=_ => {}, callend=_ => {}) => {
+        const fError = _ => {
+            cityNode.homeStep()
+            callend(); 
+        }
+        const fFinal = _ => {
+            if (stepBuildingHouseFinal.isValidated(cityNode)) {
+                stepBuildingHouseFinal.doEnter(cityNode, callback, callend)
+            } else {
+                fError()
+            }
+        }
+
+        const fChoiseBest = _ => {
+            if (stepBuildingHouseCheck.isValidated(cityNode)) {
+                stepBuildingHouseCheck.doEnter(cityNode, fFinal)
+            } else {
+                fError()
+            }
+        }
+        const fCheckPathStart = _ => {
+            const startStep = stepBuildingHouseStarConf(btype, gCount)
+            if (startStep.isValidated(cityNode)) {
+                startStep.doEnter(cityNode, fChoiseBest)
+            } else {
+                fError()
+            }
+        }
+        fCheckPathStart()
+    }
+}}
+
+// ----------------
+
+
+
+const stepBuildingHouseStart =  {...abstractStep,
+    text: `> ## House Configuration. ... `, 
+    doParamShema : {'toto':1},
+
+    isValidated: (cityNode) => !cityNode.sData,
+
+    doEnter: (cityNode, callback=_ => {} ) => {
+        cityNode.ta.doAction({func:'clearAllTemporatyItems'})
+        cityNode.sData = {
+            isWaiting:false,
+            param : null,
+            possibleTiles: null,
+            selectedTile: null,
+        }
+    },
+
+    doParamShema : {
+        schema: {
+            // "title": "Person",
+            type: "object",
+            required: [
+                "buildType", "growLoopCount",
+              ],
+            properties: {
+                "buildType": {
+                    title: "Building Type",
+                    type: "string",
+                    enum: [
+                        "house3a",
+                        "house3b",
+                        "house4a",
+                        "house6a",
+                        // "Big Lab",
+                    ]
+                },    
+                "growLoopCount": {
+                    title:"Building Size",
+                    type: "integer",
+                    enum: [
+                       1, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+                      ],
+                    default: 10,
+                    minimum: 1,
+                    maximum: 100
+                  },
+
+            }
+          }
+    },
+
+    do: (cityNode, callback=_ => {}, param={}) => {
+        console.log("param", param)
+        cityNode.sData.param = param
+        callback()
+    },
+
+}
+
+
+
 
 // Node Is Selected Ready to be Build 
 const stepBuildingHouseFinalCheck = {...abstractStep,
@@ -217,7 +275,7 @@ const stepBuildingHouseFinalCheck = {...abstractStep,
         // callback()
     },  
 
-    do: (cityNode, param={}, callback=_ => {}) => {
+    do: (cityNode, callback=_ => {}, param={}) => {
         stepBuildingHouseFinal.doEnter(cityNode, callback)
     }
 }
@@ -230,12 +288,12 @@ export const section_BuildBestHouse = {
     title: "Builder: House",
     isValidated:true,
     steps: [
-        stepWaiting,
+        SUBSTEP_WATTING,
         stepBuildingHouseStart,
         stepBuildingHouseCheck,
         stepNoWai, 
         stepBuildingHouseFinalCheck,
-        STEP_ERROR
+        SUBSTEP_ERROR
     ] 
 }
 
@@ -245,11 +303,11 @@ export const section_BuildBestHouse3a = {
     isValidated:true,
     steps: [
         stepBuildingHouseStarConf('house3a', 30),
-        stepWaiting,
+        SUBSTEP_WATTING,
         stepBuildingHouseCheck,
         stepNoWai, 
         stepBuildingHouseFinal,
-        STEP_ERROR
+        SUBSTEP_ERROR
     ] 
 }
 export const section_BuildBestHouse3b = {
@@ -258,11 +316,11 @@ export const section_BuildBestHouse3b = {
     isValidated:true,
     steps: [
         stepBuildingHouseStarConf('house3b', 10),
-        stepWaiting,
+        SUBSTEP_WATTING,
         stepBuildingHouseCheck,
         stepNoWai, 
         stepBuildingHouseFinal,
-        STEP_ERROR
+        SUBSTEP_ERROR
     ] 
 }
 export const section_BuildBestHouse4a = {
@@ -270,27 +328,31 @@ export const section_BuildBestHouse4a = {
     title: "Auto Builder: House 4a ",
     isValidated:true,
     steps: [
-        stepBuildingHouseStarConf('house4a', 30),
-        stepWaiting,
+        stepBuildingHouseStarConf('house4a', 10),
+        SUBSTEP_WATTING,
         stepBuildingHouseCheck,
         stepNoWai, 
         stepBuildingHouseFinal,
-        STEP_ERROR
+        SUBSTEP_ERROR
     ] 
 }
+
 export const section_BuildBestHouse6a = {
     type:"Build", 
     title: "Auto Builder: House 6a ",
     isValidated:true,
     steps: [
-        stepBuildingHouseStarConf('house6a', 30),
-        stepWaiting,
+        stepBuildingHouseStarConf('house6a', 10),
+        SUBSTEP_WATTING,
         stepBuildingHouseCheck,
         stepNoWai, 
         stepBuildingHouseFinal,
-        STEP_ERROR
+        SUBSTEP_ERROR
     ] 
 }
+
+
+
 
 
 export const section_BuildBestHouse_LIST = [

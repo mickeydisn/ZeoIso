@@ -1,12 +1,9 @@
-import { PathFactory } from "../../path.js";
-import { CityRoad } from "../cityRoad.js";
-import { CityTileNode } from "../cityTileNode.js";
-import { STEP_ERROR, abstractStep } from "./abstractStep.js";
+import { SUBSTEP_ERROR, SUBSTEP_WATTING, abstractStep } from "./abstractStep.js";
 
 
+export const SUBSTEP_TEXT = {}
 
-
-const CITIZEN_TRAIS = `
+SUBSTEP_TEXT.CITIZEN_TRAIS = `
 \`\`\`
 {
     "traits": {
@@ -46,7 +43,7 @@ const CITIZEN_TRAIS = `
 `
 
 
-const TEXT_INTRO = `
+SUBSTEP_TEXT.TEXT_INTRO = `
 
 ## Wake of the death
 
@@ -64,7 +61,7 @@ Now, as a ghost, I'm left to ponder the secrets of the Harmonizer and the other 
 
 `
 
-const TEXT_FIRST_ROAD = `
+SUBSTEP_TEXT.TEXT_FIRST_ROAD = `
 
 ## First road
 
@@ -77,7 +74,7 @@ Now, I know what you're thinking: "What's the catch?" 🤔 Well, let's just say 
 `
 
 
-const TEXT_FIRST_HOUSE = `
+SUBSTEP_TEXT.TEXT_FIRST_HOUSE = `
 
 ## First House
 
@@ -88,7 +85,7 @@ Here's the spell: **Domus Ignis** 🔥. Just whisper it to the spirit node over 
 
 
 
-const TEXT_FIRST_LAB = `
+SUBSTEP_TEXT.TEXT_FIRST_LAB = `
 
 ## First Lab
 
@@ -98,15 +95,6 @@ To unlock the secrets of the lab, simply cast the spell on a nearby **Spirit Nod
 
 As you embark on this journey, remember that the lab is where the magic happens – where I'll brew potions, concoct elixirs, and unravel the mysteries of Zorvath. 🔮 Let's get building, and may the sparks of creativity ignite the path to our glorious future! 🔥
 `
-
-
-
-const stepWaiting = {...abstractStep, 
-    text: `> ### Waiting ... `, 
-    isValidated : (cityNode) =>  {
-        return cityNode.sData && cityNode.sData.isWaiting
-    },
-}
 
 
 const stepStartNode_Start =  {...abstractStep,
@@ -125,11 +113,11 @@ const stepStartNode_Start =  {...abstractStep,
 
 }
 
-const createMessageStep = (text, subStepId=1) => {
+export const createMessageStep = (text, subStepId=1) => {
     return {...abstractStep,
         text: text, 
         isValidated: (cityNode) => cityNode.sData && cityNode.sData.subStep == subStepId,
-        do: (cityNode, param={}, callback=_ => {} ) => {
+        do: (cityNode, callback=_ => {}, param={} ) => {
             cityNode.sData.subStep += 1
             callback()
         },
@@ -137,19 +125,20 @@ const createMessageStep = (text, subStepId=1) => {
 } 
 
 
+
 export const section_StartNode = {
     title: "Start Node",
     type:"Build", 
     isValidated:true,
     steps: [
-        stepWaiting,
+        SUBSTEP_WATTING,
         stepStartNode_Start,
-        createMessageStep(TEXT_INTRO, 1),
-        createMessageStep(TEXT_FIRST_ROAD, 2),
-        createMessageStep(TEXT_FIRST_HOUSE, 3),
-        createMessageStep(TEXT_FIRST_LAB, 4),
-        createMessageStep(CITIZEN_TRAIS, 5),
-        STEP_ERROR,
+        createMessageStep(SUBSTEP_TEXT.TEXT_INTRO, 1),
+        createMessageStep(SUBSTEP_TEXT.TEXT_FIRST_ROAD, 2),
+        createMessageStep(SUBSTEP_TEXT.TEXT_FIRST_HOUSE, 3),
+        createMessageStep(SUBSTEP_TEXT.TEXT_FIRST_LAB, 4),
+        createMessageStep(SUBSTEP_TEXT.CITIZEN_TRAIS, 5),
+        SUBSTEP_ERROR,
     ],
 }
 

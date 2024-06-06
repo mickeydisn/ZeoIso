@@ -43,12 +43,12 @@ export class WidjetActionsBuilding extends WidjetActions {
         this.contentBox.selectAll('div').remove()
 
         // --------------------------------
-        this.contentBox.append('div').classed('row', true).classed('titel', true)
+        this.contentBox.append('div').classed('row', true).classed('title', true)
             .text("= BUILDING ACTION =")
 
         // --------------------------------
         // --------------------------------
-        this.contentBox.append('div').classed('row', true).classed('subtitel', true)
+        this.contentBox.append('div').classed('row', true).classed('subtitle', true)
             .text("Grow size:")
 
         const sizeInput = this.contentBox.append('div').classed('row', true).classed('input', true)
@@ -74,7 +74,7 @@ export class WidjetActionsBuilding extends WidjetActions {
         // --------------------------------
         {
             this.contentBox
-                .append('div').classed('row', true).classed('subtitel', true)
+                .append('div').classed('row', true).classed('subtitle', true)
                 .text("Building Place / Base ")
             this.firstAction = new ButtTileAction(
                 this.GS, this.contentBox,
@@ -105,7 +105,7 @@ export class WidjetActionsBuilding extends WidjetActions {
         // --------------------------------
         {
             this.contentBox
-                .append('div').classed('row', true).classed('subtitel', true)
+                .append('div').classed('row', true).classed('subtitle', true)
                 .text("Building House")
             this.firstAction = new ButtTileAction(
                 this.GS, this.contentBox,
@@ -130,7 +130,7 @@ export class WidjetActionsBuilding extends WidjetActions {
         // --------------------------------
         {
             this.contentBox
-                .append('div').classed('row', true).classed('subtitel', true)
+                .append('div').classed('row', true).classed('subtitle', true)
                 .text("Building Mini Base")           
             this.firstAction = new ButtTileAction( 
                 this.GS, this.contentBox,
@@ -153,7 +153,7 @@ export class WidjetActionsBuilding extends WidjetActions {
         // --------------------------------
         {
             this.contentBox
-                .append('div').classed('row', true).classed('subtitel', true)
+                .append('div').classed('row', true).classed('subtitle', true)
                 .text("Building Big Base")
             this.firstAction = new ButtTileAction( 
                 this.GS, this.contentBox,
@@ -169,7 +169,7 @@ export class WidjetActionsBuilding extends WidjetActions {
         // --------------------------------
         {
             this.contentBox
-                .append('div').classed('row', true).classed('subtitel', true)
+                .append('div').classed('row', true).classed('subtitle', true)
                 .text("Building Cimetier")
             this.firstAction = new ButtTileAction( 
                 this.GS, this.contentBox,

@@ -20,7 +20,10 @@ export class WidjetActionsPlayerAct extends WidjetActions {
 
         }
         // Sub to Global state. 
-       
+        this.GS.sub("Player.inventory.update", "WidjetActionsTileInfo", this.drawUpdate.bind(this)) 
+
+        this.drawUpdate()
+
     }
 
 
@@ -33,11 +36,31 @@ export class WidjetActionsPlayerAct extends WidjetActions {
 
         // --------------------------------
         {
-            this.contentBox.append('div').classed('row', true).classed('titel', true)
-                .text("= Action =")
+            this.contentBox.append('div').classed('row', true).classed('title', true)
+                .text("= Inventory =")
+                
         }
- 
+        const tableBox = this.contentBox.append('div')
+            .classed('row', true)
+        this.MDDiv = tableBox.append('div')
+            .classed('Markdown', true)
+            .style('width', '100%')
+            .style('padding', '0')
+            .style('margin', '0')
 
+    }
+
+    drawUpdate() {
+        const player = this.world.player
+        const inventoryMD = ''
+            + '| **Item** | **Qty** |\n'
+            + '|:-:|:-:|\n'
+            + player.inventory.map(slot => `| ${slot.itemId} | ${slot.count} |`).join('\n')
+            + '\n\n\n'
+            
+        console.log('== Update_Inventory')
+
+        this.MDDiv.html(window.marked.parse(inventoryMD))
 
     }
 

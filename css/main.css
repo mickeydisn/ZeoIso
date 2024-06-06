@@ -51,6 +51,10 @@ body {
   position: fixed;
 }
  
+canvas#canvasMap {
+  image-rendering: pixelated;
+}
+
 #FPS {
   position: absolute;
   top: 0;
@@ -428,10 +432,11 @@ body {
 .buttMenuBox#playerActionAct > div {
   top: calc(4rem + 50px);
   left: 0px;
-  width: 4px;
-  height: 2.6rem;
   padding: 0px;
-  margin: 0px;
+  /* width: 4px;
+  height: 2.6rem; 
+
+  margin: 0px; */
 }
 
 /* --- */
@@ -621,12 +626,12 @@ body {
   grid-column: 1 / 5;
   text-align: left;
 }
-.menuAction > .row.titel {
+.menuAction > .row.title {
   text-align: center;
   padding-top: .5rem;
   padding-bottom: .5rem;
 }
-.menuAction > .row.subtitel {
+.menuAction > .row.subtitle {
   padding-top: 1rem;
 }
 
@@ -919,7 +924,8 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #DEDEDE;
-  max-height: 90vh;
+  /* max-height: 90vh; */
+  max-height: min(90vh, calc(670px - 100px));
   overflow: scroll;
 /*  width: 400px; */
 }
@@ -970,8 +976,8 @@ body {
   position: absolute;
   background-color: #000;
   color: #FFF;
-  height: 15px;
-  width: 15px;
+  height: 2rem;
+  width: 2rem;
   top: 0px;
   right: 0px;
   font-size: 10px;
@@ -997,45 +1003,103 @@ body {
 }
 
 
-
-
 .isoDivBox >  .content > div > .buttAction {
   background-color: #DEDEDE;
-  padding: .1em .5em;
-  border: 1px solid #333;
-  box-shadow: 2px 2px 0px #999;
-  font-size: .8rem;
+  padding: .5em .5em;
+  border: 2px solid #333;
+  box-shadow: 5px 5px 0px #999;
+  font-size: 1.2rem;
+  border-radius: 1.2rem;
+  justify-content: center;
   font-family: monospace;
   font-weight: bold;
-  transition: all 1s;
+  transition: all .2s;
   cursor: pointer;
   margin: 0 .1rem;
+  width: 100%;
 }
 
 .isoDivBox >  .content > div > .buttAction:hover {
   background-color: #BEBEBE;
-  transition: all 1s;
+  transition: all .1s;
+}
+
+.isoDivBox >  .content > div > .buttAction:target {
+  background-color: #999;
+  transition: all .1s;
 }
 
 
 .isoDivBox >  .content > .titleDiv {
   display: flex;
-  width: 90%;
+  width: 100%;
   justify-content: flex-start;
+  align-items: center;
   margin: .5rem 0 0 0;
   display: flex;
-  font-size: 2em;
+  font-size: 1.8rem;
   font-weight: 900;
 }
 .isoDivBox >  .content > .titleDiv > div:nth-child(1) {
   cursor: pointer;
+  font-size: 2rem;
+  border: 2px solid  #333;;
+  border-radius: 2rem;
+  padding: .4rem;
+  margin: 0 1rem 0 1rem;
 }
+
+.isoDivBox >  .content > .titleDiv > div:nth-child(1):hover {
+  background-color: #BEBEBE;
+  transition: all .1s;
+}
+
 
 .isoDivBox >  .content > .pageDiv {
   display: flex;
   justify-content: flex-start;
   width: calc(100% - 4rem);
 }
+
+
+
+.isoDivBox >  .content > .inventoryNode{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  width: calc(100% - 6rem);
+  padding: 1rem 0 1rem 0;
+}
+
+.isoDivBox >  .content > .inventoryNode > div { 
+  padding: 0rem .1rem 0rem .1rem;
+  font-size: .9em;
+  font-weight: 900;
+  border: 1px solid #333;
+  margin: .2rem 0;
+  padding: 1rem .4rem;
+  width: 100%;
+  text-align: left;
+}
+
+.isoDivBox >  .content > .inventoryNode > div.butts { 
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: none;
+}
+
+.isoDivBox >  .content > .inventoryNode > div.butts > div { 
+  border: 1px solid #333;
+  padding: 1rem .4rem;
+  transition: all .3s;
+}
+.isoDivBox >  .content > .inventoryNode > div.butts > div:hover { 
+  background-color: #AEAEAE;
+  transition: all .3s;
+}
+
 
 
 .isoDivBox >  .content > .stepList{
@@ -1055,7 +1119,7 @@ body {
   transition: all .3s;
   border: 1px solid #333;
   margin: .2rem 0;
-  padding: 0 .4rem;
+  padding: 1rem .4rem;
   width: 100%;
   text-align: left;
 }
@@ -1070,10 +1134,9 @@ body {
 .isoDivBox >  .content > .actionDiv {
   display: flex;
   justify-content: center;
-  background-color: #BEBEBE;
-  padding: .8rem;
+  padding: .2rem;
   margin: .7rem;
-  border: 1px solid;
+  width: 80%;
 }
 
 .isoDivBox >  .content > .paramDiv {

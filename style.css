@@ -88,7 +88,7 @@ div.container {
     margin-right: 24px;
 }
 
-#header .titel{
+#header .title{
     font-family: sans-serif;
     font-weight: 600;
     color: #fff;
@@ -201,7 +201,7 @@ path {
     display: block;
     vertical-align: top;
 }
-.BoxTitel{
+.Boxtitle{
     border: none;
     margin: 0;
     padding: 10px 30px;
@@ -214,7 +214,7 @@ path {
     color: #fff;
 }
 
-.BoxTitelIn {
+.BoxtitleIn {
     background-color: #323232;
     display: inline;
     border-radius: 5px;
@@ -225,7 +225,7 @@ path {
 }
 
 
-.DivTitel{
+.Divtitle{
     background-color: #FFF; 
     border: 1px solid #dedfdc;
 
@@ -240,7 +240,7 @@ path {
     margin-bottom: .75rem;
 }
 
-.DivTitel span{
+.Divtitle span{
   font-size: 12px;
   font-weight: 500;
 }

@@ -1,3 +1,4 @@
+import { cityNode_do_inventory_from_player, cityNode_do_inventory_to_player, cityNode_text_inventory, cityNode_text_player_inventory } from "../build/wcCity/config/defaultCity.js"
 import { TILE_HEIGHT } from "./interfaceIso.js"
 
 
@@ -32,7 +33,7 @@ export class IsoDivBox {
     }
 
     show() {
-        this.isHide = true;
+        this.isHide = false;
         this.mainDiv
             .classed('isHide', false)
             .classed('isShow', true)
@@ -40,7 +41,7 @@ export class IsoDivBox {
     }
 
     update(x, y) {
-        this.isHide = false;
+        // this.isHide = false;
         this.mainDiv
             // .style('display', "flex")
             .style('top', (y - TILE_HEIGHT - 5) + "px")
@@ -137,6 +138,8 @@ export class IsoDivCityBox extends IsoDivBox {
     constructor(canavBox, tile, boxConf) {
         super(canavBox, tile, boxConf)
 
+        this.tile.cityNode.setIsoDivBox(this)
+
         this.currentStepAction = _ => {return true}
 
         this.initContentDraw()
@@ -147,6 +150,7 @@ export class IsoDivCityBox extends IsoDivBox {
         super.show()
         // this.tile.cityNode.currentStepIdx = 0
         // this.currentStep = this.tile.cityNode.currentStep;
+        console.log('SHOW')
         this.updateContent()
     }
 
@@ -185,38 +189,27 @@ export class IsoDivCityBox extends IsoDivBox {
                 this.currentStep = this.tile.cityNode.homeStep();
                 this.updateContent()
             })
-            this.titleDiv = titleDiv.append('div')  
+            this.titleDiv = titleDiv.append('div') 
+ 
         }
 
-        
-        // Step Pagination
-        /* { 
-            this.stepDiv = this.contentDiv.append('div')
-                .classed('pageDiv', true)
-                .html(`
-                    <div class='buttAction'> Back </div>
-                    <div class='buttAction'> Next </div>
-                `)
-
-            this.stepDiv.select('div:nth-child(1)').on('click', _ => {
-                this.currentStep = this.tile.cityNode.presStep
-                this.updateContent()
-            })
-            this.stepDiv.select('div:nth-child(2)').on('click', _ => {
-                this.currentStep = this.tile.cityNode.nextStep
-                this.updateContent()
-            })
-        } */
 
         // MD
         this.initMDContent()
 
         // StepList
         {
-
             this.stepListDiv = this.contentDiv.append('div').classed('stepList', true)
             this.stepListDiv.style('display', 'none')
-            this.initStepListContent()
+            // this.initStepListContent()
+        }
+        {
+            this.entityListDiv = this.contentDiv.append('div').classed('stepList', true)
+            this.entityListDiv.style('display', 'none')
+        }
+        {
+            this.inventoryListDiv = this.contentDiv.append('div').classed('inventoryNode', true)
+            this.inventoryListDiv.style('display', 'none')
         }
         {
 
@@ -243,7 +236,7 @@ export class IsoDivCityBox extends IsoDivBox {
 
         
     }
-
+    /*
     initStepListContent() {
         this.tile.cityNode.STEPS.forEach((step, idx) => {
             if (idx == 0) return ;
@@ -254,7 +247,63 @@ export class IsoDivCityBox extends IsoDivBox {
             })
         })
     }
- 
+    */
+    updateStepListDiv() {
+        this.stepListDiv.selectAll('div').remove()
+        console.log('MENU:updateStepListDiv')
+        this.tile.cityNode.STEPS.forEach((step, idx) => {
+            if (idx == 0) return ;
+            if ((typeof step.isValidated !== 'boolean' &&  step.isValidated(this.tile.cityNode)) 
+                || (typeof step.isValidated === 'boolean'  && step.isValidated == true)) {
+
+                this.stepListDiv.append('div').text("● " + step.title).on('click', _ => {
+                    this.tile.cityNode.currentStepIdx = idx
+                    this.currentStep = this.tile.cityNode.currentStep;
+                    this.updateContent()
+                })
+            }
+        })
+
+    }
+    
+
+    updateInventoryNodeDiv() {
+
+        const cityNode = this.tile.cityNode
+
+        this.inventoryListDiv.selectAll('div').remove("div")
+        
+        const playerInventory = cityNode_text_player_inventory(cityNode)
+        
+        const nodeInventory =  cityNode_text_inventory(cityNode)
+        const nInventoryDiv = this.inventoryListDiv.append('div')
+            .style('display', 'flex')
+            .classed('Markdown', true) 
+        nInventoryDiv.html(window.marked.parse("### Node" + nodeInventory))
+
+        const buttsDiv = this.inventoryListDiv.append('div')
+            .style('display', 'flex')
+            .classed('butts', true)
+
+        const buttDrop = buttsDiv.append('div').text('⬆︎Drop⬆︎')
+        const buttRetrive = buttsDiv.append('div').text('⬇︎Retrive⬇︎')
+
+        buttDrop.on('click', _ => { 
+            cityNode_do_inventory_from_player(cityNode) 
+            this.updateContent()
+        })
+        buttRetrive.on('click', _ => { 
+            cityNode_do_inventory_to_player(cityNode)
+            this.updateContent()
+        })
+
+        const pInventoryDiv = this.inventoryListDiv.append('div')
+            .style('display', 'flex')
+            .classed('Markdown', true) 
+        pInventoryDiv.html(window.marked.parse("### Player" + playerInventory))
+
+    }
+
     initMDContent() {
 
         this.MDDiv = this.contentDiv.append('div')
@@ -275,11 +324,16 @@ export class IsoDivCityBox extends IsoDivBox {
     }
 
     updateContent() {
-        const cityStep = this.tile.cityNode.currentStep 
+        console.log('updateContent : 1')
+        if (this.isHide) return 
+        console.log('updateContent : 2')
+
+        const cityNode = this.tile.cityNode
+        const cityStep = cityNode.currentStep 
         if (cityStep.undo) {
             this.currentStepUndoActionDiv.style('display', 'flex') 
             this.currentStepUndoActionDiv.on('click', _ => {
-                cityStep.undo(this.tile.cityNode, _ => { this.updateContent() })
+                cityStep.undo(cityNode, _ => { this.updateContent() })
             })
         }
         // console.log("updateContent", cityStep)
@@ -289,6 +343,9 @@ export class IsoDivCityBox extends IsoDivBox {
         // this.stepDiv.style('display', 'none')
         this.MDDiv.style('display', 'none') 
         this.stepListDiv.style('display', 'none') 
+        this.entityListDiv.style('display', 'none')
+        this.inventoryListDiv.style('display', 'none')
+
 
         this.doParamDiv.style('display', 'none')
 
@@ -296,25 +353,45 @@ export class IsoDivCityBox extends IsoDivBox {
         this.currentStepUndoActionDiv.on('click', _ => {})
         this.currentStepActionDiv.style('display', 'none') 
         this.currentStepActionDiv.on('click', _ => {})
-
-        const MdText = cityStep.text
-        if (MdText) {
+        if (cityStep.text) {
+            console.log(typeof cityStep.text)
+            const MdText = typeof cityStep.text == 'string' ? cityStep.text : cityStep.text(this.tile.cityNode)
+            this.MDDiv.style('display', 'flex') 
             this.MDDiv.html(window.marked.parse(MdText))
         }
 
+        this.titleHomeDiv.style('display', 'flex') 
+        this.titleDiv.style('display', 'flex') 
 
-        if (cityStep.type.localeCompare('menu') == 0) {
+        console.log('updateContent : 3', cityStep.type)
+
+        if (cityStep.type.localeCompare('Menu') == 0) {
             this.titleDiv.style('display', 'none') 
             this.titleHomeDiv.style('display', 'none') 
             this.stepListDiv.style('display', 'flex') 
-        } else {
-           //  this.stepDiv.style('display', 'flex')
-            this.MDDiv.style('display', 'flex') 
-            this.titleHomeDiv.style('display', 'flex') 
-            this.titleDiv.style('display', 'flex') 
-        }  
 
-        if (cityStep.type.localeCompare('Build') == 0) {
+            this.updateStepListDiv()
+            
+        } else if (cityStep.type.localeCompare('Entities') == 0) {
+            this.entityListDiv.selectAll('div').remove("div")
+            this.entityListDiv.style('display', 'flex')
+            console.log('entities')
+            cityNode.entities.forEach(e => {
+                this.entityListDiv.append('div').text(
+                    ''
+                    + (e.cityLink.grave ? ' G ' : ' _ ')
+                    + (e.cityLink.house ? ' H ' : ' _ ')
+                    + (e.cityLink.lab ? ' L ' : ' _ ')
+                    + ' |' + e.name + '| '
+                    + ' >(' + e.mainGoal 
+                )
+            })
+            // setTimeout(_ => this.updateContent(), 1000)
+        } else if (cityStep.type.localeCompare('Inventory') == 0) {
+            this.inventoryListDiv.style('display', 'flex')
+            this.updateInventoryNodeDiv()
+
+        } else if (cityStep.type.localeCompare('Build') == 0) {
             let editor = null
             if (cityStep.doParamShema) {
                 this.doParamDiv.style('display', 'flex')
@@ -336,39 +413,7 @@ export class IsoDivCityBox extends IsoDivBox {
                 })
                 // Initialize the editor
                 this.doParamDiv.select('div').remove()
-                editor = new JSONEditor(this.doParamDiv.node(),{
-                    schema: {
-                        // "title": "Person",
-                        type: "object",
-                        required: [
-                            "buildType", "growLoopCount",
-                          ],
-                        properties: {
-                            "buildType": {
-                                title: "Building Type",
-                                type: "string",
-                                enum: [
-                                    "house3a",
-                                    "house3b",
-                                    "house4a",
-                                    "house6a",
-                                    // "Big Lab",
-                                ]
-                            },    
-                            "growLoopCount": {
-                                title:"Building Size",
-                                type: "integer",
-                                enum: [
-                                   1, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
-                                  ],
-                                default: 10,
-                                minimum: 1,
-                                maximum: 100
-                              },
-    
-                        }
-                      }
-                });
+                editor = new JSONEditor(this.doParamDiv.node(), cityStep.doParamShema);
 
             }
             
@@ -387,10 +432,11 @@ export class IsoDivCityBox extends IsoDivBox {
             if (cityStep.do) {
                 console.log('DO_BUTT: ', cityStep.title, cityStep.text)
                 this.currentStepActionDiv.style('display', 'flex') 
+                this.currentStepActionDiv.text(cityStep.doText ? cityStep.doText : 'Do It !')
                 this.currentStepActionDiv.on('click', _ => {
                     const param = editor ? editor.getValue() : {}
                     console.log('DO: ', cityStep.title, cityStep.text)
-                    cityStep.do(this.tile.cityNode, param, _ => { this.updateContent() })
+                    cityStep.do(this.tile.cityNode, _ => { this.updateContent() }, param)
                 })
             }
 

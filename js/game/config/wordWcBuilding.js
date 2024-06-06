@@ -43,11 +43,6 @@ export class WorldWcBuilding {
         centreCity.start(x-20, y-20)
 
         this.world.player.setCenter(x+5, y+5)
-
-        {
-            const tile = this.fm.getTile(x, y)
-            new CityTileNode(this.world, tile, {})
-        }
         */
 
 

@@ -1,7 +1,4 @@
-import { PathFactory } from "../../path.js";
-import { CityRoad } from "../cityRoad.js";
-import { CityTileNode } from "../cityTileNode.js";
-import { STEP_ERROR, abstractStep } from "./abstractStep.js";
+import { SUBSTEP_ERROR, SUBSTEP_WATTING, abstractStep } from "./abstractStep.js";
 import { stepBestPathBuilder_Build } from "./stepBuildBestPath.js";
 
 
@@ -28,18 +25,10 @@ const PATH_CONFIG = {
     ]},
 }
 
-const stepWaiting = {...abstractStep, 
-    title: "Graph Path Builder",
-    text: `> ### Waiting path to build `, 
-    isValidated : (cityNode) =>  {
-        return cityNode.sData && cityNode.sData.isWaiting
-    },
-}
-
 
 const stepNoPath = {...abstractStep, 
-    title: "Graph Path Builder",
-    text: `> ### No path to build `, 
+    title: "Graph House Builder",
+    text: `> ### No house to build `, 
     isValidated: (cityNode) => {
         return cityNode.sData && cityNode.sData.bestNode == null
     }
@@ -47,8 +36,8 @@ const stepNoPath = {...abstractStep,
 
 
 const stepGraphPathBuilder_Build = {...abstractStep, 
-    title: "Graph Path Builder",
-    text: `> ### Build the path `, 
+    title: "Graph House Builder",
+    text: `> ### Build the house `, 
     isValidated: (cityNode) => {
         return true
     },
@@ -59,8 +48,7 @@ const stepGraphPathBuilder_Build = {...abstractStep,
         //
         // callback()
     },
-    do: (cityNode, param={}, callback=_ => {}) => { 
-        // const nCityTileNode = nCityTile.cityNode ? nCityTile.cityNode : new CityTileNode(cityNode.world, nCityTile, cityNode.conf)
+    do: (cityNode, callback=_ => {}, param={}) => { 
 
         const MAX_NODE_ROAD = 3
 
@@ -113,13 +101,13 @@ const stepGraphPathBuilder_Build = {...abstractStep,
 
 export const section_BuildGraphPath = {
     type:"Build", 
-    title: "Graph Path Builder",
+    title: "Graph House Builder",
     isValidated:true,
     steps: [
-        stepWaiting,
+        SUBSTEP_WATTING,
         stepGraphPathBuilder_Build,
         stepNoPath,
-        STEP_ERROR,
+        SUBSTEP_ERROR,
     ],
 }
 

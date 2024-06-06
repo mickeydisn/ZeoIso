@@ -1,33 +1,6 @@
 import { CityNode } from "./cityNode.js";
-import { section_BuildBestHouse, section_BuildBestHouse3b, section_BuildBestHouse_LIST } from "./steps/stepBuildBestHouse.js";
-import { section_BuildBestPath } from "./steps/stepBuildBestPath.js";
-import { section_BuildGraphPath } from "./steps/stepBuildPathGraph.js";
-import { section_RemoveBuilding } from "./steps/stepRemoveHouse.js";
 
 
-const STEPS_DEFAULT_PATH = [
-
-    {
-        type:"menu",
-        title: "Menu",
-        isValidated: true,
-    }, {
-        type:"MD",
-        title: "Intro",
-        text: ` HELLO WORD `, 
-        isValidated: true,
-    }, {
-        type:"Quest", 
-        title: "Quest",
-        text: `> Collect Biome Resource .. `, 
-        isValidated: true,
-    },
-    section_BuildBestPath,
-    section_BuildGraphPath,
-    // section_BuildHouse,
-    section_BuildBestHouse,
-    ...section_BuildBestHouse_LIST,
-]
 
 const CITY_NODE_DEFAULT_CONF = {
     type:'Node',
@@ -37,7 +10,7 @@ const CITY_NODE_DEFAULT_CONF = {
     STEPS: [
 
         {
-            type:"menu",
+            type: "Menu",
             title: "Menu",
             isValidated: true,
         }, {
@@ -45,32 +18,25 @@ const CITY_NODE_DEFAULT_CONF = {
             title: "Intro",
             text: ` HELLO WORD `, 
             isValidated: true,
-        }, {
-            type:"Quest", 
-            title: "Quest",
-            text: `> Collect Biome Resource .. `, 
-            isValidated: true,
-        },
-        section_BuildBestPath,
-        section_BuildGraphPath,
-        // section_BuildHouse,
-        section_BuildBestHouse,
-        ...section_BuildBestHouse_LIST,
+        }
     ]
 }
 
 export class CityTileNode extends CityNode {
 
-    constructor(world, tile, conf={}) {
+    constructor(world, cityFactory, tile, conf={}) {
         super(world, tile.x, tile.y)
         this.world = world
         this.tile = tile
+        this.cityFactory = cityFactory
+        this.cityFactory.appendNode(this)
 
         tile.cityNode = this
 
         this.fm = world.factoryMap;
         this.ta = world.tilesActions;
         this.GS = world.globalState
+        this.player = world.player
 
         this.isHide = false;
         this.hideDistance = 1;
@@ -84,8 +50,73 @@ export class CityTileNode extends CityNode {
         Object.assign(this, CITY_NODE_DEFAULT_CONF)
         Object.assign(this, conf)
 
+        // Stor the entity linkend to the CityNode ( ex: Host of house .)
+        this.entities = []
+        this._inventory = {}
     }
 
+    // --------------------------------
+
+
+    addEntity(entity) {
+        if (!this.entities.includes(entity)) {
+            this.entities.push(entity)
+        }
+    }
+    removeEntity(entity) {
+        const index = this.entities.indexOf(entity);
+        if (index > -1) {
+            this.entities.splice(index, 1);
+        }
+    }
+
+    get entitiesAtNode() {
+        return this.entities.filter(e => e.tile.x == this.tile.x && e.tile.y == this.tile.y)
+    }
+    get entitiesIsAtNode() {
+        return this.entities.length > 0 && this.entities.length == this.entitiesAtNode.length
+    }
+
+    // ----- 
+
+    get inventory() {
+        return Object.values(this._inventory)
+    }
+
+    get inventoryIndex() {
+        return this._inventory
+    } 
+
+    inventoryAdd(itemId, count) {
+        if (!itemId) return
+        const icount = count ? count : 1
+
+        if (this._inventory[itemId]) {
+            this._inventory[itemId].count += icount
+        } else {
+            this._inventory[itemId] = {itemId:itemId, count:icount}
+        }
+    }
+    inventoryHave(itemId, count) {
+        return itemId
+            && this._inventory[itemId]
+            && this._inventory[itemId].count >= count
+    }
+    
+    inventoryRemove(itemId, count) {
+        if (!itemId) return
+        if (!this._inventory[itemId]) return 
+
+        const icount = count ? count : 1
+        this._inventory[itemId].count -= icount
+        if (this._inventory[itemId].count <= 0) {
+            delete this._inventory[itemId]
+        }
+    }
+    inventoryEmpty() {
+        this._inventory = {}
+    }
+    
     // --------------------------------
 
     set currentStepIdx(stepIndex) {
@@ -99,7 +130,7 @@ export class CityTileNode extends CityNode {
 
     get currentStep() {
         const curentStep = this.STEPS[this._currentStepIdx]
-        console.log('--STEP: ', curentStep.title)
+        // console.log('--STEP: ', curentStep.title)
 
         if (curentStep.steps) {
             let subStep = null;
@@ -107,7 +138,7 @@ export class CityTileNode extends CityNode {
             while(subStepList.length > 0) {
                 subStep = subStepList.shift()
                 const isVal = subStep.isValidated(this)
-                console.log('CHECK: ',isVal,  subStep.title, subStep.text)
+                // console.log('CHECK: ',isVal,  subStep.title, subStep.text)
                 if (isVal) {
                     return { 
                         type:curentStep.type, 
@@ -135,32 +166,14 @@ export class CityTileNode extends CityNode {
         return this.currentStep;
     }
     
-    /**
-     * Returns the previous validated step.
-     */
-    get presStep() {
-        const stepIndex = this.STEPS.findLastIndex(
-            (step, index) => index < this.currentStepIdx && step.isValidated
-        );
-        if (stepIndex !== -1) {
-            this.currentStepIdx =  stepIndex;
-            return this.STEPS[stepIndex];
-        }
-        return this.currentStep;
+    // ------------------------------------
+    setIsoDivBox(isoDivBox) {
+        this.isoDivBox = isoDivBox
     }
-
-    /**
-     * Returns the next validated step.
-     */
-    get nextStep() {
-        const stepIndex = this.STEPS.findIndex(
-            (step, index) => index > this.currentStepIdx && step.isValidated
-        );
-        if (stepIndex !== -1) {
-            this.currentStepIdx = stepIndex;
-            return this.STEPS[stepIndex];
+    updateIsoDivBox() {
+        if (this.isoDivBox && !this.isoDivBox.isHide) {
+            this.isoDivBox.updateContent()
         }
-        return this.currentStep;
     }
 
     toJson() {
@@ -175,41 +188,5 @@ export class CityTileNode extends CityNode {
         }
     }
 
-}
-
-
-
-// --------------
-
-
-
-const STEPS_DEFAULT_HOUSE = [
-
-    {
-        type:"menu",
-        title: "Menu",
-        isValidated: true,
-    }, {
-        type:"MD",
-        title: "Intro",
-        text: ` HELLO WORD `, 
-        isValidated: true,
-    },
-    section_RemoveBuilding,
-
-]
-
-export class CitNodeHouse extends CityTileNode {
-    constructor(world, tile, conf={}) {
-        super(world, tile, conf)
-        this.type = 'HouseNode'
-        this.STEPS = STEPS_DEFAULT_HOUSE
-        this.asset = {key: [
-            "coinGold_NW#_H190_C110_S80_B80_R1",
-            "coinGold_NW#_H190_C110_S80_B80_R1",
-            "coinGold_NW#_H190_C110_S80_B80_R2",
-            "coinGold_NW#_H190_C110_S80_B80_R2",
-        ]}
-    }
 }
 

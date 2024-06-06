@@ -13,6 +13,7 @@ import { TilesMatrix } from './map/tilesMatrix.js'
 import { SIZE20 } from './mapIso/interfaceIso.js';
 import { Player } from './player.js';
 import { CustomBuilding } from './build/customBuilding/mainCitySpawn.js';
+import { CityFactory } from './build/wcCity/cityFactory.js';
 
 export class World {
 
@@ -62,9 +63,13 @@ export class World {
         // new WorldWcBuilding(this).start()
 
         this.player.setCenter(2000, 400)
+
+        this.myCityFactory = new CityFactory(this, {})
+        this.myCityFactory.start(2000-2, 400-2)
+
         // new WorldStart(this).start()
 
-        new WorldWcBuilding(this).start()
+        // new WorldWcBuilding(this).start()
         // new WorldBiome(this).start()
 
     }

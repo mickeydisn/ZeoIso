@@ -119,7 +119,7 @@ export class InterfaceIso {
             // .style('position','absolute')
             .style('width', "1400px")
             .style('height', "700px")
-        this.ctx = this.canvas.node().getContext('2d')
+        this.ctx = this.canvas.node().getContext('2d', { willReadFrequently: true })
         this.ctx.webkitImageSmoothingEnabled = false;
         this.ctx.mozImageSmoothingEnabled = false;
         this.ctx.imageSmoothingEnabled = false;
@@ -313,8 +313,11 @@ export class InterfaceIso {
             }
         }
 
+        // Get the list of items of the tile. 
+        const entitiesItems = metaTile.entities.map( x => x.items)
+
         // Create list of item to add to the tile . 
-        const items = [...metaTile.items, ...metaTile.temporatyItems]
+        const items = [...metaTile.items, ...metaTile.temporatyItems, ...entitiesItems]
 
         // If tile is the center of the matrix -> add player asset to the list of display item  )
         if (x == size / 2 - 1 && y == size / 2 - 1 ) {
@@ -331,7 +334,7 @@ export class InterfaceIso {
 
         // Draw Each item on the list. 
         items
-            .sort((a, b) => (a.lvl || 0) - (b.lvl || 0))
+            .sort((a, b) => ((a.lvl || 0) - (b.lvl || 0)) || ((a.z || 0) - (b.z || 0)))
             .forEach(item => this.drawTileItem(xx, yy, metaTile, item, currentlvl))   
 
     }
@@ -410,7 +413,7 @@ export class InterfaceIso {
                     dx >= hideDistance || 
                     dy >= hideDistance
                 ) {
-                    console.log("=== HIDE", hideDistance, box.x, box.y, xx, yy)
+                    // console.log("=== HIDE", hideDistance, box.x, box.y, xx, yy)
                     box.hide()
                     return false
                 }
@@ -464,7 +467,7 @@ export class InterfaceIso {
         if (dx < hideDistance && dy < hideDistance) {
             // add the tile box in the list of existing box. 
             if (this.isoDivBoxs.filter(x => x === metaTile.divBox).length == 0){
-                console.log("=== Show", hideDistance) 
+                // console.log("=== Show", hideDistance) 
                 metaTile.divBox.show()
                 this.isoDivBoxs.push(metaTile.divBox)
             }
@@ -472,7 +475,7 @@ export class InterfaceIso {
             metaTile.divBox.update(boxPoint.x, boxPoint.y)
         } else {
             if (!metaTile.divBox.isHide) {
-                console.log("=== Hide", hideDistance) 
+                // console.log("=== Hide", hideDistance) 
                 metaTile.divBox.hide()
             }
         }
@@ -502,7 +505,7 @@ export class InterfaceIso {
         if (dx < hideDistance && dy < hideDistance) {
             // add the tile box in the list of existing box. 
             if (this.isoDivBoxs.filter(x => x === metaTile.divBox).length == 0){
-                console.info("=== Show", hideDistance) 
+                // console.info("=== Show", hideDistance) 
                 metaTile.divBox.show()
                 this.isoDivBoxs.push(metaTile.divBox)
             }
@@ -510,7 +513,7 @@ export class InterfaceIso {
             metaTile.divBox.update(boxPoint.x, boxPoint.y)
         } else {
             if (!metaTile.divBox.isHide) {
-                console.info("=== Hide", hideDistance) 
+                // console.info("=== Hide", hideDistance) 
                 metaTile.divBox.hide()
             }
         }

@@ -46,11 +46,11 @@ export class WidjetActionsPlayer extends WidjetActions {
 
         // --------------------------------
         {
-            this.contentBox.append('div').classed('row', true).classed('titel', true)
+            this.contentBox.append('div').classed('row', true).classed('title', true)
                 .text("= PLAYER ACTION =")
         }
         {
-            this.contentBox.append('div').classed('row', true).classed('subtitel', true)
+            this.contentBox.append('div').classed('row', true).classed('subtitle', true)
                 .text("Boost:")
 
             const divx = this.contentBox.append('div')
@@ -80,7 +80,7 @@ export class WidjetActionsPlayer extends WidjetActions {
         }
         {
 
-            this.contentBox.append('div').classed('row', true).classed('subtitel', true)
+            this.contentBox.append('div').classed('row', true).classed('subtitle', true)
                 .text("Teleportation:")
 
             configPlayerTeleport.forEach(conf => {

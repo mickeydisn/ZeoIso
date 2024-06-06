@@ -77,10 +77,11 @@
 .Markdown ul {
   padding: .2rem 0rem .2rem 2rem;
   margin: 0;
-  list-style-type: circle;
+  list-style-type: disc;
+  padding-inline-start: 1.2rem;
 }
 .Markdown li {
-  padding: 0rem 0rem 0rem 0rem;
+  padding: 0.2rem 0rem 0.2rem 0rem;
   margin: 0;
 }
 
@@ -94,7 +95,7 @@
 }
 
 .Markdown blockquote {
-  margin: .5rem;
+  margin: 1.5rem 0rem;
   padding: .1rem;
   border: 10px solid;
   border-image-slice: 1;
@@ -102,6 +103,6 @@
   border-left-width: 5px;
   border-image-source: linear-gradient(to right, #32778d, #32778d00);
   font-weight: 500;
-  font-size: .8em;
-
+  font-size: 1em;
+ 
 }

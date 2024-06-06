@@ -123,7 +123,7 @@ export class InterfaceIso2 {
                 .style('width', "1400px")
                 .style('height', "700px")
 
-            const ctx = canvas.node().getContext('2d')
+            const ctx = canvas.node().getContext('2d', { willReadFrequently: true })
             ctx.webkitImageSmoothingEnabled = false;
             ctx.mozImageSmoothingEnabled = false;
             ctx.imageSmoothingEnabled = false;
