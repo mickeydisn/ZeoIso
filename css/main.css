@@ -1015,7 +1015,7 @@ canvas#canvasMap {
   font-weight: bold;
   transition: all .2s;
   cursor: pointer;
-  margin: 0 .1rem;
+  margin: 0 .1rem 3rem 0;
   width: 100%;
 }
 
