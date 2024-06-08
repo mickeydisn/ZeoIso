@@ -3,9 +3,10 @@ import { CREATE_SUBSTEP_BUILD } from "../nodeSteps/stepBuildBestHouse.js"
 import { SUBSTEP_BestPathBuilder_Build } from "../nodeSteps/stepBuildBestPath.js"
 import { SUBSTEP_TEXT } from "../nodeSteps/stepStartNode.js"
 import { SUBSTEP_SummonEntity } from "../nodeSteps/stepSummonEntity.js"
-import { def_STEP_TEXT } from "./defaultCity.js"
+import { cityNode_do_Steps, def_STEP_TEXT } from "./defaultCity.js"
 
 // ------------
+
 
 const STEP_INTRO_START = def_STEP_TEXT({
     title: " => Finding the grave ",
@@ -210,7 +211,7 @@ export const STEP_INTRO_FIRST_HOUSE = def_STEP_TEXT({
     doText: "Let's Do it",
     doCall:(cityNode, callback=_ => {}) => {
         cityNode.player.storyProgress.INTRO.FIRST_HOUSE = true
-        CREATE_SUBSTEP_BUILD('house3b', 10).doEnter(cityNode, callback, _ => { 
+        CREATE_SUBSTEP_BUILD({buildType:'house3b', growLoopCount:10}).doEnter(cityNode, callback, _ => { 
             // cityNode.player.storyProgress.INTRO.FIRST_ROAD = true
             callback()
         })
@@ -245,7 +246,7 @@ export const STEP_INTRO_FIRST_LAB = def_STEP_TEXT({
     doText: "Let's Do it",
     doCall:(cityNode, callback=_ => {}) => {
         cityNode.player.storyProgress.INTRO.FIRST_LAB = true
-        CREATE_SUBSTEP_BUILD('house4a', 10).doEnter(cityNode, callback, _ => { 
+        CREATE_SUBSTEP_BUILD({buildType:'house4a', growLoopCount:10}).doEnter(cityNode, callback, _ => { 
             // cityNode.player.storyProgress.INTRO.FIRST_ROAD = true
             callback()
         })
@@ -270,7 +271,7 @@ export const STEP_INTRO_FIRST_GRAVE = def_STEP_TEXT({
     doText: "Let's Do it",
     doCall:(cityNode, callback=_ => {}) => {
         cityNode.player.storyProgress.INTRO.FIRST_GRAVE = true
-        CREATE_SUBSTEP_BUILD('house6a', 10).doEnter(cityNode, callback, _ => { 
+        CREATE_SUBSTEP_BUILD({buildType:'house6a', growLoopCount:10}).doEnter(cityNode, callback, _ => { 
             callback()
         })
     }
@@ -310,10 +311,28 @@ const STEP_INTRO_SPELL = def_STEP_TEXT({
 // ------------
 
 
+const STEP_INTRO_LOAD = def_STEP_TEXT({
+    title: " => EXECUTE LOAD ",
+    text: `
+    `, 
+
+    isValidated:(cityNode) => !cityNode.player.storyProgress.INTRO.LOAD,
+    doText: "LOAD",
+
+    doCall:(cityNode, callback=_ => {}) => {
+        cityNode.player.storyProgress.INTRO.LOAD = true
+        cityNode.cityFactory.reloadSteps(callback)
+    }
+
+})
+
+// ------------
+
+
+
 export class CitNodeCenter extends CityTileNode {
     constructor(world, cityFactory, tile, conf={}) {
-        super(world, cityFactory, tile, conf)
-        this.type = 'CenterNode'
+        super(world, cityFactory, tile, {...conf, type:'CenterNode'})
         // type:'StartNode',
         this.asset = {key : [10, 10, 10, 10, 10, 8, 6].map(x => 'crypt_NE#_C110_S40_B90_R' + x)}
         this.STEPS = [
@@ -321,7 +340,10 @@ export class CitNodeCenter extends CityTileNode {
                 type: "Menu",
                 title: " # Menu",
                 isValidated: true,
-            }, {
+            }, 
+            STEP_INTRO_LOAD,
+            
+            {
                 type:"Entities",
                 title: " # Entities",
                 isValidated:  (cityNode) => cityNode.player.storyProgress.INTRO.IS_SUMMON,
@@ -336,7 +358,7 @@ export class CitNodeCenter extends CityTileNode {
             STEP_INTRO_NODE,
             {
                 type:"Inventory",
-                title: " # == Inventory ===",
+                title: " # === Inventory ===",
                 isValidated: (cityNode) => cityNode.player.storyProgress.INTRO.NODE,
             },
  
@@ -346,18 +368,7 @@ export class CitNodeCenter extends CityTileNode {
             STEP_INTRO_FIRST_GRAVE,
 
             STEP_INTRO_SPELL,
-            // {...section_BuildBestHouse3b, title:"== Build a House =="},
-            
-            /*
-            {...section_StartNode, title:"Story"},
-            {...STEP_BuildBestPath, title:"== Build a road =="},
 
-            {...section_BuildBestHouse3b, title:"== Build a House =="},
-
-            {...section_BuildBestHouse4a, title:"== Build a Lab =="},
-            {...section_BuildBestHouse6a, title:"== Build a Grave yard =="},
-            {...section_BuildBestHouse3a, title:"== Build a Communoty Center =="},
-            */
         ]
     }
 }

@@ -175,7 +175,6 @@ export class WcBuildConf_House3b extends AbstractWcBuildConf {
     }
 
     get __TILE_LIST() { 
-        console.log('__TILE_LIST', this.mainLvl)
 
         const actionsEmpty = [
             {func:"lvlAvgSquare",size:5},

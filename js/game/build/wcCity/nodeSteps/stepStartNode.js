@@ -116,7 +116,7 @@ const stepStartNode_Start =  {...abstractStep,
 export const createMessageStep = (text, subStepId=1) => {
     return {...abstractStep,
         text: text, 
-        isValidated: (cityNode) => cityNode.sData && cityNode.sData.subStep == subStepId,
+        isValidated: (cityNode) => cityNode.sData && cityNode.sData.subStep === subStepId,
         do: (cityNode, callback=_ => {}, param={} ) => {
             cityNode.sData.subStep += 1
             callback()

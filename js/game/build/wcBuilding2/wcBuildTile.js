@@ -144,7 +144,7 @@ export class WcBuildTile extends BuildTile {
         propTiles.forEach(tile => {
             if (tile == null) return;
             if (typeof tile.savePossibleFace === 'string') {
-                console.log('UNDO', tile.savePossibleFace)
+                // console.log('UNDO', tile.savePossibleFace)
                 tile.tile.wcBuild = null;
             } else {
                 tile.possibleFace = tile.savePossibleFace ? tile.savePossibleFace : tile.possibleFace

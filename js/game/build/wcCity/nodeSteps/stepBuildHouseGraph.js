@@ -30,7 +30,7 @@ const stepNoPath = {...abstractStep,
     title: "Graph House Builder",
     text: `> ### No house to build `, 
     isValidated: (cityNode) => {
-        return cityNode.sData && cityNode.sData.bestNode == null
+        return cityNode.sData && cityNode.sData.bestNode === null
     }
 }
 

@@ -72,8 +72,7 @@ const STEP_ENTITIE_GRAVE_LOOP = def_STEP_TEXT({
 
 export class CitNodeGrave extends CityTileNode {
     constructor(world, cityFactory, tile, conf={}) {
-        super(world, cityFactory, tile, conf)
-        this.type = 'GraveNode'
+        super(world, cityFactory, tile,  {...conf, type:'GraveNode'})
         this.asset = {key: [
             "coinGold_NW#_H130_C80_S10_B80_R1",
             "coinGold_NW#_H130_C80_S10_B80_R1",
@@ -97,7 +96,7 @@ export class CitNodeGrave extends CityTileNode {
 
             {
                 type:"Inventory",
-                title: " # == Inventory ===",
+                title: " # === Inventory ===",
                 isValidated: (cityNode) => true,
             },
             

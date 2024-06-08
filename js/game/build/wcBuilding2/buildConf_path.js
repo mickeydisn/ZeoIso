@@ -6,6 +6,7 @@ import { AbstractWcBuildConf } from "./AbstractBuildConf.js";
 export class WcBuildConf_Path extends AbstractWcBuildConf {
     constructor(conf={}) {
         super(conf)
+        this.stepTime = 0
 
         this.faceLinkWeight = {
             'X' : 2,
@@ -128,7 +129,6 @@ export class WcBuildConf_Path extends AbstractWcBuildConf {
     }}
 
     get __TILE_LIST() { 
-        // console.log('__TILE_LIST', this.mainLvl)
 
         const actionsEmpty = [
             {func:"lvlAvgSquare",size:5},

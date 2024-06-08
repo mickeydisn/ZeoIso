@@ -13,21 +13,20 @@ const STEP_ASSIGN_LAB = def_STEP_TEXT({
     `, 
     doText: "Assigne the LAB .",
     isValidated:(cityNode) => true  
-        && cityNode.entities.length == 0 
+        && cityNode.entities.length === 0 
         && cityNode.cityFactory.entities
             .filter(e => e.cityLink.house != null)
-            .filter(e => e.cityLink.lab == null).length != 0,
+            .filter(e => e.cityLink.lab === null).length != 0,
         
     doClick:(cityNode) => {
         const homeless = cityNode.cityFactory.entities
             .filter(e => e.cityLink.house != null)
-            .filter(e => e.cityLink.lab == null)
+            .filter(e => e.cityLink.lab === null)
         if (homeless.length > 0) {
             homeless[0].defineCityNodeLink('lab', cityNode)
         }
     }
 })
-
 
 
 
@@ -117,8 +116,7 @@ const STEP_ENTITIE_LAB_LOOP = def_STEP_TEXT({
 
 export class CitNodeLab extends CityTileNode {
     constructor(world, cityFactory, tile, conf={}) {
-        super(world, cityFactory, tile, conf)
-        this.type = 'LabNode'
+        super(world, cityFactory, tile, {...conf, type:'LabNode'})
         this.asset = {key: [
             "coinGold_NW#_H90_C110_S80_B80_R1",
             "coinGold_NW#_H90_C110_S80_B80_R1",
@@ -145,7 +143,7 @@ export class CitNodeLab extends CityTileNode {
 
             {
                 type:"Inventory",
-                title: " # == Inventory ===",
+                title: " # === Inventory ===",
                 isValidated: (cityNode) => true,
             },
             

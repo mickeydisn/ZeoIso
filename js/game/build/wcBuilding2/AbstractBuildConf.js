@@ -20,6 +20,7 @@ export class AbstractWcBuildConf {
         this.faceLinks = []
         this.listFaceKey = []
         this.preInit();
+        this.stepTime = conf.stepTime ? conf.stepTime : 0
         // this.init();        
     }
 
@@ -59,17 +60,17 @@ export class AbstractWcBuildConf {
 
     reverseFaceLink(face) {
         const filterLink = this.faceLinks.filter(x => x[0].localeCompare(face) == 0)
-        if (filterLink.length == 0 && face != null) {
-            console.error ('==ERROR== not existing faceLink:', face)
-        }
+        // if (filterLink.length == 0 && face != null) {
+        //     console.error ('==ERROR== not existing faceLink:', face)
+        // }
         return filterLink.length ? filterLink[0][1] : null
     }
 
     reverseFaceLinkList(face) {
         const filterLink = this.faceLinks.filter(x => x[0].localeCompare(face) == 0)
-        if (filterLink.length == 0 && face != null) {
-            console.error ('==ERROR== not existing faceLink:', face)
-        }
+        // if (filterLink.length == 0 && face != null) {
+        //     console.error ('==ERROR== not existing faceLink:', face)
+        // }
         return filterLink.length ? filterLink.map(l => l[1]) : null
     }
 }

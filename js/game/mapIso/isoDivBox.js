@@ -150,7 +150,6 @@ export class IsoDivCityBox extends IsoDivBox {
         super.show()
         // this.tile.cityNode.currentStepIdx = 0
         // this.currentStep = this.tile.cityNode.currentStep;
-        console.log('SHOW')
         this.updateContent()
     }
 
@@ -184,7 +183,6 @@ export class IsoDivCityBox extends IsoDivBox {
                     cityStep.undo(this.tile.cityNode, _ => {})
                 }
                 */
-                console.log('----- UNDO_CLICK')
                 
                 this.currentStep = this.tile.cityNode.homeStep();
                 this.updateContent()
@@ -250,7 +248,6 @@ export class IsoDivCityBox extends IsoDivBox {
     */
     updateStepListDiv() {
         this.stepListDiv.selectAll('div').remove()
-        console.log('MENU:updateStepListDiv')
         this.tile.cityNode.STEPS.forEach((step, idx) => {
             if (idx == 0) return ;
             if ((typeof step.isValidated !== 'boolean' &&  step.isValidated(this.tile.cityNode)) 
@@ -279,21 +276,29 @@ export class IsoDivCityBox extends IsoDivBox {
         const nInventoryDiv = this.inventoryListDiv.append('div')
             .style('display', 'flex')
             .classed('Markdown', true) 
-        nInventoryDiv.html(window.marked.parse("### Node" + nodeInventory))
+        nInventoryDiv.html(window.marked.parse(nodeInventory))
 
         const buttsDiv = this.inventoryListDiv.append('div')
             .style('display', 'flex')
             .classed('butts', true)
 
-        const buttDrop = buttsDiv.append('div').text('⬆︎Drop⬆︎')
-        const buttRetrive = buttsDiv.append('div').text('⬇︎Retrive⬇︎')
+        const buttCollect = buttsDiv.append('div').text('⬇︎Collect⬇︎')
+        buttCollect.on('click', _ => { 
+            cityNode_do_inventory_to_player(cityNode)
+            this.updateContent()
+        })
+
+        const buttClose = buttsDiv.append('div').text('Close')
+        buttClose.on('click', _ => { 
+            this.currentStep = this.tile.cityNode.homeStep();
+            this.updateContent()
+        })
+        /*
+         const buttDrop = buttsDiv.append('div').text('⬆︎Drop⬆︎')
+        
 
         buttDrop.on('click', _ => { 
             cityNode_do_inventory_from_player(cityNode) 
-            this.updateContent()
-        })
-        buttRetrive.on('click', _ => { 
-            cityNode_do_inventory_to_player(cityNode)
             this.updateContent()
         })
 
@@ -301,6 +306,7 @@ export class IsoDivCityBox extends IsoDivBox {
             .style('display', 'flex')
             .classed('Markdown', true) 
         pInventoryDiv.html(window.marked.parse("### Player" + playerInventory))
+        */
 
     }
 
@@ -324,9 +330,7 @@ export class IsoDivCityBox extends IsoDivBox {
     }
 
     updateContent() {
-        console.log('updateContent : 1')
         if (this.isHide) return 
-        console.log('updateContent : 2')
 
         const cityNode = this.tile.cityNode
         const cityStep = cityNode.currentStep 
@@ -336,7 +340,6 @@ export class IsoDivCityBox extends IsoDivBox {
                 cityStep.undo(cityNode, _ => { this.updateContent() })
             })
         }
-        // console.log("updateContent", cityStep)
 
         this.titleDiv.text(cityStep.title)
         
@@ -354,7 +357,6 @@ export class IsoDivCityBox extends IsoDivBox {
         this.currentStepActionDiv.style('display', 'none') 
         this.currentStepActionDiv.on('click', _ => {})
         if (cityStep.text) {
-            console.log(typeof cityStep.text)
             const MdText = typeof cityStep.text == 'string' ? cityStep.text : cityStep.text(this.tile.cityNode)
             this.MDDiv.style('display', 'flex') 
             this.MDDiv.html(window.marked.parse(MdText))
@@ -362,8 +364,6 @@ export class IsoDivCityBox extends IsoDivBox {
 
         this.titleHomeDiv.style('display', 'flex') 
         this.titleDiv.style('display', 'flex') 
-
-        console.log('updateContent : 3', cityStep.type)
 
         if (cityStep.type.localeCompare('Menu') == 0) {
             this.titleDiv.style('display', 'none') 
@@ -375,7 +375,6 @@ export class IsoDivCityBox extends IsoDivBox {
         } else if (cityStep.type.localeCompare('Entities') == 0) {
             this.entityListDiv.selectAll('div').remove("div")
             this.entityListDiv.style('display', 'flex')
-            console.log('entities')
             cityNode.entities.forEach(e => {
                 this.entityListDiv.append('div').text(
                     ''
@@ -418,7 +417,6 @@ export class IsoDivCityBox extends IsoDivBox {
             }
             
             if (cityStep.doEnter) {
-                console.log('DO_ENTER: ', cityStep.title, cityStep.text)
                 cityStep.doEnter(this.tile.cityNode, _ => { this.updateContent() })
             }
             /*
@@ -430,12 +428,10 @@ export class IsoDivCityBox extends IsoDivBox {
             }
             */
             if (cityStep.do) {
-                console.log('DO_BUTT: ', cityStep.title, cityStep.text)
                 this.currentStepActionDiv.style('display', 'flex') 
                 this.currentStepActionDiv.text(cityStep.doText ? cityStep.doText : 'Do It !')
                 this.currentStepActionDiv.on('click', _ => {
                     const param = editor ? editor.getValue() : {}
-                    console.log('DO: ', cityStep.title, cityStep.text)
                     cityStep.do(this.tile.cityNode, _ => { this.updateContent() }, param)
                 })
             }

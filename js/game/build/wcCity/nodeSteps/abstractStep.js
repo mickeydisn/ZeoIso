@@ -32,7 +32,7 @@ export const SUBSTEP_ERROR = {...abstractStep,
 export const SUBSTEP_WATTING = {...abstractStep, 
     text: `> ### ...Waiting `, 
     isValidated : (cityNode) =>  {
-        return cityNode.sData && cityNode.sData.isWaiting
+        return cityNode?.sData?.isWaiting
     },
 }
 

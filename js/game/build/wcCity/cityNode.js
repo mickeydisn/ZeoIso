@@ -50,7 +50,6 @@ export  class CityNode extends Node {
         this.power = 0;
     }
 
-
     /**
      * Returns an array of nodes around the current node within a specified radius and step.
      */

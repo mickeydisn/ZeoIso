@@ -16,7 +16,7 @@ const STEP_ASSIGN_HOUSE = def_STEP_TEXT({
     
     doText: " => Assigne the House .",
     doClick:(cityNode) => {
-        const homeless = cityNode.cityFactory.entities.filter(e => e.cityLink.house == null)
+        const homeless = cityNode.cityFactory.entities.filter(e => e.cityLink.house === null)
         if (homeless.length > 0) {
             homeless[0].defineCityNodeLink('house', cityNode)
         }
@@ -108,8 +108,7 @@ const STEP_ENTITIE_HOUSE_LOOP = def_STEP_TEXT({
 
 export class CitNodeHouse extends CityTileNode {
     constructor(world, cityFactory, tile, conf={}) {
-        super(world, cityFactory, tile, conf)
-        this.type = 'HouseNode'
+        super(world, cityFactory, tile, {...conf, type:'HouseNode'})
         this.asset = {key: [
             "coinGold_NW#_H190_C110_S80_B80_R1",
             "coinGold_NW#_H190_C110_S80_B80_R1",
@@ -136,7 +135,7 @@ export class CitNodeHouse extends CityTileNode {
 
             {
                 type:"Inventory",
-                title: " # == Inventory ===",
+                title: " # === Inventory ===",
                 isValidated: (cityNode) => cityNode.entities.length > 0,
             },
             

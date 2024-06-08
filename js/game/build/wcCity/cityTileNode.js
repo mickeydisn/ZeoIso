@@ -3,7 +3,7 @@ import { CityNode } from "./cityNode.js";
 
 
 const CITY_NODE_DEFAULT_CONF = {
-    type:'Node',
+    type:'CityTileNode',
     asset: {
         key: [10, 10, 10, 10, 10, 10, 9, 8, 7].map(x => "statue_obelisk_NW#_H180_C150_S95_B75_I1_R" + x)
     },
@@ -28,8 +28,6 @@ export class CityTileNode extends CityNode {
         super(world, tile.x, tile.y)
         this.world = world
         this.tile = tile
-        this.cityFactory = cityFactory
-        this.cityFactory.appendNode(this)
 
         tile.cityNode = this
 
@@ -41,7 +39,11 @@ export class CityTileNode extends CityNode {
         this.isHide = false;
         this.hideDistance = 1;
         
-        this.text = "# Hello word"
+        this.type = conf.type
+        this.conf = conf
+
+        this.cityFactory = cityFactory
+        this.cityFactory.appendNode(this)
 
         // this.asset = null //  {key:  [10, 10, 10, 10, 10, 10, 9, 8, 7].map(x => "statue_obelisk_NW#_H180_C150_S95_B75_I1_R" + x)}
         // this.STEPS = null // STEPS_DEFAULT_PATH
@@ -53,10 +55,10 @@ export class CityTileNode extends CityNode {
         // Stor the entity linkend to the CityNode ( ex: Host of house .)
         this.entities = []
         this._inventory = {}
+
     }
 
     // --------------------------------
-
 
     addEntity(entity) {
         if (!this.entities.includes(entity)) {
@@ -97,6 +99,7 @@ export class CityTileNode extends CityNode {
             this._inventory[itemId] = {itemId:itemId, count:icount}
         }
     }
+
     inventoryHave(itemId, count) {
         return itemId
             && this._inventory[itemId]
@@ -107,7 +110,7 @@ export class CityTileNode extends CityNode {
         if (!itemId) return
         if (!this._inventory[itemId]) return 
 
-        const icount = count ? count : 1
+        const icount = count ? count : 0
         this._inventory[itemId].count -= icount
         if (this._inventory[itemId].count <= 0) {
             delete this._inventory[itemId]
@@ -116,7 +119,22 @@ export class CityTileNode extends CityNode {
     inventoryEmpty() {
         this._inventory = {}
     }
-    
+
+    inventoryCostRest(costItems) {        
+        return costItems.map(cItem => {
+            return {
+                ...cItem,
+                count: cItem.count - (this._inventory[cItem.itemId] ? this._inventory[cItem.itemId].count : 0)
+            }
+        }).filter(item => item.count > 0)
+    }
+
+    inventoryCostRemove(costItems) {
+        costItems.forEach(cItem => {
+            this.inventoryRemove(cItem.itemId, cItem.count)
+        });
+    }
+
     // --------------------------------
 
     set currentStepIdx(stepIndex) {
@@ -186,6 +204,19 @@ export class CityTileNode extends CityNode {
             roads: this.roads.map(r => r.length),
 
         }
+    }
+
+
+
+
+    jsonSave() {
+        return {
+            x: this.x,
+            y: this.y,
+            type: this.type,
+            inventory: this._inventory,
+        }        
+        
     }
 
 }

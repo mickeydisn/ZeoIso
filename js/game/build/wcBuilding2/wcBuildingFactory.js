@@ -55,6 +55,7 @@ export class WcBuildingFactory extends AbstractBuilding{
 
     constructor(world, conf) {
         super(world, conf)
+
     }
 
     dist(x, y) {
@@ -86,7 +87,6 @@ export class WcBuildingFactory extends AbstractBuilding{
         this.conf.mainLvl = this.mainLvl
         this.conf.init();        
 
-        console.info('== Start Building')
         this.mainTile = new WcBuildTile(this.world, this, x, y, 0)
         if (!this.mainTile.pickAndApply(this.conf.TILE_START_OPTIONS)) {
             console.log("== Not posible to build")
@@ -94,7 +94,7 @@ export class WcBuildingFactory extends AbstractBuilding{
             return false
         }
 
-        console.log('== Start Building 2', this.conf.growLoopCount)
+        console.log('== Start Building ', this.conf.growLoopCount)
         // console.log(this.mainTile)
         this.updateAllListWithnearWcBuild(this.mainTile)
 
@@ -103,12 +103,12 @@ export class WcBuildingFactory extends AbstractBuilding{
 
         for (let it = 0; it < this.conf.growLoopCount; it++) {
             // console.log("-------------------------------", it , "-----------------")
-            await new Promise(resolve => setTimeout(resolve, 50));
-
-            // const sfxr = require("jsfxr").sfxr;
-            var a = window.sfxr.toAudio("5CxcQvHmPLeugicoVTogZ3mnuVBwFq1VP5g3DiTq6o5YNwhnyH1Fpztvxu8zFyjj1jtnvad4nmooavzfeGadM2W3kA8qfvshWg5vj2tnHhd3MgZUG1TzaNKXu");
-            a.play();
-
+            if (this.conf.stepTime) {
+                await new Promise(resolve => setTimeout(resolve, this.conf.stepTime));
+                var a = window.sfxr.toAudio("5CxcQvHmPLeugicoVTogZ3mnuVBwFq1VP5g3DiTq6o5YNwhnyH1Fpztvxu8zFyjj1jtnvad4nmooavzfeGadM2W3kA8qfvshWg5vj2tnHhd3MgZUG1TzaNKXu");
+                a.play();
+            }
+            
             const forcedList = this.forcedList
             if (forcedList.length > 0) {
                 const popBuildTile = this.forcedList.shift();
@@ -136,11 +136,12 @@ export class WcBuildingFactory extends AbstractBuilding{
 
         for (let it = 0; it < this.conf.endLoopMax; it++) {
             // console.log("-------------------------------", it , "------------=====")
-            await new Promise(resolve => setTimeout(resolve, 50));
-            
-            // const sfxr = require("jsfxr").sfxr;
-            var a = window.sfxr.toAudio("5CxcQvHmPLeugicoVTogZ3mnuVBwFq1VP5g3DiTq6o5YNwhnyH1Fpztvxu8zFyjj1jtnvad4nmooavzfeGadM2W3kA8qfvshWg5vj2tnHhd3MgZUG1TzaNKXu");
-            a.play();
+            if (this.conf.stepTime) {
+                await new Promise(resolve => setTimeout(resolve, this.conf.stepTime));
+                // const sfxr = require("jsfxr").sfxr;
+                var a = window.sfxr.toAudio("5CxcQvHmPLeugicoVTogZ3mnuVBwFq1VP5g3DiTq6o5YNwhnyH1Fpztvxu8zFyjj1jtnvad4nmooavzfeGadM2W3kA8qfvshWg5vj2tnHhd3MgZUG1TzaNKXu");
+                a.play();
+            }
 
 
             const forcedList = this.forcedList

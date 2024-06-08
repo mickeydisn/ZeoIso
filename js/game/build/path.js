@@ -18,17 +18,20 @@ export class WcPath extends AbstractBuilding {
     }
 
 
-    async start(time=10) {
+    async start() {
 
 
         for( let it = 0; it < this.tileList.length; it++) {
         // for (let it = 0; it < 1; it++) {
 
             const tile =   this.tileList[it]          
-            await new Promise(resolve => setTimeout(resolve, time));
-            // const sfxr = require("jsfxr").sfxr;
-            var a = window.sfxr.toAudio("7BMHBGLKidWDzXRmKSdRbAHRrA7x2yLzn7PpFnCT7zQiGB3B4KTKJ3ySN3NHfsY1xgwsZ4DrE5Gghk4zhYmiZU2LU2QSNwUpxvSinbUBPSjNgkSVRvSV1Zaps");
-            a.play();
+            
+            if (this.conf.stepTime) {
+                await new Promise(resolve => setTimeout(resolve, this.conf.stepTime));
+                var a = window.sfxr.toAudio("7BMHBGLKidWDzXRmKSdRbAHRrA7x2yLzn7PpFnCT7zQiGB3B4KTKJ3ySN3NHfsY1xgwsZ4DrE5Gghk4zhYmiZU2LU2QSNwUpxvSinbUBPSjNgkSVRvSV1Zaps");
+                a.play();
+            }
+
             // TODO :: Change the tile !!! 
             const bTile = tile.wcBuild ? tile.wcBuild : new WcBuildTile(this.world, this, tile.x, tile.y)
             bTile.isPath = 2
@@ -45,11 +48,11 @@ export class WcPath extends AbstractBuilding {
         
         for (let it = 0; it < this.conf.endLoopMax; it++) {
         // for (let it = 0; it < 0; it++) {
-            await new Promise(resolve => setTimeout(resolve, time/4));
-            // const sfxr = require("jsfxr").sfxr;
-            var a = window.sfxr.toAudio("7BMHBGLKidWDzXRmKSdRbAHRrA7x2yLzn7PpFnCT7zQiGB3B4KTKJ3ySN3NHfsY1xgwsZ4DrE5Gghk4zhYmiZU2LU2QSNwUpxvSinbUBPSjNgkSVRvSV1Zaps");
-            a.play();
-
+            if (this.conf.stepTime) {
+                await new Promise(resolve => setTimeout(resolve, this.conf.stepTime/4));
+                var a = window.sfxr.toAudio("7BMHBGLKidWDzXRmKSdRbAHRrA7x2yLzn7PpFnCT7zQiGB3B4KTKJ3ySN3NHfsY1xgwsZ4DrE5Gghk4zhYmiZU2LU2QSNwUpxvSinbUBPSjNgkSVRvSV1Zaps");
+                a.play();
+            }
 
             const forcedList = this.forcedList
             if (forcedList.length > 0) {

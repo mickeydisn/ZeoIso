@@ -1,7 +1,8 @@
 import { PathFactory } from "../../path.js";
 import { CityRoad } from "../cityRoad.js";
+import { CityNodeRoad } from "../config/cityNodeRoad.js";
+import { cityNode_do_Steps } from "../config/defaultCity.js";
 import { SUBSTEP_ERROR, SUBSTEP_WATTING, abstractStep } from "./abstractStep.js";
-import { CitNodeRoad } from "../config/cityNodeRoad.js";
 
 
 const PATH_CONFIG = {
@@ -91,8 +92,6 @@ const SUBSTEP_BuildingPathCheckPossible = {...abstractStep,
         const nodeAroundValide = nodeAroundRaw
             .filter(n => cityNode._isValideNearNode(n))
 
-        console.log("nodeAroundValide", nodeAroundValide)
-
         if (nodeAroundValide.length == 0) {
             callback();
             return null;
@@ -117,7 +116,6 @@ const SUBSTEP_BuildingPathCheckPossible = {...abstractStep,
         const nodeFilterA = nodeAroundInfo
             .filter(nInfo => nInfo.minDist > config.minDist)
         
-        console.log("nodeFilterA", nodeFilterA)
         cityNode.sData.possibleTiles = nodeFilterA
         callback(); 
     },
@@ -169,7 +167,6 @@ const SUBSTEP_BuildingPathChoiseBest = {...abstractStep,
                 break
             }
         }
-        console.log("bestNode", bestNodeInfo )
         if (bestNode) {
             cityNode.sData.bestNode = bestNodeInfo.node
         }
@@ -191,31 +188,30 @@ const SUBSTEP_NoWai2 = {...abstractStep,
 const SUBSTEP_BuildingPathFinal = {...abstractStep, 
     text: `> ### Build the path Auto `, 
     isValidated: (cityNode) => {
-        console.log("ISVALIDE", cityNode, cityNode.sData.bestNode != null)
+        // console.log("ISVALIDE", cityNode, cityNode.sData.bestNode != null)
         return cityNode.sData 
         && cityNode.sData.bestNode
     },
-    doEnter: (cityNode, callback=_ => {}, callend=null) => { 
-        console.log("DOENTER", cityNode)
+    doEnter: (cityNode, callback=_ => {}, callFirst=null) => { 
         const bestNode = cityNode.sData.bestNode
         const nCityTile = cityNode.fm.getTile(bestNode.x, bestNode.y)
         const nCityNode = nCityTile.cityNode 
             ? nCityTile.cityNode 
-            : new CitNodeRoad(cityNode.world, cityNode.cityFactory, nCityTile, cityNode.conf)
+            : new CityNodeRoad(cityNode.world, cityNode.cityFactory, nCityTile, cityNode.conf)
 
         cityNode.ta.doAction({func:'clearAllTemporatyItems'})
         const path = new PathFactory(cityNode.world, {})
         const wcPath = path.createWcPath({x:cityNode.x, y:cityNode.y}, {x:nCityNode.x, y:nCityNode.y})
-        
+        wcPath.conf.stepTime = 0
         wcPath.start().then(_ => {
             const newRoad = new CityRoad(cityNode, nCityNode, wcPath)
             cityNode.addRoad(newRoad)
             nCityNode.addRoad(newRoad)
             cityNode.homeStep()
-            callend ? callend() : callback(); 
+            callback(); 
         })
         cityNode.sData.isWaiting = true
-        callback(); 
+        callFirst ? callFirst() : callback(); 
     }
 }
 
@@ -246,40 +242,55 @@ export const SUBSTEP_BestPathBuilder_Build = {...abstractStep,
     text: `> ### Build the path `,
     isValidated: (cityNode) => !cityNode.sData,
     
-    doEnter: (cityNode, callback=_ => {}, callend=_ => {}) => {
 
-        const fFinal = _ => {
+    doEnter_new : (cityNode, callback=_ => {})  => {
+        console.log(`> ### Build the path `,)
+        cityNode_do_Steps(cityNode, [
+            SUBSTEP_BuildingPathStart,
+            SUBSTEP_BuildingPathCheckPossible,
+            SUBSTEP_BuildingPathChoiseBest,
+            SUBSTEP_BuildingPathFinal,
+        ], callback)
+        // callback()
+    },
+
+    doEnter: (cityNode, callback=_ => {}, callFirst=_ => {}) => {
+        const handleFinalStep = () => {
             if (SUBSTEP_BuildingPathFinal.isValidated(cityNode)) {
-                SUBSTEP_BuildingPathFinal.doEnter(cityNode, callback, callend)
+                SUBSTEP_BuildingPathFinal.doEnter(cityNode, callback, callFirst);
             }
-        }
-        const fError = _ => {
-            cityNode.homeStep()
-            callend(); 
-        }
-        const fChoiseBest = _ => {
+        };
+
+        const handleError = () => {
+            cityNode.homeStep();
+            callback();
+        };
+
+        const handleBestPathChoice = () => {
             if (SUBSTEP_BuildingPathChoiseBest.isValidated(cityNode)) {
-                SUBSTEP_BuildingPathChoiseBest.doEnter(cityNode, fFinal)
+                SUBSTEP_BuildingPathChoiseBest.doEnter(cityNode, handleFinalStep);
             } else {
-                fError()
+                handleError();
             }
-        }
-        
-        const fCheckPossible = _ => {
+        };
+
+        const handlePossiblePathCheck = () => {
             if (SUBSTEP_BuildingPathCheckPossible.isValidated(cityNode)) {
-                SUBSTEP_BuildingPathCheckPossible.doEnter(cityNode, fChoiseBest)
+                SUBSTEP_BuildingPathCheckPossible.doEnter(cityNode, handleBestPathChoice);
             } else {
-                fError()
+                handleError();
             }
-        }
-        const fCheckPathStart = _ => {
+        };
+
+        const handlePathStartCheck = () => {
             if (SUBSTEP_BuildingPathStart.isValidated(cityNode)) {
-                SUBSTEP_BuildingPathStart.doEnter(cityNode, fCheckPossible)
+                SUBSTEP_BuildingPathStart.doEnter(cityNode, handlePossiblePathCheck);
             } else {
-                fError()
+                handleError();
             }
-        }
-        fCheckPathStart()
+        };
+
+        handlePathStartCheck();
     }
 }
 
@@ -310,7 +321,7 @@ export const stepBestPathBuilder_Build = {...abstractStep,
     do: (cityNode, callback=_ => {}, param={}) => { 
         const bestNode = cityNode.sData.bestNode
         const nCityTile = cityNode.fm.getTile(bestNode.x, bestNode.y)
-        const nCityNode = nCityTile.cityNode ? nCityTile.cityNode : new CitNodeRoad(cityNode.world, cityNode.cityFactory, nCityTile, cityNode.conf)
+        const nCityNode = nCityTile.cityNode ? nCityTile.cityNode : new CityNodeRoad(cityNode.world, cityNode.cityFactory, nCityTile, cityNode.conf)
 
         cityNode.ta.doAction({func:'clearAllTemporatyItems'})
         const path = new PathFactory(cityNode.world, {})

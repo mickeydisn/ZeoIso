@@ -81,7 +81,6 @@ export class WcBuildConf_House4a extends AbstractWcBuildConf {
     }}
 
     get __TILE_LIST() { 
-        console.log('__TILE_LIST', this.mWinLvl)
         const actionsEmptyFlat = [
             {func:"lvlAvgSquare",size:5},
             {func:"lvlAvgSquare", size:7},

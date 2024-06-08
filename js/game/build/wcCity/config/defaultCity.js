@@ -4,24 +4,44 @@ import { abstractStep } from "../nodeSteps/abstractStep.js"
 const SUBSTEP_WAITING = {...abstractStep, 
     text: `> ### ...Waiting `, 
     isValidated : (cityNode) =>  {
-        return cityNode.sData && cityNode.sData.isWaiting
+        return cityNode?.sData?.isWaiting
     },
 }
 
-export const valideCost = (cityNode, cost) => {
-    console.log('== valideCost')
-    console.log(cost.filter(c => cityNode.inventoryHave(c.itemId, c.count)))
-
-    return cost.filter(c => cityNode.inventoryHave(c.itemId, c.count)).length == cost.length
+const valideCost = (cityNode, cost) => {
+    console.log('== valideCost', cost)
+    const costRestOnNode =  cityNode.inventoryCostRest(cost)
+    console.log("valideCost#A ", costRestOnNode)
+    if (costRestOnNode.length === 0) {
+        return true
+    }
+    const costRestOnPlayer =  cityNode.player.inventoryCostRest(costRestOnNode)
+    console.log("valideCost#B", costRestOnPlayer)
+    if (costRestOnPlayer.length === 0) {
+        return true
+    }    
+    return false
 }
+
+const applyCost = (cityNode, cost) => {
+    if (!cost) return
+
+    const costRestOnNode =  cityNode.inventoryCostRest(cost)
+    cityNode.inventoryCostRemove(cost)
+
+    if (costRestOnNode.length != 0) {
+        cityNode.player.inventoryCostRemove(cost)
+    }
+} 
 
 const costMDTable_Conf = (conf) => { return (cityNode) => { 
         return "## Cost\n\n"
-        + '| **Name** | **Q** | **I** |\n'
-        + '|:-:|:-:|:-:|\n'
+        + '| **Name** | **Cost** | **Node** | **Player** |\n'
+        + '|:-:|:-:|:-:|:-:|\n'
         + conf.cost.map(slot => {
             const inventoryCount = cityNode.inventoryIndex[slot.itemId] ? cityNode.inventoryIndex[slot.itemId].count : 0 
-            return `| ${slot.itemId} | ${slot.count} | ${inventoryCount}`
+            const inventoryPlayerCount = cityNode.player.inventoryIndex[slot.itemId] ? cityNode.player.inventoryIndex[slot.itemId].count : 0 
+            return `| ${slot.itemId} | ${slot.count} | ${inventoryCount} | ${inventoryPlayerCount}`
         }).join('\n')
         + '\n\n\n'
 }}
@@ -44,17 +64,12 @@ const MAKE_SUBSTEP_INVALIDE_COST = (conf) => {return  {...abstractStep,
 export const def_STEP_TEXT = (conf) => {
 
     const SUBSTEP_INVALIDE_COST = conf.cost ? [MAKE_SUBSTEP_INVALIDE_COST(conf)] : []
-    const applyCost = (cityNode) => {
-        if (!conf.cost) return
-        conf.cost.forEach(slot => {
-            cityNode.inventoryRemove(slot.itemId,slot.count)
-        });
-    } 
+    
 
     const doObject = conf.doClick ?  {
         doText:conf.doText,
         do:(cityNode, callback=_ => {}, param={}) => {
-            applyCost(cityNode)
+            applyCost(cityNode, conf.cost)
             conf.doClick(cityNode)
             cityNode.homeStep()
             callback()
@@ -62,7 +77,7 @@ export const def_STEP_TEXT = (conf) => {
     } : conf.doCall ? {
         doText:conf.doText,
         do:(cityNode, callback=_ => {}, param={}) => {
-            applyCost(cityNode)
+            applyCost(cityNode, conf.cost)
             conf.doCall(cityNode, callback)
         },
     } : {}
@@ -81,7 +96,7 @@ export const def_STEP_TEXT = (conf) => {
                 ...doObject,
                 text:  (cityNode) => { 
                     const costText = conf.cost ? costMDTable_Conf(conf)(cityNode) : ''
-                    const confText = typeof conf.text == 'string' ? conf.text : conf.text(cityNode)
+                    const confText = typeof conf.text === 'string' ? conf.text : conf.text(cityNode)
                     return  confText + costText
                 }, 
                 isValidated: (cityNode) => true,
@@ -136,6 +151,57 @@ export const cityNode_do_inventory_to_player = cityNode => {
 
 
 
+// ----------------
+// ----------------
+// ----------------
+// ----------------
+
+
+export const cityNode_do_Steps = (cityNode, steps, callback=() => {}) => {
+
+    // Function to handle errors
+    const handleError = () => {
+        callback();
+    };
+
+
+    // Function to handle each step
+    const handleStep = (step) => {
+        return new Promise((resolve) => {
+            step.doEnter(cityNode, resolve, callback);
+        });
+    };
+
+    // Function to start the process
+    const startProcess = async () => {
+
+        for (let i = 0; i < steps.length; i++) {
+            console.log("STEP ", i)
+            const step = steps[i];
+            
+            if (step.isValidated(cityNode)) {
+                await handleStep(step);
+            } else {
+                handleError();
+                return;
+            }
+        }
+        callback(); // All steps completed successfully
+    };
+
+    // ---------
+    // Start the process with the first step
+    startProcess();
+}
+
+
+
+
+
+
+
+// ----------------
+// ----------------
 // ----------------
 
 

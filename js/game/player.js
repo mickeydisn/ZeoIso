@@ -92,7 +92,22 @@ export class Player {
       this.GS.set("Player.inventory.update", 1) 
     }
 
+
+    inventoryCostRest(costItems) {
+      return costItems.map(cItem => {
+          return {
+              ...cItem,
+              count: cItem.count - (this._inventory[cItem.itemId] ? this._inventory[cItem.itemId].count : 0)
+          }
+      }).filter(item => item.count > 0)
+    }
   
+    inventoryCostRemove(cost) {
+      cost.forEach(cItem => {
+          this.inventoryRemove(cItem.itemId, cItem.count)
+      });
+    }
+
       // --------------------------------
 
     updateSettingKeboardType(keyType) {
