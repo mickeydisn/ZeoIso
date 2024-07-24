@@ -2,6 +2,7 @@ import { CustomBuilding } from "../customBuilding/mainCitySpawn.js";
 import { CitNodeCenter } from "./config/cityNodeCenter.js";
 import { CREATE_SUBSTEP_BUILD } from "./nodeSteps/stepBuildBestHouse.js";
 import { SUBSTEP_BestPathBuilder_Build } from "./nodeSteps/stepBuildBestPath.js";
+import { SUBSTEP_SummonEntity } from "./nodeSteps/stepSummonEntity.js";
 
 
 export class CityFactory {
@@ -70,13 +71,26 @@ export class CityFactory {
         }
     }
 
+    load(callback) {
+        this.reloadSteps(callback)
+    }
 
     reloadSteps(callback=() => {}) {
         const steps = [
+
+            {nodeHash:1, step:SUBSTEP_SummonEntity},           // 2
+
             {nodeHash:1, step:SUBSTEP_BestPathBuilder_Build},           // 2
             {nodeHash:1, step:CREATE_SUBSTEP_BUILD({buildType:'house3b', growLoopCount:10})},     // 3
             {nodeHash:1, step:CREATE_SUBSTEP_BUILD({buildType:'house4a', growLoopCount:10})},     // 4
+
             {nodeHash:1, step:CREATE_SUBSTEP_BUILD({buildType:'house6a', growLoopCount:10})},     // 5
+
+            {nodeHash:5, step:SUBSTEP_SummonEntity},           // 2
+            {nodeHash:5, step:SUBSTEP_SummonEntity},           // 2
+            {nodeHash:5, step:SUBSTEP_SummonEntity},           // 2
+            {nodeHash:5, step:SUBSTEP_SummonEntity},           // 2
+            {nodeHash:5, step:SUBSTEP_SummonEntity},           // 2
 
             {nodeHash:2, step:SUBSTEP_BestPathBuilder_Build},           // 6
             {nodeHash:2, step:SUBSTEP_BestPathBuilder_Build},           // 7
@@ -122,6 +136,7 @@ export class CityFactory {
         ]
         this.do_reloadSteps(steps, callback=() => {})
     }
+
 
     do_reloadSteps (steps, callback=() => {}) {
 

@@ -321,7 +321,7 @@ const STEP_INTRO_LOAD = def_STEP_TEXT({
 
     doCall:(cityNode, callback=_ => {}) => {
         cityNode.player.storyProgress.INTRO.LOAD = true
-        cityNode.cityFactory.reloadSteps(callback)
+        cityNode.cityFactory.load(callback)
     }
 
 })
