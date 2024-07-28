@@ -288,14 +288,7 @@ export class InterfaceIso {
         const alpha = this.tileAlpha(x, y)
         const color = new Color(metaTile.color[0], metaTile.color[1], metaTile.color[2], alpha)
 
-        /*
-        if (metaTile.isWater) {
-            currentlvl = metaTile.waterLvl
-        }
-        if (metaTile.isFrise) {
-            this.iso.add(Shape.Prism(Point(xx, yy, currentlvl), 1, 1, .1), this.c.selected);
-        }
-        */
+
 
         // Display the Floor ( Horizontal Floor tile)
         this.iso.add(Shape.SurfaceFlat(Point(xx, yy, currentlvl - height), 1, 1, height), color);
@@ -312,6 +305,21 @@ export class InterfaceIso {
                 this.iso.add(Shape.SurfaceSW(Point(xx, yy, currentlvl - diffLvl), 1, 1, diffLvl), color);
             }
         }
+
+        /*
+        if (metaTile.isWater) {
+            currentlvl = metaTile.waterLvl
+        }
+        */
+        /*
+        if (metaTile.wcBuild != null ) {
+            this.iso.add(Shape.Prism(Point(xx, yy, currentlvl), 1, 1, .2), this.c.blue);
+        }
+        if (metaTile.isFrise) {
+            this.iso.add(Shape.Prism(Point(xx, yy, currentlvl), 1, 1, .1), this.c.selected);
+        }
+        */
+
 
         // Get the list of items of the tile. 
         const entitiesItems = metaTile.entities.map( x => x.items)

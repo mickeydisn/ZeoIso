@@ -21,6 +21,9 @@ export class TilesActions {
 
 		// List to store pointer on Tiles containe temporaty display item (like for selection / preview .. )
 		this.listTilesWithTempItems = []
+
+		this.listTilesUpdated = new Set()
+
 		this.init();
 
 	}
@@ -86,6 +89,7 @@ export class TilesActions {
 	setBlocked(conf) {
 		const tile = this.fm.getTile(conf.x, conf.y);
 		tile.isBlock = conf.isBlock
+		this.listTilesUpdated.add(tile)
 	}
 	setBlockedSquare(conf) {
 		conf.size = conf.size ? conf.size : 1		
@@ -93,6 +97,7 @@ export class TilesActions {
 		box.tiles.forEach(row => {
 			row.forEach(cellTile => {
 				cellTile.isBlock = conf.isBlock;
+				this.listTilesUpdated.add(cellTile)
 			})
 		})
 	}
@@ -101,6 +106,7 @@ export class TilesActions {
 	setFrise(conf) {
 		const tile = this.fm.getTile(conf.x, conf.y);
 		tile.isFrise = conf.isFrise
+		this.listTilesUpdated.add(tile)
 	}
 
 	setFriseSquare(conf) {
@@ -109,6 +115,7 @@ export class TilesActions {
 		box.tiles.forEach(row => {
 			row.forEach(cellTile => {
 				cellTile.isFrise = conf.isFrise;
+				this.listTilesUpdated.add(cellTile)
 			})
 		})
 	}
@@ -120,6 +127,7 @@ export class TilesActions {
 		tile.wcBuild = null
 		tile.colorGen();
 		tile.clearItem();
+		this.listTilesUpdated.add(tile)
 	}
 	clearAll(conf) {
 		const tile = this.fm.getTile(conf.x, conf.y);
@@ -146,6 +154,7 @@ export class TilesActions {
 		const tile = this.fm.getTile(conf.x, conf.y);
 		const h = conf.h ? conf.h : 0
 		tile.items.push({t: 'Asset', key: conf.assetKey, lvl:h})
+		this.listTilesUpdated.add(tile)
 	}
 
 	itemForceKey(conf) {
@@ -154,10 +163,13 @@ export class TilesActions {
 		const h = conf.h ? conf.h : 0
 		tile.clearItem();
 		tile.items.push({t: 'Asset', key: conf.assetKey, lvl:h})
+		this.listTilesUpdated.add(tile)
 	}
 
 	clearItem(conf) {
-		this.fm.getTile(conf.x, conf.y).clearItem();
+		const tile = this.fm.getTile(conf.x, conf.y)
+		tile.clearItem();
+		this.listTilesUpdated.add(tile)
 	}
 
 	// Temporaty
@@ -190,6 +202,7 @@ export class TilesActions {
 		box.tiles.forEach(row => {
 			row.forEach(cellTile => {
 				cellTile.clearItem();
+				this.listTilesUpdated.add(cellTile)
 			})
 		})
 	}
@@ -202,6 +215,7 @@ export class TilesActions {
 
 	clearLvl(conf) {
 		this.fm.getTile(conf.x, conf.y).lvlGen();
+		this.listTilesUpdated.add(tile)
 	}
 
 	clearLvlSquare(conf) {
@@ -210,6 +224,7 @@ export class TilesActions {
 		box.tiles.forEach(row => {
 			row.forEach(cellTile => {
 				cellTile.lvlGen();
+				this.listTilesUpdated.add(cellTile)
 			})
 		})
 	}
@@ -219,11 +234,13 @@ export class TilesActions {
 	lvlSet(conf) {
 		const tile = this.fm.getTile(conf.x, conf.y);
 		tile.lvl = conf.lvl;
+		this.listTilesUpdated.add(tile)
 	}
 
 	lvlUp(conf) {
 		const tile = this.fm.getTile(conf.x, conf.y);
 		tile.lvl += conf.lvl;
+		this.listTilesUpdated.add(tile)
 	}
 
 	lvlUpSquare(conf) {
@@ -231,6 +248,7 @@ export class TilesActions {
 		box.tiles.forEach(row => {
 			row.forEach(cellTile => {
 				cellTile.lvl += conf.lvl
+				this.listTilesUpdated.add(cellTile)
 			})
 		})
 	}
@@ -241,6 +259,7 @@ export class TilesActions {
 		box.tiles.forEach(row => {
 			row.forEach(cellTile => {
 				cellTile.lvl = tile.lvl
+				this.listTilesUpdated.add(cellTile)
 			})
 		})
 	}
@@ -252,6 +271,7 @@ export class TilesActions {
 		box.tiles.forEach(row => {
 			row.forEach(cellTile => {
 				sumLvl += cellTile.lvl
+				this.listTilesUpdated.add(cellTile)
 			})
 		})
 		const avgLvl = sumLvl / (conf.size * conf.size)
@@ -292,7 +312,9 @@ export class TilesActions {
 	// ---------------------
 
 	clearColor(conf) {
-		this.fm.getTile(conf.x, conf.y).colorGen();
+		const tile = this.fm.getTile(conf.x, conf.y)
+		tile.colorGen();
+		this.listTilesUpdated.add(tile)
 	}
 
 	clearColorSquare(conf) {
@@ -301,6 +323,7 @@ export class TilesActions {
 		box.tiles.forEach(row => {
 			row.forEach(cellTile => {
 				cellTile.colorGen();
+				this.listTilesUpdated.add(cellTile)
 			})
 		})
 	}
@@ -314,6 +337,7 @@ export class TilesActions {
 		const tile = this.fm.getTile(conf.x, conf.y);
 
 		tile.color = color
+		this.listTilesUpdated.add(tile)
 	}
 
 
@@ -327,6 +351,7 @@ export class TilesActions {
 		box.tiles.forEach(row => {
 			row.forEach(cellTile => {
 				cellTile.color = color
+				this.listTilesUpdated.add(cellTile)
 			})
 		})
 
@@ -335,6 +360,7 @@ export class TilesActions {
 	addBoxMD(conf) {
 		const tile = this.fm.getTile(conf.x, conf.y);
 		tile.items.push({t:'Box', ...conf})
+		this.listTilesUpdated.add(tile)
 	}
 
 
@@ -401,6 +427,29 @@ export class TilesActions {
 		const tile = this.fm.getTile(conf.x, conf.y);
 
 	}
+
+
+	/* ------------------------- */
+	/* ------------------------- */
+
+	async save() {
+		if (this.listTilesUpdated.size) {
+
+			console.log('TileAction.save' , this.listTilesUpdated.size)
+
+			const arrayTile = [...this.listTilesUpdated].map(tile => tile.toJsonSave());
+
+			await window.db.MapTiles.bulkPut(arrayTile).then(function(lastKey) {
+				// console.log("Put OK : " + lastKey);
+			}).catch(Dexie.BulkError, function (e) {
+				console.error ("DB Put Not OK, ");
+			});
+
+			this.listTilesUpdated.clear();
+	
+		}
+	}
+
 
 }
 

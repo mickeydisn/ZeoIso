@@ -41,6 +41,10 @@ export class World {
 
 
         this.factoryMap = new FactoryMap(this)
+
+        // Make the gameMap Globale . 
+        window.gameMap = this.factoryMap;
+
         this.tilesMatrix = new TilesMatrix(this, SIZE20)
 
         this.tilesActions = new TilesActions(this)

@@ -49,10 +49,21 @@ export class Main {
         this.assetLoader = new AssetLoaderOpti(_ => this.start2())
     }
     start2() {
+        // Start LocalDB 
+        window.db = new Dexie("MapDB");
+		window.db.version(1).stores({
+			MapChunks: `id, [cx+cy]`,
+			MapTiles: `id, chunkId, [cx+cy], [x+y]`,
+		  });
+
+
+
         this.globalState = new GlabalState()
 
         this.world = new World(this.assetLoader, this.globalState);
 
+        // Define the world as gloabal
+        window.world = this.world
 
         // World Main map 
         {
@@ -168,6 +179,9 @@ export class Main {
 
     loop() {
         this.interfaceIso.drawUpdate();
+
+        
+
         // this.interfaceIso2.drawUpdate();
         // this.widjetMiniMap.drawUpdate();
 
@@ -175,6 +189,11 @@ export class Main {
 
     // Fonction principale de la boucle de jeu
     startGameLoop() {
+
+        // pef Time Save
+        let lastSaveTime = performance.now();
+        const savePeriod = 1 * 1000 // 1 sec / 
+
 
         // Définir le FPS fixe
         const fixedFPS = 20;
@@ -188,16 +207,23 @@ export class Main {
         const bindThis = this
         const gameLoop = function () {
             const currentTime = performance.now();
-            const elapsedTime = currentTime - lastTime;
-            lastTime = currentTime;
-            frameTime += elapsedTime
             bindThis.loop();
+
+            if (currentTime - lastSaveTime > savePeriod) {
+                (async () => { bindThis.world.tilesActions.save()})();
+                lastSaveTime = currentTime
+            } ;
+
+            // Compute Farame 
             frameCount++;
             if (frameCount >= 100) {
+                const elapsedTime = currentTime - lastTime;
+                lastTime = currentTime;
+                frameTime += elapsedTime
                 frameTime /= frameCount;
+
                 const realFPS = (1000 / frameTime).toFixed(2);
                 bindThis.divFPS.text("FPS:" + realFPS)
-
                 frameCount = 0;
                 frameTime = 0;
             }
@@ -236,14 +262,14 @@ export class Main {
         // -----------------------------------
         var keyPressed = {};
         d3.select('body')  
-        .on('keypress', function() {
+        .on('keypress', function(event, d) {
             // BindInterfaceIso.keyControle(d3.event.key);
         })
-        .on('keydown', function() {
-            keyPressed[d3.event.key] = true;
+        .on('keydown', function(event, d) {
+            keyPressed[event.key] = true;
         })
-        .on('keyup', function() {
-            keyPressed[d3.event.key] = false;
+        .on('keyup', function(event, d) {
+            keyPressed[event.key] = false;
         });
 
         // add pressed key loop. 

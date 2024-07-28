@@ -107,9 +107,10 @@ export class GenTile extends RawTile {
 
 
 export class Tile extends GenTile {
-	constructor(world, x, y) {
+	constructor(world, x, y, cx, cy) {
 		super(world, x, y);
-
+		this.cx = cx;
+		this.cy = cy;
 		/*
 		this._lvl = 0;
 		this._waterLvl = 0;
@@ -177,7 +178,41 @@ export class Tile extends GenTile {
 		}
 	}
 
+	toJsonSave() {
+		const jsonData = {
+			id: `${this.x}_${this.y}`,
+			x: this.x,
+			y: this.y,
+			chunkId: `${this.cx}_${this.cy}`,
+			cx: this.cx,
+			cy: this.cy,
+			lvl: this._lvl,
+			isBlock: this.isBlock,
+			isFrise: this.isFrise,
+			// biome: {name: this.rawBiome.name, lvlType: this.rawBiome.lvlType},
+			// buildTile: this.wcBuild ? this.wcBuild.toJson() : null,
+			// cityNode: this.cityNode ? this.cityNode.toJson() : null,
+			
+			// FLvl: this.flvl,
+			// waterLvl: this._waterLvl,
+			// entity: this.entities.length,
+
+			color : [...this.color],
+			// genColor: this.genColor,
+		}
+		jsonData.items = this.items ? this.items : []
+
+		return jsonData	
+	}
 	
+	fromJsonSave(data) {
+		this.updateColor(data.color)
+		this._lvl = data.lvl
+		this.isBlock = data.isBlock
+		this.isFrise = data.isFrise
+
+		this.items = data.items ? data.items : []
+	}
 
 	toJson() {
 		return {

@@ -20,7 +20,7 @@ export class AbstractWcBuildConf {
         this.faceLinks = []
         this.listFaceKey = []
         this.preInit();
-        this.stepTime = conf.stepTime ? conf.stepTime : 0
+        this.stepTime = conf.stepTime ? conf.stepTime : 10
         // this.init();        
     }
 
