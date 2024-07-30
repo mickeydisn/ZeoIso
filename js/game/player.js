@@ -45,13 +45,15 @@ export class Player {
         }
 
         this._inventory = {
-          MEMORY_GRAVE: {itemId:'MEMORY_GRAVE', count:10}
+          RS_BIOME: {slot:0, itemId:'RS_BIOME', count:10},
+          RS_TEMP: {slot:2, itemId:'RS_TEMP', count:10},
+          RS_ENV: {slot:3, itemId:'RS_ENV', count:10},
         }
     }
 
     // ----- 
 
-      get inventory() {
+    get inventory() {
         return Object.values(this._inventory)
     }
 
@@ -59,16 +61,28 @@ export class Player {
         return this._inventory
     } 
 
+    get inventorySlot() {
+       const slotFilled = Object.fromEntries(this.inventory.map(x => [x.slot , x]))
+       const slots =  [...Array(20).keys()].map(idx => [idx, slotFilled[idx]])
+       return slots
+    }
+
     inventoryAdd(itemId, count) {
         if (!itemId) return
         const icount = count ? count : 1
 
         if (this._inventory[itemId]) {
             this._inventory[itemId].count += icount
-        } else {
-            this._inventory[itemId] = {itemId:itemId, count:icount}
+            this.GS.set("Player.inventory.update", 1) 
+          } else {
+            // find empty slot : 
+            const filedSlotIndex = this._inventory.map(x => x.slot).sort((a , b) => a - b)
+            const empySlotIndex = [...Array(20).keys()].filter(idx => ! filedSlotIndex.include(idx))
+            if (empySlotIndex.length > 0) {
+              this._inventory[itemId] = {slot:empySlotIndex[0], itemId:itemId, count:icount}
+              this.GS.set("Player.inventory.update", 1) 
+            }
         }
-        this.GS.set("Player.inventory.update", 1) 
     }
     inventoryHave(itemId, count) {
         return itemId
@@ -108,7 +122,10 @@ export class Player {
       });
     }
 
-      // --------------------------------
+    // --------------------------------
+    // --------------------------------
+    // --------------------------------
+    // --------------------------------
 
     updateSettingKeboardType(keyType) {
       this.keyboardAzert = keyType.localeCompare("azerty") == 0 

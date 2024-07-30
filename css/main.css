@@ -435,9 +435,52 @@ canvas#canvasMap {
   padding: 0px;
   /* width: 4px;
   height: 2.6rem; 
-
   margin: 0px; */
 }
+
+.buttMenuBox#playerActionAct .inventoryMenu {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(5, auto);
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #FFF;
+}
+
+.buttMenuBox#playerActionAct .inventoryIcon {
+  padding: 0px;
+  margin: 2px;
+  width: 45px;
+  height: 45px;
+  border: 2px solid #000;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttMenuBox#playerActionAct .inventoryIcon > .icon {
+  padding: 0px;
+  font-size: 1.2rem;
+}
+.buttMenuBox#playerActionAct .inventoryIcon > .name {
+  padding: 0px;
+  position: absolute;
+  display: none;
+}
+.buttMenuBox#playerActionAct .inventoryIcon > .count {
+  padding: 0px;
+  position: absolute;
+  bottom: 0px;
+  right: 2px;
+  font-size: .8rem;
+  font-family: monospace;
+  font-weight: bold;
+  text-shadow: 0 0 10px #FFF;
+ 
+}
+
 
 /* --- */
 

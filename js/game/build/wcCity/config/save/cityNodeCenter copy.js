@@ -15,9 +15,8 @@ const STEP_INTRO_START = def_STEP_TEXT({
 > - You've found an old Grave. 
     `, 
 
-    isValidated:(cityNode) => true,
-        //cityNode.player.storyProgress.INTRO
-        // && !cityNode.player.storyProgress.INTRO.IS_START,
+    isValidated:(cityNode) => cityNode.player.storyProgress.INTRO
+        && !cityNode.player.storyProgress.INTRO.IS_START,
 
     doText: "Inspect the grave...",
     doClick:(cityNode) => {
@@ -34,10 +33,9 @@ const STEP_INTRO_SUMMON = def_STEP_TEXT({
 > - When a ghost wakes up, He starts wandering!
 `, 
 
-    isValidated:(cityNode) => true, 
-        // cityNode.player.storyProgress.INTRO.IS_START
-        // && !cityNode.player.storyProgress.INTRO.IS_SUMMON
-        // && cityNode.entities.length == 0,
+    isValidated:(cityNode) => cityNode.player.storyProgress.INTRO.IS_START
+        && !cityNode.player.storyProgress.INTRO.IS_SUMMON
+        && cityNode.entities.length == 0,
 
     doText: "Raise the ghost!",
     doClick:(cityNode) => {
@@ -54,10 +52,9 @@ const STEP_INTRO_ENTITIE_CALL_BACK = def_STEP_TEXT({
  > - This action stop all ghost wandering
  > - When ghosts is on the grave, you can give him some order.
     `,
-    isValidated:(cityNode) => true,
-        // cityNode.player.storyProgress.INTRO.IS_SUMMON
-        // && cityNode.entities.length > 0
-        // && !cityNode.entitiesIsAtNode,
+    isValidated:(cityNode) => cityNode.player.storyProgress.INTRO.IS_SUMMON
+        && cityNode.entities.length > 0
+        && !cityNode.entitiesIsAtNode,
 
     doText: "Brings back the ghost to the grave !",
     doClick:(cityNode) => {
@@ -85,10 +82,9 @@ const STEP_INTRO_ENTITIE_FRIST_GRAVE_LOOP = def_STEP_TEXT({
 > - The ghost store 10 MEMORY_GRAVE   
     `,
 
-    isValidated:(cityNode) => true,
-        // cityNode.player.storyProgress.INTRO.IS_SUMMON
-        // && !cityNode.player.storyProgress.INTRO.FRIST_LOOP
-        // && cityNode.entitiesIsAtNode,
+    isValidated:(cityNode) => cityNode.player.storyProgress.INTRO.IS_SUMMON
+        && !cityNode.player.storyProgress.INTRO.FRIST_LOOP
+        && cityNode.entitiesIsAtNode,
 
     doText: "Start a MEMORY_GRAVE Loop !",
     doClick:(cityNode) => {
@@ -121,10 +117,9 @@ const STEP_ENTITIE_GRAVE_LOOP = def_STEP_TEXT({
 > - The ghost begins to wander again
 `,
 
-    isValidated:(cityNode) => true,
-        // cityNode.player.storyProgress.INTRO.IS_SUMMON
-        // && cityNode.player.storyProgress.INTRO.FRIST_LOOP
-        // && cityNode.entitiesIsAtNode,
+    isValidated:(cityNode) => cityNode.player.storyProgress.INTRO.IS_SUMMON
+        && cityNode.player.storyProgress.INTRO.FRIST_LOOP
+        && cityNode.entitiesIsAtNode,
 
     doText: "Start a MEMORY_GRAVE Wandering !",
     doClick:(cityNode) => {
@@ -160,9 +155,8 @@ const STEP_INTRO_NODE = def_STEP_TEXT({
 > - _The player inventory is on the left of screen_
     `, 
     doText: "ok",
-    isValidated:(cityNode) => true,
-        // cityNode.player.storyProgress.INTRO.FRIST_LOOP_IS_STARTED
-        // && !cityNode.player.storyProgress.INTRO.NODE,
+    isValidated:(cityNode) => cityNode.player.storyProgress.INTRO.FRIST_LOOP_IS_STARTED
+        && !cityNode.player.storyProgress.INTRO.NODE,
 
     doClick:(cityNode) => {
         cityNode.player.storyProgress.INTRO.NODE = true
@@ -172,7 +166,7 @@ const STEP_INTRO_NODE = def_STEP_TEXT({
 
 
 const STEP_INTRO_FIRST_ROAD = def_STEP_TEXT({
-    // cost: [{itemId:'MEMORY_GRAVE', count:10}],
+    cost: [{itemId:'MEMORY_GRAVE', count:10}],
 
     title: " => First Road",
     text:  SUBSTEP_TEXT.TEXT_FIRST_ROAD +  `
@@ -181,10 +175,9 @@ const STEP_INTRO_FIRST_ROAD = def_STEP_TEXT({
 > - Soon you'll discover a system for building more of them.  
     `, 
     
-    isValidated:(cityNode) => true,
-        // cityNode.player.storyProgress.INTRO.NODE
-        // && !cityNode.player.storyProgress.INTRO.FIRST_ROAD 
-        // && cityNode.entitiesIsAtNode,
+    isValidated:(cityNode) => cityNode.player.storyProgress.INTRO.NODE
+        && !cityNode.player.storyProgress.INTRO.FIRST_ROAD 
+        && cityNode.entitiesIsAtNode,
 
     doText: "Let's Do it !!",
     doCall:(cityNode, callback=_ => {}) => {
@@ -210,11 +203,9 @@ export const STEP_INTRO_FIRST_HOUSE = def_STEP_TEXT({
 > - Later, you can learn more about ghosts by visiting their homes. 
     `, 
 
-    isValidated:(cityNode) => 
-        true,
-        // cityNode.player.storyProgress.INTRO.FIRST_ROAD
-        // && !cityNode.player.storyProgress.INTRO.FIRST_HOUSE 
-        // && cityNode.entitiesIsAtNode,
+    isValidated:(cityNode) => cityNode.player.storyProgress.INTRO.FIRST_ROAD
+        && !cityNode.player.storyProgress.INTRO.FIRST_HOUSE 
+        && cityNode.entitiesIsAtNode,
         
     
     doText: "Let's Do it",
@@ -248,10 +239,9 @@ export const STEP_INTRO_FIRST_LAB = def_STEP_TEXT({
 `, 
     doText: "Let's Do it !",
 
-    isValidated:(cityNode) => true,
-        // cityNode.player.storyProgress.INTRO.FIRST_HOUSE 
-        // && !cityNode.player.storyProgress.INTRO.FIRST_LAB
-        // && cityNode.entitiesIsAtNode,
+    isValidated:(cityNode) => cityNode.player.storyProgress.INTRO.FIRST_HOUSE 
+        && !cityNode.player.storyProgress.INTRO.FIRST_LAB
+        && cityNode.entitiesIsAtNode,
 
     doText: "Let's Do it",
     doCall:(cityNode, callback=_ => {}) => {
@@ -274,10 +264,9 @@ export const STEP_INTRO_FIRST_GRAVE = def_STEP_TEXT({
 > The more ghosts you have, the more memories you may have about the city. 
     `, 
 
-    isValidated:(cityNode) => true,
-        // cityNode.player.storyProgress.INTRO.FIRST_LAB 
-        // && !cityNode.player.storyProgress.INTRO.FIRST_GRAVE
-        // && cityNode.entitiesIsAtNode,
+    isValidated:(cityNode) => cityNode.player.storyProgress.INTRO.FIRST_LAB 
+        && !cityNode.player.storyProgress.INTRO.FIRST_GRAVE
+        && cityNode.entitiesIsAtNode,
 
     doText: "Let's Do it",
     doCall:(cityNode, callback=_ => {}) => {
@@ -311,9 +300,8 @@ const STEP_INTRO_SPELL = def_STEP_TEXT({
 > - If a spell is on the inventory , and the spell can be use on the node, the action appear on the menu. 
     `, 
     doText: "ok",
-    isValidated:(cityNode) => true,
-        // cityNode.player.storyProgress.INTRO.FIRST_GRAVE
-        // && !cityNode.player.storyProgress.INTRO.SPELL,
+    isValidated:(cityNode) => cityNode.player.storyProgress.INTRO.FIRST_GRAVE
+        && !cityNode.player.storyProgress.INTRO.SPELL,
 
     doClick:(cityNode) => {
         cityNode.player.storyProgress.INTRO.SPELL = true
@@ -328,10 +316,8 @@ const STEP_INTRO_LOAD = def_STEP_TEXT({
     text: `
     `, 
 
-    isValidated:(cityNode) => true,
-        // !cityNode.player.storyProgress.INTRO.LOAD,
-    
-        doText: "LOAD",
+    isValidated:(cityNode) => !cityNode.player.storyProgress.INTRO.LOAD,
+    doText: "LOAD",
 
     doCall:(cityNode, callback=_ => {}) => {
         cityNode.player.storyProgress.INTRO.LOAD = true
