@@ -10,12 +10,12 @@ const SUBSTEP_WAITING = {...abstractStep,
 
 const valideCost = (cityNode, cost) => {
     console.log('== valideCost', cost)
-    const costRestOnNode =  cityNode.inventoryCostRest(cost)
+    const costRestOnNode =  cityNode.inventory.costTest(cost)
     console.log("valideCost#A ", costRestOnNode)
     if (costRestOnNode.length === 0) {
         return true
     }
-    const costRestOnPlayer =  cityNode.player.inventoryCostRest(costRestOnNode)
+    const costRestOnPlayer =  cityNode.player.inventory.costTest(costRestOnNode)
     console.log("valideCost#B", costRestOnPlayer)
     if (costRestOnPlayer.length === 0) {
         return true
@@ -26,11 +26,11 @@ const valideCost = (cityNode, cost) => {
 const applyCost = (cityNode, cost) => {
     if (!cost) return
 
-    const costRestOnNode =  cityNode.inventoryCostRest(cost)
-    cityNode.inventoryCostRemove(cost)
+    const costRestOnNode =  cityNode.inventory.costTest(cost)
+    cityNode.inventory.costRemove(cost)
 
     if (costRestOnNode.length != 0) {
-        cityNode.player.inventoryCostRemove(cost)
+        cityNode.player.inventory.costRemove(cost)
     }
 } 
 
@@ -137,16 +137,16 @@ ${row}
 
 export const cityNode_do_inventory_from_player = cityNode => {
     cityNode.player.inventory.forEach(slot => {
-        cityNode.inventoryAdd(slot.itemId, slot.count)
+        cityNode.inventory.addItem(slot.itemId, slot.count)
     });
-    cityNode.player.inventoryEmpty()
+    cityNode.player.inventory.removeAll()
 }
 
 export const cityNode_do_inventory_to_player = cityNode => {
     cityNode.inventory.forEach(slot => {
-        cityNode.player.inventoryAdd(slot.itemId, slot.count)
+        cityNode.player.inventory.addItem(slot.itemId, slot.count)
     });
-    cityNode.inventoryEmpty()
+    cityNode.inventory.removeAll()
 }
 
 

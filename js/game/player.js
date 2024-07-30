@@ -1,3 +1,4 @@
+import { KmInventory } from "./industry/kmFacoty.js";
 
 
 export class Player {
@@ -44,14 +45,22 @@ export class Player {
           INTRO: { START:true, END:false },
         }
 
+        this.inventory = new KmInventory()
+        this.inventory.addItem("rsMemoryNote", 10)
+        this.inventory.addItem("rsBiome", 10)
+        this.inventory.addItem("rsHydro", 5)
+        this.inventory.addItem("rsTemp", 10)
+
+        /*
         this._inventory = {
           RS_BIOME: {slot:0, itemId:'RS_BIOME', count:10},
           RS_TEMP: {slot:2, itemId:'RS_TEMP', count:10},
           RS_ENV: {slot:3, itemId:'RS_ENV', count:10},
         }
+        */
     }
 
-    // ----- 
+    /*/ ----- 
 
     get inventory() {
         return Object.values(this._inventory)
@@ -121,7 +130,7 @@ export class Player {
           this.inventoryRemove(cItem.itemId, cItem.count)
       });
     }
-
+    */
     // --------------------------------
     // --------------------------------
     // --------------------------------

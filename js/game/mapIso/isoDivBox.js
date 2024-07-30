@@ -1,4 +1,5 @@
 import { cityNode_do_inventory_from_player, cityNode_do_inventory_to_player, cityNode_text_inventory, cityNode_text_player_inventory } from "../build/wcCity/config/defaultCity.js"
+import { BoxInventory } from "../menu/Box/boxInventory.js"
 import { TILE_HEIGHT } from "./interfaceIso.js"
 
 
@@ -137,8 +138,8 @@ export class IsoDivBoxMarkDown extends IsoDivBox {
 export class IsoDivCityBox extends IsoDivBox {
     constructor(canavBox, tile, boxConf) {
         super(canavBox, tile, boxConf)
-
-        this.tile.cityNode.setIsoDivBox(this)
+        this.cityNode = this.tile.cityNode;
+        this.cityNode.setIsoDivBox(this)
 
         this.currentStepAction = _ => {return true}
 
@@ -184,7 +185,7 @@ export class IsoDivCityBox extends IsoDivBox {
                 }
                 */
                 
-                this.currentStep = this.tile.cityNode.homeStep();
+                this.currentStep = this.cityNode.homeStep();
                 this.updateContent()
             })
             this.titleDiv = titleDiv.append('div') 
@@ -195,6 +196,13 @@ export class IsoDivCityBox extends IsoDivBox {
         // MD
         this.initMDContent()
 
+        {
+            this.inventoryListDiv = this.contentDiv.append('div').classed('inventoryNode', true)
+            this.inventoryListDiv.style('display', 'flex');
+            this.inventoryBox = new BoxInventory(this.inventoryListDiv, this.cityNode.inventory);
+        }
+
+
         // StepList
         {
             this.stepListDiv = this.contentDiv.append('div').classed('stepList', true)
@@ -204,10 +212,6 @@ export class IsoDivCityBox extends IsoDivBox {
         {
             this.entityListDiv = this.contentDiv.append('div').classed('stepList', true)
             this.entityListDiv.style('display', 'none')
-        }
-        {
-            this.inventoryListDiv = this.contentDiv.append('div').classed('inventoryNode', true)
-            this.inventoryListDiv.style('display', 'none')
         }
         {
 
@@ -248,14 +252,14 @@ export class IsoDivCityBox extends IsoDivBox {
     */
     updateStepListDiv() {
         this.stepListDiv.selectAll('div').remove()
-        this.tile.cityNode.STEPS.forEach((step, idx) => {
+        this.cityNode.STEPS.forEach((step, idx) => {
             if (idx == 0) return ;
-            if ((typeof step.isValidated !== 'boolean' &&  step.isValidated(this.tile.cityNode)) 
+            if ((typeof step.isValidated !== 'boolean' &&  step.isValidated(this.cityNode)) 
                 || (typeof step.isValidated === 'boolean'  && step.isValidated == true)) {
 
                 this.stepListDiv.append('div').text("● " + step.title).on('click', _ => {
-                    this.tile.cityNode.currentStepIdx = idx
-                    this.currentStep = this.tile.cityNode.currentStep;
+                    this.cityNode.currentStepIdx = idx
+                    this.currentStep = this.cityNode.currentStep;
                     this.updateContent()
                 })
             }
@@ -266,10 +270,10 @@ export class IsoDivCityBox extends IsoDivBox {
 
     updateInventoryNodeDiv() {
 
-        const cityNode = this.tile.cityNode
+        this.inventoryBox.update()
+        // this.inventoryListDiv.selectAll('div').remove("div")
 
-        this.inventoryListDiv.selectAll('div').remove("div")
-        
+        /*
         const playerInventory = cityNode_text_player_inventory(cityNode)
         
         const nodeInventory =  cityNode_text_inventory(cityNode)
@@ -293,6 +297,8 @@ export class IsoDivCityBox extends IsoDivBox {
             this.currentStep = this.tile.cityNode.homeStep();
             this.updateContent()
         })
+        */
+
         /*
          const buttDrop = buttsDiv.append('div').text('⬆︎Drop⬆︎')
         
@@ -347,7 +353,7 @@ export class IsoDivCityBox extends IsoDivBox {
         this.MDDiv.style('display', 'none') 
         this.stepListDiv.style('display', 'none') 
         this.entityListDiv.style('display', 'none')
-        this.inventoryListDiv.style('display', 'none')
+        // this.inventoryListDiv.style('display', 'none')
 
 
         this.doParamDiv.style('display', 'none')

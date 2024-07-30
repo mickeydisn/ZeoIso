@@ -1,5 +1,6 @@
 
 
+import { BoxInventory } from "./Box/boxInventory.js";
 import { WidjetActions } from "./widjetAction.js";
 
 export class WidjetActionsPlayerAct extends WidjetActions {
@@ -31,40 +32,76 @@ export class WidjetActionsPlayerAct extends WidjetActions {
     drawplayerActionList() {
         this.contentBox.selectAll('div').remove()
 
-        // --------------------------------
-        /* {
-            this.contentBox.append('div').classed('row', true).classed('title', true)
-                .text("= Inventory =")
-        } */
-
-        const tableBox = this.contentBox.append('div')
-            .classed('row', true)
-        this.MDDiv = tableBox.append('div').classed('inventoryMenu', true)
+        this.inventoryBox = new BoxInventory(this.contentBox, world.player.inventory, _ => {
+            this.GS.set("Player.inventory.update", 1) 
+        })
 
 
     }
 
     drawUpdate() {
-        const player = this.world.player
-        const inventoryMD = ''
-            + player.inventorySlot.map(([slot, value]) => {
-                if (value) {
-                    return `
-                    <div class='inventoryIcon'>
-                        <span class="icon"> 😎 </span> 
-                        <span class="name"> ${value.itemId}</span>
-                        <span class="count">${value.count}</span>
-                    </div>` 
-                } else {
-                    return `
-                    <div class='inventoryIcon'>
-                    </div>` 
+        this.inventoryBox.update()
+        /*
+        this.MDDiv.selectAll('div').remove();
+
+        const player = this.world.player;
+        let draggedElement = null;
+
+        player.inventory.slots.forEach((value, idx) => {
+            const boxIcon = this.MDDiv
+                .append('div')
+                .classed('inventoryIcon', true)
+            const boxNode = boxIcon.node()
+
+            boxNode.inventory = player.inventory;
+            boxNode.slot = idx;
+
+            if (value) {
+                boxNode.draggable = true;
+                boxIcon.html(`
+                    <span class="icon"> 😎 </span> 
+                    <span class="name"> ${value.itemId}</span>
+                    <span class="count">${value.count}</span>
+                `)
+                
+                boxNode.onDragFunc = target => {
+                    if (boxNode.inventory == boxNode.inventory) {
+                        boxNode.inventory.slotSwap(target.slot, draggedElement.slot)
+                        console.log(target.slot, draggedElement.slot)
+                    }
                 }
-            }).join('\n')
+
+                boxNode.addEventListener('dragstart', (e) => {
+                    console.log('dragStart', e)
+                    draggedElement = e.target;
+                    setTimeout(() => e.target.classList.add('dragging'), 0);
+                })
+            } 
+            boxNode.addEventListener('dragend', (e) => {
+                console.log('dragEnd', e)
+                e.target.classList.remove('dragging');
+            });
+            boxNode.addEventListener('dragover', (e) => {
+                e.preventDefault();
+            });
+            boxNode.addEventListener('drop', (e) => {
+                if (e.target.classList.contains('inventoryIcon')) {
+                    console.log('DROP', e)
+                    e.preventDefault();
+                    if (draggedElement && draggedElement !== e.target) {
+                        draggedElement.onDragFunc(e.target);
+                      // const tempEmoji = e.target.textContent;
+                      // e.target.textContent = draggedElement.textContent;
+                      // draggedElement.textContent = tempEmoji;
+                    }
+        
+                }
+            });
+    
+        })
+        */
             
         console.log('== Update_Inventory')
-
-        this.MDDiv.html(inventoryMD)
 
     }
 

@@ -1,3 +1,4 @@
+import { KmInventory } from "../../industry/kmFacoty.js";
 import { CityNode } from "./cityNode.js";
 
 
@@ -42,6 +43,11 @@ export class CityTileNode extends CityNode {
         this.type = conf.type
         this.conf = conf
 
+        // Stor the entity linkend to the CityNode ( ex: Host of house .)
+        this.entities = []
+        this.inventory = new KmInventory(8)
+        this.inventory.addItem('rsTime', 1)
+
         this.cityFactory = cityFactory
         this.cityFactory.appendNode(this)
 
@@ -52,9 +58,8 @@ export class CityTileNode extends CityNode {
         Object.assign(this, CITY_NODE_DEFAULT_CONF)
         Object.assign(this, conf)
 
-        // Stor the entity linkend to the CityNode ( ex: Host of house .)
-        this.entities = []
-        this._inventory = {}
+
+        // this._inventory = {}
 
     }
 
@@ -79,62 +84,6 @@ export class CityTileNode extends CityNode {
         return this.entities.length > 0 && this.entities.length == this.entitiesAtNode.length
     }
 
-    // ----- 
-
-    get inventory() {
-        return Object.values(this._inventory)
-    }
-
-    get inventoryIndex() {
-        return this._inventory
-    } 
-
-    inventoryAdd(itemId, count) {
-        if (!itemId) return
-        const icount = count ? count : 1
-
-        if (this._inventory[itemId]) {
-            this._inventory[itemId].count += icount
-        } else {
-            this._inventory[itemId] = {itemId:itemId, count:icount}
-        }
-    }
-
-    inventoryHave(itemId, count) {
-        return itemId
-            && this._inventory[itemId]
-            && this._inventory[itemId].count >= count
-    }
-    
-    inventoryRemove(itemId, count) {
-        if (!itemId) return
-        if (!this._inventory[itemId]) return 
-
-        const icount = count ? count : 0
-        this._inventory[itemId].count -= icount
-        if (this._inventory[itemId].count <= 0) {
-            delete this._inventory[itemId]
-        }
-    }
-    inventoryEmpty() {
-        this._inventory = {}
-    }
-
-    inventoryCostRest(costItems) {        
-        return costItems.map(cItem => {
-            return {
-                ...cItem,
-                count: cItem.count - (this._inventory[cItem.itemId] ? this._inventory[cItem.itemId].count : 0)
-            }
-        }).filter(item => item.count > 0)
-    }
-
-    inventoryCostRemove(costItems) {
-        costItems.forEach(cItem => {
-            this.inventoryRemove(cItem.itemId, cItem.count)
-        });
-    }
-
     // --------------------------------
 
     set currentStepIdx(stepIndex) {
@@ -144,7 +93,6 @@ export class CityTileNode extends CityNode {
     get currentStepIdx() {
         return this._currentStepIdx
     }
-
 
     get currentStep() {
         const curentStep = this.STEPS[this._currentStepIdx]
@@ -205,8 +153,6 @@ export class CityTileNode extends CityNode {
 
         }
     }
-
-
 
 
     jsonSave() {

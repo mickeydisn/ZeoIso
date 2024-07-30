@@ -282,8 +282,6 @@ function isNumber(value) {
         return Object.values(this.globalConsumptionRateModifiers).reduce((a, b) => a + b, 0);
       },
   
-  
-  
       createNewParcel(cluster = 0) {
         const parcel = new Parcel(`parcel-${this.parcelList.length + 1}`, this.maxBuildingsPerParcel);
         parcel.cluster = cluster;

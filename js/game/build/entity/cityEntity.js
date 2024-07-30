@@ -263,7 +263,7 @@ const behaviorMove_inventoryAdd = {
             && entity.mainGoal.localeCompare('inventoryAdd') == 0,
     do: (entity, param={},) => {
         const cityLinkId = entity.sData.cityLink 
-        entity.cityLink[cityLinkId].inventoryAdd(entity.sData.itemId, entity.sData.count)
+        entity.cityLink[cityLinkId].inventory.addItem(entity.sData.itemId, entity.sData.count)
         entity.clearGoal()
     }
 }

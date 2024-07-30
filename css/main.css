@@ -438,38 +438,35 @@ canvas#canvasMap {
   margin: 0px; */
 }
 
-.buttMenuBox#playerActionAct .inventoryMenu {
-  margin: 1rem;
+.inventoryMenu {
+  margin: 1rem 0px;
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-template-rows: repeat(5, auto);
   justify-content: center;
   align-items: center;
-  border: 2px solid #FFF;
 }
 
-.buttMenuBox#playerActionAct .inventoryIcon {
+.inventoryIcon {
   padding: 0px;
   margin: 2px;
-  width: 45px;
-  height: 45px;
+  width: 60px;
+  height: 60px;
   border: 2px solid #000;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: move;
+  user-select: none;
 }
 
-.buttMenuBox#playerActionAct .inventoryIcon > .icon {
+ .inventoryIcon > .icon {
   padding: 0px;
   font-size: 1.2rem;
 }
-.buttMenuBox#playerActionAct .inventoryIcon > .name {
-  padding: 0px;
-  position: absolute;
-  display: none;
-}
-.buttMenuBox#playerActionAct .inventoryIcon > .count {
+
+ .inventoryIcon > .count {
   padding: 0px;
   position: absolute;
   bottom: 0px;
