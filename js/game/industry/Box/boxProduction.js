@@ -8,6 +8,7 @@ export class BoxProduction {
     constructor(mainDiv, production, onChange=_ => {}) {
         this.contentBox = mainDiv
         this._production = production
+        this.showAllBuild = false
         this._onChange = onChange
         this.init()
         this.update()
@@ -31,12 +32,21 @@ export class BoxProduction {
             .append('div')
             .classed('productioHead', true)
         boxHead.html(`
-            <span class="empty"></span>
-            <span class="buyMax">max ${this._production.buildings.map(x => x.count).reduce((acc, value) => acc + value, 0)} / ${this._production.buildingMax}</span>
+            <span class="showall"><input type="checkbox" id="showall"></input> show all</span>
+            <span class="buyMax">max ${this._production.buildingCount} / ${this._production.buildingMax}</span>
         `)
 
+        boxHead.selectAll('#showall')
+            .property('checked', this.showAllBuild)
+            .on('change', e => {
+                this.showAllBuild = ! this.showAllBuild;
+                this.update()
+            })
 
-        this._production.buildings.forEach((b, idx) => {
+        const listBuild = this.showAllBuild ?  this._production.buildingPossible() : this._production.buildings
+        console.log(listBuild)
+
+        listBuild.forEach((b, idx) => {
             const boxIcon = this.MDDiv
                 .append('div')
                 .classed('productionIcon', true)
@@ -46,10 +56,21 @@ export class BoxProduction {
                 <span class="name" id="name">${b.name}</span>
                 <span class="count">${b.count}</span>
                 <span class="buy countP" id="buy">Buy</span>
-                <span class="buy countM">Sell</span>
+                <span class="buy countM" id="sell">Sell</span>
             `)
 
-            const costDisplay = cost => cost.map(c => `${c.itemId} : ${c.cost}`).join('<br>') 
+            boxIcon.selectAll('#buy').on('click', _ => {
+                this._production.buyBuilding(b.bId)
+                this.update()
+                this._onChange()
+            })
+            boxIcon.selectAll('#sell').on('click', _ => {
+                this._production.sellBuilding(b.bId)
+                this.update()
+                this._onChange()
+            })
+
+            const costDisplay = cost => cost.map(c => `${c.itemId} : ${c.count}`).join('<br>') 
             
             tooltipsFollow(boxIcon.selectAll('#name'), `
                 <table>
@@ -74,4 +95,5 @@ export class BoxProduction {
 
     }
 
+    
 }

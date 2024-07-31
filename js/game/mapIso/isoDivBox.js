@@ -201,7 +201,9 @@ export class IsoDivCityBox extends IsoDivBox {
             this.inventoryListDiv = this.contentDiv.append('div').classed('inventoryNode', true)
             this.inventoryListDiv.style('display', 'flex');
             this.inventoryBox = new BoxInventory(this.inventoryListDiv, this.cityNode.inventory);
-            this.productionBox = new BoxProduction(this.inventoryListDiv, this.cityNode.production);
+            this.productionBox = new BoxProduction(this.inventoryListDiv, this.cityNode.production, _ => {
+                this.inventoryBox.update()
+            });
         }
 
 

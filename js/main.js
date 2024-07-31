@@ -19,6 +19,7 @@ import { WidjetActionsPlayerAct } from './game/menu/widjetActionsPlayerAct.js';
 import { InterfaceIso2 } from './game/mapIso/interfaceIso2.js';
 import { WidjetMiniWorld } from './game/menu/widjetMiniWorld.js';
 import { AssetLoaderOpti } from './game/asset/assetLoaderOpti.js';
+import { initToolmodal } from './game/industry/Box/toolTips.js';
 
 
 export class Main {
@@ -133,6 +134,10 @@ export class Main {
                 .append('div')
                     .attr("id", "tooltipsContent")
                     .text("tooltips")
+        }        
+        {
+            // init ToolModal
+            this.divToolsTips = initToolmodal(divMenu)
         }        
         // Move 
         {

@@ -415,10 +415,8 @@ canvas#canvasMap {
   z-index: 10000;
 }
 
-.tooltipsVisible {
+.tooltips.visible {
   display: flex !important;
-  border: 2px solid #F00;
-
 }
 
 .tooltips > div {
@@ -455,6 +453,53 @@ canvas#canvasMap {
   margin: 0px;
 }
 
+
+.toolmodal {
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: 50vh;
+  left: 50vw;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10001;
+}
+
+.toolmodal.visible {
+  display: flex !important;
+  border: 2px solid #F00;
+
+}
+
+.toolmodal > div {
+  background-color: #3C3C3B;
+  border: 2px solid #DEDEDE;
+  min-width: 20rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: .4rem;
+  display: flex;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.toolmodal #message {
+  padding: 1rem;
+}
+
+.toolmodal #ok {
+  padding: 0px;
+  text-align: center;
+}
+
+.toolmodal #ok > input {
+  padding: 0px;
+  color: #000;
+  width: 3rem;
+}
 
 /* -- */
 
@@ -549,6 +594,12 @@ canvas#canvasMap {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.productioHead .showall {
+  justify-content: flex-start;
+  font-weight: 400;
+  font-size: .8rem;
 }
 
 .productioHead .buyMax {

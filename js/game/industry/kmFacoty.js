@@ -1,4 +1,5 @@
-import { META_Building } from "./kmBuilding.js"
+import { activeToolmodal } from "./Box/toolTips.js"
+import { META_Building, META_BuildingList } from "./kmBuilding.js"
 
 class KmFactory {
 
@@ -36,10 +37,11 @@ export class KmProduction {
     ];
 
     constructor(inventory) {
-        this.inventory = inventory
+        this._inventory = inventory
     }
 
     get buildings() {
+        console.log("building")
         return this._productionBuilding
             .map(x => {
                 const bMeta = META_Building[x.bId] || {} 
@@ -47,9 +49,19 @@ export class KmProduction {
             })
             .sort((a, b) => a.order - b.order)
     }
+    get buildingCount() {
+        return this._productionBuilding.map(x => x.count).reduce((acc, value) => acc + value, 0)
+    }
+    buildingPossible() {
+        return META_BuildingList.map( x => {
+            const pB = this._productionBuilding.filter(pb => x.bId == pb.bId) 
+            const pBuilding = pB.length ? pB[0] : {count:0}
+            return {...pBuilding, ...x}
+        })
+    }
 
     canBuildProd() {
-        return this.buildingMax < this._productionBuilding.length
+        return this.buildingMax > this.buildingCount
     }
     canBuyProd(bId) {
         if (!META_Building[bId]) {
@@ -57,14 +69,17 @@ export class KmProduction {
         }
         const bMeta = META_Building[bId]
         const rest = this._inventory.costTest(bMeta.cost)
+        console.log('rest', bMeta.cost, rest)
         return rest.length == 0
     }
 
-    addBuilding(bId) {
+    buyBuilding(bId) {
         if (!this.canBuildProd()) {
+            activeToolmodal('Max Production For this Building')
             return false
         }
-        if (!this.canBuildProd(bId)) {
+        if (!this.canBuyProd(bId)) {
+            activeToolmodal('Not enough resources for this ')
             return false
         }
         this._inventory.costRemove(META_Building[bId].cost)
@@ -73,22 +88,24 @@ export class KmProduction {
         if (bFilterList.length > 0) {
             bFilterList[0].count += 1
         } else {
-            bFilterList.push({bId: bId, count: 1})
+            this._productionBuilding.push({bId: bId, count: 1})
         }
         return true
     }
 
-    removeBuilding(bId) {
+    sellBuilding(bId) {
         const bFilterList = this._productionBuilding.filter(x => x.bId == bId)
         if (bFilterList.length == 0) {
             return false
         } 
-        if (bFilterList[0].count <= 1) {
+        const bToRemove = bFilterList[0]
+        if (bToRemove.count <= 1) {
             this._productionBuilding = this._productionBuilding.filter(x => x.bId != bId)
-            bFilterList.push({bId: bId, count: 1})
         } else {
-            bFilterList[0].count -= 1
+            bToRemove.count -= 1
         }
+        console.log(bToRemove)
+        this._inventory.costAdd(META_Building[bToRemove.bId].cost)
         return true
     }
 
@@ -115,10 +132,9 @@ export class KmInventory {
     } 
 
     get slots() {
-       // const slotFilled = Object.fromEntries(this.inventory.map(x => [x.slot , x]))
-       // const slots =  [...Array(20).keys()].map(idx => [idx, slotFilled[idx]])
        return this._intentorySlots
     }
+
     slotSwap(slotIdA, slotIdB) {
         if (slotIdA < 0 || slotIdA >= this.size || slotIdB < 0 || slotIdB >= this.size ) {
             return            
@@ -183,7 +199,6 @@ export class KmInventory {
             delete this._inventoryIndex[itemId]
             this._intentorySlots[slotId] = null
         }
-        console.log("remove", this)
     }
 
     removeAll() {
@@ -193,14 +208,23 @@ export class KmInventory {
     }
 
     costTest(costItems) {
-      return costItems.map(cItem => {
-          return {
-              ...cItem,
-              count: cItem.count - (this._inventoryIndex[cItem.itemId] ? this._inventoryIndex[cItem.itemId].count : 0)
-          }
-      }).filter(item => item.count > 0)
+      const rest = costItems.map(cItem => {
+            const invCount = this._inventoryIndex[cItem.itemId] ? this._inventoryIndex[cItem.itemId].count : 0
+            console.log(cItem, invCount)
+            return {
+                ...cItem,
+                count: cItem.count - invCount
+            }
+      })
+      console.log(costItems, rest)
+      return rest.filter(item => item.count > 0)
     }
   
+    costAdd(cost) {
+        cost.forEach(cItem => {
+            this.addItem(cItem.itemId, cItem.count)
+        });
+      }
     costRemove(cost) {
       cost.forEach(cItem => {
           this.removeItem(cItem.itemId, cItem.count)
