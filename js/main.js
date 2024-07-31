@@ -126,7 +126,14 @@ export class Main {
                 .attr("id", "FPS")
                 .text("100 FPS")
         }
-        
+        {
+            this.divToolsTips = divMenu.append('div')
+                .attr("id", "tooltips")
+                .classed("tooltips", true)
+                .append('div')
+                    .attr("id", "tooltipsContent")
+                    .text("tooltips")
+        }        
         // Move 
         {
 

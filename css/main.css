@@ -392,6 +392,174 @@ canvas#canvasMap {
 */
 
 
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+
+/* ----------------------------------------------- */
+/* Factory Composant
+/* ----------------------------------------------- */
+
+
+.tooltips {
+  position: absolute;
+  background-color: #3C3C3B;
+  border: 2px solid #DEDEDE;
+  height: 0;
+  width: 0;
+  top: 50vh;
+  left: 50vw;
+  display: none;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 10000;
+}
+
+.tooltipsVisible {
+  display: flex !important;
+  border: 2px solid #F00;
+
+}
+
+.tooltips > div {
+  background-color: #3C3C3B;
+  border: 2px solid #DEDEDE;
+  background-color: #3C3C3B;
+  border: 2px solid #DEDEDE;
+  min-height: 2rem;
+  display: flex;
+  color: #FFF;
+}
+
+.tooltips table {
+  border-spacing: 0px;
+  padding: 11px;
+}
+.tooltips tr {
+  padding: 0px;
+  margin: 0px;
+}
+
+.tooltips td {
+  min-width: 10rem;
+  padding: .4rem;
+  border: 1px solid #FFF;
+  margin: 0px;
+}
+
+.tooltips td.arrow {
+  min-width: 0px;
+  width: 1.6;
+  text-align: center;
+  border: 1px solid #FFF;
+  margin: 0px;
+}
+
+
+/* -- */
+
+.inventoryMenu {
+  margin: 1rem 0px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(5, auto);
+  justify-content: center;
+  align-items: center;
+}
+
+.inventoryIcon {
+  padding: 0px;
+  margin: 2px;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #000;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: move;
+  user-select: none;
+  transition: 1s;
+  background-color: #DEDEDE;
+}
+.inventoryIcon:hover {
+  background-color: #FFFFFF;
+}
+
+ .inventoryIcon > .icon {
+  padding: 0px;
+  font-size: 1.4rem;
+}
+
+ .inventoryIcon > .count {
+  padding: 0px;
+  position: absolute;
+  bottom: 0px;
+  right: 2px;
+  font-size: .8rem;
+  font-family: monospace;
+  font-weight: bold;
+  text-shadow: 0 0 10px #FFF;
+ 
+}
+
+.productionIcon {
+  padding: 5px 0px;
+  display: grid;
+  height: 2rem;
+  grid-template-columns: 2rem 1fr 2rem 2rem 2rem;
+}
+.productionIcon > span {
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productionIcon .icon {
+  border: 1px solid #333333;
+}
+.productionIcon .name{
+  justify-content: flex-start;
+  border-bottom: 1px solid #000;
+  padding-left: .2rem;
+}
+.productionIcon .buy {
+  border: 2px solid #333333;
+  font-size: .8rem;
+  margin-right: 2px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.productionIcon .buy:hover {
+  background-color: #FFF;
+}
+.productionIcon .count {
+  border-bottom: 1px solid #000;
+}
+
+.productioHead {
+  display: grid;
+  height: 1.8rem;
+  grid-template-columns: 1fr 6rem;
+}
+
+.productioHead > span {
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productioHead .buyMax {
+  font-size: .8rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: right;
+}
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+/* ----------------------------------------- */
 
 /* ----------------------------------------------- */
 /* MenuBox
@@ -437,49 +605,6 @@ canvas#canvasMap {
   height: 2.6rem; 
   margin: 0px; */
 }
-
-.inventoryMenu {
-  margin: 1rem 0px;
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(5, auto);
-  justify-content: center;
-  align-items: center;
-}
-
-.inventoryIcon {
-  padding: 0px;
-  margin: 2px;
-  width: 60px;
-  height: 60px;
-  border: 2px solid #000;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: move;
-  user-select: none;
-}
-
- .inventoryIcon > .icon {
-  padding: 0px;
-  font-size: 1.2rem;
-}
-
- .inventoryIcon > .count {
-  padding: 0px;
-  position: absolute;
-  bottom: 0px;
-  right: 2px;
-  font-size: .8rem;
-  font-family: monospace;
-  font-weight: bold;
-  text-shadow: 0 0 10px #FFF;
- 
-}
-
-
-/* --- */
 
 .buttMenuBox#settingAction > label {
   top: 0px;
@@ -944,7 +1069,7 @@ canvas#canvasMap {
   display: none;
 }
 .isoDivBox.isShow {
-  opacity: .6;
+  opacity: .9;
   display: flex;
   transition: all 1s;
 }

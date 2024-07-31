@@ -1,5 +1,6 @@
 import { cityNode_do_inventory_from_player, cityNode_do_inventory_to_player, cityNode_text_inventory, cityNode_text_player_inventory } from "../build/wcCity/config/defaultCity.js"
-import { BoxInventory } from "../menu/Box/boxInventory.js"
+import { BoxInventory } from "../industry/Box/boxInventory.js"
+import { BoxProduction } from "../industry/Box/boxProduction.js"
 import { TILE_HEIGHT } from "./interfaceIso.js"
 
 
@@ -200,6 +201,7 @@ export class IsoDivCityBox extends IsoDivBox {
             this.inventoryListDiv = this.contentDiv.append('div').classed('inventoryNode', true)
             this.inventoryListDiv.style('display', 'flex');
             this.inventoryBox = new BoxInventory(this.inventoryListDiv, this.cityNode.inventory);
+            this.productionBox = new BoxProduction(this.inventoryListDiv, this.cityNode.production);
         }
 
 

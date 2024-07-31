@@ -1,3 +1,4 @@
+import { META_Building } from "./kmBuilding.js"
 
 class KmFactory {
 
@@ -25,8 +26,73 @@ class KmNode {
 
 }
 
-export class KmBuilding {
-    
+export class KmProduction {
+    _inventory = null;
+
+    buildingMax = 10;
+    _productionBuilding = [
+        {bId:'rbBiome', count:1},
+        {bId:'rbTime', count:1},
+    ];
+
+    constructor(inventory) {
+        this.inventory = inventory
+    }
+
+    get buildings() {
+        return this._productionBuilding
+            .map(x => {
+                const bMeta = META_Building[x.bId] || {} 
+                return {...x, ...bMeta}
+            })
+            .sort((a, b) => a.order - b.order)
+    }
+
+    canBuildProd() {
+        return this.buildingMax < this._productionBuilding.length
+    }
+    canBuyProd(bId) {
+        if (!META_Building[bId]) {
+            return false
+        }
+        const bMeta = META_Building[bId]
+        const rest = this._inventory.costTest(bMeta.cost)
+        return rest.length == 0
+    }
+
+    addBuilding(bId) {
+        if (!this.canBuildProd()) {
+            return false
+        }
+        if (!this.canBuildProd(bId)) {
+            return false
+        }
+        this._inventory.costRemove(META_Building[bId].cost)
+
+        const bFilterList = this._productionBuilding.filter(x => x.bId == bId)
+        if (bFilterList.length > 0) {
+            bFilterList[0].count += 1
+        } else {
+            bFilterList.push({bId: bId, count: 1})
+        }
+        return true
+    }
+
+    removeBuilding(bId) {
+        const bFilterList = this._productionBuilding.filter(x => x.bId == bId)
+        if (bFilterList.length == 0) {
+            return false
+        } 
+        if (bFilterList[0].count <= 1) {
+            this._productionBuilding = this._productionBuilding.filter(x => x.bId != bId)
+            bFilterList.push({bId: bId, count: 1})
+        } else {
+            bFilterList[0].count -= 1
+        }
+        return true
+    }
+
+
 }
 
 export class KmInventory {
@@ -125,7 +191,6 @@ export class KmInventory {
       this._intentorySlots = [...Array(this.size)].map(_ => null)
       // this.GS.set("Player.inventory.update", 1) 
     }
-
 
     costTest(costItems) {
       return costItems.map(cItem => {

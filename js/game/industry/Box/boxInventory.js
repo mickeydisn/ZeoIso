@@ -1,4 +1,5 @@
-import { META_Resource } from "../../industry/kmResource.js"
+import { META_Resource } from "../kmResource.js"
+import { tooltipsFollow } from "./toolTips.js"
 
 
 
@@ -6,19 +7,17 @@ export class BoxInventory {
 
     constructor(mainDiv, inventory, onChange=_ => {}) {
         this.contentBox = mainDiv
-        this.inventory = inventory
-        this.onChange = onChange
-        this.initDraw()
+        this._inventory = inventory
+        this._onChange = onChange
+        this.init()
         this.update()
         window.draggedElement = null;
-
     }
 
     // ---------------------
     //  Floor Action 
     // ---------------------
-    initDraw() {
-        this.contentBox.selectAll('div').remove()
+    init() {
 
         const tableBox = this
             .contentBox.append('div')
@@ -31,20 +30,20 @@ export class BoxInventory {
         this.MDDiv.selectAll('div').remove();
 
 
-        console.log("inventory_slot", this.inventory.slots)
-        this.inventory.slots.forEach((value, idx) => {
+        console.log("inventory_slot", this._inventory.slots)
+        this._inventory.slots.forEach((value, idx) => {
             const boxIcon = this.MDDiv
                 .append('div')
                 .classed('inventoryIcon', true)
             const boxNode = boxIcon.node()
 
-            boxNode.inventory = this.inventory;
+            boxNode.inventory = this._inventory;
             boxNode.inventoryBox = this;
             boxNode.slot = idx;
 
             if (value) {
                 boxNode.draggable = true;
-                const icon = resourceMetadata[value.itemId] ? META_Resource[value.itemId].icon : '?'
+                const icon = META_Resource[value.itemId] ? META_Resource[value.itemId].icon : '?'
                 boxIcon.html(`
                     <span class="icon"> ${icon} </span> 
                     <span class="count">${value.count}</span>
@@ -54,21 +53,31 @@ export class BoxInventory {
                     if (boxNode.inventory == target.inventory) {
                         boxNode.inventory.slotSwap(window.draggedElement.slot, target.slot)
                         this.update()
-                        // this.onChange()
+                        // this._onChange()
                     } else {
                         console.log('else')
                         boxNode.inventory.slotSwapInventory(window.draggedElement.slot, target.slot, target.inventory)
                         this.update()
                         target.inventoryBox.update()
-                        // this.onChange()
+                        // this._onChange()
                     }
                 }
 
                 boxNode.addEventListener('dragstart', (e) => {
+                    d3.selectAll('#tooltips')
+                        .classed('tooltipsVisible', false)
+
                     console.log('dragStart', e)
                     window.draggedElement = e.target;
                     setTimeout(() => e.target.classList.add('dragging'), 0);
                 })
+                // ToolTips
+                tooltipsFollow(boxIcon, `
+                    <table>
+                        <tr><td>${value.itemId} ( ${value.count} )</td></tr>
+                    </table>
+                
+                `)
             } 
             boxNode.addEventListener('dragend', (e) => {
                 console.log('dragEnd', e)
@@ -90,7 +99,8 @@ export class BoxInventory {
         
                 }
             });
-    
+            
+
         })
             
         console.log('== Update_Inventory')

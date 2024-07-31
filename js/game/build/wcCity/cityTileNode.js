@@ -1,4 +1,4 @@
-import { KmInventory } from "../../industry/kmFacoty.js";
+import { KmInventory, KmProduction } from "../../industry/kmFacoty.js";
 import { CityNode } from "./cityNode.js";
 
 
@@ -47,6 +47,8 @@ export class CityTileNode extends CityNode {
         this.entities = []
         this.inventory = new KmInventory(8)
         this.inventory.addItem('rsTime', 1)
+
+        this.production = new KmProduction(this.inventory)
 
         this.cityFactory = cityFactory
         this.cityFactory.appendNode(this)
@@ -160,7 +162,7 @@ export class CityTileNode extends CityNode {
             x: this.x,
             y: this.y,
             type: this.type,
-            inventory: this._inventory,
+            // inventory: this._inventory,
         }        
         
     }

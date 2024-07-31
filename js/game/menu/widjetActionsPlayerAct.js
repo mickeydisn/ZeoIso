@@ -1,6 +1,6 @@
 
 
-import { BoxInventory } from "./Box/boxInventory.js";
+import { BoxInventory } from "../industry/Box/boxInventory.js";
 import { WidjetActions } from "./widjetAction.js";
 
 export class WidjetActionsPlayerAct extends WidjetActions {
