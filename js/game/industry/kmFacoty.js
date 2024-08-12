@@ -40,6 +40,25 @@ export class KmProduction {
         this._inventory = inventory
     }
 
+    doTick() {
+        this._productionBuilding.forEach(pb => {
+            if (pb.count <= 0) {
+                return;
+            }
+            const nBuild = pb.count
+            const bId = pb.bId
+            // META_Building[bId].inputs
+
+            for (let i = 0; i < nBuild; i++) {
+                if (this._inventory.costTest(META_Building[bId].inputs).length == 0) {
+                    this._inventory.costRemove(META_Building[bId].inputs)
+                    this._inventory.costAdd(META_Building[bId].outputs)
+                }
+            }
+
+        })
+    }
+
     get buildings() {
         console.log("building")
         return this._productionBuilding
@@ -114,6 +133,7 @@ export class KmProduction {
 
 export class KmInventory {
     size = 20
+    maxItem = 200
     items = null
     _inventoryIndex = {}
     _intentorySlots = []
@@ -156,7 +176,7 @@ export class KmInventory {
             return            
         }
         const itemA = this._intentorySlots[slotIdA]
-        console.log('---- slotSwapInventory', itemA)
+        console.log('---- slotSwapInventory', slotIdA, this._intentorySlots, itemA)
         inventoryB.addItem(itemA.itemId, itemA.count)
         this.removeItem(itemA.itemId, itemA.count)
     }
@@ -166,7 +186,11 @@ export class KmInventory {
         const icount = count ? count : 1
 
         if (this._inventoryIndex[itemId]) {
-            this._inventoryIndex[itemId].count += icount
+            if (this._inventoryIndex[itemId].count + icount > this.maxItem) {
+                this._inventoryIndex[itemId].count = this.maxItem
+            } else {
+                this._inventoryIndex[itemId].count += icount
+            }
         } else {
             // find empty slot : 
             const empySlotIndex = this._intentorySlots
@@ -210,13 +234,11 @@ export class KmInventory {
     costTest(costItems) {
       const rest = costItems.map(cItem => {
             const invCount = this._inventoryIndex[cItem.itemId] ? this._inventoryIndex[cItem.itemId].count : 0
-            console.log(cItem, invCount)
             return {
                 ...cItem,
                 count: cItem.count - invCount
             }
       })
-      console.log(costItems, rest)
       return rest.filter(item => item.count > 0)
     }
   

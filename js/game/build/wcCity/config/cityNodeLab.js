@@ -58,14 +58,14 @@ const STEP_ENTITIE_FIRST_LAB_LOOP = def_STEP_TEXT({
     title:" => Wandering Lab Memory Loop",
     text:`
 > After returning to its grave : 
-> - The ghost store 10 MEMORY_LAB   
+> - The ghost store 10 rsMemoryNote   
 > - The ghost begins to wander again
 `,
 
     isValidated:(cityNode) => !cityNode.player.storyProgress.INTRO.STEP_ENTITIE_FIRST_LAB_LOOP
         && cityNode.entitiesIsAtNode,
 
-    doText: "Start a MEMORY_LAB Wandering !",
+    doText: "Start a rsMemoryNote Wandering !",
     doClick:(cityNode) => {
         const entities = cityNode.entities
         entities.forEach(e => {
@@ -75,7 +75,7 @@ const STEP_ENTITIE_FIRST_LAB_LOOP = def_STEP_TEXT({
                 {count:1,    waitCount:20 * 2,  id:'goHouse'},
                 {count:null,    waitCount:20 * 2,  id:'goLab'},
                 {count:1,    waitCount:0,       id:'inventoryAdd', 
-                    sData:{cityLink: 'lab', itemId:'MEMORY_LAB', count:10}},
+                    sData:{cityLink: 'lab', itemId:'rsMemoryNote', count:10}},
             ]
             cityNode.player.storyProgress.STEP_ENTITIE_FIRST_LAB_LOOP = true
         });
@@ -86,14 +86,14 @@ const STEP_ENTITIE_LAB_LOOP = def_STEP_TEXT({
     title:" => Wandering Lab Memory Loop",
     text:`
 > After returning to its grave : 
-> - The ghost store 1 MEMORY_LAB   
+> - The ghost store 1 rsMemoryNote   
 > - The ghost begins to wander again
 `,
 
     isValidated:(cityNode) => cityNode.player.storyProgress.INTRO.STEP_ENTITIE_FIRST_LAB_LOOP
         && cityNode.entitiesIsAtNode,
 
-    doText: "Start a MEMORY_LAB Wandering !",
+    doText: "Start a rsMemoryNote Wandering !",
     doClick:(cityNode) => {
         const entities = cityNode.entities
         entities.forEach(e => {
@@ -103,7 +103,7 @@ const STEP_ENTITIE_LAB_LOOP = def_STEP_TEXT({
                 {count:null,    waitCount:20 * 2,  id:'goHouse'},
                 {count:null,    waitCount:20 * 2,  id:'goLab'},
                 {count:null,    waitCount:0,       id:'inventoryAdd', 
-                    sData:{cityLink: 'lab', itemId:'MEMORY_LAB', count:1}},
+                    sData:{cityLink: 'lab', itemId:'rsMemoryNote', count:1}},
                 {count:null,    waitCount:20 * 2,  id:'goGrave'},
             ]
         });
@@ -131,22 +131,9 @@ export class CitNodeLab extends CityTileNode {
                 isValidated: true,
             },
             STEP_ASSIGN_LAB,
-            {
-                type:"Entities",
-                title: " # Entities",
-                isValidated: (cityNode) => cityNode.entities.length > 0,
-            },
-
             STEP_ENTITIE_CALL_BACK,
             STEP_ENTITIE_FIRST_LAB_LOOP,
             STEP_ENTITIE_LAB_LOOP,
-
-            {
-                type:"Inventory",
-                title: " # === Inventory ===",
-                isValidated: (cityNode) => true,
-            },
-            
         ]
 
     }

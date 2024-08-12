@@ -34,22 +34,11 @@ const applyCost = (cityNode, cost) => {
     }
 } 
 
-const costMDTable_Conf = (conf) => { return (cityNode) => { 
-        return "## Cost\n\n"
-        + '| **Name** | **Cost** | **Node** | **Player** |\n'
-        + '|:-:|:-:|:-:|:-:|\n'
-        + conf.cost.map(slot => {
-            const inventoryCount = cityNode.inventoryIndex[slot.itemId] ? cityNode.inventoryIndex[slot.itemId].count : 0 
-            const inventoryPlayerCount = cityNode.player.inventoryIndex[slot.itemId] ? cityNode.player.inventoryIndex[slot.itemId].count : 0 
-            return `| ${slot.itemId} | ${slot.count} | ${inventoryCount} | ${inventoryPlayerCount}`
-        }).join('\n')
-        + '\n\n\n'
-}}
 
 const MAKE_SUBSTEP_INVALIDE_COST = (conf) => {return  {...abstractStep,
     text:  (cityNode) => { 
-        const MD_cost = conf.cost ? costMDTable_Conf(conf) : _ => ''
-        return " ## Not enough MEMORY. \n\n" + MD_cost(cityNode)
+        // const MD_cost = conf.cost ? costMDTable_Conf(conf) : _ => ''
+        return " ## Not enough MEMORY. \n\n" // + MD_cost(cityNode)
      }, 
     
     isValidated: (cityNode) => !valideCost(cityNode, conf.cost),
@@ -95,9 +84,9 @@ export const def_STEP_TEXT = (conf) => {
             {...abstractStep,
                 ...doObject,
                 text:  (cityNode) => { 
-                    const costText = conf.cost ? costMDTable_Conf(conf)(cityNode) : ''
+                    // const costText = conf.cost ? costMDTable_Conf(conf)(cityNode) : ''
                     const confText = typeof conf.text === 'string' ? conf.text : conf.text(cityNode)
-                    return  confText + costText
+                    return  confText // + costText
                 }, 
                 isValidated: (cityNode) => true,
             },

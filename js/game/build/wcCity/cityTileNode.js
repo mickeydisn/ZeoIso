@@ -65,6 +65,10 @@ export class CityTileNode extends CityNode {
 
     }
 
+    doTick() {
+        this.production.doTick()
+    }
+
     // --------------------------------
 
     addEntity(entity) {

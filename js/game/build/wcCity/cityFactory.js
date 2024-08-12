@@ -19,6 +19,9 @@ export class CityFactory {
         this.cityNodesIndex = {}
         this.cityNodes = []
         this.entities = []
+
+        this.cityNodeTickCountMax = 20
+        this._cityNodeTickCount = 0
     }
 
 
@@ -50,6 +53,11 @@ export class CityFactory {
 
     doTick() {
         this.entities.forEach(e => e.doTick())
+        this._cityNodeTickCount += 1
+        if (this._cityNodeTickCount >= this.cityNodeTickCountMax) {
+            this._cityNodeTickCount = 0
+            this.cityNodes.forEach(cn => cn.doTick())
+        }
     }
 
     // --------------------------------

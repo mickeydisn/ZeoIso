@@ -1,4 +1,5 @@
 import { cityNode_do_inventory_from_player, cityNode_do_inventory_to_player, cityNode_text_inventory, cityNode_text_player_inventory } from "../build/wcCity/config/defaultCity.js"
+import { BoxEntity } from "../industry/Box/boxEntity.js"
 import { BoxInventory } from "../industry/Box/boxInventory.js"
 import { BoxProduction } from "../industry/Box/boxProduction.js"
 import { TILE_HEIGHT } from "./interfaceIso.js"
@@ -146,6 +147,8 @@ export class IsoDivCityBox extends IsoDivBox {
 
         this.initContentDraw()
         this.updateContent()
+
+        this._loopIntervalId = 0
     }
 
     show() {
@@ -153,7 +156,25 @@ export class IsoDivCityBox extends IsoDivBox {
         // this.tile.cityNode.currentStepIdx = 0
         // this.currentStep = this.tile.cityNode.currentStep;
         this.updateContent()
+
+
+        if (this._loopIntervalId) {
+            clearInterval(this._loopIntervalId)
+        }
+        this._loopIntervalId = setInterval(async () => {
+            this.inventoryBox.update()  // Call your async function
+        }, 1000);  // Runs every 1000 milliseconds (1 second)
     }
+
+    hide() {
+        super.hide()
+        if (this._loopIntervalId) {
+            clearInterval(this._loopIntervalId)
+        }
+
+    }
+
+
 
     initContentDraw() {
         this.contentDiv = this.mainDiv.append('div')
@@ -197,16 +218,6 @@ export class IsoDivCityBox extends IsoDivBox {
         // MD
         this.initMDContent()
 
-        {
-            this.inventoryListDiv = this.contentDiv.append('div').classed('inventoryNode', true)
-            this.inventoryListDiv.style('display', 'flex');
-            this.inventoryBox = new BoxInventory(this.inventoryListDiv, this.cityNode.inventory);
-            this.productionBox = new BoxProduction(this.inventoryListDiv, this.cityNode.production, _ => {
-                this.inventoryBox.update()
-            });
-        }
-
-
         // StepList
         {
             this.stepListDiv = this.contentDiv.append('div').classed('stepList', true)
@@ -240,20 +251,23 @@ export class IsoDivCityBox extends IsoDivBox {
             
         }
 
+
+        // Inventory and production
+        {
+            this.inventoryListDiv = this.contentDiv.append('div').classed('inventoryNode', true)
+            this.inventoryListDiv.style('display', 'flex');
+            this.inventoryBox = new BoxInventory(this.inventoryListDiv, this.cityNode.inventory);
+            this.productionBox = new BoxProduction(this.inventoryListDiv, this.cityNode.production, _ => {
+                this.inventoryBox.update()
+            });
+            this.entitiesBox = new BoxEntity(this.inventoryListDiv, this.cityNode.entities, _ => {
+            });
+
+        }
+
         
     }
-    /*
-    initStepListContent() {
-        this.tile.cityNode.STEPS.forEach((step, idx) => {
-            if (idx == 0) return ;
-            this.stepListDiv.append('div').text("● " + step.title).on('click', _ => {
-                this.tile.cityNode.currentStepIdx = idx
-                this.currentStep = this.tile.cityNode.currentStep;
-                this.updateContent()
-            })
-        })
-    }
-    */
+
     updateStepListDiv() {
         this.stepListDiv.selectAll('div').remove()
         this.cityNode.STEPS.forEach((step, idx) => {
@@ -271,54 +285,6 @@ export class IsoDivCityBox extends IsoDivBox {
 
     }
     
-
-    updateInventoryNodeDiv() {
-
-        this.inventoryBox.update()
-        // this.inventoryListDiv.selectAll('div').remove("div")
-
-        /*
-        const playerInventory = cityNode_text_player_inventory(cityNode)
-        
-        const nodeInventory =  cityNode_text_inventory(cityNode)
-        const nInventoryDiv = this.inventoryListDiv.append('div')
-            .style('display', 'flex')
-            .classed('Markdown', true) 
-        nInventoryDiv.html(window.marked.parse(nodeInventory))
-
-        const buttsDiv = this.inventoryListDiv.append('div')
-            .style('display', 'flex')
-            .classed('butts', true)
-
-        const buttCollect = buttsDiv.append('div').text('⬇︎Collect⬇︎')
-        buttCollect.on('click', _ => { 
-            cityNode_do_inventory_to_player(cityNode)
-            this.updateContent()
-        })
-
-        const buttClose = buttsDiv.append('div').text('Close')
-        buttClose.on('click', _ => { 
-            this.currentStep = this.tile.cityNode.homeStep();
-            this.updateContent()
-        })
-        */
-
-        /*
-         const buttDrop = buttsDiv.append('div').text('⬆︎Drop⬆︎')
-        
-
-        buttDrop.on('click', _ => { 
-            cityNode_do_inventory_from_player(cityNode) 
-            this.updateContent()
-        })
-
-        const pInventoryDiv = this.inventoryListDiv.append('div')
-            .style('display', 'flex')
-            .classed('Markdown', true) 
-        pInventoryDiv.html(window.marked.parse("### Player" + playerInventory))
-        */
-
-    }
 
     initMDContent() {
 
@@ -344,6 +310,34 @@ export class IsoDivCityBox extends IsoDivBox {
 
         const cityNode = this.tile.cityNode
         const cityStep = cityNode.currentStep 
+
+        // # Titel
+        this.titleHomeDiv.style('display', 'flex') 
+        this.titleDiv.style('display', 'flex') 
+
+        this.titleDiv.text(cityStep.title)
+        
+
+        // # Inventory
+        this.inventoryBox.update()
+        this.productionBox.update()
+        this.entitiesBox.update()
+
+        // 
+        this.entityListDiv.style('display', 'none')
+
+        // # MD
+        this.MDDiv.style('display', 'none') 
+        // # Step 
+        this.stepListDiv.style('display', 'none') 
+
+
+        // # Action
+        this.currentStepUndoActionDiv.style('display', 'none') 
+        this.currentStepUndoActionDiv.on('click', _ => {})
+        this.currentStepActionDiv.style('display', 'none') 
+        this.currentStepActionDiv.on('click', _ => {})
+
         if (cityStep.undo) {
             this.currentStepUndoActionDiv.style('display', 'flex') 
             this.currentStepUndoActionDiv.on('click', _ => {
@@ -351,35 +345,21 @@ export class IsoDivCityBox extends IsoDivBox {
             })
         }
 
-        this.titleDiv.text(cityStep.title)
-        
-        // this.stepDiv.style('display', 'none')
-        this.MDDiv.style('display', 'none') 
-        this.stepListDiv.style('display', 'none') 
-        this.entityListDiv.style('display', 'none')
-        // this.inventoryListDiv.style('display', 'none')
-
-
+        // Action Param 
         this.doParamDiv.style('display', 'none')
 
-        this.currentStepUndoActionDiv.style('display', 'none') 
-        this.currentStepUndoActionDiv.on('click', _ => {})
-        this.currentStepActionDiv.style('display', 'none') 
-        this.currentStepActionDiv.on('click', _ => {})
+
         if (cityStep.text) {
             const MdText = typeof cityStep.text == 'string' ? cityStep.text : cityStep.text(this.tile.cityNode)
             this.MDDiv.style('display', 'flex') 
             this.MDDiv.html(window.marked.parse(MdText))
         }
 
-        this.titleHomeDiv.style('display', 'flex') 
-        this.titleDiv.style('display', 'flex') 
 
         if (cityStep.type.localeCompare('Menu') == 0) {
             this.titleDiv.style('display', 'none') 
             this.titleHomeDiv.style('display', 'none') 
             this.stepListDiv.style('display', 'flex') 
-
             this.updateStepListDiv()
             
         } else if (cityStep.type.localeCompare('Entities') == 0) {
@@ -396,10 +376,6 @@ export class IsoDivCityBox extends IsoDivBox {
                 )
             })
             // setTimeout(_ => this.updateContent(), 1000)
-        } else if (cityStep.type.localeCompare('Inventory') == 0) {
-            this.inventoryListDiv.style('display', 'flex')
-            this.updateInventoryNodeDiv()
-
         } else if (cityStep.type.localeCompare('Build') == 0) {
             let editor = null
             if (cityStep.doParamShema) {

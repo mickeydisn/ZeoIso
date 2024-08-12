@@ -29,8 +29,6 @@ export class BoxInventory {
     update() {
         this.MDDiv.selectAll('div').remove();
 
-
-        console.log("inventory_slot", this._inventory.slots)
         this._inventory.slots.forEach((value, idx) => {
             const boxIcon = this.MDDiv
                 .append('div')
@@ -55,7 +53,6 @@ export class BoxInventory {
                         this.update()
                         // this._onChange()
                     } else {
-                        console.log('else')
                         boxNode.inventory.slotSwapInventory(window.draggedElement.slot, target.slot, target.inventory)
                         this.update()
                         target.inventoryBox.update()
@@ -67,7 +64,6 @@ export class BoxInventory {
                     d3.selectAll('#tooltips')
                         .classed('tooltipsVisible', false)
 
-                    console.log('dragStart', e)
                     window.draggedElement = e.target;
                     setTimeout(() => e.target.classList.add('dragging'), 0);
                 })
@@ -80,7 +76,6 @@ export class BoxInventory {
                 `)
             } 
             boxNode.addEventListener('dragend', (e) => {
-                console.log('dragEnd', e)
                 e.target.classList.remove('dragging');
             });
             boxNode.addEventListener('dragover', (e) => {
@@ -88,7 +83,6 @@ export class BoxInventory {
             });
             boxNode.addEventListener('drop', (e) => {
                 if (e.target.classList.contains('inventoryIcon')) {
-                    console.log('DROP', draggedElement, e)
                     e.preventDefault();
                     if (draggedElement && e.target) {
                         window.draggedElement.onDragFunc(e.target);
@@ -103,8 +97,6 @@ export class BoxInventory {
 
         })
             
-        console.log('== Update_Inventory')
-
     }
 
 }

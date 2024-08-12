@@ -46,14 +46,14 @@ const STEP_ENTITIE_GRAVE_LOOP = def_STEP_TEXT({
     title:" => Wandering Grave Memory Loop",
     text:`
 > After returning to its grave : 
-> - The ghost store 1 MEMORY_GRAVE   
+> - The ghost store 1 rsMemoryNote   
 > - The ghost begins to wander again
 `,
 
     isValidated:(cityNode) => true
         && cityNode.entitiesIsAtNode,
 
-    doText: "Start a MEMORY_GRAVE Wandering !",
+    doText: "Start a rsMemoryNote Wandering !",
     doClick:(cityNode) => {
         const entities = cityNode.entities
         entities.forEach(e => {
@@ -63,7 +63,7 @@ const STEP_ENTITIE_GRAVE_LOOP = def_STEP_TEXT({
                 {count:null,    waitCount:20 * 2,       id:'randomMove'},
                 {count:null,    waitCount:20 * 2,  id:'goGrave'},
                 {count:null,    waitCount:0,       id:'inventoryAdd', 
-                    sData:{cityLink: 'grave', itemId:'MEMORY_GRAVE', count:1}},
+                    sData:{cityLink: 'grave', itemId:'rsMemoryNote', count:1}},
                 {count:null,    waitCount:20 * 2,       id:'randomMove'},
             ]
         });
@@ -86,20 +86,8 @@ export class CitNodeGrave extends CityTileNode {
                 isValidated: true,
             },
             STEP_SUMMON,
-            {
-                type:"Entities",
-                title: "Entities",
-                isValidated: true,
-            },
             STEP_ENTITIE_CALL_BACK,
             STEP_ENTITIE_GRAVE_LOOP,
-
-            {
-                type:"Inventory",
-                title: " # === Inventory ===",
-                isValidated: (cityNode) => true,
-            },
-            
         ]
 
     }

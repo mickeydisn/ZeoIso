@@ -548,6 +548,35 @@ canvas#canvasMap {
  
 }
 
+/* ----------------------------------------- */
+
+.productioHead {
+  display: grid;
+  height: 1.8rem;
+  grid-template-columns: 1fr 6rem;
+}
+
+.productioHead > span {
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productioHead .showall {
+  justify-content: flex-start;
+  font-weight: 400;
+  font-size: .8rem;
+}
+
+.productioHead .buyMax {
+  font-size: .8rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: right;
+}
+
+
 .productionIcon {
   padding: 5px 0px;
   display: grid;
@@ -583,31 +612,70 @@ canvas#canvasMap {
   border-bottom: 1px solid #000;
 }
 
-.productioHead {
+
+/* ----------------------------------------- */
+
+.entitiesHead {
   display: grid;
   height: 1.8rem;
   grid-template-columns: 1fr 6rem;
 }
 
-.productioHead > span {
+.entitiesHead > span {
   padding: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.productioHead .showall {
+.entitiesHead .buyOne {
   justify-content: flex-start;
   font-weight: 400;
   font-size: .8rem;
 }
 
-.productioHead .buyMax {
+.entitiesHead .buyMax {
   font-size: .8rem;
   font-weight: bold;
   font-family: sans-serif;
   text-align: right;
 }
+
+.entityIcon {
+  padding: 5px 0px;
+  display: grid;
+  height: 2rem;
+  grid-template-columns: 2rem 1fr 1fr 5rem;
+}
+.entityIcon > span {
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.entityIcon .icon {
+  border: 1px solid #333333;
+}
+.entityIcon .name{
+  justify-content: flex-start;
+  border-bottom: 1px solid #000;
+  padding-left: .2rem;
+}
+.entityIcon .goal {
+  border: 2px solid #333333;
+  font-size: .8rem;
+  margin-right: 2px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.entityIcon .link {
+  border-bottom: 1px solid #000;
+}
+
+
+
 /* ----------------------------------------- */
 /* ----------------------------------------- */
 /* ----------------------------------------- */

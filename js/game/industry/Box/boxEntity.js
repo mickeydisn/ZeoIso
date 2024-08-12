@@ -3,16 +3,16 @@ import { tooltipsFollow } from "./toolTips.js"
 
 
 
-export class BoxProduction {
+export class BoxEntity {
 
-    constructor(mainDiv, production, onChange=_ => {}) {
+    constructor(mainDiv, entities, onChange=_ => {}) {
         this.contentBox = mainDiv
-        this._production = production
-        this.showAllBuild = false
+        this._entities = entities
+        // this.showAllBuild = false
+        
         this._onChange = onChange
         this.init()
         this.update()
-        // window.draggedElement = null;
     }
 
     // ---------------------
@@ -22,19 +22,42 @@ export class BoxProduction {
         const tableBox = this
             .contentBox.append('div')
             .classed('row', true)
-        this.MDDiv = tableBox.append('div').classed('productionMenu', true)
+        this.boxContent = tableBox.append('div').classed('entitiesMenu', true)
 
     }
 
     update() {
-        this.MDDiv.selectAll('div').remove();
-        const boxHead = this.MDDiv
+        this.boxContent.selectAll('div').remove();
+
+
+        const boxHead = this.boxContent
             .append('div')
-            .classed('productioHead', true)
+            .classed('entitiesHead', true)
         boxHead.html(`
-            <span class="showall"><input type="checkbox" id="showall"></input> show all</span>
-            <span class="buyMax">max ${this._production.buildingCount} / ${this._production.buildingMax}</span>
+            <span class="buyOne"><input type="checkbox" id="buyOne"></input> show all</span>
+            <span class="buyMax">max ${this._entities.length} / ${0}</span>
         `)
+
+        this._entities.forEach(entity => {
+            const boxIcon = this.boxContent
+                .append('div')
+                .classed('entityIcon', true)
+
+            boxIcon.html(`
+                <span class="icon"> 😆 </span> 
+                <span class="name" id="name">${entity.name}</span>
+                <span class="goal">${entity.mainGoal}</span>
+                <span class="link" id="buy">${
+                    ''
+                    + (entity.cityLink.grave ? ' 🪦 ' : ' _ ')
+                    + (entity.cityLink.house ? ' 🏠 ' : ' _ ')
+                    + (entity.cityLink.lab ? ' 🔬 ' : ' _ ')}
+                </span>
+            `)                
+
+        });
+
+        /*
 
         boxHead.selectAll('#showall')
             .property('checked', this.showAllBuild)
@@ -51,7 +74,7 @@ export class BoxProduction {
                 .classed('productionIcon', true)
 
             boxIcon.html(`
-                <span class="icon"> ${b.icone} </span> 
+                <span class="icon"> 😆 </span> 
                 <span class="name" id="name">${b.name}</span>
                 <span class="count">${b.count}</span>
                 <span class="buy countP" id="buy">Buy</span>
@@ -73,7 +96,7 @@ export class BoxProduction {
             
             tooltipsFollow(boxIcon.selectAll('#name'), `
                 <table>
-                    <tr><td colspan=3>Default /sec </td></tr>
+                    <tr><td colspan=3>Default</td></tr>
                     <tr>
                         <td><div>${costDisplay(b.inputs)}</div></td>
                         <td class="arrow">➡︎</td>
@@ -90,8 +113,8 @@ export class BoxProduction {
             `)
 
         })  
+    */
 
     }
-
     
 }
