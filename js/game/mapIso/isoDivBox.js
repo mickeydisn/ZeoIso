@@ -157,6 +157,8 @@ export class IsoDivCityBox extends IsoDivBox {
         // this.currentStep = this.tile.cityNode.currentStep;
         this.updateContent()
 
+        // shift_click
+        window.activeCityBox = this
 
         if (this._loopIntervalId) {
             clearInterval(this._loopIntervalId)
@@ -168,6 +170,12 @@ export class IsoDivCityBox extends IsoDivBox {
 
     hide() {
         super.hide()
+
+        // shift_click
+        if (window.activeCityBox === this) {
+            window.activeCityBox = null
+        }
+
         if (this._loopIntervalId) {
             clearInterval(this._loopIntervalId)
         }

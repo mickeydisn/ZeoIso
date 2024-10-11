@@ -32,11 +32,12 @@ export class KmProduction {
 
     buildingMax = 10;
     _productionBuilding = [
-        {bId:'rbBiome', count:1},
-        {bId:'rbTime', count:1},
+        // {bId:'rbBiome', count:1},
+        // {bId:'rbTime', count:1},
     ];
 
-    constructor(inventory) {
+    constructor(inventory, cityNode) {
+        this.cityNode = cityNode
         this._inventory = inventory
     }
 
@@ -72,11 +73,13 @@ export class KmProduction {
         return this._productionBuilding.map(x => x.count).reduce((acc, value) => acc + value, 0)
     }
     buildingPossible() {
-        return META_BuildingList.map( x => {
-            const pB = this._productionBuilding.filter(pb => x.bId == pb.bId) 
-            const pBuilding = pB.length ? pB[0] : {count:0}
-            return {...pBuilding, ...x}
-        })
+        return META_BuildingList
+            .filter(x => x.cityNodeType == this.cityNode.type)
+            .map( x => {
+                const pB = this._productionBuilding.filter(pb => x.bId == pb.bId) 
+                const pBuilding = pB.length ? pB[0] : {count:0}
+                return {...pBuilding, ...x}
+            })
     }
 
     canBuildProd() {

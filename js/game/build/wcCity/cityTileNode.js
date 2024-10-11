@@ -46,9 +46,9 @@ export class CityTileNode extends CityNode {
         // Stor the entity linkend to the CityNode ( ex: Host of house .)
         this.entities = []
         this.inventory = new KmInventory(8)
-        this.inventory.addItem('rsTime', 1)
+        this.inventory.addItem('rsMemoryNote', 10)
 
-        this.production = new KmProduction(this.inventory)
+        this.production = new KmProduction(this.inventory, this)
 
         this.cityFactory = cityFactory
         this.cityFactory.appendNode(this)

@@ -24,7 +24,14 @@ export class CityFactory {
         this._cityNodeTickCount = 0
     }
 
-
+    save (x, y) {
+        const saveCityNodes = this.cityNodes.forEach(cityNode => cityNode.save())
+            
+        const saveData = {
+            cityNodes: saveCityNodes,
+        }
+        return saveData
+    }
 
     start(x, y) {
 

@@ -40,6 +40,7 @@ export class WidjetActionsPlayerAct extends WidjetActions {
     }
 
     drawUpdate() {
+        console.log('PlayerInventory Update')
         this.inventoryBox.update()
         /*
         this.MDDiv.selectAll('div').remove();

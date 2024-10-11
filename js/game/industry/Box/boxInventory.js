@@ -59,7 +59,20 @@ export class BoxInventory {
                         // this._onChange()
                     }
                 }
-
+                boxNode.addEventListener('click', (e) => {
+                    if (window.activeCityBox && e.shiftKey) {
+                        if (window.activeCityBox.cityNode.inventory === target.inventory) {
+                            window.activeCityBox.cityNode.inventory.slotSwapInventory(target.slot, 0, window.player.inventory)
+                            this._onChange()
+                            target.inventoryBox._onChange()
+                        }
+                        if (window.player.inventory === target.inventory) {
+                            window.player.inventory.slotSwapInventory(target.slot, 0, window.activeCityBox.inventory)
+                            this._onChange()
+                            target.inventoryBox._onChange()
+                        }
+                    }
+                })
                 boxNode.addEventListener('dragstart', (e) => {
                     d3.selectAll('#tooltips')
                         .classed('tooltipsVisible', false)

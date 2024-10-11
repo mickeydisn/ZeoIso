@@ -50,6 +50,7 @@ export class World {
         this.tilesActions = new TilesActions(this)
 
         this.player = new Player(this)
+        window.player = this.player
 
         // ========================
         // ========================
